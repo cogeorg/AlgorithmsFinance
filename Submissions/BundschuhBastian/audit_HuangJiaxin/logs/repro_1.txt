@@ -1,0 +1,22 @@
+n=1000: hit_rate 0.5 -> [34525], hit_rate 0.0 -> [34525], hits = 0
+F
+=================================== FAILURES ===================================
+_______________________ test_q1_mixed_is_not_all_absent ________________________
+
+    def test_q1_mixed_is_not_all_absent():
+        for n in (1_000, 10_000, 100_000):                         # the benchmark grid
+            ids = make_ids(n, SEED, "none")
+            mixed = make_queries(ids, 1, 0.5, SEED)
+            absent = make_queries(ids, 1, 0.0, SEED)
+            hits = sum(x in set(ids) for x in mixed)
+            print(f"n={n}: hit_rate 0.5 -> {mixed}, hit_rate 0.0 -> {absent}, hits = {hits}")
+            # Expected by the README ("hit rate 0.5 (mixed)"): the mixed batch differs from
+            # the all-absent batch. Actual: identical query, 0 hits.
+>           assert mixed != absent, f"n={n}: 'mixed' query equals the all-absent query"
+E           AssertionError: n=1000: 'mixed' query equals the all-absent query
+E           assert [34525] != [34525]
+
+audit_HuangJiaxin/reproducers/repro_1_hit_rate_rounding.py:24: AssertionError
+=========================== short test summary info ============================
+FAILED audit_HuangJiaxin/reproducers/repro_1_hit_rate_rounding.py::test_q1_mixed_is_not_all_absent
+1 failed in 0.02s

@@ -1,0 +1,7 @@
+n=1000, q=1, identical input (one absent query), total time in microseconds
+  linear_v2 benchmark hit 0.0:    9.65  benchmark hit 0.5:   22.06  breakeven.py:    9.28  -> max/min  2.4x   raw repeats (hit 0.0): 9.6, 10.6, 10.9, 9.6, 9.6
+  hash      benchmark hit 0.0:   85.07  benchmark hit 0.5:   16.60  breakeven.py:   11.12  -> max/min  7.7x   raw repeats (hit 0.0): 387.3, 322.4, 43.7, 85.1, 71.0
+  binary_v2 benchmark hit 0.0:   47.14  benchmark hit 0.5:   61.84  breakeven.py:   44.80  -> max/min  1.4x   raw repeats (hit 0.0): 53.5, 45.7, 47.1, 43.7, 50.3
+fastest method for q=1, n=1000: hit 0.0 -> linear_v2, hit 0.5 -> hash (same input!)
+README claim: 'q = 1: linear_v2 has the smallest total time'
+exit code: 1

@@ -1,0 +1,58 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+_______________ test_returns_q_queries_or_rejects_hit_rate[1.5] ________________
+
+hit_rate = 1.5
+
+    @pytest.mark.parametrize("hit_rate", [1.5, -0.5, 2.0])
+    def test_returns_q_queries_or_rejects_hit_rate(hit_rate):
+        ids = make_ids(100, seed=1)
+        try:
+            queries = make_queries(ids, 10, hit_rate, seed=1)
+        except ValueError:
+            return                                                 # rejecting is fine
+>       assert len(queries) == 10, f"hit_rate={hit_rate}: got {len(queries)} queries, not 10"
+E       AssertionError: hit_rate=1.5: got 15 queries, not 10
+E       assert 15 == 10
+E        +  where 15 = len([780, 606, 966, 606, 240, 1698, ...])
+
+audit_HuangJiaxin/reproducers/repro_3_generator_validation.py:22: AssertionError
+_______________ test_returns_q_queries_or_rejects_hit_rate[-0.5] _______________
+
+hit_rate = -0.5
+
+    @pytest.mark.parametrize("hit_rate", [1.5, -0.5, 2.0])
+    def test_returns_q_queries_or_rejects_hit_rate(hit_rate):
+        ids = make_ids(100, seed=1)
+        try:
+            queries = make_queries(ids, 10, hit_rate, seed=1)
+        except ValueError:
+            return                                                 # rejecting is fine
+>       assert len(queries) == 10, f"hit_rate={hit_rate}: got {len(queries)} queries, not 10"
+E       AssertionError: hit_rate=-0.5: got 15 queries, not 10
+E       assert 15 == 10
+E        +  where 15 = len([3015, 3535, 1479, 3423, 1263, 2743, ...])
+
+audit_HuangJiaxin/reproducers/repro_3_generator_validation.py:22: AssertionError
+_______________ test_returns_q_queries_or_rejects_hit_rate[2.0] ________________
+
+hit_rate = 2.0
+
+    @pytest.mark.parametrize("hit_rate", [1.5, -0.5, 2.0])
+    def test_returns_q_queries_or_rejects_hit_rate(hit_rate):
+        ids = make_ids(100, seed=1)
+        try:
+            queries = make_queries(ids, 10, hit_rate, seed=1)
+        except ValueError:
+            return                                                 # rejecting is fine
+>       assert len(queries) == 10, f"hit_rate={hit_rate}: got {len(queries)} queries, not 10"
+E       AssertionError: hit_rate=2.0: got 20 queries, not 10
+E       assert 20 == 10
+E        +  where 20 = len([780, 920, 1564, 606, 1424, 966, ...])
+
+audit_HuangJiaxin/reproducers/repro_3_generator_validation.py:22: AssertionError
+=========================== short test summary info ============================
+FAILED audit_HuangJiaxin/reproducers/repro_3_generator_validation.py::test_returns_q_queries_or_rejects_hit_rate[1.5]
+FAILED audit_HuangJiaxin/reproducers/repro_3_generator_validation.py::test_returns_q_queries_or_rejects_hit_rate[-0.5]
+FAILED audit_HuangJiaxin/reproducers/repro_3_generator_validation.py::test_returns_q_queries_or_rejects_hit_rate[2.0]
+3 failed in 0.02s
