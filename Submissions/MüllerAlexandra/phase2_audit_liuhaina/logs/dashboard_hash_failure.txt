@@ -1,0 +1,29 @@
+Target commit: 5e81bdc2321208ea66a0267c5014f9e3c86d288f
+Command: python -B dashboard.py --output <audit-owned-path>/dashboard-audit.html
+Environment: Windows 11, Python 3.12.10
+Exit code: 0
+
+Dashboard saved successfully without running algorithms or benchmarks.
+
+source_mismatches_at_build = [
+  'search.py',
+  'search_original.py',
+  'benchmark.py',
+  'generate_data.py',
+  'validate_data.py',
+  'test_search.py',
+  'run_tests.py',
+  'snapshots/search.py',
+  'snapshots/search_original.py'
+]
+
+Raw byte hashes matched: 0 of 9.
+Hashes after canonical LF normalization matched: 9 of 9.
+
+The files were semantically identical to the measured sources. Their checkout
+line endings were CRLF rather than the LF bytes recorded on macOS.
+
+Browser confirmation:
+The generated offline dashboard rendered successfully and displayed its yellow
+warning listing the same nine files as differing from the recorded hashes.
+Screenshot: evidence/dashboard_source_warning.png
