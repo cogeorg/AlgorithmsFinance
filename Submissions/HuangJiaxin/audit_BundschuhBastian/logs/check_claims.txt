@@ -1,0 +1,27 @@
+PASS all 216 summary rows have raw repeats
+PASS median_seconds_per_batch recomputed from timing_raw.csv: 0 mismatches
+PASS min_seconds_per_batch recomputed from timing_raw.csv: 0 mismatches
+PASS max_seconds_per_batch recomputed from timing_raw.csv: 0 mismatches
+PASS every configuration has exactly 5 timed repeats
+PASS per-query value = per-batch value / q: 0 mismatches
+PASS total_consistency.csv ratios recomputed
+PASS README: ratio from 0.73 to 1.25 (data 0.73 to 1.25)
+PASS README: 42 within 3 %, 22 below, 8 above (data (42, 22, 8))
+PASS README: ranges do not overlap in 12 configurations (data 12)
+PASS README: query v2/v1 from 0.64 to 0.75 over all 18 configurations (data 0.64 to 0.75)
+PASS README: total v2/v1 from 0.82 to 1.06 (data 0.82 to 1.06)
+     REVISIONS q = 1, n = 100,000 query (us): v1 1.76 to 1.87, v2 1.20 to 1.24 (document: 1.9 and 1.2)
+PASS REVISIONS: q = 100 query 0.177 to 0.188 ms (v1), 0.128 to 0.133 ms (v2)
+FAIL REVISIONS: sort 'about 20 ms' of a '21 to 25 ms' total; data: sort medians 19.7 to 26.0 ms, totals (q = 100) 21.0 to 24.9 ms
+PASS README evidence table (q = 100, all absent) matches timing_summary.csv
+PASS README: linear all-present about half of all-absent (ratios 0.48, 0.48, 0.53)
+PASS README: binary_v1 does not depend on hit rate (present/absent 0.96, 1.01, 1.02)
+PASS README: binary_v2 does not depend on hit rate (present/absent 0.99, 1.00, 1.03)
+PASS README: hash_v1 does not depend on hit rate (present/absent 0.97, 1.02, 1.00)
+PASS README memory: sorted copy 800,056 B, set 4,194,520 B (data 800056, 4194520)
+     peak / current while preparing: sort 1.50, set 1.50 (README: 1.5 and 1.5)
+     memory repeats per configuration: [np.int64(3)] (timing uses 5)
+FAIL 'mixed' differs from 'all-present' for q = 1 (hits of q = 1 'mixed' datasets: [1, 1, 1])
+     timing results recorded at commit dfc2968, uncommitted changes outside results: False, Python 3.11.0, Apple M4
+
+check_claims: 25 lines, 2 FAIL

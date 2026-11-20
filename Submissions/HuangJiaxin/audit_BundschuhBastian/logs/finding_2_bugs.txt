@@ -1,0 +1,12 @@
+PASS B1 sig3(0.1769) -> '0.177' (3 significant digits: '0.177')
+PASS B1 sig3(133.39) -> '133' (3 significant digits: '133')
+FAIL B1 sig3(0.9996) -> '1.000' (3 significant digits: '1.00')
+FAIL B1 sig3(99.96) -> '100.0' (3 significant digits: '100')
+FAIL B1 sig3(9.996) -> '10.00' (3 significant digits: '10.0')
+     B2 environment() here: git_commit='', git_uncommitted_changes_outside_results=False
+FAIL B2 an unknown code version is not reported as 'no uncommitted changes'
+     B2 in the saved rerun metadata: git_commit='', git_uncommitted_changes_outside_results=False
+     dashboard sentence: At n = 100,000 and q = 100 (mixed hits) the hash set answers the batch, including building the set, in 9.29 ms, binary search in 21.8 ms (99 % of it is sorting) and linear search in 130 ms.
+FAIL sorting median 22.49 ms is not larger than the quoted binary total 21.76 ms
+
+finding_2_bugs: 10 lines, 5 FAIL
