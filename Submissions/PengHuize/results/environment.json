@@ -1,0 +1,36 @@
+{
+  "allow_duplicates": true,
+  "audited_source_commit": "b7289538b761aceb086c921a190fb874f1f2331d",
+  "array_sizes": [
+    1000,
+    10000,
+    100000
+  ],
+  "base_seed": 20261120,
+  "created_at_utc": "2026-11-20T15:50:14.155374+00:00",
+  "git_commit": "cdc128e870fc3c5ca28ca2556c22a548575459d9",
+  "git_dirty_for_submission": true,
+  "machine": "arm64",
+  "memory_scope": "Input and queries are built before tracing. Preparation structures and returned output remain alive when current and peak bytes are read.",
+  "memory_tool": "tracemalloc",
+  "platform": "macOS-15.8-arm64-arm-64bit",
+  "processor": "arm",
+  "python_implementation": "CPython",
+  "python_version": "3.9.6",
+  "query_counts": [
+    1,
+    100
+  ],
+  "quick_run": false,
+  "repeat_count": 5,
+  "run_id": "20261120T154956Z",
+  "scenarios": {
+    "all_absent": 0.0,
+    "all_present": 1.0,
+    "mixed": 0.5
+  },
+  "source_sha256": "4cbcbaed465e479550b4625f3fa717fafdbca731960b9734c1e3caffccaab654",
+  "timing_clock": "time.perf_counter",
+  "timing_unit": "seconds_per_complete_query_batch",
+  "warm_up": true
+}

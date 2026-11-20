@@ -30,6 +30,38 @@ def test_empty_inputs_and_empty_id_array():
 
 
 @pytest.mark.parametrize(
+    ("hit_rate", "expected_hits"),
+    [
+        (1.0, 20),
+        (0.0, 0),
+        (0.5, 10),
+    ],
+)
+def test_required_query_scenarios(hit_rate, expected_hits):
+    ids, queries = generate_synthetic_data(
+        num_ids=100,
+        num_queries=20,
+        hit_rate=hit_rate,
+        seed=21,
+    )
+    id_set = set(ids)
+    actual_hits = sum(query in id_set for query in queries)
+
+    assert actual_hits == expected_hits
+
+
+def test_duplicate_policy_can_require_unique_ids():
+    ids, _ = generate_synthetic_data(
+        num_ids=500,
+        num_queries=0,
+        seed=11,
+        allow_duplicates=False,
+    )
+
+    assert len(ids) == len(set(ids))
+
+
+@pytest.mark.parametrize(
     ("num_ids", "num_queries", "hit_rate"),
     [
         (-1, 10, 0.5),
