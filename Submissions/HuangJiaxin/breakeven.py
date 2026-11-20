@@ -14,11 +14,12 @@ Two pieces of evidence are saved:
 Same timing rules as benchmark.py (warm-up, 5 repeats, median, fresh preparation).
 """
 import csv
+import json
 import math
 import statistics
 from pathlib import Path
 
-from benchmark import SEED, DUPLICATES, measure
+from benchmark import SEED, DUPLICATES, environment, measure
 from data import make_ids, make_queries
 
 SIZES = [1_000, 10_000, 100_000]
@@ -34,14 +35,18 @@ def med(reps, k):
 def main():
     out = Path(__file__).parent / "results"
     out.mkdir(exist_ok=True)
-    curve, points = [], []
+    curve, points, raw = [], [], []
     for n in SIZES:
         ids = make_ids(n, SEED, DUPLICATES)
         per_query, prep = {}, {}
         for q in Q_GRID:
             queries = make_queries(ids, q, HIT, SEED)
+            id_set = set(ids)
+            expected = [x in id_set for x in queries]
             for method in COMPARED:
-                reps = measure(method, ids, queries)
+                reps = measure(method, ids, queries, expected)
+                for rep_i, p, qs, tot, ip, iq in reps:
+                    raw.append([method, n, q, HIT, rep_i, p, qs, tot, ip, iq])
                 curve.append([method, n, q, HIT, med(reps, 1), med(reps, 2), med(reps, 3)])
                 if q == max(Q_GRID):
                     per_query[method] = med(reps, 2) / q
@@ -64,7 +69,17 @@ def main():
         w.writerow(["method", "n", "hit_rate", "prepare_s", "per_query_s",
                     "linear_per_query_s", "breakeven_q"])
         w.writerows(points)
-    print(f"saved {out/'breakeven_curve.csv'}, {out/'breakeven_points.csv'}")
+    with open(out / "breakeven_raw.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["method", "n", "q", "hit_rate", "repeat", "prepare_s", "query_s",
+                    "total_s", "inner_prepare", "inner_query"])
+        w.writerows(raw)
+    meta = {**environment("breakeven.py"), "seed": SEED, "sizes": SIZES, "q_grid": Q_GRID,
+            "hit_rate": HIT, "methods": COMPARED,
+            "units": "seconds per complete batch; breakeven_q in queries"}
+    (out / "breakeven_environment.json").write_text(json.dumps(meta, indent=2))
+    print(f"saved {out/'breakeven_curve.csv'}, {out/'breakeven_points.csv'}, "
+          f"{out/'breakeven_raw.csv'}, {out/'breakeven_environment.json'}")
 
 
 if __name__ == "__main__":

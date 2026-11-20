@@ -1,0 +1,16 @@
+{
+  "script": "memory.py",
+  "timestamp_utc": "2026-11-20T16:07:30+00:00",
+  "python": "3.12.16 (main, Nov  5 2026, 08:06:14) [GCC 14.2.0]",
+  "implementation": "CPython",
+  "platform": "Linux-7.0.12-linuxkit-aarch64-with-glibc2.41",
+  "machine": "aarch64",
+  "processor": "",
+  "code_commit": "4cb994b9d1b5e4dd9e0cd759b87e787877bfff2b",
+  "seed": 20261120,
+  "hit_rate": 0.5,
+  "units": "bytes (tracemalloc current and peak)",
+  "includes": "prepared structure, temporary objects, output list",
+  "excludes": "the given input array and query list",
+  "runs": "one traced run per setting (deterministic allocations)"
+}

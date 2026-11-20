@@ -17,6 +17,17 @@ st.title("Membership queries: LinearSearch vs BinarySearch vs hash set")
 st.caption("Huang Jiaxin, Algorithms in Finance, Class 2 lab. "
            "bisect_ref is a standard-library reference, not one of my implementations.")
 
+REQUIRED = {
+    "timing_summary.csv": "python benchmark.py", "timing_raw.csv": "python benchmark.py",
+    "environment.json": "python benchmark.py", "memory.csv": "python memory.py",
+    "breakeven_curve.csv": "python breakeven.py", "breakeven_points.csv": "python breakeven.py",
+}
+missing = [name for name in REQUIRED if not (RES / name).exists()]
+if missing:   # audit bug 5: show which file is missing instead of a traceback
+    st.error("Missing result files in results/: " + ", ".join(missing) + ". Create them with: "
+             + "; ".join(sorted({REQUIRED[name] for name in missing})))
+    st.stop()
+
 summary = pd.read_csv(RES / "timing_summary.csv")
 raw = pd.read_csv(RES / "timing_raw.csv")
 memory = pd.read_csv(RES / "memory.csv")
@@ -49,6 +60,13 @@ for tab, col, what in zip(tabs[:3], ["total_median_s", "prepare_median_s", "quer
         table = view.pivot(index="n", columns="method", values=col) * scale
         st.line_chart(table, x_label="array length n", y_label=f"time ({unit})")
         st.dataframe(table.style.format("{:.4f}"))
+        raw_col = col.replace("_median", "")
+        rv = raw[(raw["q"] == q) & (raw["hit_rate"] == hit) & (raw["method"].isin(methods))]
+        spread = rv.groupby(["n", "method"])[raw_col].agg(["min", "max"])
+        spread = (spread["max"] / spread["min"]).unstack("method")
+        st.caption("Spread of the 5 repeats (max / min). Values far above 1 mean the median "
+                   "is uncertain, so small differences between methods are not meaningful.")
+        st.dataframe(spread.style.format("{:.2f}"))
 
 with tabs[3]:
     sel = summary[(summary["q"] == q) & (summary["hit_rate"] == hit)]

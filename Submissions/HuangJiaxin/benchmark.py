@@ -13,10 +13,14 @@ Rules followed (slides 59-60):
     * a FRESH prepared structure is built in every repeat
     * very short operations are timed `inner` times in a row and divided by `inner`
     * raw repeat values are saved, with environment metadata
+    * garbage collection runs before each timed block and is switched off during it
+    * after every repeat (outside the clock) the answers are checked against the expected list
 Timing is run separately from memory tracing (see memory.py).
+Output goes to results/ by default; use --out DIR so a trial run does not overwrite it.
 """
 import argparse
 import csv
+import gc
 import json
 import os
 import platform
@@ -37,23 +41,37 @@ DUPLICATES = "none"
 
 
 def inner_count(fn):
-    """How many back-to-back calls are needed so one timed block lasts >= MIN_BLOCK_S."""
-    t0 = time.perf_counter()
+    """How many back-to-back calls are needed so one timed block lasts >= MIN_BLOCK_S.
+
+    The call is timed three times after a warm-up call and the fastest is used, so a slow
+    first (cold) call does not lead to too few calls per block.
+    """
     fn()
-    once = time.perf_counter() - t0
+    singles = []
+    for _ in range(3):
+        t0 = time.perf_counter()
+        fn()
+        singles.append(time.perf_counter() - t0)
+    once = min(singles)
     if once >= MIN_BLOCK_S:
         return 1
     return min(10_000, max(1, int(MIN_BLOCK_S / max(once, 1e-9)) + 1))
 
 
 def time_block(fn, inner):
-    t0 = time.perf_counter()
-    for _ in range(inner):
-        fn()
-    return (time.perf_counter() - t0) / inner
+    gc.collect()
+    gc.disable()
+    try:
+        t0 = time.perf_counter()
+        for _ in range(inner):
+            fn()
+        elapsed = time.perf_counter() - t0
+    finally:
+        gc.enable()
+    return elapsed / inner
 
 
-def measure(method, ids, queries):
+def measure(method, ids, queries, expected=None):
     prepare, query, _ = METHODS[method]
     # warm-up (untimed), also used to choose the inner counts
     prepared = prepare(ids)
@@ -68,6 +86,8 @@ def measure(method, ids, queries):
         prep_s = time_block(lambda: prepare(ids), inner_p)
         prepared = prepare(ids)  # fresh state for this repeat's query batch
         query_s = time_block(lambda: query(prepared, queries), inner_q)
+        if expected is not None:                         # outside the clock
+            assert query(prepared, queries) == expected, f"{method} gave wrong answers"
         rows.append((rep, prep_s, query_s, prep_s + query_s, inner_p, inner_q))
     return rows
 
@@ -86,17 +106,33 @@ def git_commit():
         return "git not available"
 
 
+def environment(script):
+    """Python version, machine and code version; saved next to every result file."""
+    return {
+        "script": script,
+        "timestamp_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "python": sys.version,
+        "implementation": platform.python_implementation(),
+        "platform": platform.platform(),
+        "machine": platform.machine(),
+        "processor": platform.processor(),
+        "code_commit": git_commit(),
+    }
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--quick", action="store_true", help="small grid for a fast trial run")
+    ap.add_argument("--out", default=str(Path(__file__).parent / "results"),
+                    help="output folder (default: results/)")
     args = ap.parse_args()
 
     sizes = [1_000, 10_000] if args.quick else [1_000, 10_000, 100_000]
     query_counts = [1, 100]
     hit_rates = [1.0, 0.0, 0.5]  # all-present, all-absent, mixed
 
-    out = Path(__file__).parent / "results"
-    out.mkdir(exist_ok=True)
+    out = Path(args.out)
+    out.mkdir(parents=True, exist_ok=True)
     raw_rows, summary_rows = [], []
 
     for n in sizes:
@@ -105,8 +141,10 @@ def main():
             for hit in hit_rates:
                 queries = make_queries(ids, q, hit, SEED)
                 ids_before = list(ids)
+                id_set = set(ids)
+                expected = [x in id_set for x in queries]
                 for method, (_, _, version) in METHODS.items():
-                    reps = measure(method, ids, queries)
+                    reps = measure(method, ids, queries, expected)
                     assert ids == ids_before, f"{method} modified the input"
                     for rep, p, qs, tot, ip, iq in reps:
                         raw_rows.append([method, version, n, q, hit, rep, p, qs, tot, ip, iq])
@@ -130,17 +168,14 @@ def main():
         w.writerows(summary_rows)
 
     meta = {
-        "timestamp_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "python": sys.version,
-        "implementation": platform.python_implementation(),
-        "platform": platform.platform(),
-        "machine": platform.machine(),
-        "processor": platform.processor(),
-        "code_commit": git_commit(),
+        **environment("benchmark.py"),
         "seed": SEED,
         "duplicates_policy": DUPLICATES,
         "id_generator": "distinct even integers from range(0, 20n+20), random order",
-        "absent_queries": "odd integers (guaranteed absent)",
+        "present_queries": "floor(q * hit_rate + 0.5) copies of IDs (round half up)",
+        "absent_queries": "random integers checked to be missing from the IDs",
+        "answers_checked": "after every repeat, outside the clock",
+        "garbage_collection": "collected before and disabled during each timed block",
         "sizes": sizes, "query_counts": query_counts, "hit_rates": hit_rates,
         "repeats": REPEATS, "warm_up": "one untimed run per setting",
         "min_block_seconds": MIN_BLOCK_S,

@@ -1,37 +1,37 @@
 method,version,n,q,hit_rate,current_bytes,peak_bytes
-linear_v1,original,1000,1,0.5,32,140
-linear_v2,revised,1000,1,0.5,32,96
-binary_v1,original,1000,1,0.5,8032,15960
-binary_v2,revised,1000,1,0.5,8032,12040
-hash,single,1000,1,0.5,33016,41224
-bisect_ref,library reference,1000,1,0.5,8032,12040
-linear_v1,original,1000,100,0.5,864,1004
-linear_v2,revised,1000,100,0.5,864,960
-binary_v1,original,1000,100,0.5,8864,16864
-binary_v2,revised,1000,100,0.5,8864,12040
-hash,single,1000,100,0.5,33848,41224
-bisect_ref,library reference,1000,100,0.5,8864,12040
-linear_v1,original,10000,1,0.5,32,140
-linear_v2,revised,10000,1,0.5,32,96
-binary_v1,original,10000,1,0.5,80032,160064
-binary_v2,revised,10000,1,0.5,80032,120008
-hash,single,10000,1,0.5,524536,655624
-bisect_ref,library reference,10000,1,0.5,80032,120008
-linear_v1,original,10000,100,0.5,864,1004
-linear_v2,revised,10000,100,0.5,864,960
-binary_v1,original,10000,100,0.5,80864,160960
-binary_v2,revised,10000,100,0.5,80864,120008
-hash,single,10000,100,0.5,525368,655624
-bisect_ref,library reference,10000,100,0.5,80864,120008
-linear_v1,original,100000,1,0.5,32,140
-linear_v2,revised,100000,1,0.5,32,96
-binary_v1,original,100000,1,0.5,800032,1600128
-binary_v2,revised,100000,1,0.5,800032,1199912
-hash,single,100000,1,0.5,4194552,6291720
-bisect_ref,library reference,100000,1,0.5,800032,1199912
-linear_v1,original,100000,100,0.5,864,1004
-linear_v2,revised,100000,100,0.5,864,960
-binary_v1,original,100000,100,0.5,800864,1601072
-binary_v2,revised,100000,100,0.5,800864,1199912
-hash,single,100000,100,0.5,4195384,6291720
-bisect_ref,library reference,100000,100,0.5,800864,1199912
+linear_v1,original,1000,1,0.5,88,196
+linear_v2,revised,1000,1,0.5,88,152
+binary_v1,original,1000,1,0.5,8648,16592
+binary_v2,revised,1000,1,0.5,8144,12096
+hash,single,1000,1,0.5,33072,41224
+bisect_ref,library reference,1000,1,0.5,8144,12096
+linear_v1,original,1000,100,0.5,920,1060
+linear_v2,revised,1000,100,0.5,920,1016
+binary_v1,original,1000,100,0.5,9536,17544
+binary_v2,revised,1000,100,0.5,8976,12096
+hash,single,1000,100,0.5,33904,41224
+bisect_ref,library reference,1000,100,0.5,8976,12096
+linear_v1,original,10000,1,0.5,88,196
+linear_v2,revised,10000,1,0.5,88,152
+binary_v1,original,10000,1,0.5,80816,160928
+binary_v2,revised,10000,1,0.5,80144,120064
+hash,single,10000,1,0.5,524592,655624
+bisect_ref,library reference,10000,1,0.5,80144,120064
+linear_v1,original,10000,100,0.5,920,1060
+linear_v2,revised,10000,100,0.5,920,1016
+binary_v1,original,10000,100,0.5,81760,161896
+binary_v2,revised,10000,100,0.5,80976,120064
+hash,single,10000,100,0.5,525424,655624
+bisect_ref,library reference,10000,100,0.5,80976,120064
+linear_v1,original,100000,1,0.5,88,196
+linear_v2,revised,100000,1,0.5,88,152
+binary_v1,original,100000,1,0.5,800984,1601104
+binary_v2,revised,100000,1,0.5,800144,1199968
+hash,single,100000,1,0.5,4194608,6291720
+bisect_ref,library reference,100000,1,0.5,800144,1199968
+linear_v1,original,100000,100,0.5,920,1060
+linear_v2,revised,100000,100,0.5,920,1016
+binary_v1,original,100000,100,0.5,801928,1602120
+binary_v2,revised,100000,100,0.5,800976,1199968
+hash,single,100000,100,0.5,4195440,6291720
+bisect_ref,library reference,100000,100,0.5,800976,1199968

@@ -11,12 +11,14 @@ What the numbers include:
 tracemalloc sees Python allocations only, so this is NOT exactly auxiliary space.
 """
 import csv
+import gc
+import json
 import tracemalloc
 from pathlib import Path
 
 from data import make_ids, make_queries
 from membership import METHODS
-from benchmark import SEED, DUPLICATES
+from benchmark import SEED, DUPLICATES, environment
 
 
 def main():
@@ -28,6 +30,7 @@ def main():
         for q in [1, 100]:
             queries = make_queries(ids, q, 0.5, SEED)
             for method, (prepare, query, version) in METHODS.items():
+                gc.collect()
                 tracemalloc.start()
                 prepared = prepare(ids)
                 answers = query(prepared, queries)
@@ -42,7 +45,13 @@ def main():
         w.writerow(["method", "version", "n", "q", "hit_rate",
                     "current_bytes", "peak_bytes"])
         w.writerows(rows)
-    print(f"saved {out/'memory.csv'}")
+    meta = {**environment("memory.py"), "seed": SEED, "hit_rate": 0.5,
+            "units": "bytes (tracemalloc current and peak)",
+            "includes": "prepared structure, temporary objects, output list",
+            "excludes": "the given input array and query list",
+            "runs": "one traced run per setting (deterministic allocations)"}
+    (out / "memory_environment.json").write_text(json.dumps(meta, indent=2))
+    print(f"saved {out/'memory.csv'}, {out/'memory_environment.json'}")
 
 
 if __name__ == "__main__":
