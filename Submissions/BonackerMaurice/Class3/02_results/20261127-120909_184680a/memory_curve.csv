@@ -1,0 +1,25 @@
+version,N,source,tree_gb,ram_available_gb,seconds,traced_peak_mb,process_peak_mb,value,boundary_sha256,status
+reference,1000,"btc data, last N+1 hours",,,0.075,0.1,0.1,3438.3850326544903,285615971a7dc54204a5f0237e142cf986b9dfefc026f637a13eb13ade88fd5a,ok
+vectorised,1000,"btc data, last N+1 hours",,,0.009,0.1,1.9,3438.3850326544903,285615971a7dc54204a5f0237e142cf986b9dfefc026f637a13eb13ade88fd5a,ok
+fulltree,1000,"btc data, last N+1 hours",0.00,20.55,0.015,4.0,6.2,3438.3850326544903,285615971a7dc54204a5f0237e142cf986b9dfefc026f637a13eb13ade88fd5a,ok
+reference,2000,"btc data, last N+1 hours",,,0.280,0.2,0.2,4194.980337085063,3b7e8c5db8e43e781767df415eb2a9f0c84a28a2c6325cf391d75ee03960158c,ok
+vectorised,2000,"btc data, last N+1 hours",,,0.020,0.1,2.1,4194.980337085063,3b7e8c5db8e43e781767df415eb2a9f0c84a28a2c6325cf391d75ee03960158c,ok
+fulltree,2000,"btc data, last N+1 hours",0.01,20.42,0.041,15.6,18.2,4194.980337085063,3b7e8c5db8e43e781767df415eb2a9f0c84a28a2c6325cf391d75ee03960158c,ok
+reference,5000,"btc data, last N+1 hours",,,2.081,0.4,0.5,7215.499978722635,27d254b2434bdb964bf18011acf4e5d10fb6e8b0a8b9af03ae1b9a19c732fea5,ok
+vectorised,5000,"btc data, last N+1 hours",,,0.082,0.3,1.6,7215.499978722635,27d254b2434bdb964bf18011acf4e5d10fb6e8b0a8b9af03ae1b9a19c732fea5,ok
+fulltree,5000,"btc data, last N+1 hours",0.09,20.72,0.167,96.3,98.8,7215.499978722635,27d254b2434bdb964bf18011acf4e5d10fb6e8b0a8b9af03ae1b9a19c732fea5,ok
+reference,10000,"btc data, last N+1 hours",,,7.232,,0.9,17825.79194326727,ba995d446d3af339e787361d22ddc3fb1707382f6739e1f58650c7254d28a750,ok
+vectorised,10000,"btc data, last N+1 hours",,,0.278,0.6,2.3,17825.79194326727,ba995d446d3af339e787361d22ddc3fb1707382f6739e1f58650c7254d28a750,ok
+fulltree,10000,"btc data, last N+1 hours",0.37,20.75,0.647,383.3,386.0,17825.79194326727,ba995d446d3af339e787361d22ddc3fb1707382f6739e1f58650c7254d28a750,ok
+reference,20000,"btc data, last N+1 hours",,,30.033,,2.0,15173.417613237292,9261edb9f6343ac6012b0bb1b2c4b55307d18476c34abd5e3a5c8f94bbabd87b,ok
+vectorised,20000,"btc data, last N+1 hours",,,1.153,1.2,3.2,15173.417613237292,9261edb9f6343ac6012b0bb1b2c4b55307d18476c34abd5e3a5c8f94bbabd87b,ok
+fulltree,20000,"btc data, last N+1 hours",1.49,20.77,2.672,1529.5,1532.3,15173.417613237292,9261edb9f6343ac6012b0bb1b2c4b55307d18476c34abd5e3a5c8f94bbabd87b,ok
+reference,43822,"btc data, last N+1 hours",,,152.418,,4.4,20719.789430028963,ef86a2ddd5da8013940e37d0932b5f12f9a2d2c25c77250529cf3b4b8687dd44,ok
+vectorised,43822,"btc data, last N+1 hours",,,8.586,2.7,4.5,20719.789430028963,ef86a2ddd5da8013940e37d0932b5f12f9a2d2c25c77250529cf3b4b8687dd44,ok
+fulltree,43822,"btc data, last N+1 hours",7.15,20.27,15.949,7333.5,7337.4,20719.789430028963,ef86a2ddd5da8013940e37d0932b5f12f9a2d2c25c77250529cf3b4b8687dd44,ok
+reference,55000,"btc 5-year u, d, R (synthetic N)",,,,,,,,not run: pure Python too slow beyond the data length
+vectorised,55000,"btc 5-year u, d, R (synthetic N)",,,14.718,3.4,5.3,22204.525771623266,45d554005b4353fe64d523cb2650495e50af3347bcda3c8d5b55b303f52ade4b,ok
+fulltree,55000,"btc 5-year u, d, R (synthetic N)",11.27,20.29,23.656,11549.3,11553.5,22204.525771623266,45d554005b4353fe64d523cb2650495e50af3347bcda3c8d5b55b303f52ade4b,ok
+reference,70000,"btc 5-year u, d, R (synthetic N)",,,,,,,,not run: pure Python too slow beyond the data length
+vectorised,70000,"btc 5-year u, d, R (synthetic N)",,,26.284,4.3,6.9,23724.426061545117,a99f8ac464ab9946611dfbedacc368bbb0c5f63af5e2be10c88fadfe090e3e2b,ok
+fulltree,70000,"btc 5-year u, d, R (synthetic N)",18.25,20.90,,,,,,"out of memory: tree needs 18.3 GB, 20.9 GB free (not attempted)"

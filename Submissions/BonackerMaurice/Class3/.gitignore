@@ -1,0 +1,4 @@
+__pycache__/
+.pytest_cache/
+# Quick development runs are not part of the submission.
+02_results/*_quick/

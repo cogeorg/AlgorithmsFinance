@@ -1,0 +1,80 @@
+{
+  "runs": [
+    {
+      "steps": [
+        "btc",
+        "curve",
+        "assets"
+      ],
+      "command": "python -m lab.run_lab",
+      "timestamp_utc": "2026-11-27T12:09:09+00:00",
+      "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+      "cpu_count_logical": 8,
+      "cpu_count_physical": 8,
+      "ram_total_gb": 31.52,
+      "ram_available_gb_at_start": 20.38,
+      "packages": {
+        "numpy": "2.5.3",
+        "psutil": "7.2.2"
+      },
+      "git": {
+        "commit": "184680a5ca605675de0457f05b41d85dbc9bdd3a",
+        "branch": "bonacker/phase1",
+        "dirty": false
+      },
+      "ram_checks_before_fulltree": [
+        {
+          "when_utc": "2026-11-27T12:09:49+00:00",
+          "N": 1000,
+          "tree_gb": 0.0,
+          "ram_available_gb": 20.55
+        },
+        {
+          "when_utc": "2026-11-27T12:09:55+00:00",
+          "N": 2000,
+          "tree_gb": 0.01,
+          "ram_available_gb": 20.42
+        },
+        {
+          "when_utc": "2026-11-27T12:10:31+00:00",
+          "N": 5000,
+          "tree_gb": 0.09,
+          "ram_available_gb": 20.72
+        },
+        {
+          "when_utc": "2026-11-27T12:10:40+00:00",
+          "N": 10000,
+          "tree_gb": 0.37,
+          "ram_available_gb": 20.75
+        },
+        {
+          "when_utc": "2026-11-27T12:11:16+00:00",
+          "N": 20000,
+          "tree_gb": 1.49,
+          "ram_available_gb": 20.77
+        },
+        {
+          "when_utc": "2026-11-27T12:14:13+00:00",
+          "N": 43822,
+          "tree_gb": 7.15,
+          "ram_available_gb": 20.27
+        },
+        {
+          "when_utc": "2026-11-27T12:15:14+00:00",
+          "N": 55000,
+          "tree_gb": 11.27,
+          "ram_available_gb": 20.29
+        },
+        {
+          "when_utc": "2026-11-27T12:16:59+00:00",
+          "N": 70000,
+          "tree_gb": 18.25,
+          "ram_available_gb": 20.9
+        }
+      ],
+      "ram_available_gb_at_end": 21.18
+    }
+  ]
+}

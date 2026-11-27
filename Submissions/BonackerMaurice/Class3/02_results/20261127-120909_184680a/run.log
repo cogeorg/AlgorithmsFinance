@@ -1,0 +1,37 @@
+results -> 02_results/20261127-120909_184680a  (free RAM 20.38 GB of 31.52 GB)
+btc 1y vectorised: N=8760 value=16714.9353 0.2s
+btc 1y reference: N=8760 value=16714.9353 6.0s
+btc 5y vectorised: N=43822 value=20719.7894 8.2s
+step btc done in 37 s
+curve N=1000 reference: 0.075 s, traced 0.1 MB, process 0.1 MB, ok
+curve N=1000 vectorised: 0.009 s, traced 0.1 MB, process 1.9 MB, ok
+curve N=1000 fulltree: 0.015 s, traced 4.0 MB, process 6.2 MB, ok
+curve N=2000 reference: 0.280 s, traced 0.2 MB, process 0.2 MB, ok
+curve N=2000 vectorised: 0.020 s, traced 0.1 MB, process 2.1 MB, ok
+curve N=2000 fulltree: 0.041 s, traced 15.6 MB, process 18.2 MB, ok
+curve N=5000 reference: 2.081 s, traced 0.4 MB, process 0.5 MB, ok
+curve N=5000 vectorised: 0.082 s, traced 0.3 MB, process 1.6 MB, ok
+curve N=5000 fulltree: 0.167 s, traced 96.3 MB, process 98.8 MB, ok
+curve N=10000 reference: 7.232 s, traced - MB, process 0.9 MB, ok
+curve N=10000 vectorised: 0.278 s, traced 0.6 MB, process 2.3 MB, ok
+curve N=10000 fulltree: 0.647 s, traced 383.3 MB, process 386.0 MB, ok
+curve N=20000 reference: 30.033 s, traced - MB, process 2.0 MB, ok
+curve N=20000 vectorised: 1.153 s, traced 1.2 MB, process 3.2 MB, ok
+curve N=20000 fulltree: 2.672 s, traced 1529.5 MB, process 1532.3 MB, ok
+curve N=43822 reference: 152.418 s, traced - MB, process 4.4 MB, ok
+curve N=43822 vectorised: 8.586 s, traced 2.7 MB, process 4.5 MB, ok
+curve N=43822 fulltree: 15.949 s, traced 7333.5 MB, process 7337.4 MB, ok
+curve N=55000 reference: - s, traced - MB, process - MB, not run: pure Python too slow beyond the data length
+curve N=55000 vectorised: 14.718 s, traced 3.4 MB, process 5.3 MB, ok
+curve N=55000 fulltree: 23.656 s, traced 11549.3 MB, process 11553.5 MB, ok
+curve N=70000 reference: - s, traced - MB, process - MB, not run: pure Python too slow beyond the data length
+curve N=70000 vectorised: 26.284 s, traced 4.3 MB, process 6.9 MB, ok
+curve N=70000 fulltree: - s, traced - MB, process - MB, out of memory: tree needs 18.3 GB, 20.9 GB free (not attempted)
+step curve done in 432 s
+assets 1y workers=1: 40 assets, 21.3 s wall, total peak 95 MB
+assets 1y workers=4: 40 assets, 7.1 s wall, total peak 229 MB
+assets 1y workers=8: 40 assets, 4.4 s wall, total peak 405 MB
+assets 5y workers=1: 40 assets, 288.1 s wall, total peak 103 MB
+assets 5y workers=4: 40 assets, 108.9 s wall, total peak 256 MB
+assets 5y workers=8: 40 assets, 63.7 s wall, total peak 454 MB
+step assets done in 494 s

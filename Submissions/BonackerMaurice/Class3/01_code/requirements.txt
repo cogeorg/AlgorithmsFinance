@@ -1,0 +1,4 @@
+# Developed and measured with Python 3.13.15.
+numpy==2.5.3     # vectorised and full-tree pricers
+psutil==7.2.2    # process peak memory (peak working set on Windows)
+pytest==9.1.1
