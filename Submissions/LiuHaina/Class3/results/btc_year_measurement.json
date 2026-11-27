@@ -1,0 +1,18 @@
+{
+  "run": "btc_year",
+  "assets": 1,
+  "N_min": 8760,
+  "N_max": 8760,
+  "seconds": 0.10066637500131037,
+  "peak_memory_bytes": 135512064,
+  "peak_memory_MiB": 129.234375,
+  "load_calibrate_seconds": 0.05444849999912549,
+  "jit_warmup_seconds": 0.3534399170021061,
+  "workers": 1,
+  "python": "3.13.0",
+  "platform": "macOS-15.7.3-arm64-arm-64bit-Mach-O",
+  "memory_definition": "Fresh-process lifetime peak RSS, including imports/JIT/data; measured before output serialization",
+  "timing_definition": "Pricing and crossing scan wall time; excludes JIT, loading/calibration and result serialization",
+  "full_tree_bytes_per_largest_asset": 307055528,
+  "rolling_value_and_boundary_bytes_per_largest_asset": 140176
+}

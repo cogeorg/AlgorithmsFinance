@@ -1,0 +1,285 @@
+{
+  "commit": "0325907cb0a6cc3cd1f292fca095b52d9343ac97",
+  "files": [
+    {
+      "name": "AAVEUSDT.csv",
+      "sha": "ee8a950a7227af1d184ae12bb81f8052954bc40e",
+      "size": 1186099,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/AAVEUSDT.csv",
+      "sha256": "ba0d75786442cacfe7cc6a20e1b8ec574ca5db4db99f02e84f4670c42ef249c9"
+    },
+    {
+      "name": "ADAUSDT.csv",
+      "sha": "844de64b41ea127ad65231069111115d17db23cd",
+      "size": 1217939,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/ADAUSDT.csv",
+      "sha256": "e7def1a543814775760df23d00be773ccff912c56d2dfcba751f4b31224478e3"
+    },
+    {
+      "name": "ALGOUSDT.csv",
+      "sha": "b13cd26bc3677aa42b149fe76e766c3e113b839b",
+      "size": 1222127,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/ALGOUSDT.csv",
+      "sha256": "9b1572c0f74069aa43a7a5b8d28659d2766e426edba07f6da41f3b1f36902d76"
+    },
+    {
+      "name": "ATOMUSDT.csv",
+      "sha": "4a1c9f5efdef305f2b4e81c1cbe4ddcc88e25f94",
+      "size": 1186148,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/ATOMUSDT.csv",
+      "sha256": "d91a11568e1aa21c80b3b529eda1b46b50cbf7ff26bd2c72b530f0ed0345771f"
+    },
+    {
+      "name": "AVAXUSDT.csv",
+      "sha": "0dc12ffef44b63097fc5b713dc33f02e31f8362e",
+      "size": 1175888,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/AVAXUSDT.csv",
+      "sha256": "17a2c056046641148325e47afabe5fc4895df29ea152aca1ac6625f9f5b94135"
+    },
+    {
+      "name": "AXSUSDT.csv",
+      "sha": "ad224a3c038035f514c8dc823cfa065d21680cad",
+      "size": 1168699,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/AXSUSDT.csv",
+      "sha256": "6905084552221986b65cc515f4b58b8dcfa9ca1d6166f88598444954f9e46724"
+    },
+    {
+      "name": "BCHUSDT.csv",
+      "sha": "d0dd009d8b30577cd6f2fe738cec9bcf38c5afed",
+      "size": 1174160,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/BCHUSDT.csv",
+      "sha256": "df16c1860150ee8741fd0a939b079cb4e2ff84c40d792983e6a3ee1cb4cc572c"
+    },
+    {
+      "name": "BNBUSDT.csv",
+      "sha": "ec89043321ba1137681bcbdc11171abd48e8ab47",
+      "size": 1193165,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/BNBUSDT.csv",
+      "sha256": "b7e2abd563157f246aeff732574833a9614a8db6d984a01ace8d58c0ca0b3db3"
+    },
+    {
+      "name": "BTCUSDT.csv",
+      "sha": "6cf82c2a707509e5d0353c8d02dcf824e336a4a8",
+      "size": 1304824,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/BTCUSDT.csv",
+      "sha256": "2262b9e97986e964107c9d59085d4403ef90ea63ffa58ba73df3740587b59df6"
+    },
+    {
+      "name": "CHZUSDT.csv",
+      "sha": "dd732494fd9edb3245bf1784b4c7aa38528d3269",
+      "size": 1242735,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/CHZUSDT.csv",
+      "sha256": "654f48c615140ebf2df81fe7af3364410f3f4dedbba1c99783b8df3256b7ce3d"
+    },
+    {
+      "name": "COMPUSDT.csv",
+      "sha": "1d5ffe03ef3873b742a65ee8de7fe811a48a9d0b",
+      "size": 1176449,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/COMPUSDT.csv",
+      "sha256": "bd04053860776baabc9062fb4872ce22bbbcad7c03ebd86ef290d44321922185"
+    },
+    {
+      "name": "CRVUSDT.csv",
+      "sha": "add1016376361d4da0b5bf4d0592a7e31264f616",
+      "size": 1206535,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/CRVUSDT.csv",
+      "sha256": "01d9ca078e1205b5a13e4441cd2f1fd082b19b30ee15ece66f3feec039ac3d48"
+    },
+    {
+      "name": "DASHUSDT.csv",
+      "sha": "c270ac01ab912131cd607b104e10698238dbf9c6",
+      "size": 1173076,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/DASHUSDT.csv",
+      "sha256": "3da623dd7b1e6ea2ebf8fba7fa5b33d334bd3fc98db8191552a57823c75e8a0d"
+    },
+    {
+      "name": "DOGEUSDT.csv",
+      "sha": "06c8f31e927195ff78df7b398febb99ac8fa1f77",
+      "size": 1260806,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/DOGEUSDT.csv",
+      "sha256": "bcbdf3d9995ba0d93fbb2797a6e01e154c573307e1a2c594d4b5428770428145"
+    },
+    {
+      "name": "DOTUSDT.csv",
+      "sha": "119da972dc0dbee2cb30f6f12f5652b3b2f45d24",
+      "size": 1173706,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/DOTUSDT.csv",
+      "sha256": "d3974fb4b60414138b533f0bf510eb2ad7352f989c2244cb4fa218c6481cd8fd"
+    },
+    {
+      "name": "EGLDUSDT.csv",
+      "sha": "a97a1dd0e5f44b3d7b3bff5f30f0ac2313a5f548",
+      "size": 1174972,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/EGLDUSDT.csv",
+      "sha256": "c0e11c6d2642b277fe5995db6732e4b881608477cfcc1c3e9118f0bc091a3fea"
+    },
+    {
+      "name": "ENJUSDT.csv",
+      "sha": "fb52507b3e354efdf87492119db6edcb5b834aac",
+      "size": 1223624,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/ENJUSDT.csv",
+      "sha256": "ef2f12e5a1646c20696441d942b53255c3c180f63c2351358599c7005f6922e3"
+    },
+    {
+      "name": "ETCUSDT.csv",
+      "sha": "6e1d00c2eb85e85242d900ef5a7359c32ff48771",
+      "size": 1171298,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/ETCUSDT.csv",
+      "sha256": "d687f118f474e6666efd123e607952dbd3bf7e059b837bb31bde102d267fa171"
+    },
+    {
+      "name": "ETHUSDT.csv",
+      "sha": "02d1b8ee4dfd90c25f129480132c63aad00f620d",
+      "size": 1262158,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/ETHUSDT.csv",
+      "sha256": "2c0c9a9611cfc8ec088d42e460045d4ed7542c08b272a292ec98e012536f613b"
+    },
+    {
+      "name": "FILUSDT.csv",
+      "sha": "0432ab5dddd69d898d50d121a6b136816cef66c5",
+      "size": 1175613,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/FILUSDT.csv",
+      "sha256": "cba80eb4476e6a5ffb5640f711e8bb846c6a7708a2a4e2508c6e5ee557729ac3"
+    },
+    {
+      "name": "GRTUSDT.csv",
+      "sha": "dba10401a9527b44d42dd4cc1cfa0e489956bc95",
+      "size": 1231261,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/GRTUSDT.csv",
+      "sha256": "56089b591d198595c58952dcd59e19c011c2d94d84d8afca217568ab1ecbb324"
+    },
+    {
+      "name": "HBARUSDT.csv",
+      "sha": "1b1ec125aa8a58bc87e0d004396c83443f704307",
+      "size": 1239450,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/HBARUSDT.csv",
+      "sha256": "65330732b02e88b53f4e7ef9b3e2f4b4b955d013bd3b973b38f6a915dbbae5c7"
+    },
+    {
+      "name": "ICPUSDT.csv",
+      "sha": "5016ea9a9cdbb46bbe30b825ff9d89cce58e472b",
+      "size": 1179184,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/ICPUSDT.csv",
+      "sha256": "6a8023a61b08b7612d24613cca6d35db422541dd51827733b6b1dbcdea1301ad"
+    },
+    {
+      "name": "LINKUSDT.csv",
+      "sha": "7e5c892d5998f3fa62a6dcc4e525b205b485a6a8",
+      "size": 1182219,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/LINKUSDT.csv",
+      "sha256": "815caadaea8b25b29c7d8319049e7326316b200e6cacc39e45ff91e085f378df"
+    },
+    {
+      "name": "LTCUSDT.csv",
+      "sha": "c76153b59cd64ce36d0e8e440e832f0ba3b36b20",
+      "size": 1181646,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/LTCUSDT.csv",
+      "sha256": "cf24460e8f54788ac4f39fda06ca7076d2b2d32b55b11b31adfe7777521ffa26"
+    },
+    {
+      "name": "MANAUSDT.csv",
+      "sha": "95315e4b18708c4c290af730779936a62e334eeb",
+      "size": 1222059,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/MANAUSDT.csv",
+      "sha256": "e6b96e9d07000c1cbef0639f79c0dd7a93f17effaf8b57b3246dba49813b3ed1"
+    },
+    {
+      "name": "NEARUSDT.csv",
+      "sha": "24a21b3d90b21a47681ed215d70e9ff16c1b81d9",
+      "size": 1181574,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/NEARUSDT.csv",
+      "sha256": "179fe1d18f6f9c118b405a15a06bc8a02072bc1af52229ad62220e020f67b63d"
+    },
+    {
+      "name": "NEOUSDT.csv",
+      "sha": "169daa2774b33125633cc223e64413e747669ff2",
+      "size": 1162741,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/NEOUSDT.csv",
+      "sha256": "f1bda3ff2cd09a01a069a428156854af3ab58c35ce42623164ee3b8f2e23c849"
+    },
+    {
+      "name": "PAXGUSDT.csv",
+      "sha": "b114498fef4f28449082350cb5a262e25d21d624",
+      "size": 1174860,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/PAXGUSDT.csv",
+      "sha256": "31633c6aca500c63a066422394e6d577752510c2500d7311f1cfc14461c2ea50"
+    },
+    {
+      "name": "SANDUSDT.csv",
+      "sha": "fc9d62a6268aeea38d515edbaece39a8e7555344",
+      "size": 1225904,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/SANDUSDT.csv",
+      "sha256": "f5f047d5a9cfcf37be5683270c7f9317fdacb9f79924ddb425145b3a4302e94e"
+    },
+    {
+      "name": "SNXUSDT.csv",
+      "sha": "92adffe4d63dd5123f53e5f566960767bcffede7",
+      "size": 1180069,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/SNXUSDT.csv",
+      "sha256": "996c49632ffe4dd5259d6cb10ab686ee996454bfba68477b6c637f833b47d38f"
+    },
+    {
+      "name": "SOLUSDT.csv",
+      "sha": "15d3241d55f1ad4df4d22665b16cbee97131398f",
+      "size": 1199914,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/SOLUSDT.csv",
+      "sha256": "e7d6ee51d07b313568eb9ca00aaa002170dd44cc995c6638d486c6f35b6f4c05"
+    },
+    {
+      "name": "THETAUSDT.csv",
+      "sha": "c256bfd4e8cc5b46fc853520e9e4a43a2a8c4c1c",
+      "size": 1181678,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/THETAUSDT.csv",
+      "sha256": "60bd4acce40e768f18a472325b52886f3715e839a6a4d46de7306e5db40c05b1"
+    },
+    {
+      "name": "TRXUSDT.csv",
+      "sha": "985b5a8b4a5f58aa685c740279af628f2d8156bc",
+      "size": 1245964,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/TRXUSDT.csv",
+      "sha256": "9bef6a8a5baec8bbcde7d5eed19882b933d8939f88bd789d98880c9d6340d10f"
+    },
+    {
+      "name": "UNIUSDT.csv",
+      "sha": "99bd8a073cabb9c9e85bfa2c0969787f831fce02",
+      "size": 1175486,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/UNIUSDT.csv",
+      "sha256": "d1445cb2af7ed07af54ad815ed1530173c7997d7a21fa94b17202452ab75c961"
+    },
+    {
+      "name": "VETUSDT.csv",
+      "sha": "5eed35dff872c78443335a72b001b07f595528ce",
+      "size": 1271608,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/VETUSDT.csv",
+      "sha256": "efcbc3281de6ee0cd39b70404c6e045eb8c09773c0518c6ab8f04e2540498483"
+    },
+    {
+      "name": "XLMUSDT.csv",
+      "sha": "e59e7a97e9d796ef17a554e8affe97d96533f657",
+      "size": 1222050,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/XLMUSDT.csv",
+      "sha256": "5552bebc74e6ceb38fa0faef4a1418ae3b9286758b6df1594f2abaf1e735ecd0"
+    },
+    {
+      "name": "XRPUSDT.csv",
+      "sha": "3732e5efba9ef37ffaf68a05f80e69b31a079111",
+      "size": 1221944,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/XRPUSDT.csv",
+      "sha256": "c6fcf72e643797f22838f6698f8c3ad5533b99259395df1dc7605b33eb60662b"
+    },
+    {
+      "name": "XTZUSDT.csv",
+      "sha": "4d652b549dcfd45363ec3a193f98311440d96857",
+      "size": 1191016,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/XTZUSDT.csv",
+      "sha256": "7021003280650bda7152620973c0a539bbb58caf2c42329d8bc390b959b7dfd4"
+    },
+    {
+      "name": "ZECUSDT.csv",
+      "sha": "9a5cc112357f7f2beb38f4db6992997ddde26375",
+      "size": 1177360,
+      "download_url": "https://raw.githubusercontent.com/cogeorg/AlgorithmsFinance/0325907cb0a6cc3cd1f292fca095b52d9343ac97/Class3/data/hourly/ZECUSDT.csv",
+      "sha256": "05b8a3f9529781285bf15bb400ff17f009df4ed17f1fee855b231b46957b66e5"
+    }
+  ]
+}

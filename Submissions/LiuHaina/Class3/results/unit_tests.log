@@ -1,0 +1,13 @@
+test_calibration_and_no_mutation (test_lab.LabTests.test_calibration_and_no_mutation) ... ok
+test_crossing (test_lab.LabTests.test_crossing) ... ok
+test_independent_fraction_tree (test_lab.LabTests.test_independent_fraction_tree) ... ok
+test_invalid (test_lab.LabTests.test_invalid) ... ok
+test_large_tree_no_overflow (test_lab.LabTests.test_large_tree_no_overflow) ... ok
+test_reference_and_compiled (test_lab.LabTests.test_reference_and_compiled) ... ok
+test_slide_example (test_lab.LabTests.test_slide_example) ... ok
+test_terminal_and_zero_strike (test_lab.LabTests.test_terminal_and_zero_strike) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.392s
+
+OK

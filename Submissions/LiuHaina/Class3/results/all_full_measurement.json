@@ -1,0 +1,18 @@
+{
+  "run": "all_full",
+  "assets": 40,
+  "N_min": 43822,
+  "N_max": 43822,
+  "seconds": 19.998876458004816,
+  "peak_memory_bytes": 155926528,
+  "peak_memory_MiB": 148.703125,
+  "load_calibrate_seconds": 1.7874302499985788,
+  "jit_warmup_seconds": 0.3199687499945867,
+  "workers": 4,
+  "python": "3.13.0",
+  "platform": "macOS-15.7.3-arm64-arm-64bit-Mach-O",
+  "memory_definition": "Fresh-process lifetime peak RSS, including imports/JIT/data; measured before output serialization",
+  "timing_definition": "Pricing and crossing scan wall time; excludes JIT, loading/calibration and result serialization",
+  "full_tree_bytes_per_largest_asset": 7681996608,
+  "rolling_value_and_boundary_bytes_per_largest_asset": 701168
+}
