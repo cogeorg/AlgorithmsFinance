@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "runs": 4,
+  "priced_contracts": 82,
+  "boundaries_checked": 82,
+  "checks": [
+    "asset coverage",
+    "N and prices",
+    "all saved boundary rows",
+    "first crossing and payoff",
+    "BTC batch parity"
+  ]
+}
