@@ -1,0 +1,9 @@
+engine,assets,horizon,N,seconds_total,seconds_pricing,peak_traced_MiB,max_rss_MiB
+numpy,1,1y,8760,0.14,0.13,6.8,34.2
+numpy,1,5y,43822,1.88,1.86,12.6,40.9
+numpy,40,1y,8760,4.98,4.32,9.4,37.9
+numpy,40,5y,43822,75.46,74.68,12.7,44.4
+python,1,1y,8760,3.14,3.12,4.0,28.3
+python,40,1y,8760,124.49,123.85,4.1,29.7
+python,1,5y,43822,77.71,77.69,7.7,33.2
+python,40,5y,43822,3109.61,3108.79,not traced: ~17 h under tracemalloc; see python/BTCUSDT/5y,35.1
