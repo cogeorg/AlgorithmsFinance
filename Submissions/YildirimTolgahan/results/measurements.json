@@ -47,7 +47,15 @@
       "memory": "bytes"
     },
     "protocol": "timeit/perf_counter: one calibration/warm-up per phase/method/round, followed by grouped calls targeting 3 ms (maximum 20000 calls); at least five rounds; independently shuffled method order per round. Preparation and total rebuild state every call. Query phase reuses one index for that round. Preparation, batch and total are independent measurements and need not add up. Python call and temporary-result cleanup overhead included; cyclic GC disabled by timeit. Generation, validation, tracing and rendering excluded. All timing rounds for a workload finish before memory runs.",
-    "memory_protocol": "Separate fresh tracemalloc run for each method/version/workload. Input and queries allocated before tracing; prepared structures and returned output retained at reading. Reports current and peak traced Python bytes, not process RSS or mathematical auxiliary space. No native-memory completeness claim."
+    "memory_protocol": "Separate fresh tracemalloc run for each method/version/workload. Input and queries allocated before tracing; prepared structures and returned output retained at reading. Reports current and peak traced Python bytes, not process RSS or mathematical auxiliary space. No native-memory completeness claim.",
+    "source_paths": {
+      "dashboard_template.html": "audit/template_before_graph_restore.html"
+    },
+    "presentation_sha256": {
+      "dashboard.py": "aab750506811d8b3a7aa3f04efe4d3ca5606235d795e9c33f0e99b8fd48d7944",
+      "dashboard_template.html": "600971f3eaeea9b63475029d0ecfbc20be0b2e1654ffaad4d9a9c0c47de7b2a9"
+    },
+    "presentation_note": "Graph layout restored and explicit seconds/milliseconds selector added after measurement. Exact measured template retained via source_paths; numerical results and timed Python sources are unchanged."
   },
   "rows": [
     {

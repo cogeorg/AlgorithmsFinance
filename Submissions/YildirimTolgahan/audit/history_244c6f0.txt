@@ -52,6 +52,6 @@ True
 + [True, False, True]
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.002s
+Ran 1 test in 0.003s
 
 FAILED (failures=3)

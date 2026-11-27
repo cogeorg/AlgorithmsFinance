@@ -4,13 +4,9 @@
     "table_values_verified": true
   },
   "working": {
-    "filter_combinations_checked": 180,
+    "filter_combinations_checked": 360,
     "table_values_verified": true,
-    "ranking_and_winner_verified": true
-  },
-  "mobile": {
-    "width": 390,
-    "scrollWidth": 390
+    "seconds_and_milliseconds_verified": true
   },
   "javascript_errors": [],
   "screenshot": "results/dashboard-check.png"

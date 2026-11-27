@@ -86,6 +86,17 @@ def verify(folder):
             assert all(math.isfinite(sample["ms"]) and sample["ms"] >= 0 and 1 <= sample["calls"] <= 20000 for sample in samples)
         for index in range(reuse["metadata"]["repeats"]):
             assert sorted(s["raw_repeats"][index]["position"] for s in reuse["scenarios"].values()) == [1, 2]
+    speed_path = folder / "speed_budget.json"
+    if speed_path.exists():
+        speed = json.loads(speed_path.read_text(encoding="utf-8"))
+        assert speed["measurements_sha256"] == hashlib.sha256(source.read_bytes()).hexdigest()
+        assert speed["units"] == "seconds" and speed["passed"] is True
+        assert speed["saved_sample_count"] == len(csv_raw)
+        saved_maximum = max(sample["total_ms"] / 1000 for row in rows for sample in row["raw_repeats"])
+        assert speed["saved_maximum_seconds"] == saved_maximum < speed["limit_seconds"]
+        assert all(math.isfinite(t) and 0 <= t < speed["limit_seconds"] for t in speed["live"]["samples_seconds"])
+        for name, digest in speed["source_sha256"].items():
+            assert hashlib.sha256((HERE / name).read_bytes()).hexdigest() == digest, name
     with tempfile.NamedTemporaryFile(dir=folder, suffix=".html", delete=False) as f:
         temporary = Path(f.name)
     try:
@@ -97,7 +108,8 @@ def verify(folder):
               "independent_phase_samples": len(csv_raw) * len(TIME_KEYS),
               "coverage_csv_medians_order_and_hashes": "PASS",
               "dashboard_byte_identical_rebuild": True,
-              "reuse_scenarios_verified": reuse_path.exists()}
+              "reuse_scenarios_verified": reuse_path.exists(),
+              "speed_budget_verified": speed_path.exists()}
     (folder / "verification.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
 

@@ -1,0 +1,32 @@
+{
+  "scope": "One complete search batch, including index construction. Not the duration of the benchmark suite.",
+  "units": "seconds",
+  "limit_seconds": 10,
+  "saved_sample_count": 900,
+  "saved_maximum_seconds": 2.0287626999997883,
+  "live": {
+    "n": 100000,
+    "q": 100,
+    "hit_rate": 0.5,
+    "seed": 721,
+    "includes_index_construction": true,
+    "samples_seconds": [
+      0.01824069999565836,
+      0.012580999995407183,
+      0.011564300002646632,
+      0.01151430000027176,
+      0.01101320000452688
+    ],
+    "median_seconds": 0.011564300002646632,
+    "maximum_seconds": 0.01824069999565836
+  },
+  "python": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "measurements_sha256": "15ca1a1ab905161af1967702de298fbe365cf75110c22a4c079cc9e9530b1868",
+  "source_sha256": {
+    "algorithms.py": "d583a6b71367d19e8fde299162cb61e193baab4fcbbada70c1f9cdf056b5915a",
+    "data.py": "4dbd74975c75b3bf25ca2e3ea89bd81b163652fe51973553991bf4d40f0d2876",
+    "check_speed.py": "0a89a7b5dc25a5fa697caab739334c4975dd6af9f68ba3c5661c3a5f38b3818c"
+  },
+  "passed": true
+}

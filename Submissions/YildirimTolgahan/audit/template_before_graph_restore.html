@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suchmethoden im Vergleich</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f7f8f9;color:#17252d;font:15px/1.5 system-ui,sans-serif}main{max-width:1040px;padding:34px 24px 50px;margin:auto}h1{font-size:clamp(26px,4vw,36px);letter-spacing:-1px;margin:4px 0 10px}h2{font-size:19px;margin:0 0 16px}p{margin:8px 0}.muted{color:#566872;font-size:13px}.eyebrow{color:#566872;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}.panel{background:white;border:1px solid #dfe5e8;border-radius:10px;padding:22px;margin-top:20px}.filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}label{display:block;font-size:13px;font-weight:600}select{display:block;width:100%;padding:9px 10px;margin-top:6px;border:1px solid #b8c5cc;border-radius:5px;background:white;color:inherit;font:inherit}select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #64bba4;outline-offset:3px}.winner{border-left:4px solid #138567}.winner h2{margin-bottom:3px;font-size:23px}#winner-time{font-size:25px;font-weight:700;color:#087357}.section-head{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.section-head h2{margin:0}.check{font-weight:400;display:flex;align-items:center;gap:7px}.bar-item{margin-top:20px}.bar-label{display:flex;justify-content:space-between;gap:15px;font-size:14px;margin-bottom:6px}.bar-track{height:12px;border-radius:4px;background:#edf0f2;overflow:hidden}.bar-fill{height:100%;background:#8799a3;border-radius:4px}.bar-fill.best{background:#138567}.bar-fill.original{opacity:.5}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:13px;white-space:nowrap;margin-top:12px;font-variant-numeric:tabular-nums}th,td{padding:11px 9px;text-align:right;border-bottom:1px solid #e5eaed}th:first-child,td:first-child{text-align:left}th{font-weight:600;color:#566872}caption{text-align:left;color:#566872;font-size:12px;margin-bottom:3px}summary{cursor:pointer;font-size:15px;font-weight:600}details.panel>summary{list-style-position:outside;margin-left:12px}details[open]>summary{margin-bottom:18px}.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:13px}.legend span::before{content:'';display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--color);margin-right:6px}svg{width:100%;height:auto;display:block}svg text{font:12px system-ui;fill:#566872}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}a{color:#087357}.downloads{display:flex;gap:20px;flex-wrap:wrap;margin-top:18px}footer{color:#566872;font-size:12px;margin-top:25px}#reuse-values{font-size:17px;font-variant-numeric:tabular-nums}#reuse-panel[hidden]{display:none}@media(max-width:680px){main{padding:22px 14px}.panel{padding:17px}.filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}h1{font-size:28px}th,td{padding:9px 7px}}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">Algorithms in Finance · Tolgahan Yildirim</div>
+<h1>Suchmethoden im Vergleich</h1>
+<p>Gleiche IDs, gleiche Anfragen. Verglichen werden Zeit und Speicherbedarf.</p></header>
+
+<section class="panel filters" aria-label="Messfall auswählen">
+<label>Anzahl IDs<select id="size"></select></label>
+<label>Anfragen<select id="queries"></select></label>
+<label>Trefferquote<select id="hits"></select></label>
+<label>Zeit vergleichen<select id="metric"><option value="total_ms">Mit Aufbau</option><option value="query_batch_ms">Index schon vorhanden</option><option value="preparation_ms">Nur Aufbau</option></select></label>
+</section>
+<p id="status" class="muted" aria-live="polite"></p>
+
+<section class="panel winner" aria-live="polite">
+<p class="muted">Schnellste optimierte Methode in diesem Messfall</p>
+<h2 id="winner-name"></h2><span id="winner-time"></span>
+<p id="winner-explanation" class="muted"></p>
+</section>
+
+<section class="panel">
+<div class="section-head"><h2>Zeit pro Anfragebatch</h2><label class="check"><input type="checkbox" id="compare"> Vorher / nachher vergleichen</label></div>
+<p id="scenario-note" class="muted"></p>
+<div id="ranking" role="list" aria-label="Zeitvergleich"></div>
+<p class="muted">Kürzerer Balken = weniger Zeit. Werte sind Mediane aus den gespeicherten Messrunden.</p>
+</section>
+
+<section class="panel"><h2>Die genauen Werte</h2>
+<div class="scroll"><table id="summary"></table></div>
+<p class="muted">Zeiten gelten für den gesamten Batch. Die drei Zeitphasen wurden unabhängig gemessen und müssen sich nicht exakt addieren. Speicher: Spitzenwert erfasster Python-Allokationen einschließlich Aufbau und Ergebnis, ohne bereits vorhandene Eingaben. 1 KiB = 1.024 Bytes.</p></section>
+
+<section class="panel" id="reuse-panel" hidden><h2>Mehrere Batches mit denselben IDs</h2>
+<p id="reuse-context" class="muted"></p><p id="reuse-values"></p><p id="reuse-gain"></p>
+<p class="muted">Beide Varianten enthalten alle Abfragen und den Indexaufbau: einmal pro Batch oder einmal insgesamt. Bei geänderten IDs muss ein neuer Index erstellt werden.</p></section>
+
+<details class="panel"><summary>Verlauf über die Datenmengen</summary>
+<div class="legend"><span style="--color:#138567">Linear</span><span style="--color:#386fba">Binär</span><span style="--color:#b07735">Hash-Set</span></div>
+<svg id="chart" viewBox="0 0 900 330" role="img" aria-label="Zeit gegen Anzahl der IDs"></svg>
+<p class="muted">Beide Achsen sind logarithmisch: gleiche Abstände bedeuten gleiche Faktoren. Gestrichelt: vorher. Durchgezogen: optimiert. Nullwerte liegen an der unteren Achsgrenze.</p></details>
+
+<details class="panel"><summary>Weitere Einstellungen</summary>
+<label style="max-width:260px">Eingabedaten<select id="policy"></select></label>
+<p class="muted">Ohne Duplikate: jede ID ist verschieden. Mit Duplikaten: IDs dürfen mehrfach vorkommen. Bei einer Anfrage sind nur 0 % oder 100 % Treffer möglich.</p></details>
+
+<details class="panel"><summary>Rohmessungen und Umgebung</summary>
+<div class="scroll"><table id="raw"></table></div>
+<p class="muted">Jede Phase hat eine eigene Anzahl gruppierter Aufrufe. Speicher wird separat gemessen. Das Umschalten der Ansicht führt keine Benchmarks aus.</p>
+<details><summary>Umgebungsdetails</summary><pre id="environment"></pre></details>
+<div class="downloads"><a download href="__JSON_LINK__">Messdaten (JSON)</a><a download href="summary.csv">Übersicht (CSV)</a><a download href="raw_repeats.csv">Rohmessungen (CSV)</a></div></details>
+<footer>Gemessene Ergebnisse dieser Umgebung. Die schnellste Methode hängt von Eingaben, Aufbaukosten und Wiederverwendung ab.</footer>
+<script type="application/json" id="dataset">__DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('dataset').textContent);
+const el=id=>document.getElementById(id);
+const names={linear:'Lineare Suche',binary:'Binäre Suche',hash_set:'Hash-Set'};
+const colors={linear:'#138567',binary:'#386fba',hash_set:'#b07735'};
+const numbers=new Intl.NumberFormat('de-DE');
+const unique=key=>[...new Set(data.rows.map(r=>r[key]))].sort((a,b)=>typeof a==='number'?a-b:String(a).localeCompare(String(b)));
+function options(id,values,label){for(const value of values){const option=document.createElement('option');option.value=value;option.textContent=label(value);el(id).append(option)}}
+options('size',unique('n'),v=>numbers.format(v));
+options('queries',unique('q'),v=>numbers.format(v));
+options('policy',unique('duplicate_policy'),v=>v==='unique'?'Ohne Duplikate':'Mit Duplikaten');
+el('size').value=String(Math.max(...unique('n')));
+el('queries').value=unique('q').includes(100)?'100':String(unique('q')[0]);
+function setHitOptions(){const previous=el('hits').value;el('hits').replaceChildren();const rates=unique('requested_hit_rate').filter(rate=>data.rows.some(r=>r.q===Number(el('queries').value)&&r.requested_hit_rate===rate));options('hits',rates,v=>`${v*100} %`);if(previous!==''&&rates.includes(Number(previous)))el('hits').value=previous;else if(rates.includes(0.5))el('hits').value='0.5'}
+function time(value){if(value===0)return '0 ms';const unit=value<1?'µs':'ms',scaled=value<1?value*1000:value;return scaled.toLocaleString('de-DE',{maximumFractionDigits:scaled<10?3:2})+' '+unit}
+function cellTable(id,headers,rows,caption){const table=el(id);table.replaceChildren();const cap=table.createCaption();cap.textContent=caption;const tr=table.createTHead().insertRow();for(const label of headers){const th=document.createElement('th');th.scope='col';th.textContent=label;tr.append(th)}const body=table.createTBody();for(const {values,row} of rows){const tr=body.insertRow();if(row){tr.dataset.method=row.method;tr.dataset.version=row.version}for(const value of values)tr.insertCell().textContent=value}}
+function point(tag,attrs,text){const node=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [key,value]of Object.entries(attrs))node.setAttribute(key,value);if(text!==undefined)node.textContent=text;el('chart').append(node);return node}
+function drawTrend(rows,key){el('chart').replaceChildren();const sizes=[...new Set(rows.map(r=>r.n))].sort((a,b)=>a-b);const lo=Math.log10(sizes[0]),hi=Math.log10(sizes.at(-1));const positive=rows.map(r=>r[key]).filter(v=>v>0);const low=Math.floor(Math.log10(Math.min(...positive)||1e-9)),high=Math.max(low+1,Math.ceil(Math.log10(Math.max(...positive)||1)));const x=n=>90+(hi===lo?0.5:(Math.log10(n)-lo)/(hi-lo))*740,y=v=>270-(Math.log10(Math.max(v,10**low))-low)/(high-low)*220;
+for(let i=0;i<=4;i++){const value=10**(low+(high-low)*i/4);point('line',{x1:90,x2:830,y1:y(value),y2:y(value),stroke:'#e5eaed'});point('text',{x:80,y:y(value)+4,'text-anchor':'end'},value.toPrecision(2))}
+for(const n of sizes)point('text',{x:x(n),y:294,'text-anchor':'middle'},numbers.format(n));point('text',{x:90,y:24},'Millisekunden pro Batch');point('text',{x:460,y:323,'text-anchor':'middle'},'Anzahl IDs');
+for(const method of ['linear','binary','hash_set'])for(const version of ['original','revised']){const group=rows.filter(r=>r.method===method&&r.version===version).sort((a,b)=>a.n-b.n);if(!group.length)continue;point('polyline',{points:group.map(r=>`${x(r.n)},${y(r[key])}`).join(' '),fill:'none',stroke:colors[method],'stroke-width':2.5,'stroke-dasharray':version==='original'?'6 5':'none'});for(const row of group){const c=point('circle',{cx:x(row.n),cy:y(row[key]),r:4,fill:version==='original'?'white':colors[method],stroke:colors[method]});const title=document.createElementNS('http://www.w3.org/2000/svg','title');title.textContent=names[method]+' / '+version+': '+time(row[key]);c.append(title)}}}
+function showReuse(){if(!data.reuse)return;const r=data.reuse,meta=r.metadata,before=r.scenarios.rebuild_each_batch.median_ms,after=r.scenarios.build_once.median_ms;el('reuse-panel').hidden=false;el('reuse-context').textContent=`Separater Zusatztest: ${meta.batch_count} Batches mit denselben ${numbers.format(meta.n)} IDs und je ${meta.q} Anfragen.`;el('reuse-values').textContent=`Jedes Mal aufbauen: ${time(before)} · Einmal aufbauen: ${time(after)}`;el('reuse-gain').textContent=before>after?`${(before/after).toLocaleString('de-DE',{maximumFractionDigits:1})}× schneller durch Wiederverwendung in diesem Test.`:'In diesem Test wurde kein Zeitgewinn durch Wiederverwendung gemessen.'}
+function update(){const key=el('metric').value,compare=el('compare').checked;
+const all=data.rows.filter(r=>r.q===Number(el('queries').value)&&r.requested_hit_rate===Number(el('hits').value)&&r.duplicate_policy===el('policy').value);
+const selected=all.filter(r=>r.n===Number(el('size').value));
+const revised=selected.filter(r=>r.version==='revised').sort((a,b)=>a[key]-b[key]);
+const winner=revised[0];el('winner-name').textContent=names[winner.method];el('winner-time').textContent=time(winner[key]);el('winner-explanation').textContent=key==='total_ms'?'Enthält den Aufbau und alle ausgewählten Anfragen.':key==='query_batch_ms'?'Nur Anfragen; der vorbereitete Index ist bereits vorhanden.':'Nur Aufbau; die Anfragen kommen anschließend hinzu.';
+el('scenario-note').textContent=key==='total_ms'?'Neue Daten: Kopieren, Sortieren oder Set-Aufbau sind enthalten.':key==='query_batch_ms'?'Gleiche Daten weiterverwenden: Aufbaukosten sind hier ausgeschlossen.':'Verglichen wird ausschließlich die Vorbereitung.';
+el('status').textContent=`${numbers.format(winner.n)} IDs · ${winner.q} Anfragen · ${winner.actual_hit_rate*100} % Treffer · Median aus ${data.metadata.settings.repeats} Runden`;
+const rows=selected.filter(r=>compare||r.version==='revised').sort((a,b)=>a[key]-b[key]);const maximum=Math.max(...rows.map(r=>r[key]))||1;el('ranking').replaceChildren();
+for(const row of rows){const item=document.createElement('div');item.className='bar-item';item.setAttribute('role','listitem');item.dataset.method=row.method;item.dataset.version=row.version;item.dataset.ms=row[key];const label=document.createElement('div');label.className='bar-label';const name=document.createElement('span');name.textContent=names[row.method]+(compare?(row.version==='original'?' · Vorher':' · Optimiert'):'');const value=document.createElement('strong');value.textContent=time(row[key]);label.append(name,value);const track=document.createElement('div');track.className='bar-track';const fill=document.createElement('div');fill.className='bar-fill'+(row===winner?' best':'')+(row.version==='original'?' original':'');fill.style.width=(row[key]/maximum*100)+'%';track.append(fill);item.append(label,track);el('ranking').append(item)}
+cellTable('summary',['Methode','Aufbau','Anfragen','Gesamt','Spitze (KiB)'],rows.map(row=>({row,values:[names[row.method]+(compare?(row.version==='original'?' / Vorher':' / Optimiert'):''),time(row.preparation_ms),time(row.query_batch_ms),time(row.total_ms),(row.peak_traced_bytes/1024).toLocaleString('de-DE',{maximumFractionDigits:2})]})),'Aufbau, Anfragen und Gesamtzeit werden unabhängig gemessen.');
+const growth=all.filter(r=>compare||r.version==='revised');drawTrend(growth,key);
+cellTable('raw',['Methode','Version','Runde','Aufbau (ms)','Anfragen (ms)','Gesamt (ms)','Aufrufe Aufbau / Anfragen / Gesamt'],rows.flatMap(row=>row.raw_repeats.map(s=>({row,values:[names[row.method],row.version,s.repeat,s.preparation_ms.toFixed(6),s.query_batch_ms.toFixed(6),s.total_ms.toFixed(6),`${s.preparation_calls} / ${s.query_batch_calls} / ${s.total_calls}`]}))),'Unveränderte Rohwerte der gewählten Datenmenge.');}
+el('environment').textContent=JSON.stringify(data.metadata,null,2);setHitOptions();showReuse();update();document.querySelectorAll('select,input').forEach(control=>control.addEventListener('change',()=>{if(control.id==='queries')setHitOptions();update()}));
+</script>
+</main></body></html>

@@ -18,6 +18,7 @@ cd Submissions\YildirimTolgahan
 python -B -m unittest discover -v
 python -B benchmark.py
 python -B benchmark_reuse.py
+python -B check_speed.py
 python -B dashboard.py
 python -B verify_results.py
 Start-Process .\results\dashboard.html
@@ -164,7 +165,8 @@ duplicate policy and distinct-ID counts are saved and shown in the dashboard.
 | `benchmark.py` | Timing, independent memory measurement, JSON/CSV export |
 | `benchmark_reuse.py` | Fair multi-batch comparison: build per batch versus build once |
 | `dashboard.py` | Generate an interactive standalone HTML file from saved JSON |
-| `dashboard_template.html` | Offline dashboard layout and browser interactions |
+| `dashboard_template.html` | Graph dashboard, explicit unit selector and time-budget panel |
+| `check_speed.py` | Check the ten-second per-batch limit against saved and fresh searches |
 | `verify_results.py` | Check complete coverage, CSV/JSON agreement, medians, order seeds, source hashes and byte-identical HTML export |
 | `results/measurements.json` | Full raw repeats, medians and environment |
 | `results/summary.csv`, `results/raw_repeats.csv` | Tables for independent analysis |
@@ -173,12 +175,13 @@ duplicate policy and distinct-ID counts are saved and shown in the dashboard.
 | `audit/AUDIT.md` | Audit of the supplied Astra ZIP and integration decisions |
 | `audit/verify_astra.py` | Reproduce CSV/hash, export and Git-history checks |
 
-The German dashboard starts with three optimized methods, the fastest measured
-candidate, a compact timing/memory table and four controls: ID count, query
-count, hit rate and time component. A checkbox adds the original versions.
-The input-size curves, duplicate policy, raw repeats and environment details
-are available in expandable sections. A separate panel shows the multi-batch
-reuse experiment when `reuse.json` is beside `measurements.json`. It embeds saved
+The restored graph dashboard shows elapsed time against input length, including
+original and revised curves. Filters select query count, hit rate, duplicate
+policy, time component, versions, axis scale and seconds/milliseconds.
+Seconds are the default: **11 ms = 0.011 s** and 11 microseconds = 0.000011 s.
+The table and graph always use the same selected unit; raw files retain their
+recorded millisecond units. A visible panel checks the largest saved raw
+per-batch total against ten seconds. The dashboard embeds saved
 JSON; filtering does not rerun measurements. Rerun `dashboard.py` after updating
 measurements. Keep HTML, JSON and CSV together for the download links. The
 export fixes UTF-8/LF output for identical bytes across operating systems when
@@ -195,9 +198,8 @@ recursion removes recursive search frames, but sorting still dominates many
 binary-search total timings.
 
 Validation: 21 tests pass under CPython 3.13.12. Chrome checks all 45 supplied
-Astra dashboard selections and all 180 selections of the working dashboard,
-including bar/table/winner agreement with embedded data. The working view also
-fits a 390-pixel mobile viewport without page overflow. The report
+Astra dashboard selections and all 360 selections of the graph dashboard, including correct seconds/milliseconds
+conversion and table/data agreement. The report
 is `results/dashboard_browser_check.json`. Optional browser QA requires Node
 22+ and Chrome, and can be repeated with `node audit/check_dashboards.cjs`;
 these tools are not needed to run the Python lab or open its dashboard.
@@ -238,3 +240,17 @@ that comparison does not replace the separate Phase 2 peer audit.
 The final submission review is documented in `audit/FINAL_REVIEW.md`.
 The subsequent hash-batch/index-reuse optimization and simpler dashboard are
 documented in `audit/OPTIMIZATION_REVIEW.md`.
+
+## Ten-second target and restored graphs
+
+`python -B check_speed.py` checks all 900 saved total-time samples and five
+fresh optimized searches (100,000 IDs, 100 queries, including index creation).
+It writes `results/speed_budget.json`; `verify_results.py` verifies that report
+against the exact input/source hashes. The target concerns one search batch.
+The full benchmark suite deliberately performs many repeated algorithm runs.
+
+The graph layout is restored from the earlier design. This is a presentation
+change, so timings were not modified or relabeled. The template actually used
+at measurement time is preserved at `audit/template_before_graph_restore.html`;
+metadata records that snapshot and the current presentation hashes separately.
+See `audit/GRAPH_RESTORE_REVIEW.md`.

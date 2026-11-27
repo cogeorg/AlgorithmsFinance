@@ -1,0 +1,100 @@
+{
+  "baseline_commit": "a55a91d3602dcd62b53f54d351df13c2f32bed9a",
+  "checks": {
+    "working_unit_tests": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "Dashboard: C:\\Users\\Tolgahan\\AlgorithmsFinance\\Submissions\\YildirimTolgahan\\tmp_fnpf__t\\dashboard.html\nDashboard: C:\\Users\\Tolgahan\\AlgorithmsFinance\\Submissions\\YildirimTolgahan\\tmp_fnpf__t\\dashboard.html\nDashboard: C:\\Users\\Tolgahan\\AlgorithmsFinance\\Submissions\\YildirimTolgahan\\tmp_fnpf__t\\dashboard.html\ntest_invalid_settings (test_lab.GeneratorTests.test_invalid_settings) ... ok\ntest_reproducible (test_lab.GeneratorTests.test_reproducible) ... ok\ntest_sizes_hit_rates_and_policies (test_lab.GeneratorTests.test_sizes_hit_rates_and_policies) ... ok\ntest_dashboard_embeds_saved_data_without_executing_benchmarks (test_lab.MeasurementTests.test_dashboard_embeds_saved_data_without_executing_benchmarks) ... ok\ntest_interleaved_rounds (test_lab.MeasurementTests.test_interleaved_rounds) ... ok\ntest_only_feasible_workload_hit_rates (test_lab.MeasurementTests.test_only_feasible_workload_hit_rates) ... ok\ntest_raw_repeats_and_memory_contract (test_lab.MeasurementTests.test_raw_repeats_and_memory_contract) ... ok\ntest_too_few_repeats_rejected (test_lab.MeasurementTests.test_too_few_repeats_rejected) ... ok\ntest_colliding_and_large_integer_ids (test_lab.ReusableIndexTests.test_colliding_and_large_integer_ids) ... ok\ntest_empty_input_queries_and_fresh_results (test_lab.ReusableIndexTests.test_empty_input_queries_and_fresh_results) ... ok\ntest_exhaustive_index_reuse (test_lab.ReusableIndexTests.test_exhaustive_index_reuse) ... ok\ntest_multiple_batches_and_original_input_mutation (test_lab.ReusableIndexTests.test_multiple_batches_and_original_input_mutation) ... ok\ntest_empty_array_and_queries (test_lab.SearchContractTests.test_empty_array_and_queries) ... ok\ntest_exhaustive_small_arrays (test_lab.SearchContractTests.test_exhaustive_small_arrays) ... ok\ntest_generated_inputs_against_independent_oracle (test_lab.SearchContractTests.test_generated_inputs_against_independent_oracle) ... ok\ntest_large_signed_integers (test_lab.SearchContractTests.test_large_signed_integers) ... ok\ntest_one_entry (test_lab.SearchContractTests.test_one_entry) ... ok\ntest_reusing_prepared_structures (test_lab.SearchContractTests.test_reusing_prepared_structures) ... ok\ntest_search_primitives (test_lab.SearchContractTests.test_search_primitives) ... ok\ntest_slide_example_and_order (test_lab.SearchContractTests.test_slide_example_and_order) ... ok\ntest_unsorted_input_duplicates_and_boundaries (test_lab.SearchContractTests.test_unsorted_input_duplicates_and_boundaries) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.634s\n\nOK\n"
+    },
+    "working_saved_results": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "Dashboard: C:\\Users\\Tolgahan\\AlgorithmsFinance\\Submissions\\YildirimTolgahan\\results\\tmp1cozioed.html\n{\n  \"summary_rows\": 180,\n  \"raw_repeat_rows\": 900,\n  \"independent_phase_samples\": 2700,\n  \"coverage_csv_medians_order_and_hashes\": \"PASS\",\n  \"dashboard_byte_identical_rebuild\": true,\n  \"reuse_scenarios_verified\": true,\n  \"speed_budget_verified\": true\n}\n"
+    },
+    "alternative_audit": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "{\n  \"audit_python\": \"3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]\",\n  \"source_hashes_match\": true,\n  \"timing_records\": 1350,\n  \"allocation_records\": 90,\n  \"dashboard_rebuild_byte_identical\": false,\n  \"dashboard_rebuild_identical_after_newline_normalization\": true,\n  \"provided_tests_pass\": true,\n  \"history_results\": {\n    \"244c6f0\": {\n      \"exit_code\": 1,\n      \"expected_outcome_confirmed\": true\n    },\n    \"c1d45f3\": {\n      \"exit_code\": 0,\n      \"expected_outcome_confirmed\": true\n    },\n    \"a82224a\": {\n      \"exit_code\": 0,\n      \"expected_outcome_confirmed\": true\n    }\n  },\n  \"bundle_commits\": [\n    \"b464591 Record reproducible phase-one results, offline dashboard and audit instructions\",\n    \"a82224a Revise binary search and add independent time and allocation measurements\",\n    \"c1d45f3 Implement and validate the three original search methods\",\n    \"244c6f0 Specify membership contract and seeded workloads before implementation\"\n  ],\n  \"claimed_workload_medians\": {\n    \"linear/original\": {\n      \"prepare_us\": 0.02913889863923944,\n      \"batch_us\": 45777.43699974235,\n      \"total_us\": 45515.36200006012\n    },\n    \"linear/revised\": {\n      \"prepare_us\": 0.02927906988498987,\n      \"batch_us\": 46447.244999853865,\n      \"total_us\": 45734.30200025541\n    },\n    \"binary/original\": {\n      \"prepare_us\": 11175.524999998743,\n      \"batch_us\": 117.06259089227056,\n      \"total_us\": 11254.893000113952\n    },\n    \"binary/revised\": {\n      \"prepare_us\": 11132.760000236885,\n      \"batch_us\": 99.43447999830823,\n      \"total_us\": 11163.466000198241\n    },\n    \"hash/original\": {\n      \"prepare_us\": 2094.342999953369,\n      \"batch_us\": 1.2275160081970038,\n      \"total_us\": 2090.2169999317266\n    },\n    \"hash/revised\": {\n      \"prepare_us\": 2098.418999594287,\n      \"batch_us\": 1.1922580076358156,\n      \"total_us\": 2088.5950002593745\n    }\n  },\n  \"limits\": \"Saved Astra timings are arithmetically verified, not rerun on its Linux host. No universal or statistically established speedup is inferred from five repeats.\"\n}\n"
+    },
+    "reject_-O_verify_results.py": {
+      "exit_code": 1,
+      "passed": true,
+      "output": "Verification requires assertions. Run Python without -O or -OO.\n"
+    },
+    "reject_-OO_verify_results.py": {
+      "exit_code": 1,
+      "passed": true,
+      "output": "Verification requires assertions. Run Python without -O or -OO.\n"
+    },
+    "reject_-O_audit/verify_astra.py": {
+      "exit_code": 1,
+      "passed": true,
+      "output": "Verification requires assertions. Run Python without -O or -OO.\n"
+    },
+    "reject_-OO_audit/verify_astra.py": {
+      "exit_code": 1,
+      "passed": true,
+      "output": "Verification requires assertions. Run Python without -O or -OO.\n"
+    },
+    "browser_405_views": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "{\"astra\":{\"filter_combinations_checked\":45,\"table_values_verified\":true},\"working\":{\"filter_combinations_checked\":360,\"table_values_verified\":true,\"seconds_and_milliseconds_verified\":true},\"javascript_errors\":[],\"screenshot\":\"results/dashboard-check.png\"}\n"
+    },
+    "staged_whitespace": {
+      "exit_code": 0,
+      "passed": true,
+      "output": ""
+    },
+    "implementation_commit": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "[lab/search-methods 549302b] Restore graph dashboard and verify ten-second search budget\n 16 files changed, 12855 insertions(+), 12699 deletions(-)\n create mode 100644 Submissions/YildirimTolgahan/audit/GRAPH_RESTORE_REVIEW.md\n create mode 100644 Submissions/YildirimTolgahan/audit/template_before_graph_restore.html\n create mode 100644 Submissions/YildirimTolgahan/check_speed.py\n create mode 100644 Submissions/YildirimTolgahan/results/speed_budget.json\n"
+    },
+    "fresh_clone": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "Cloning into 'C:\\Users\\Tolgahan\\AlgorithmsFinance\\Submissions\\YildirimTolgahan\\audit\\.work\\fresh-checkout-g8lcgika\\repo'...\ndone.\n"
+    },
+    "fresh_unit_tests": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "Dashboard: C:\\Users\\Tolgahan\\AlgorithmsFinance\\Submissions\\YildirimTolgahan\\audit\\.work\\fresh-checkout-g8lcgika\\repo\\Submissions\\YildirimTolgahan\\tmpflpj5sh7\\dashboard.html\nDashboard: C:\\Users\\Tolgahan\\AlgorithmsFinance\\Submissions\\YildirimTolgahan\\audit\\.work\\fresh-checkout-g8lcgika\\repo\\Submissions\\YildirimTolgahan\\tmpflpj5sh7\\dashboard.html\nDashboard: C:\\Users\\Tolgahan\\AlgorithmsFinance\\Submissions\\YildirimTolgahan\\audit\\.work\\fresh-checkout-g8lcgika\\repo\\Submissions\\YildirimTolgahan\\tmpflpj5sh7\\dashboard.html\ntest_invalid_settings (test_lab.GeneratorTests.test_invalid_settings) ... ok\ntest_reproducible (test_lab.GeneratorTests.test_reproducible) ... ok\ntest_sizes_hit_rates_and_policies (test_lab.GeneratorTests.test_sizes_hit_rates_and_policies) ... ok\ntest_dashboard_embeds_saved_data_without_executing_benchmarks (test_lab.MeasurementTests.test_dashboard_embeds_saved_data_without_executing_benchmarks) ... ok\ntest_interleaved_rounds (test_lab.MeasurementTests.test_interleaved_rounds) ... ok\ntest_only_feasible_workload_hit_rates (test_lab.MeasurementTests.test_only_feasible_workload_hit_rates) ... ok\ntest_raw_repeats_and_memory_contract (test_lab.MeasurementTests.test_raw_repeats_and_memory_contract) ... ok\ntest_too_few_repeats_rejected (test_lab.MeasurementTests.test_too_few_repeats_rejected) ... ok\ntest_colliding_and_large_integer_ids (test_lab.ReusableIndexTests.test_colliding_and_large_integer_ids) ... ok\ntest_empty_input_queries_and_fresh_results (test_lab.ReusableIndexTests.test_empty_input_queries_and_fresh_results) ... ok\ntest_exhaustive_index_reuse (test_lab.ReusableIndexTests.test_exhaustive_index_reuse) ... ok\ntest_multiple_batches_and_original_input_mutation (test_lab.ReusableIndexTests.test_multiple_batches_and_original_input_mutation) ... ok\ntest_empty_array_and_queries (test_lab.SearchContractTests.test_empty_array_and_queries) ... ok\ntest_exhaustive_small_arrays (test_lab.SearchContractTests.test_exhaustive_small_arrays) ... ok\ntest_generated_inputs_against_independent_oracle (test_lab.SearchContractTests.test_generated_inputs_against_independent_oracle) ... ok\ntest_large_signed_integers (test_lab.SearchContractTests.test_large_signed_integers) ... ok\ntest_one_entry (test_lab.SearchContractTests.test_one_entry) ... ok\ntest_reusing_prepared_structures (test_lab.SearchContractTests.test_reusing_prepared_structures) ... ok\ntest_search_primitives (test_lab.SearchContractTests.test_search_primitives) ... ok\ntest_slide_example_and_order (test_lab.SearchContractTests.test_slide_example_and_order) ... ok\ntest_unsorted_input_duplicates_and_boundaries (test_lab.SearchContractTests.test_unsorted_input_duplicates_and_boundaries) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.762s\n\nOK\n"
+    },
+    "fresh_saved_results": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "Dashboard: C:\\Users\\Tolgahan\\AlgorithmsFinance\\Submissions\\YildirimTolgahan\\audit\\.work\\fresh-checkout-g8lcgika\\repo\\Submissions\\YildirimTolgahan\\results\\tmpykhjchtt.html\n{\n  \"summary_rows\": 180,\n  \"raw_repeat_rows\": 900,\n  \"independent_phase_samples\": 2700,\n  \"coverage_csv_medians_order_and_hashes\": \"PASS\",\n  \"dashboard_byte_identical_rebuild\": true,\n  \"reuse_scenarios_verified\": true,\n  \"speed_budget_verified\": true\n}\n"
+    },
+    "fresh_alternative_audit": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "{\n  \"audit_python\": \"3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]\",\n  \"source_hashes_match\": true,\n  \"timing_records\": 1350,\n  \"allocation_records\": 90,\n  \"dashboard_rebuild_byte_identical\": false,\n  \"dashboard_rebuild_identical_after_newline_normalization\": true,\n  \"provided_tests_pass\": true,\n  \"history_results\": {\n    \"244c6f0\": {\n      \"exit_code\": 1,\n      \"expected_outcome_confirmed\": true\n    },\n    \"c1d45f3\": {\n      \"exit_code\": 0,\n      \"expected_outcome_confirmed\": true\n    },\n    \"a82224a\": {\n      \"exit_code\": 0,\n      \"expected_outcome_confirmed\": true\n    }\n  },\n  \"bundle_commits\": [\n    \"b464591 Record reproducible phase-one results, offline dashboard and audit instructions\",\n    \"a82224a Revise binary search and add independent time and allocation measurements\",\n    \"c1d45f3 Implement and validate the three original search methods\",\n    \"244c6f0 Specify membership contract and seeded workloads before implementation\"\n  ],\n  \"claimed_workload_medians\": {\n    \"linear/original\": {\n      \"prepare_us\": 0.02913889863923944,\n      \"batch_us\": 45777.43699974235,\n      \"total_us\": 45515.36200006012\n    },\n    \"linear/revised\": {\n      \"prepare_us\": 0.02927906988498987,\n      \"batch_us\": 46447.244999853865,\n      \"total_us\": 45734.30200025541\n    },\n    \"binary/original\": {\n      \"prepare_us\": 11175.524999998743,\n      \"batch_us\": 117.06259089227056,\n      \"total_us\": 11254.893000113952\n    },\n    \"binary/revised\": {\n      \"prepare_us\": 11132.760000236885,\n      \"batch_us\": 99.43447999830823,\n      \"total_us\": 11163.466000198241\n    },\n    \"hash/original\": {\n      \"prepare_us\": 2094.342999953369,\n      \"batch_us\": 1.2275160081970038,\n      \"total_us\": 2090.2169999317266\n    },\n    \"hash/revised\": {\n      \"prepare_us\": 2098.418999594287,\n      \"batch_us\": 1.1922580076358156,\n      \"total_us\": 2088.5950002593745\n    }\n  },\n  \"limits\": \"Saved Astra timings are arithmetically verified, not rerun on its Linux host. No universal or statistically established speedup is inferred from five repeats.\"\n}\n"
+    },
+    "fresh_smoke_benchmark": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "Workload 1/20: n=32, q=1, hits=0, unique\nWorkload 2/20: n=32, q=1, hits=0, duplicates\nWorkload 3/20: n=32, q=1, hits=1, unique\nWorkload 4/20: n=32, q=1, hits=1, duplicates\nWorkload 5/20: n=32, q=10, hits=0, unique\nWorkload 6/20: n=32, q=10, hits=0, duplicates\nWorkload 7/20: n=32, q=10, hits=0.5, unique\nWorkload 8/20: n=32, q=10, hits=0.5, duplicates\nWorkload 9/20: n=32, q=10, hits=1, unique\nWorkload 10/20: n=32, q=10, hits=1, duplicates\nWorkload 11/20: n=128, q=1, hits=0, unique\nWorkload 12/20: n=128, q=1, hits=0, duplicates\nWorkload 13/20: n=128, q=1, hits=1, unique\nWorkload 14/20: n=128, q=1, hits=1, duplicates\nWorkload 15/20: n=128, q=10, hits=0, unique\nWorkload 16/20: n=128, q=10, hits=0, duplicates\nWorkload 17/20: n=128, q=10, hits=0.5, unique\nWorkload 18/20: n=128, q=10, hits=0.5, duplicates\nWorkload 19/20: n=128, q=10, hits=1, unique\nWorkload 20/20: n=128, q=10, hits=1, duplicates\nSaved 120 rows and 600 raw repeats to results\\fresh_checkout_smoke\n"
+    },
+    "fresh_smoke_reuse": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "{\n  \"rebuild_each_batch\": 0.06281960782407801,\n  \"build_once\": 0.019424468073919614\n}\n"
+    },
+    "fresh_smoke_dashboard": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "Dashboard: C:\\Users\\Tolgahan\\AlgorithmsFinance\\Submissions\\YildirimTolgahan\\audit\\.work\\fresh-checkout-g8lcgika\\repo\\Submissions\\YildirimTolgahan\\results\\fresh_checkout_smoke\\dashboard.html\n"
+    },
+    "fresh_smoke_verification": {
+      "exit_code": 0,
+      "passed": true,
+      "output": "Dashboard: C:\\Users\\Tolgahan\\AlgorithmsFinance\\Submissions\\YildirimTolgahan\\audit\\.work\\fresh-checkout-g8lcgika\\repo\\Submissions\\YildirimTolgahan\\results\\fresh_checkout_smoke\\tmp7iivi4p0.html\n{\n  \"summary_rows\": 120,\n  \"raw_repeat_rows\": 600,\n  \"independent_phase_samples\": 1800,\n  \"coverage_csv_medians_order_and_hashes\": \"PASS\",\n  \"dashboard_byte_identical_rebuild\": true,\n  \"reuse_scenarios_verified\": true,\n  \"speed_budget_verified\": false\n}\n"
+    }
+  },
+  "staged_file_count": 16,
+  "file_scope_and_credential_pattern_check": "PASS",
+  "tested_implementation_commit": "549302bca50e1aea3d5c0cd3dae7bee5b6ea2493",
+  "fresh_checkout_exact_bytes": true,
+  "status": "PASS"
+}

@@ -4,5 +4,6 @@
   "independent_phase_samples": 2700,
   "coverage_csv_medians_order_and_hashes": "PASS",
   "dashboard_byte_identical_rebuild": true,
-  "reuse_scenarios_verified": true
+  "reuse_scenarios_verified": true,
+  "speed_budget_verified": true
 }

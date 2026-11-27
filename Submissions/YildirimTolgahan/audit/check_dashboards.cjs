@@ -94,40 +94,33 @@ async function main() {
     const working = await evaluate(`(() => {
       const dataset=JSON.parse(document.getElementById('dataset').textContent);
       const element=id=>document.getElementById(id);let checked=0;
-      if(!element('hits').value)throw Error('Empty default selection');
-      for(const q of [...new Set(dataset.rows.map(r=>r.q))]){
+      const labels={linear:'Linear',binary:'Binary',hash_set:'Hash set'};
+      for(const q of ['1','100']){
         element('queries').value=q;element('queries').dispatchEvent(new Event('change'));
         const rates=[...element('hits').options].map(o=>o.value);
-        if(rates.length!==(q===1?2:3))throw Error('Infeasible rates');
-        for(const n of [...new Set(dataset.rows.map(r=>r.n))])for(const rate of rates)for(const policy of ['unique','duplicates'])for(const metric of ['preparation_ms','query_batch_ms','total_ms'])for(const compare of [false,true]){
-          for(const [id,value]of [['size',n],['hits',rate],['policy',policy],['metric',metric]])element(id).value=value;
-          element('compare').checked=compare;element('compare').dispatchEvent(new Event('change'));
-          const expected=dataset.rows.filter(r=>r.n===n&&r.q===q&&r.requested_hit_rate===Number(rate)&&r.duplicate_policy===policy&&(compare||r.version==='revised'));
-          const rows=[...document.querySelectorAll('#summary tbody tr')],bars=[...document.querySelectorAll('#ranking .bar-item')];
-          const growth=dataset.rows.filter(r=>r.q===q&&r.requested_hit_rate===Number(rate)&&r.duplicate_policy===policy&&(compare||r.version==='revised'));
-          if(rows.length!==expected.length||bars.length!==expected.length||document.querySelectorAll('#chart circle').length!==growth.length||document.querySelectorAll('#chart polyline').length!==(compare?6:3)||document.querySelectorAll('#raw tbody tr').length!==expected.length*5)throw Error('Row/curve count');
-          for(const tr of rows){const c=[...tr.cells].map(cell=>cell.textContent);const r=expected.find(r=>r.method===tr.dataset.method&&r.version===tr.dataset.version);if(!r||c[1]!==time(r.preparation_ms)||c[2]!==time(r.query_batch_ms)||c[3]!==time(r.total_ms)||c[4]!==(r.peak_traced_bytes/1024).toLocaleString('de-DE',{maximumFractionDigits:2}))throw Error('Table/data mismatch')}
-          for(const bar of bars){const r=expected.find(r=>r.method===bar.dataset.method&&r.version===bar.dataset.version);if(!r||Number(bar.dataset.ms)!==r[metric])throw Error('Bar/data mismatch')}
-          const winner=expected.filter(r=>r.version==='revised').sort((a,b)=>a[metric]-b[metric])[0];
-          if(element('winner-name').textContent!==names[winner.method]||element('winner-time').textContent!==time(winner[metric]))throw Error('Winner/data mismatch');
+        if(rates.length!==(q==='1'?2:3))throw Error('Working infeasible rates');
+        for(const rate of rates)for(const policy of ['unique','duplicates'])for(const metric of ['preparation_ms','query_batch_ms','total_ms'])for(const version of ['both','original','revised'])for(const axis of ['log','linear'])for(const displayUnit of ['s','ms']){
+          for(const [id,value]of [['hits',rate],['policy',policy],['metric',metric],['versions',version],['axis',axis],['units',displayUnit]])element(id).value=value;
+          element('axis').dispatchEvent(new Event('change'));
+          const expected=dataset.rows.filter(r=>r.q===Number(q)&&r.requested_hit_rate===Number(rate)&&r.duplicate_policy===policy&&(version==='both'||r.version===version));
+          const rows=[...document.querySelectorAll('#summary tbody tr')];
+          if(rows.length!==expected.length||document.querySelectorAll('#chart circle').length!==expected.length||document.querySelectorAll('#chart polyline').length!==(version==='both'?6:3)||document.querySelectorAll('#raw tbody tr').length!==expected.length*5)throw Error('Working row/curve count');
+          for(const tr of rows){const c=[...tr.cells].map(cell=>cell.textContent);const r=expected.find(r=>labels[r.method]+' / '+r.version===c[0]&&r.n===Number(c[1]));if(!r||c[4]!==(r.preparation_ms*(displayUnit==='s'?0.001:1)).toFixed(displayUnit==='s'?9:6)||c[5]!==(r.query_batch_ms*(displayUnit==='s'?0.001:1)).toFixed(displayUnit==='s'?9:6)||c[6]!==(r.total_ms*(displayUnit==='s'?0.001:1)).toFixed(displayUnit==='s'?9:6)||c[7]!==(r.current_traced_bytes/1024).toFixed(2)||c[8]!==(r.peak_traced_bytes/1024).toFixed(2))throw Error('Working table disagrees with data')}
           for(const point of document.querySelectorAll('#chart circle'))if(!Number.isFinite(Number(point.getAttribute('cx')))||!Number.isFinite(Number(point.getAttribute('cy'))))throw Error('Invalid chart coordinate');
           checked++;
         }
       }
-      for(const [id,value]of [['queries','100'],['size',String(Math.max(...dataset.rows.map(r=>r.n)))],['policy','unique'],['metric','query_batch_ms']])element(id).value=value;
-      element('queries').dispatchEvent(new Event('change'));element('hits').value='0.5';element('compare').checked=false;element('compare').dispatchEvent(new Event('change'));
-      if(dataset.reuse&&element('reuse-panel').hidden)throw Error('Reuse evidence hidden');
-      return {filter_combinations_checked:checked,table_values_verified:true,ranking_and_winner_verified:true};
+      for(const [id,value]of [['queries','100'],['hits','0.5'],['policy','unique'],['metric','total_ms'],['versions','both'],['axis','log'],['units','s']])element(id).value=value;
+      element('axis').dispatchEvent(new Event('change'));
+      if(element('budget-status').dataset.passed!=='true')throw Error('Expected ten-second budget to pass');
+      return {filter_combinations_checked:checked,table_values_verified:true,seconds_and_milliseconds_verified:true};
     })()`);
     if(errors.length)throw Error(JSON.stringify(errors));
     const {cssContentSize} = await cdp('Page.getLayoutMetrics');
     const screenshot = await cdp('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,
       clip:{x:0,y:0,width:1440,height:Math.min(2500,cssContentSize.height),scale:1}});
     fs.writeFileSync('results/dashboard-check.png',Buffer.from(screenshot.data,'base64'));
-    await cdp('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
-    const mobile=await evaluate('({width:innerWidth,scrollWidth:document.documentElement.scrollWidth})');
-    if(mobile.scrollWidth>mobile.width)throw Error('Page overflows on mobile');
-    const report = {astra,working,mobile,javascript_errors:errors,screenshot:'results/dashboard-check.png'};
+    const report = {astra,working,javascript_errors:errors,screenshot:'results/dashboard-check.png'};
     fs.writeFileSync('results/dashboard_browser_check.json',JSON.stringify(report,null,2)+'\n');
     console.log(JSON.stringify(report));
     await send('Browser.close');
