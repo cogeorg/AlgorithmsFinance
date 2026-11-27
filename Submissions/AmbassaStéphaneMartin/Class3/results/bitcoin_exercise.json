@@ -1,0 +1,52 @@
+{
+  "reproduce": "python -B price_bitcoin.py --run",
+  "asset": "BTCUSDT",
+  "window": "one_year",
+  "assets": 1,
+  "quote_currency": "USDT",
+  "start_utc": "2025-10-31T23:00:00Z",
+  "end_utc": "2026-10-31T23:00:00Z",
+  "closes": 8761,
+  "N": 8760,
+  "T": 1.0,
+  "day_count": "ACT/365F",
+  "parameters": {
+    "S0": 109608.01,
+    "K": 109608.01,
+    "u": 1.004618025505313,
+    "d": 0.9954032026222204,
+    "R": 1.0000045662204708,
+    "N": 8760
+  },
+  "s": 0.00460739514049591,
+  "q": 0.49934368317518857,
+  "price": 16713.714208750433,
+  "price_units": "USDT per BTC",
+  "boundary_entries": 8761,
+  "boundary_file": "bitcoin_exercise_boundary.csv",
+  "boundary_csv_sha256": "59730bd1a71d213ef862b28fbf9a2a3b1c525c200036a9c06b73c32a005bfc2a",
+  "exercise": {
+    "kind": "early_exercise",
+    "index": 5127,
+    "timestamp_utc": "2026-06-02T14:00:00Z",
+    "payoff": 41588.70999999999,
+    "observed_price": 68019.3
+  },
+  "elapsed_seconds_untraced": 16.02359869999782,
+  "pricing_runs": 1,
+  "timing_scope": "Boundary pricing only; loading, calibration and observed-path scan excluded.",
+  "process_peak_memory_bytes": 30404608,
+  "process_peak_scope": "Windows PeakWorkingSetSize, whole-process high-water mark",
+  "memory_notes": "Whole-process peak includes imports and prepared data; no traced allocation pass.",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "source_window": "output/windows/BTCUSDT/one_year.csv",
+  "source_window_sha256": "70c7341d145507b3be53da026e23835c542241980a7180baf7b4aa8231cfe96a",
+  "implementation_lf_sha256": {
+    "american_put.py": "230ba94118bafcd991f2876b906a5dc9c032e213d560307d498da17f7349b19f",
+    "exercise_policy.py": "06f4f66e4dd2d1cb9fa0f85a11f5897465353c75a8b215c48b99cd75212ff877",
+    "market_calibration.py": "17200fb5fd7f56b6839f10fe79e0cdf151199b024e3ec2156565b0e4b0efc884"
+  },
+  "interpretation": "Retrospective lab experiment; calibration uses the full selected window.",
+  "full_history": "Not priced: its missing hour still requires explicit treatment."
+}

@@ -1,0 +1,58 @@
+{
+  "reproduce": "python -B market_experiments.py --run --gap-policy observed-intervals",
+  "numpy_version": "2.3.5",
+  "total_wall_seconds": 407.3521830000027,
+  "source_integrity": "all 40 raw inputs verified before and after the experiment set",
+  "interpretation": "retrospective calibration on each selected historical window",
+  "gap_approximation": "observations retained; one missing hour is represented by mean period T/N; no prices filled",
+  "summaries": [
+    {
+      "group": "bitcoin_one_year",
+      "window": "one_year",
+      "assets": 1,
+      "N": 8760,
+      "time_convention": "consecutive_hourly",
+      "mean_period_hours": 1.0,
+      "missing_hours_per_asset": 0,
+      "pricing_seconds": 0.5625733000051696,
+      "wall_seconds": 0.6435609000036493,
+      "process_peak_memory_bytes": 42250240
+    },
+    {
+      "group": "bitcoin_full_history",
+      "window": "full_history",
+      "assets": 1,
+      "N": 43822,
+      "time_convention": "observed_intervals_approximation",
+      "mean_period_hours": 1.0000228195883347,
+      "missing_hours_per_asset": 1,
+      "pricing_seconds": 7.683687800003099,
+      "wall_seconds": 8.013368300002185,
+      "process_peak_memory_bytes": 66838528
+    },
+    {
+      "group": "all_assets_one_year",
+      "window": "one_year",
+      "assets": 40,
+      "N": 8760,
+      "time_convention": "consecutive_hourly",
+      "mean_period_hours": 1.0,
+      "missing_hours_per_asset": 0,
+      "pricing_seconds": 15.351824299978034,
+      "wall_seconds": 17.50363649999781,
+      "process_peak_memory_bytes": 49479680
+    },
+    {
+      "group": "all_assets_full_history",
+      "window": "full_history",
+      "assets": 40,
+      "N": 43822,
+      "time_convention": "observed_intervals_approximation",
+      "mean_period_hours": 1.0000228195883347,
+      "missing_hours_per_asset": 1,
+      "pricing_seconds": 370.4671154999887,
+      "wall_seconds": 379.8177805000014,
+      "process_peak_memory_bytes": 82669568
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+PRICEAMERICANPUT BENCHMARK PROCEDURE (OPT-IN)
+
+PREREQUISITES
+The production scalar pricer american_put.price_american_put is implemented.
+Boundary pricing and market calibration are implemented. Synthetic and
+one-year market runs are available; full history still needs gap treatment.
+Do not substitute the exponential test-only references for a large-tree pricer.
+
+Neither benchmark_pricing.py nor bitcoin_integration_check.py matches the
+normal test*.py discovery pattern or appears in run_tests.py's default suites.
+All actual runs below require an explicit --run flag. The benchmark defaults
+to a synthetic N=32 case; large-tree cases must be explicitly requested.
+No elapsed-time or memory threshold determines a test pass/fail result.
+
+WORKFLOW (open a new Python process for each command)
+1. Inspect options; no pricing occurs:
+     python benchmark_pricing.py --help
+2. After implementation, start with a small synthetic scalar tree:
+     python benchmark_pricing.py --run --periods 32 --kind scalar
+3. Compare synthetic sizes or scalar/boundary outputs when useful:
+     python benchmark_pricing.py --run --periods 128 --kind boundary
+     python benchmark_pricing.py --run --periods 512 --kind boundary
+4. When ready for a large real-data run:
+     python benchmark_pricing.py --run --asset BTCUSDT --window one_year --kind boundary
+   This makes TWO N=8,760 pricing calls. Run it intentionally, outside fast tests.
+5. Run the optional market correctness/dimensions check separately:
+     python bitcoin_integration_check.py --run
+
+For Python not on PATH, use the same bundled interpreter command documented
+in EXERCISE_TESTS.txt. Use --output PATH to choose a JSON result destination;
+default is output/benchmarks/<case>_<kind>_N<N>.json.
+
+MEASUREMENT PROTOCOL
+- Load/check data and calibrate BEFORE timing; these costs are excluded.
+- Perform one pricing call timed with time.perf_counter and tracing OFF.
+  Report elapsed_seconds_untraced.
+- Release that result and collect garbage. Perform a SECOND pricing call with
+  tracemalloc ON; report peak_traced_python_bytes during that call.
+  The traced pass's duration is reported separately and includes tracing overhead.
+- Validate finite returned prices and N+1 boundary dimensions, and agreement
+  between the two passes. No expected market-data price is assumed.
+- Record whole-process peak resident memory too: Windows PeakWorkingSetSize;
+  Linux/macOS resource.ru_maxrss normalized to BYTES. This high-water mark
+  includes interpreter imports, data, calibration and both pricing passes.
+- Python traced memory covers tracked allocations inside pricing and may omit
+  native-library buffers. Process peak covers the full process and is not a
+  call-only allocation measurement. Both scopes are explicitly recorded.
+- If process peak is unavailable, record null with an explanatory scope string;
+  never manufacture zero. Python traced peak remains available.
+- Record N, number of assets (1), model parameters, output kind, Python/platform,
+  prepared-data endpoints and dimensions so comparisons are interpretable.
+
+COMPARISON AND REPORTING
+Use repeated NEW-process invocations if you want a timing distribution. Save
+each run to a distinct --output path. Compare growth across N on the same
+machine/environment and output kind; report measurements without machine-
+dependent pass/fail limits. Keep scalar and boundary results identifiable.
+
+GAPS AND FAILURES
+The unmodified Bitcoin full-history window has a missing hour. Its metadata
+and actual timestamps cause the benchmark gate to refuse calibration until
+an explicit data/model treatment is selected. The harness never fills gaps,
+changes raw data, or silently chooses a different contiguous history.
+Missing production code produces PENDING_IMPLEMENTATION and saves no metrics.
+Invalid inputs/gap refusal or MemoryError also save no successful measurement.
+A failed run is not a zero-time/zero-memory run. A prior JSON file remains a
+prior run; use distinct --output paths when comparing attempts.
+The separate price_bitcoin.py --run experiment saves one untraced pricing
+pass and whole-process peak memory to results/bitcoin_exercise.json, plus
+the full boundary and observed decision. It does not run the two-pass traced
+allocation benchmark above.
+
+All four required market groups were also measured by market_experiments.py;
+see results/experiments/experiment_summary.csv and MARKET_EXPERIMENTS.txt.
+Its full-history run uses the approved observed-interval approximation. The
+generic benchmark script above keeps the strict hourly gate by default.

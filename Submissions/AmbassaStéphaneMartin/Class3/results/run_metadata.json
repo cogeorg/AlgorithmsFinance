@@ -1,0 +1,10 @@
+{
+  "completed_at_utc": "2026-11-27T13:13:43.893911Z",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "repository_commit": "0325907cb0a6cc3cd1f292fca095b52d9343ac97",
+  "assets": 40,
+  "windows": 80,
+  "raw_hashes_verified_before_and_after": true,
+  "scope": "PriceAmericanPut market-data preparation only",
+  "full_history_interval": "(latest close - 5 calendar years, latest close]"
+}

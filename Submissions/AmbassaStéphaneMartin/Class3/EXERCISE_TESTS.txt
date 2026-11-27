@@ -1,0 +1,129 @@
+PRICEAMERICANPUT: EXERCISE BOUNDARIES AND OBSERVED EXERCISE TESTS
+
+FAST TESTS
+  python run_tests.py
+  python -m unittest -v test_exercise_policy test_prepared_market
+  python -m unittest discover -v
+
+The fast suite uses trees of at most three periods for boundary decisions and
+short constructed observed paths. It reads the existing Bitcoin window CSVs
+without pricing an 8,760-period tree. No calibration is actually run by the
+prepared-data checks: mocks check the input wiring and gap gate.
+
+If Python is not on PATH, replace python with:
+  & "$env:USERPROFILE\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
+
+IMPLEMENTED PRODUCTION INTERFACES
+The existing scalar interface in american_put.py is unchanged:
+  price_american_put(S0, K, u, d, R, N) -> float
+
+New companion in exercise_policy.py, using the SAME six inputs/validation:
+  price_american_put_with_boundary(S0, K, u, d, R, N) -> PutExerciseResult
+    price: same scalar time-zero value
+    boundary: tuple of N+1 values, indexed by t=0,...,N
+
+  first_observed_exercise(prices, boundary, K, *, timestamps_utc) -> ObservedExercise
+    kind: 'early_exercise', 'maturity_settlement', or 'never'
+    index: the actual observation index, or None for 'never'
+    timestamp_utc: that observation's supplied UTC timestamp, or None
+    payoff: K-P_t on exercise/positive settlement; zero for 'never'
+
+Both functions, scalar pricing and calibration are implemented. Scalar and
+boundary pricing share a one-row engine, with O(N^2) time and O(N) memory. market_test_support.py is only input-checking
+and wiring for tests/benchmarks; it never supplies option values or boundaries.
+
+BOUNDARY AND TIE CONVENTIONS
+- boundary[t] is the HIGHEST stock price among exercise-classified tree nodes
+  at t. Missing exercise region: None, never zero, NaN, or a missing list entry.
+- Include time-zero root and maturity. For N=0 the only entry is maturity at 0.
+- Before maturity: exercise if intrinsic > continuation, strictly. Exact ties
+  continue, including positive-value ties and intrinsic=continuation=0.
+- At maturity: positive intrinsic nodes settle; zero-payoff nodes are not
+  exercise nodes. Every numeric boundary is therefore positive and below K.
+- Value comparisons in tests allow floating-point rounding (1e-12 relative
+  and absolute). Node-decision ties use the stated strict rule; no volatility
+  floor or arbitrary fuzzy exercise margin is introduced.
+- On the OBSERVED path, equality P_t=boundary[t] qualifies. A boundary names
+  an exercising node. This comparison is separate from the value tie rule.
+
+INDEPENDENT, EXACT TREE CHECKS
+The test-only exact_full_tree_decisions in test_exercise_policy.py expands both
+children using fractions.Fraction, records intrinsic/continuation/classification
+for every full-tree path node, and finds each date's maximum exercising price.
+It calls no production helpers. Separate self-checks anchor it to hand-worked
+numbers, so reference errors can be reported before production exists.
+
+For S0=K=100, u=6/5, d=4/5, R=21/20, q=5/8:
+  N=2: boundaries (None,80,96), root value 1175/147.
+  t=1, S=80: intrinsic 20 > continuation 320/21 -> exercise.
+  t=1, S=120: intrinsic 0 < continuation 10/7 -> continue.
+  t=2: exercising stock prices are 64 and 96; the maximum is 96.
+  N=3: boundaries (None,80,64,76.8). This also detects shifted/reversed dates
+  and an unjustified assumption that the boundary must rise with time.
+
+Positive exact tie: S0=80,K=100,u=9/8,d=7/8,R=1,N=1.
+  Root intrinsic=continuation=20 -> continue; boundary (None,90).
+Zero exact tie: S0=120,K=100,u=5/4,d=7/8,R=1,N=1.
+  All payoffs zero -> boundary (None,None).
+
+OBSERVED-PATH CONVENTIONS
+- Scan t=0,...,N-1 for the first non-None boundary reached from above or touched
+  (P_t<=boundary[t]) with positive payoff. Report the first date, not the
+  largest later payoff. Time-zero early exercise is possible if N>0.
+- If there is no early exercise and K-P_N>0, report maturity_settlement at N.
+  Settlement uses the observed expiry price even if it is off the tree lattice
+  and above boundary[N]; the terminal contractual payoff still applies.
+- If no early exercise and the expiry payoff is zero, report kind='never',
+  index/timestamp None and payoff 0. This explicitly represents "Never".
+- At immediate expiry N=0, positive payoff is maturity settlement, not early
+  exercise. A zero payoff gives 'never'.
+- Require aligned, nonempty date axes and UTC-aware increasing timestamps.
+  Reject invalid lengths, invalid timestamps and zero/NaN missing-region markers.
+
+PREPARED BITCOIN CHECKS (FAST)
+Tests read output/window_summary.csv, falling back to results/window_summary.csv,
+and the existing two Bitcoin window files under output/windows/.
+The one-year file must have 8,761 closes, N=8,760 and P_0...P_8760 labels.
+S0=K is checked against the FIRST selected close and the raw file's last 8,761
+closes. It is not the latest close. Actual elapsed hours must equal 8,760.
+The test/benchmark gate uses ACT/365F elapsed years, making T=1 here.
+
+The full-history file retains a two-hour jump over 2023-03-24T13:00:00Z.
+Tests require the preparation flag and prove calibration is never called on
+that window. The actual timestamps are checked too, so merely changing a
+metadata flag cannot hide the gap. No hours are filled or dropped.
+
+OPTIONAL MARKET PRICING CHECK (EXPENSIVE; NOT DEFAULT)
+After calibration and boundary pricing are implemented, explicitly run:
+  python bitcoin_integration_check.py --run
+It checks a finite Bitcoin price, calibration length N, boundary length N+1,
+date-axis alignment, and valid boundary entries. There is NO invented expected
+market-data option price and no pass/fail runtime threshold.
+If implementation is missing, it reports an explicit pending-implementation
+failure. Without --run it refuses to run; importing it through unittest without
+opt-in skips the expensive case before loading data or calling calibration.
+The filename does not match test*.py and run_tests.py excludes the module.
+
+RESULTS AND BENCHMARKS
+All 127 fast test methods pass: zero pending cases, failures, errors or skips.
+Current reviewed results are in results/test_summary.json; detailed logs and
+protected-input preservation checks are in output/pricing_tests/status.json.
+The runner now includes boundary_reference, exercise_boundary,
+observed_exercise and prepared_market groups, with separate .log files.
+No tests are disabled with expectedFailure decorators.
+See BENCHMARKS.txt for explicit timing/memory runs, scopes and output units.
+
+ONE-YEAR BITCOIN RESULT
+  python -B price_bitcoin.py --run
+Saves results/bitcoin_exercise.json and bitcoin_exercise_boundary.csv.
+Price: 16713.714208750433 USDT per BTC. First observed exercise:
+2026-06-02T14:00:00Z, index 5127, payoff 41588.71 USDT per BTC.
+This uses retrospective calibration on the same selected historical window.
+All four required market experiment groups are now complete; see
+MARKET_EXPERIMENTS.txt and results/experiments/LAB_RESULTS.txt. The full-history
+results use the explicitly selected observed-interval approximation.
+
+ADDITIONAL REGRESSIONS
+Ten added methods cover shortcut validation, zero strike, nonpositive interest,
+a positive-rate exact tie, general factors, overflowing nonexercise stock,
+invalid observed values, full-path validation, UTC dates and input preservation.

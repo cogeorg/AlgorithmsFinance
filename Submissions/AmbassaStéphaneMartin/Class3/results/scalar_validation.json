@@ -1,0 +1,89 @@
+{
+  "interface": "price_american_put(S0, K, u, d, R, N) -> float",
+  "implementation_sha256": "faa088ef1be270bc9a85dd5c765306cd38c5580ea1df84672029f0e7b73383de",
+  "baseline": {
+    "command": "python -m unittest -v test_american_put test_american_put_properties",
+    "test_methods": 27,
+    "missing_implementation_case_failures": 138,
+    "exit_code": 1
+  },
+  "after_implementation": {
+    "command": "python -m unittest -v test_american_put test_american_put_properties test_american_put_numerics",
+    "test_methods": 33,
+    "passed": true
+  },
+  "references": [
+    {
+      "case": "one_period",
+      "inputs": {
+        "S0": 100,
+        "K": 100,
+        "u": 1.2,
+        "d": 0.8,
+        "R": 1.05,
+        "N": 1
+      },
+      "expected_fraction": "50/7",
+      "actual_price": 7.142857142857137,
+      "absolute_error": 6.217248937900877e-15,
+      "passed": true
+    },
+    {
+      "case": "two_period",
+      "inputs": {
+        "S0": 100,
+        "K": 100,
+        "u": 1.2,
+        "d": 0.8,
+        "R": 1.05,
+        "N": 2
+      },
+      "expected_fraction": "1175/147",
+      "actual_price": 7.993197278911559,
+      "absolute_error": 5.329070518200751e-15,
+      "passed": true
+    },
+    {
+      "case": "immediate_exercise",
+      "inputs": {
+        "S0": 80,
+        "K": 100,
+        "u": 1.2,
+        "d": 0.8,
+        "R": 1.05,
+        "N": 1
+      },
+      "expected_fraction": "20",
+      "actual_price": 20.0,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "case": "continuation",
+      "inputs": {
+        "S0": 120,
+        "K": 100,
+        "u": 1.2,
+        "d": 0.8,
+        "R": 1.05,
+        "N": 1
+      },
+      "expected_fraction": "10/7",
+      "actual_price": 1.4285714285714257,
+      "absolute_error": 2.886579864025407e-15,
+      "passed": true
+    }
+  ],
+  "relative_tolerance": 1e-12,
+  "absolute_tolerance": 1e-12,
+  "time_complexity": "O(N^2)",
+  "auxiliary_memory": "O(N)",
+  "fast_suite": {
+    "test_methods": 105,
+    "passing_test_methods": 63,
+    "expected_pending_case_failures": 83,
+    "other_assertion_failures": 0,
+    "unittest_errors": 0
+  },
+  "large_market_experiments_run": false
+}

@@ -1,0 +1,126 @@
+PRICEAMERICANPUT: FIRST PRICING TESTS
+
+PUBLIC SCALAR INTERFACE
+  from american_put import price_american_put
+  value = price_american_put(S0, K, u, d, R, N)
+  Return: a finite float giving the time-zero American put value.
+
+S0 and K use the same currency. u and d multiply the underlying price per
+period. R is the gross risk-free return per period, including principal:
+1.05 means 5% per period. N counts periods; there are N+1 exercise dates,
+including immediate exercise at time zero and expiry at period N.
+
+Input contract:
+- S0 > 0; K >= 0; all numeric inputs finite.
+- Require 0 < d < R < u. No reciprocal requirement u*d=1 is imposed.
+- N is a nonnegative integer. Reject booleans, fractional values and floats
+  including 2.0. Periods are a count, not a quantity to round or truncate.
+- Invalid numeric domains and period counts raise ValueError.
+- Apply validation before N=0 and K=0 shortcuts as well.
+- american_put.py implements validated, one-row backward induction.
+  Calibration, boundary output and observed exercise decisions are implemented.
+
+FILES
+  american_put.py       Production scalar pricing and validation.
+  test_american_put.py  unittest pricing and invalid-input tests.
+  run_tests.py          Separate results for pricing and existing data tests.
+  PRICING_TESTS.txt     This contract, derivations and run instructions.
+The existing preparation code, its tests, README and source manifest are not
+modified. Tests use tiny constructed contracts and never load market data.
+
+INDEPENDENT EXPECTED VALUES
+For u=6/5, d=4/5 and R=21/20, q=(R-d)/(u-d)=5/8 and 1-q=3/8.
+The expected results in test_american_put.py are integers or fractions.Fraction
+constants; the tests do not run another tree-pricing algorithm as an oracle.
+
+1. Immediate expiry (N=0):
+   S0=80, K=100: 20. S0=100 or 120, K=100: 0.
+2. K=0: 0, checked at N=0, 1 and 2.
+3. One period, S0=K=100:
+   Terminal prices 120,80; put payoffs 0,20.
+   Discounted value = [(5/8)*0 + (3/8)*20] / (21/20) = 50/7.
+4. Two periods, S0=K=100:
+   Terminal prices 144,96,64; terminal put payoffs 0,4,36.
+   At the up node (S=120), continuation = 10/7 > immediate payoff 0.
+   At the down node (S=80), continuation = 320/21 < immediate payoff 20.
+   Root = [(5/8)*(10/7) + (3/8)*20] / (21/20) = 1175/147.
+5. Immediate exercise, S0=80, K=100, N=1:
+   Continuation = [(5/8)*4 + (3/8)*36] / (21/20) = 320/21 < 20.
+   American put value = 20.
+6. Continuation, S0=120, K=100, N=1:
+   Continuation = [(5/8)*0 + (3/8)*4] / (21/20) = 10/7 > 0.
+
+FLOATING-POINT TOLERANCE
+math.isclose uses relative tolerance 1e-12 and absolute tolerance 1e-12.
+These depth-0, depth-1 and depth-2 trees involve modest prices and few floating
+point operations. The tolerance admits binary rounding of 1.2, 0.8 and 1.05
+while remaining much smaller than rounding a price to four decimal places.
+The relative tolerance scales with nonzero prices; absolute tolerance handles
+zero payoffs. Fraction references are converted to float only for comparison.
+NaN, infinity, booleans, and nonscalar results cannot pass price assertions.
+
+RUN (Python 3.10+, standard library only)
+Open PowerShell in:
+  Submissions/AmbassaStéphaneMartin/Class3 (within this checkout)
+
+Run all pricing, financial-property, calibration, reference and data suites:
+  python run_tests.py
+
+Run only the new pricing tests with normal unittest output:
+  python -m unittest -v test_american_put
+
+Run only the preserved data-preparation tests:
+  python -m unittest -v test_prepare_data
+
+Normal unittest discovery finds the original and extended test files:
+  python -m unittest discover -v
+
+If Python is not on PATH, use the installed Codex interpreter, for example:
+  & "$env:USERPROFILE\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" .\run_tests.py
+Replace .\run_tests.py with the -m unittest arguments above for individual suites.
+
+SCALAR IMPLEMENTATION AND NUMERICAL LIMITS
+The scalar pricer uses O(N**2) time and one O(N) value row. At date t, index j
+counts up moves; successors are old values[j] (down) and values[j+1] (up).
+Ascending j preserves both successor values while overwriting the same row.
+The full-tree evaluators remain confined to test modules.
+
+All input validation precedes N=0 and K=0 shortcuts. Numeric inputs must be
+finite and representable as float; invalid types/domains raise ValueError.
+General valid factors are supported, including u*d!=1, R<1, and factors both
+above or both below one. A negative-rate put may legitimately exceed K.
+
+Put payoffs use log stock/strike ratios, math.fsum and expm1. This avoids
+materializing overflowing powers and reduces near-strike cancellation.
+The root payoff uses K-S0 directly. The down probability is computed from
+(u-R)/(u-d), preserving a small complement when rounded q equals one.
+A convex interpolation of successor values avoids overflowing weighted sums.
+
+Arithmetic remains binary64. Deep/near-degenerate trees can lose precision;
+extreme probabilities and stock contributions can underflow. If a mathematically
+valid option value exceeds finite float range, OverflowError is explicit.
+Huge N can exhaust time/memory; resource failures are not invalid-input errors.
+No large-market experiments or performance guarantees are included in this stage.
+
+SCALAR TEST RESULTS
+Before implementation, the requested original pricing/property command ran
+27 methods with 138 missing-implementation case failures. After implementation,
+the original suites and six numerical regressions run 33 methods successfully:
+  python -m unittest -v test_american_put test_american_put_properties test_american_put_numerics
+The original tests, assertions, tolerances and expected values are unchanged.
+The four independent values 50/7, 1175/147, 20 and 10/7 are confirmed.
+
+The complete fast suite now has 127 methods, all passing. run_tests.py exits 0
+with zero pending cases, failures, errors or skips. The reviewed snapshot is
+results/test_summary.json. The older results/scalar_validation.json describes
+the historical scalar-only stage.
+
+EXTENDED TESTS
+See FINANCIAL_CALIBRATION_TESTS.txt for the full-tree reference, financial
+properties and proposed market-calibration interfaces and contracts.
+
+
+EXERCISE BOUNDARIES AND OBSERVED DECISIONS
+See EXERCISE_TESTS.txt for the companion boundary interface and path contracts,
+prepared-Bitcoin checks and guarded optional integration. BENCHMARKS.txt
+documents the separate performance procedure.

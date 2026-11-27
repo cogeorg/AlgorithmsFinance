@@ -1,0 +1,160 @@
+PRICEAMERICANPUT: FINANCIAL PROPERTIES AND MARKET CALIBRATION TESTS
+
+RUN
+From this project folder, run all unittest groups with separate logs:
+  python run_tests.py
+
+Run the extended tests only:
+  python -m unittest -v test_american_put_properties test_market_calibration
+
+Run only the independently executable full-tree reference checks:
+  python -m unittest -v test_american_put_properties.FullTreeReferenceTests
+
+All tests, including the original tests, are also discoverable with:
+  python -m unittest discover -v
+
+If Python is not on PATH:
+  & "$env:USERPROFILE\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" .\run_tests.py
+No packages beyond Python 3.10+ and its standard library are required.
+
+FINANCIAL PROPERTIES
+The pricing interface remains:
+  american_put.price_american_put(S0, K, u, d, R, N) -> float
+
+Six deterministic, valid trees span N=0,...,5, initial spot/strike levels,
+different up/down factors, R>1, R=1 and R<1. Tests compare production with:
+- Immediate exercise value max(K-S0,0): American >= immediate payoff.
+- European terminal-only exercise value on EXACTLY the same tree.
+- Higher strikes at fixed S0,u,d,R,N: value cannot decrease.
+- Higher initial stock at fixed K,u,d,R,N: value cannot increase.
+- Strike K as an upper bound, restricted to the fixtures with R>=1.
+- Joint scaling of S0 and K by 0.125, 2.0 and 3.7: option price scales equally.
+All paired comparisons retain u,d,R,N. They do not recalibrate volatility or
+change risk-neutral probabilities when spot or strike changes.
+
+The tolerance is absolute 1e-12 plus relative 1e-12 at the comparison scale.
+This admits floating-point rounding on tiny trees while keeping the financial
+inequalities and small option values meaningful. Prices must be finite reals.
+
+INDEPENDENT TEST-ONLY FULL-TREE REFERENCES
+File: test_american_put_properties.py
+  full_tree_american_put: recurse down BOTH branches at every node and compare
+    immediate exercise with discounted continuation. No memoization, shared
+    production helpers, recombining arrays, or production pricing calls.
+  full_tree_european_put: enumerate all 2**N terminal paths, weight terminal
+    payoffs by path probabilities and discount once by R**N.
+These intentionally exponential functions run only on small synthetic trees.
+They belong to the tests and will not be used for the 8,760-period lab pricing.
+
+Separate reference checks use independent hand-worked constants: American
+50/7 (one period) and 1175/147 (two periods); European 50/7 and 925/147.
+The two-period European terminal probabilities are 25/64,30/64,9/64 with
+payoffs 0,4,36; divide their expected payoff by (21/20)**2 to obtain 925/147.
+An immediate-exercise example gives American 20 versus European 320/21.
+These reference checks and the implemented scalar pricing/property tests pass.
+
+IMPLEMENTED CALIBRATION INTERFACES
+File: market_calibration.py. All three functions are implemented; the existing
+21 calibration test methods pass without changed assertions or expected values.
+
+  log_returns(prices) -> tuple[float, ...]
+    Return adjacent natural-log returns ln(P_i/P_(i-1)).
+    Require >=2 positive, finite closes; invalid inputs raise ValueError.
+
+  sample_hourly_volatility(returns) -> float
+    For N finite hourly log returns, calculate sample standard deviation
+    sqrt(sum((r_i-mean(r))**2)/(N-1)); require N>=2.
+    Insufficient/nonfinite returns raise ValueError.
+    Constant returns, including constant nonzero returns, have s=0.
+    This helper returns 0 for them; it does not annualize the result.
+
+  calibrate_binomial(prices, *, T, annual_rate=0.04) -> Calibration
+    T is actual elapsed time in years, supplied explicitly by the caller.
+    Require >=3 positive finite closes, finite T>0 and finite annual_rate.
+    N=len(prices)-1; expose log_returns, s, u, d, R and q in an immutable
+    Calibration dataclass, together with N:
+      u=exp(s), d=1/u, R=exp(annual_rate*T/N), q=(R-d)/(u-d).
+    Reject zero volatility with ValueError mentioning "volatility": u=d=1
+    gives an undefined probability. Do not insert an arbitrary volatility floor.
+    A constant positive growth rate also has ZERO volatility and is rejected.
+    For positive volatility, reject factors/probabilities violating
+    0<d<R<u or 0<q<1, with a ValueError explaining no-arbitrage/probability.
+    Do not clip q into the valid range. All insufficient inputs raise ValueError.
+
+The calibration interface assumes PREPARED CONSECUTIVE hourly closes. It has
+no timestamp argument and cannot detect a missing hour. The caller must check
+window_summary.csv's ready_for_hourly_pricing flag before using market data.
+Existing full-history gaps must receive an explicit decision in a later stage.
+
+DETERMINISTIC CALIBRATION FIXTURES
+- (100,200,100,400) gives log(2),-log(2),log(4), which distinguishes adjacent
+  logarithmic returns from arithmetic or first-price-relative returns.
+- Returns (.02,.04) have mean .03 and sample stdev .02/sqrt(2); denominator
+  N rather than N-1 would give .01. Nonzero-mean centering is also checked.
+- For a=.01,.05,.2, returns (a,0,-a) have mean zero and squared deviations
+  2*a*a; dividing by N-1=2 gives standard deviation a.
+- Prices (100,100*exp(a),100*exp(a),100) generate that return fixture, testing
+  the complete calibration path and anchoring s,u,d,q to independent a.
+- T=3/8760 years makes the three intervals hourly with a 365-day year for
+  these synthetic examples; calibrated q is checked strictly between 0 and 1.
+- One deterministic alternating-level fixture has 8,761 closes to verify
+  N=8760, T=1 and R=exp(.04/8760). It performs no production pricing and
+  accesses no market files. Other fixtures contain only two to four closes.
+- A separate small fixture varies both annual_rate and T to verify their use.
+- Flat prices, geometric constant growth, insufficient samples, invalid prices,
+  nonfinite inputs and impossible risk-neutral probabilities have explicit tests.
+Tolerance matches the pricing tests: relative 1e-12 and absolute 1e-12.
+
+USING THE INTERFACES (LARGE TREE PRICING REMAINS A LATER STAGE)
+  model = calibrate_binomial(selected_prices, T=actual_elapsed_years)
+  value = price_american_put(selected_prices[0], selected_prices[0],
+                             model.u, model.d, model.R, model.N)
+S0=K remains the FIRST selected close, as in the lab contract.
+
+RESULT CLASSIFICATION
+run_tests.py writes these core groups to output/pricing_tests/status.json:
+  pricing, full_tree_reference, financial_properties, calibration, data_preparation.
+Each group has its own .log file, pending production failures, other assertion
+failures, and unittest errors. Subtest failures count separately from methods.
+Only an explicit NotImplementedError from a production stub is classified as
+PENDING_IMPLEMENTATION. Import errors, syntax errors, wrong exception types
+and other unexpected exceptions remain errors; wrong results remain failures.
+No expectedFailure decorators or skips hide implementation regressions.
+Calibration and exercise policy are implemented. The full runner exits 0:
+all 127 methods pass, with zero pending cases, failures, errors or skips.
+The full-tree reference checks and 14 original data-preparation tests should pass.
+Original pricing/data-preparation code, tests, README and manifest are preserved;
+the runner checks their SHA-256 hashes before and after executing the tests.
+
+ADDITIONAL EXERCISE TESTS
+See EXERCISE_TESTS.txt for the boundary_reference, exercise_boundary,
+observed_exercise and prepared_market groups now included in the fast runner.
+See BENCHMARKS.txt for the separate opt-in time/memory procedure.
+
+CURRENT CALIBRATION VALIDATION
+Before implementation, python -B -m unittest -v test_market_calibration ran
+21 methods with 50 pending implementation failures (including subtests).
+After implementation, all 54 methods pass with:
+  python -B -m unittest -v test_market_calibration test_american_put test_american_put_numerics test_american_put_properties
+After market-experiment validation the full runner executes 127 methods,
+all passing, with zero pending cases. Unexpected assertion failures and unittest errors are zero.
+The original calibration and scalar-pricing assertions and expected values are unchanged.
+
+NUMERICAL HANDLING
+Adjacent prices use log1p for near-equal levels, direct log ratios when finite,
+and log differences if a finite pair's ratio overflows or underflows.
+Sample volatility uses statistics.stdev, with denominator N-1 and accurate
+sums that avoid unnecessary intermediate squared-float over/underflow.
+All normalized inputs must be finite real floats; numeric text and booleans
+are rejected. Calculations preserve the supplied sequences.
+Factors must remain finite and satisfy 0<d<R<u in binary64; under-resolved
+or overflowing factors are rejected. No volatility floor or probability clip is used.
+
+BITCOIN ONE-YEAR CALIBRATION
+  python -B calibrate_bitcoin.py
+This uses the prepared-window loader and its ACT/365F hourly-spacing gate,
+verifies 8,761 closes / 8,760 periods / T=1, and writes the actual factors,
+dates, initial spot/strike and source hashes to results/bitcoin_calibration.json.
+The full-history window is not calibrated: its missing 2023-03-24T13:00:00Z
+hour remains flagged for explicit treatment. No boundary or large-tree pricing
+is run by the report script.

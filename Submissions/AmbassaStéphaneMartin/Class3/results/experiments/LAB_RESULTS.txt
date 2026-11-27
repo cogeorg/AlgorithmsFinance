@@ -1,0 +1,80 @@
+PRICEAMERICANPUT: FINAL LOCAL LAB RESULTS
+
+All four required experiment groups completed. All 127 fast test methods pass,
+with zero failures, errors, pending cases or skips. All 40 raw input hashes
+were verified before and after the experiment set; prepared input hashes
+and both complete Bitcoin boundary files were independently reconciled.
+
+Measured runs (each group uses a fresh process):
+group                         assets       N    pricing s      wall s   peak MiB
+bitcoin_one_year                  1    8760        0.563       0.644      40.29
+bitcoin_full_history              1   43822        7.684       8.013      63.74
+all_assets_one_year              40    8760       15.352      17.504      47.19
+all_assets_full_history          40   43822      370.467     379.818      78.84
+
+Pricing time is the sum of calls; it includes NumPy's lazy import on the first
+call. Wall time additionally includes loading, calibration, path scans and
+output. Peak memory is whole-process high-water memory, including imports and
+data. The 40 assets are processed sequentially; the controller is excluded.
+These measurements are not traced pricing-only allocation measurements.
+
+Bitcoin contracts and decisions:
+  one_year: 2025-10-31T23:00:00Z to 2026-10-31T23:00:00Z
+    S0=K: 109,608.01 USDT per BTC
+    Initial put value: 16,713.71420875 USDT per BTC (15.2486% of S0)
+    First observed exercise: 2026-06-02T14:00:00Z, index 5127
+    Gross exercise payoff: 41,588.71 USDT per BTC
+
+  full_history: 2021-11-01T00:00:00Z to 2026-10-31T23:00:00Z
+    S0=K: 61,560.49 USDT per BTC
+    Initial put value: 20,716.75407125 USDT per BTC (33.6527% of S0)
+    First observed exercise: 2022-06-18T06:00:00Z, index 5502
+    Gross exercise payoff: 42,121.23 USDT per BTC
+
+The two horizons have different initial dates and strikes: they are separate
+contracts. Exercise payoffs are gross K-P_t, rather than profits after premiums.
+UTC dates use the supplied hourly bar labels; each price is that bar's close.
+
+one_year: 36/40 early exercises; 4/40 never exercise.
+  Never: NEARUSDT, TRXUSDT, UNIUSDT, ZECUSDT
+full_history: 36/40 early exercises; 4/40 never exercise.
+  Never: BNBUSDT, PAXGUSDT, TRXUSDT, XRPUSDT
+
+Full-history data convention:
+  All 43,823 observed closes are retained, giving N=43,822.
+  One hour is missing: 2023-03-24 13:00 UTC; one observed interval spans 2 h.
+  Actual elapsed time: 43823 h; ACT/365F T=5.002625570776256.
+  Mean model period: 1.0000228195883347 h = elapsed time/N.
+  The approved observed-interval approximation uses sample volatility of
+  observed returns and R=exp(0.04*T/N), without filling or removing prices.
+  Every affected row is labelled observed_intervals_approximation.
+  The original strict hourly gate still rejects this window by default.
+
+Interpretation and scaling:
+  Calibration uses each entire historical window. This is a retrospective
+  lab experiment, rather than an out-of-sample investment backtest.
+  The rule finds the first crossing of the model boundary; it does not
+  choose the largest realized future payoff after seeing the whole path.
+  The NumPy engine evaluates the same recurrence on one date's row at a time.
+  Its small trees match exact rational decisions; the real Bitcoin one-year
+  price, all 8,761 boundaries and first exercise match the reference engine.
+  For 40 assets, full-history pricing took 24.13 times the one-year pricing time.
+  Time remains O(M*N^2); rolling-row storage is O(N), plus an O(M) results
+  table. Memory did not bind within the assigned horizons and asset count.
+
+Files:
+  experiment_summary.csv: N, asset count, time and peak memory for four runs.
+  asset_results.csv: 82 profile rows covering 80 distinct asset/window contracts.
+  Two Bitcoin-only rows repeat the corresponding 40-asset batch contracts.
+  bitcoin_one_year_boundary.csv and bitcoin_full_history_boundary.csv:
+    complete Bitcoin date axes, observed prices and exercise boundaries.
+  Individual group JSON files: all parameters and detailed decisions.
+  verification.json: artifact reconciliation and test counts.
+
+Reproduce:
+  python -m pip install -r requirements.txt
+  python -B run_tests.py
+  python -B market_experiments.py --run --gap-policy observed-intervals
+
+NumPy version: 2.3.5. Total experiment-set wall time: 407.352 s.
+See MARKET_EXPERIMENTS.txt for the full method and measurement definitions.

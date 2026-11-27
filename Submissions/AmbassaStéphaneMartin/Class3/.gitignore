@@ -1,0 +1,18 @@
+data/hourly/SP500.csv
+__pycache__/
+*.py[cod]
+data/raw/
+data/source_manifest.json
+output/
+reference/course_data/
+reference/slides/
+reference/*.pdf
+*.log
+
+# Local working records and editor files.
+.local-workspace/
+.submission/
+SUBMISSION.json
+SUBMISSION.txt
+*.code-workspace
+.merge-check-temp/

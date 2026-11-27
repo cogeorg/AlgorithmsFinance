@@ -1,0 +1,11 @@
+{
+  "result": "passed",
+  "method": "independent raw-to-output reconciliation and expected-grid set difference",
+  "assets_verified": 40,
+  "windows_verified": 80,
+  "exported_rows_verified": 2103360,
+  "source_and_snapshot_hashes_verified": 40,
+  "missing_hour_each_asset_utc": "2023-03-24T13:00:00Z",
+  "one_year_ready": 40,
+  "full_history_ready": 0
+}

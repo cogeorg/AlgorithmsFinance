@@ -1,0 +1,5 @@
+group,window,assets,N,time_convention,mean_period_hours,missing_hours_per_asset,pricing_seconds,wall_seconds,process_peak_memory_bytes
+bitcoin_one_year,one_year,1,8760,consecutive_hourly,1.0,0,0.5625733000051696,0.6435609000036493,42250240
+bitcoin_full_history,full_history,1,43822,observed_intervals_approximation,1.0000228195883347,1,7.683687800003099,8.013368300002185,66838528
+all_assets_one_year,one_year,40,8760,consecutive_hourly,1.0,0,15.351824299978034,17.50363649999781,49479680
+all_assets_full_history,full_history,40,43822,observed_intervals_approximation,1.0000228195883347,1,370.4671154999887,379.8177805000014,82669568

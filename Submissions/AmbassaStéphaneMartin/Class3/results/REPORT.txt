@@ -1,0 +1,117 @@
+PRICEAMERICANPUT LAB - MARKET DATA PREPARATION
+
+Historical data-preparation snapshot. The completed lab results are now in
+experiments/LAB_RESULTS.txt and experiments/experiment_summary.csv. Statements
+below about unimplemented later stages describe this preparation snapshot.
+
+1. Sources and scope
+Course repository: https://github.com/cogeorg/AlgorithmsFinance.git
+Commit: 0325907cb0a6cc3cd1f292fca095b52d9343ac97
+Source checkout: ../../.. (course repository root)
+The existing checkout was read only. Raw CSVs were copied byte for byte;
+source_manifest.json records SHA-256 hashes. Integrity was verified before
+and after preparation. No option prices, returns, or calibration computed.
+Lab reference: course-provided AlgorithmsFinance_Slides3.pdf, PDF pages 29-32
+(printed lab slides 29/31-31/31); data sources on PDF page 36.
+The supplied PDF is reference material; this stage follows the user request
+to prepare data only. Later pricing tasks on the slides remain out of scope.
+
+Files: 40 supplied USDT pairs; schema: timestamp_utc,close.
+timestamp_utc labels the START of a UTC hour; close is its last trade.
+Labels were retained exactly in UTC; no one-hour timestamp shift was made.
+The slides call these US dollars; the CSVs actually quote Tether (USDT).
+No USDT/USD conversion or assumption of exact dollar parity is applied.
+PAXGUSDT is Pax Gold per token (one fine troy ounce), not an unwrapped
+spot-gold or USD series. BTCUSDT is Bitcoin priced in USDT.
+
+2. Validation and cleaning policy
+- Audit the raw order, duplicate timestamps, invalid timestamps, off-hour
+  records, malformed rows, and nonnumeric/nonfinite/nonpositive prices.
+- Normalize timezone-aware timestamps to UTC. Exclude naive timestamps
+  and timestamps not aligned to the UTC hour; do not guess or round them.
+- Sort a separate in-memory copy. Keep the first valid observation for
+  an identical-price duplicate hour; exclude every valid conflicting-price
+  duplicate at that hour. Log every excluded row and its source line.
+- Never overwrite raw inputs, forward-fill, backfill, interpolate, or
+  create synthetic closes. Gap files list every missing interval.
+- Keep count sufficiency separate from equal-hour spacing. Gapped windows
+  remain exportable for inspection, but are NOT marked ready for the
+  equal-hour binomial model; a later explicit treatment is required.
+Raw invalid counts may overlap; excluded_rows counts distinct rows once.
+Total exclusions in this snapshot: 0.
+
+3. Bitcoin validation
+Raw closes: 43,823; usable closes: 43,823.
+Actual coverage: 2021-11-01T00:00:00Z to 2026-10-31T23:00:00Z.
+Ordering violations: 0; extra duplicate rows: 0; invalid prices: 0.
+Invalid timestamps: 0; off-hour rows: 0.
+Internal missing hours: 1 in 1 gaps.
+Missing hours against the advertised course grid: 1.
+
+4. Bitcoin experiment windows
+One year means the last 8,761 observed valid closes, not a calendar filter.
+Full history uses available closes in (last close - 5 calendar years, last
+close]. This includes leap days and caps hourly bar labels to five years.
+N is observations minus one, even when elapsed time is longer due to gaps.
+
+FULL_HISTORY
+  Observations: 43,823; N: 43822; labels: P_0 ... P_43822.
+  Start: 2021-11-01T00:00:00Z; end: 2026-10-31T23:00:00Z.
+  Actual elapsed duration: 1825 days, 23:00:00 (43823.0 hours).
+  Contract: S_0 = K = P_0 = 61560.49 USDT.
+  Missing hours: 1; gap intervals: 1.
+  Consecutive hourly observations: False.
+  Data ready for hourly pricing: False.
+
+ONE_YEAR
+  Observations: 8,761; N: 8760; labels: P_0 ... P_8760.
+  Start: 2025-10-31T23:00:00Z; end: 2026-10-31T23:00:00Z.
+  Actual elapsed duration: 365 days, 0:00:00 (8760.0 hours).
+  Contract: S_0 = K = P_0 = 109608.01 USDT.
+  Missing hours: 0; gap intervals: 0.
+  Consecutive hourly observations: True.
+  Data ready for hourly pricing: True.
+
+Bitcoin conclusion: At least one window needs an explicit gap/data decision before hourly pricing.
+This is data readiness only. Volatility and pricing have not been computed.
+
+5. All supplied assets
+Advertised inclusive grid: 2021-11-01T00:00:00Z to 2026-10-31T23:00:00Z;
+43,824 hourly closes, with 43,823 changes if no gaps.
+A count of observations is not an elapsed duration. missing_hours measures
+internal holes; missing_course_hours also includes absent endpoint hours.
+Raw observation counts: 43,823 to 43,823.
+Assets with validation or advertised-coverage issues: 40.
+Insufficient for 8,761-close experiment: none.
+Insufficient for any full-history experiment (fewer than 2 closes): none.
+Assets missing part of the advertised five-year grid: 40/40; see asset_summary.csv.
+One-year windows ready for hourly pricing: 40/40.
+Full-history windows ready for hourly pricing: 0/40.
+  Missing interval 2023-03-24T13:00:00Z to 2023-03-24T13:00:00Z: 1 hour(s), affecting 40/40 assets.
+Per-asset quality fields and window availability are in the two summary CSVs.
+
+6. S&P 500 is a separate acquisition/calendar problem
+The supplied data/fetch_sp500.py requests Yahoo
+Finance ^GSPC with range=730d&interval=1h (roughly TWO years, although
+the course README describes roughly three years). It drops null closes
+and writes hourly/SP500.csv relative to the script. It has not been run.
+These are index levels in points, not a USDT-quoted traded asset.
+Bars follow New York trading hours, with weekends, holidays, shortened
+sessions and daylight-saving shifts. Do not apply a 24/7 hourly missing
+grid or the 8,761-close criterion as one trading year; use an exchange
+calendar and a separate interpretation of the later contract periods.
+No S&P 500 data are supplied in the 40-file snapshot or mixed into its
+summaries. The script is documented for optional later personal use;
+index data should not be committed to the course repository.
+
+7. Outputs and reproduction
+asset_summary.csv: one audit/coverage row per supplied asset.
+window_summary.csv: both experiments, counts, elapsed time, S_0, K, status.
+gaps.csv: all internal missing intervals. exclusions.csv: rejected rows.
+windows/<ASSET>/<window>.csv: P_0 ... P_N, original source line, and
+elapsed_hours_from_previous/missing_hours_before to keep gaps visible.
+For insufficient one-year history, no partial window is labelled as a
+valid one-year selection; the status row reports insufficiency instead.
+From the project folder: python prepare_data.py
+Tests: python -m unittest -v test_prepare_data
+See README.md for acquisition and Windows interpreter instructions.

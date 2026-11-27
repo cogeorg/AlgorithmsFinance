@@ -1,0 +1,3 @@
+# Optional acceleration for the 40-asset market experiments.
+# The reference pricing and calibration APIs use the Python standard library.
+numpy>=1.24

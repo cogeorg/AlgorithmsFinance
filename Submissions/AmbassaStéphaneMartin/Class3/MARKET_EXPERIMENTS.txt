@@ -1,0 +1,75 @@
+PRICEAMERICANPUT: REQUIRED MARKET EXPERIMENTS
+
+PURPOSE
+Apply the validated American put recurrence to the supplied market data and
+report model values, first observed exercise decisions, runtime and memory.
+Every contract is at the money at its own first selected close: S0=K=P0.
+The one-year and full-history windows therefore have different issue dates
+and strikes. They are separate contracts.
+
+REPRODUCE
+Python 3.10+; install the market-run acceleration dependency if necessary:
+  python -m pip install -r requirements.txt
+Run the fast correctness checks:
+  python -B run_tests.py
+Run the four required groups:
+  python -B market_experiments.py --run --gap-policy observed-intervals
+For one group, add --group followed by one of:
+  bitcoin_one_year
+  bitcoin_full_history
+  all_assets_one_year
+  all_assets_full_history
+
+MODEL AND TIME CONVENTION
+Log returns and sample standard deviation use every selected observed close.
+The mean return is removed; sample variance divides by N-1. Factors are
+u=exp(s), d=1/u, R=exp(0.04*T/N), q=(R-d)/(u-d). T uses actual ACT/365F time.
+The one-year windows have 8,761 consecutive closes and N=8,760 hourly steps.
+UTC timestamps retain the supplied start-of-hour bar labels; each price is
+the close of that labelled bar. No timestamp shifting is applied.
+Full history has 43,823 closes and N=43,822 observed intervals. Each asset
+misses 2023-03-24 13:00 UTC: one interval spans two hours. The explicitly
+selected approximation retains all observations, uses their sample return
+volatility, and assigns the tree its average period T/N. Mean period duration
+is 1.0000228195883347 hours. No prices are filled, interpolated or removed.
+This is labelled observed_intervals_approximation in every affected output.
+The original strict hourly gate still rejects this gapped window by default.
+
+ALGORITHM AND VALIDATION
+market_experiments.price_atm_put uses the same backward recurrence as the
+reference scalar engine, with NumPy evaluating each date's independent node
+operations together. Time remains O(N^2); auxiliary storage remains O(N).
+Small trees are checked against exact rational decisions and the reference
+engine. The real one-year Bitcoin run checks the saved reference price, every
+one of its 8,761 boundary entries, and its first observed exercise index.
+All raw dataset hashes are checked before and after the complete experiment
+set. Each prepared input is also checked around its own pricing call.
+
+TIMING AND MEMORY
+Each group runs in a fresh process. The 40-asset groups process their assets
+sequentially in that one process, retaining one tree row at a time. Pricing
+seconds sum the measured pricing calls; wall seconds additionally include
+loading, calibration, path scans and output. Peak memory is the experiment
+process's whole-process high-water mark. The first pricing call also includes
+NumPy's lazy import; later calls reuse that import. Peak memory includes
+imports and input data.
+It excludes the small orchestration process and is not traced call-only
+allocation memory. It cannot be compared directly with another memory scope.
+No machine-dependent timing or memory threshold determines correctness.
+
+OUTPUTS UNDER results/experiments/
+experiment_summary.csv: four runs, with N, asset count, seconds and peak bytes.
+asset_results.csv: 82 rows: two Bitcoin-only profiles plus 40 assets x 2 windows.
+There are 80 distinct asset/window contracts; the two Bitcoin rows repeat the
+separate profiles so that every measured run remains identifiable.
+market_experiments.json: overall reproduction, time convention and integrity.
+<group>.json and <group>_assets.csv: full parameters and decisions for each run.
+bitcoin_one_year_boundary.csv and bitcoin_full_history_boundary.csv: complete
+dated Bitcoin boundaries, observed closes and observation indices.
+
+INTERPRETATION
+These are retrospective lab experiments calibrated on each entire selected
+historical window. They do not represent out-of-sample investment decisions.
+Reported exercise payoffs are gross K-P_t, not net profits after premiums.
+The rule scans for the first boundary crossing; it does not select the largest
+realized payoff after inspecting all later prices.

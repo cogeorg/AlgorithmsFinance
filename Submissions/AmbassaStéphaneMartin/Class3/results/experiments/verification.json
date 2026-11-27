@@ -1,0 +1,42 @@
+{
+  "groups": 4,
+  "profile_rows": 82,
+  "unique_contracts": 80,
+  "all_prepared_hashes_match": true,
+  "bitcoin_boundaries_reconciled": true,
+  "test_totals": {
+    "test_methods": 127,
+    "passing_test_methods": 127,
+    "expected_pending_case_failures": 0,
+    "other_assertion_failures": 0,
+    "unittest_errors": 0,
+    "skipped": 0
+  },
+  "source_integrity": "all 40 raw inputs verified before and after the experiment set",
+  "reference_check": "NumPy one-year Bitcoin price, all 8761 boundaries and first exercise match the saved standard-library run",
+  "gap_policy": "explicit observed-interval approximation; original hourly gate preserved",
+  "submission_destination": "cogeorg/AlgorithmsFinance pull request #63",
+  "implementation_lf_sha256": {
+    "american_put.py": "230ba94118bafcd991f2876b906a5dc9c032e213d560307d498da17f7349b19f",
+    "benchmark_pricing.py": "b9f521db920ddb3f77935f4acbb6378e727cf95684cf17a875d80c15361042f2",
+    "bitcoin_integration_check.py": "5cb64ae66c23496221c474a9a63efed162fc228ae844d3fbe08d1bdf682a7021",
+    "calibrate_bitcoin.py": "5a4e43d30f2d058efa371a484cd54c0de855411237c2c3e8f155eac9d28eee87",
+    "exercise_policy.py": "06f4f66e4dd2d1cb9fa0f85a11f5897465353c75a8b215c48b99cd75212ff877",
+    "market_calibration.py": "17200fb5fd7f56b6839f10fe79e0cdf151199b024e3ec2156565b0e4b0efc884",
+    "market_experiments.py": "d207fc73e290cbf916cde69fb19b2e0b5abe14146d80b3b24a3a1f2d04a79b7a",
+    "market_test_support.py": "c85ad6adfaf1dbe347e42aae5d99eba3e3817d50521539ae8d8a439fc4770d83",
+    "prepare_data.py": "4dc5273110a28ee8c2a6ae8f180591b92b6dd845b3f49964ed84ce39299ee7f0",
+    "price_bitcoin.py": "8d77ac0e21bbfe22f9817c39591838a4f4ebabbff9f616ba1143e837e7fbdd78",
+    "reference/check_outputs.py": "9df636e14134d83bc08c8b6acaec13b508b0fa615161a0b38af1afd3724b9cdc",
+    "reference/inspect_reference.py": "8808ed615951dcc73bc313d0773a110ee20d552d2300e6e91abc08167845cad6",
+    "run_tests.py": "c15573b710bd1a29fe66951df304937edd13ab10a280f696944eab7c181a3f1e",
+    "test_american_put.py": "39a861df9d4bd6efd0323d6e1262695eaaecef8e80ae6eb3f5aba9a88422da5a",
+    "test_american_put_numerics.py": "7fd92c2d61a8d11dce4edfbd254c75d4b3609d2f999fac8dbdcc69304eef2eae",
+    "test_american_put_properties.py": "3ccc97b4f5b1803a7ecf8496cbb46a2eceb60ddf27fe191891b0f21889b695c9",
+    "test_exercise_policy.py": "d3c3b9cc3b75bfc7c94e7a22711b6a057e5cebb1db9b31d6c38b78cfed4123e0",
+    "test_market_calibration.py": "29785b69b1d2cab1fcd4ce4f9696182a973ddccc70f34a37af768c6f27063b7c",
+    "test_market_experiments.py": "5407340ef214fd6105fe26e3cd7f031abeed98684608d26e38c54c17ea6d7268",
+    "test_prepare_data.py": "4d9a75ba285bf6471c137b34115a68ea3786a74cff1cb3bc072fd0aa37242d23",
+    "test_prepared_market.py": "279d618ce1ad51046be83e7c4054b0e7abcaf0fed56c209dd7a5d2b0c327cb7f"
+  }
+}
