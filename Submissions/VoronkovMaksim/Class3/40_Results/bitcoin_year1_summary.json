@@ -1,0 +1,57 @@
+{
+  "source_sha256": "78bef06514dd17b0dcb7a65625e40a63fe114a7d2809facd27888c13a4168f1e",
+  "data_quality": {
+    "rows": 43823,
+    "first_utc": "2021-11-01T00:00:00+00:00",
+    "last_utc": "2026-10-31T23:00:00+00:00",
+    "invalid_prices_or_timestamps": 0,
+    "duplicates_or_unordered": 0,
+    "intervals_not_one_hour": 1,
+    "missing_hourly_slots": 1,
+    "max_gap_hours": 2.0
+  },
+  "calibration": {
+    "window_start_utc": "2021-11-01T00:00:00+00:00",
+    "window_end_exclusive_utc": "2022-11-01T00:00:00+00:00",
+    "last_calibration_observation_utc": "2022-10-31T23:00:00+00:00",
+    "observations": 8760,
+    "N_returns": 8759,
+    "initial_price": 61560.49,
+    "last_calibration_price": 20490.74,
+    "elapsed_years_actual_365_25": 0.9992014601870864,
+    "mean_log_return": -0.00012559050027129663,
+    "sample_log_return_std": 0.006996236583787828,
+    "u": 1.007020767421435,
+    "d": 0.993028180104555,
+    "annual_continuous_rate": 0.04,
+    "R_per_observation": 1.000004563095056,
+    "q_risk_neutral": 0.498577056016297
+  },
+  "contract": {
+    "S0": 20490.74,
+    "K": 20490.74,
+    "N": 8759,
+    "T_years": 1,
+    "u": 1.007020767421435,
+    "d": 0.993028180104555,
+    "R": 1.0000045667417896,
+    "q": 0.49857731663525895,
+    "currency": "USDT per BTC"
+  },
+  "price_usdt_per_btc": 4850.813552665224,
+  "pricing_runtime_seconds": 10.903113399981521,
+  "peak_traced_pricing_bytes": 458776,
+  "boundary_calculation_seconds_including_baseline_check": 17.170016000047326,
+  "memory_method": "tracemalloc peak in separate pricing call; not total process memory",
+  "evaluation": {
+    "origin_utc": "2022-10-31T23:00:00+00:00",
+    "maturity_utc": "2023-11-01T05:00:00+00:00",
+    "observations": 8765,
+    "first_utc": "2022-11-01T00:00:00+00:00",
+    "last_utc": "2023-11-01T05:00:00+00:00",
+    "first_crossing": null,
+    "mapping": "floor(elapsed calendar time / 365.25 days * N)"
+  },
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0"
+}

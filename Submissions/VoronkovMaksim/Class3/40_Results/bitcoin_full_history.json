@@ -1,0 +1,53 @@
+{
+  "asset": "BTC",
+  "asset_count": 1,
+  "source_sha256": "78bef06514dd17b0dcb7a65625e40a63fe114a7d2809facd27888c13a4168f1e",
+  "window_start_utc": "2021-11-01T00:00:00+00:00",
+  "window_end_utc": "2026-10-31T23:00:00+00:00",
+  "observations": 43823,
+  "N": 43822,
+  "intervals_not_one_hour": 1,
+  "T_years_actual_365_25": 4.999201460187087,
+  "S0": 61560.49,
+  "K": 61560.49,
+  "volatility": 0.005396058959060922,
+  "u": 1.0054106439071515,
+  "d": 0.9946184736157904,
+  "R": 1.0000045631991843,
+  "q": 0.4990738135132423,
+  "timeout_seconds_per_operation": 1000,
+  "memory_method": "tracemalloc peak for pricing only; excludes process RSS",
+  "exercise_method": "in-sample; observation index maps to tree step; gaps not filled",
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "operations": {
+    "pricing": {
+      "status": "completed",
+      "price_usdt_per_btc": 20719.789430044082,
+      "runtime_seconds": 260.7708279999788
+    },
+    "boundary": {
+      "status": "completed",
+      "price_usdt_per_btc": 20719.789430044082,
+      "runtime_seconds_including_price_check": 681.9050981000182,
+      "first_crossing": {
+        "step": 5502,
+        "timestamp_utc": "2022-06-18T06:00:00+00:00",
+        "price_usdt": 19439.26,
+        "boundary_usdt": 19823.099264754317,
+        "intrinsic_payoff_usdt": 42121.229999999996
+      },
+      "matches_original_price": true,
+      "operation_wall_seconds_including_setup": 682.3719765999704
+    },
+    "memory": {
+      "status": "not available \u2014 tracing terminated due to excessive overhead",
+      "elapsed_tracing_seconds": 11735.96
+    }
+  },
+  "previous_memory_attempt": {
+    "status": "interrupted",
+    "detail": "Process connection ended before result was recorded"
+  },
+  "retry_timeout_seconds": null
+}

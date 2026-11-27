@@ -1,0 +1,17 @@
+# Local environments and caches
+.venv/
+__pycache__/
+*.pyc
+
+# The instructor's data lives in the course repository; local copies are reference only.
+00_Instructor/
+
+# The private S&P 500 dataset and its derived results are not for submission.
+SP500.csv
+40_Results/sp500_*
+40_Results/one_year_assets.csv
+40_Results/one_year_assets_metadata.json
+50_Docs/CALIBRATION.md
+50_Docs/PRICING_BASELINE.md
+50_Docs/EXERCISE_ANALYSIS.md
+20_Code/run_sp500_pricing.py

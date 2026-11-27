@@ -1,0 +1,13 @@
+# Bitcoin: first-year calibration and following-year exercise policy
+
+The original `BTCUSDT.csv` has 43,823 valid, strictly increasing prices from 2021-11-01 00:00 through 2026-10-31 23:00 UTC. No missing or invalid prices or duplicate timestamps were found. There is one missing hourly observation: 2023-03-24 13:00 UTC (a two-hour gap from 12:00 to 14:00). Nothing is filled or interpolated. Source SHA-256: `78bef06514dd17b0dcb7a65625e40a63fe114a7d2809facd27888c13a4168f1e`.
+
+The first calendar year, 2021-11-01 inclusive to 2022-11-01 exclusive, contains 8,760 observations and 8,759 log returns. Sample volatility is 0.00699623658, u = 1.00702076742 and d = 0.99302818010. The historical-window discount R = 1.00000456310 and q = 0.49857705602. Using only the final calibration close, S0 = K = 20490.74 USDT/BTC; the one-year forward contract uses N = 8759, R = exp(0.04/N) = 1.00000456674 and q = 0.49857731664. Thus 0 < d < R < u. Model steps represent average observed intervals, with the same calendar-time approximation as the S&P experiment.
+
+The original two-array pricing function returned 4850.81355267 USDT per BTC. The untraced pricing call took 10.903 seconds; a separate tracemalloc call recorded 458,776 peak Python-traced bytes, not total process memory. A boundary calculation returned the same price; its 17.170 seconds include the additional baseline validation call. Seven existing tests passed, including the worked example and out-of-sample cutoff test. The data file's SHA-256 was unchanged after the run.
+
+The model begins 2022-10-31 23:00 UTC and expires after 365.25 days at 2023-11-01 05:00 UTC. The next 8,765 available closes are mapped to model steps by `floor(N * elapsed / horizon)`. No observed close crossed the exercise boundary. The missing hour falls in the evaluation period, so a crossing within that unobserved interval cannot be excluded. This is an out-of-sample policy comparison, not an option-market-price comparison or a forecast.
+
+The slides' required Bitcoin experiment uses the **last** year of the data with S0 at that window's first close. This separate earlier-year calibration and following-year evaluation does not fulfill that specific window; it also does not replace the full-file and all-asset experiments.
+
+Outputs: `40_Results/bitcoin_year1_summary.json`, `bitcoin_year1_boundary.csv`, and `bitcoin_year1_chart.png`. To reproduce from the lab folder, use `python -B 20_Code/bitcoin_experiment.py 00_Instructor/Class3/data/hourly/BTCUSDT.csv` with Matplotlib installed. The script refuses to overwrite existing output files. The memory-traced run is substantially slower than the untraced call.

@@ -1,0 +1,5 @@
+workload,implementation,periods_per_asset,assets,workers,runtime_seconds,peak_aggregate_rss_bytes,status
+BTC one year,NumPy B,8760,1,1,0.3122064000344835,44310528,completed
+BTC full history,NumPy B,43822,1,1,10.471571000001859,46051328,completed
+40 assets one year,NumPy B,8760,40,8,4.043882300029509,427847680,completed
+40 assets five years,NumPy B,43822,40,8,72.22288100002334,462331904,completed

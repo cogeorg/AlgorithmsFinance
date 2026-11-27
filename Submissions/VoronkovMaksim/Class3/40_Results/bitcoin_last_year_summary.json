@@ -1,0 +1,31 @@
+{
+  "source_sha256": "78bef06514dd17b0dcb7a65625e40a63fe114a7d2809facd27888c13a4168f1e",
+  "window_start_utc": "2025-10-31T23:00:00+00:00",
+  "window_end_utc": "2026-10-31T23:00:00+00:00",
+  "observations": 8761,
+  "N": 8760,
+  "intervals_not_one_hour": 0,
+  "missing_hourly_slots": 0,
+  "T_years_actual_365_25": 0.999315537303217,
+  "S0": 109608.01,
+  "K": 109608.01,
+  "volatility_per_observation": 0.00460739514049591,
+  "u": 1.004618025505313,
+  "d": 0.9954032026222204,
+  "R": 1.000004563095056,
+  "q": 0.49934334400265584,
+  "price_usdt_per_btc": 16714.9352705545,
+  "pricing_runtime_seconds": 10.427927099983208,
+  "peak_traced_pricing_bytes": 458832,
+  "memory_method": "tracemalloc peak on separate pricing call; not process RSS",
+  "exercise_analysis": "in sample; observation i compared with tree step i",
+  "first_crossing": {
+    "step": 5127,
+    "timestamp_utc": "2026-06-02T14:00:00+00:00",
+    "price_usdt": 68019.3,
+    "boundary_usdt": 68193.46617087314,
+    "payoff_usdt": 41588.70999999999
+  },
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0"
+}

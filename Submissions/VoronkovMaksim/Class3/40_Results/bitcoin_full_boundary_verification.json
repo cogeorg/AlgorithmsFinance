@@ -1,0 +1,14 @@
+{
+  "small_tree": "passed",
+  "one_year_price": 16714.9352705545,
+  "one_year_all_steps_match": true,
+  "full_price": 20719.789430044082,
+  "full_steps": 43823,
+  "first_crossing": {
+    "step": 5502,
+    "timestamp_utc": "2022-06-18T06:00:00+00:00",
+    "price_usdt": 19439.26,
+    "boundary_usdt": 19823.099264754317,
+    "intrinsic_payoff_usdt": 42121.229999999996
+  }
+}

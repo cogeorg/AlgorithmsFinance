@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "assets": 1,
+  "periods": 8760,
+  "runtime_seconds": 0.3122064000344835,
+  "price": 16714.9352705545,
+  "workload": "btc_one",
+  "peak_aggregate_rss_bytes": 44310528,
+  "samples": 9,
+  "sampling_interval_seconds": 0.05,
+  "psutil_version": "7.2.2"
+}

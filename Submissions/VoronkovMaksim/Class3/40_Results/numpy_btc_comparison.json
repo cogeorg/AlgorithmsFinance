@@ -1,0 +1,23 @@
+{
+  "slide_A": 7.993197278911565,
+  "slide_B": 7.993197278911565,
+  "BTC_A_current": 16714.9352705545,
+  "BTC_B": 16714.9352705545,
+  "BTC_absolute_difference": 0.0,
+  "tolerance": 0.0001,
+  "N": 8760,
+  "version_B_warmup_count": 1,
+  "version_B_runtime_seconds": [
+    1.899372800020501,
+    1.0922847000183538,
+    0.852213500009384
+  ],
+  "version_B_median_seconds": 1.0922847000183538,
+  "version_A_historical_single_seconds": 10.427927099983208,
+  "speedup_historical_A_single_over_B_median": 9.54689477917981,
+  "numpy_version": "2.5.5",
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "version_A_sha256": "078b44b3c9d5814d29cf43a1c70291adf9474242efeac02be38c4d55152c394c",
+  "version_B_sha256": "de92ab0ed330c572c7c8cbba67180568e6d2c12a13eb3216eb7c1d028fdbf8ce"
+}
