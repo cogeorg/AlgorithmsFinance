@@ -1,0 +1,83 @@
+CLASS 3 LAB - GARV SHARMA
+========================
+
+All six numbered lab tasks completed. Nothing has been submitted.
+
+PERFORMANCE
+Experiment          Assets   N range        Seconds   Sampled peak RSS MiB
+bitcoin_1year            1       8760        0.239                 160.09
+bitcoin_full             1      43822        2.687                 161.15
+all40_1year             40       8760        9.311                 164.18
+all40_full              40      43822      108.269                 168.85
+
+Time includes loading, calibration, pricing, exercise analysis and boundary CSV
+writing. JIT compilation and validation are excluded. Memory is process RSS
+sampled every 10ms, including runtime and native arrays. Sampling may miss short
+peaks. This is not auxiliary space; baseline/increase are in performance.csv.
+
+BITCOIN RESULTS
+
+bitcoin_1year
+  N: 8760
+  Window: 2025-10-31T23:00:00Z to 2026-10-31T23:00:00Z
+  Initial price and strike: 109,608.01000000
+  Put value per underlying unit: 16,713.71420877
+  Exercise: 2026-06-02T14:00:00Z (early)
+  Exercise payoff per unit: 41,588.71000000
+  Missing hours: 0
+
+bitcoin_full
+  N: 43822
+  Window: 2021-11-01T00:00:00Z to 2026-10-31T23:00:00Z
+  Initial price and strike: 61,560.49000000
+  Put value per underlying unit: 20,716.75407126
+  Exercise: 2022-06-18T06:00:00Z (early)
+  Exercise payoff per unit: 42,121.23000000
+  Missing hours: 1
+
+ALL-ASSET OUTCOMES
+all40_1year: 36 early, 0 at expiry, 4 never.
+all40_full: 36 early, 0 at expiry, 4 never.
+
+MODEL AND NUMERICAL CONVENTIONS
+Sample hourly log-return standard deviation; u=exp(s), d=1/u.
+ATM strike equals the first selected close. Risk-neutral q=(R-d)/(u-d).
+R=exp(.04*T/N), T=elapsed 365-day calendar years. Missing observations
+are not filled, so equal tree steps approximate average elapsed time.
+Full history uses the actual file row count, including leap-day observations.
+Values are in USDT per underlying unit. Historical timestamps are UTC.
+Exercise payoff is not profit net of premium. This historical analysis uses
+volatility from the same window and is not an out-of-sample trading strategy.
+
+Boundary: highest positive-payoff tree price with exercise>=continuation.
+Zero-payoff ties are excluded. The reciprocal tree central price is anchored
+exactly each date to prevent rounding from falsely activating an ATM node.
+For an ATM tree, the positive-payoff expiry boundary is K*exp(-s) for odd N
+or K*exp(-2s) for even N. These identities are audited for all 82 outputs.
+An empty boundary means no exercise node. At expiry, observed positive payoff
+is checked directly to handle prices between tree nodes.
+
+SCALING
+Backward induction takes O(N^2) work and O(N) storage using rolling values.
+Assets are processed sequentially. All requested runs fit in memory.
+At N=43,822, value and boundary arrays together need about 0.67 MiB;
+one triangular full float64 tree would need about 7.15 GiB.
+Numba accelerates the recurrence without fast-math. Strike normalization and
+log-price row restarts prevent propagated underflow; normalized stocks below
+exp(-700) are treated as zero at float64 precision.
+
+VERIFICATION
+- Lecture result: 7.9931972789, matching 1175/147.
+- 162 exact recursive reference cases.
+- Independent values and every boundary at N=10,101,500.
+- Market-scale expiry regressions for both even and odd N.
+- Exercise timing, zero-strike and severe underflow checks.
+- verify_results.py checks saved source/input hashes, calibration, expiry
+  boundaries, source alignment, historical exercise and performance tables.
+
+OUTPUTS
+asset_results.csv: all 82 asset/window results.
+performance.csv: four requested experiment measurements.
+*_boundary.csv: observed prices and exercise boundaries at every date.
+metadata.json: environment, conventions and source hash.
+See README.txt for instructions. Folder: Submissions/SharmaGarv/Class3/.
