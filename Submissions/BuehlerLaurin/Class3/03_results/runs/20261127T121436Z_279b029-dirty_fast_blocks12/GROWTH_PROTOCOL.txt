@@ -1,0 +1,1 @@
+Final growth.csv uses direct base-interpreter cells, explicit existing venv site-packages, one warm-up and five repeats, 60 s whole-process limit. Original launcher grid retained in growth_launcher.csv and original logs, excluded from final tables.

@@ -1,0 +1,20 @@
+label: growth-direct-process
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -u -B 00_docs/growth_direct.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T132549Z
+exit_code: 0
+duration_s: 119.41
+------------------------------------------------------------
+Timed-out launcher descendant cleanup: no workers remaining
+Direct-process growth A N=1000: ok 0.4160153999691829
+Direct-process growth A N=2000: ok 1.6903199999360368
+Direct-process growth A N=4000: ok 6.303940000012517
+Direct-process growth A N=8000: stopped 
+Direct-process growth B N=1000: ok 0.03336599993053824
+Direct-process growth B N=2000: ok 0.07249480008613318
+Direct-process growth B N=4000: ok 0.1793216000078246
+Direct-process growth B N=8000: ok 0.459376799990423
+DIRECT-PROCESS GROWTH GRID: COMPLETE

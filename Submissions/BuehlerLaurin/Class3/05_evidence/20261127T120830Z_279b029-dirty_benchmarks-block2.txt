@@ -1,0 +1,20 @@
+label: benchmarks-block2
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -u -B run.py bench.run_lab
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T120830Z
+exit_code: 4294967295
+duration_s: 295.41
+------------------------------------------------------------
+RUN DIRECTORY: 03_results/runs/20261127T120831Z_279b029-dirty_fast_blocks12
+START timing BTC1y_A: 1 assets, warm-up + 5 repeats
+COMPLETE BTC1y_A: median 30.012675s (timing-only reference for ratio)
+START timing BTC1y_B: 1 assets, warm-up + 5 repeats
+DONE timing BTC1y_B: median 1.072288s; START primary tracemalloc
+DONE primary memory BTC1y_B: 7001785 bytes; START artifact + isolated pricing memory runs
+  BTC1y_B 1/1 BTCUSDT: value=16714.93527, isolated peak=711858
+COMPLETE BTC1y_B
+START timing BTC5y_B: 1 assets, warm-up + 5 repeats
+DONE timing BTC5y_B: median 13.492199s; START primary tracemalloc

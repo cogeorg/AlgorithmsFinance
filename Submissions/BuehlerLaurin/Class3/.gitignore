@@ -12,6 +12,9 @@ __pycache__/
 # exploratory output
 scratch/
 03_results/runs/*_quick/
+# Regenerable all-asset boundaries: keep manifests and BTC boundaries in git.
+03_results/runs/*/ALL1y_B_boundaries/
+03_results/runs/*/ALL5y_B_boundaries/
 # OS / editor
 .DS_Store
 Thumbs.db

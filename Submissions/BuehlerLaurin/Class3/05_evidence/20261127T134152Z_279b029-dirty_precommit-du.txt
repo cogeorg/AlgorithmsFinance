@@ -1,0 +1,11 @@
+label: precommit-du
+command: C:/Program Files/Git/usr/bin/du.exe -sh --exclude=ALL1y_B_boundaries --exclude=ALL5y_B_boundaries --exclude=scratch --exclude=.hypothesis --exclude=.pytest_cache --exclude=__pycache__ .
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T134152Z
+exit_code: 0
+duration_s: 0.11
+------------------------------------------------------------
+4.5M	.

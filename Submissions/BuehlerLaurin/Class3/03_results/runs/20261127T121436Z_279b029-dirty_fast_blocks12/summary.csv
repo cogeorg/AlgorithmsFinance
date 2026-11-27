@@ -1,0 +1,6 @@
+workload,version,window,N,assets,seconds,peak_bytes,pricing_peak_bytes,status,repeats,successful_assets,failed_assets
+BTC1y,A,1y,8760,1,30.012675400008447,,,ok,5,1,0
+BTC1y,B,1y,8760,1,0.718781300005503,7001865,852242,ok,5,1,0
+BTC5y,B,5y,43822,1,7.199832100071944,8685193,4217726,ok,5,1,0
+ALL1y,B,1y,8760,40,26.580496799899265,7048338,852368,ok,5,40,0
+ALL5y,B,5y,43822,40,284.64904229994863,8731641,4218020,ok,5,40,0

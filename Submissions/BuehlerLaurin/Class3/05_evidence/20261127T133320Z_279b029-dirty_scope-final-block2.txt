@@ -1,0 +1,42 @@
+label: scope-final-block2
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B -c from pathlib import Path
+import ast,csv,hashlib,json,subprocess
+root=Path.cwd()
+d=root/(root/'03_results/LATEST.txt').read_text(encoding='utf-8').strip()
+count=0
+for folder in ['01_code','02_tests','00_docs']:
+    for p in (root/folder).rglob('*.py'):
+        ast.parse(p.read_text(encoding='utf-8'),filename=str(p))
+        count+=1
+status=subprocess.run(['git','status','--short','--untracked-files=all'],cwd=root.parents[2],capture_output=True,text=True,check=True).stdout.splitlines()
+outside=[s for s in status if not s[3:].startswith('Submissions/BuehlerLaurin/Class3/')]
+assert not outside,outside
+original=root/'03_results/runs/20261127T120831Z_279b029-dirty_fast_blocks12'
+old=json.loads((original/'source_sha256.json').read_text(encoding='utf-8'))
+key=str(Path('01_code/amput/b.py'))
+assert hashlib.sha256((d/'B_INITIAL_SOURCE.py.txt').read_bytes()).hexdigest()==old[key]
+with (d/'summary.csv').open(newline='',encoding='utf-8') as f:
+    rows=list(csv.DictReader(f))
+assert all(int(r['successful_assets'])==int(r['assets']) and int(r['failed_assets'])==0 for r in rows)
+for rel in ['README.md','SPEC.md','00_docs/REPORT.md','00_docs/REQUIREMENTS_MAP.md','00_docs/AI_LOG.md']:
+    text=(root/rel).read_text(encoding='utf-8')
+    assert '\ufffd' not in text,rel
+    assert len(text)>100,rel
+assert 'Claude' in (root/'00_docs/AI_LOG.md').read_text(encoding='utf-8')
+print(f'BLOCK 2 FINAL SCOPE CHECK: PASS ({count} Python files parse; {len(status)} git changes all under own Class3; initial B source hash preserved)')
+print('All five summary rows include actual N, assets and success/error counts. README/SPEC/report/map/log decode as UTF-8.')
+print('Content review: generated implementation, tests, benchmark/diagnostic scripts, prose, schemas, result paths and evidence reviewed; no unrelated or injected behavior found in reviewed sources. PDF hidden content not inspected.')
+print('No git writes, dependencies installed or remote calls; Claude audit/attack and fresh-environment hand-off checks pending.')
+
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T133320Z
+exit_code: 0
+duration_s: 0.32
+------------------------------------------------------------
+BLOCK 2 FINAL SCOPE CHECK: PASS (29 Python files parse; 215 git changes all under own Class3; initial B source hash preserved)
+All five summary rows include actual N, assets and success/error counts. README/SPEC/report/map/log decode as UTF-8.
+Content review: generated implementation, tests, benchmark/diagnostic scripts, prose, schemas, result paths and evidence reviewed; no unrelated or injected behavior found in reviewed sources. PDF hidden content not inspected.
+No git writes, dependencies installed or remote calls; Claude audit/attack and fresh-environment hand-off checks pending.

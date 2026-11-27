@@ -1,0 +1,11 @@
+label: hypothesis-boundary-report
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B 00_docs/hypothesis_boundary_report.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T131455Z
+exit_code: 0
+duration_s: 1.58
+------------------------------------------------------------
+HYPOTHESIS BOUNDARY REPORT: PASS (200 cases, 0 cases with permitted near-tie boundary exceptions)

@@ -1,0 +1,13 @@
+label: artifacts-final-block2
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B 00_docs/verify_results.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T133227Z
+exit_code: 0
+duration_s: 9.44
+------------------------------------------------------------
+ARTIFACT CHECK: PASS (82 asset results; 2155944 boundary rows; earliest exercise verified from all saved paths)
+FINAL BTC1y A/B: PASS (value delta=0, boundary exceptions=0)
+SOURCE HASHES: PASS (current implementation/tests; measured SPEC snapshot); five workload rows, 25 timing repeats and eight growth cells accounted for

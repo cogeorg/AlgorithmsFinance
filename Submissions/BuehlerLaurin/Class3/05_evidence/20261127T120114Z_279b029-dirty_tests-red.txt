@@ -1,0 +1,587 @@
+label: tests-red
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B -m pytest -q --basetemp=scratch/pytest-red
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T120114Z
+exit_code: 1
+duration_s: 3.80
+------------------------------------------------------------
+FFFFFFFFFFFFFFFFFFFFFFF                                                  [100%]
+================================== FAILURES ===================================
+__________________ test_contract[baseline-A-check_boundary] ___________________
+
+impl = <function price_with_boundary at 0x0000024F993B9D00>
+check = <function check_boundary at 0x0000024F993B6DE0>
+
+    @pytest.mark.parametrize("check", CHECKS, ids=lambda f: f.__name__)
+    def test_contract(impl, check):
+>       check(impl)
+
+02_tests\test_contract.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:24: in check_boundary
+    b = impl(*TOY).boundary
+        ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+________________ test_contract[baseline-A-check_exact_oracle] _________________
+
+impl = <function price_with_boundary at 0x0000024F993B9D00>
+check = <function check_exact_oracle at 0x0000024F993B9760>
+
+    @pytest.mark.parametrize("check", CHECKS, ids=lambda f: f.__name__)
+    def test_contract(impl, check):
+>       check(impl)
+
+02_tests\test_contract.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:50: in check_exact_oracle
+    actual = impl(*(float(x) for x in args[:-1]), n)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100.0, K = 103.0, u = 1.2, d = 0.8, R = 1.05, N = 0, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+______________ test_contract[baseline-A-check_input_not_mutated] ______________
+
+impl = <function price_with_boundary at 0x0000024F993B9D00>
+check = <function check_input_not_mutated at 0x0000024F993B9800>
+
+    @pytest.mark.parametrize("check", CHECKS, ids=lambda f: f.__name__)
+    def test_contract(impl, check):
+>       check(impl)
+
+02_tests\test_contract.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:62: in check_input_not_mutated
+    first = impl(*args)
+            ^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+______________ test_contract[baseline-A-check_layer_invariants] _______________
+
+impl = <function price_with_boundary at 0x0000024F993B9D00>
+check = <function check_layer_invariants at 0x0000024F993B9940>
+
+    @pytest.mark.parametrize("check", CHECKS, ids=lambda f: f.__name__)
+    def test_contract(impl, check):
+>       check(impl)
+
+02_tests\test_contract.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:88: in check_layer_invariants
+    result = impl(100,100,1.2,.8,1.05,n,observer=observe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 1, european = False
+observer = <function check_layer_invariants.<locals>.observe at 0x0000024F994451C0>
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+___________________ test_contract[baseline-A-check_n_zero] ____________________
+
+impl = <function price_with_boundary at 0x0000024F993B9D00>
+check = <function check_n_zero at 0x0000024F993B96C0>
+
+    @pytest.mark.parametrize("check", CHECKS, ids=lambda f: f.__name__)
+    def test_contract(impl, check):
+>       check(impl)
+
+02_tests\test_contract.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:40: in check_n_zero
+    result = impl(80,100,1.2,.8,1.05,0)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 80, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 0, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+_____________________ test_contract[baseline-A-check_tie] _____________________
+
+impl = <function price_with_boundary at 0x0000024F993B9D00>
+check = <function check_tie at 0x0000024F993B9580>
+
+    @pytest.mark.parametrize("check", CHECKS, ids=lambda f: f.__name__)
+    def test_contract(impl, check):
+>       check(impl)
+
+02_tests\test_contract.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:33: in check_tie
+    result = impl(50,100,2,.5,1,1)
+             ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 50, K = 100, u = 2, d = 0.5, R = 1, N = 1, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+_____________________ test_contract[baseline-A-check_toy] _____________________
+
+impl = <function price_with_boundary at 0x0000024F993B9D00>
+check = <function check_toy at 0x0000024F993B67A0>
+
+    @pytest.mark.parametrize("check", CHECKS, ids=lambda f: f.__name__)
+    def test_contract(impl, check):
+>       check(impl)
+
+02_tests\test_contract.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:15: in check_toy
+    v = impl(*TOY).value
+        ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+_________________ test_contract[baseline-A-check_validation] __________________
+
+impl = <function price_with_boundary at 0x0000024F993B9D00>
+check = <function check_validation at 0x0000024F993B98A0>
+
+    @pytest.mark.parametrize("check", CHECKS, ids=lambda f: f.__name__)
+    def test_contract(impl, check):
+>       check(impl)
+
+02_tests\test_contract.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:78: in check_validation
+    impl(*args)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 0, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+_____________________________ test_tiny_hand_csv ______________________________
+
+tmp_path = WindowsPath('C:/Users/laubu/dev/AIF-Lab/AlgorithmsFinance/Submissions/BuehlerLaurin/Class3/scratch/pytest-red/test_tiny_hand_csv0')
+
+    def test_tiny_hand_csv(tmp_path):
+        path = tmp_path/'tiny.csv'
+        path.write_text('timestamp_utc,close\n2026-01-01T00:00:00Z,100\n2026-01-01T01:00:00Z,110\n2026-01-01T03:00:00Z,99\n',encoding='utf-8')
+>       result = load_calibrate(path,'5y')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+02_tests\test_data.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/laubu/dev/AIF-Lab/AlgorithmsFinance/Submissions/BuehlerLaurin/Class3/scratch/pytest-red/test_tiny_hand_csv0/tiny.csv')
+window = '5y'
+
+    def load_calibrate(path, window):
+>       raise NotImplementedError('Calibration not implemented')
+E       NotImplementedError: Calibration not implemented
+
+01_code\amput\data.py:3: NotImplementedError
+______________________ test_first_exercise_hit_and_never ______________________
+
+    def test_first_exercise_hit_and_never():
+>       assert first_exercise([100,80,90],['a','b','c'],[None,85,95],100) == {'t':1,'timestamp_utc':'b','payoff':20}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+02_tests\test_data.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+prices = [100, 80, 90], timestamps = ['a', 'b', 'c'], boundary = [None, 85, 95]
+K = 100
+
+    def first_exercise(prices, timestamps, boundary, K):
+>       raise NotImplementedError('Exercise scan not implemented')
+E       NotImplementedError: Exercise scan not implemented
+
+01_code\amput\data.py:7: NotImplementedError
+___________________ test_invalid_calibration[100\n100\n100] ___________________
+
+tmp_path = WindowsPath('C:/Users/laubu/dev/AIF-Lab/AlgorithmsFinance/Submissions/BuehlerLaurin/Class3/scratch/pytest-red/test_invalid_calibration_100_n0')
+prices = '100\n100\n100'
+
+    @pytest.mark.parametrize('prices',['100\n100\n100','100\n101','100\n0\n99','100\nnan\n99'])
+    def test_invalid_calibration(tmp_path,prices):
+        path=tmp_path/'bad.csv'
+        lines=prices.splitlines()
+        path.write_text('timestamp_utc,close\n'+''.join(f'2026-01-01T0{i}:00:00Z,{p}\n' for i,p in enumerate(lines)),encoding='utf-8')
+        with pytest.raises(ValueError):
+>           load_calibrate(path,'5y')
+
+02_tests\test_data.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/laubu/dev/AIF-Lab/AlgorithmsFinance/Submissions/BuehlerLaurin/Class3/scratch/pytest-red/test_invalid_calibration_100_n0/bad.csv')
+window = '5y'
+
+    def load_calibrate(path, window):
+>       raise NotImplementedError('Calibration not implemented')
+E       NotImplementedError: Calibration not implemented
+
+01_code\amput\data.py:3: NotImplementedError
+_____________________ test_invalid_calibration[100\n101] ______________________
+
+tmp_path = WindowsPath('C:/Users/laubu/dev/AIF-Lab/AlgorithmsFinance/Submissions/BuehlerLaurin/Class3/scratch/pytest-red/test_invalid_calibration_100_n1')
+prices = '100\n101'
+
+    @pytest.mark.parametrize('prices',['100\n100\n100','100\n101','100\n0\n99','100\nnan\n99'])
+    def test_invalid_calibration(tmp_path,prices):
+        path=tmp_path/'bad.csv'
+        lines=prices.splitlines()
+        path.write_text('timestamp_utc,close\n'+''.join(f'2026-01-01T0{i}:00:00Z,{p}\n' for i,p in enumerate(lines)),encoding='utf-8')
+        with pytest.raises(ValueError):
+>           load_calibrate(path,'5y')
+
+02_tests\test_data.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/laubu/dev/AIF-Lab/AlgorithmsFinance/Submissions/BuehlerLaurin/Class3/scratch/pytest-red/test_invalid_calibration_100_n1/bad.csv')
+window = '5y'
+
+    def load_calibrate(path, window):
+>       raise NotImplementedError('Calibration not implemented')
+E       NotImplementedError: Calibration not implemented
+
+01_code\amput\data.py:3: NotImplementedError
+____________________ test_invalid_calibration[100\n0\n99] _____________________
+
+tmp_path = WindowsPath('C:/Users/laubu/dev/AIF-Lab/AlgorithmsFinance/Submissions/BuehlerLaurin/Class3/scratch/pytest-red/test_invalid_calibration_100_n2')
+prices = '100\n0\n99'
+
+    @pytest.mark.parametrize('prices',['100\n100\n100','100\n101','100\n0\n99','100\nnan\n99'])
+    def test_invalid_calibration(tmp_path,prices):
+        path=tmp_path/'bad.csv'
+        lines=prices.splitlines()
+        path.write_text('timestamp_utc,close\n'+''.join(f'2026-01-01T0{i}:00:00Z,{p}\n' for i,p in enumerate(lines)),encoding='utf-8')
+        with pytest.raises(ValueError):
+>           load_calibrate(path,'5y')
+
+02_tests\test_data.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/laubu/dev/AIF-Lab/AlgorithmsFinance/Submissions/BuehlerLaurin/Class3/scratch/pytest-red/test_invalid_calibration_100_n2/bad.csv')
+window = '5y'
+
+    def load_calibrate(path, window):
+>       raise NotImplementedError('Calibration not implemented')
+E       NotImplementedError: Calibration not implemented
+
+01_code\amput\data.py:3: NotImplementedError
+___________________ test_invalid_calibration[100\nnan\n99] ____________________
+
+tmp_path = WindowsPath('C:/Users/laubu/dev/AIF-Lab/AlgorithmsFinance/Submissions/BuehlerLaurin/Class3/scratch/pytest-red/test_invalid_calibration_100_n3')
+prices = '100\nnan\n99'
+
+    @pytest.mark.parametrize('prices',['100\n100\n100','100\n101','100\n0\n99','100\nnan\n99'])
+    def test_invalid_calibration(tmp_path,prices):
+        path=tmp_path/'bad.csv'
+        lines=prices.splitlines()
+        path.write_text('timestamp_utc,close\n'+''.join(f'2026-01-01T0{i}:00:00Z,{p}\n' for i,p in enumerate(lines)),encoding='utf-8')
+        with pytest.raises(ValueError):
+>           load_calibrate(path,'5y')
+
+02_tests\test_data.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/laubu/dev/AIF-Lab/AlgorithmsFinance/Submissions/BuehlerLaurin/Class3/scratch/pytest-red/test_invalid_calibration_100_n3/bad.csv')
+window = '5y'
+
+    def load_calibrate(path, window):
+>       raise NotImplementedError('Calibration not implemented')
+E       NotImplementedError: Calibration not implemented
+
+01_code\amput\data.py:3: NotImplementedError
+_________________________ test_last_rows_not_calendar _________________________
+
+tmp_path = WindowsPath('C:/Users/laubu/dev/AIF-Lab/AlgorithmsFinance/Submissions/BuehlerLaurin/Class3/scratch/pytest-red/test_last_rows_not_calendar0')
+
+    def test_last_rows_not_calendar(tmp_path):
+        from datetime import datetime,timedelta,timezone
+        path=tmp_path/'rows.csv'
+        start=datetime(2023,1,1,tzinfo=timezone.utc)
+        with path.open('w',encoding='utf-8') as f:
+            f.write('timestamp_utc,close\n')
+            for i in range(8765):
+                f.write(f'{(start+timedelta(hours=2*i)).isoformat()},{100+i%3}\n')
+>       result=load_calibrate(path,'1y')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+02_tests\test_data.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/laubu/dev/AIF-Lab/AlgorithmsFinance/Submissions/BuehlerLaurin/Class3/scratch/pytest-red/test_last_rows_not_calendar0/rows.csv')
+window = '1y'
+
+    def load_calibrate(path, window):
+>       raise NotImplementedError('Calibration not implemented')
+E       NotImplementedError: Calibration not implemented
+
+01_code\amput\data.py:3: NotImplementedError
+_________________ test_six_mutants_killed[wrong_q-check_toy] __________________
+
+mode = 'wrong_q', killer = <function check_toy at 0x0000024F993B67A0>
+
+    @pytest.mark.parametrize('mode,killer',[
+        ('wrong_q',contract.check_toy),('no_discount',contract.check_toy),
+        ('european_only',contract.check_toy),('reverse_update',contract.check_toy),
+        ('zero_ties',contract.check_boundary),('omit_expiry',contract.check_boundary)])
+    def test_six_mutants_killed(mode,killer):
+        for impl in METHODS.values():
+>           killer(impl)
+
+02_tests\test_mutants.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:15: in check_toy
+    v = impl(*TOY).value
+        ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+_______________ test_six_mutants_killed[no_discount-check_toy] ________________
+
+mode = 'no_discount', killer = <function check_toy at 0x0000024F993B67A0>
+
+    @pytest.mark.parametrize('mode,killer',[
+        ('wrong_q',contract.check_toy),('no_discount',contract.check_toy),
+        ('european_only',contract.check_toy),('reverse_update',contract.check_toy),
+        ('zero_ties',contract.check_boundary),('omit_expiry',contract.check_boundary)])
+    def test_six_mutants_killed(mode,killer):
+        for impl in METHODS.values():
+>           killer(impl)
+
+02_tests\test_mutants.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:15: in check_toy
+    v = impl(*TOY).value
+        ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+______________ test_six_mutants_killed[european_only-check_toy] _______________
+
+mode = 'european_only', killer = <function check_toy at 0x0000024F993B67A0>
+
+    @pytest.mark.parametrize('mode,killer',[
+        ('wrong_q',contract.check_toy),('no_discount',contract.check_toy),
+        ('european_only',contract.check_toy),('reverse_update',contract.check_toy),
+        ('zero_ties',contract.check_boundary),('omit_expiry',contract.check_boundary)])
+    def test_six_mutants_killed(mode,killer):
+        for impl in METHODS.values():
+>           killer(impl)
+
+02_tests\test_mutants.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:15: in check_toy
+    v = impl(*TOY).value
+        ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+______________ test_six_mutants_killed[reverse_update-check_toy] ______________
+
+mode = 'reverse_update', killer = <function check_toy at 0x0000024F993B67A0>
+
+    @pytest.mark.parametrize('mode,killer',[
+        ('wrong_q',contract.check_toy),('no_discount',contract.check_toy),
+        ('european_only',contract.check_toy),('reverse_update',contract.check_toy),
+        ('zero_ties',contract.check_boundary),('omit_expiry',contract.check_boundary)])
+    def test_six_mutants_killed(mode,killer):
+        for impl in METHODS.values():
+>           killer(impl)
+
+02_tests\test_mutants.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:15: in check_toy
+    v = impl(*TOY).value
+        ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+______________ test_six_mutants_killed[zero_ties-check_boundary] ______________
+
+mode = 'zero_ties', killer = <function check_boundary at 0x0000024F993B6DE0>
+
+    @pytest.mark.parametrize('mode,killer',[
+        ('wrong_q',contract.check_toy),('no_discount',contract.check_toy),
+        ('european_only',contract.check_toy),('reverse_update',contract.check_toy),
+        ('zero_ties',contract.check_boundary),('omit_expiry',contract.check_boundary)])
+    def test_six_mutants_killed(mode,killer):
+        for impl in METHODS.values():
+>           killer(impl)
+
+02_tests\test_mutants.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:24: in check_boundary
+    b = impl(*TOY).boundary
+        ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+_____________ test_six_mutants_killed[omit_expiry-check_boundary] _____________
+
+mode = 'omit_expiry', killer = <function check_boundary at 0x0000024F993B6DE0>
+
+    @pytest.mark.parametrize('mode,killer',[
+        ('wrong_q',contract.check_toy),('no_discount',contract.check_toy),
+        ('european_only',contract.check_toy),('reverse_update',contract.check_toy),
+        ('zero_ties',contract.check_boundary),('omit_expiry',contract.check_boundary)])
+    def test_six_mutants_killed(mode,killer):
+        for impl in METHODS.values():
+>           killer(impl)
+
+02_tests\test_mutants.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+02_tests\contract.py:24: in check_boundary
+    b = impl(*TOY).boundary
+        ^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, european = False
+observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+__________________ test_high_s_large_n_stable_central_nodes ___________________
+
+    def test_high_s_large_n_stable_central_nodes():
+        n=43800; s=.03; u=math.exp(s); d=1/u
+>       stock=stock_layer(100,u,d,n)
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+02_tests\test_stability.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100, u = 1.030454533953517, d = 0.9704455335485082, t = 43800
+
+    def stock_layer(S0, u, d, t):
+>       raise NotImplementedError('Stable stock construction not implemented')
+E       NotImplementedError: Stable stock construction not implemented
+
+01_code\amput\a.py:7: NotImplementedError
+___________________ test_high_s_pricing_finite[baseline-A] ____________________
+
+impl = <function price_with_boundary at 0x0000024F993B9D00>
+
+    def test_high_s_pricing_finite(impl):
+        u=math.exp(.8)
+>       result=impl(100,100,u,1/u,1.001,1000)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+02_tests\test_stability.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+S0 = 100, K = 100, u = 2.225540928492468, d = 0.44932896411722156, R = 1.001
+N = 1000, european = False, observer = None
+
+    def price_with_boundary(S0, K, u, d, R, N, *, european=False, observer=None):
+>       raise NotImplementedError('Version A not implemented')
+E       NotImplementedError: Version A not implemented
+
+01_code\amput\a.py:3: NotImplementedError
+=========================== short test summary info ===========================
+FAILED 02_tests/test_contract.py::test_contract[baseline-A-check_boundary] - ...
+FAILED 02_tests/test_contract.py::test_contract[baseline-A-check_exact_oracle]
+FAILED 02_tests/test_contract.py::test_contract[baseline-A-check_input_not_mutated]
+FAILED 02_tests/test_contract.py::test_contract[baseline-A-check_layer_invariants]
+FAILED 02_tests/test_contract.py::test_contract[baseline-A-check_n_zero] - No...
+FAILED 02_tests/test_contract.py::test_contract[baseline-A-check_tie] - NotIm...
+FAILED 02_tests/test_contract.py::test_contract[baseline-A-check_toy] - NotIm...
+FAILED 02_tests/test_contract.py::test_contract[baseline-A-check_validation]
+FAILED 02_tests/test_data.py::test_tiny_hand_csv - NotImplementedError: Calib...
+FAILED 02_tests/test_data.py::test_first_exercise_hit_and_never - NotImplemen...
+FAILED 02_tests/test_data.py::test_invalid_calibration[100\n100\n100] - NotIm...
+FAILED 02_tests/test_data.py::test_invalid_calibration[100\n101] - NotImpleme...
+FAILED 02_tests/test_data.py::test_invalid_calibration[100\n0\n99] - NotImple...
+FAILED 02_tests/test_data.py::test_invalid_calibration[100\nnan\n99] - NotImp...
+FAILED 02_tests/test_data.py::test_last_rows_not_calendar - NotImplementedErr...
+FAILED 02_tests/test_mutants.py::test_six_mutants_killed[wrong_q-check_toy]
+FAILED 02_tests/test_mutants.py::test_six_mutants_killed[no_discount-check_toy]
+FAILED 02_tests/test_mutants.py::test_six_mutants_killed[european_only-check_toy]
+FAILED 02_tests/test_mutants.py::test_six_mutants_killed[reverse_update-check_toy]
+FAILED 02_tests/test_mutants.py::test_six_mutants_killed[zero_ties-check_boundary]
+FAILED 02_tests/test_mutants.py::test_six_mutants_killed[omit_expiry-check_boundary]
+FAILED 02_tests/test_stability.py::test_high_s_large_n_stable_central_nodes
+FAILED 02_tests/test_stability.py::test_high_s_pricing_finite[baseline-A] - N...
+23 failed in 2.94s

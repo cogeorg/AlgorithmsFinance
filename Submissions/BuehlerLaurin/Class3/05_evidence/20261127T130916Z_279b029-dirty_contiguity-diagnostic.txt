@@ -1,0 +1,12 @@
+label: contiguity-diagnostic
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B 00_docs/contiguity_diagnostic.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T130916Z
+exit_code: 0
+duration_s: 0.44
+------------------------------------------------------------
+CONTIGUITY DIAGNOSTIC: 60 version/case runs; 0 noncontiguous layers (diagnostic only)
+Every returned boundary equals the maximum of all qualifying nodes; no contiguity assertion or pruning used.

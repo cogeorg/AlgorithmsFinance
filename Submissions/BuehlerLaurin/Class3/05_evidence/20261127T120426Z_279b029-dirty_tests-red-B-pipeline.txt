@@ -1,0 +1,204 @@
+label: tests-red-B-pipeline
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B -m pytest -q --tb=short --basetemp=scratch/pytest-red-b
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T120426Z
+exit_code: 1
+duration_s: 5.11
+------------------------------------------------------------
+........FFFFFFFF.......FFFFFFFFFF..F                                     [100%]
+================================== FAILURES ===================================
+____________________ test_contract[fast-B-check_boundary] _____________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:24: in check_boundary
+    b = impl(*TOY).boundary
+        ^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+__________________ test_contract[fast-B-check_exact_oracle] ___________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:50: in check_exact_oracle
+    actual = impl(*(float(x) for x in args[:-1]), n)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+________________ test_contract[fast-B-check_input_not_mutated] ________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:62: in check_input_not_mutated
+    first = impl(*args)
+            ^^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+________________ test_contract[fast-B-check_layer_invariants] _________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:88: in check_layer_invariants
+    result = impl(100,100,1.2,.8,1.05,n,observer=observe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+_____________________ test_contract[fast-B-check_n_zero] ______________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:40: in check_n_zero
+    result = impl(80,100,1.2,.8,1.05,0)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+_______________________ test_contract[fast-B-check_tie] _______________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:33: in check_tie
+    result = impl(50,100,2,.5,1,1)
+             ^^^^^^^^^^^^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+_______________________ test_contract[fast-B-check_toy] _______________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:15: in check_toy
+    v = impl(*TOY).value
+        ^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+___________________ test_contract[fast-B-check_validation] ____________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:78: in check_validation
+    impl(*args)
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+_____________________________ test_hypothesis_A_B _____________________________
+02_tests\test_differential.py:22: in test_hypothesis_A_B
+    @given(n=st.integers(0,48),spot=st.integers(1,1000),strike=st.integers(0,1500),
+                   ^^^
+02_tests\test_differential.py:28: in test_hypothesis_A_B
+    compare(A(spot,strike,u,1/u,R,n),B(spot,strike,u,1/u,R,n),strike)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+E   Failing test case: test_hypothesis_A_B(
+E       # The test always failed when commented parts were varied together.
+E       n=0,  # or any other generated value
+E       spot=1,  # or any other generated value
+E       strike=0,  # or any other generated value
+E       sigma=1,  # or any other generated value
+E       rate=0,  # or any other generated value
+E   )
+_____________________________ test_B_large_layer ______________________________
+02_tests\test_differential.py:33: in test_B_large_layer
+    stock=stock_layer(100,u,1/u,43800)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\amput\b.py:7: in stock_layer
+    raise NotImplementedError('B stable stock construction not implemented')
+E   NotImplementedError: B stable stock construction not implemented
+_________________ test_six_mutants_killed[wrong_q-check_toy] __________________
+02_tests\test_mutants.py:38: in test_six_mutants_killed
+    killer(impl)
+02_tests\contract.py:15: in check_toy
+    v = impl(*TOY).value
+        ^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+_______________ test_six_mutants_killed[no_discount-check_toy] ________________
+02_tests\test_mutants.py:38: in test_six_mutants_killed
+    killer(impl)
+02_tests\contract.py:15: in check_toy
+    v = impl(*TOY).value
+        ^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+______________ test_six_mutants_killed[european_only-check_toy] _______________
+02_tests\test_mutants.py:38: in test_six_mutants_killed
+    killer(impl)
+02_tests\contract.py:15: in check_toy
+    v = impl(*TOY).value
+        ^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+______________ test_six_mutants_killed[reverse_update-check_toy] ______________
+02_tests\test_mutants.py:38: in test_six_mutants_killed
+    killer(impl)
+02_tests\contract.py:15: in check_toy
+    v = impl(*TOY).value
+        ^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+______________ test_six_mutants_killed[zero_ties-check_boundary] ______________
+02_tests\test_mutants.py:38: in test_six_mutants_killed
+    killer(impl)
+02_tests\contract.py:24: in check_boundary
+    b = impl(*TOY).boundary
+        ^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+_____________ test_six_mutants_killed[omit_expiry-check_boundary] _____________
+02_tests\test_mutants.py:38: in test_six_mutants_killed
+    killer(impl)
+02_tests\contract.py:24: in check_boundary
+    b = impl(*TOY).boundary
+        ^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+__________________ test_timed_pipeline_equals_public_methods __________________
+02_tests\test_pipeline.py:14: in test_timed_pipeline_equals_public_methods
+    result=analyze(p,'5y','A')
+           ^^^^^^^^^^^^^^^^^^^
+01_code\amput\pipeline.py:3: in analyze
+    raise NotImplementedError('Analysis pipeline not implemented')
+E   NotImplementedError: Analysis pipeline not implemented
+___________________ test_batch_records_error_and_continues ____________________
+02_tests\test_pipeline.py:23: in test_batch_records_error_and_continues
+    rows=analyze_many([bad,good],'5y','A')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\amput\pipeline.py:7: in analyze_many
+    raise NotImplementedError('Sequential error-isolating batch not implemented')
+E   NotImplementedError: Sequential error-isolating batch not implemented
+_____________________ test_high_s_pricing_finite[fast-B] ______________________
+02_tests\test_stability.py:17: in test_high_s_pricing_finite
+    result=impl(100,100,u,1/u,1.001,1000)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\amput\b.py:3: in price_with_boundary
+    raise NotImplementedError('Version B not implemented')
+E   NotImplementedError: Version B not implemented
+=========================== short test summary info ===========================
+FAILED 02_tests/test_contract.py::test_contract[fast-B-check_boundary] - NotI...
+FAILED 02_tests/test_contract.py::test_contract[fast-B-check_exact_oracle] - ...
+FAILED 02_tests/test_contract.py::test_contract[fast-B-check_input_not_mutated]
+FAILED 02_tests/test_contract.py::test_contract[fast-B-check_layer_invariants]
+FAILED 02_tests/test_contract.py::test_contract[fast-B-check_n_zero] - NotImp...
+FAILED 02_tests/test_contract.py::test_contract[fast-B-check_tie] - NotImplem...
+FAILED 02_tests/test_contract.py::test_contract[fast-B-check_toy] - NotImplem...
+FAILED 02_tests/test_contract.py::test_contract[fast-B-check_validation] - No...
+FAILED 02_tests/test_differential.py::test_hypothesis_A_B - NotImplementedErr...
+FAILED 02_tests/test_differential.py::test_B_large_layer - NotImplementedErro...
+FAILED 02_tests/test_mutants.py::test_six_mutants_killed[wrong_q-check_toy]
+FAILED 02_tests/test_mutants.py::test_six_mutants_killed[no_discount-check_toy]
+FAILED 02_tests/test_mutants.py::test_six_mutants_killed[european_only-check_toy]
+FAILED 02_tests/test_mutants.py::test_six_mutants_killed[reverse_update-check_toy]
+FAILED 02_tests/test_mutants.py::test_six_mutants_killed[zero_ties-check_boundary]
+FAILED 02_tests/test_mutants.py::test_six_mutants_killed[omit_expiry-check_boundary]
+FAILED 02_tests/test_pipeline.py::test_timed_pipeline_equals_public_methods
+FAILED 02_tests/test_pipeline.py::test_batch_records_error_and_continues - No...
+FAILED 02_tests/test_stability.py::test_high_s_pricing_finite[fast-B] - NotIm...
+19 failed, 17 passed in 4.38s

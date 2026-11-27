@@ -1,0 +1,362 @@
+[
+  {
+    "case": 0,
+    "version": "A",
+    "N": 8,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 0,
+    "version": "B",
+    "N": 8,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 1,
+    "version": "A",
+    "N": 15,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 1,
+    "version": "B",
+    "N": 15,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 2,
+    "version": "A",
+    "N": 6,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 2,
+    "version": "B",
+    "N": 6,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 3,
+    "version": "A",
+    "N": 6,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 3,
+    "version": "B",
+    "N": 6,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 4,
+    "version": "A",
+    "N": 2,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 4,
+    "version": "B",
+    "N": 2,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 5,
+    "version": "A",
+    "N": 27,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 5,
+    "version": "B",
+    "N": 27,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 6,
+    "version": "A",
+    "N": 1,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 6,
+    "version": "B",
+    "N": 1,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 7,
+    "version": "A",
+    "N": 18,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 7,
+    "version": "B",
+    "N": 18,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 8,
+    "version": "A",
+    "N": 22,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 8,
+    "version": "B",
+    "N": 22,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 9,
+    "version": "A",
+    "N": 23,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 9,
+    "version": "B",
+    "N": 23,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 10,
+    "version": "A",
+    "N": 3,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 10,
+    "version": "B",
+    "N": 3,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 11,
+    "version": "A",
+    "N": 25,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 11,
+    "version": "B",
+    "N": 25,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 12,
+    "version": "A",
+    "N": 24,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 12,
+    "version": "B",
+    "N": 24,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 13,
+    "version": "A",
+    "N": 3,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 13,
+    "version": "B",
+    "N": 3,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 14,
+    "version": "A",
+    "N": 6,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 14,
+    "version": "B",
+    "N": 6,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 15,
+    "version": "A",
+    "N": 18,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 15,
+    "version": "B",
+    "N": 18,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 16,
+    "version": "A",
+    "N": 11,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 16,
+    "version": "B",
+    "N": 11,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 17,
+    "version": "A",
+    "N": 18,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 17,
+    "version": "B",
+    "N": 18,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 18,
+    "version": "A",
+    "N": 5,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 18,
+    "version": "B",
+    "N": 5,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 19,
+    "version": "A",
+    "N": 16,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 19,
+    "version": "B",
+    "N": 16,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 20,
+    "version": "A",
+    "N": 15,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 20,
+    "version": "B",
+    "N": 15,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 21,
+    "version": "A",
+    "N": 4,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 21,
+    "version": "B",
+    "N": 4,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 22,
+    "version": "A",
+    "N": 21,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 22,
+    "version": "B",
+    "N": 21,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 23,
+    "version": "A",
+    "N": 21,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 23,
+    "version": "B",
+    "N": 21,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 24,
+    "version": "A",
+    "N": 30,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 24,
+    "version": "B",
+    "N": 30,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 25,
+    "version": "A",
+    "N": 17,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 25,
+    "version": "B",
+    "N": 17,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 26,
+    "version": "A",
+    "N": 26,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 26,
+    "version": "B",
+    "N": 26,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 27,
+    "version": "A",
+    "N": 9,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 27,
+    "version": "B",
+    "N": 9,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 28,
+    "version": "A",
+    "N": 4,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 28,
+    "version": "B",
+    "N": 4,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 29,
+    "version": "A",
+    "N": 28,
+    "noncontiguous_layers": {}
+  },
+  {
+    "case": 29,
+    "version": "B",
+    "N": 28,
+    "noncontiguous_layers": {}
+  }
+]

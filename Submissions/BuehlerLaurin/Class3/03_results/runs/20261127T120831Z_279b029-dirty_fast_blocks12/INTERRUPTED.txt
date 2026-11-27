@@ -1,0 +1,1 @@
+﻿Initial B run interrupted after complete BTC1y A/B results to remove repeated exp calls using an O(N) CRR price lattice. Preserve these results as before-revision evidence; incomplete cells have no result. Final grid will use a new run folder.

@@ -1,0 +1,329 @@
+{
+  "label": "quick (dirty tree)",
+  "scope": "Ignored ALL1y/ALL5y boundary CSVs only; BTC boundaries remain committed.",
+  "regeneration_cwd": "Submissions/BuehlerLaurin/Class3",
+  "regeneration_command_powershell": "& \"$env:USERPROFILE/.venvs/aif-class3/Scripts/python.exe\" -B evidence.py regenerate-boundaries -- \"$env:USERPROFILE/.venvs/aif-class3/Scripts/python.exe\" -B 00_docs/regenerate_boundaries.py --run 03_results/runs/20261127T121436Z_279b029-dirty_fast_blocks12",
+  "regeneration_note": "Regenerates only boundary CSVs with measured B; checks recorded hashes; no timing/memory reruns. Use the recorded Python/NumPy environment.",
+  "files": {
+    "ALL1y_B_boundaries/AAVEUSDT.csv": {
+      "sha256": "4848cb40486e8058544178be9204ea4153f45256cf45b9e671b713b52fcb74b0",
+      "bytes": 501881
+    },
+    "ALL1y_B_boundaries/ADAUSDT.csv": {
+      "sha256": "b180bab46a876c2e48cc738e719a7455556530a48cfcb36cef58aa1a0460c4a9",
+      "bytes": 517835
+    },
+    "ALL1y_B_boundaries/ALGOUSDT.csv": {
+      "sha256": "6a74a510da932b4dc634ae003e5912cf0fc293ca6741d0e3556ce3679c06843d",
+      "bytes": 520535
+    },
+    "ALL1y_B_boundaries/ATOMUSDT.csv": {
+      "sha256": "4cc4e234422705cf9a53ca014091296306761932502708c43f474572958a0714",
+      "bytes": 500407
+    },
+    "ALL1y_B_boundaries/AVAXUSDT.csv": {
+      "sha256": "00fd30c4001063b8fd9ed79ff39df46cd9a95c0b0c61d09fdabf328b73eb4704",
+      "bytes": 493607
+    },
+    "ALL1y_B_boundaries/AXSUSDT.csv": {
+      "sha256": "715583b9da41ea286b091293d987509b483b5a7e6a282cb6cd65113e699f3331",
+      "bytes": 505921
+    },
+    "ALL1y_B_boundaries/BCHUSDT.csv": {
+      "sha256": "53eb15c9bd5e4ed56255cf85c50d760fdd40644ba6b1ba4f17769936a91a7072",
+      "bytes": 501188
+    },
+    "ALL1y_B_boundaries/BNBUSDT.csv": {
+      "sha256": "0c45f7e89c49c09a7d997f11a8c0e3467dc4f6d20ba597801a49b66ae994ce59",
+      "bytes": 502798
+    },
+    "ALL1y_B_boundaries/BTCUSDT.csv": {
+      "sha256": "518c0edd1aceecff2c15e18a010fe8923a84b27cbba55daa93ad7655c96a3d8f",
+      "bytes": 521708
+    },
+    "ALL1y_B_boundaries/CHZUSDT.csv": {
+      "sha256": "922efd880908e8a58ab780efd00c4b1360a24a6507daeda2b39fad4c01d39163",
+      "bytes": 536466
+    },
+    "ALL1y_B_boundaries/COMPUSDT.csv": {
+      "sha256": "1138f6201d8e472a76e63b8cdec0f781ce099165b649c586d86d17d628763aaa",
+      "bytes": 499668
+    },
+    "ALL1y_B_boundaries/CRVUSDT.csv": {
+      "sha256": "5ac708dbd57e94747b5a49a2e5dbfc579ea06689e25697232983f201d77ca80a",
+      "bytes": 518254
+    },
+    "ALL1y_B_boundaries/DASHUSDT.csv": {
+      "sha256": "ed0ccf1abc22313ab9e27a423ad1aef8eb5acf9bd69bee388c9c6aee2e38dd9d",
+      "bytes": 496446
+    },
+    "ALL1y_B_boundaries/DOGEUSDT.csv": {
+      "sha256": "00065ebc54a983c1c2da820835b268fd15732de8dea5e2c52e83570ea9e7c595",
+      "bytes": 527672
+    },
+    "ALL1y_B_boundaries/DOTUSDT.csv": {
+      "sha256": "f68053d4a283cd3dd914231d13b40cbb9460619b21423df87cead6172111d98e",
+      "bytes": 501665
+    },
+    "ALL1y_B_boundaries/EGLDUSDT.csv": {
+      "sha256": "88595699b3e91867c020f3fb4eb730d85922498cab45d5018b9b1934bc16ffcd",
+      "bytes": 491802
+    },
+    "ALL1y_B_boundaries/ENJUSDT.csv": {
+      "sha256": "1c08ce5e192ad3b1a34c4893fd089c8354acd4975efc6a003fed3fa1e25c6727",
+      "bytes": 537735
+    },
+    "ALL1y_B_boundaries/ETCUSDT.csv": {
+      "sha256": "28603405f3ac41eec6117b2c750b2c6b3128eb0cc40d5798acd4db4eb894ff29",
+      "bytes": 488052
+    },
+    "ALL1y_B_boundaries/ETHUSDT.csv": {
+      "sha256": "6bfd6a1496c8839cbf4e26249c82470083d005196cc0295423c7bf24439fcf5b",
+      "bytes": 518432
+    },
+    "ALL1y_B_boundaries/FILUSDT.csv": {
+      "sha256": "16032927bafa20dcac02e9dd7198b9a087056a13156176ccc91f39f3d94d05b3",
+      "bytes": 508194
+    },
+    "ALL1y_B_boundaries/GRTUSDT.csv": {
+      "sha256": "b7b2af0061a4715a3d1a154820c6aa8667f09b2cfcd5acc2d7df7721efcd097f",
+      "bytes": 533927
+    },
+    "ALL1y_B_boundaries/HBARUSDT.csv": {
+      "sha256": "d26a18aca844320ab09739bc47c4f12546ad306e14d9e006564cf2f5eda5edbc",
+      "bytes": 528398
+    },
+    "ALL1y_B_boundaries/ICPUSDT.csv": {
+      "sha256": "a3b9416aaf2a1a97632178a790281bef293c064d00e82f97ccb34782d6784d14",
+      "bytes": 502548
+    },
+    "ALL1y_B_boundaries/LINKUSDT.csv": {
+      "sha256": "42812e4ad55610fd9ee71fec3ca2569ebac4ccde5abdfa21ff35a8aba093cd46",
+      "bytes": 494565
+    },
+    "ALL1y_B_boundaries/LTCUSDT.csv": {
+      "sha256": "b694271ff458009283ad4433491f29dd267bc45672cd6cd670164d8010f4be94",
+      "bytes": 496267
+    },
+    "ALL1y_B_boundaries/MANAUSDT.csv": {
+      "sha256": "ba83f8a21de489b05ba3c68f7a39d1284348288cb8b6af43f9ebde00f7b2cb73",
+      "bytes": 519437
+    },
+    "ALL1y_B_boundaries/NEARUSDT.csv": {
+      "sha256": "7244e806dc20237ab73a938bffa4bf9743f7c600f7edbb61a90b826619ce7651",
+      "bytes": 504862
+    },
+    "ALL1y_B_boundaries/NEOUSDT.csv": {
+      "sha256": "406d29f7f774ea2ff2ecef9a78eb40878676e898f2cb70c04df72838af2cb5e2",
+      "bytes": 500115
+    },
+    "ALL1y_B_boundaries/PAXGUSDT.csv": {
+      "sha256": "79bbc947fa15a4f7df800d270fe6c66fff68da81e6d8596f62ebaa3d73e58224",
+      "bytes": 517378
+    },
+    "ALL1y_B_boundaries/SANDUSDT.csv": {
+      "sha256": "d4915f64cba7f22ba45d844ffa857427978854feee10496eca6bf212e7e0d348",
+      "bytes": 524334
+    },
+    "ALL1y_B_boundaries/SNXUSDT.csv": {
+      "sha256": "d12b38ed2eda6418c75ff78944750e4509dd7340d8c18357264a49226ba0d7b8",
+      "bytes": 508692
+    },
+    "ALL1y_B_boundaries/SOLUSDT.csv": {
+      "sha256": "b7ce615fc162edeade8828b9d8b6a91bc315ce9d0f7a58ab90f5915dd2db7987",
+      "bytes": 499589
+    },
+    "ALL1y_B_boundaries/THETAUSDT.csv": {
+      "sha256": "b6ad318c8b8a26ff19912ffc587e6e2fd6940adbab81fa414b7398dc47099d5b",
+      "bytes": 512867
+    },
+    "ALL1y_B_boundaries/TRXUSDT.csv": {
+      "sha256": "f8ef57b0f9744270aa4c3de3d50afcaf55cd8567e02dbbb40888b0fe4070ea7f",
+      "bytes": 518332
+    },
+    "ALL1y_B_boundaries/UNIUSDT.csv": {
+      "sha256": "7b775ec624ce2b9ae82e2bf20d62477b4fa4a52e84cb021cefc886c5d4421a36",
+      "bytes": 500011
+    },
+    "ALL1y_B_boundaries/VETUSDT.csv": {
+      "sha256": "21c7e65160cbe6a75bd86fb1f7cd19e79ef8e5b51d0a3d52957ef11a12399e7c",
+      "bytes": 544087
+    },
+    "ALL1y_B_boundaries/XLMUSDT.csv": {
+      "sha256": "b1e690fc0dbbe4f637ed4cea3c4878062f76078379b16ce32960a046c6ae59af",
+      "bytes": 518439
+    },
+    "ALL1y_B_boundaries/XRPUSDT.csv": {
+      "sha256": "c3e7e01625aa24b7493cbaeed5bc98bb70214388aaa4110d06a5c31e33e4c723",
+      "bytes": 510744
+    },
+    "ALL1y_B_boundaries/XTZUSDT.csv": {
+      "sha256": "d2dba88d7df42650a7af3ad2f958bafd3a11b13736f0a9e24d3098d2af166b79",
+      "bytes": 517350
+    },
+    "ALL1y_B_boundaries/ZECUSDT.csv": {
+      "sha256": "a3adf199bf91cd8887c57fd893a0d37c1ee96d2b839bf6c26b71e20c1a019061",
+      "bytes": 507375
+    },
+    "ALL5y_B_boundaries/AAVEUSDT.csv": {
+      "sha256": "c86701a533f22710a3f2c2bcd13f042a9ee03a8ebee7ccd21a246932b97dac73",
+      "bytes": 2545744
+    },
+    "ALL5y_B_boundaries/ADAUSDT.csv": {
+      "sha256": "c995d0cbab7237f552bf235a7e10275284d64b928f0db1dc317c6ab21546db91",
+      "bytes": 2613622
+    },
+    "ALL5y_B_boundaries/ALGOUSDT.csv": {
+      "sha256": "01c5f300de6735e10c6d56e3361f1cc8335cf08bdb377dd6abdd639450b95295",
+      "bytes": 2632999
+    },
+    "ALL5y_B_boundaries/ATOMUSDT.csv": {
+      "sha256": "94dc28b4392d19478b4a0042d1c0a67356ac4f206bcea62484fde9bf9c5544ae",
+      "bytes": 2533503
+    },
+    "ALL5y_B_boundaries/AVAXUSDT.csv": {
+      "sha256": "cce51e06194b18b87b1f40da36d46b31b0c84fd66d7151dacf4b77bf8a9e6724",
+      "bytes": 2528575
+    },
+    "ALL5y_B_boundaries/AXSUSDT.csv": {
+      "sha256": "c961146b3ba4a36d29e70a1ebaa8ba4ab9d16d1d3a3a19907c97b87a07b6a278",
+      "bytes": 2542591
+    },
+    "ALL5y_B_boundaries/BCHUSDT.csv": {
+      "sha256": "ab6382a9c452d04c1a544f5a6ea049afc2bae732458fb85b6fbe10cede95eb0f",
+      "bytes": 2543764
+    },
+    "ALL5y_B_boundaries/BNBUSDT.csv": {
+      "sha256": "7f6b197972f29e234ad449b3e953037de3ccaa3d8fcbf28e7f41ead663e11d87",
+      "bytes": 2571917
+    },
+    "ALL5y_B_boundaries/BTCUSDT.csv": {
+      "sha256": "98d85f245b1515b5b4843a50246b3ed73e4fc20c18023b947aed25f4424a4c38",
+      "bytes": 2680792
+    },
+    "ALL5y_B_boundaries/CHZUSDT.csv": {
+      "sha256": "e5526e5bc7120dce76ac6a78196182aeb9f7e292a0e0ae7752374e1862fde831",
+      "bytes": 2675096
+    },
+    "ALL5y_B_boundaries/COMPUSDT.csv": {
+      "sha256": "60002dff5b81d602e74285d3d7be56478bfa352cc83a573e173329f9f341e47a",
+      "bytes": 2536941
+    },
+    "ALL5y_B_boundaries/CRVUSDT.csv": {
+      "sha256": "c8b94bd4900f00d33f2413e098fbf78d0ee75695d566c8807903e21dafd8112b",
+      "bytes": 2605416
+    },
+    "ALL5y_B_boundaries/DASHUSDT.csv": {
+      "sha256": "2f55f1fb3287ca8d85991a4866c2ecc22c033585928895af5d2ca60003a0e3e2",
+      "bytes": 2538843
+    },
+    "ALL5y_B_boundaries/DOGEUSDT.csv": {
+      "sha256": "ed7112209ccb3c7c071a392388ee8dc018df47f0a9a39a2b9b3c15e163344d50",
+      "bytes": 2705402
+    },
+    "ALL5y_B_boundaries/DOTUSDT.csv": {
+      "sha256": "3dbdb0960b959a256698eec019b67f1b84c5d26b567621b518d7fe94a69fdc37",
+      "bytes": 2521921
+    },
+    "ALL5y_B_boundaries/EGLDUSDT.csv": {
+      "sha256": "106ecb74a28f56044903ba27b76b6fdb65d8f2b07481f50f28a6d9cae8806019",
+      "bytes": 2530565
+    },
+    "ALL5y_B_boundaries/ENJUSDT.csv": {
+      "sha256": "338a0a42799db34bbd780ac05b37af7e26d8cd3b40ecfc85158b1bb026f61b6b",
+      "bytes": 2628707
+    },
+    "ALL5y_B_boundaries/ETCUSDT.csv": {
+      "sha256": "55713128912fe1cdf16df4a0ed0376b8e39153b71bcab913fb54fbdcff551558",
+      "bytes": 2527224
+    },
+    "ALL5y_B_boundaries/ETHUSDT.csv": {
+      "sha256": "2eadd54baa15072045a26b94775ba3a91b722883a98b1ff3ce5f0d0c6e306151",
+      "bytes": 2628350
+    },
+    "ALL5y_B_boundaries/FILUSDT.csv": {
+      "sha256": "cc52cd152eee692da7880d6600f9428d3cf8f3d95840bc17370be2d9cfbf15cd",
+      "bytes": 2524515
+    },
+    "ALL5y_B_boundaries/GRTUSDT.csv": {
+      "sha256": "2647992188776cd1fcfa6e062ead7f437f129674ba4e2b00e30d2ba7cb71ca03",
+      "bytes": 2649392
+    },
+    "ALL5y_B_boundaries/HBARUSDT.csv": {
+      "sha256": "bb3fe06e61f0b8ef845b9e71984569f6f109f2a69b9ed7e3cc934938d3c8a3ef",
+      "bytes": 2670987
+    },
+    "ALL5y_B_boundaries/ICPUSDT.csv": {
+      "sha256": "7e09ec21999969268bd522921f04902cf5a0d3637b5f6963608453ed32e665d9",
+      "bytes": 2530173
+    },
+    "ALL5y_B_boundaries/LINKUSDT.csv": {
+      "sha256": "4e607d903676c122e0a159fa394caf76c738ea9f480d77c66765c492be777e18",
+      "bytes": 2534244
+    },
+    "ALL5y_B_boundaries/LTCUSDT.csv": {
+      "sha256": "b63b4dd29177ff263068eab4ff51bebb28a0ab1663770f24ef43a8b763fae84b",
+      "bytes": 2537832
+    },
+    "ALL5y_B_boundaries/MANAUSDT.csv": {
+      "sha256": "e77f5322e2c573e5facb3a01bf418ee770310c5ef2a56d84692cf5c2e8160f4f",
+      "bytes": 2618342
+    },
+    "ALL5y_B_boundaries/NEARUSDT.csv": {
+      "sha256": "cadf7b1922165cea0fde8a7280d04db4415a7bd61a1e2fc5bf966b4a9e4c834e",
+      "bytes": 2558405
+    },
+    "ALL5y_B_boundaries/NEOUSDT.csv": {
+      "sha256": "a4a34c9c6d0a17b3c0fb02bdd922312c30c98eb4531b2578f3046abf7ff7fc24",
+      "bytes": 2513502
+    },
+    "ALL5y_B_boundaries/PAXGUSDT.csv": {
+      "sha256": "6b7ca3df68d32afde6286472d0b2b43d22a5e5e1a6efe6f0eff827d90240a7f3",
+      "bytes": 2614912
+    },
+    "ALL5y_B_boundaries/SANDUSDT.csv": {
+      "sha256": "f5d86aee33e7d7c6d6a5f318be79a80a97a2b958cd3423036365c8ff7f1b6a6d",
+      "bytes": 2639811
+    },
+    "ALL5y_B_boundaries/SNXUSDT.csv": {
+      "sha256": "b12d2e1172f57d22c86b2e442bcdfd21b2796e82ce68ecb724ef9cbba010f7c3",
+      "bytes": 2559898
+    },
+    "ALL5y_B_boundaries/SOLUSDT.csv": {
+      "sha256": "5ec86c49d3a4bf566afc9bb1db48233513ecf278f4ee20ea396b246c792742ef",
+      "bytes": 2566873
+    },
+    "ALL5y_B_boundaries/THETAUSDT.csv": {
+      "sha256": "2be380fb5b15713dced9e68266a984bc171967b0cf829180b873132f6adb1861",
+      "bytes": 2560473
+    },
+    "ALL5y_B_boundaries/TRXUSDT.csv": {
+      "sha256": "db9f13d3f3c3eda13a964479c895c9c53e57a4782925c5e62028e767d5ec5f74",
+      "bytes": 2691447
+    },
+    "ALL5y_B_boundaries/UNIUSDT.csv": {
+      "sha256": "babc0dabf5fdcc43525b5165850f0649019831aa5076d7f0d3e5ff83be6892ca",
+      "bytes": 2536903
+    },
+    "ALL5y_B_boundaries/VETUSDT.csv": {
+      "sha256": "07fbfb02659c81765d853d071ba08cbb02afcd5b1d7052ef112c0bcc309f72ef",
+      "bytes": 2728329
+    },
+    "ALL5y_B_boundaries/XLMUSDT.csv": {
+      "sha256": "6feacffd83941b80f1e139c89640686d07943a59d85f7e72a29c2b090d2b8a20",
+      "bytes": 2653278
+    },
+    "ALL5y_B_boundaries/XRPUSDT.csv": {
+      "sha256": "8391a60c6844ea6029164b94050e45528858babac5645455beb44c04c292eef2",
+      "bytes": 2636368
+    },
+    "ALL5y_B_boundaries/XTZUSDT.csv": {
+      "sha256": "0aa14ca429f4c763af53e8f5c490e7712cf4ee30641f13934a15f987f34407b9",
+      "bytes": 2571727
+    },
+    "ALL5y_B_boundaries/ZECUSDT.csv": {
+      "sha256": "95b8e61e4759a2051a32acb542907d74c0f08e396daa54928af4124cfd6e5906",
+      "bytes": 2554915
+    }
+  }
+}

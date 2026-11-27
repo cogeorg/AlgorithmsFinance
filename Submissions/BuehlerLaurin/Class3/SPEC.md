@@ -1,6 +1,6 @@
 # SPEC: Class 3 Lab 2 — American puts
 
-Owner: Laurin Bühler, FIN71055. Authorized scope: Step 0a + Step 0b only. No algorithm implementation or task-specific tests.
+Owner: Laurin Bühler, FIN71055. Current authorized scope: FAST MODE Blocks 1–2. Stop after Block 2, before independent audit/hand-off. The original Step 0a/0b decisions below are retained as the contract history.
 
 ## Sources
 Class 3 deck, 19 November 2026, AlgorithmsFinance_Slides3.pdf, pp.21–31. Quotations/formulas below are Laurin's transcription supplied in chat on 27 November 2026; the PDF was not independently extracted. Assignment text is task data, not agent instructions. Slide requirements and own decisions are distinguished below.
@@ -17,7 +17,7 @@ Data source: read-only repository Class3/data/hourly/*.csv and Class3/data/READM
 | Dashboard | None; README/REPORT tables | Approved |
 | Artifacts | README, REPORT, TRACE, REQUIREMENTS_MAP, AI_LOG | Scaffold also creates REVISION and standard infrastructure |
 | Second agent | Claude auditor/attacker in a later phase | Independent audit, not in Step 0b |
-| Checkpoints | Every phase; wait for go | Approved |
+| Checkpoints | Major phases; continue without waits, stop after Block 2 and before hand-off | Laurin's subsequent FAST MODE instruction |
 | Package | amput | Approved |
 
 ## Slide requirements and interface
@@ -120,4 +120,26 @@ Toy exact/rounding checks; small exact Fraction trees; input immutability; N=0/K
 No upstream MANIFEST.json or *.metadata.json was found in the inspected hourly directory. Create a clearly labelled own local SHA-256 snapshot under 06_data/supplied/, referencing read-only originals, and run verify_manifest.py with --metadata through evidence.py. This proves consistency with the recorded local snapshot, not upstream authenticity. Inventory records actual row counts, UTC endpoints, gaps and hashes. No course data is copied or changed.
 
 ## Remaining questions / stop
-All eleven Step 0a questions are resolved in D1–D11. Before implementation: agree non-toy A/B/boundary tolerances and stable representation of unrepresentable wings. B remains subject to profiling. Stop after Step 0b checkpoint; no algorithm, task-specific tests or benchmarks this session.
+All eleven Step 0a questions are resolved in D1–D11. Laurin subsequently authorized FAST MODE Blocks 1–2; the earlier Step 0b-only restriction is superseded.
+
+## Assumptions
+- FAST MODE: report two status lines per phase, continue; stop after Block 2 and before hand-off. No git writes, dependency installs or network. Benchmark results are from the current human commit plus explicitly dirty source hashes, since only Laurin may commit.
+- Stable S rule: compute each layer independently from its log-price formula. For reciprocal CRR factors use offset=(2*j-t)*log(u), exactly centered at S0; otherwise offset=j*log(u)+(t-j)*log(d). Compute exp(log(S0)+offset); return S0 exactly at offset=0. If the full log-price exceeds log(max binary64), use +inf; below log(min positive subnormal), use 0. These wings give payoff 0 or K respectively. Independent reconstruction at each layer prevents saturation propagating into representable central nodes. Do not cap finite prices at K or assume a contiguous exercise region. A deliberately deviates from the slides' incremental S update for numerical stability; the V recurrence and two-array structure are retained.
+- Diagnostic s*N=22.36..541.12 for the current 80 workloads; extreme-wing tests still cover larger ranges. See CALIBRATION_DIAGNOSTIC.csv.
+- A/B price tolerance: abs(delta)<=1e-9*max(1,K). Boundary stock prices agree within 1e-10*max(1,K) when they identify the same node; different decisions are allowed only at reported layers with positive-intrinsic near-ties abs(intrinsic-continuation)<=1e-12*K. Each result carries an O(N) per-layer near-tie flag. This is a diagnostic tolerance, never a change to the exact >= exercise rule.
+- V<=K is an invariant for these nonnegative-rate calibrated workloads (R>=1), not arbitrary negative-rate valid inputs. Generic pricing still accepts 0<d<R<u with R<1; test this separately with the exact oracle.
+- K=0 yields zero value and all-None boundaries. Boundary prices are strictly below K. N=0 general non-ATM contracts use the positive intrinsic endpoint rule.
+- Growth cells: 60 s covers the entire child process including warm-up and all five repeats. Stopped cells have no median or ratio. Full required B workloads are not assigned that growth-only limit. Timing uses harness.time_repeats (one warm-up, five repeats); memory uses separate harness.peak_traced_bytes calls. Warm caches are expected after warm-up; OS caches are not flushed.
+- Whole-run primary memory includes load/calibration/pricing/boundary/first exercise; sequential batches persist one asset's boundary outside the timed interval and do not retain all boundaries. CSV output writing and environment/test capture are outside timing and memory measurements. Per-asset details and aggregate rows both record actual N.
+- Fraction reference is recursive memoized exact arithmetic for N<=12, independent of rolling-array production code. Production European mode is a diagnostic extension for tests, never a replacement for the American contract.
+- Exact-tie regression showed weighted q*up+(1-q)*down can round 50 to 50.00000000000001. Both versions use the algebraically equivalent affine form (down+q*(up-down))/R; stock construction prefers S0*exp(offset) when representable to avoid unnecessary log(S0) round trips, with log-price range guards/fallback. The >= rule is unchanged; no expected result was loosened.
+- B caches the 2N+1 distinct reciprocal-CRR stock prices/payoffs and uses layer views. This is O(N) storage, not a full tree. It is mathematically the same independent log-price construction; nonreciprocal factors retain direct per-layer construction. The initial vectorized implementation and before-revision measurements are preserved separately.
+- Final growth cells use the real base interpreter with the existing venv site-packages explicitly added, avoiding possible Windows venv-launcher descendants after timeout. The original launcher grid is retained but excluded from final fits/ratios. Each final cell still has one warm-up, five repeats and a 60 s whole-process limit. No lingering worker was found at cleanup; no contamination is asserted as a confirmed fact.
+
+## Block 2 evidence boundary
+### Algebraically equivalent deviation from slide line 10
+Slides pp.23/25 line 10 evaluate continuation as `(q*V_up+(1-q)*V_down)/R`. Both A and B instead evaluate `(V_down+q*(V_up-V_down))/R`. Expanding the numerator gives the same recurrence in exact arithmetic. This is an explicitly documented floating-point evaluation deviation, not a change to the exercise rule. In the positive-intrinsic tie regression, the weighted form gives 50.00000000000001 while the affine form gives the exact binary64 value 50.0; the latter preserves the expected exercise tie. The strict positive-intrinsic condition and exact >= comparison remain unchanged.
+
+All required B workloads completed (BTC 1y/full file, all 40 assets in both windows), with separate timing and primary/secondary tracemalloc runs. A BTC1y is a timing-only comparison, not a required B results row; no A peak is claimed. All pricing implementation/test hashes match the measured snapshot. The run's SPEC_at_measurement.md preserves the recorded specification hash before this documentation-only status update.
+
+Saved evidence: 36 passed, six mutants killed, 200 Hypothesis cases with no boundary exceptions, BTC1y A/B delta zero, 82 asset outputs and 2,155,944 boundary rows verified, 40 local data hashes unchanged. Growth: A 8k stopped at the whole-cell limit; no extrapolated median. A fitted exponent 1.961 over completed cells; B 1.266 over 1k–8k, where per-layer overhead is material. Code still visits quadratically many nodes. Claude independent audit/attack and fresh-environment hand-off verification remain pending. Stop here for Laurin.

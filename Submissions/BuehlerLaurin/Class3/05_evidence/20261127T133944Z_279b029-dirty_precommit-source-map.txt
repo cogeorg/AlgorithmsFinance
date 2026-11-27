@@ -1,0 +1,11 @@
+label: precommit-source-map
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B 00_docs/verify_committed_sources.py --working-tree
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T133944Z
+exit_code: 0
+duration_s: 0.25
+------------------------------------------------------------
+WORKING-TREE SOURCE MAP: PASS (50 exact-byte matches; post-commit verification still pending)
