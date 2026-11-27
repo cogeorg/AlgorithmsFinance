@@ -1,0 +1,2 @@
+03_results\runs\20261127T120831Z_279b029-dirty_fast_blocks12
+Unchanged A/data/common/pipeline hashes; same local BTC window and machine.

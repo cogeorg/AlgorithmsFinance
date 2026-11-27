@@ -1,0 +1,13 @@
+label: summarize-block2
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B 00_docs/summarize_results.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T132950Z
+exit_code: 0
+duration_s: 0.13
+------------------------------------------------------------
+README/report tables generated from 03_results\runs\20261127T121436Z_279b029-dirty_fast_blocks12
+BTC1y A/B median ratio: 41.754947
+Growth fitted exponents: {"A": 1.9607724818265129, "B": 1.2656281913063472}

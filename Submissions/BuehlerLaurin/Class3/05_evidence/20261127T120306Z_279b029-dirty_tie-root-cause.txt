@@ -1,0 +1,13 @@
+label: tie-root-cause
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B -c q=1/3; print('weighted:',q*0+(1-q)*75); print('affine:',75+q*(0-75)); print('exact continuation:',50)
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T120306Z
+exit_code: 0
+duration_s: 0.08
+------------------------------------------------------------
+weighted: 50.00000000000001
+affine: 50.0
+exact continuation: 50

@@ -1,0 +1,128 @@
+label: benchmarks-lattice
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -u -B run.py bench.run_lab --reuse-a 03_results/runs/20261127T120831Z_279b029-dirty_fast_blocks12
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T121435Z
+exit_code: 0
+duration_s: 4214.32
+------------------------------------------------------------
+RUN DIRECTORY: 03_results/runs/20261127T121436Z_279b029-dirty_fast_blocks12
+START timing BTC1y_A: 1 assets, warm-up + 5 repeats
+COMPLETE BTC1y_A: median 30.012675s (timing-only reference for ratio)
+START timing BTC1y_B: 1 assets, warm-up + 5 repeats
+DONE timing BTC1y_B: median 0.718781s; START primary tracemalloc
+DONE primary memory BTC1y_B: 7001865 bytes; START artifact + isolated pricing memory runs
+  BTC1y_B 1/1 BTCUSDT: value=16714.93527, isolated peak=852242
+COMPLETE BTC1y_B
+START timing BTC5y_B: 1 assets, warm-up + 5 repeats
+DONE timing BTC5y_B: median 7.199832s; START primary tracemalloc
+DONE primary memory BTC5y_B: 8685193 bytes; START artifact + isolated pricing memory runs
+  BTC5y_B 1/1 BTCUSDT: value=20719.78943, isolated peak=4217726
+COMPLETE BTC5y_B
+START timing ALL1y_B: 40 assets, warm-up + 5 repeats
+DONE timing ALL1y_B: median 26.580497s; START primary tracemalloc
+DONE primary memory ALL1y_B: 7048338 bytes; START artifact + isolated pricing memory runs
+  ALL1y_B 1/40 AAVEUSDT: value=68.98699992, isolated peak=852152
+  ALL1y_B 2/40 ADAUSDT: value=0.1679726049, isolated peak=852164
+  ALL1y_B 3/40 ALGOUSDT: value=0.05199225569, isolated peak=852158
+  ALL1y_B 4/40 ATOMUSDT: value=0.7757620114, isolated peak=852170
+  ALL1y_B 5/40 AVAXUSDT: value=4.73788952, isolated peak=852170
+  ALL1y_B 6/40 AXSUSDT: value=0.5573389936, isolated peak=852134
+  ALL1y_B 7/40 BCHUSDT: value=138.8212875, isolated peak=852170
+  ALL1y_B 8/40 BNBUSDT: value=172.7143142, isolated peak=852236
+  ALL1y_B 9/40 BTCUSDT: value=16714.93527, isolated peak=852242
+  ALL1y_B 10/40 CHZUSDT: value=0.009701161955, isolated peak=852152
+  ALL1y_B 11/40 COMPUSDT: value=10.54566519, isolated peak=852152
+  ALL1y_B 12/40 CRVUSDT: value=0.1548525829, isolated peak=852146
+  ALL1y_B 13/40 DASHUSDT: value=25.00349722, isolated peak=852134
+  ALL1y_B 14/40 DOGEUSDT: value=0.04551471831, isolated peak=852176
+  ALL1y_B 15/40 DOTUSDT: value=0.846349294, isolated peak=852158
+  ALL1y_B 16/40 EGLDUSDT: value=2.82114048, isolated peak=852152
+  ALL1y_B 17/40 ENJUSDT: value=0.0205200148, isolated peak=852134
+  ALL1y_B 18/40 ETCUSDT: value=3.847127964, isolated peak=852176
+  ALL1y_B 19/40 ETHUSDT: value=811.482934, isolated peak=852194
+  ALL1y_B 20/40 FILUSDT: value=0.5681343615, isolated peak=852140
+  ALL1y_B 21/40 GRTUSDT: value=0.01816903218, isolated peak=852152
+  ALL1y_B 22/40 HBARUSDT: value=0.05170983589, isolated peak=852170
+  ALL1y_B 23/40 ICPUSDT: value=1.142879976, isolated peak=852134
+  ALL1y_B 24/40 LINKUSDT: value=4.29256274, isolated peak=852176
+  ALL1y_B 25/40 LTCUSDT: value=21.17752031, isolated peak=852188
+  ALL1y_B 26/40 MANAUSDT: value=0.06695057343, isolated peak=852158
+  ALL1y_B 27/40 NEARUSDT: value=0.7888312469, isolated peak=852140
+  ALL1y_B 28/40 NEOUSDT: value=1.263367027, isolated peak=852170
+  ALL1y_B 29/40 PAXGUSDT: value=362.7061701, isolated peak=852338
+  ALL1y_B 30/40 SANDUSDT: value=0.06789670856, isolated peak=852146
+  ALL1y_B 31/40 SNXUSDT: value=0.3310159004, isolated peak=852146
+  ALL1y_B 32/40 SOLUSDT: value=43.71614382, isolated peak=852182
+  ALL1y_B 33/40 THETAUSDT: value=0.1602962335, isolated peak=852146
+  ALL1y_B 34/40 TRXUSDT: value=0.02336799737, isolated peak=852368
+  ALL1y_B 35/40 UNIUSDT: value=2.009276452, isolated peak=852140
+  ALL1y_B 36/40 VETUSDT: value=0.004304397567, isolated peak=852164
+  ALL1y_B 37/40 XLMUSDT: value=0.08804670435, isolated peak=852158
+  ALL1y_B 38/40 XRPUSDT: value=0.5756307335, isolated peak=852182
+  ALL1y_B 39/40 XTZUSDT: value=0.161810788, isolated peak=852158
+  ALL1y_B 40/40 ZECUSDT: value=188.4717486, isolated peak=852134
+COMPLETE ALL1y_B
+START timing ALL5y_B: 40 assets, warm-up + 5 repeats
+DONE timing ALL5y_B: median 284.649042s; START primary tracemalloc
+DONE primary memory ALL5y_B: 8731641 bytes; START artifact + isolated pricing memory runs
+  ALL5y_B 1/40 AAVEUSDT: value=199.4245014, isolated peak=4217684
+  ALL5y_B 2/40 ADAUSDT: value=1.132959723, isolated peak=4217672
+  ALL5y_B 3/40 ALGOUSDT: value=1.145441511, isolated peak=4217684
+  ALL5y_B 4/40 ATOMUSDT: value=21.7965444, isolated peak=4217672
+  ALL5y_B 5/40 AVAXUSDT: value=39.91379045, isolated peak=4217684
+  ALL5y_B 6/40 AXSUSDT: value=89.41199302, isolated peak=4217690
+  ALL5y_B 7/40 BCHUSDT: value=322.9021183, isolated peak=4217672
+  ALL5y_B 8/40 BNBUSDT: value=209.354602, isolated peak=4217696
+  ALL5y_B 9/40 BTCUSDT: value=20719.78943, isolated peak=4217726
+  ALL5y_B 10/40 CHZUSDT: value=0.2685741153, isolated peak=4217684
+  ALL5y_B 11/40 COMPUSDT: value=220.0752836, isolated peak=4217690
+  ALL5y_B 12/40 CRVUSDT: value=3.076739765, isolated peak=4217708
+  ALL5y_B 13/40 DASHUSDT: value=123.8432357, isolated peak=4217690
+  ALL5y_B 14/40 DOGEUSDT: value=0.1684028104, isolated peak=4217678
+  ALL5y_B 15/40 DOTUSDT: value=24.63817655, isolated peak=4217672
+  ALL5y_B 16/40 EGLDUSDT: value=166.7290884, isolated peak=4217678
+  ALL5y_B 17/40 ENJUSDT: value=1.800862209, isolated peak=4217708
+  ALL5y_B 18/40 ETCUSDT: value=30.46851685, isolated peak=4217672
+  ALL5y_B 19/40 ETHUSDT: value=1930.095149, isolated peak=4217678
+  ALL5y_B 20/40 FILUSDT: value=40.17551306, isolated peak=4217684
+  ALL5y_B 21/40 GRTUSDT: value=0.6643076521, isolated peak=4217690
+  ALL5y_B 22/40 HBARUSDT: value=0.2572616454, isolated peak=4217684
+  ALL5y_B 23/40 ICPUSDT: value=29.87675858, isolated peak=4217696
+  ALL5y_B 24/40 LINKUSDT: value=17.55801727, isolated peak=4217672
+  ALL5y_B 25/40 LTCUSDT: value=100.8269867, isolated peak=4217672
+  ALL5y_B 26/40 MANAUSDT: value=1.814210674, isolated peak=4217684
+  ALL5y_B 27/40 NEARUSDT: value=6.991643654, isolated peak=4217702
+  ALL5y_B 28/40 NEOUSDT: value=26.56851746, isolated peak=4217678
+  ALL5y_B 29/40 PAXGUSDT: value=227.1840594, isolated peak=4218020
+  ALL5y_B 30/40 SANDUSDT: value=1.116661005, isolated peak=4217696
+  ALL5y_B 31/40 SNXUSDT: value=7.146211997, isolated peak=4217714
+  ALL5y_B 32/40 SOLUSDT: value=127.1887876, isolated peak=4217678
+  ALL5y_B 33/40 THETAUSDT: value=4.703093968, isolated peak=4217690
+  ALL5y_B 34/40 TRXUSDT: value=0.03516917553, isolated peak=4217720
+  ALL5y_B 35/40 UNIUSDT: value=15.85704052, isolated peak=4217684
+  ALL5y_B 36/40 VETUSDT: value=0.07916449042, isolated peak=4217678
+  ALL5y_B 37/40 XLMUSDT: value=0.2063867462, isolated peak=4217672
+  ALL5y_B 38/40 XRPUSDT: value=0.6026606603, isolated peak=4217672
+  ALL5y_B 39/40 XTZUSDT: value=3.636374046, isolated peak=4217672
+  ALL5y_B 40/40 ZECUSDT: value=117.6159782, isolated peak=4217708
+COMPLETE ALL5y_B
+START growth A N=1000, 60 s whole-cell limit
+DONE growth A N=1000: ok, seconds=0.40728170005604625
+START growth A N=2000, 60 s whole-cell limit
+DONE growth A N=2000: ok, seconds=1.5594631000421941
+START growth A N=4000, 60 s whole-cell limit
+DONE growth A N=4000: ok, seconds=6.378348500002176
+START growth A N=8000, 60 s whole-cell limit
+DONE growth A N=8000: stopped, seconds=
+START growth B N=1000, 60 s whole-cell limit
+DONE growth B N=1000: ok, seconds=0.0321919999551028
+START growth B N=2000, 60 s whole-cell limit
+DONE growth B N=2000: ok, seconds=0.07655240001622587
+START growth B N=4000, 60 s whole-cell limit
+DONE growth B N=4000: ok, seconds=0.16593050002120435
+START growth B N=8000, 60 s whole-cell limit
+DONE growth B N=8000: ok, seconds=0.49311109993141145
+BENCHMARK GRID COMPLETE: 03_results/runs/20261127T121436Z_279b029-dirty_fast_blocks12

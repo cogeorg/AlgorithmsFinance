@@ -1,0 +1,7 @@
+{
+  "status": "ok",
+  "wall_s": 0.6320082999300212,
+  "limit_s": 60,
+  "cmd": "C:\\Users\\laubu\\.venvs\\aif-class3\\Scripts\\python.exe -B run.py bench.growth_cell --version B --n 1000 --out 03_results\\runs\\20261127T121436Z_279b029-dirty_fast_blocks12\\growth_B_1000.json",
+  "log_tail": "B N=1000: median=0.032192s\n"
+}

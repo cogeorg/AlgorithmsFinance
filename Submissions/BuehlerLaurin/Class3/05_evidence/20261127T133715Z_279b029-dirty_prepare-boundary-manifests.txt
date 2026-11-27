@@ -1,0 +1,57 @@
+label: prepare-boundary-manifests
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B -c from pathlib import Path
+import hashlib,json
+root=Path.cwd()
+runs=root/'03_results/runs'
+initial=runs/'20261127T120831Z_279b029-dirty_fast_blocks12'
+final=runs/'20261127T121436Z_279b029-dirty_fast_blocks12'
+# Recover the exact initial runner by reversing only the recorded later CLI changes.
+old_runner=(root/'01_code/bench/run_lab.py').read_text(encoding='utf-8')
+old_runner=old_runner.replace('import argparse\n','',1)
+old_runner=old_runner.replace('    parser=argparse.ArgumentParser(); parser.add_argument(\'--reuse-a\',type=Path)\n    options=parser.parse_args()\n','',1)
+old_runner=old_runner.replace('*tests-after-lattice.txt','*tests-green-B.txt',1)
+start=old_runner.index('        if version==\'A\' and options.reuse_a is not None:')
+end=old_runner.index('        (d/f\'{label}_timing.json\')',start)
+old_runner=old_runner[:start]+'        raw=time_repeats(lambda:None,lambda _:analyze_many(assets,window,version),warmup=1,repeats=5,check=check)\n'+old_runner[end:]
+candidates={
+'01_code/amput/b.py':(final/'B_INITIAL_SOURCE.py.txt').read_bytes(),
+'01_code/bench/run_lab.py':old_runner.encode('utf-8'),
+'SPEC.md':(final/'SPEC_at_measurement.md').read_bytes()}
+for run in [initial,final]:
+    recorded=json.loads((run/'source_sha256.json').read_text(encoding='utf-8'))
+    mapping={}
+    for rel,digest in recorded.items():
+        path=root/rel
+        if hashlib.sha256(path.read_bytes()).hexdigest()==digest:
+            target=path
+        else:
+            normalized=rel.replace(chr(92),'/')
+            payload=candidates.get(normalized)
+            assert payload is not None and hashlib.sha256(payload).hexdigest()==digest,(run.name,rel,'unrecovered historical source')
+            target=run/'source_snapshot'/normalized
+            target.parent.mkdir(parents=True,exist_ok=True)
+            target.write_bytes(payload)
+        mapping[rel]={'committed_path':target.relative_to(root.parents[2]).as_posix(),'sha256':digest,'kind':'current' if target==path else 'historical snapshot'}
+    (run/'SOURCE_MAP.json').write_text(json.dumps(mapping,indent=2)+'\n',encoding='utf-8')
+    print(run.name+': all '+str(len(mapping))+' source hashes have exact-byte current/snapshot targets')
+    files={}
+    for folder in ['ALL1y_B_boundaries','ALL5y_B_boundaries']:
+        for p in sorted((run/folder).glob('*.csv')):
+            files[p.relative_to(run).as_posix()]={'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size}
+    command='& '+chr(34)+'$env:USERPROFILE/.venvs/aif-class3/Scripts/python.exe'+chr(34)+' -B evidence.py regenerate-boundaries -- '+chr(34)+'$env:USERPROFILE/.venvs/aif-class3/Scripts/python.exe'+chr(34)+' -B 00_docs/regenerate_boundaries.py --run '+run.relative_to(root).as_posix()
+    manifest={'label':'quick (dirty tree)','scope':'Ignored ALL1y/ALL5y boundary CSVs only; BTC boundaries remain committed.','regeneration_cwd':'Submissions/BuehlerLaurin/Class3','regeneration_command_powershell':command if files else None,'regeneration_note':'No all-asset boundaries were generated in this interrupted initial run.' if not files else 'Regenerates only boundary CSVs with measured B; checks recorded hashes; no timing/memory reruns. Use the recorded Python/NumPy environment.','files':files}
+    (run/'BOUNDARIES_MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
+    print(run.name+': boundary manifest '+str(len(files))+' files, '+str(sum(x['bytes'] for x in files.values()))+' bytes')
+
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T133715Z
+exit_code: 0
+duration_s: 0.47
+------------------------------------------------------------
+20261127T120831Z_279b029-dirty_fast_blocks12: all 25 source hashes have exact-byte current/snapshot targets
+20261127T120831Z_279b029-dirty_fast_blocks12: boundary manifest 0 files, 0 bytes
+20261127T121436Z_279b029-dirty_fast_blocks12: all 25 source hashes have exact-byte current/snapshot targets
+20261127T121436Z_279b029-dirty_fast_blocks12: boundary manifest 80 files, 123993881 bytes

@@ -1,0 +1,8 @@
+{
+  "label": "quick (dirty tree)",
+  "scope": "Ignored ALL1y/ALL5y boundary CSVs only; BTC boundaries remain committed.",
+  "regeneration_cwd": "Submissions/BuehlerLaurin/Class3",
+  "regeneration_command_powershell": null,
+  "regeneration_note": "No all-asset boundaries were generated in this interrupted initial run.",
+  "files": {}
+}

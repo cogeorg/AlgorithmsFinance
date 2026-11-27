@@ -1,0 +1,49 @@
+label: step0-data-inventory
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B -c from pathlib import Path
+import csv, hashlib, json, os
+from datetime import datetime
+root=Path.cwd()
+source=root.parents[2]/Class3/data/hourly
+dest=root/06_data/supplied
+files=sorted(source.glob(*.csv))
+assert len(files)==40, fExpected 40 assets, found {len(files)}
+inventory=[]
+manifest={provenance:Own local SHA-256 snapshot; no upstream checksums available; not an authenticity certificate.,files:{}}
+for path in files:
+    digest=hashlib.sha256(path.read_bytes()).hexdigest()
+    n=0; first=None; previous=None; missing=0
+    with path.open(newline=",encoding=utf-8) as f:
+        reader=csv.DictReader(f)
+        assert reader.fieldnames==[timestamp_utc,close], path.name
+        for row in reader:
+            t=datetime.fromisoformat(row[timestamp_utc].replace(Z,+00:00))
+            assert t.utcoffset().total_seconds()==0, path.name
+            if previous is not None:
+                seconds=(t-previous).total_seconds()
+                assert seconds>0 and seconds%3600==0, path.name
+                missing+=int(seconds/3600)-1
+            else:
+                first=row[timestamp_utc]
+            previous=t
+            last=row[timestamp_utc]
+            n+=1
+    assert n>=8761, path.name
+    inventory.append({symbol:path.stem,rows:n,full_N:n-1,first_utc:first,last_utc:last,missing_hours:missing,sha256:digest})
+    manifest[files][Path(os.path.relpath(path,dest)).as_posix()]={sha256:digest,bytes:path.stat().st_size}
+    print(f{path.stem}: rows={n}, N={n-1}, first={first}, last={last}, missing_hours={missing}, sha256={digest})
+(dest/MANIFEST.json).write_text(json.dumps(manifest,indent=2)+\n,encoding=utf-8)
+(dest/DATA_INVENTORY.json).write_text(json.dumps(inventory,indent=2)+\n,encoding=utf-8)
+print(DATA INVENTORY: PASS (40 CSV files; headers, row counts, UTC chronology and gaps recorded; own snapshot only))
+
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 0325907cb0a6cc3cd1f292fca095b52d9343ac97
+dirty: True
+python: 3.13.15
+utc: 20261127T114958Z
+exit_code: 1
+duration_s: 0.12
+------------------------------------------------------------
+  File "<string>", line 6
+    dest=root/06_data/supplied
+                ^
+SyntaxError: invalid decimal literal

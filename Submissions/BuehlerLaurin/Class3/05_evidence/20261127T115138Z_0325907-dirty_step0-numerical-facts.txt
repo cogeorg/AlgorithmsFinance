@@ -1,0 +1,13 @@
+label: step0-numerical-facts
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B -c import math; print('exp(-657) =', math.exp(-657)); print('exp(-876) =', math.exp(-876)); print('backward nodes at N=43800 =', 43800*43801//2)
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 0325907cb0a6cc3cd1f292fca095b52d9343ac97
+dirty: True
+python: 3.13.15
+utc: 20261127T115138Z
+exit_code: 0
+duration_s: 0.09
+------------------------------------------------------------
+exp(-657) = 4.661496790756256e-286
+exp(-876) = 0.0
+backward nodes at N=43800 = 959241900

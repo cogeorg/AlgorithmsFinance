@@ -1,0 +1,4 @@
+# Existing environment; no dependency installation performed by the agent.
+numpy==2.5.5
+pytest==9.2.0
+hypothesis==6.170.17

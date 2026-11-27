@@ -1,0 +1,11 @@
+label: profile-A-BTC1y
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B -m cProfile -o 00_docs/PROFILE_A_BTC1Y.pstats run.py bench.profile_a
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T120400Z
+exit_code: 0
+duration_s: 85.15
+------------------------------------------------------------
+Profile A BTC 1y: N=8760, value=16714.9352705

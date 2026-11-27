@@ -1,0 +1,2 @@
+workload,version,symbol,window,parse_calibrate_s,price_s,exercise_s,instrumentation_only
+BTC1y,B,BTCUSDT,1y,0.18379400006961077,0.8018585999961942,0.0005312999710440636,True

@@ -1,0 +1,10 @@
+{
+  "warmup": 1,
+  "repeats": 5,
+  "statistic": "median",
+  "timing": "whole public pipeline; file reads included; warm caches expected",
+  "memory": "separate tracemalloc primary whole run; secondary max of separately measured pricing calls including boundary",
+  "process": "one process, sequential assets, compact summaries retained; boundary CSV serialization excluded",
+  "source": "human commit plus dirty source hashes; no claim of clean-commit official status",
+  "growth_limit_s": 60
+}

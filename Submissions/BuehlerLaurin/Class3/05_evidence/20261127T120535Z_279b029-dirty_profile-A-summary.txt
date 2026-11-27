@@ -1,0 +1,32 @@
+label: profile-A-summary
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B -c import pstats; pstats.Stats('00_docs/PROFILE_A_BTC1Y.pstats').strip_dirs().sort_stats('cumtime').print_stats(12)
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T120535Z
+exit_code: 0
+duration_s: 0.14
+------------------------------------------------------------
+Fri Nov 27 13:05:25 2026    00_docs/PROFILE_A_BTC1Y.pstats
+
+         135031481 function calls (135030945 primitive calls) in 84.977 seconds
+
+   Ordered by: cumulative time
+   List reduced from 454 to 12 due to restriction <12>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     24/1    0.001    0.000   84.977   84.977 {built-in method builtins.exec}
+        1    0.000    0.000   84.977   84.977 run.py:1(<module>)
+        1    0.000    0.000   84.964   84.964 <frozen runpy>:206(run_module)
+        1    0.000    0.000   84.962   84.962 <frozen runpy>:91(_run_module_code)
+        1    0.000    0.000   84.962   84.962 <frozen runpy>:65(_run_code)
+        1    0.001    0.001   84.962   84.962 profile_a.py:1(<module>)
+        1    0.001    0.001   84.924   84.924 profile_a.py:7(main)
+        1   59.102   59.102   84.339   84.339 a.py:21(price_with_boundary)
+ 76755173   13.715    0.000   13.715    0.000 {built-in method builtins.max}
+ 38377563    8.207    0.000    8.207    0.000 {built-in method math.exp}
+ 19184400    3.307    0.000    3.307    0.000 {built-in method builtins.abs}
+        1    0.196    0.196    0.583    0.583 data.py:18(load_calibrate)
+
+

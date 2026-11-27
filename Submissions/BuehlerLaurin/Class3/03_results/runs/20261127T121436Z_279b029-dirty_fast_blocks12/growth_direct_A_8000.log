@@ -1,0 +1,7 @@
+{
+  "status": "stopped",
+  "wall_s": 60.04449199989904,
+  "limit_s": 60,
+  "cmd": "C:\\Users\\laubu\\AppData\\Local\\Programs\\Python\\Python313\\python.exe -B -c import site,sys,runpy; site.addsitedir('C:\\\\Users\\\\laubu\\\\.venvs\\\\aif-class3\\\\Lib\\\\site-packages'); sys.argv=['run.py', 'bench.growth_cell', '--version', 'A', '--n', '8000', '--out', 'C:\\\\Users\\\\laubu\\\\dev\\\\AIF-Lab\\\\AlgorithmsFinance\\\\Submissions\\\\BuehlerLaurin\\\\Class3\\\\03_results\\\\runs\\\\20261127T121436Z_279b029-dirty_fast_blocks12\\\\growth_direct_A_8000.json']; runpy.run_path('run.py',run_name='__main__')",
+  "log_tail": "exceeded declared limit of 60s"
+}

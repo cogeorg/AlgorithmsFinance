@@ -1,0 +1,7 @@
+{
+  "status": "stopped",
+  "wall_s": 60.02637910004705,
+  "limit_s": 60,
+  "cmd": "C:\\Users\\laubu\\.venvs\\aif-class3\\Scripts\\python.exe -B run.py bench.growth_cell --version A --n 8000 --out 03_results\\runs\\20261127T121436Z_279b029-dirty_fast_blocks12\\growth_A_8000.json",
+  "log_tail": "exceeded declared limit of 60s"
+}

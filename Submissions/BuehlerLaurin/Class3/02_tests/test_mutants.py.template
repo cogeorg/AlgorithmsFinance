@@ -1,0 +1,132 @@
+"""Template: mutation tests ("test the tests").
+
+Prioritise critical rules and plausible faults (typically 6-12 mutants), each
+breaking exactly one rule. A mutant must be runnable and must be killed by the
+check it names, for the intended reason (an AssertionError). A surviving mutant
+means a rule is untested: add a test, never delete the mutant.
+
+Pattern:
+- Contract checks are plain functions in 02_tests/contract.py: check_x(impl) -> None
+  (raise AssertionError on violation). 02_tests/test_contract.py runs them against
+  every real version; this file runs them against every mutant.
+- A mutant changes ONE behaviour of a correct version: a subclass that overrides one
+  method (stateful engine, BASE is a class) or a wrapper function that corrupts the
+  input or output in one way (pure function, BASE is a function). Chosen automatically.
+"""
+import functools
+import importlib
+import inspect
+
+import pytest
+
+import contract                            # 02_tests/contract.py (02_tests is on pythonpath)
+
+PKG = "amput"  # the scaffold replaces this with --pkg
+METHODS = importlib.import_module(PKG).METHODS  # registry of real versions
+
+# The version the mutants modify. None = the last registered version (the revision in an
+# A/B exercise, the only version in a one-version exercise). Set a key to choose explicitly.
+BASE_KEY = None
+BASE = METHODS[BASE_KEY] if BASE_KEY is not None else list(METHODS.values())[-1]
+
+CHECKS = [f for name, f in inspect.getmembers(contract, inspect.isfunction)
+          if name.startswith("check_")]
+
+
+# ---- mutants: prioritise critical rules and plausible faults (typically 6-12) ----------
+# Each mutant changes ONE behaviour and names the check that should catch it in
+# KILLED_BY. Only an AssertionError from a contract check counts as a kill. Any other
+# exception means the mutant (or the check) is broken: fix it instead of counting it.
+# A mutant is passed to the checks exactly like a real version (`check(impl)`), so it
+# must have the same shape as BASE: a class for a stateful engine, a function for a
+# pure function. The matching block below is used automatically; adapt its examples
+# (more ideas per profile in references/profile_*.md) and delete nothing else.
+
+
+def killed_by(check_name: str):
+    """Decorator for function mutants: records the check that must kill this mutant."""
+    def deco(f):
+        f.KILLED_BY = check_name
+        return f
+    return deco
+
+
+if inspect.isclass(BASE):
+    # ---- Profile: stateful engine (BASE is a class). A mutant subclasses BASE and
+    # overrides ONE method. Placeholder bodies behave like BASE and therefore fail as
+    # "not killed" until you add the override. Examples: order book.
+    class MutantLifoQueue(BASE):
+        """Breaks FIFO within a key: the newest item executes first."""
+        KILLED_BY = "check_fifo_within_price"
+
+    class MutantTakerPrice(BASE):
+        """Breaks 'execute at the resting price': uses the incoming limit price."""
+        KILLED_BY = "check_fill_at_maker_price"
+
+    class MutantCancelNoop(BASE):
+        """Breaks cancellation: reports 'cancelled' but leaves the item active."""
+        KILLED_BY = "check_cancel_removes_residual"
+
+    class MutantAcceptBool(BASE):
+        """Breaks validation: accepts True as a quantity."""
+        KILLED_BY = "check_rejects_bool"
+
+    MUTANTS = [MutantLifoQueue, MutantTakerPrice, MutantCancelNoop, MutantAcceptBool]
+
+else:
+    # ---- Profile: pure function (BASE is a callable). A mutant wraps BASE and corrupts
+    # its input or output in ONE way. Examples: membership search `f(a, x) -> bool`;
+    # adapt the signature and the faults to your function.
+    @killed_by("check_finds_last_element")
+    def mutant_skips_last(a, x):
+        """Off-by-one: never looks at the last element."""
+        return BASE(a[:-1], x)
+
+    @killed_by("check_input_not_mutated")
+    def mutant_sorts_input(a, x):
+        """Mutates the caller's list (a.sort() instead of sorted(a))."""
+        a.sort()
+        return BASE(a, x)
+
+    @killed_by("check_empty_input")
+    def mutant_wrong_on_empty(a, x):
+        """Wrong empty-input branch: reports 'found' for an empty list."""
+        return True if len(a) == 0 else BASE(a, x)
+
+    MUTANTS = [mutant_skips_last, mutant_sorts_input, mutant_wrong_on_empty]
+
+
+def _run(check, impl):
+    """Return 'pass', 'killed' (AssertionError) or 'error: <Type>' (anything else)."""
+    try:
+        check(impl)
+        return "pass"
+    except AssertionError:
+        return "killed"
+    except Exception as exc:  # noqa: BLE001 - reported, never counted as a kill
+        return f"error: {type(exc).__name__}: {exc}"
+
+
+@functools.lru_cache(maxsize=None)
+def _base_failures() -> tuple:
+    """Checks the UNMODIFIED base fails. Mutation analysis is only meaningful from a passing base."""
+    return tuple((c.__name__, o) for c in CHECKS if (o := _run(c, BASE)) != "pass")
+
+
+@pytest.mark.parametrize("mutant", MUTANTS, ids=lambda m: m.__name__)
+def test_mutant_killed_for_the_intended_reason(mutant):
+    if _base_failures():
+        pytest.fail(f"mutation analysis BLOCKED: the unmodified base {BASE.__name__} already fails "
+                    f"{dict(_base_failures())}. Fix the base first; no mutant result is valid until then.")
+    outcomes = {c.__name__: _run(c, mutant) for c in CHECKS}
+    errors = {k: v for k, v in outcomes.items() if v.startswith("error")}
+    assert not errors, f"{mutant.__name__} is not runnable / breaks the interface: {errors}"
+    assert outcomes.get(mutant.KILLED_BY) == "killed", (
+        f"{mutant.__name__} ({mutant.__doc__.strip()}) was not killed by {mutant.KILLED_BY}; "
+        f"outcomes: {outcomes}")
+
+
+def test_real_versions_pass_all_checks():
+    for key, impl in METHODS.items():
+        for check in CHECKS:
+            assert _run(check, impl) == "pass", (key, check.__name__)

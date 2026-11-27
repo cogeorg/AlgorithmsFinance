@@ -1,0 +1,362 @@
+[
+  {
+    "symbol": "AAVEUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "82700e460a5f3f4092cb34010ea2eb9f055bbcd32b9031896ef8f4f6a3f74d1f"
+  },
+  {
+    "symbol": "ADAUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "fd3f2cbbed7049f00d06b48ee02dce9079e2a14cd9bbaca3c49ac66f9e15b7cc"
+  },
+  {
+    "symbol": "ALGOUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "3b277dadd60458bae5c701596c91ae4077fceadb8bb9935777089765e233518b"
+  },
+  {
+    "symbol": "ATOMUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "2ad33f9a48084d53c2b2f34a4241d6403f765c456f9141e0e6af5a2b81940c55"
+  },
+  {
+    "symbol": "AVAXUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "8ede1147febb2b7d091f2a7f4771c5f63d35fc95c196cd7f0a87c9e57ce2e219"
+  },
+  {
+    "symbol": "AXSUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "2ef8044b1d3fa558e05727865049721b50c53eba66c25ecfc9621f40b2a52320"
+  },
+  {
+    "symbol": "BCHUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "c9c3e8235381c95bfbf12722e7b382da20510407091b83cd6845a2b4acfa3713"
+  },
+  {
+    "symbol": "BNBUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "3e3ce2da9ce3c50e001f985e0836098c24446478258ee6297d5ea1159424a467"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "78bef06514dd17b0dcb7a65625e40a63fe114a7d2809facd27888c13a4168f1e"
+  },
+  {
+    "symbol": "CHZUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "6325e7bd7032808fb766ecfcf59fa7cd9e1784b2b7aa978a865ffd033abdec2c"
+  },
+  {
+    "symbol": "COMPUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "512709c123085e0e87b0fe97cc4296781bd02213c3cb97b4aff38d3f208a31a1"
+  },
+  {
+    "symbol": "CRVUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "51378c7fb83adb9b25946674fa166d481911754390744dc59fc403d780ff1917"
+  },
+  {
+    "symbol": "DASHUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "d9733b4b2a50bd7b728f3c7f9d979882252bd5f3ef2e708fcd0a04777a04be8a"
+  },
+  {
+    "symbol": "DOGEUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "2eeae4edc3a2efc504ccd354fddb40d41f1368d9388de26f2db1742acdf20bb1"
+  },
+  {
+    "symbol": "DOTUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "aaa7a42e754e944e863a4a7d1c927627c7d6c60f4b9c2a2042f7c6b690db7eb9"
+  },
+  {
+    "symbol": "EGLDUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "636f5bc129c05b2c903166da49a9718d0c7120ea7155763c7061f25103055235"
+  },
+  {
+    "symbol": "ENJUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "b5da226c83e23a8c20180aaf89f7159bf16eacf6b92e2e1acd9750b26f9a6512"
+  },
+  {
+    "symbol": "ETCUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "822fc4f25953668fd53111c6348f7e67019082ecec19ed216f103ad488ad6780"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "4a017794f798391ca52deb0551f32884b4067f43409325b263e54a7fa1738e92"
+  },
+  {
+    "symbol": "FILUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "33d1e5438182ca94c5aae09cd8f3ea80b25633343e670fbfdcd3981650da6630"
+  },
+  {
+    "symbol": "GRTUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "b74d6f5f1fe83f7c4b2a31058eca04d080a2d96e514840023f3d15ea772af90f"
+  },
+  {
+    "symbol": "HBARUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "6e7fa941b19e3fcc7a303b179d76bd8e58ecbfbcb58d08e44d8ace6acaabf6ab"
+  },
+  {
+    "symbol": "ICPUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "c449f456fc32c2efb13f95bad062aeaaf965d74f30ba4138031a91670b1f7882"
+  },
+  {
+    "symbol": "LINKUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "11f8fbc3d0afdeb28a448b1a1481c6f7849244a498948f504de194d60fceefbc"
+  },
+  {
+    "symbol": "LTCUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "2478b1ced7bd4ede14c273d1bb191ee5f6aba7fd8b98cd71507e39822be3d90e"
+  },
+  {
+    "symbol": "MANAUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "61fb22c8d37c275263d37300b8ed13536bd406ec8e218a921856369c2ee5ba97"
+  },
+  {
+    "symbol": "NEARUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "756c5e46fe02e9cf59026c0222492e836cc6de1c28715ed22b0179aae933352f"
+  },
+  {
+    "symbol": "NEOUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "d3bdda2bad9f300d0e294995c5765da527cc4ba91e2db30fb7e35c17f9cfe763"
+  },
+  {
+    "symbol": "PAXGUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "534ca5bf1c15b88702082c77e022148c52941550f3f84b8fd35fb5cc9bd48d98"
+  },
+  {
+    "symbol": "SANDUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "ed1ede99803e0311c123bb10180293f4799853b19b98355b304fa12a1b204df3"
+  },
+  {
+    "symbol": "SNXUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "7fc71176966c80b1d0e836d820800fefd3aef9984349f963109a936882bd9482"
+  },
+  {
+    "symbol": "SOLUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "48e5ae217501054df4ec30f35ec1ed8cc4c21b496702ae5dc7b9aa3251493be0"
+  },
+  {
+    "symbol": "THETAUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "1944023e2ad119934188db68f3096eeff467b12d4d73463e16d582026c295bc4"
+  },
+  {
+    "symbol": "TRXUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "bfd16985c835d7cba32e293ea6495fdb48561fde95094d63a71a73c2d2311cf3"
+  },
+  {
+    "symbol": "UNIUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "55269e02a44e9cee032d6d7e64d5b5adb4257cdb17a8c54c8d59cf1fbf3104d7"
+  },
+  {
+    "symbol": "VETUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "5ec0d81b8e622c08142de48cf0e5fba5fbe0fcff56b0ed57d02fe324a333707f"
+  },
+  {
+    "symbol": "XLMUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "fd43fddbcf60498238150e700b38649d558207940d798d161750ad26c49c0810"
+  },
+  {
+    "symbol": "XRPUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "9120c6619b4f720b48e4f707d7963ce4915b0f42562b322bcb7f80b18871282d"
+  },
+  {
+    "symbol": "XTZUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "6c1914e1ad12ac99005ced85bbfac1f9983e0a07f2817eba808f065103175625"
+  },
+  {
+    "symbol": "ZECUSDT",
+    "rows": 43823,
+    "full_N": 43822,
+    "first_utc": "2021-11-01T00:00:00Z",
+    "last_utc": "2026-10-31T23:00:00Z",
+    "missing_hours": 1,
+    "sha256": "5c57ed3f9ff8a7b68741116c36dad49122124c52deef48ae86a46e842185275c"
+  }
+]

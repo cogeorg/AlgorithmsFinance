@@ -1,0 +1,7 @@
+{
+  "status": "ok",
+  "wall_s": 1.5588073999388143,
+  "limit_s": 60,
+  "cmd": "C:\\Users\\laubu\\AppData\\Local\\Programs\\Python\\Python313\\python.exe -B -c import site,sys,runpy; site.addsitedir('C:\\\\Users\\\\laubu\\\\.venvs\\\\aif-class3\\\\Lib\\\\site-packages'); sys.argv=['run.py', 'bench.growth_cell', '--version', 'B', '--n', '4000', '--out', 'C:\\\\Users\\\\laubu\\\\dev\\\\AIF-Lab\\\\AlgorithmsFinance\\\\Submissions\\\\BuehlerLaurin\\\\Class3\\\\03_results\\\\runs\\\\20261127T121436Z_279b029-dirty_fast_blocks12\\\\growth_direct_B_4000.json']; runpy.run_path('run.py',run_name='__main__')",
+  "log_tail": "B N=4000: median=0.179322s\n"
+}

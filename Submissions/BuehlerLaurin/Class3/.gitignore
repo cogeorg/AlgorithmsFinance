@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.hypothesis/
+.venv/
+# large or regenerable data: commit generation commands + sha256 instead
+06_data/generated/
+*.jsonl.gz
+# keep the supplied sample files (copy the course package's samples into 06_data/supplied/)
+!06_data/supplied/*.jsonl.gz
+# exploratory output
+scratch/
+03_results/runs/*_quick/
+# Regenerable all-asset boundaries: keep manifests and BTC boundaries in git.
+03_results/runs/*/ALL1y_B_boundaries/
+03_results/runs/*/ALL5y_B_boundaries/
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

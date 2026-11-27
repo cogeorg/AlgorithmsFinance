@@ -1,0 +1,7 @@
+# Preserve measured source bytes so source_sha256.json matches Git blobs exactly.
+# These rules are local to this submission and do not rewrite any file.
+01_code/** -text
+02_tests/** -text
+03_results/runs/**/source_snapshot/** -text
+03_results/runs/**/SPEC_at_measurement.md -text
+03_results/runs/**/B_INITIAL_SOURCE.py.txt -text

@@ -1,0 +1,19 @@
+label: tests-green-A
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B -m pytest -q --basetemp=scratch/pytest-green-a2
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 279b029ce1a162a089c10665c6d493bc4236841c
+dirty: True
+python: 3.13.15
+utc: 20261127T120236Z
+exit_code: 4
+duration_s: 0.64
+------------------------------------------------------------
+ImportError while loading conftest 'C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3\02_tests\conftest.py'.
+02_tests\conftest.py:7: in <module>
+    from amput import METHODS
+01_code\amput\__init__.py:5: in <module>
+    from .a import price_with_boundary
+E     File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3\01_code\amput\a.py", line 43
+E       S[j]=S0 if offset==0 else (math.inf if z>LOG_MAX else (0.0 if z<LOG_MIN else (S0*math.exp(offset) if LOG_MIN<=offset<=LOG_MAX else math.exp(z)))))
+E                                                                                                                                                        ^
+E   SyntaxError: unmatched ')'

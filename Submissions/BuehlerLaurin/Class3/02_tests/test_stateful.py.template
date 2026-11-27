@@ -1,0 +1,155 @@
+"""Template: stateful differential test with Hypothesis (adapt names to the exercise).
+
+Runs random sequences of operations against Version A and Version B at the same time,
+compares every result and the canonical snapshot, and checks the invariants after
+every step. Hypothesis shrinks a failure to a minimal sequence of operations.
+
+NOTE: if A and B share one validation module, this differential check cannot catch
+validation bugs (both are wrong the same way). The invalid-event rules below therefore
+assert the expected outcome ("rejected", state unchanged) directly, and every
+validation rule also needs its own contract test and mutant.
+
+Assumed interface (rename to match SPEC.md):
+    book.process(event: dict) -> dict      # result incl. ordered fills and "status"
+    book.snapshot() -> list[tuple]         # canonical sorted state
+    book.check_invariants() -> None        # raises AssertionError
+    live_ids(book) -> list[str]            # ADAPTER below: must be filled in, never skipped
+
+Requires two versions (A and B). For a one-version exercise use the contract suite and
+a plain Hypothesis test against an oracle instead (the scaffold omits this file with --versions 1).
+"""
+from hypothesis import settings, strategies as st
+from hypothesis.stateful import RuleBasedStateMachine, invariant, precondition, rule
+
+import importlib
+
+PKG = "amput"  # the scaffold replaces this with --pkg
+METHODS = importlib.import_module(PKG).METHODS  # registry from 01_code/<pkg>/__init__.py
+
+A_CLS = METHODS[("baseline", "A")]
+B_CLS = METHODS[("fast", "B")]
+
+def live_ids(book) -> list[str]:
+    """ADAPTER (required): the order ids currently resting in `book`.
+
+    Adapt to your snapshot format, e.g. `[row[0] for row in book.snapshot()]`. It raises
+    until adapted, so the duplicate-live-id rule can never be skipped silently.
+    """
+    if hasattr(book, "live_ids"):
+        return list(book.live_ids())
+    raise NotImplementedError("adapt live_ids() in this test file to your snapshot format")
+
+
+PRICES = st.integers(min_value=95, max_value=105)      # narrow -> crossings and long queues
+QTY = st.integers(min_value=1, max_value=5)            # small -> partial fills
+
+
+class DifferentialMachine(RuleBasedStateMachine):
+    def __init__(self):
+        super().__init__()
+        self.a, self.b = A_CLS(), B_CLS()
+        self.seq = 0
+        self.ids: list[str] = []
+
+    def _send(self, event: dict) -> dict:
+        ra, rb = self.a.process(dict(event)), self.b.process(dict(event))
+        assert ra == rb, f"results differ for {event}:\nA={ra}\nB={rb}"
+        assert self.a.snapshot() == self.b.snapshot(), f"books differ after {event}"
+        return ra
+
+    def _next(self) -> int:
+        self.seq += 1
+        return self.seq
+
+    @rule(side=st.sampled_from(["BUY", "SELL"]), price=PRICES, qty=QTY)
+    def limit(self, side, price, qty):
+        s = self._next(); oid = f"o{s}"; self.ids.append(oid)
+        self._send({"seq": s, "event_id": f"e{s}", "type": "LIMIT", "order_id": oid,
+                    "side": side, "price_ticks": price, "qty_units": qty})
+
+    @rule(qty=st.integers(min_value=1, max_value=20))
+    def market_sell(self, qty):
+        s = self._next()
+        self._send({"seq": s, "event_id": f"e{s}", "type": "MARKET_SELL",
+                    "order_id": f"m{s}", "qty_units": qty})
+
+    @precondition(lambda self: self.ids)
+    @rule(data=st.data())
+    def cancel(self, data):
+        s = self._next()
+        target = data.draw(st.sampled_from(self.ids + ["unknown"]))
+        self._send({"seq": s, "event_id": f"e{s}", "type": "CANCEL", "target_order_id": target})
+
+    # ---- invalid events: each must be rejected by BOTH versions without changing state.
+    # They reuse the current seq number and do not advance self.seq, because rejected
+    # events must not advance the last accepted sequence.
+    def _reject(self, event: dict) -> None:
+        before_a, before_b = self.a.snapshot(), self.b.snapshot()
+        ra, rb = self.a.process(dict(event)), self.b.process(dict(event))
+        assert ra == rb, f"results differ for invalid {event}:\nA={ra}\nB={rb}"
+        assert ra.get("status") == "rejected", f"not rejected: {event} -> {ra}"
+        assert self.a.snapshot() == before_a and self.b.snapshot() == before_b, f"state changed by {event}"
+
+    @rule(field=st.sampled_from(["price_ticks", "qty_units"]),
+          bad=st.sampled_from([0, -1, 1.5, True, False, "7", None]))
+    def invalid_number(self, field, bad):
+        s = self.seq + 1
+        ev = {"seq": s, "event_id": f"bad{s}", "type": "LIMIT", "order_id": f"x{s}",
+              "side": "BUY", "price_ticks": 100, "qty_units": 1}
+        ev[field] = bad
+        self._reject(ev)
+
+    @rule(side=st.sampled_from(["buy", "HOLD", "", None]))
+    def invalid_side(self, side):
+        s = self.seq + 1
+        self._reject({"seq": s, "event_id": f"bad{s}", "type": "LIMIT", "order_id": f"x{s}",
+                      "side": side, "price_ticks": 100, "qty_units": 1})
+
+    @rule(kind=st.sampled_from(["MARKET_BUY", "limit", "", None]))
+    def invalid_type(self, kind):
+        s = self.seq + 1
+        self._reject({"seq": s, "event_id": f"bad{s}", "type": kind, "order_id": f"x{s}",
+                      "side": "BUY", "price_ticks": 100, "qty_units": 1})
+
+    @precondition(lambda self: self.seq > 0)
+    @rule(back=st.integers(min_value=0, max_value=3))
+    def non_increasing_seq(self, back):
+        s = max(1, self.seq - back)          # equal to or smaller than the last accepted seq
+        self._reject({"seq": s, "event_id": f"bad{s}-{back}", "type": "LIMIT", "order_id": f"y{s}-{back}",
+                      "side": "SELL", "price_ticks": 100, "qty_units": 1})
+
+    @precondition(lambda self: self.ids)
+    @rule(data=st.data())
+    def duplicate_live_id(self, data):
+        live = live_ids(self.a)
+        assert sorted(live) == sorted(live_ids(self.b)), "live id sets differ between A and B"
+        if not live:
+            return                            # book is empty right now: no live id to duplicate
+        s = self.seq + 1
+        self._reject({"seq": s, "event_id": f"dup{s}", "type": "LIMIT",
+                      "order_id": data.draw(st.sampled_from(live)),
+                      "side": "BUY", "price_ticks": 100, "qty_units": 1})
+
+    @precondition(lambda self: self.ids)
+    @rule(data=st.data())
+    def cancel_twice(self, data):
+        """Second cancel of the same target (also hits filled targets) must be not_found.
+
+        Asserted directly, not only A == B: a semantic error shared by both versions
+        (e.g. both report 'cancelled' twice) would pass a pure differential check.
+        """
+        target = data.draw(st.sampled_from(self.ids))
+        for k in range(2):
+            s = self._next()
+            r = self._send({"seq": s, "event_id": f"e{s}", "type": "CANCEL", "target_order_id": target})
+            if k == 1:
+                assert r.get("status") == "not_found", f"second cancel of {target} -> {r}"
+                assert target not in live_ids(self.a), f"{target} still live after two cancels"
+
+    @invariant()
+    def invariants_hold(self):
+        self.a.check_invariants(); self.b.check_invariants()
+
+
+TestDifferential = DifferentialMachine.TestCase
+TestDifferential.settings = settings(max_examples=300, stateful_step_count=60, deadline=None)
