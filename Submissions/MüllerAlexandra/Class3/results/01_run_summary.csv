@@ -1,0 +1,4 @@
+run_label,requested_periods,asset_count,min_periods,max_periods,seconds,peak_bytes,peak_mib
+btc_one_year,8760,1,8760,8760,0.326341,3947276,3.764416
+all_40_one_year,8760,40,8760,8760,15.384043,3965041,3.781358
+all_40_full_history,all,40,43822,43822,421.225151,7473250,7.127047

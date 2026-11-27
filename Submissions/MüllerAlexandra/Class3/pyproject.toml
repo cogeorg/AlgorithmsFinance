@@ -1,0 +1,14 @@
+[project]
+name = "alexandra-mueller-class3"
+version = "1.0.0"
+requires-python = ">=3.10"
+dependencies = ["numpy>=2.0,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
