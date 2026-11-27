@@ -1,0 +1,22 @@
+{
+  "batches": [
+    {
+      "batch": "results/all_assets_v1/1y",
+      "status": "verified",
+      "assets": 40,
+      "horizon": "1y",
+      "batch_sha256": "184f7fd098480ca39c981a3166ace86e30720f7a79bdb2424f1a013a3f00cefa"
+    },
+    {
+      "batch": "results/all_assets_v1/full",
+      "status": "verified",
+      "assets": 40,
+      "horizon": "full",
+      "batch_sha256": "ea6f944b624d1830636cefa3f1bd48cff101dee86a79a3db0f8d5c62337643d4"
+    }
+  ],
+  "source_sha256": {
+    "verify_assets.py": "f6ae12fc1212babbd8ab66b4a050d6bb7442784c2c72a7f36283399b2b4d20ef",
+    "verify_results.py": "be6d73f8f9b7ab0888fc89837d4853bed951fe0450c96c30aa437bcf8200f7f2"
+  }
+}

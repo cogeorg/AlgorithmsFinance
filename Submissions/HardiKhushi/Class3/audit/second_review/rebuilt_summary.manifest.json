@@ -1,0 +1,11 @@
+{
+  "rows": 4,
+  "run_sha256": {
+    "results/audit_v1/bitcoin_1y_numpy/result.json": "cbd9b43afc7679b2ba8864ccc0fd9201b8f06b14e77bb58b3a4a20d58defd09b",
+    "results/audit_v1/bitcoin_full_numpy/result.json": "9f6ff0c6a92a05a5ad78c6f599844bc9ded4ff35f4e389eb7ca63b126dbbedaf",
+    "results/all_assets_v1/1y/batch.json": "184f7fd098480ca39c981a3166ace86e30720f7a79bdb2424f1a013a3f00cefa",
+    "results/all_assets_v1/full/batch.json": "ea6f944b624d1830636cefa3f1bd48cff101dee86a79a3db0f8d5c62337643d4"
+  },
+  "summary_sha256": "445a7fb31efcd18f7c26a865425b610590088035d0c79bc6bf8d0f967f134af2",
+  "builder_sha256": "f27043485644d664e07ddc2be80d841b0285cc0e40c672f0fdf1bec571f22d14"
+}

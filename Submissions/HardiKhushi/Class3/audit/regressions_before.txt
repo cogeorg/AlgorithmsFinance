@@ -1,0 +1,125 @@
+test_boundary_is_invariant_to_currency_scale (test_audit_regressions.AuditRegressions.test_boundary_is_invariant_to_currency_scale) ... 
+  test_boundary_is_invariant_to_currency_scale (test_audit_regressions.AuditRegressions.test_boundary_is_invariant_to_currency_scale) (engine='price_american_put', scale=1e-15) ... FAIL
+  test_boundary_is_invariant_to_currency_scale (test_audit_regressions.AuditRegressions.test_boundary_is_invariant_to_currency_scale) (engine='price_american_put_numpy', scale=1e-15) ... FAIL
+test_calibration_reports_extreme_returns_as_value_error (test_audit_regressions.AuditRegressions.test_calibration_reports_extreme_returns_as_value_error) ... ok
+test_negative_rate_near_indifference_does_not_trigger_exercise (test_audit_regressions.AuditRegressions.test_negative_rate_near_indifference_does_not_trigger_exercise) ... 
+  test_negative_rate_near_indifference_does_not_trigger_exercise (test_audit_regressions.AuditRegressions.test_negative_rate_near_indifference_does_not_trigger_exercise) (engine='price_american_put') ... FAIL
+  test_negative_rate_near_indifference_does_not_trigger_exercise (test_audit_regressions.AuditRegressions.test_negative_rate_near_indifference_does_not_trigger_exercise) (engine='price_american_put_numpy') ... FAIL
+test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node (test_audit_regressions.AuditRegressions.test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node) ... 
+  test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node (test_audit_regressions.AuditRegressions.test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node) (engine='price_american_put') ... FAIL
+  test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node (test_audit_regressions.AuditRegressions.test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node) (engine='price_american_put_numpy') ... FAIL
+test_rejects_misaligned_price_window (test_audit_regressions.AuditRegressions.test_rejects_misaligned_price_window) ... FAIL
+test_runner_labels_the_actual_asset (test_audit_regressions.AuditRegressions.test_runner_labels_the_actual_asset) ... FAIL
+test_safe_nodes_do_not_overflow_during_initialization (test_audit_regressions.AuditRegressions.test_safe_nodes_do_not_overflow_during_initialization) ... 
+  test_safe_nodes_do_not_overflow_during_initialization (test_audit_regressions.AuditRegressions.test_safe_nodes_do_not_overflow_during_initialization) (engine='price_american_put') ... FAIL
+  test_safe_nodes_do_not_overflow_during_initialization (test_audit_regressions.AuditRegressions.test_safe_nodes_do_not_overflow_during_initialization) (engine='price_american_put_numpy') ... FAIL
+test_unsafe_run_does_not_leave_a_results_directory (test_audit_regressions.AuditRegressions.test_unsafe_run_does_not_leave_a_results_directory) ... FAIL
+
+======================================================================
+FAIL: test_boundary_is_invariant_to_currency_scale (test_audit_regressions.AuditRegressions.test_boundary_is_invariant_to_currency_scale) (engine='price_american_put', scale=1e-15)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_audit_regressions.py", line 29, in test_boundary_is_invariant_to_currency_scale
+    self.assertAlmostEqual(boundary[2] / scale, 96, places=10)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 64.00000000000001 != 96 within 10 places (31.999999999999986 difference)
+
+======================================================================
+FAIL: test_boundary_is_invariant_to_currency_scale (test_audit_regressions.AuditRegressions.test_boundary_is_invariant_to_currency_scale) (engine='price_american_put_numpy', scale=1e-15)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_audit_regressions.py", line 29, in test_boundary_is_invariant_to_currency_scale
+    self.assertAlmostEqual(boundary[2] / scale, 96, places=10)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 64.00000000000001 != 96 within 10 places (31.999999999999986 difference)
+
+======================================================================
+FAIL: test_negative_rate_near_indifference_does_not_trigger_exercise (test_audit_regressions.AuditRegressions.test_negative_rate_near_indifference_does_not_trigger_exercise) (engine='price_american_put')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_audit_regressions.py", line 36, in test_negative_rate_near_indifference_does_not_trigger_exercise
+    self.assertIsNone(boundary[0])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 80.0 is not None
+
+======================================================================
+FAIL: test_negative_rate_near_indifference_does_not_trigger_exercise (test_audit_regressions.AuditRegressions.test_negative_rate_near_indifference_does_not_trigger_exercise) (engine='price_american_put_numpy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_audit_regressions.py", line 36, in test_negative_rate_near_indifference_does_not_trigger_exercise
+    self.assertIsNone(boundary[0])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 80.0 is not None
+
+======================================================================
+FAIL: test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node (test_audit_regressions.AuditRegressions.test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node) (engine='price_american_put')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_audit_regressions.py", line 49, in test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node
+    self.assertAlmostEqual(boundary[-1], 100 / up**2, places=10)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 99.99999999999928 != 99.40179640539353 within 10 places (0.5982035946057493 difference)
+
+======================================================================
+FAIL: test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node (test_audit_regressions.AuditRegressions.test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node) (engine='price_american_put_numpy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_audit_regressions.py", line 49, in test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node
+    self.assertAlmostEqual(boundary[-1], 100 / up**2, places=10)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 99.99999999999928 != 99.40179640539353 within 10 places (0.5982035946057493 difference)
+
+======================================================================
+FAIL: test_rejects_misaligned_price_window (test_audit_regressions.AuditRegressions.test_rejects_misaligned_price_window)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_audit_regressions.py", line 53, in test_rejects_misaligned_price_window
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_runner_labels_the_actual_asset (test_audit_regressions.AuditRegressions.test_runner_labels_the_actual_asset)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_audit_regressions.py", line 71, in test_runner_labels_the_actual_asset
+    self.assertEqual(result['asset'], 'ETHUSDT')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'BTCUSDT' != 'ETHUSDT'
+- BTCUSDT
+? ^ ^
++ ETHUSDT
+? ^ ^
+
+
+======================================================================
+FAIL: test_safe_nodes_do_not_overflow_during_initialization (test_audit_regressions.AuditRegressions.test_safe_nodes_do_not_overflow_during_initialization) (engine='price_american_put')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_audit_regressions.py", line 42, in test_safe_nodes_do_not_overflow_during_initialization
+    self.assertAlmostEqual(boundary[-1] / 1e307, 1.0, places=12)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.9 != 1.0 within 12 places (0.09999999999999998 difference)
+
+======================================================================
+FAIL: test_safe_nodes_do_not_overflow_during_initialization (test_audit_regressions.AuditRegressions.test_safe_nodes_do_not_overflow_during_initialization) (engine='price_american_put_numpy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_audit_regressions.py", line 42, in test_safe_nodes_do_not_overflow_during_initialization
+    self.assertAlmostEqual(boundary[-1] / 1e307, 1.0, places=12)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.9 != 1.0 within 12 places (0.09999999999999998 difference)
+
+======================================================================
+FAIL: test_unsafe_run_does_not_leave_a_results_directory (test_audit_regressions.AuditRegressions.test_unsafe_run_does_not_leave_a_results_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_audit_regressions.py", line 84, in test_unsafe_run_does_not_leave_a_results_directory
+    with redirect_stdout(StringIO()), self.assertRaises(ValueError):
+                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.054s
+
+FAILED (failures=11)

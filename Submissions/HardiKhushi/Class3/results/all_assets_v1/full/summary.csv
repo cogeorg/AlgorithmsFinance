@@ -1,0 +1,2 @@
+horizon,engine,output,N_min,N_max,assets,seconds,peak_traced_bytes
+full,numpy,prices_only,43822,43822,40,121.11406991584226,2546590

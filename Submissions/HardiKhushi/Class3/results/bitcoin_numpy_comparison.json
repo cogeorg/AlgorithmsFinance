@@ -1,0 +1,20 @@
+{
+  "one_year_price_exactly_equal": true,
+  "one_year_boundary_csv_byte_identical": true,
+  "full_file_boundary_rows_verified": 43823,
+  "numpy_version": "2.5.3",
+  "full_to_one_year_numpy_time_ratio": 18.499938902598867,
+  "full_to_one_year_numpy_peak_ratio": 4.9378077489710055,
+  "numpy_buffer_tracing_probe": {
+    "float64_elements": 100000,
+    "buffer_bytes": 800000,
+    "observed_peak_traced_bytes": 800496,
+    "buffers_included": true
+  },
+  "result_json_sha256": {
+    "bitcoin_1y": "95b652bd42615ab6ffc39ddc621e22345ce59b683754132d8ff27399cdfb81d3",
+    "bitcoin_1y_numpy": "aba1127a904be44e99bf3d008162477b1d7d1a9e2e6f0b564ed4b78fa381a47b",
+    "bitcoin_full_numpy": "cb09ef2c122d43ed11cd383b10ad14585a85c34ef65a4fb2deba793f77abde3c"
+  },
+  "comparison_csv_sha256": "2ace9e6c1a44d5f621ac7f3865c1e2a39c3e6b91630942ea3643792486a547e0"
+}

@@ -1,0 +1,77 @@
+{
+  "runs": [
+    {
+      "run": "results/audit_v1/bitcoin_1y_numpy",
+      "status": "verified",
+      "N": 8760,
+      "rows_checked": 8761,
+      "result_sha256": "cbd9b43afc7679b2ba8864ccc0fd9201b8f06b14e77bb58b3a4a20d58defd09b",
+      "verified_sources": {
+        "run_bitcoin.py": "run_bitcoin.py",
+        "price_american_put.py": "price_american_put.py",
+        "price_american_put_numpy.py": "price_american_put_numpy.py",
+        "tree_model.py": "tree_model.py",
+        "market_data.py": "market_data.py",
+        "exercise.py": "exercise.py"
+      }
+    },
+    {
+      "run": "results/audit_v1/bitcoin_full_numpy",
+      "status": "verified",
+      "N": 43822,
+      "rows_checked": 43823,
+      "result_sha256": "9f6ff0c6a92a05a5ad78c6f599844bc9ded4ff35f4e389eb7ca63b126dbbedaf",
+      "verified_sources": {
+        "run_bitcoin.py": "run_bitcoin.py",
+        "price_american_put.py": "price_american_put.py",
+        "price_american_put_numpy.py": "price_american_put_numpy.py",
+        "tree_model.py": "tree_model.py",
+        "market_data.py": "market_data.py",
+        "exercise.py": "exercise.py"
+      }
+    },
+    {
+      "run": "results/bitcoin_1y",
+      "status": "verified",
+      "N": 8760,
+      "rows_checked": 8761,
+      "result_sha256": "95b652bd42615ab6ffc39ddc621e22345ce59b683754132d8ff27399cdfb81d3",
+      "verified_sources": {
+        "run_bitcoin.py": "versions/step3/run_bitcoin.py",
+        "price_american_put.py": "versions/pre_audit/price_american_put.py",
+        "market_data.py": "versions/pre_audit/market_data.py",
+        "exercise.py": "exercise.py"
+      }
+    },
+    {
+      "run": "results/bitcoin_1y_numpy",
+      "status": "verified",
+      "N": 8760,
+      "rows_checked": 8761,
+      "result_sha256": "aba1127a904be44e99bf3d008162477b1d7d1a9e2e6f0b564ed4b78fa381a47b",
+      "verified_sources": {
+        "run_bitcoin.py": "versions/pre_audit/run_bitcoin.py",
+        "price_american_put.py": "versions/pre_audit/price_american_put.py",
+        "price_american_put_numpy.py": "versions/pre_audit/price_american_put_numpy.py",
+        "market_data.py": "versions/pre_audit/market_data.py",
+        "exercise.py": "exercise.py"
+      }
+    },
+    {
+      "run": "results/bitcoin_full_numpy",
+      "status": "verified",
+      "N": 43822,
+      "rows_checked": 43823,
+      "result_sha256": "cb09ef2c122d43ed11cd383b10ad14585a85c34ef65a4fb2deba793f77abde3c",
+      "verified_sources": {
+        "run_bitcoin.py": "versions/pre_audit/run_bitcoin.py",
+        "price_american_put.py": "versions/pre_audit/price_american_put.py",
+        "price_american_put_numpy.py": "versions/pre_audit/price_american_put_numpy.py",
+        "market_data.py": "versions/pre_audit/market_data.py",
+        "exercise.py": "exercise.py"
+      }
+    }
+  ],
+  "verifier_sha256": "be6d73f8f9b7ab0888fc89837d4853bed951fe0450c96c30aa437bcf8200f7f2",
+  "limit": "checks saved evidence consistency and lattice membership; independent numerical policy checks are separate"
+}

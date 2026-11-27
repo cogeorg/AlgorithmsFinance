@@ -1,0 +1,4 @@
+* -text
+*.csv whitespace=cr-at-eol
+audit/**/*.txt -whitespace
+versions/** -whitespace

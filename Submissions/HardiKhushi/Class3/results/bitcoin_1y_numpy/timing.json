@@ -1,0 +1,14 @@
+{
+  "seconds": 0.1176721251104027,
+  "put_value": 16713.71420875558,
+  "first_exercise": {
+    "t": 5127,
+    "timestamp_utc": "2026-06-02T14:00:00+00:00",
+    "observed_price": 68019.3,
+    "boundary": 68193.46617088698,
+    "payoff": 41588.70999999999,
+    "at_expiry": false
+  },
+  "repeats": 1,
+  "tracing_enabled": false
+}

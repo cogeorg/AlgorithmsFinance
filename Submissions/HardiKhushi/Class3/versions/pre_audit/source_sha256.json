@@ -1,0 +1,17 @@
+{
+  "AGENTS.md": "9a38789296acd947e54bce9e5b1cc51a0878862bfa72374db2c0c577bd9e319e",
+  "AI_USAGE.md": "e202b0ed87ad7921dc3971f5d608719c8d3990e7c767eb1e59083fb3f09f2ff3",
+  "PROGRESS.md": "c0e52afece707bb4f9e428996ca5593c437f4811e1bece02febcb62fb3e2c9ae",
+  "README.md": "034da4131b7ae3b698031394e1efffd50820edc39353f10a3aee3c710c8dddb0",
+  "exercise.py": "28f56befbf2a11a78ccc00b2bf992acad6b582eec39f3468de1b68c7654e1462",
+  "market_data.py": "5eac1ad9c984e825b0c5a964b5c43b00ca3dce5dd16552f72b26e8fd4ccedb05",
+  "price_american_put.py": "5c1ce28abfefb5c06553355c3fd5c18d27261eb33c0a8dd440c2fd65cf91f351",
+  "price_american_put_numpy.py": "b490ea5bc2ad644c665009a1de620b0f19062aed4a9f0881bbc3ce65d2dfe202",
+  "price_american_put_original.py": "ce546f06475744713ce857c28e56d06ea162c79dd6f15f790acfca57b007bec7",
+  "requirements.txt": "23bf63c77db7c14b9e04f686f9cb9c319c5067d5e6935299b6dcb1ca521f4a7d",
+  "run_bitcoin.py": "d4c1df115189036ffb89e50e62277362837d303c6de9b47ebf436ef0e173da37",
+  "test_exercise.py": "375564e67b062a5aeae83a86b33e583d1472d964e087c49a4158183bf7191d26",
+  "test_market_data.py": "41a520237dca43a87131235deee8b6fe87dadcdda4eb162a1fac2a5c7e8c7d55",
+  "test_numpy_pricer.py": "83215387e2b6352b7c8f4aff315969a380cc5bcb7f543bee68f1cf94e5e10620",
+  "test_price_american_put.py": "73c3d1fc2be987766d0f456a56135824d0de6ad5eeef00b63d862451534d94dc"
+}

@@ -1,0 +1,31 @@
+{
+  "stage": "calibration only; no option pricing or benchmark",
+  "source": "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Class3/data/hourly/BTCUSDT.csv",
+  "source_sha256": "2262b9e97986e964107c9d59085d4403ef90ea63ffa58ba73df3740587b59df6",
+  "source_rows": 43823,
+  "selected_prices": 43823,
+  "start_utc": "2021-11-01T00:00:00+00:00",
+  "end_utc": "2026-10-31T23:00:00+00:00",
+  "final_close": 77582.02,
+  "non_hourly_intervals": 1,
+  "missing_hours": 1,
+  "maximum_interval_hours": 2.0,
+  "day_count": "Actual/365 Fixed (elapsed UTC seconds / 31536000)",
+  "volatility_convention": "sample standard deviation of log returns; denominator N-1",
+  "gap_policy": "no filling; one observed return per step; use actual elapsed T",
+  "model": {
+    "spot": 61560.49,
+    "strike": 61560.49,
+    "steps": 43822,
+    "mean_log_return": 5.278522903070096e-06,
+    "log_return_std": 0.005396058959060922,
+    "annual_rate": 0.04,
+    "years": 5.002625570776256,
+    "up": 1.0054106439071515,
+    "down": 0.9946184736157904,
+    "gross_rate": 1.0000045663246704,
+    "probability_up": 0.49907410312005984
+  },
+  "python": "3.14.7",
+  "source_code_sha256": "5eac1ad9c984e825b0c5a964b5c43b00ca3dce5dd16552f72b26e8fd4ccedb05"
+}

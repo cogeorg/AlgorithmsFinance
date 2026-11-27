@@ -1,0 +1,5 @@
+horizon,asset_group,assets,engine,output,N_min,N_max,seconds,peak_traced_bytes,peak_traced_MiB
+1y,BTCUSDT,1,numpy,price_and_boundary,8760,8760,0.19041320797987282,729674,0.6958713531494141
+full,BTCUSDT,1,numpy,price_and_boundary,43822,43822,3.846327875042334,3602862,3.4359569549560547
+1y,all_40_supplied,40,numpy,prices_only,8760,8760,5.862296290928498,512994,0.4892292022705078
+full,all_40_supplied,40,numpy,prices_only,43822,43822,121.11406991584226,2546590,2.428617477416992

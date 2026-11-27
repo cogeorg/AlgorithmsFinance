@@ -1,0 +1,20 @@
+[
+  {
+    "run": "bitcoin_1y_numpy",
+    "reference_price": 16713.714208755886,
+    "saved_price": 16713.71420875558,
+    "price_difference": 3.055902197957039e-10,
+    "reference_first_crossing_t": 5127,
+    "saved_first_crossing_t": 5127,
+    "seconds": 0.21435216697864234
+  },
+  {
+    "run": "bitcoin_full_numpy",
+    "reference_price": 20716.754071254058,
+    "saved_price": 20716.75407125397,
+    "price_difference": 8.731149137020111e-11,
+    "reference_first_crossing_t": 5502,
+    "saved_first_crossing_t": 5502,
+    "seconds": 4.327256832970306
+  }
+]

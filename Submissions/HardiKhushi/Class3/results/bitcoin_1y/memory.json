@@ -1,0 +1,7 @@
+{
+  "current_traced_bytes": 280656,
+  "peak_traced_bytes": 739464,
+  "instrumented_call_seconds": 138.2408365001902,
+  "repeats": 1,
+  "agrees_with_timing_call": true
+}

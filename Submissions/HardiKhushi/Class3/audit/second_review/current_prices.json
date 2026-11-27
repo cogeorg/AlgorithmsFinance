@@ -1,0 +1,750 @@
+{
+  "status": "verified",
+  "cases_checked": 80,
+  "cases": [
+    {
+      "horizon": "1y",
+      "asset": "AAVEUSDT",
+      "N": 8760,
+      "put_value": 68.98398516068578,
+      "saved_value": 68.98398516068578,
+      "exactly_equal": true,
+      "data_sha256": "ba0d75786442cacfe7cc6a20e1b8ec574ca5db4db99f02e84f4670c42ef249c9"
+    },
+    {
+      "horizon": "1y",
+      "asset": "ADAUSDT",
+      "N": 8760,
+      "put_value": 0.1679647514709791,
+      "saved_value": 0.1679647514709791,
+      "exactly_equal": true,
+      "data_sha256": "e7def1a543814775760df23d00be773ccff912c56d2dfcba751f4b31224478e3"
+    },
+    {
+      "horizon": "1y",
+      "asset": "ALGOUSDT",
+      "N": 8760,
+      "put_value": 0.051989932547284776,
+      "saved_value": 0.051989932547284776,
+      "exactly_equal": true,
+      "data_sha256": "9b1572c0f74069aa43a7a5b8d28659d2766e426edba07f6da41f3b1f36902d76"
+    },
+    {
+      "horizon": "1y",
+      "asset": "ATOMUSDT",
+      "N": 8760,
+      "put_value": 0.7757243174307636,
+      "saved_value": 0.7757243174307636,
+      "exactly_equal": true,
+      "data_sha256": "d91a11568e1aa21c80b3b529eda1b46b50cbf7ff26bd2c72b530f0ed0345771f"
+    },
+    {
+      "horizon": "1y",
+      "asset": "AVAXUSDT",
+      "N": 8760,
+      "put_value": 4.737658358480734,
+      "saved_value": 4.737658358480734,
+      "exactly_equal": true,
+      "data_sha256": "17a2c056046641148325e47afabe5fc4895df29ea152aca1ac6625f9f5b94135"
+    },
+    {
+      "horizon": "1y",
+      "asset": "AXSUSDT",
+      "N": 8760,
+      "put_value": 0.5573189717394836,
+      "saved_value": 0.5573189717394836,
+      "exactly_equal": true,
+      "data_sha256": "6905084552221986b65cc515f4b58b8dcfa9ca1d6166f88598444954f9e46724"
+    },
+    {
+      "horizon": "1y",
+      "asset": "BCHUSDT",
+      "N": 8760,
+      "put_value": 138.81449418893428,
+      "saved_value": 138.81449418893428,
+      "exactly_equal": true,
+      "data_sha256": "df16c1860150ee8741fd0a939b079cb4e2ff84c40d792983e6a3ee1cb4cc572c"
+    },
+    {
+      "horizon": "1y",
+      "asset": "BNBUSDT",
+      "N": 8760,
+      "put_value": 172.7020671503625,
+      "saved_value": 172.7020671503625,
+      "exactly_equal": true,
+      "data_sha256": "b7e2abd563157f246aeff732574833a9614a8db6d984a01ace8d58c0ca0b3db3"
+    },
+    {
+      "horizon": "1y",
+      "asset": "BTCUSDT",
+      "N": 8760,
+      "put_value": 16713.71420875807,
+      "saved_value": 16713.71420875807,
+      "exactly_equal": true,
+      "data_sha256": "2262b9e97986e964107c9d59085d4403ef90ea63ffa58ba73df3740587b59df6"
+    },
+    {
+      "horizon": "1y",
+      "asset": "CHZUSDT",
+      "N": 8760,
+      "put_value": 0.00970075036500648,
+      "saved_value": 0.00970075036500648,
+      "exactly_equal": true,
+      "data_sha256": "654f48c615140ebf2df81fe7af3364410f3f4dedbba1c99783b8df3256b7ce3d"
+    },
+    {
+      "horizon": "1y",
+      "asset": "COMPUSDT",
+      "N": 8760,
+      "put_value": 10.545203378673214,
+      "saved_value": 10.545203378673214,
+      "exactly_equal": true,
+      "data_sha256": "bd04053860776baabc9062fb4872ce22bbbcad7c03ebd86ef290d44321922185"
+    },
+    {
+      "horizon": "1y",
+      "asset": "CRVUSDT",
+      "N": 8760,
+      "put_value": 0.1548461404475113,
+      "saved_value": 0.1548461404475113,
+      "exactly_equal": true,
+      "data_sha256": "01d9ca078e1205b5a13e4441cd2f1fd082b19b30ee15ece66f3feec039ac3d48"
+    },
+    {
+      "horizon": "1y",
+      "asset": "DASHUSDT",
+      "N": 8760,
+      "put_value": 25.00271287181765,
+      "saved_value": 25.00271287181765,
+      "exactly_equal": true,
+      "data_sha256": "3da623dd7b1e6ea2ebf8fba7fa5b33d334bd3fc98db8191552a57823c75e8a0d"
+    },
+    {
+      "horizon": "1y",
+      "asset": "DOGEUSDT",
+      "N": 8760,
+      "put_value": 0.04551238728603482,
+      "saved_value": 0.04551238728603482,
+      "exactly_equal": true,
+      "data_sha256": "bcbdf3d9995ba0d93fbb2797a6e01e154c573307e1a2c594d4b5428770428145"
+    },
+    {
+      "horizon": "1y",
+      "asset": "DOTUSDT",
+      "N": 8760,
+      "put_value": 0.846311533171677,
+      "saved_value": 0.846311533171677,
+      "exactly_equal": true,
+      "data_sha256": "d3974fb4b60414138b533f0bf510eb2ad7352f989c2244cb4fa218c6481cd8fd"
+    },
+    {
+      "horizon": "1y",
+      "asset": "EGLDUSDT",
+      "N": 8760,
+      "put_value": 2.8210193779906914,
+      "saved_value": 2.8210193779906914,
+      "exactly_equal": true,
+      "data_sha256": "c0e11c6d2642b277fe5995db6732e4b881608477cfcc1c3e9118f0bc091a3fea"
+    },
+    {
+      "horizon": "1y",
+      "asset": "ENJUSDT",
+      "N": 8760,
+      "put_value": 0.020519388859096967,
+      "saved_value": 0.020519388859096967,
+      "exactly_equal": true,
+      "data_sha256": "ef2f12e5a1646c20696441d942b53255c3c180f63c2351358599c7005f6922e3"
+    },
+    {
+      "horizon": "1y",
+      "asset": "ETCUSDT",
+      "N": 8760,
+      "put_value": 3.8469299873193146,
+      "saved_value": 3.8469299873193146,
+      "exactly_equal": true,
+      "data_sha256": "d687f118f474e6666efd123e607952dbd3bf7e059b837bb31bde102d267fa171"
+    },
+    {
+      "horizon": "1y",
+      "asset": "ETHUSDT",
+      "N": 8760,
+      "put_value": 811.4365406599256,
+      "saved_value": 811.4365406599256,
+      "exactly_equal": true,
+      "data_sha256": "2c0c9a9611cfc8ec088d42e460045d4ed7542c08b272a292ec98e012536f613b"
+    },
+    {
+      "horizon": "1y",
+      "asset": "FILUSDT",
+      "N": 8760,
+      "put_value": 0.568113209636398,
+      "saved_value": 0.568113209636398,
+      "exactly_equal": true,
+      "data_sha256": "cba80eb4476e6a5ffb5640f711e8bb846c6a7708a2a4e2508c6e5ee557729ac3"
+    },
+    {
+      "horizon": "1y",
+      "asset": "GRTUSDT",
+      "N": 8760,
+      "put_value": 0.018168226417783002,
+      "saved_value": 0.018168226417783002,
+      "exactly_equal": true,
+      "data_sha256": "56089b591d198595c58952dcd59e19c011c2d94d84d8afca217568ab1ecbb324"
+    },
+    {
+      "horizon": "1y",
+      "asset": "HBARUSDT",
+      "N": 8760,
+      "put_value": 0.05170728951026994,
+      "saved_value": 0.05170728951026994,
+      "exactly_equal": true,
+      "data_sha256": "65330732b02e88b53f4e7ef9b3e2f4b4b955d013bd3b973b38f6a915dbbae5c7"
+    },
+    {
+      "horizon": "1y",
+      "asset": "ICPUSDT",
+      "N": 8760,
+      "put_value": 1.1428385201288043,
+      "saved_value": 1.1428385201288043,
+      "exactly_equal": true,
+      "data_sha256": "6a8023a61b08b7612d24613cca6d35db422541dd51827733b6b1dbcdea1301ad"
+    },
+    {
+      "horizon": "1y",
+      "asset": "LINKUSDT",
+      "N": 8760,
+      "put_value": 4.292346122657978,
+      "saved_value": 4.292346122657978,
+      "exactly_equal": true,
+      "data_sha256": "815caadaea8b25b29c7d8319049e7326316b200e6cacc39e45ff91e085f378df"
+    },
+    {
+      "horizon": "1y",
+      "asset": "LTCUSDT",
+      "N": 8760,
+      "put_value": 21.176355626669164,
+      "saved_value": 21.176355626669164,
+      "exactly_equal": true,
+      "data_sha256": "cf24460e8f54788ac4f39fda06ca7076d2b2d32b55b11b31adfe7777521ffa26"
+    },
+    {
+      "horizon": "1y",
+      "asset": "MANAUSDT",
+      "N": 8760,
+      "put_value": 0.06694759689207964,
+      "saved_value": 0.06694759689207964,
+      "exactly_equal": true,
+      "data_sha256": "e6b96e9d07000c1cbef0639f79c0dd7a93f17effaf8b57b3246dba49813b3ed1"
+    },
+    {
+      "horizon": "1y",
+      "asset": "NEARUSDT",
+      "N": 8760,
+      "put_value": 0.7888019250185654,
+      "saved_value": 0.7888019250185654,
+      "exactly_equal": true,
+      "data_sha256": "179fe1d18f6f9c118b405a15a06bc8a02072bc1af52229ad62220e020f67b63d"
+    },
+    {
+      "horizon": "1y",
+      "asset": "NEOUSDT",
+      "N": 8760,
+      "put_value": 1.2633043290202226,
+      "saved_value": 1.2633043290202226,
+      "exactly_equal": true,
+      "data_sha256": "f1bda3ff2cd09a01a069a428156854af3ab58c35ce42623164ee3b8f2e23c849"
+    },
+    {
+      "horizon": "1y",
+      "asset": "PAXGUSDT",
+      "N": 8760,
+      "put_value": 362.66699365432817,
+      "saved_value": 362.66699365432817,
+      "exactly_equal": true,
+      "data_sha256": "31633c6aca500c63a066422394e6d577752510c2500d7311f1cfc14461c2ea50"
+    },
+    {
+      "horizon": "1y",
+      "asset": "SANDUSDT",
+      "N": 8760,
+      "put_value": 0.06789396685215753,
+      "saved_value": 0.06789396685215753,
+      "exactly_equal": true,
+      "data_sha256": "f5f047d5a9cfcf37be5683270c7f9317fdacb9f79924ddb425145b3a4302e94e"
+    },
+    {
+      "horizon": "1y",
+      "asset": "SNXUSDT",
+      "N": 8760,
+      "put_value": 0.33100238656840003,
+      "saved_value": 0.33100238656840003,
+      "exactly_equal": true,
+      "data_sha256": "996c49632ffe4dd5259d6cb10ab686ee996454bfba68477b6c637f833b47d38f"
+    },
+    {
+      "horizon": "1y",
+      "asset": "SOLUSDT",
+      "N": 8760,
+      "put_value": 43.713828999513176,
+      "saved_value": 43.713828999513176,
+      "exactly_equal": true,
+      "data_sha256": "e7d6ee51d07b313568eb9ca00aaa002170dd44cc995c6638d486c6f35b6f4c05"
+    },
+    {
+      "horizon": "1y",
+      "asset": "THETAUSDT",
+      "N": 8760,
+      "put_value": 0.16028966198181488,
+      "saved_value": 0.16028966198181488,
+      "exactly_equal": true,
+      "data_sha256": "60bd4acce40e768f18a472325b52886f3715e839a6a4d46de7306e5db40c05b1"
+    },
+    {
+      "horizon": "1y",
+      "asset": "TRXUSDT",
+      "N": 8760,
+      "put_value": 0.02336520015164091,
+      "saved_value": 0.02336520015164091,
+      "exactly_equal": true,
+      "data_sha256": "9bef6a8a5baec8bbcde7d5eed19882b933d8939f88bd789d98880c9d6340d10f"
+    },
+    {
+      "horizon": "1y",
+      "asset": "UNIUSDT",
+      "N": 8760,
+      "put_value": 2.009197703632741,
+      "saved_value": 2.009197703632741,
+      "exactly_equal": true,
+      "data_sha256": "d1445cb2af7ed07af54ad815ed1530173c7997d7a21fa94b17202452ab75c961"
+    },
+    {
+      "horizon": "1y",
+      "asset": "VETUSDT",
+      "N": 8760,
+      "put_value": 0.00430419649613059,
+      "saved_value": 0.00430419649613059,
+      "exactly_equal": true,
+      "data_sha256": "efcbc3281de6ee0cd39b70404c6e045eb8c09773c0518c6ab8f04e2540498483"
+    },
+    {
+      "horizon": "1y",
+      "asset": "XLMUSDT",
+      "N": 8760,
+      "put_value": 0.08804272564171868,
+      "saved_value": 0.08804272564171868,
+      "exactly_equal": true,
+      "data_sha256": "5552bebc74e6ceb38fa0faef4a1418ae3b9286758b6df1594f2abaf1e735ecd0"
+    },
+    {
+      "horizon": "1y",
+      "asset": "XRPUSDT",
+      "N": 8760,
+      "put_value": 0.575599839661851,
+      "saved_value": 0.575599839661851,
+      "exactly_equal": true,
+      "data_sha256": "c6fcf72e643797f22838f6698f8c3ad5533b99259395df1dc7605b33eb60662b"
+    },
+    {
+      "horizon": "1y",
+      "asset": "XTZUSDT",
+      "N": 8760,
+      "put_value": 0.16180328283502798,
+      "saved_value": 0.16180328283502798,
+      "exactly_equal": true,
+      "data_sha256": "7021003280650bda7152620973c0a539bbb58caf2c42329d8bc390b959b7dfd4"
+    },
+    {
+      "horizon": "1y",
+      "asset": "ZECUSDT",
+      "N": 8760,
+      "put_value": 188.46577236314485,
+      "saved_value": 188.46577236314485,
+      "exactly_equal": true,
+      "data_sha256": "05b8a3f9529781285bf15bb400ff17f009df4ed17f1fee855b231b46957b66e5"
+    },
+    {
+      "horizon": "full",
+      "asset": "AAVEUSDT",
+      "N": 43822,
+      "put_value": 199.4060844722232,
+      "saved_value": 199.4060844722232,
+      "exactly_equal": true,
+      "data_sha256": "ba0d75786442cacfe7cc6a20e1b8ec574ca5db4db99f02e84f4670c42ef249c9"
+    },
+    {
+      "horizon": "full",
+      "asset": "ADAUSDT",
+      "N": 43822,
+      "put_value": 1.1328464058981913,
+      "saved_value": 1.1328464058981913,
+      "exactly_equal": true,
+      "data_sha256": "e7def1a543814775760df23d00be773ccff912c56d2dfcba751f4b31224478e3"
+    },
+    {
+      "horizon": "full",
+      "asset": "ALGOUSDT",
+      "N": 43822,
+      "put_value": 1.1453341504632681,
+      "saved_value": 1.1453341504632681,
+      "exactly_equal": true,
+      "data_sha256": "9b1572c0f74069aa43a7a5b8d28659d2766e426edba07f6da41f3b1f36902d76"
+    },
+    {
+      "horizon": "full",
+      "asset": "ATOMUSDT",
+      "N": 43822,
+      "put_value": 21.794383981827337,
+      "saved_value": 21.794383981827337,
+      "exactly_equal": true,
+      "data_sha256": "d91a11568e1aa21c80b3b529eda1b46b50cbf7ff26bd2c72b530f0ed0345771f"
+    },
+    {
+      "horizon": "full",
+      "asset": "AVAXUSDT",
+      "N": 43822,
+      "put_value": 39.91007096844099,
+      "saved_value": 39.91007096844099,
+      "exactly_equal": true,
+      "data_sha256": "17a2c056046641148325e47afabe5fc4895df29ea152aca1ac6625f9f5b94135"
+    },
+    {
+      "horizon": "full",
+      "asset": "AXSUSDT",
+      "N": 43822,
+      "put_value": 89.40402632640719,
+      "saved_value": 89.40402632640719,
+      "exactly_equal": true,
+      "data_sha256": "6905084552221986b65cc515f4b58b8dcfa9ca1d6166f88598444954f9e46724"
+    },
+    {
+      "horizon": "full",
+      "asset": "BCHUSDT",
+      "N": 43822,
+      "put_value": 322.8681097388715,
+      "saved_value": 322.8681097388715,
+      "exactly_equal": true,
+      "data_sha256": "df16c1860150ee8741fd0a939b079cb4e2ff84c40d792983e6a3ee1cb4cc572c"
+    },
+    {
+      "horizon": "full",
+      "asset": "BNBUSDT",
+      "N": 43822,
+      "put_value": 209.3270868173976,
+      "saved_value": 209.3270868173976,
+      "exactly_equal": true,
+      "data_sha256": "b7e2abd563157f246aeff732574833a9614a8db6d984a01ace8d58c0ca0b3db3"
+    },
+    {
+      "horizon": "full",
+      "asset": "BTCUSDT",
+      "N": 43822,
+      "put_value": 20716.754071249332,
+      "saved_value": 20716.754071249332,
+      "exactly_equal": true,
+      "data_sha256": "2262b9e97986e964107c9d59085d4403ef90ea63ffa58ba73df3740587b59df6"
+    },
+    {
+      "horizon": "full",
+      "asset": "CHZUSDT",
+      "N": 43822,
+      "put_value": 0.26854938185469945,
+      "saved_value": 0.26854938185469945,
+      "exactly_equal": true,
+      "data_sha256": "654f48c615140ebf2df81fe7af3364410f3f4dedbba1c99783b8df3256b7ce3d"
+    },
+    {
+      "horizon": "full",
+      "asset": "COMPUSDT",
+      "N": 43822,
+      "put_value": 220.05519488359874,
+      "saved_value": 220.05519488359874,
+      "exactly_equal": true,
+      "data_sha256": "bd04053860776baabc9062fb4872ce22bbbcad7c03ebd86ef290d44321922185"
+    },
+    {
+      "horizon": "full",
+      "asset": "CRVUSDT",
+      "N": 43822,
+      "put_value": 3.076483278019705,
+      "saved_value": 3.076483278019705,
+      "exactly_equal": true,
+      "data_sha256": "01d9ca078e1205b5a13e4441cd2f1fd082b19b30ee15ece66f3feec039ac3d48"
+    },
+    {
+      "horizon": "full",
+      "asset": "DASHUSDT",
+      "N": 43822,
+      "put_value": 123.83197908173624,
+      "saved_value": 123.83197908173624,
+      "exactly_equal": true,
+      "data_sha256": "3da623dd7b1e6ea2ebf8fba7fa5b33d334bd3fc98db8191552a57823c75e8a0d"
+    },
+    {
+      "horizon": "full",
+      "asset": "DOGEUSDT",
+      "N": 43822,
+      "put_value": 0.16838657081040198,
+      "saved_value": 0.16838657081040198,
+      "exactly_equal": true,
+      "data_sha256": "bcbdf3d9995ba0d93fbb2797a6e01e154c573307e1a2c594d4b5428770428145"
+    },
+    {
+      "horizon": "full",
+      "asset": "DOTUSDT",
+      "N": 43822,
+      "put_value": 24.635689247367797,
+      "saved_value": 24.635689247367797,
+      "exactly_equal": true,
+      "data_sha256": "d3974fb4b60414138b533f0bf510eb2ad7352f989c2244cb4fa218c6481cd8fd"
+    },
+    {
+      "horizon": "full",
+      "asset": "EGLDUSDT",
+      "N": 43822,
+      "put_value": 166.71310684438612,
+      "saved_value": 166.71310684438612,
+      "exactly_equal": true,
+      "data_sha256": "c0e11c6d2642b277fe5995db6732e4b881608477cfcc1c3e9118f0bc091a3fea"
+    },
+    {
+      "horizon": "full",
+      "asset": "ENJUSDT",
+      "N": 43822,
+      "put_value": 1.8007116994849932,
+      "saved_value": 1.8007116994849932,
+      "exactly_equal": true,
+      "data_sha256": "ef2f12e5a1646c20696441d942b53255c3c180f63c2351358599c7005f6922e3"
+    },
+    {
+      "horizon": "full",
+      "asset": "ETCUSDT",
+      "N": 43822,
+      "put_value": 30.46539722527311,
+      "saved_value": 30.46539722527311,
+      "exactly_equal": true,
+      "data_sha256": "d687f118f474e6666efd123e607952dbd3bf7e059b837bb31bde102d267fa171"
+    },
+    {
+      "horizon": "full",
+      "asset": "ETHUSDT",
+      "N": 43822,
+      "put_value": 1929.8617269470817,
+      "saved_value": 1929.8617269470817,
+      "exactly_equal": true,
+      "data_sha256": "2c0c9a9611cfc8ec088d42e460045d4ed7542c08b272a292ec98e012536f613b"
+    },
+    {
+      "horizon": "full",
+      "asset": "FILUSDT",
+      "N": 43822,
+      "put_value": 40.17182355032687,
+      "saved_value": 40.17182355032687,
+      "exactly_equal": true,
+      "data_sha256": "cba80eb4476e6a5ffb5640f711e8bb846c6a7708a2a4e2508c6e5ee557729ac3"
+    },
+    {
+      "horizon": "full",
+      "asset": "GRTUSDT",
+      "N": 43822,
+      "put_value": 0.6642481436095131,
+      "saved_value": 0.6642481436095131,
+      "exactly_equal": true,
+      "data_sha256": "56089b591d198595c58952dcd59e19c011c2d94d84d8afca217568ab1ecbb324"
+    },
+    {
+      "horizon": "full",
+      "asset": "HBARUSDT",
+      "N": 43822,
+      "put_value": 0.25723744629645917,
+      "saved_value": 0.25723744629645917,
+      "exactly_equal": true,
+      "data_sha256": "65330732b02e88b53f4e7ef9b3e2f4b4b955d013bd3b973b38f6a915dbbae5c7"
+    },
+    {
+      "horizon": "full",
+      "asset": "ICPUSDT",
+      "N": 43822,
+      "put_value": 29.874109874259023,
+      "saved_value": 29.874109874259023,
+      "exactly_equal": true,
+      "data_sha256": "6a8023a61b08b7612d24613cca6d35db422541dd51827733b6b1dbcdea1301ad"
+    },
+    {
+      "horizon": "full",
+      "asset": "LINKUSDT",
+      "N": 43822,
+      "put_value": 17.556272712014106,
+      "saved_value": 17.556272712014106,
+      "exactly_equal": true,
+      "data_sha256": "815caadaea8b25b29c7d8319049e7326316b200e6cacc39e45ff91e085f378df"
+    },
+    {
+      "horizon": "full",
+      "asset": "LTCUSDT",
+      "N": 43822,
+      "put_value": 100.81608702766367,
+      "saved_value": 100.81608702766367,
+      "exactly_equal": true,
+      "data_sha256": "cf24460e8f54788ac4f39fda06ca7076d2b2d32b55b11b31adfe7777521ffa26"
+    },
+    {
+      "horizon": "full",
+      "asset": "MANAUSDT",
+      "N": 43822,
+      "put_value": 1.814044698886017,
+      "saved_value": 1.814044698886017,
+      "exactly_equal": true,
+      "data_sha256": "e6b96e9d07000c1cbef0639f79c0dd7a93f17effaf8b57b3246dba49813b3ed1"
+    },
+    {
+      "horizon": "full",
+      "asset": "NEARUSDT",
+      "N": 43822,
+      "put_value": 6.991045892607585,
+      "saved_value": 6.991045892607585,
+      "exactly_equal": true,
+      "data_sha256": "179fe1d18f6f9c118b405a15a06bc8a02072bc1af52229ad62220e020f67b63d"
+    },
+    {
+      "horizon": "full",
+      "asset": "NEOUSDT",
+      "N": 43822,
+      "put_value": 26.565918552002344,
+      "saved_value": 26.565918552002344,
+      "exactly_equal": true,
+      "data_sha256": "f1bda3ff2cd09a01a069a428156854af3ab58c35ce42623164ee3b8f2e23c849"
+    },
+    {
+      "horizon": "full",
+      "asset": "PAXGUSDT",
+      "N": 43822,
+      "put_value": 227.1241570756121,
+      "saved_value": 227.1241570756121,
+      "exactly_equal": true,
+      "data_sha256": "31633c6aca500c63a066422394e6d577752510c2500d7311f1cfc14461c2ea50"
+    },
+    {
+      "horizon": "full",
+      "asset": "SANDUSDT",
+      "N": 43822,
+      "put_value": 1.1165624676207397,
+      "saved_value": 1.1165624676207397,
+      "exactly_equal": true,
+      "data_sha256": "f5f047d5a9cfcf37be5683270c7f9317fdacb9f79924ddb425145b3a4302e94e"
+    },
+    {
+      "horizon": "full",
+      "asset": "SNXUSDT",
+      "N": 43822,
+      "put_value": 7.145619746193963,
+      "saved_value": 7.145619746193963,
+      "exactly_equal": true,
+      "data_sha256": "996c49632ffe4dd5259d6cb10ab686ee996454bfba68477b6c637f833b47d38f"
+    },
+    {
+      "horizon": "full",
+      "asset": "SOLUSDT",
+      "N": 43822,
+      "put_value": 127.17672905469476,
+      "saved_value": 127.17672905469476,
+      "exactly_equal": true,
+      "data_sha256": "e7d6ee51d07b313568eb9ca00aaa002170dd44cc995c6638d486c6f35b6f4c05"
+    },
+    {
+      "horizon": "full",
+      "asset": "THETAUSDT",
+      "N": 43822,
+      "put_value": 4.702668677443584,
+      "saved_value": 4.702668677443584,
+      "exactly_equal": true,
+      "data_sha256": "60bd4acce40e768f18a472325b52886f3715e839a6a4d46de7306e5db40c05b1"
+    },
+    {
+      "horizon": "full",
+      "asset": "TRXUSDT",
+      "N": 43822,
+      "put_value": 0.03516412555825942,
+      "saved_value": 0.03516412555825942,
+      "exactly_equal": true,
+      "data_sha256": "9bef6a8a5baec8bbcde7d5eed19882b933d8939f88bd789d98880c9d6340d10f"
+    },
+    {
+      "horizon": "full",
+      "asset": "UNIUSDT",
+      "N": 43822,
+      "put_value": 15.8555781736211,
+      "saved_value": 15.8555781736211,
+      "exactly_equal": true,
+      "data_sha256": "d1445cb2af7ed07af54ad815ed1530173c7997d7a21fa94b17202452ab75c961"
+    },
+    {
+      "horizon": "full",
+      "asset": "VETUSDT",
+      "N": 43822,
+      "put_value": 0.07915675615438553,
+      "saved_value": 0.07915675615438553,
+      "exactly_equal": true,
+      "data_sha256": "efcbc3281de6ee0cd39b70404c6e045eb8c09773c0518c6ab8f04e2540498483"
+    },
+    {
+      "horizon": "full",
+      "asset": "XLMUSDT",
+      "N": 43822,
+      "put_value": 0.20636541441170264,
+      "saved_value": 0.20636541441170264,
+      "exactly_equal": true,
+      "data_sha256": "5552bebc74e6ceb38fa0faef4a1418ae3b9286758b6df1594f2abaf1e735ecd0"
+    },
+    {
+      "horizon": "full",
+      "asset": "XRPUSDT",
+      "N": 43822,
+      "put_value": 0.6025966703461179,
+      "saved_value": 0.6025966703461179,
+      "exactly_equal": true,
+      "data_sha256": "c6fcf72e643797f22838f6698f8c3ad5533b99259395df1dc7605b33eb60662b"
+    },
+    {
+      "horizon": "full",
+      "asset": "XTZUSDT",
+      "N": 43822,
+      "put_value": 3.6360104549590466,
+      "saved_value": 3.6360104549590466,
+      "exactly_equal": true,
+      "data_sha256": "7021003280650bda7152620973c0a539bbb58caf2c42329d8bc390b959b7dfd4"
+    },
+    {
+      "horizon": "full",
+      "asset": "ZECUSDT",
+      "N": 43822,
+      "put_value": 117.6060489227189,
+      "saved_value": 117.6060489227189,
+      "exactly_equal": true,
+      "data_sha256": "05b8a3f9529781285bf15bb400ff17f009df4ed17f1fee855b231b46957b66e5"
+    }
+  ],
+  "bitcoin_boundaries": [
+    {
+      "horizon": "1y",
+      "price_exactly_equal": true,
+      "boundary_exactly_equal": true,
+      "rows": 8761
+    },
+    {
+      "horizon": "full",
+      "price_exactly_equal": true,
+      "boundary_exactly_equal": true,
+      "rows": 43823
+    }
+  ],
+  "source_sha256": {
+    "recheck_current.py": "abec7fb6272a4b93aa8fe53dca2028ac4264ca24540e517d6fad61a7e52178e8",
+    "market_data.py": "9730648f30754f6076a3cb2a5e4de424b78b6951b967d62ca4ded4c9b9b0e87e",
+    "tree_model.py": "5dd6243df45388d196ff2cf16907a4aba48e12d3165897ef991de7f0d8083186",
+    "price_american_put.py": "96b4b3cc02b91e753aa5d0307fad42993ea95bbccc03ca10fa6d7b6ad24e0429",
+    "price_american_put_numpy.py": "1084409abccde77e3227c9a09933b340684b8b461e8e852e42ad894c418c3193",
+    "exercise.py": "28f56befbf2a11a78ccc00b2bf992acad6b582eec39f3468de1b68c7654e1462"
+  },
+  "reference_computation_unchanged": true,
+  "measured_results_note": "this report verifies current values; no historical timing or memory record was replaced"
+}

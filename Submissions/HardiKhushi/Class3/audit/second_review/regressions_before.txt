@@ -1,0 +1,152 @@
+test_caller_mutation_cannot_invalidate_a_price_window (test_second_review.SecondReviewTests.test_caller_mutation_cannot_invalidate_a_price_window) ... FAIL
+test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise (test_second_review.SecondReviewTests.test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise) ... 
+  test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise (test_second_review.SecondReviewTests.test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise) (engine='price_american_put') ... FAIL
+  test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise (test_second_review.SecondReviewTests.test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise) (engine='price_american_put_numpy') ... FAIL
+test_expiry_only_subnormal_prices_are_supported (test_second_review.SecondReviewTests.test_expiry_only_subnormal_prices_are_supported) ... 
+  test_expiry_only_subnormal_prices_are_supported (test_second_review.SecondReviewTests.test_expiry_only_subnormal_prices_are_supported) (engine='price_american_put') ... ERROR
+  test_expiry_only_subnormal_prices_are_supported (test_second_review.SecondReviewTests.test_expiry_only_subnormal_prices_are_supported) (engine='price_american_put_numpy') ... ERROR
+test_non_bitcoin_console_unit_matches_the_actual_asset (test_second_review.SecondReviewTests.test_non_bitcoin_console_unit_matches_the_actual_asset) ... FAIL
+test_numerical_checker_cannot_verify_zero_contracts (test_second_review.SecondReviewTests.test_numerical_checker_cannot_verify_zero_contracts) ... FAIL
+test_summary_rejects_full_file_batch_reused_as_one_year (test_second_review.SecondReviewTests.test_summary_rejects_full_file_batch_reused_as_one_year) ... FAIL
+test_summary_requires_the_completed_two_horizon_run (test_second_review.SecondReviewTests.test_summary_requires_the_completed_two_horizon_run) ... FAIL
+test_tiny_positive_expiry_payoff_has_an_exercise_node (test_second_review.SecondReviewTests.test_tiny_positive_expiry_payoff_has_an_exercise_node) ... 
+  test_tiny_positive_expiry_payoff_has_an_exercise_node (test_second_review.SecondReviewTests.test_tiny_positive_expiry_payoff_has_an_exercise_node) (engine='price_american_put') ... FAIL
+  test_tiny_positive_expiry_payoff_has_an_exercise_node (test_second_review.SecondReviewTests.test_tiny_positive_expiry_payoff_has_an_exercise_node) (engine='price_american_put_numpy') ... FAIL
+
+======================================================================
+ERROR: test_expiry_only_subnormal_prices_are_supported (test_second_review.SecondReviewTests.test_expiry_only_subnormal_prices_are_supported) (engine='price_american_put')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_second_review.py", line 38, in test_expiry_only_subnormal_prices_are_supported
+    value, boundary = pricer(1e-310, 2e-310, 1.2, .8, 1.05, 0, return_boundary=True)
+                      ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/price_american_put.py", line 20, in price_american_put
+    model = validate_tree(spot, strike, up, down, gross_rate, steps)
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/tree_model.py", line 57, in validate_tree
+    raise ValueError('tree asset prices exceed safe floating-point range')
+ValueError: tree asset prices exceed safe floating-point range
+
+======================================================================
+ERROR: test_expiry_only_subnormal_prices_are_supported (test_second_review.SecondReviewTests.test_expiry_only_subnormal_prices_are_supported) (engine='price_american_put_numpy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_second_review.py", line 38, in test_expiry_only_subnormal_prices_are_supported
+    value, boundary = pricer(1e-310, 2e-310, 1.2, .8, 1.05, 0, return_boundary=True)
+                      ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/price_american_put_numpy.py", line 10, in price_american_put
+    model = validate_tree(spot, strike, up, down, gross_rate, steps)
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/tree_model.py", line 57, in validate_tree
+    raise ValueError('tree asset prices exceed safe floating-point range')
+ValueError: tree asset prices exceed safe floating-point range
+
+======================================================================
+FAIL: test_caller_mutation_cannot_invalidate_a_price_window (test_second_review.SecondReviewTests.test_caller_mutation_cannot_invalidate_a_price_window)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_second_review.py", line 57, in test_caller_mutation_cannot_invalidate_a_price_window
+    self.assertEqual(window.prices, (100., 101., 102.))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [100.0, 101.0] != (100.0, 101.0, 102.0)
+
+======================================================================
+FAIL: test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise (test_second_review.SecondReviewTests.test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise) (engine='price_american_put')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_second_review.py", line 48, in test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise
+    self.assertEqual(boundary[0], 100)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: None != 100
+
+======================================================================
+FAIL: test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise (test_second_review.SecondReviewTests.test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise) (engine='price_american_put_numpy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_second_review.py", line 48, in test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise
+    self.assertEqual(boundary[0], 100)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: None != 100
+
+======================================================================
+FAIL: test_non_bitcoin_console_unit_matches_the_actual_asset (test_second_review.SecondReviewTests.test_non_bitcoin_console_unit_matches_the_actual_asset)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_second_review.py", line 105, in test_non_bitcoin_console_unit_matches_the_actual_asset
+    self.assertIn('USDT/ETH', console.getvalue())
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'USDT/ETH' not found in 'Pricing 2 periods, one asset, engine=numpy, with an exercise boundary...\nPut value: 1.04819076 USDT/BTC; untraced seconds: 0.000072\nFirst observed crossing: never\nMeasuring allocations in a separate pricing call...\nComplete. Peak traced allocation: 5,430 bytes (5.30 KiB)\nResults: /Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/tmpjxql9j72/output\n'
+
+======================================================================
+FAIL: test_numerical_checker_cannot_verify_zero_contracts (test_second_review.SecondReviewTests.test_numerical_checker_cannot_verify_zero_contracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_second_review.py", line 96, in test_numerical_checker_cannot_verify_zero_contracts
+    with redirect_stdout(StringIO()), self.assertRaises(ValueError):
+                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_summary_rejects_full_file_batch_reused_as_one_year (test_second_review.SecondReviewTests.test_summary_rejects_full_file_batch_reused_as_one_year)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_second_review.py", line 77, in test_summary_rejects_full_file_batch_reused_as_one_year
+    with patch.object(build_summary, 'HERE', self.root), self.assertRaises((ValueError, OSError)):
+                                                         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (<class 'ValueError'>, <class 'OSError'>) not raised
+
+======================================================================
+FAIL: test_summary_requires_the_completed_two_horizon_run (test_second_review.SecondReviewTests.test_summary_requires_the_completed_two_horizon_run)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_second_review.py", line 82, in test_summary_requires_the_completed_two_horizon_run
+    with patch.object(build_summary, 'HERE', self.root), self.assertRaises((ValueError, OSError)):
+                                                         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (<class 'ValueError'>, <class 'OSError'>) not raised
+
+======================================================================
+FAIL: test_tiny_positive_expiry_payoff_has_an_exercise_node (test_second_review.SecondReviewTests.test_tiny_positive_expiry_payoff_has_an_exercise_node) (engine='price_american_put')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_second_review.py", line 32, in test_tiny_positive_expiry_payoff_has_an_exercise_node
+    self.assertEqual(pricer(100, strike, 1.2, .8, 1.05, 0, return_boundary=True),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     (strike - 100, [100]))
+                     ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (1.4210854715202004e-14, [None]) != (1.4210854715202004e-14, [100])
+
+First differing element 1:
+[None]
+[100]
+
+- (1.4210854715202004e-14, [None])
+?                           ^^^^
+
++ (1.4210854715202004e-14, [100])
+?                           ^^^
+
+
+======================================================================
+FAIL: test_tiny_positive_expiry_payoff_has_an_exercise_node (test_second_review.SecondReviewTests.test_tiny_positive_expiry_payoff_has_an_exercise_node) (engine='price_american_put_numpy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mack/Downloads/Algorithms in finance/AlgorithmsFinance/Submissions/HardiKhushi/Class3/test_second_review.py", line 32, in test_tiny_positive_expiry_payoff_has_an_exercise_node
+    self.assertEqual(pricer(100, strike, 1.2, .8, 1.05, 0, return_boundary=True),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     (strike - 100, [100]))
+                     ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (1.4210854715202004e-14, [None]) != (1.4210854715202004e-14, [100])
+
+First differing element 1:
+[None]
+[100]
+
+- (1.4210854715202004e-14, [None])
+?                           ^^^^
+
++ (1.4210854715202004e-14, [100])
+?                           ^^^
+
+
+----------------------------------------------------------------------
+Ran 8 tests in 5.357s
+
+FAILED (failures=9, errors=2)

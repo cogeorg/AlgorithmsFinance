@@ -1,0 +1,2 @@
+asset,engine,N,assets,seconds,peak_traced_bytes,put_value,exercise_utc,payoff
+BTCUSDT,numpy,8760,1,0.19041320797987282,729674,16713.71420875807,2026-06-02T14:00:00+00:00,41588.70999999999
