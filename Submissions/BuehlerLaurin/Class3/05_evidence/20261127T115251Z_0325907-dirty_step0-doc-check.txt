@@ -1,0 +1,83 @@
+label: step0-doc-check
+command: C:\Users\laubu/.venvs/aif-class3/Scripts/python.exe -B -c from pathlib import Path
+import runpy,json,subprocess,hashlib
+root=Path.cwd()
+skills=Path.home()/'.agents/skills'
+scaffold=runpy.run_path(str(skills/'aif-exercise/scripts/scaffold.py'))
+count=0
+for rel,text in scaffold['STUBS'].items():
+    if rel=='00_docs/REVISION.md': continue
+    assert (root/rel.replace('{pkg}','amput')).read_text(encoding='utf-8')==text.replace('{pkg}','amput'),rel
+    count+=1
+for src,dst in [('aif-bench/scripts/harness.py','01_code/bench/harness.py'),('aif-verify/scripts/evidence.py','evidence.py'),('aif-exercise/scripts/verify_manifest.py','verify_manifest.py'),('aif-exercise/assets/gitignore.txt','.gitignore')]:
+    assert (skills/src).read_bytes()==(root/dst).read_bytes(),dst
+    count+=1
+for src,dst in [('mutants_template.py','test_mutants.py.template'),('stateful_template.py','test_stateful.py.template')]:
+    expected=(skills/'aif-tdd/references'/src).read_text(encoding='utf-8').replace('PKG = '+chr(34)+'solution'+chr(34),'PKG = '+chr(34)+'amput'+chr(34))
+    assert (root/'02_tests'/dst).read_text(encoding='utf-8')==expected,dst
+    count+=1
+spec=(root/'SPEC.md').read_text(encoding='utf-8')
+assert all('| D'+str(i)+' |' in spec for i in range(1,12))
+assert all(s in spec for s in ['## Applicability','## Decisions','## Numerical risks','## Candidate algorithms'])
+req=(root/'00_docs/REQUIREMENTS_MAP.md').read_text(encoding='utf-8')
+assert all('| R'+str(i).zfill(2)+' |' in req for i in range(1,22))
+assert not (root/'04_dashboard').exists()
+assert not (root/'00_docs/LEARNING.md').exists()
+inventory=json.loads((root/'06_data/supplied/DATA_INVENTORY.json').read_text(encoding='utf-8'))
+assert len(inventory)==40 and {r['full_N'] for r in inventory}=={43822} and {r['missing_hours'] for r in inventory}=={1}
+assert (root/'../../../Class3/data/hourly').resolve().is_dir()
+status=subprocess.run(['git','status','--short','--untracked-files=all'],cwd=root.parents[2],capture_output=True,text=True,check=True).stdout
+assert status.splitlines() and all(s[3:].startswith('Submissions/BuehlerLaurin/Class3/') for s in status.splitlines()),status
+for p in sorted(root.rglob('*')):
+    if p.is_file() and 'scratch' not in p.relative_to(root).parts:
+        p.read_text(encoding='utf-8')
+        print('REVIEWED FILE '+p.relative_to(root).as_posix()+' sha256='+hashlib.sha256(p.read_bytes()).hexdigest())
+print('Scaffold code/config/template identities checked: '+str(count))
+print('All D1-D11 and R01-R21 present; no dashboard/learning; git changes confined to own Class3.')
+print('STEP 0B DOCUMENT CHECK: PASS (no pricing algorithms or task-specific tests; data/docs checks only)')
+
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Class3
+commit: 0325907cb0a6cc3cd1f292fca095b52d9343ac97
+dirty: True
+python: 3.13.15
+utc: 20261127T115251Z
+exit_code: 0
+duration_s: 0.35
+------------------------------------------------------------
+REVIEWED FILE .gitignore sha256=64aa49671e1dcda33b13b4e9d68914a0b0891901ac678e63186bec42af177c76
+REVIEWED FILE 00_docs/AI_LOG.md sha256=458af7f4edfa88abeaddc7e7b311f181b21ddebc87f1390f4f1a5ed10e188ec5
+REVIEWED FILE 00_docs/REPORT.md sha256=0c1b05cbe5d44011a5cd08d7985e57676b69828c89960b1087747e5d53f63bb6
+REVIEWED FILE 00_docs/REQUIREMENTS_MAP.md sha256=3149c61bbfb0c50beddf324dbbe5a062d741ad587606e7b3b8deb8f280a89335
+REVIEWED FILE 00_docs/REVISION.md sha256=5f044d19022a686c0498e754d7b9b22dc3da0346e2722746cb28ab7ec05f8aad
+REVIEWED FILE 00_docs/TRACE.md sha256=4678e88d0bdee81f1f50b88ab228fff5a3c5fa7731fa3911ff0bc7ee463c9e02
+REVIEWED FILE 01_code/amput/__init__.py sha256=bdb995d3eb5f278fb6449fb45bc8c09300d24635748ace5be7411d3d1c6dc124
+REVIEWED FILE 01_code/amput/__main__.py sha256=535611d3688ac3d3935d1be1bc01795cef1523adffdeb8228bef295e98fdbd0b
+REVIEWED FILE 01_code/bench/__init__.py sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+REVIEWED FILE 01_code/bench/harness.py sha256=d832e66ba98690dd9b50c254d1fa1b97423acb4b4d0224ac0d5638182eb60bec
+REVIEWED FILE 01_code/datagen/__init__.py sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+REVIEWED FILE 02_tests/conftest.py sha256=57285e686ab5a3ec8326b17fb3401d178603adc865478bff607b48352d3674e1
+REVIEWED FILE 02_tests/contract.py sha256=804ab92c33d3f5480df2c8384ea85ef34de2436969462a20bb8c4df023f9a0e8
+REVIEWED FILE 02_tests/test_contract.py sha256=352eb984cb84ca9b291c96b5f43e24549b3f963daf120bee9c7b52d33c921e17
+REVIEWED FILE 02_tests/test_mutants.py.template sha256=4a49dcbc6496c878101bbbd2d28a1c9c9e8ca0f6a6468ee0ddf66468d9fa8491
+REVIEWED FILE 02_tests/test_stateful.py.template sha256=a207dd09a3a6cf3d3e3c9201487f1bd36288b029aabd524b68970e8fda7094a0
+REVIEWED FILE 05_evidence/20261127T114958Z_0325907-dirty_step0-data-inventory.txt sha256=3fea8436005e7221dd0feb2c239be1ae8478e411578809c1789611ee232ab02b
+REVIEWED FILE 05_evidence/20261127T115007Z_0325907-dirty_step0-data-inventory.txt sha256=0ddb23451fb62288f965b5df64836b9d1480df4995945d99a8fe15d85cdd1758
+REVIEWED FILE 05_evidence/20261127T115138Z_0325907-dirty_step0-manifest.txt sha256=156eab5eeafac959dc21f83d6754d2f90b0f22916ebdd923a13d76e771c33ade
+REVIEWED FILE 05_evidence/20261127T115138Z_0325907-dirty_step0-numerical-facts.txt sha256=d23c3e2ee68b1acb32666cd3c36f0e3ef1f5719b6f61fb729189841295cb368f
+REVIEWED FILE 05_evidence/20261127T115225Z_0325907-dirty_step0-doc-check.txt sha256=dbfd0a5a57b12c424ce247c056d5714c3cb534283efdcf5181da69a31f958e36
+REVIEWED FILE 05_evidence/INDEX.md sha256=d91d61756585ad5a8baa834dd932f882f2aaf4a7d63fe1366c53c7d82b923d6e
+REVIEWED FILE 06_data/supplied/DATA_INVENTORY.json sha256=923ff5ab5b34d6c7647ec7e709a346dcb4b3af6b76f2cd2757f21c6e423c4930
+REVIEWED FILE 06_data/supplied/MANIFEST.json sha256=49ad97e2ddda359f9c562b47a20024cc9a8505f53cad158e02dab3a424ed0517
+REVIEWED FILE 06_data/supplied/README.md sha256=09945cb2b8e903ae9209f037c238f804a4acb11d7ebee1dc415336f020cc8812
+REVIEWED FILE AGENTS.md sha256=dff8bd0a493fc2eea6c909f7823beaae8832d2e69cd05340fb4e2bc9e36a37a4
+REVIEWED FILE CLAUDE.md sha256=d631d88045f74623d568adfb4783b72e3d1b732330d749bc6c72e6648d4581d3
+REVIEWED FILE evidence.py sha256=0d40f6477e382d4d4a5973b92ec8fb600686a22dc4aeead5ae6845f79d680311
+REVIEWED FILE pytest.ini sha256=423ef28c99317650ef5192e9ad691803f8274c771613eb95f8c424ef42a582df
+REVIEWED FILE README.md sha256=9da3ceb36b83c309a1727740d8cce08299a3b9eaef2581a81e5287b5e4d2bfa1
+REVIEWED FILE requirements.txt sha256=4fce1c460d0a9b167948152ec10366c243185206887085004f35614ecfcfe9fb
+REVIEWED FILE run.py sha256=3a445f6db8ef69eda1f599d43f2331c335a3ed7dff04fd11a1899b8b40dee405
+REVIEWED FILE SPEC.md sha256=2468c3d01f5ab793798b5bef773dc969b63b6d284b7bd3091519c658cb159f6b
+REVIEWED FILE verify_manifest.py sha256=50823111ccdc7ce6561c0af7d1aaeaaa2ab7e49a8b96641b54c65006df318837
+Scaffold code/config/template identities checked: 17
+All D1-D11 and R01-R21 present; no dashboard/learning; git changes confined to own Class3.
+STEP 0B DOCUMENT CHECK: PASS (no pricing algorithms or task-specific tests; data/docs checks only)
