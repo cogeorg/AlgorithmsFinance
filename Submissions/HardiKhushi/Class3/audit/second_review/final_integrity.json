@@ -1,0 +1,9 @@
+{
+  "status": "verified",
+  "historical_result_files_unchanged": 52,
+  "table_byte_identical": true,
+  "tests_passed": 52,
+  "current_contracts_checked": 80,
+  "current_bitcoin_boundary_rows": 52584,
+  "submission_verifier_sha256": "3d484396870e7312f6484834a314624f8f309a6f777c95a90289e8f2750f61de"
+}

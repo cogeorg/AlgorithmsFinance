@@ -1,0 +1,35 @@
+{
+  "runs": [
+    {
+      "run": "bitcoin_1y_numpy",
+      "reference_price": 16713.714208758032,
+      "audited_price": 16713.71420875807,
+      "price_difference_from_reference": 3.637978807091713e-11,
+      "price_difference_from_legacy": 2.4883775040507317e-09,
+      "european_lower_bound": 16272.72827283359,
+      "binomial_probability_sum": 1.0000000000074587,
+      "policy_rows_checked": 8761,
+      "policy_disagreements": [],
+      "first_crossing_t": 5127,
+      "changed_policy_nodes_vs_legacy": [],
+      "result_sha256": "cbd9b43afc7679b2ba8864ccc0fd9201b8f06b14e77bb58b3a4a20d58defd09b"
+    },
+    {
+      "run": "bitcoin_full_numpy",
+      "reference_price": 20716.754071249332,
+      "audited_price": 20716.754071249332,
+      "price_difference_from_reference": 0.0,
+      "price_difference_from_legacy": -4.638422979041934e-09,
+      "european_lower_bound": 18699.775985095577,
+      "binomial_probability_sum": 0.9999999999924187,
+      "policy_rows_checked": 43823,
+      "policy_disagreements": [],
+      "first_crossing_t": 5502,
+      "changed_policy_nodes_vs_legacy": [
+        43822
+      ],
+      "result_sha256": "9f6ff0c6a92a05a5ad78c6f599844bc9ded4ff35f4e389eb7ca63b126dbbedaf"
+    }
+  ],
+  "reference_source_sha256": "17f077169d7b3ece2109ae6ff567a5a4bad05b1663371fadd04c9b75e98d3d90"
+}

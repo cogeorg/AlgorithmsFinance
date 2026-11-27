@@ -1,0 +1,14 @@
+{
+  "seconds": 2.17692712508142,
+  "put_value": 20716.75407125397,
+  "first_exercise": {
+    "t": 5502,
+    "timestamp_utc": "2022-06-18T06:00:00+00:00",
+    "observed_price": 19439.26,
+    "boundary": 19823.099264757802,
+    "payoff": 42121.229999999996,
+    "at_expiry": false
+  },
+  "repeats": 1,
+  "tracing_enabled": false
+}

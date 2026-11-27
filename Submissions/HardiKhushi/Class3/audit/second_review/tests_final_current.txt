@@ -1,0 +1,57 @@
+test_changed_table_is_rejected_even_with_updated_hash (test_assets.AssetBatchTests.test_changed_table_is_rejected_even_with_updated_hash) ... ok
+test_complete_batch_matches_scalar_prices (test_assets.AssetBatchTests.test_complete_batch_matches_scalar_prices) ... ok
+test_duplicate_asset_is_rejected_before_output (test_assets.AssetBatchTests.test_duplicate_asset_is_rejected_before_output) ... ok
+test_missing_price_is_rejected (test_assets.AssetBatchTests.test_missing_price_is_rejected) ... ok
+test_boundary_is_invariant_to_currency_scale (test_audit_regressions.AuditRegressions.test_boundary_is_invariant_to_currency_scale) ... ok
+test_calibration_reports_extreme_returns_as_value_error (test_audit_regressions.AuditRegressions.test_calibration_reports_extreme_returns_as_value_error) ... ok
+test_negative_rate_near_indifference_does_not_trigger_exercise (test_audit_regressions.AuditRegressions.test_negative_rate_near_indifference_does_not_trigger_exercise) ... ok
+test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node (test_audit_regressions.AuditRegressions.test_reciprocal_tree_does_not_exercise_worthless_atm_expiry_node) ... ok
+test_rejects_misaligned_price_window (test_audit_regressions.AuditRegressions.test_rejects_misaligned_price_window) ... ok
+test_runner_labels_the_actual_asset (test_audit_regressions.AuditRegressions.test_runner_labels_the_actual_asset) ... ok
+test_safe_nodes_do_not_overflow_during_initialization (test_audit_regressions.AuditRegressions.test_safe_nodes_do_not_overflow_during_initialization) ... ok
+test_unsafe_run_does_not_leave_a_results_directory (test_audit_regressions.AuditRegressions.test_unsafe_run_does_not_leave_a_results_directory) ... ok
+test_expiry_only (test_exercise.BoundaryTests.test_expiry_only) ... ok
+test_matches_exact_full_tree_policies_and_original_prices (test_exercise.BoundaryTests.test_matches_exact_full_tree_policies_and_original_prices) ... ok
+test_no_worthless_exercise_ties (test_exercise.BoundaryTests.test_no_worthless_exercise_ties) ... ok
+test_rejects_numerically_unsafe_tree_before_allocation (test_exercise.BoundaryTests.test_rejects_numerically_unsafe_tree_before_allocation) ... ok
+test_slide_boundary (test_exercise.BoundaryTests.test_slide_boundary) ... ok
+test_first_crossing_and_equality (test_exercise.ObservedPathTests.test_first_crossing_and_equality) ... ok
+test_never_and_expiry_crossing (test_exercise.ObservedPathTests.test_never_and_expiry_crossing) ... ok
+test_rejects_invalid_boundary (test_exercise.ObservedPathTests.test_rejects_invalid_boundary) ... ok
+test_calibration_against_hand_computed_sample_variance (test_market_data.MarketDataTests.test_calibration_against_hand_computed_sample_variance) ... ok
+test_full_file_uses_all_rows (test_market_data.MarketDataTests.test_full_file_uses_all_rows) ... ok
+test_invalid_closes_even_outside_selected_window (test_market_data.MarketDataTests.test_invalid_closes_even_outside_selected_window) ... ok
+test_last_n_plus_one_prices_and_provenance (test_market_data.MarketDataTests.test_last_n_plus_one_prices_and_provenance) ... ok
+test_missing_hour_is_reported_and_elapsed_time_used (test_market_data.MarketDataTests.test_missing_hour_is_reported_and_elapsed_time_used) ... ok
+test_rejects_bad_columns_and_rows (test_market_data.MarketDataTests.test_rejects_bad_columns_and_rows) ... ok
+test_rejects_insufficient_data_and_invalid_period_counts (test_market_data.MarketDataTests.test_rejects_insufficient_data_and_invalid_period_counts) ... ok
+test_rejects_invalid_or_unordered_dates (test_market_data.MarketDataTests.test_rejects_invalid_or_unordered_dates) ... ok
+test_rejects_zero_volatility_and_invalid_interest_factors (test_market_data.MarketDataTests.test_rejects_zero_volatility_and_invalid_interest_factors) ... ok
+test_exact_policies_and_scalar_agreement (test_numpy_pricer.NumpyPricerTests.test_exact_policies_and_scalar_agreement) ... ok
+test_price_only_zero_strike_and_expiry (test_numpy_pricer.NumpyPricerTests.test_price_only_zero_strike_and_expiry) ... ok
+test_rejects_invalid_and_unsafe_inputs (test_numpy_pricer.NumpyPricerTests.test_rejects_invalid_and_unsafe_inputs) ... ok
+test_matches_exact_independent_trees (test_price_american_put.AmericanPutTests.test_matches_exact_independent_trees) ... ok
+test_rejects_invalid_model_parameters (test_price_american_put.AmericanPutTests.test_rejects_invalid_model_parameters) ... ok
+test_rejects_invalid_period_counts (test_price_american_put.AmericanPutTests.test_rejects_invalid_period_counts) ... ok
+test_slide_example (test_price_american_put.AmericanPutTests.test_slide_example) ... ok
+test_zero_periods_is_current_payoff (test_price_american_put.AmericanPutTests.test_zero_periods_is_current_payoff) ... ok
+test_zero_strike_is_worthless (test_price_american_put.AmericanPutTests.test_zero_strike_is_worthless) ... ok
+test_caller_mutation_cannot_invalidate_a_price_window (test_second_review.SecondReviewTests.test_caller_mutation_cannot_invalidate_a_price_window) ... ok
+test_changed_summary_is_rejected_even_after_hash_update (test_second_review.SecondReviewTests.test_changed_summary_is_rejected_even_after_hash_update) ... ok
+test_delivered_summary_matches_all_four_measured_sources (test_second_review.SecondReviewTests.test_delivered_summary_matches_all_four_measured_sources) ... ok
+test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise (test_second_review.SecondReviewTests.test_exact_root_payoff_is_not_filtered_as_stock_rounding_noise) ... ok
+test_expiry_only_subnormal_prices_are_supported (test_second_review.SecondReviewTests.test_expiry_only_subnormal_prices_are_supported) ... ok
+test_non_bitcoin_console_unit_matches_the_actual_asset (test_second_review.SecondReviewTests.test_non_bitcoin_console_unit_matches_the_actual_asset) ... ok
+test_numerical_checker_cannot_verify_zero_contracts (test_second_review.SecondReviewTests.test_numerical_checker_cannot_verify_zero_contracts) ... ok
+test_summary_rejects_full_file_batch_reused_as_one_year (test_second_review.SecondReviewTests.test_summary_rejects_full_file_batch_reused_as_one_year) ... ok
+test_summary_requires_the_completed_two_horizon_run (test_second_review.SecondReviewTests.test_summary_requires_the_completed_two_horizon_run) ... ok
+test_tiny_positive_expiry_payoff_has_an_exercise_node (test_second_review.SecondReviewTests.test_tiny_positive_expiry_payoff_has_an_exercise_node) ... ok
+test_rejects_changed_crossing_even_with_updated_hash (test_verify_results.VerificationTests.test_rejects_changed_crossing_even_with_updated_hash) ... ok
+test_rejects_changed_reported_price (test_verify_results.VerificationTests.test_rejects_changed_reported_price) ... ok
+test_rejects_unavailable_source_hash (test_verify_results.VerificationTests.test_rejects_unavailable_source_hash) ... ok
+test_valid_run (test_verify_results.VerificationTests.test_valid_run) ... ok
+
+----------------------------------------------------------------------
+Ran 52 tests in 9.436s
+
+OK

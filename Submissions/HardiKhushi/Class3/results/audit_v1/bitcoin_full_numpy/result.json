@@ -1,0 +1,62 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-11-27T12:23:36.262177+00:00",
+  "asset": "BTCUSDT",
+  "assets": 1,
+  "engine": "numpy",
+  "numpy_version": "2.5.3",
+  "model": {
+    "spot": 61560.49,
+    "strike": 61560.49,
+    "steps": 43822,
+    "mean_log_return": 5.278522903070096e-06,
+    "log_return_std": 0.005396058959060922,
+    "annual_rate": 0.04,
+    "years": 5.002625570776256,
+    "up": 1.0054106439071515,
+    "down": 0.9946184736157904,
+    "gross_rate": 1.0000045663246704,
+    "probability_up": 0.49907410312005984
+  },
+  "put_value": 20716.754071249332,
+  "first_exercise": {
+    "t": 5502,
+    "timestamp_utc": "2022-06-18T06:00:00+00:00",
+    "observed_price": 19439.26,
+    "boundary": 19823.09926475834,
+    "payoff": 42121.229999999996,
+    "at_expiry": false
+  },
+  "seconds": 3.846327875042334,
+  "peak_traced_bytes": 3602862,
+  "peak_traced_KiB": 3518.419921875,
+  "boundary_entries": 43823,
+  "python": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "source_sha256": {
+    "run_bitcoin.py": "39e671d91444445badb69c3e7955cfb3e39f8a5a0cd1e474e07519d6b0bbf408",
+    "price_american_put.py": "259bd37137c654303908e829b57081c474b0f9f65cea23e6e54bcfcbdbae169c",
+    "price_american_put_numpy.py": "e6351d7860c4efe70daa9f5b576bd18c0be3fb1024ade4c687e80acfc77dce88",
+    "tree_model.py": "db204d05826c072a5e6776414cc2b8e7d0c7c1d9a99aceccfbc128fc7f0de8bc",
+    "market_data.py": "066a0fc1708e921d88c596615b9a8b6a7a205a94487662409a9018cf9a47f29d",
+    "exercise.py": "28f56befbf2a11a78ccc00b2bf992acad6b582eec39f3468de1b68c7654e1462"
+  },
+  "data_sha256": "2262b9e97986e964107c9d59085d4403ef90ea63ffa58ba73df3740587b59df6",
+  "protocol": {
+    "timing": "one perf_counter call; includes tree arrays, boundary and numerical-range checks; excludes CSV loading, calibration, path comparison and output files",
+    "memory": "separate fresh tracemalloc call; includes new arrays, boundary and output; excludes pre-existing inputs and first-call output; not process RSS",
+    "boundary": "highest positive-payoff tree node; strict exercise >= continuation except indifference tolerance at R=1; no early exercise at R<1",
+    "tolerance": "payoff noise cutoff=32 * float epsilon * strike, no absolute floor; tie tolerance only at R=1; price always max(exercise, continuation)",
+    "node_prices": "reconstructed from log prices each row; when down == 1/up, enforce exact reciprocal log moves and exact central ATM nodes",
+    "expiry": "highest positive-payoff tree node, using the same tolerance; no interpolation to strike",
+    "path_comparison": "first observed P[t] <= boundary[t], including expiry; calibration uses the full window in hindsight; payoff excludes initial premium",
+    "samples": "one timing call and one separate memory call; no medians or confidence intervals"
+  },
+  "result_file_sha256": {
+    "boundary.csv": "20edc99e55756ea5a8f9344e3fae4ec86a8543d1ab569b1c33d0d9c63225b81e",
+    "inputs.json": "a1e714c7c555de1a432db2030b8d459867b6980af785781c8a91530b3ec33b14",
+    "memory.json": "0e9e55b0f88f158ef802fd770c80bdd0d345e44e0a0cf2608f37e80f23c580e9",
+    "summary.csv": "076b8727324ba62bebb430fc2f55c62ec9b11ee14e4e5fa5d32681b9dc72c4c4",
+    "timing.json": "84c674d865bfe279286efd273617b79a584a23117b5eac8dd54c78dac53d940e"
+  }
+}
