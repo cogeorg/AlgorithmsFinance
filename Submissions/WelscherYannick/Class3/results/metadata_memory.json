@@ -1,0 +1,18 @@
+{
+  "memory": {
+    "finished_utc": "2026-11-27T12:37:19+00:00",
+    "python": "3.13.15",
+    "numpy": "2.5.5",
+    "machine": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "git_commit_at_run": "0325907",
+    "source_sha256_16": {
+      "american_put.py": "e7b57126688fe5da",
+      "calibrate.py": "ce41b275538427fd",
+      "full_tree.py": "44fc1b242bb67499",
+      "lab.py": "2f46b690e3c36940",
+      "measure.py": "043306fdd378baac",
+      "plot.py": "3a9c72b5265851f4"
+    }
+  }
+}
