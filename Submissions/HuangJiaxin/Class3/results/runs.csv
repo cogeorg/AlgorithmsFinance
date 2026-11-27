@@ -1,0 +1,11 @@
+run,version,N,assets,repeat,seconds,peak_traced_bytes,note
+bitcoin_1y,numpy,8760,1,0,0.17866787500679493,579777,
+bitcoin_1y,numpy,8760,1,1,0.19400150002911687,579777,
+bitcoin_1y,numpy,8760,1,2,0.18225904199061915,579777,
+bitcoin_1y,plain,8760,1,0,5.851127166999504,838576,
+bitcoin_5y,numpy,43822,1,0,3.189810666954145,2543405,
+bitcoin_5y,numpy,43822,1,1,3.088232042035088,2543405,
+bitcoin_5y,numpy,43822,1,2,2.966141625016462,2543405,
+bitcoin_5y,plain,43822,1,0,130.82484137499705,,plain Python timed once; memory not traced at five years
+assets_1y,numpy,8760,40,0,9.112421792000532,785913,American and European put per asset; reading 40 files took 1.89 s (not included)
+assets_5y,numpy,43822,40,0,158.41765770799248,3310309,American and European put per asset; reading 40 files took 2.01 s (not included)

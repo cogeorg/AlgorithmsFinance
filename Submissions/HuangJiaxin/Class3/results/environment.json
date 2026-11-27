@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-11-27T12:27:12+00:00",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "cpu_count": 8,
+  "numpy": "2.5.5",
+  "code_commit": "2f6683c",
+  "repeats_single_asset": 3,
+  "rate": 0.04,
+  "year_length_days": 365.25,
+  "one_year_N": 8760,
+  "quick": false,
+  "exercise_rule": "exercise if K - S > 0 and K - S >= continuation value",
+  "first_exercise_rule": "first t >= 1 with P_t <= b_t and K - P_t > 0"
+}

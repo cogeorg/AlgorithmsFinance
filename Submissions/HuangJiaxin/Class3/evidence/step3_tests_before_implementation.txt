@@ -1,0 +1,3804 @@
+.FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 44%]
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 88%]
+FFFFFFFFFFFFFFFF...                                                      [100%]
+=================================== FAILURES ===================================
+__________________________ test_slide_example[plain] ___________________________
+
+name = 'plain'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_slide_example(name):
+>       v, b = PRICERS[name](**TOY)
+
+test_put.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+__________________________ test_slide_example[numpy] ___________________________
+
+name = 'numpy'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_slide_example(name):
+>       v, b = PRICERS[name](**TOY)
+
+test_put.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+________________________ test_slide_example[full_tree] _________________________
+
+name = 'full_tree'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_slide_example(name):
+>       v, b = PRICERS[name](**TOY)
+
+test_put.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+______________________ test_slide_example_european[plain] ______________________
+
+name = 'plain'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_slide_example_european(name):
+>       v, b = PRICERS[name](**TOY, american=False)
+
+test_put.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, american = False
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________________ test_slide_example_european[numpy] ______________________
+
+name = 'numpy'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_slide_example_european(name):
+>       v, b = PRICERS[name](**TOY, american=False)
+
+test_put.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, american = False
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+____________________ test_slide_example_european[full_tree] ____________________
+
+name = 'full_tree'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_slide_example_european(name):
+>       v, b = PRICERS[name](**TOY, american=False)
+
+test_put.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 2, american = False
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_________________ test_zero_periods_is_the_payoff[90-10-plain] _________________
+
+name = 'plain', S0 = 90, want = 10
+
+    @pytest.mark.parametrize("name", PRICERS)
+    @pytest.mark.parametrize("S0, want", [(90, 10), (110, 0), (100, 0)])
+    def test_zero_periods_is_the_payoff(name, S0, want):
+>       v, b = PRICERS[name](S0=S0, K=100, u=1.2, d=0.8, R=1.05, N=0)
+
+test_put.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 90, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 0, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_________________ test_zero_periods_is_the_payoff[90-10-numpy] _________________
+
+name = 'numpy', S0 = 90, want = 10
+
+    @pytest.mark.parametrize("name", PRICERS)
+    @pytest.mark.parametrize("S0, want", [(90, 10), (110, 0), (100, 0)])
+    def test_zero_periods_is_the_payoff(name, S0, want):
+>       v, b = PRICERS[name](S0=S0, K=100, u=1.2, d=0.8, R=1.05, N=0)
+
+test_put.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 90, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 0, american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______________ test_zero_periods_is_the_payoff[90-10-full_tree] _______________
+
+name = 'full_tree', S0 = 90, want = 10
+
+    @pytest.mark.parametrize("name", PRICERS)
+    @pytest.mark.parametrize("S0, want", [(90, 10), (110, 0), (100, 0)])
+    def test_zero_periods_is_the_payoff(name, S0, want):
+>       v, b = PRICERS[name](S0=S0, K=100, u=1.2, d=0.8, R=1.05, N=0)
+
+test_put.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 90, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 0, american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_________________ test_zero_periods_is_the_payoff[110-0-plain] _________________
+
+name = 'plain', S0 = 110, want = 0
+
+    @pytest.mark.parametrize("name", PRICERS)
+    @pytest.mark.parametrize("S0, want", [(90, 10), (110, 0), (100, 0)])
+    def test_zero_periods_is_the_payoff(name, S0, want):
+>       v, b = PRICERS[name](S0=S0, K=100, u=1.2, d=0.8, R=1.05, N=0)
+
+test_put.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 110, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 0, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_________________ test_zero_periods_is_the_payoff[110-0-numpy] _________________
+
+name = 'numpy', S0 = 110, want = 0
+
+    @pytest.mark.parametrize("name", PRICERS)
+    @pytest.mark.parametrize("S0, want", [(90, 10), (110, 0), (100, 0)])
+    def test_zero_periods_is_the_payoff(name, S0, want):
+>       v, b = PRICERS[name](S0=S0, K=100, u=1.2, d=0.8, R=1.05, N=0)
+
+test_put.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 110, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 0, american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______________ test_zero_periods_is_the_payoff[110-0-full_tree] _______________
+
+name = 'full_tree', S0 = 110, want = 0
+
+    @pytest.mark.parametrize("name", PRICERS)
+    @pytest.mark.parametrize("S0, want", [(90, 10), (110, 0), (100, 0)])
+    def test_zero_periods_is_the_payoff(name, S0, want):
+>       v, b = PRICERS[name](S0=S0, K=100, u=1.2, d=0.8, R=1.05, N=0)
+
+test_put.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 110, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 0, american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_________________ test_zero_periods_is_the_payoff[100-0-plain] _________________
+
+name = 'plain', S0 = 100, want = 0
+
+    @pytest.mark.parametrize("name", PRICERS)
+    @pytest.mark.parametrize("S0, want", [(90, 10), (110, 0), (100, 0)])
+    def test_zero_periods_is_the_payoff(name, S0, want):
+>       v, b = PRICERS[name](S0=S0, K=100, u=1.2, d=0.8, R=1.05, N=0)
+
+test_put.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 0, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_________________ test_zero_periods_is_the_payoff[100-0-numpy] _________________
+
+name = 'numpy', S0 = 100, want = 0
+
+    @pytest.mark.parametrize("name", PRICERS)
+    @pytest.mark.parametrize("S0, want", [(90, 10), (110, 0), (100, 0)])
+    def test_zero_periods_is_the_payoff(name, S0, want):
+>       v, b = PRICERS[name](S0=S0, K=100, u=1.2, d=0.8, R=1.05, N=0)
+
+test_put.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 0, american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______________ test_zero_periods_is_the_payoff[100-0-full_tree] _______________
+
+name = 'full_tree', S0 = 100, want = 0
+
+    @pytest.mark.parametrize("name", PRICERS)
+    @pytest.mark.parametrize("S0, want", [(90, 10), (110, 0), (100, 0)])
+    def test_zero_periods_is_the_payoff(name, S0, want):
+>       v, b = PRICERS[name](S0=S0, K=100, u=1.2, d=0.8, R=1.05, N=0)
+
+test_put.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 0, american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_____________________ test_zero_strike_is_worthless[plain] _____________________
+
+name = 'plain'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_zero_strike_is_worthless(name):
+>       v, b = PRICERS[name](S0=100, K=0, u=1.2, d=0.8, R=1.05, N=5)
+
+test_put.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 0, u = 1.2, d = 0.8, R = 1.05, N = 5, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_____________________ test_zero_strike_is_worthless[numpy] _____________________
+
+name = 'numpy'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_zero_strike_is_worthless(name):
+>       v, b = PRICERS[name](S0=100, K=0, u=1.2, d=0.8, R=1.05, N=5)
+
+test_put.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 0, u = 1.2, d = 0.8, R = 1.05, N = 5, american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+___________________ test_zero_strike_is_worthless[full_tree] ___________________
+
+name = 'full_tree'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_zero_strike_is_worthless(name):
+>       v, b = PRICERS[name](S0=100, K=0, u=1.2, d=0.8, R=1.05, N=5)
+
+test_put.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 0, u = 1.2, d = 0.8, R = 1.05, N = 5, american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_______________ test_deep_in_the_money_exercises_at_once[plain] ________________
+
+name = 'plain'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_deep_in_the_money_exercises_at_once(name):
+>       v, b = PRICERS[name](S0=1, K=100, u=1.2, d=0.8, R=1.05, N=6)
+
+test_put.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 1, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 6, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_______________ test_deep_in_the_money_exercises_at_once[numpy] ________________
+
+name = 'numpy'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_deep_in_the_money_exercises_at_once(name):
+>       v, b = PRICERS[name](S0=1, K=100, u=1.2, d=0.8, R=1.05, N=6)
+
+test_put.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 1, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 6, american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_____________ test_deep_in_the_money_exercises_at_once[full_tree] ______________
+
+name = 'full_tree'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_deep_in_the_money_exercises_at_once(name):
+>       v, b = PRICERS[name](S0=1, K=100, u=1.2, d=0.8, R=1.05, N=6)
+
+test_put.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 1, K = 100, u = 1.2, d = 0.8, R = 1.05, N = 6, american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_________ test_boundary_at_expiry_is_highest_price_below_strike[plain] _________
+
+name = 'plain'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_boundary_at_expiry_is_highest_price_below_strike(name):
+>       _, b = PRICERS[name](S0=100, K=100, u=1.1, d=1 / 1.1, R=1.01, N=7)
+
+test_put.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.1, d = 0.9090909090909091, R = 1.01, N = 7
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_________ test_boundary_at_expiry_is_highest_price_below_strike[numpy] _________
+
+name = 'numpy'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_boundary_at_expiry_is_highest_price_below_strike(name):
+>       _, b = PRICERS[name](S0=100, K=100, u=1.1, d=1 / 1.1, R=1.01, N=7)
+
+test_put.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.1, d = 0.9090909090909091, R = 1.01, N = 7
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______ test_boundary_at_expiry_is_highest_price_below_strike[full_tree] _______
+
+name = 'full_tree'
+
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_boundary_at_expiry_is_highest_price_below_strike(name):
+>       _, b = PRICERS[name](S0=100, K=100, u=1.1, d=1 / 1.1, R=1.01, N=7)
+
+test_put.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.1, d = 0.9090909090909091, R = 1.01, N = 7
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_______________ test_random_small_trees_match_reference[plain-0] _______________
+
+name = 'plain', seed = 0
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 150, u = 1.5, d = 0.6666666666666666, R = 1.1258088455103397
+N = 8, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_______________ test_random_small_trees_match_reference[plain-1] _______________
+
+name = 'plain', seed = 1
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 1.1, d = 0.9090909090909091, R = 1.0794440145495334, N = 2
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_______________ test_random_small_trees_match_reference[plain-2] _______________
+
+name = 'plain', seed = 2
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 150, u = 1.05, d = 0.8, R = 1.0409558951405302, N = 5
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_______________ test_random_small_trees_match_reference[plain-3] _______________
+
+name = 'plain', seed = 3
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 100, u = 1.1, d = 0.9090909090909091, R = 1.0129988145328206
+N = 2, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_______________ test_random_small_trees_match_reference[plain-4] _______________
+
+name = 'plain', seed = 4
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.1, d = 0.9, R = 1.0474610732579737, N = 1
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_______________ test_random_small_trees_match_reference[plain-5] _______________
+
+name = 'plain', seed = 5
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 150, u = 2.0, d = 0.8, R = 1.2377833567475869, N = 9
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_______________ test_random_small_trees_match_reference[plain-6] _______________
+
+name = 'plain', seed = 6
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 2.0, d = 0.5, R = 1.1450768502885595, N = 1
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_______________ test_random_small_trees_match_reference[plain-7] _______________
+
+name = 'plain', seed = 7
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.25, d = 0.8, R = 1.098371568259728, N = 9
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_______________ test_random_small_trees_match_reference[plain-8] _______________
+
+name = 'plain', seed = 8
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.1, d = 0.9, R = 1.01259412587657, N = 2, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_______________ test_random_small_trees_match_reference[plain-9] _______________
+
+name = 'plain', seed = 9
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 150, u = 1.5, d = 0.6666666666666666, R = 1.0799464786180066, N = 1
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-10] _______________
+
+name = 'plain', seed = 10
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 2.0, d = 0.9, R = 1.1728914899090932, N = 8
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-11] _______________
+
+name = 'plain', seed = 11
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.5, d = 0.6666666666666666, R = 1.2562163526084018
+N = 9, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-12] _______________
+
+name = 'plain', seed = 12
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 1.5, d = 0.8, R = 1.0427232454893924, N = 8
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-13] _______________
+
+name = 'plain', seed = 13
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.25, d = 0.5, R = 1.1623852211221013, N = 4
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-14] _______________
+
+name = 'plain', seed = 14
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.05, d = 0.95, R = 1.0370295370249814, N = 5
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-15] _______________
+
+name = 'plain', seed = 15
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.1, d = 0.9090909090909091, R = 1.0157274584792335, N = 1
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-16] _______________
+
+name = 'plain', seed = 16
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 1.25, d = 0.8, R = 1.10387950876215, N = 7
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-17] _______________
+
+name = 'plain', seed = 17
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 2.0, d = 0.8, R = 1.287191888045407, N = 9
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-18] _______________
+
+name = 'plain', seed = 18
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 1.1, d = 0.9, R = 1.0331879546432658, N = 8
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-19] _______________
+
+name = 'plain', seed = 19
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.05, d = 0.95, R = 1.0255507950872307, N = 7
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-20] _______________
+
+name = 'plain', seed = 20
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.1, d = 0.9090909090909091, R = 1.0863536939954945, N = 1
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-21] _______________
+
+name = 'plain', seed = 21
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 1.1, d = 0.9, R = 1.062901494106027, N = 8
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-22] _______________
+
+name = 'plain', seed = 22
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 150, u = 1.1, d = 0.9, R = 1.0183226855600123, N = 6
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-23] _______________
+
+name = 'plain', seed = 23
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 100, u = 1.25, d = 0.8, R = 1.0208957634631572, N = 7
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-24] _______________
+
+name = 'plain', seed = 24
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.5, d = 0.6666666666666666, R = 1.0546767150107053, N = 3
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-25] _______________
+
+name = 'plain', seed = 25
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.5, d = 0.6666666666666666, R = 1.2522332743712234, N = 5
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-26] _______________
+
+name = 'plain', seed = 26
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.1, d = 0.9090909090909091, R = 1.0428700824835515, N = 3
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-27] _______________
+
+name = 'plain', seed = 27
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.5, d = 0.6666666666666666, R = 1.2861613490944968, N = 2
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-28] _______________
+
+name = 'plain', seed = 28
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.05, d = 0.95, R = 1.0267825547211324, N = 4
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-29] _______________
+
+name = 'plain', seed = 29
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 2.0, d = 0.8, R = 1.0260241759273567, N = 7
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-30] _______________
+
+name = 'plain', seed = 30
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 150, u = 2.0, d = 0.5, R = 1.1827288981808577, N = 4
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-31] _______________
+
+name = 'plain', seed = 31
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.05, d = 0.9, R = 1.0069878210152758, N = 2
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-32] _______________
+
+name = 'plain', seed = 32
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.05, d = 0.95, R = 1.0071731437923237, N = 8
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-33] _______________
+
+name = 'plain', seed = 33
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 2.0, d = 0.5, R = 1.2443024537191105, N = 9
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-34] _______________
+
+name = 'plain', seed = 34
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 2.0, d = 0.5, R = 1.252170202744316, N = 6
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-35] _______________
+
+name = 'plain', seed = 35
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 2.0, d = 0.5, R = 1.2234699814205308, N = 7
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-36] _______________
+
+name = 'plain', seed = 36
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 1.25, d = 0.8, R = 1.2388567115803115, N = 1
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-37] _______________
+
+name = 'plain', seed = 37
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 2.0, d = 0.5, R = 1.1887172478268777, N = 9
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-38] _______________
+
+name = 'plain', seed = 38
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 100, u = 1.5, d = 0.6666666666666666, R = 1.0198965862513796
+N = 6, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_random_small_trees_match_reference[plain-39] _______________
+
+name = 'plain', seed = 39
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 150, u = 1.1, d = 0.9090909090909091, R = 1.019391465093281, N = 1
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+_______________ test_random_small_trees_match_reference[numpy-0] _______________
+
+name = 'numpy', seed = 0
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 150, u = 1.5, d = 0.6666666666666666, R = 1.1258088455103397
+N = 8, american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______________ test_random_small_trees_match_reference[numpy-1] _______________
+
+name = 'numpy', seed = 1
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 1.1, d = 0.9090909090909091, R = 1.0794440145495334, N = 2
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______________ test_random_small_trees_match_reference[numpy-2] _______________
+
+name = 'numpy', seed = 2
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 150, u = 1.05, d = 0.8, R = 1.0409558951405302, N = 5
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______________ test_random_small_trees_match_reference[numpy-3] _______________
+
+name = 'numpy', seed = 3
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 100, u = 1.1, d = 0.9090909090909091, R = 1.0129988145328206
+N = 2, american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______________ test_random_small_trees_match_reference[numpy-4] _______________
+
+name = 'numpy', seed = 4
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.1, d = 0.9, R = 1.0474610732579737, N = 1
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______________ test_random_small_trees_match_reference[numpy-5] _______________
+
+name = 'numpy', seed = 5
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 150, u = 2.0, d = 0.8, R = 1.2377833567475869, N = 9
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______________ test_random_small_trees_match_reference[numpy-6] _______________
+
+name = 'numpy', seed = 6
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 2.0, d = 0.5, R = 1.1450768502885595, N = 1
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______________ test_random_small_trees_match_reference[numpy-7] _______________
+
+name = 'numpy', seed = 7
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.25, d = 0.8, R = 1.098371568259728, N = 9
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______________ test_random_small_trees_match_reference[numpy-8] _______________
+
+name = 'numpy', seed = 8
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.1, d = 0.9, R = 1.01259412587657, N = 2, american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_______________ test_random_small_trees_match_reference[numpy-9] _______________
+
+name = 'numpy', seed = 9
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 150, u = 1.5, d = 0.6666666666666666, R = 1.0799464786180066, N = 1
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-10] _______________
+
+name = 'numpy', seed = 10
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 2.0, d = 0.9, R = 1.1728914899090932, N = 8
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-11] _______________
+
+name = 'numpy', seed = 11
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.5, d = 0.6666666666666666, R = 1.2562163526084018
+N = 9, american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-12] _______________
+
+name = 'numpy', seed = 12
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 1.5, d = 0.8, R = 1.0427232454893924, N = 8
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-13] _______________
+
+name = 'numpy', seed = 13
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.25, d = 0.5, R = 1.1623852211221013, N = 4
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-14] _______________
+
+name = 'numpy', seed = 14
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.05, d = 0.95, R = 1.0370295370249814, N = 5
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-15] _______________
+
+name = 'numpy', seed = 15
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.1, d = 0.9090909090909091, R = 1.0157274584792335, N = 1
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-16] _______________
+
+name = 'numpy', seed = 16
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 1.25, d = 0.8, R = 1.10387950876215, N = 7
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-17] _______________
+
+name = 'numpy', seed = 17
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 2.0, d = 0.8, R = 1.287191888045407, N = 9
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-18] _______________
+
+name = 'numpy', seed = 18
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 1.1, d = 0.9, R = 1.0331879546432658, N = 8
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-19] _______________
+
+name = 'numpy', seed = 19
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.05, d = 0.95, R = 1.0255507950872307, N = 7
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-20] _______________
+
+name = 'numpy', seed = 20
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.1, d = 0.9090909090909091, R = 1.0863536939954945, N = 1
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-21] _______________
+
+name = 'numpy', seed = 21
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 1.1, d = 0.9, R = 1.062901494106027, N = 8
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-22] _______________
+
+name = 'numpy', seed = 22
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 150, u = 1.1, d = 0.9, R = 1.0183226855600123, N = 6
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-23] _______________
+
+name = 'numpy', seed = 23
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 100, u = 1.25, d = 0.8, R = 1.0208957634631572, N = 7
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-24] _______________
+
+name = 'numpy', seed = 24
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.5, d = 0.6666666666666666, R = 1.0546767150107053, N = 3
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-25] _______________
+
+name = 'numpy', seed = 25
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.5, d = 0.6666666666666666, R = 1.2522332743712234, N = 5
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-26] _______________
+
+name = 'numpy', seed = 26
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.1, d = 0.9090909090909091, R = 1.0428700824835515, N = 3
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-27] _______________
+
+name = 'numpy', seed = 27
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.5, d = 0.6666666666666666, R = 1.2861613490944968, N = 2
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-28] _______________
+
+name = 'numpy', seed = 28
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.05, d = 0.95, R = 1.0267825547211324, N = 4
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-29] _______________
+
+name = 'numpy', seed = 29
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 2.0, d = 0.8, R = 1.0260241759273567, N = 7
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-30] _______________
+
+name = 'numpy', seed = 30
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 150, u = 2.0, d = 0.5, R = 1.1827288981808577, N = 4
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-31] _______________
+
+name = 'numpy', seed = 31
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.05, d = 0.9, R = 1.0069878210152758, N = 2
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-32] _______________
+
+name = 'numpy', seed = 32
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.05, d = 0.95, R = 1.0071731437923237, N = 8
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-33] _______________
+
+name = 'numpy', seed = 33
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 2.0, d = 0.5, R = 1.2443024537191105, N = 9
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-34] _______________
+
+name = 'numpy', seed = 34
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 2.0, d = 0.5, R = 1.252170202744316, N = 6
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-35] _______________
+
+name = 'numpy', seed = 35
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 2.0, d = 0.5, R = 1.2234699814205308, N = 7
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-36] _______________
+
+name = 'numpy', seed = 36
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 1.25, d = 0.8, R = 1.2388567115803115, N = 1
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-37] _______________
+
+name = 'numpy', seed = 37
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 2.0, d = 0.5, R = 1.1887172478268777, N = 9
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-38] _______________
+
+name = 'numpy', seed = 38
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 100, u = 1.5, d = 0.6666666666666666, R = 1.0198965862513796
+N = 6, american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+______________ test_random_small_trees_match_reference[numpy-39] _______________
+
+name = 'numpy', seed = 39
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 150, u = 1.1, d = 0.9090909090909091, R = 1.019391465093281, N = 1
+american = True
+
+    def price_numpy(S0, K, u, d, R, N, american=True):
+        """Two arrays, numpy vectorized over the nodes of one date. Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:11: NotImplementedError
+_____________ test_random_small_trees_match_reference[full_tree-0] _____________
+
+name = 'full_tree', seed = 0
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 150, u = 1.5, d = 0.6666666666666666, R = 1.1258088455103397
+N = 8, american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_____________ test_random_small_trees_match_reference[full_tree-1] _____________
+
+name = 'full_tree', seed = 1
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 1.1, d = 0.9090909090909091, R = 1.0794440145495334, N = 2
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_____________ test_random_small_trees_match_reference[full_tree-2] _____________
+
+name = 'full_tree', seed = 2
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 150, u = 1.05, d = 0.8, R = 1.0409558951405302, N = 5
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_____________ test_random_small_trees_match_reference[full_tree-3] _____________
+
+name = 'full_tree', seed = 3
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 100, u = 1.1, d = 0.9090909090909091, R = 1.0129988145328206
+N = 2, american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_____________ test_random_small_trees_match_reference[full_tree-4] _____________
+
+name = 'full_tree', seed = 4
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.1, d = 0.9, R = 1.0474610732579737, N = 1
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_____________ test_random_small_trees_match_reference[full_tree-5] _____________
+
+name = 'full_tree', seed = 5
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 150, u = 2.0, d = 0.8, R = 1.2377833567475869, N = 9
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_____________ test_random_small_trees_match_reference[full_tree-6] _____________
+
+name = 'full_tree', seed = 6
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 2.0, d = 0.5, R = 1.1450768502885595, N = 1
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_____________ test_random_small_trees_match_reference[full_tree-7] _____________
+
+name = 'full_tree', seed = 7
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.25, d = 0.8, R = 1.098371568259728, N = 9
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_____________ test_random_small_trees_match_reference[full_tree-8] _____________
+
+name = 'full_tree', seed = 8
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.1, d = 0.9, R = 1.01259412587657, N = 2, american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+_____________ test_random_small_trees_match_reference[full_tree-9] _____________
+
+name = 'full_tree', seed = 9
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 150, u = 1.5, d = 0.6666666666666666, R = 1.0799464786180066, N = 1
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-10] _____________
+
+name = 'full_tree', seed = 10
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 2.0, d = 0.9, R = 1.1728914899090932, N = 8
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-11] _____________
+
+name = 'full_tree', seed = 11
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 1.5, d = 0.6666666666666666, R = 1.2562163526084018
+N = 9, american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-12] _____________
+
+name = 'full_tree', seed = 12
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 1.5, d = 0.8, R = 1.0427232454893924, N = 8
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-13] _____________
+
+name = 'full_tree', seed = 13
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.25, d = 0.5, R = 1.1623852211221013, N = 4
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-14] _____________
+
+name = 'full_tree', seed = 14
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.05, d = 0.95, R = 1.0370295370249814, N = 5
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-15] _____________
+
+name = 'full_tree', seed = 15
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.1, d = 0.9090909090909091, R = 1.0157274584792335, N = 1
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-16] _____________
+
+name = 'full_tree', seed = 16
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 1.25, d = 0.8, R = 1.10387950876215, N = 7
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-17] _____________
+
+name = 'full_tree', seed = 17
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 2.0, d = 0.8, R = 1.287191888045407, N = 9
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-18] _____________
+
+name = 'full_tree', seed = 18
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 1.1, d = 0.9, R = 1.0331879546432658, N = 8
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-19] _____________
+
+name = 'full_tree', seed = 19
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.05, d = 0.95, R = 1.0255507950872307, N = 7
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-20] _____________
+
+name = 'full_tree', seed = 20
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.1, d = 0.9090909090909091, R = 1.0863536939954945, N = 1
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-21] _____________
+
+name = 'full_tree', seed = 21
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 1.1, d = 0.9, R = 1.062901494106027, N = 8
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-22] _____________
+
+name = 'full_tree', seed = 22
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 150, u = 1.1, d = 0.9, R = 1.0183226855600123, N = 6
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-23] _____________
+
+name = 'full_tree', seed = 23
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 100, u = 1.25, d = 0.8, R = 1.0208957634631572, N = 7
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-24] _____________
+
+name = 'full_tree', seed = 24
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.5, d = 0.6666666666666666, R = 1.0546767150107053, N = 3
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-25] _____________
+
+name = 'full_tree', seed = 25
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.5, d = 0.6666666666666666, R = 1.2522332743712234, N = 5
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-26] _____________
+
+name = 'full_tree', seed = 26
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.1, d = 0.9090909090909091, R = 1.0428700824835515, N = 3
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-27] _____________
+
+name = 'full_tree', seed = 27
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.5, d = 0.6666666666666666, R = 1.2861613490944968, N = 2
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-28] _____________
+
+name = 'full_tree', seed = 28
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.05, d = 0.95, R = 1.0267825547211324, N = 4
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-29] _____________
+
+name = 'full_tree', seed = 29
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 2.0, d = 0.8, R = 1.0260241759273567, N = 7
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-30] _____________
+
+name = 'full_tree', seed = 30
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 150, u = 2.0, d = 0.5, R = 1.1827288981808577, N = 4
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-31] _____________
+
+name = 'full_tree', seed = 31
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.05, d = 0.9, R = 1.0069878210152758, N = 2
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-32] _____________
+
+name = 'full_tree', seed = 32
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 60, u = 1.05, d = 0.95, R = 1.0071731437923237, N = 8
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-33] _____________
+
+name = 'full_tree', seed = 33
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 2.0, d = 0.5, R = 1.2443024537191105, N = 9
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-34] _____________
+
+name = 'full_tree', seed = 34
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 2.0, d = 0.5, R = 1.252170202744316, N = 6
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-35] _____________
+
+name = 'full_tree', seed = 35
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 2.0, d = 0.5, R = 1.2234699814205308, N = 7
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-36] _____________
+
+name = 'full_tree', seed = 36
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 1.25, d = 0.8, R = 1.2388567115803115, N = 1
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-37] _____________
+
+name = 'full_tree', seed = 37
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 100, u = 2.0, d = 0.5, R = 1.1887172478268777, N = 9
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-38] _____________
+
+name = 'full_tree', seed = 38
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 100, u = 1.5, d = 0.6666666666666666, R = 1.0198965862513796
+N = 6, american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+____________ test_random_small_trees_match_reference[full_tree-39] _____________
+
+name = 'full_tree', seed = 39
+
+    @pytest.mark.parametrize("seed", range(40))
+    @pytest.mark.parametrize("name", PRICERS)
+    def test_random_small_trees_match_reference(name, seed):
+        case = random_case(random.Random(seed))
+        for american in (True, False):
+            want_v, want_b = exact_tree(**case, american=american)
+>           v, b = PRICERS[name](**case, american=american)
+
+test_put.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 150, u = 1.1, d = 0.9090909090909091, R = 1.019391465093281, N = 1
+american = True
+
+    def price_full_tree(S0, K, u, d, R, N, american=True):
+        """Stores every node of the tree (extra 2: memory grows like N^2)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:16: NotImplementedError
+________________ test_american_at_least_european_and_payoff[0] _________________
+
+seed = 0
+
+    @pytest.mark.parametrize("seed", range(10))
+    def test_american_at_least_european_and_payoff(seed):
+        case = random_case(random.Random(100 + seed))
+>       a, _ = put.price_plain(**case)
+
+test_put.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 100, u = 1.1, d = 0.5, R = 1.0698752581437756, N = 7
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+________________ test_american_at_least_european_and_payoff[1] _________________
+
+seed = 1
+
+    @pytest.mark.parametrize("seed", range(10))
+    def test_american_at_least_european_and_payoff(seed):
+        case = random_case(random.Random(100 + seed))
+>       a, _ = put.price_plain(**case)
+
+test_put.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 100, u = 2.0, d = 0.5, R = 1.2716141789444801, N = 8
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+________________ test_american_at_least_european_and_payoff[2] _________________
+
+seed = 2
+
+    @pytest.mark.parametrize("seed", range(10))
+    def test_american_at_least_european_and_payoff(seed):
+        case = random_case(random.Random(100 + seed))
+>       a, _ = put.price_plain(**case)
+
+test_put.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 150, u = 1.1, d = 0.9090909090909091, R = 1.0355297866313304
+N = 3, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+________________ test_american_at_least_european_and_payoff[3] _________________
+
+seed = 3
+
+    @pytest.mark.parametrize("seed", range(10))
+    def test_american_at_least_european_and_payoff(seed):
+        case = random_case(random.Random(100 + seed))
+>       a, _ = put.price_plain(**case)
+
+test_put.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 150, u = 1.5, d = 0.6666666666666666, R = 1.2082755615931564, N = 2
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+________________ test_american_at_least_european_and_payoff[4] _________________
+
+seed = 4
+
+    @pytest.mark.parametrize("seed", range(10))
+    def test_american_at_least_european_and_payoff(seed):
+        case = random_case(random.Random(100 + seed))
+>       a, _ = put.price_plain(**case)
+
+test_put.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 100, u = 1.05, d = 0.95, R = 1.0358901689126239, N = 6
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+________________ test_american_at_least_european_and_payoff[5] _________________
+
+seed = 5
+
+    @pytest.mark.parametrize("seed", range(10))
+    def test_american_at_least_european_and_payoff(seed):
+        case = random_case(random.Random(100 + seed))
+>       a, _ = put.price_plain(**case)
+
+test_put.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 150, u = 2.0, d = 0.5, R = 1.2845295009858386, N = 6
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+________________ test_american_at_least_european_and_payoff[6] _________________
+
+seed = 6
+
+    @pytest.mark.parametrize("seed", range(10))
+    def test_american_at_least_european_and_payoff(seed):
+        case = random_case(random.Random(100 + seed))
+>       a, _ = put.price_plain(**case)
+
+test_put.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100, K = 60, u = 1.5, d = 0.9, R = 1.0170431332308085, N = 4
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+________________ test_american_at_least_european_and_payoff[7] _________________
+
+seed = 7
+
+    @pytest.mark.parametrize("seed", range(10))
+    def test_american_at_least_european_and_payoff(seed):
+        case = random_case(random.Random(100 + seed))
+>       a, _ = put.price_plain(**case)
+
+test_put.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 150, u = 1.1, d = 0.9090909090909091, R = 1.0758899002928928
+N = 7, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+________________ test_american_at_least_european_and_payoff[8] _________________
+
+seed = 8
+
+    @pytest.mark.parametrize("seed", range(10))
+    def test_american_at_least_european_and_payoff(seed):
+        case = random_case(random.Random(100 + seed))
+>       a, _ = put.price_plain(**case)
+
+test_put.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 120, K = 100, u = 1.1, d = 0.9090909090909091, R = 1.0085016993416516
+N = 5, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+________________ test_american_at_least_european_and_payoff[9] _________________
+
+seed = 9
+
+    @pytest.mark.parametrize("seed", range(10))
+    def test_american_at_least_european_and_payoff(seed):
+        case = random_case(random.Random(100 + seed))
+>       a, _ = put.price_plain(**case)
+
+test_put.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 50, K = 60, u = 1.25, d = 0.9, R = 1.1363057320079017, N = 9
+american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+___________ test_numpy_matches_plain_on_realistic_trees[300-0.0046] ____________
+
+n = 300, s = 0.0046
+
+    @pytest.mark.parametrize("n, s", [(300, 0.0046), (2000, 0.0124)])
+    def test_numpy_matches_plain_on_realistic_trees(n, s):
+        case = dict(S0=100.0, K=100.0, u=math.exp(s), d=math.exp(-s), R=math.exp(0.04 / 8760), N=n)
+>       vp, bp = put.price_plain(**case)
+
+test_put.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100.0, K = 100.0, u = 1.0046105962413399, d = 0.9954105637959723
+R = 1.0000045662204708, N = 300, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+___________ test_numpy_matches_plain_on_realistic_trees[2000-0.0124] ___________
+
+n = 2000, s = 0.0124
+
+    @pytest.mark.parametrize("n, s", [(300, 0.0046), (2000, 0.0124)])
+    def test_numpy_matches_plain_on_realistic_trees(n, s):
+        case = dict(S0=100.0, K=100.0, u=math.exp(s), d=math.exp(-s), R=math.exp(0.04 / 8760), N=n)
+>       vp, bp = put.price_plain(**case)
+
+test_put.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+S0 = 100.0, K = 100.0, u = 1.0124771987582037, d = 0.9876765632119844
+R = 1.0000045662204708, N = 2000, american = True
+
+    def price_plain(S0, K, u, d, R, N, american=True):
+        """Two arrays, plain Python (slides 23 and 25). Returns (value, boundary)."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:6: NotImplementedError
+______________ test_five_year_scale_has_no_overflow_or_underflow _______________
+
+    def test_five_year_scale_has_no_overflow_or_underflow():
+        """s * N = 541 for the most volatile asset: S0 * d^N is about 1e-235 (limit 1e-308)."""
+        n, s = 43822, 0.01235
+>       lo, hi = put.tree_prices(100.0, math.exp(s), math.exp(-s), n, n)[[0, -1]]
+E       TypeError: tree_prices() takes 4 positional arguments but 5 were given
+
+test_put.py:171: TypeError
+________________________ test_first_exercise_on_a_path _________________________
+
+    def test_first_exercise_on_a_path():
+        boundary = [float("nan"), 90.0, 95.0, 99.0]
+>       assert put.first_exercise([100, 92, 94, 98], boundary, K=100) == (2, 6)
+
+test_put.py:178: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = [100, 92, 94, 98], boundary = [nan, 90.0, 95.0, 99.0], K = 100
+
+    def first_exercise(path, boundary, K):
+        """First t >= 1 with path[t] <= boundary[t] and K - path[t] > 0: (t, payoff) or None."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:26: NotImplementedError
+_________________ test_first_exercise_needs_a_positive_payoff __________________
+
+    def test_first_exercise_needs_a_positive_payoff():
+>       assert put.first_exercise([100, 100], [float("nan"), 100.0], K=100) is None
+
+test_put.py:184: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = [100, 100], boundary = [nan, 100.0], K = 100
+
+    def first_exercise(path, boundary, K):
+        """First t >= 1 with path[t] <= boundary[t] and K - path[t] > 0: (t, payoff) or None."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+put.py:26: NotImplementedError
+=========================== short test summary info ============================
+FAILED test_put.py::test_slide_example[plain] - NotImplementedError
+FAILED test_put.py::test_slide_example[numpy] - NotImplementedError
+FAILED test_put.py::test_slide_example[full_tree] - NotImplementedError
+FAILED test_put.py::test_slide_example_european[plain] - NotImplementedError
+FAILED test_put.py::test_slide_example_european[numpy] - NotImplementedError
+FAILED test_put.py::test_slide_example_european[full_tree] - NotImplementedError
+FAILED test_put.py::test_zero_periods_is_the_payoff[90-10-plain] - NotImpleme...
+FAILED test_put.py::test_zero_periods_is_the_payoff[90-10-numpy] - NotImpleme...
+FAILED test_put.py::test_zero_periods_is_the_payoff[90-10-full_tree] - NotImp...
+FAILED test_put.py::test_zero_periods_is_the_payoff[110-0-plain] - NotImpleme...
+FAILED test_put.py::test_zero_periods_is_the_payoff[110-0-numpy] - NotImpleme...
+FAILED test_put.py::test_zero_periods_is_the_payoff[110-0-full_tree] - NotImp...
+FAILED test_put.py::test_zero_periods_is_the_payoff[100-0-plain] - NotImpleme...
+FAILED test_put.py::test_zero_periods_is_the_payoff[100-0-numpy] - NotImpleme...
+FAILED test_put.py::test_zero_periods_is_the_payoff[100-0-full_tree] - NotImp...
+FAILED test_put.py::test_zero_strike_is_worthless[plain] - NotImplementedError
+FAILED test_put.py::test_zero_strike_is_worthless[numpy] - NotImplementedError
+FAILED test_put.py::test_zero_strike_is_worthless[full_tree] - NotImplemented...
+FAILED test_put.py::test_deep_in_the_money_exercises_at_once[plain] - NotImpl...
+FAILED test_put.py::test_deep_in_the_money_exercises_at_once[numpy] - NotImpl...
+FAILED test_put.py::test_deep_in_the_money_exercises_at_once[full_tree] - Not...
+FAILED test_put.py::test_boundary_at_expiry_is_highest_price_below_strike[plain]
+FAILED test_put.py::test_boundary_at_expiry_is_highest_price_below_strike[numpy]
+FAILED test_put.py::test_boundary_at_expiry_is_highest_price_below_strike[full_tree]
+FAILED test_put.py::test_random_small_trees_match_reference[plain-0] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-1] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-2] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-3] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-4] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-5] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-6] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-7] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-8] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-9] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-10] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-11] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-12] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-13] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-14] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-15] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-16] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-17] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-18] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-19] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-20] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-21] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-22] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-23] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-24] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-25] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-26] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-27] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-28] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-29] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-30] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-31] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-32] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-33] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-34] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-35] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-36] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-37] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-38] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[plain-39] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-0] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-1] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-2] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-3] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-4] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-5] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-6] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-7] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-8] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-9] - NotImp...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-10] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-11] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-12] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-13] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-14] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-15] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-16] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-17] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-18] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-19] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-20] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-21] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-22] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-23] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-24] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-25] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-26] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-27] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-28] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-29] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-30] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-31] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-32] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-33] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-34] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-35] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-36] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-37] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-38] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[numpy-39] - NotIm...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-0] - No...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-1] - No...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-2] - No...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-3] - No...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-4] - No...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-5] - No...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-6] - No...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-7] - No...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-8] - No...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-9] - No...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-10] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-11] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-12] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-13] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-14] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-15] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-16] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-17] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-18] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-19] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-20] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-21] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-22] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-23] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-24] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-25] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-26] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-27] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-28] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-29] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-30] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-31] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-32] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-33] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-34] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-35] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-36] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-37] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-38] - N...
+FAILED test_put.py::test_random_small_trees_match_reference[full_tree-39] - N...
+FAILED test_put.py::test_american_at_least_european_and_payoff[0] - NotImplem...
+FAILED test_put.py::test_american_at_least_european_and_payoff[1] - NotImplem...
+FAILED test_put.py::test_american_at_least_european_and_payoff[2] - NotImplem...
+FAILED test_put.py::test_american_at_least_european_and_payoff[3] - NotImplem...
+FAILED test_put.py::test_american_at_least_european_and_payoff[4] - NotImplem...
+FAILED test_put.py::test_american_at_least_european_and_payoff[5] - NotImplem...
+FAILED test_put.py::test_american_at_least_european_and_payoff[6] - NotImplem...
+FAILED test_put.py::test_american_at_least_european_and_payoff[7] - NotImplem...
+FAILED test_put.py::test_american_at_least_european_and_payoff[8] - NotImplem...
+FAILED test_put.py::test_american_at_least_european_and_payoff[9] - NotImplem...
+FAILED test_put.py::test_numpy_matches_plain_on_realistic_trees[300-0.0046]
+FAILED test_put.py::test_numpy_matches_plain_on_realistic_trees[2000-0.0124]
+FAILED test_put.py::test_five_year_scale_has_no_overflow_or_underflow - TypeE...
+FAILED test_put.py::test_first_exercise_on_a_path - NotImplementedError
+FAILED test_put.py::test_first_exercise_needs_a_positive_payoff - NotImplemen...
+159 failed, 4 passed in 1.30s

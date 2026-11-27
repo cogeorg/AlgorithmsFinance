@@ -1,0 +1,29 @@
+saved /Users/mac/Downloads/AlgorithmsFinance/Submissions/HuangJiaxin/Class3/results/btc_1y_boundary.csv
+bitcoin 1y numpy: median 0.18 s, peak 0.58 MB
+bitcoin 1y plain: median 5.85 s, peak 0.84 MB
+saved /Users/mac/Downloads/AlgorithmsFinance/Submissions/HuangJiaxin/Class3/results/btc_5y_boundary.csv
+bitcoin 5y numpy: median 3.09 s, peak 2.54 MB
+bitcoin 5y plain: 130.8 s (memory not traced: Theta(N) like numpy)
+assets 1y: 9.1 s for 40 assets, peak 0.79 MB
+saved /Users/mac/Downloads/AlgorithmsFinance/Submissions/HuangJiaxin/Class3/results/assets_1y.csv
+assets 5y: 158.4 s for 40 assets, peak 3.31 MB
+saved /Users/mac/Downloads/AlgorithmsFinance/Submissions/HuangJiaxin/Class3/results/assets_5y.csv
+memory N=250 full_tree: 2.1 MB, 0.01 s
+memory N=250 two_arrays_plain: 0.0 MB, 0.00 s
+memory N=250 two_arrays_numpy: 0.0 MB, 0.00 s
+memory N=500 full_tree: 8.3 MB, 0.03 s
+memory N=500 two_arrays_plain: 0.0 MB, 0.02 s
+memory N=500 two_arrays_numpy: 0.0 MB, 0.00 s
+memory N=1000 full_tree: 32.8 MB, 0.14 s
+memory N=1000 two_arrays_plain: 0.1 MB, 0.07 s
+memory N=1000 two_arrays_numpy: 0.1 MB, 0.01 s
+memory N=2000 full_tree: 130.4 MB, 0.55 s
+memory N=2000 two_arrays_plain: 0.2 MB, 0.27 s
+memory N=2000 two_arrays_numpy: 0.1 MB, 0.02 s
+memory N=4000 full_tree: 520.9 MB, 2.14 s
+memory N=4000 two_arrays_plain: 0.4 MB, 1.07 s
+memory N=4000 two_arrays_numpy: 0.3 MB, 0.05 s
+saved /Users/mac/Downloads/AlgorithmsFinance/Submissions/HuangJiaxin/Class3/results/memory_full_tree.csv
+saved /Users/mac/Downloads/AlgorithmsFinance/Submissions/HuangJiaxin/Class3/results/bitcoin.csv
+saved /Users/mac/Downloads/AlgorithmsFinance/Submissions/HuangJiaxin/Class3/results/runs.csv
+saved /Users/mac/Downloads/AlgorithmsFinance/Submissions/HuangJiaxin/Class3/results/environment.json

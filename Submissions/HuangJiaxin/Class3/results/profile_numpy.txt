@@ -1,0 +1,20 @@
+         60926 function calls in 0.222 seconds
+
+   Ordered by: internal time
+   List reduced from 16 to 12 due to restriction <12>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.187    0.187    0.222    0.222 put.py:74(price_numpy)
+    17385    0.023    0.000    0.023    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     8761    0.003    0.000    0.015    0.000 {method 'any' of 'numpy.ndarray' objects}
+     8761    0.002    0.000    0.013    0.000 _methods.py:58(_any)
+     8624    0.002    0.000    0.017    0.000 {method 'max' of 'numpy.ndarray' objects}
+     8624    0.002    0.000    0.015    0.000 _methods.py:42(_amax)
+     8760    0.001    0.000    0.001    0.000 multiarray.py:383(where)
+        1    0.001    0.001    0.001    0.001 put.py:67(tree_prices)
+        1    0.000    0.000    0.000    0.000 {built-in method numpy.arange}
+        1    0.000    0.000    0.000    0.000 numeric.py:290(full)
+        2    0.000    0.000    0.000    0.000 {built-in method math.log}
+        1    0.000    0.000    0.000    0.000 {built-in method numpy.empty}
+
+
