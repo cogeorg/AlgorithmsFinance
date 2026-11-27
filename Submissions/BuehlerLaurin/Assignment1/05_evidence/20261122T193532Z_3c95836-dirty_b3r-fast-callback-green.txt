@@ -1,0 +1,12 @@
+label: b3r-fast-callback-green
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest -q 02_tests/test_fast_equivalence.py -k callback_exception --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3c95836e66e797025518c6d66fc9733b5807ea85
+dirty: True
+python: 3.13.15
+utc: 20261122T193532Z
+exit_code: 0
+duration_s: 1.53
+------------------------------------------------------------
+.                                                                        [100%]
+1 passed, 115 deselected in 0.63s

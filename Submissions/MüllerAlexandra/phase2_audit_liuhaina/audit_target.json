@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/cogeorg/AlgorithmsFinance",
+  "reviewed_commit": "5e81bdc2321208ea66a0267c5014f9e3c86d288f",
+  "reviewed_path": "Submissions/LiuHaina",
+  "audit_date": "2026-11-20",
+  "review_environment": {
+    "operating_system": "Windows 11",
+    "python": "3.12.10"
+  },
+  "peer_files_modified": false
+}

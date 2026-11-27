@@ -1,0 +1,20 @@
+{
+  "status": "complete_uncommitted",
+  "files_sha256": {
+    "dashboard.html": "8e8bd8af89c0efed0b45919644588bde7402c9f15ef3b613c2c4230b1bd33451",
+    "REPORT.md": "f6dd74227d25692b50130a2e5acc9c6b03a2e74dd4c8c3e0c25b9b195ac524c9",
+    "README.md": "6f4c376234b0b38f6c04be623351823607fa9c927e28f55e07afb842fa587f8c"
+  },
+  "browser_qa": "passed",
+  "data_validation": "passed",
+  "tests": {
+    "tests_run": 63,
+    "failures": 0,
+    "errors": 0
+  },
+  "measured_sources_unchanged": true,
+  "git_head_unchanged": true,
+  "staged_files": [],
+  "other_tracked_files_changed": [],
+  "final_submission_commit_created": false
+}

@@ -1,0 +1,38 @@
+{
+  "python": "3.9.6",
+  "implementation": "CPython",
+  "platform": "macOS-15.8-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "standard_library_only": true,
+  "generator_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+  "settings": {
+    "scenarios": [
+      "buildup",
+      "crowded",
+      "mixed",
+      "sweep",
+      "cancel_churn"
+    ],
+    "event_counts": [
+      1000,
+      10000,
+      100000
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "versions": [
+      "A",
+      "B"
+    ],
+    "levels": 1000,
+    "repeats": 5,
+    "time_limit_seconds": 3.0,
+    "input_generation_inside_timing": false,
+    "percentile_convention": "nearest rank",
+    "stopped_runs_are_recorded": true
+  }
+}

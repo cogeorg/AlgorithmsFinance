@@ -1,0 +1,12 @@
+{
+  "scenario": "cancel_churn",
+  "input": "data\\cancel_churn_10000.jsonl.gz",
+  "input_sha256": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933",
+  "target_events": 10000,
+  "status": "completed",
+  "completed_events": 10000,
+  "max_active_orders": 1,
+  "started_elapsed_seconds": 0.0,
+  "elapsed_seconds": 0.3883844001684338,
+  "last_accepted_seq": 10000
+}

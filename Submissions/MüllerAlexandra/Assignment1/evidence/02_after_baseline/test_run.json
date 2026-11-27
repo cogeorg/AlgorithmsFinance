@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "stage": "02_after_baseline",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "tests\\test_01_interface.py",
+    "tests\\test_02_validation.py",
+    "tests\\test_03_limit_matching.py",
+    "tests\\test_04_market_sells.py",
+    "tests\\test_05_cancellations.py",
+    "tests\\test_06_invariants.py",
+    "tests\\test_07_worked_example.py",
+    "tests\\test_09_stream_io.py",
+    "-k",
+    "not revised"
+  ],
+  "working_directory": ".",
+  "started_utc": "2026-11-22T10:48:27.002775+00:00",
+  "finished_utc": "2026-11-22T10:48:28.245392+00:00",
+  "elapsed_seconds": 1.2424220000393689,
+  "exit_code": 0,
+  "python_version": "3.12.10",
+  "python_implementation": "CPython",
+  "pytest_version": "9.2.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git": {
+    "branch": "assignment1-mueller-alexandra",
+    "head": "d582651332d1e55d6416ba1de964f12ca6f2e38f",
+    "status_before_evidence_files": "M README.md\n M docs/05_revision_log.md\n M docs/06_ai_assistance.md\n M src/limit_order_book/baseline.py\n M src/limit_order_book/inspection.py\n M src/limit_order_book/stream_io.py\n M src/limit_order_book/validation.py\n?? docs/02_correctness_and_invariants.md\n?? docs/03_implementation_and_complexity.md\n?? scripts/03_validate_supplied.py\n?? ../phase2_audit_liuhaina/",
+    "clean_before_evidence_files": false
+  }
+}

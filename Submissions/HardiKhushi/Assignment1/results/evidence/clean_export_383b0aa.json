@@ -1,0 +1,20 @@
+{
+  "reference": "383b0aaa2d6bac673cd1687261f16d326a2ef530",
+  "exported_files_verified": 52,
+  "tests": 47,
+  "all_tests_passed": true,
+  "worked_examples_both_versions": true,
+  "saved_results": {
+    "primary_configurations": 90,
+    "raw_rows": 2478,
+    "timing_summaries": 257,
+    "stopped_trials": 48,
+    "latency_samples": 642536,
+    "source_files": 12,
+    "original_tests_unchanged": true
+  },
+  "deterministic_dashboard_rebuild": null,
+  "cli_help_passed": true,
+  "prior_lab_audit_and_other_students_unchanged": true,
+  "scope": "clean local Git export; benchmark matrix not rerun; not a remote clone"
+}

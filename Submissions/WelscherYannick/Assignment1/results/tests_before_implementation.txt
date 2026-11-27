@@ -1,0 +1,16 @@
+# Test run BEFORE implementation (stubs only), Thu Nov 26 15:11:02 CET 2026
+ERROR: test_worked_example (tests.test_spec.TestSpecB.test_worked_example)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yannickwelscher/Downloads/Assignment1/tests/test_spec.py", line 302, in test_worked_example
+    results = self.run_events(*events)
+  File "/Users/yannickwelscher/Downloads/Assignment1/tests/test_spec.py", line 54, in run_events
+    before = self.book.inspect_book()
+  File "/Users/yannickwelscher/Downloads/Assignment1/lob/common.py", line 27, in inspect_book
+    raise NotImplementedError
+NotImplementedError
+
+----------------------------------------------------------------------
+Ran 68 tests in 0.183s
+
+FAILED (errors=290)

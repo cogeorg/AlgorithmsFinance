@@ -1,0 +1,353 @@
+{
+ "note": "cProfile, tottime = time inside the function itself; profiler overhead inflates absolute times",
+ "runs": [
+  {
+   "version": "A",
+   "scenario": "buildup",
+   "events": 10000,
+   "seed": 42,
+   "total_profiled_s": 1.217,
+   "top": [
+    {
+     "function": "book_a.py:25(_is_live)",
+     "calls": 10000,
+     "tottime_s": 0.698571,
+     "cumtime_s": 0.698571,
+     "share_of_total": 0.574
+    },
+    {
+     "function": "book_a.py:34(_best_index)",
+     "calls": 9995,
+     "tottime_s": 0.480625,
+     "cumtime_s": 0.480625,
+     "share_of_total": 0.3949
+    },
+    {
+     "function": "common.py:88(validate)",
+     "calls": 10000,
+     "tottime_s": 0.013025,
+     "cumtime_s": 0.721866,
+     "share_of_total": 0.0107
+    },
+    {
+     "function": "common.py:127(process)",
+     "calls": 10000,
+     "tottime_s": 0.004919,
+     "cumtime_s": 1.217032,
+     "share_of_total": 0.004
+    },
+    {
+     "function": "book_a.py:67(_limit)",
+     "calls": 10000,
+     "tottime_s": 0.004811,
+     "cumtime_s": 0.490247,
+     "share_of_total": 0.004
+    },
+    {
+     "function": "<method 'get' of 'dict' objects>",
+     "calls": 70000,
+     "tottime_s": 0.00476,
+     "cumtime_s": 0.00476,
+     "share_of_total": 0.0039
+    },
+    {
+     "function": "book_a.py:49(_match)",
+     "calls": 10000,
+     "tottime_s": 0.003355,
+     "cumtime_s": 0.483979,
+     "share_of_total": 0.0028
+    },
+    {
+     "function": "common.py:16(_is_pos_int)",
+     "calls": 30000,
+     "tottime_s": 0.002343,
+     "cumtime_s": 0.002343,
+     "share_of_total": 0.0019
+    }
+   ]
+  },
+  {
+   "version": "B",
+   "scenario": "buildup",
+   "events": 10000,
+   "seed": 42,
+   "total_profiled_s": 0.0082,
+   "top": [
+    {
+     "function": "book_b.py:57(process)",
+     "calls": 10000,
+     "tottime_s": 0.006704,
+     "cumtime_s": 0.008154,
+     "share_of_total": 0.8209
+    },
+    {
+     "function": "<method 'get' of 'dict' objects>",
+     "calls": 10000,
+     "tottime_s": 0.000747,
+     "cumtime_s": 0.000747,
+     "share_of_total": 0.0915
+    },
+    {
+     "function": "<built-in method _bisect.insort_right>",
+     "calls": 1977,
+     "tottime_s": 0.000352,
+     "cumtime_s": 0.000352,
+     "share_of_total": 0.0431
+    },
+    {
+     "function": "book_b.py:166(_add_level)",
+     "calls": 1977,
+     "tottime_s": 0.000351,
+     "cumtime_s": 0.000703,
+     "share_of_total": 0.0429
+    },
+    {
+     "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+     "calls": 1,
+     "tottime_s": 1.3e-05,
+     "cumtime_s": 1.3e-05,
+     "share_of_total": 0.0016
+    }
+   ]
+  },
+  {
+   "version": "A",
+   "scenario": "mixed",
+   "events": 10000,
+   "seed": 42,
+   "total_profiled_s": 0.2104,
+   "top": [
+    {
+     "function": "book_a.py:25(_is_live)",
+     "calls": 7562,
+     "tottime_s": 0.082251,
+     "cumtime_s": 0.082251,
+     "share_of_total": 0.3909
+    },
+    {
+     "function": "book_a.py:34(_best_index)",
+     "calls": 8025,
+     "tottime_s": 0.059519,
+     "cumtime_s": 0.059519,
+     "share_of_total": 0.2828
+    },
+    {
+     "function": "book_a.py:76(_cancel)",
+     "calls": 2438,
+     "tottime_s": 0.036579,
+     "cumtime_s": 0.036579,
+     "share_of_total": 0.1738
+    },
+    {
+     "function": "common.py:88(validate)",
+     "calls": 10000,
+     "tottime_s": 0.01135,
+     "cumtime_s": 0.102705,
+     "share_of_total": 0.0539
+    },
+    {
+     "function": "common.py:127(process)",
+     "calls": 10000,
+     "tottime_s": 0.004604,
+     "cumtime_s": 0.210415,
+     "share_of_total": 0.0219
+    },
+    {
+     "function": "<method 'get' of 'dict' objects>",
+     "calls": 59712,
+     "tottime_s": 0.004168,
+     "cumtime_s": 0.004168,
+     "share_of_total": 0.0198
+    },
+    {
+     "function": "book_a.py:49(_match)",
+     "calls": 7562,
+     "tottime_s": 0.00315,
+     "cumtime_s": 0.062968,
+     "share_of_total": 0.015
+    },
+    {
+     "function": "book_a.py:67(_limit)",
+     "calls": 6075,
+     "tottime_s": 0.002587,
+     "cumtime_s": 0.064662,
+     "share_of_total": 0.0123
+    }
+   ]
+  },
+  {
+   "version": "B",
+   "scenario": "mixed",
+   "events": 10000,
+   "seed": 42,
+   "total_profiled_s": 0.0121,
+   "top": [
+    {
+     "function": "book_b.py:57(process)",
+     "calls": 10000,
+     "tottime_s": 0.00661,
+     "cumtime_s": 0.012085,
+     "share_of_total": 0.5466
+    },
+    {
+     "function": "book_b.py:180(_take)",
+     "calls": 1902,
+     "tottime_s": 0.002393,
+     "cumtime_s": 0.003506,
+     "share_of_total": 0.1979
+    },
+    {
+     "function": "book_b.py:166(_add_level)",
+     "calls": 4082,
+     "tottime_s": 0.000661,
+     "cumtime_s": 0.001046,
+     "share_of_total": 0.0547
+    },
+    {
+     "function": "<method 'get' of 'dict' objects>",
+     "calls": 7763,
+     "tottime_s": 0.000579,
+     "cumtime_s": 0.000579,
+     "share_of_total": 0.0479
+    },
+    {
+     "function": "<built-in method _bisect.insort_right>",
+     "calls": 4082,
+     "tottime_s": 0.000385,
+     "cumtime_s": 0.000385,
+     "share_of_total": 0.0318
+    },
+    {
+     "function": "<method 'popitem' of 'collections.OrderedDict' objects>",
+     "calls": 3121,
+     "tottime_s": 0.000282,
+     "cumtime_s": 0.000282,
+     "share_of_total": 0.0233
+    },
+    {
+     "function": "<method 'pop' of 'dict' objects>",
+     "calls": 2438,
+     "tottime_s": 0.000229,
+     "cumtime_s": 0.000229,
+     "share_of_total": 0.0189
+    },
+    {
+     "function": "<method 'pop' of 'list' objects>",
+     "calls": 3049,
+     "tottime_s": 0.000228,
+     "cumtime_s": 0.000228,
+     "share_of_total": 0.0188
+    }
+   ]
+  },
+  {
+   "version": "B",
+   "scenario": "buildup",
+   "events": 100000,
+   "seed": 42,
+   "total_profiled_s": 0.1148,
+   "top": [
+    {
+     "function": "book_b.py:57(process)",
+     "calls": 100000,
+     "tottime_s": 0.10559,
+     "cumtime_s": 0.114764,
+     "share_of_total": 0.9199
+    },
+    {
+     "function": "<method 'get' of 'dict' objects>",
+     "calls": 100000,
+     "tottime_s": 0.008556,
+     "cumtime_s": 0.008556,
+     "share_of_total": 0.0745
+    },
+    {
+     "function": "<built-in method _bisect.insort_right>",
+     "calls": 2000,
+     "tottime_s": 0.00034,
+     "cumtime_s": 0.00034,
+     "share_of_total": 0.003
+    },
+    {
+     "function": "book_b.py:166(_add_level)",
+     "calls": 2000,
+     "tottime_s": 0.000278,
+     "cumtime_s": 0.000618,
+     "share_of_total": 0.0024
+    },
+    {
+     "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+     "calls": 1,
+     "tottime_s": 1.4e-05,
+     "cumtime_s": 1.4e-05,
+     "share_of_total": 0.0001
+    }
+   ]
+  },
+  {
+   "version": "B",
+   "scenario": "mixed",
+   "events": 100000,
+   "seed": 42,
+   "total_profiled_s": 0.1167,
+   "top": [
+    {
+     "function": "book_b.py:57(process)",
+     "calls": 100000,
+     "tottime_s": 0.066243,
+     "cumtime_s": 0.116689,
+     "share_of_total": 0.5676
+    },
+    {
+     "function": "book_b.py:180(_take)",
+     "calls": 19161,
+     "tottime_s": 0.023338,
+     "cumtime_s": 0.034239,
+     "share_of_total": 0.2
+    },
+    {
+     "function": "<method 'get' of 'dict' objects>",
+     "calls": 77131,
+     "tottime_s": 0.006006,
+     "cumtime_s": 0.006006,
+     "share_of_total": 0.0515
+    },
+    {
+     "function": "book_b.py:166(_add_level)",
+     "calls": 30804,
+     "tottime_s": 0.004785,
+     "cumtime_s": 0.007133,
+     "share_of_total": 0.041
+    },
+    {
+     "function": "<method 'pop' of 'dict' objects>",
+     "calls": 25075,
+     "tottime_s": 0.002928,
+     "cumtime_s": 0.002928,
+     "share_of_total": 0.0251
+    },
+    {
+     "function": "<method 'popitem' of 'collections.OrderedDict' objects>",
+     "calls": 30662,
+     "tottime_s": 0.002842,
+     "cumtime_s": 0.002842,
+     "share_of_total": 0.0244
+    },
+    {
+     "function": "<built-in method _bisect.insort_right>",
+     "calls": 30804,
+     "tottime_s": 0.002348,
+     "cumtime_s": 0.002348,
+     "share_of_total": 0.0201
+    },
+    {
+     "function": "<method 'pop' of 'list' objects>",
+     "calls": 29607,
+     "tottime_s": 0.002154,
+     "cumtime_s": 0.002154,
+     "share_of_total": 0.0185
+    }
+   ]
+  }
+ ]
+}

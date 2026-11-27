@@ -1,0 +1,20 @@
+label: b3r-fast-final-review
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/review_fast_checkpoint.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3c95836e66e797025518c6d66fc9733b5807ea85
+dirty: True
+python: 3.13.15
+utc: 20261122T194837Z
+exit_code: 0
+duration_s: 1.41
+------------------------------------------------------------
+Protected old engines/validator/tests/expectations/data/results/attack files/pins unchanged.
+Same constructor/structures, cleanup, direct APIs, snapshot/quote methods and signatures by identity.
+AST proof: dispatch body unchanged after validator call; matching differs only by local bindings.
+Fresh complete green suites: {"standard": 848, "attack": 1697} G1/G2/G3 source+XML hashes verified.
+Standard suite per class/file: {"TestDifferential_B": 1, "TestDifferential_B2": 1, "TestDifferential_B3": 1, "TestDifferential_B3r": 1, "TestDifferential_B3r_fast": 1, "TestFastDifferential": 1, "test_b3r": 6, "test_b_internal": 27, "test_bench_pipeline": 30, "test_contract": 384, "test_fast_assessment": 10, "test_fast_equivalence": 115, "test_mutants": 24, "test_own_datasets": 4, "test_post_attack_pipeline": 13, "test_replay": 21, "test_replay_regressions": 24, "test_validation": 184}
+G2 complete every-event coverage:6 supplied streams,18 own files,32 attack families, both counter modes.
+G2 event comparisons: 146514 ; all five supplied10k streams replayed fully per mode.
+236-worker fast-only preview,57 full reference medians/15-cell score, and no new benchmark session verified.
+Source fingerprint: f82455f1ced229fd6d5cffb29727b67b4cce1a53e6c6d7b649ce66d7f03dcbd2
+RESULT: PASS (optional fast checkpoint source/protocol/gates verified; B3r stays final; no performance conclusion)

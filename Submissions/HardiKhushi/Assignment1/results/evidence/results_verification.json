@@ -1,0 +1,9 @@
+{
+  "primary_configurations": 90,
+  "raw_rows": 2478,
+  "timing_summaries": 257,
+  "stopped_trials": 48,
+  "latency_samples": 642536,
+  "source_files": 12,
+  "original_tests_unchanged": true
+}

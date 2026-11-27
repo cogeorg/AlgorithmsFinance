@@ -1,0 +1,15 @@
+label: phase4a-archive-smoke
+command: powershell -NoProfile -File scratch/archive_smoke.ps1
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 6c2a8d19a914e61ba1ff1d9b5904a18fdf6f19ca
+dirty: True
+python: 3.13.15
+utc: 20261122T011203Z
+exit_code: 0
+duration_s: 4.24
+------------------------------------------------------------
+Verified absolute source: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\03_results\runs\20261122T003530Z_5d8d15a-dirty_smoke
+Verified absolute target: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\20261122T003530Z_5d8d15a-dirty_smoke
+Files preserved: 663
+Bytes preserved: 6847781
+RESULT: PASS (authorized smoke archive moved intact; every relative path, byte length and sha256 preserved; no files deleted)

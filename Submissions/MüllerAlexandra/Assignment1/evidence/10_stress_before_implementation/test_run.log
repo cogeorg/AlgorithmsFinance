@@ -1,0 +1,112 @@
+stage: 10_stress_before_implementation
+started_utc: 2026-11-23T19:57:19.611302+00:00
+finished_utc: 2026-11-23T19:57:21.314565+00:00
+elapsed_seconds: 1.703504
+exit_code: 1
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 03b1db4837ff700bac0dedce6f1acf8dc0d12ae8
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider tests/test_17_stress_experiments.py
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 4 items
+
+tests\test_17_stress_experiments.py FFFF                                 [100%]
+
+================================== FAILURES ===================================
+______________ test_liquidation_quantities_round_ten_percent_up _______________
+
+    def test_liquidation_quantities_round_ten_percent_up() -> None:
+>       assert liquidation_quantities(7) == {
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+            "10_percent": 1,
+            "100_percent": 7,
+            "200_percent": 14,
+        }
+
+tests\test_17_stress_experiments.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+available_qty_units = 7
+
+    def liquidation_quantities(available_qty_units: int) -> dict[str, int]:
+>       raise NotImplementedError("liquidation quantities are not implemented")
+E       NotImplementedError: liquidation quantities are not implemented
+
+src\limit_order_book\stress_experiments.py:19: NotImplementedError
+__________ test_liquidation_rebuilds_identical_book_for_every_repeat __________
+
+    def test_liquidation_rebuilds_identical_book_for_every_repeat() -> None:
+>       events = build_liquidation_events(
+            order_count=4,
+            price_levels=2,
+            base_price_ticks=1_000,
+            quantity_cycle=(1, 2, 3),
+        )
+
+tests\test_17_stress_experiments.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+kwargs = {'order_count': 4, 'price_levels': 2, 'base_price_ticks': 1000, 'quantity_cycle': (1, 2, 3)}
+
+    def build_liquidation_events(**kwargs: Any) -> tuple[Event, ...]:
+>       raise NotImplementedError("liquidation input is not implemented")
+E       NotImplementedError: liquidation input is not implemented
+
+src\limit_order_book\stress_experiments.py:15: NotImplementedError
+___ test_liquidation_memory_excludes_prebuilt_book_and_retains_sale_result ____
+
+    def test_liquidation_memory_excludes_prebuilt_book_and_retains_sale_result() -> None:
+>       events = build_liquidation_events(order_count=4, price_levels=2)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_17_stress_experiments.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+kwargs = {'order_count': 4, 'price_levels': 2}
+
+    def build_liquidation_events(**kwargs: Any) -> tuple[Event, ...]:
+>       raise NotImplementedError("liquidation input is not implemented")
+E       NotImplementedError: liquidation input is not implemented
+
+src\limit_order_book\stress_experiments.py:15: NotImplementedError
+__________ test_diagnostic_replay_counts_events_fills_and_book_peaks __________
+
+    def test_diagnostic_replay_counts_events_fills_and_book_peaks() -> None:
+        events = [
+            {"seq": 1, "event_id": "e1", "type": "LIMIT", "order_id": "b1", "side": "BUY", "price_ticks": 100, "qty_units": 5},
+            {"seq": 2, "event_id": "e2", "type": "LIMIT", "order_id": "a1", "side": "SELL", "price_ticks": 101, "qty_units": 2},
+            {"seq": 3, "event_id": "e3", "type": "MARKET_SELL", "order_id": "s1", "qty_units": 3},
+            {"seq": 4, "event_id": "e4", "type": "CANCEL", "target_order_id": "a1"},
+        ]
+    
+>       result = diagnose_replay(BaselineOrderBook, events)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_17_stress_experiments.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+book_factory = <class 'limit_order_book.baseline.BaselineOrderBook'>
+events = [{'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...}, {'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', '...'type': 'MARKET_SELL', 'order_id': 's1', ...}, {'seq': 4, 'event_id': 'e4', 'type': 'CANCEL', 'target_order_id': 'a1'}]
+
+    def diagnose_replay(
+        book_factory: BookFactory, events: Sequence[Event]
+    ) -> dict[str, Any]:
+>       raise NotImplementedError("diagnostic replay is not implemented")
+E       NotImplementedError: diagnostic replay is not implemented
+
+src\limit_order_book\stress_experiments.py:41: NotImplementedError
+=========================== short test summary info ===========================
+FAILED tests/test_17_stress_experiments.py::test_liquidation_quantities_round_ten_percent_up
+FAILED tests/test_17_stress_experiments.py::test_liquidation_rebuilds_identical_book_for_every_repeat
+FAILED tests/test_17_stress_experiments.py::test_liquidation_memory_excludes_prebuilt_book_and_retains_sale_result
+FAILED tests/test_17_stress_experiments.py::test_diagnostic_replay_counts_events_fills_and_book_peaks
+============================== 4 failed in 0.28s ==============================
+
+=== stderr ===

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-23T12:13:38.481160+00:00",
+  "phase": "throughput",
+  "version": "baseline",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "scripts/04_benchmark.py",
+    "--version",
+    "baseline",
+    "--input",
+    "data/supplied/cancel_churn_10000.jsonl.gz",
+    "--max-events",
+    "100",
+    "--warmups",
+    "1",
+    "--repeats",
+    "2",
+    "--out",
+    "evidence/05_benchmark_smoke/05_baseline_cancel_churn_100.json"
+  ],
+  "environment": {
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "python_executable": "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "dependencies": {
+      "pytest": "9.2.0",
+      "pandas": "3.1.1",
+      "streamlit": "1.67.0"
+    },
+    "git": {
+      "commit": "f003662280e9f1b176e48b0719252b19b11db8c9",
+      "branch": "assignment1-mueller-alexandra",
+      "dirty": true
+    }
+  },
+  "input": {
+    "path": "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\data\\supplied\\cancel_churn_10000.jsonl.gz",
+    "sha256": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933",
+    "compressed_bytes": 110782,
+    "event_count": 100,
+    "max_events": 100,
+    "parse_seconds": 0.004768399987369776
+  },
+  "settings": {
+    "warmups": 1,
+    "repeats": 2
+  },
+  "records": [
+    {
+      "repeat": 1,
+      "event_count": 100,
+      "construction_seconds": 5.00003807246685e-07,
+      "replay_seconds": 0.00011619995348155499,
+      "total_engine_seconds": 0.00011669995728880167,
+      "throughput_events_per_second": 860585.5424535391
+    },
+    {
+      "repeat": 2,
+      "event_count": 100,
+      "construction_seconds": 5.00003807246685e-07,
+      "replay_seconds": 0.00011579995043575764,
+      "total_engine_seconds": 0.00011629995424300432,
+      "throughput_events_per_second": 863558.2279931719
+    }
+  ],
+  "summary": {
+    "repeat_count": 2,
+    "median_construction_seconds": 5.00003807246685e-07,
+    "median_replay_seconds": 0.00011599995195865631,
+    "median_total_engine_seconds": 0.000116499955765903,
+    "median_throughput_events_per_second": 862071.8852233555
+  }
+}

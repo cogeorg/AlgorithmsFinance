@@ -1,0 +1,10 @@
+[1/9] market-sell_controlled_bids_n10000_s43_l1000_p200 shared io: complete
+[2/9] market-sell_controlled_bids_n10000_s43_l1000_p200 baseline timing: complete
+[3/9] market-sell_controlled_bids_n10000_s43_l1000_p200 revised timing: complete
+[4/9] market-sell_controlled_bids_n10000_s43_l1000_p200 baseline latency: complete
+[5/9] market-sell_controlled_bids_n10000_s43_l1000_p200 revised latency: complete
+[6/9] market-sell_controlled_bids_n10000_s43_l1000_p200 baseline memory: incomplete
+[7/9] market-sell_controlled_bids_n10000_s43_l1000_p200 revised memory: complete
+[8/9] market-sell_controlled_bids_n10000_s43_l1000_p200 baseline diagnostics: complete
+[9/9] market-sell_controlled_bids_n10000_s43_l1000_p200 revised diagnostics: complete
+{"results": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n10000_s43_l1000_p200", "status": "incomplete", "raw_rows": 29, "summary_rows": 9}

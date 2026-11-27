@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Search Lab · Experiment results</title>
+<style>
+:root{--ink:#182b37;--muted:#62727e;--line:#dce4e8;--paper:#f4f7f8;--blue:#2164c5;--green:#007f70;--orange:#b55b12}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1400px;margin:auto;padding:44px 32px 60px}header{display:flex;justify-content:space-between;align-items:start;gap:24px;margin-bottom:28px}.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:700}h1{font-size:36px;letter-spacing:-.04em;line-height:1.2;margin:8px 0 12px}h2{font-size:20px;margin:0 0 8px}h3{font-size:16px;margin:0}p{margin:8px 0}.muted,small{color:var(--muted)}.badge{border:1px solid #b4d9cd;border-radius:30px;padding:6px 12px;background:#eaf6ef;color:#23614b;white-space:nowrap;font-size:12px}.panel{background:white;border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:20px}.filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}label,.label{display:block;font-size:12px;font-weight:650;color:var(--muted);margin-bottom:6px}select,button{font:inherit}select{width:100%;background:#fff;color:var(--ink);padding:9px 10px;border:1px solid #c4d0d8;border-radius:8px}button{background:#fff;color:var(--ink);border:1px solid #c4d0d8;border-radius:8px;padding:8px 13px;cursor:pointer}button:hover{background:#edf3f6}button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #82b3f4;outline-offset:3px}.options{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:16px}.options label{display:flex;align-items:center;gap:7px;margin:0;font-weight:500;color:var(--ink);font-size:13px}input{accent-color:var(--blue)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}.stat{background:white;border:1px solid var(--line);border-radius:12px;padding:15px 18px}.stat .value{font-size:23px;font-weight:650;letter-spacing:-.02em}.stat .label{font-weight:500;margin:0}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 18px}.tabs button[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:#fff}.view[hidden]{display:none}.charts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.chart-card{padding:18px 12px 12px}.chart-card h3,.chart-card p{padding:0 8px}.chart-card p{font-size:12px;margin:2px 0 10px}.chart{width:100%;height:auto;display:block;overflow:visible}.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;margin:0 0 14px}.swatch{display:inline-block;width:22px;vertical-align:middle;border-top:3px solid;margin-right:5px}.dash{border-top-style:dashed}.note{font-size:13px;color:var(--muted);border-left:3px solid #9bbdb8;padding-left:12px;margin:12px 0}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}th,td{text-align:right;border-bottom:1px solid #e8edef;padding:10px 12px}th{background:#f7f9fa;color:var(--muted);font-weight:600}th:first-child,td:first-child{text-align:left}td:nth-child(2),th:nth-child(2){text-align:left}.toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap}.toolbar select{width:auto;min-width:150px}pre{white-space:pre-wrap;word-break:break-word;max-height:550px;overflow:auto;background:#f6f8fa;padding:16px;border-radius:10px;font-size:12px}details{border-top:1px solid var(--line);padding:13px 0}summary{cursor:pointer;font-weight:600}.warning{background:#fff5df;border:1px solid #e4c884;padding:12px;border-radius:8px;font-size:13px}.empty{text-align:center;padding:30px;color:var(--muted)}footer{margin-top:24px;font-size:12px;color:var(--muted)}.table-note{font-size:12px;color:var(--muted);margin-top:10px}
+@media(max-width:1050px){.charts{grid-template-columns:1fr}.chart{max-height:320px}.filters{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){main{padding:24px 14px}header{display:block}h1{font-size:29px}.badge{display:inline-block;margin-top:10px}.filters{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.panel{padding:16px}.stat .value{font-size:19px}}
+</style>
+</head>
+<body>
+<main>
+<header><div><div class="eyebrow">Algorithms in Finance / Liu Haina</div><h1>Three search methods. Measured.</h1><p class="muted">Compare preparation, query-batch, and total time across original and revised implementations.</p></div><div class="badge">● Saved results · Available offline</div></header>
+<noscript><p class="warning">Enable JavaScript in your browser to use this dashboard.</p></noscript>
+<div id="source-warning" class="warning" hidden></div>
+<section class="panel" aria-label="Filter experiment results">
+<div class="filters">
+<div><label for="queries">Queries per batch · q</label><select id="queries"></select></div>
+<div><label for="scenario">Query scenario</label><select id="scenario"></select></div>
+<div><label for="version">Implementation version</label><select id="version"><option value="both">Original + Revised</option><option value="original">Original</option><option value="revised">Revised</option></select></div>
+<div><label for="unit">Time unit · per complete batch</label><select id="unit"><option value="ms">Milliseconds ms</option><option value="us">Microseconds μs</option><option value="s">Seconds s</option></select></div>
+</div>
+<div class="options">
+<label><input type="checkbox" name="method" value="linear_search" checked>Linear search</label>
+<label><input type="checkbox" name="method" value="binary_search" checked>Binary search</label>
+<label><input type="checkbox" name="method" value="hash_set_search" checked>Hash set</label>
+<label><input id="log-time" type="checkbox">Logarithmic time axis</label>
+</div>
+<p id="filter-note" class="note" aria-live="polite"></p>
+</section>
+<div class="stats" aria-live="polite"><div class="stat"><div class="label">Array sizes</div><div class="value" id="stat-n">—</div></div><div class="stat"><div class="label">Actual batch hit rate</div><div class="value" id="stat-hit">—</div></div><div class="stat"><div class="label">Timing repeats</div><div class="value" id="stat-repeats">—</div></div><div class="stat"><div class="label">Selected configurations</div><div class="value" id="stat-count">—</div></div></div>
+<nav class="tabs" aria-label="Result views"><button type="button" data-tab="timing" aria-selected="true">Timing comparison</button><button type="button" data-tab="memory" aria-selected="false">Memory measurements</button><button type="button" data-tab="raw" aria-selected="false">Raw repeats</button><button type="button" data-tab="environment" aria-selected="false">Environment & methodology</button></nav>
+<section id="view-timing" class="view">
+<div class="legend"><span><i class="swatch" style="color:var(--blue)"></i>Linear search</span><span><i class="swatch" style="color:var(--orange)"></i>Binary search</span><span><i class="swatch" style="color:var(--green)"></i>Hash set</span><span><i class="swatch" style="color:#596a77"></i>Original</span><span><i class="swatch dash" style="color:#596a77"></i>Revised</span></div>
+<div class="charts"><article class="panel chart-card"><h3>01 / Preparation time</h3><p>Sorting, set construction, or early-return checks</p><div id="chart-preparation"></div></article><article class="panel chart-card"><h3>02 / Query-batch time</h3><p>Process q ordered queries after preparation</p><div id="chart-query_batch"></div></article><article class="panel chart-card"><h3>03 / Total time</h3><p>Preparation through returned output, timed independently</p><div id="chart-total"></div></article></div>
+<section class="panel"><div class="toolbar"><h2>Version comparison · Total time</h2><button id="download-summary">Download filtered timing CSV</button></div><p class="note">Medians of 5 repeats. Ratio = Original / Revised; above 1 means the revised version was faster in this run. A single experiment and small differences do not establish a stable advantage.</p><div id="comparison" class="table-wrap"></div><details><summary>Show all three timing summaries</summary><div id="summary-table" class="table-wrap"></div></details></section>
+<p class="note">X-axis: array length n (logarithmic). Y-axis: elapsed time per complete batch. Hover over points for the median and repeat range. The three metrics are measured independently, so medians need not add up. Group timings include loop and function-call overhead.</p>
+</section>
+<section id="view-memory" class="view" hidden><div class="panel"><div class="toolbar"><h2>Traced Python memory</h2><button id="download-memory">Download filtered memory CSV</button></div><p class="note">One separate tracemalloc run per configuration. Pre-existing inputs are excluded; prepared structures and output are included and kept alive at reading. 1 KiB = 1,024 bytes. This is neither total process memory nor auxiliary space alone.</p><div id="memory-table" class="table-wrap"></div></div></section>
+<section id="view-raw" class="view" hidden><div class="panel"><div class="toolbar"><h2>Raw timing records</h2><select id="raw-metric" aria-label="Raw-record timing metric"><option value="total">Total time</option><option value="preparation">Preparation time</option><option value="query_batch">Query-batch time</option><option value="all">All timing metrics</option></select><button id="download-raw">Download filtered raw CSV</button></div><p class="note">Each row is a grouped measurement within one repeat. Seconds per batch = group elapsed seconds / call count. Raw columns remain in seconds regardless of the display unit.</p><p id="raw-count" class="muted"></p><div id="raw-table" class="table-wrap"></div></div></section>
+<section id="view-environment" class="view" hidden><div class="panel"><div class="toolbar"><h2>Reproducible experiment record</h2><button id="download-json">Download all results JSON</button></div><div id="environment" class="table-wrap"></div><details><summary>Full environment, seeds, source hashes, and measurement definitions</summary><pre id="metadata"></pre></details><details><summary>Skipped experiment combinations and reasons</summary><pre id="skipped"></pre></details></div></section>
+<footer id="footer"></footer>
+</main>
+<script id="saved-results" type="application/json">__SAVED_RESULTS_JSON__</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('saved-results').textContent);
+const $=id=>document.getElementById(id);
+const METHODS=['linear_search','binary_search','hash_set_search'];
+const LABELS={linear_search:'Linear search',binary_search:'Binary search',hash_set_search:'Hash set',original:'Original',revised:'Revised',preparation:'Preparation',query_batch:'Query batch',total:'Total time',all_present:'All present',all_absent:'All absent',mixed:'Mixed (50% hits)',empty_queries:'Empty queries (supplementary)'};
+const COLORS={linear_search:'#2164c5',binary_search:'#b55b12',hash_set_search:'#007f70'};
+const UNITS={ms:{factor:1000,label:'ms'},us:{factor:1000000,label:'μs'},s:{factor:1,label:'s'}};
+const num=(v,d=4)=>Number(v).toLocaleString('en-US',{maximumFractionDigits:d});
+const escapeHTML=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function table(headers,rows){if(!rows.length)return '<p class="empty">Select at least one method.</p>';return '<table><thead><tr>'+headers.map(h=>'<th scope="col">'+escapeHTML(h)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(row=>'<tr>'+row.map(v=>'<td>'+escapeHTML(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table>';}
+function state(){return {q:Number($('queries').value),scenario:$('scenario').value,version:$('version').value,methods:[...document.querySelectorAll('input[name="method"]:checked')].map(e=>e.value),unit:UNITS[$('unit').value],log:$('log-time').checked};}
+function filtered(rows,s=state()){return rows.filter(r=>r.q===s.q&&r.scenario===s.scenario&&(s.version==='both'||r.version===s.version)&&s.methods.includes(r.method));}
+function sorted(rows){return [...rows].sort((a,b)=>a.n-b.n||METHODS.indexOf(a.method)-METHODS.indexOf(b.method)||a.version.localeCompare(b.version)||String(a.metric).localeCompare(String(b.metric))||(a.repeat||0)-(b.repeat||0));}
+function scenarioOptions(){const q=Number($('queries').value),previous=$('scenario').value;const choices=[...new Set(DATA.summary.filter(r=>r.q===q).map(r=>r.scenario))];$('scenario').replaceChildren(...choices.map(value=>new Option(LABELS[value],value)));if(choices.includes(previous))$('scenario').value=previous;else if(choices.includes('mixed'))$('scenario').value='mixed';}
+function chart(rows,metric,s){
+ const W=410,H=270,p={l:65,r:20,t:22,b:49},data=rows.filter(r=>r.metric===metric);
+ if(!data.length)return '<p class="empty">Select at least one method.</p>';
+ const ns=[...new Set(data.map(r=>r.n))].sort((a,b)=>a-b);let ys=data.map(r=>r.median_seconds*s.unit.factor);
+ let lo=s.log?Math.min(...ys.filter(v=>v>0))*.7:0,hi=Math.max(...ys)*1.12;if(hi<=lo)hi=lo+1;
+ const lx=ns[0],hx=ns[ns.length-1],x=n=>lx===hx?(W+p.l-p.r)/2:p.l+(Math.log10(n)-Math.log10(lx))/(Math.log10(hx)-Math.log10(lx))*(W-p.l-p.r);
+ const y=v=>s.log?H-p.b-(Math.log10(Math.max(v,lo))-Math.log10(lo))/(Math.log10(hi)-Math.log10(lo))*(H-p.t-p.b):H-p.b-(v-lo)/(hi-lo)*(H-p.t-p.b);
+ const axis=v=>v===0?'0':(Math.abs(v)<.01||Math.abs(v)>=10000?v.toExponential(1):num(v,3));
+ let svg=`<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${LABELS[metric]} time versus array length; unit: ${s.unit.label} per batch"><title>${LABELS[metric]} time; per batch ${s.unit.label}; median of five repeats</title>`;
+ for(let i=0;i<=4;i++){let v=s.log?10**(Math.log10(lo)+(Math.log10(hi)-Math.log10(lo))*i/4):hi*i/4;let yy=y(v);svg+=`<line x1="${p.l}" x2="${W-p.r}" y1="${yy}" y2="${yy}" stroke="#e4ebee"/><text x="${p.l-7}" y="${yy+4}" text-anchor="end" fill="#62727e" font-size="10">${axis(v)}</text>`;}
+ for(const n of ns)svg+=`<text x="${x(n)}" y="${H-p.b+21}" text-anchor="middle" fill="#62727e" font-size="10">${num(n,0)}</text>`;
+ svg+=`<text x="${p.l}" y="12" fill="#62727e" font-size="10">${s.unit.label} / batch${s.log?' · log':''}</text><text x="${W/2}" y="${H-5}" text-anchor="middle" fill="#62727e" font-size="10">Array length n · log</text>`;
+ for(const method of METHODS)for(const version of ['original','revised']){
+  const points=data.filter(r=>r.method===method&&r.version===version).sort((a,b)=>a.n-b.n);if(!points.length)continue;
+  const dash=version==='revised'?' stroke-dasharray="6 4"':'';
+  svg+=`<polyline points="${points.map(r=>x(r.n)+','+y(r.median_seconds*s.unit.factor)).join(' ')}" fill="none" stroke="${COLORS[method]}" stroke-width="2"${dash}/>`;
+  for(const r of points){const title=`${LABELS[method]} / ${LABELS[version]}\nn=${num(r.n)} · q=${r.q}\nMedian ${num(r.median_seconds*s.unit.factor,8)} ${s.unit.label}/batch\nRange ${num(r.min_seconds*s.unit.factor,8)}–${num(r.max_seconds*s.unit.factor,8)} ${s.unit.label}`;svg+=`<circle cx="${x(r.n)}" cy="${y(r.median_seconds*s.unit.factor)}" r="4.5" fill="${version==='original'?COLORS[method]:'#fff'}" stroke="${COLORS[method]}" stroke-width="2" tabindex="0"><title>${escapeHTML(title)}</title></circle>`;}
+ }
+ return svg+'</svg>';
+}
+function render(){
+ const s=state(),summary=sorted(filtered(DATA.summary,s)),memory=sorted(filtered(DATA.memory,s));
+ const cases=[...new Set(summary.map(r=>r.case_id))],ns=[...new Set(summary.map(r=>r.n))].sort((a,b)=>a-b);
+ $('stat-n').textContent=ns.length?ns.map(n=>n>=1000?num(n/1000)+'k':n).join(' / '):'—';
+ const reference=DATA.summary.find(r=>r.q===s.q&&r.scenario===s.scenario);$('stat-hit').textContent=reference?.hit_rate==null?'N/A':num(reference.hit_rate*100)+'%';
+ $('stat-repeats').textContent=DATA.metadata.timing.repeats+' · median';$('stat-count').textContent=summary.filter(r=>r.metric==='total').length;
+ $('filter-note').textContent=s.q===0?'Supplementary experiment: empty queries assess the early-return revision; the hit rate is undefined.':s.q===1?'A batch with one query cannot contain both a hit and a miss, so no mixed scenario is offered.':'Fixed seed '+DATA.metadata.generator.base_seed+'; all methods and versions receive identical saved inputs for each configuration.';
+ for(const metric of ['preparation','query_batch','total'])$('chart-'+metric).innerHTML=chart(summary,metric,s);
+ const totals=summary.filter(r=>r.metric==='total'),comparison=[];
+ for(const n of ns)for(const method of METHODS){const a=totals.find(r=>r.n===n&&r.method===method&&r.version==='original'),b=totals.find(r=>r.n===n&&r.method===method&&r.version==='revised');if(a||b)comparison.push([num(n),LABELS[method],a?num(a.median_seconds*s.unit.factor,7):'—',b?num(b.median_seconds*s.unit.factor,7):'—',a&&b?num(a.median_seconds/b.median_seconds,3)+'×':'—']);}
+ $('comparison').innerHTML=table(['Array n','Method','Original '+s.unit.label+'/batch','Revised '+s.unit.label+'/batch','Original / Revised'],comparison);
+ $('summary-table').innerHTML=table(['Array n','Method','Version','Timing metric','Median '+s.unit.label+'/batch','Minimum','Maximum'],summary.map(r=>[num(r.n),LABELS[r.method],LABELS[r.version],LABELS[r.metric],...['median_seconds','min_seconds','max_seconds'].map(k=>num(r[k]*s.unit.factor,8))]));
+ $('memory-table').innerHTML=table(['Array n','Method','Version','Current KiB','Peak KiB','Input','Prepared structure','Output'],memory.map(r=>[num(r.n),LABELS[r.method],LABELS[r.version],num(r.current_traced_bytes/1024,3),num(r.peak_traced_bytes/1024,3),r.input_included?'Included':'Excluded',r.prepared_structure_included?'Included':'Excluded',r.output_included?'Included':'Excluded']));
+ renderRaw();
+}
+function selectedRaw(){const metric=$('raw-metric').value;return sorted(filtered(DATA.raw)).filter(r=>metric==='all'||r.metric===metric);}
+function renderRaw(){const rows=selectedRaw();$('raw-count').textContent=`Showing ${rows.length} raw records for the current filters.`;$('raw-table').innerHTML=table(['Array n','Method','Version','Timing metric','Repeat','Calls per group','Group elapsed seconds','Seconds per complete batch'],rows.map(r=>[num(r.n),LABELS[r.method],LABELS[r.version],LABELS[r.metric],r.repeat,r.calls_in_group,r.group_elapsed_seconds.toPrecision(8),r.seconds_per_batch.toPrecision(8)]));}
+function download(name,content,type){const a=document.createElement('a'),url=URL.createObjectURL(new Blob(['\ufeff',content],{type}));a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function csv(rows){if(!rows.length)return '';const keys=Object.keys(rows[0]),quote=v=>'"'+String(v??'').replace(/"/g,'""')+'"';return [keys.map(quote).join(','),...rows.map(r=>keys.map(k=>quote(r[k])).join(','))].join('\r\n');}
+function init(){
+ const qs=[...new Set(DATA.summary.map(r=>r.q))].sort((a,b)=>a-b);$('queries').replaceChildren(...qs.map(q=>new Option(q===0?'0 · Empty queries (supplementary)':String(q),String(q))));$('queries').value=qs.includes(100)?'100':String(qs[0]);scenarioOptions();
+ $('queries').addEventListener('change',()=>{scenarioOptions();render();});
+ for(const id of ['scenario','version','unit','log-time'])$(id).addEventListener('change',render);
+ for(const input of document.querySelectorAll('input[name="method"]'))input.addEventListener('change',render);
+ $('raw-metric').addEventListener('change',renderRaw);
+ for(const button of document.querySelectorAll('[data-tab]'))button.addEventListener('click',()=>{for(const b of document.querySelectorAll('[data-tab]'))b.setAttribute('aria-selected',String(b===button));for(const view of document.querySelectorAll('.view'))view.hidden=view.id!=='view-'+button.dataset.tab;});
+ $('download-summary').onclick=()=>download('timing_summary_filtered.csv',csv(sorted(filtered(DATA.summary))),'text/csv;charset=utf-8');
+ $('download-memory').onclick=()=>download('memory_filtered.csv',csv(sorted(filtered(DATA.memory))),'text/csv;charset=utf-8');
+ $('download-raw').onclick=()=>download('timing_raw_filtered.csv',csv(selectedRaw()),'text/csv;charset=utf-8');
+ $('download-json').onclick=()=>download('saved_measurements.json',JSON.stringify(DATA,null,2),'application/json');
+ const m=DATA.metadata;
+ $('environment').innerHTML=table(['Item','Record'],[['Python',m.python],['System',m.platform],['Processor / Logical cores',m.processor+' / '+m.logical_cpu_count],['Timer',m.timing.timer],['Random seed',m.generator.base_seed],['Measurement completed (UTC)',m.finished_at_utc],['Run ID',m.run_id],['Code version',m.git_head],['Full dataset',m.counts.configurations+' configurations / '+m.counts.raw_timing_rows+' timing rows / '+m.counts.memory_rows+' memory rows']])+ '<p class="note">Source hashes identify the files actually measured; the Git commit may not include local changes. Timing and memory are measured separately. Query groups reuse read-only prepared state only within one repeat. Very short calls are sensitive to loop, function-call, and timer overhead.</p>';
+ $('metadata').textContent=JSON.stringify(m,null,2);$('skipped').textContent=JSON.stringify(m.skipped_cases,null,2);
+ $('footer').textContent='Run '+m.run_id+' · Displays embedded saved measurements only; filtering does not run algorithms. After updating results, run python3 -B dashboard.py to rebuild this page.';
+ if(DATA.source_mismatches_at_build.length){$('source-warning').hidden=false;$('source-warning').textContent='At build time, local source differed from the recorded measurement hashes: '+DATA.source_mismatches_at_build.join(', ')+'. This page still displays measurements for the recorded source version.';}
+ render();
+}
+init();
+</script>
+</body>
+</html>

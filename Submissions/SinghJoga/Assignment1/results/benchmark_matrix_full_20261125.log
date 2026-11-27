@@ -1,0 +1,4 @@
+Command: .\.venv\Scripts\python.exe benchmarks\run_benchmarks.py --run-id full_20261125
+Started UTC: 2026-11-25T21:34:06.6881091Z
+
+Paused at user request. See results\benchmarks\full_20261125\PAUSED.json. No benchmark process remains.

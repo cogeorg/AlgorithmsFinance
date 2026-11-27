@@ -1,0 +1,18 @@
+label: phase3b-sanity-not-a-benchmark
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe run.py bench.sanity
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: b5411d4ab22a662820bea6f55510b23381d017f8
+dirty: True
+python: 3.13.15
+utc: 20261121T234816Z
+exit_code: 0
+duration_s: 26.07
+------------------------------------------------------------
+sanity, not a benchmark
+buildup: parse=0.046277s; A setup=0.000005s replay=7.348022s; B1 setup=0.000017s replay=0.053039s; B2 setup=0.000011s replay=0.051708s; B3 setup=0.000019s replay=0.053452s; differences=0; final books equal
+crowded: parse=0.044432s; A setup=0.000004s replay=7.984575s; B1 setup=0.000008s replay=0.043179s; B2 setup=0.000008s replay=0.047533s; B3 setup=0.000014s replay=0.045571s; differences=0; final books equal
+mixed: parse=0.043280s; A setup=0.000002s replay=0.993087s; B1 setup=0.000009s replay=0.047189s; B2 setup=0.000005s replay=0.049398s; B3 setup=0.000007s replay=0.075636s; differences=0; final books equal
+sweep: parse=0.039398s; A setup=0.000003s replay=7.888637s; B1 setup=0.000006s replay=0.057057s; B2 setup=0.000007s replay=0.055969s; B3 setup=0.000007s replay=0.054018s; differences=0; final books equal
+cancel_churn: parse=0.037765s; A setup=0.000003s replay=0.029583s; B1 setup=0.000006s replay=0.036689s; B2 setup=0.000006s replay=0.049578s; B3 setup=0.000008s replay=0.053755s; differences=0; final books equal
+Saved 03_results\runs\20261121T234816Z_b5411d4-dirty_phase3b_sanity_not_benchmark
+RESULT: PASS (sanity, not a benchmark; 50000 events: each B variant's results and five final books equal A)

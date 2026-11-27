@@ -1,0 +1,10 @@
+[1/9] replay_mixed_n1000000_s42_l1000 shared io: complete
+[2/9] replay_mixed_n1000000_s42_l1000 baseline timing: incomplete
+[3/9] replay_mixed_n1000000_s42_l1000 revised timing: complete
+[4/9] replay_mixed_n1000000_s42_l1000 baseline latency: incomplete
+[5/9] replay_mixed_n1000000_s42_l1000 revised latency: complete
+[6/9] replay_mixed_n1000000_s42_l1000 baseline memory: incomplete
+[7/9] replay_mixed_n1000000_s42_l1000 revised memory: complete
+[8/9] replay_mixed_n1000000_s42_l1000 baseline diagnostics: incomplete
+[9/9] replay_mixed_n1000000_s42_l1000 revised diagnostics: complete
+{"results": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\phase1_final\\optional_million_mixed", "status": "incomplete", "raw_rows": 29, "summary_rows": 9}

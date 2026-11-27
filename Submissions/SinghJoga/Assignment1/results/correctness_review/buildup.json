@@ -1,0 +1,11 @@
+{
+  "scenario": "buildup",
+  "input": "data\\buildup_10000.jsonl.gz",
+  "input_sha256": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5",
+  "target_events": 10000,
+  "status": "running",
+  "completed_events": 4600,
+  "max_active_orders": 4600,
+  "started_elapsed_seconds": 0.0,
+  "elapsed_seconds": 58.562986799981445
+}

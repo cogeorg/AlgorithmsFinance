@@ -1,0 +1,724 @@
+run_kind,version,scenario,seed,events,levels,phase,repeat,elapsed_s,status,active_orders_peak,price_levels_peak,fills,requested_qty_units,unfilled_qty_units,makers_touched,levels_visited,work_steps,traced_peak_bytes,traced_current_bytes,note
+memory,A,buildup,42,10000,1000,input,,,ok,,,,,,,,,9119552,8905435,
+memory,A,buildup,42,10000,1000,checkpoint,1000,,ok,1000,0,,,,,,,,82628,repeat column = events processed so far
+memory,A,buildup,42,10000,1000,checkpoint,2000,,ok,2000,0,,,,,,,,164572,repeat column = events processed so far
+memory,A,buildup,42,10000,1000,checkpoint,3000,,ok,3000,0,,,,,,,,244316,repeat column = events processed so far
+memory,A,buildup,42,10000,1000,checkpoint,4000,,ok,4000,0,,,,,,,,323228,repeat column = events processed so far
+memory,A,buildup,42,10000,1000,checkpoint,5000,,ok,5000,0,,,,,,,,403932,repeat column = events processed so far
+memory,A,buildup,42,10000,1000,checkpoint,6000,,ok,6000,0,,,,,,,,486940,repeat column = events processed so far
+memory,A,buildup,42,10000,1000,checkpoint,7000,,ok,7000,0,,,,,,,,565532,repeat column = events processed so far
+memory,A,buildup,42,10000,1000,checkpoint,8000,,ok,8000,0,,,,,,,,644956,repeat column = events processed so far
+memory,A,buildup,42,10000,1000,checkpoint,9000,,ok,9000,0,,,,,,,,725276,repeat column = events processed so far
+memory,A,buildup,42,10000,1000,checkpoint,10000,,ok,10000,0,,,,,,,,806620,repeat column = events processed so far
+memory,A,buildup,42,10000,1000,replay_peak,,,ok,,,,,,,,,807365,,
+memory,A,buildup,42,10000,1000,book_after,,,ok,10000,0,,,,,,,,805476,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,buildup,42,10000,1000,book_after_incl_input_objects,,,ok,10000,0,,,,,,,,2592649,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,buildup,42,10000,1000,input,,,ok,,,,,,,,,9119552,8905435,
+memory,B,buildup,42,10000,1000,checkpoint,1000,,ok,1000,805,,,,,,,,456292,repeat column = events processed so far
+memory,B,buildup,42,10000,1000,checkpoint,2000,,ok,2000,1281,,,,,,,,763160,repeat column = events processed so far
+memory,B,buildup,42,10000,1000,checkpoint,3000,,ok,3000,1574,,,,,,,,1071672,repeat column = events processed so far
+memory,B,buildup,42,10000,1000,checkpoint,4000,,ok,4000,1736,,,,,,,,1250320,repeat column = events processed so far
+memory,B,buildup,42,10000,1000,checkpoint,5000,,ok,5000,1840,,,,,,,,1412576,repeat column = events processed so far
+memory,B,buildup,42,10000,1000,checkpoint,6000,,ok,6000,1904,,,,,,,,1673856,repeat column = events processed so far
+memory,B,buildup,42,10000,1000,checkpoint,7000,,ok,7000,1935,,,,,,,,1829864,repeat column = events processed so far
+memory,B,buildup,42,10000,1000,checkpoint,8000,,ok,8000,1959,,,,,,,,1981216,repeat column = events processed so far
+memory,B,buildup,42,10000,1000,checkpoint,9000,,ok,9000,1970,,,,,,,,2130760,repeat column = events processed so far
+memory,B,buildup,42,10000,1000,checkpoint,10000,,ok,10000,1977,,,,,,,,2285640,repeat column = events processed so far
+memory,B,buildup,42,10000,1000,replay_peak,,,ok,,,,,,,,,2286393,,
+memory,B,buildup,42,10000,1000,book_after,,,ok,10000,1977,,,,,,,,2275096,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,buildup,42,10000,1000,book_after_incl_input_objects,,,ok,10000,1977,,,,,,,,3617246,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,buildup,43,10000,1000,input,,,ok,,,,,,,,,9108987,8905463,
+memory,A,buildup,43,10000,1000,checkpoint,1000,,ok,1000,0,,,,,,,,82628,repeat column = events processed so far
+memory,A,buildup,43,10000,1000,checkpoint,2000,,ok,2000,0,,,,,,,,164572,repeat column = events processed so far
+memory,A,buildup,43,10000,1000,checkpoint,3000,,ok,3000,0,,,,,,,,244316,repeat column = events processed so far
+memory,A,buildup,43,10000,1000,checkpoint,4000,,ok,4000,0,,,,,,,,325276,repeat column = events processed so far
+memory,A,buildup,43,10000,1000,checkpoint,5000,,ok,5000,0,,,,,,,,403932,repeat column = events processed so far
+memory,A,buildup,43,10000,1000,checkpoint,6000,,ok,6000,0,,,,,,,,486940,repeat column = events processed so far
+memory,A,buildup,43,10000,1000,checkpoint,7000,,ok,7000,0,,,,,,,,565532,repeat column = events processed so far
+memory,A,buildup,43,10000,1000,checkpoint,8000,,ok,8000,0,,,,,,,,644956,repeat column = events processed so far
+memory,A,buildup,43,10000,1000,checkpoint,9000,,ok,9000,0,,,,,,,,725276,repeat column = events processed so far
+memory,A,buildup,43,10000,1000,checkpoint,10000,,ok,10000,0,,,,,,,,806620,repeat column = events processed so far
+memory,A,buildup,43,10000,1000,replay_peak,,,ok,,,,,,,,,807365,,
+memory,A,buildup,43,10000,1000,book_after,,,ok,10000,0,,,,,,,,805476,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,buildup,43,10000,1000,book_after_incl_input_objects,,,ok,10000,0,,,,,,,,2592677,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,buildup,43,10000,1000,input,,,ok,,,,,,,,,9108987,8905404,
+memory,B,buildup,43,10000,1000,checkpoint,1000,,ok,1000,801,,,,,,,,454756,repeat column = events processed so far
+memory,B,buildup,43,10000,1000,checkpoint,2000,,ok,2000,1281,,,,,,,,763352,repeat column = events processed so far
+memory,B,buildup,43,10000,1000,checkpoint,3000,,ok,3000,1551,,,,,,,,1065208,repeat column = events processed so far
+memory,B,buildup,43,10000,1000,checkpoint,4000,,ok,4000,1732,,,,,,,,1249384,repeat column = events processed so far
+memory,B,buildup,43,10000,1000,checkpoint,5000,,ok,5000,1845,,,,,,,,1413936,repeat column = events processed so far
+memory,B,buildup,43,10000,1000,checkpoint,6000,,ok,6000,1896,,,,,,,,1672336,repeat column = events processed so far
+memory,B,buildup,43,10000,1000,checkpoint,7000,,ok,7000,1939,,,,,,,,1831712,repeat column = events processed so far
+memory,B,buildup,43,10000,1000,checkpoint,8000,,ok,8000,1966,,,,,,,,1986056,repeat column = events processed so far
+memory,B,buildup,43,10000,1000,checkpoint,9000,,ok,9000,1983,,,,,,,,2136104,repeat column = events processed so far
+memory,B,buildup,43,10000,1000,checkpoint,10000,,ok,10000,1989,,,,,,,,2288672,repeat column = events processed so far
+memory,B,buildup,43,10000,1000,replay_peak,,,ok,,,,,,,,,2289425,,
+memory,B,buildup,43,10000,1000,book_after,,,ok,10000,1989,,,,,,,,2278128,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,buildup,43,10000,1000,book_after_incl_input_objects,,,ok,10000,1989,,,,,,,,3620278,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,buildup,44,10000,1000,input,,,ok,,,,,,,,,9108070,8905348,
+memory,A,buildup,44,10000,1000,checkpoint,1000,,ok,1000,0,,,,,,,,82628,repeat column = events processed so far
+memory,A,buildup,44,10000,1000,checkpoint,2000,,ok,2000,0,,,,,,,,164572,repeat column = events processed so far
+memory,A,buildup,44,10000,1000,checkpoint,3000,,ok,3000,0,,,,,,,,244316,repeat column = events processed so far
+memory,A,buildup,44,10000,1000,checkpoint,4000,,ok,4000,0,,,,,,,,323228,repeat column = events processed so far
+memory,A,buildup,44,10000,1000,checkpoint,5000,,ok,5000,0,,,,,,,,403932,repeat column = events processed so far
+memory,A,buildup,44,10000,1000,checkpoint,6000,,ok,6000,0,,,,,,,,486940,repeat column = events processed so far
+memory,A,buildup,44,10000,1000,checkpoint,7000,,ok,7000,0,,,,,,,,565532,repeat column = events processed so far
+memory,A,buildup,44,10000,1000,checkpoint,8000,,ok,8000,0,,,,,,,,644956,repeat column = events processed so far
+memory,A,buildup,44,10000,1000,checkpoint,9000,,ok,9000,0,,,,,,,,725276,repeat column = events processed so far
+memory,A,buildup,44,10000,1000,checkpoint,10000,,ok,10000,0,,,,,,,,806620,repeat column = events processed so far
+memory,A,buildup,44,10000,1000,replay_peak,,,ok,,,,,,,,,807365,,
+memory,A,buildup,44,10000,1000,book_after,,,ok,10000,0,,,,,,,,805476,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,buildup,44,10000,1000,book_after_incl_input_objects,,,ok,10000,0,,,,,,,,2592621,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,buildup,44,10000,1000,input,,,ok,,,,,,,,,9108070,8905407,
+memory,B,buildup,44,10000,1000,checkpoint,1000,,ok,1000,775,,,,,,,,446132,repeat column = events processed so far
+memory,B,buildup,44,10000,1000,checkpoint,2000,,ok,2000,1265,,,,,,,,757984,repeat column = events processed so far
+memory,B,buildup,44,10000,1000,checkpoint,3000,,ok,3000,1547,,,,,,,,1063120,repeat column = events processed so far
+memory,B,buildup,44,10000,1000,checkpoint,4000,,ok,4000,1737,,,,,,,,1251160,repeat column = events processed so far
+memory,B,buildup,44,10000,1000,checkpoint,5000,,ok,5000,1829,,,,,,,,1410136,repeat column = events processed so far
+memory,B,buildup,44,10000,1000,checkpoint,6000,,ok,6000,1897,,,,,,,,1670216,repeat column = events processed so far
+memory,B,buildup,44,10000,1000,checkpoint,7000,,ok,7000,1942,,,,,,,,1830064,repeat column = events processed so far
+memory,B,buildup,44,10000,1000,checkpoint,8000,,ok,8000,1967,,,,,,,,1983736,repeat column = events processed so far
+memory,B,buildup,44,10000,1000,checkpoint,9000,,ok,9000,1978,,,,,,,,2133768,repeat column = events processed so far
+memory,B,buildup,44,10000,1000,checkpoint,10000,,ok,10000,1987,,,,,,,,2286008,repeat column = events processed so far
+memory,B,buildup,44,10000,1000,replay_peak,,,ok,,,,,,,,,2286761,,
+memory,B,buildup,44,10000,1000,book_after,,,ok,10000,1987,,,,,,,,2275464,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,buildup,44,10000,1000,book_after_incl_input_objects,,,ok,10000,1987,,,,,,,,3617615,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,crowded,42,10000,1000,input,,,ok,,,,,,,,,9060211,8905504,
+memory,A,crowded,42,10000,1000,checkpoint,1000,,ok,1000,0,,,,,,,,82628,repeat column = events processed so far
+memory,A,crowded,42,10000,1000,checkpoint,2000,,ok,2000,0,,,,,,,,164572,repeat column = events processed so far
+memory,A,crowded,42,10000,1000,checkpoint,3000,,ok,3000,0,,,,,,,,244316,repeat column = events processed so far
+memory,A,crowded,42,10000,1000,checkpoint,4000,,ok,4000,0,,,,,,,,323228,repeat column = events processed so far
+memory,A,crowded,42,10000,1000,checkpoint,5000,,ok,5000,0,,,,,,,,403932,repeat column = events processed so far
+memory,A,crowded,42,10000,1000,checkpoint,6000,,ok,6000,0,,,,,,,,486940,repeat column = events processed so far
+memory,A,crowded,42,10000,1000,checkpoint,7000,,ok,7000,0,,,,,,,,565532,repeat column = events processed so far
+memory,A,crowded,42,10000,1000,checkpoint,8000,,ok,8000,0,,,,,,,,644956,repeat column = events processed so far
+memory,A,crowded,42,10000,1000,checkpoint,9000,,ok,9000,0,,,,,,,,725276,repeat column = events processed so far
+memory,A,crowded,42,10000,1000,checkpoint,10000,,ok,10000,0,,,,,,,,806620,repeat column = events processed so far
+memory,A,crowded,42,10000,1000,replay_peak,,,ok,,,,,,,,,807365,,
+memory,A,crowded,42,10000,1000,book_after,,,ok,10000,0,,,,,,,,805476,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,crowded,42,10000,1000,book_after_incl_input_objects,,,ok,10000,0,,,,,,,,2592718,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,crowded,42,10000,1000,input,,,ok,,,,,,,,,9060211,8905504,
+memory,B,crowded,42,10000,1000,checkpoint,1000,,ok,1000,8,,,,,,,,193204,repeat column = events processed so far
+memory,B,crowded,42,10000,1000,checkpoint,2000,,ok,2000,8,,,,,,,,382136,repeat column = events processed so far
+memory,B,crowded,42,10000,1000,checkpoint,3000,,ok,3000,8,,,,,,,,638632,repeat column = events processed so far
+memory,B,crowded,42,10000,1000,checkpoint,4000,,ok,4000,8,,,,,,,,758632,repeat column = events processed so far
+memory,B,crowded,42,10000,1000,checkpoint,5000,,ok,5000,8,,,,,,,,878632,repeat column = events processed so far
+memory,B,crowded,42,10000,1000,checkpoint,6000,,ok,6000,8,,,,,,,,1271736,repeat column = events processed so far
+memory,B,crowded,42,10000,1000,checkpoint,7000,,ok,7000,8,,,,,,,,1391736,repeat column = events processed so far
+memory,B,crowded,42,10000,1000,checkpoint,8000,,ok,8000,8,,,,,,,,1511736,repeat column = events processed so far
+memory,B,crowded,42,10000,1000,checkpoint,9000,,ok,9000,8,,,,,,,,1631736,repeat column = events processed so far
+memory,B,crowded,42,10000,1000,checkpoint,10000,,ok,10000,8,,,,,,,,1751736,repeat column = events processed so far
+memory,B,crowded,42,10000,1000,replay_peak,,,ok,,,,,,,,,1752486,,
+memory,B,crowded,42,10000,1000,book_after,,,ok,10000,8,,,,,,,,1749952,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,crowded,42,10000,1000,book_after_incl_input_objects,,,ok,10000,8,,,,,,,,3092167,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,crowded,43,10000,1000,input,,,ok,,,,,,,,,9059468,8905430,
+memory,A,crowded,43,10000,1000,checkpoint,1000,,ok,1000,0,,,,,,,,83204,repeat column = events processed so far
+memory,A,crowded,43,10000,1000,checkpoint,2000,,ok,2000,0,,,,,,,,164572,repeat column = events processed so far
+memory,A,crowded,43,10000,1000,checkpoint,3000,,ok,3000,0,,,,,,,,244316,repeat column = events processed so far
+memory,A,crowded,43,10000,1000,checkpoint,4000,,ok,4000,0,,,,,,,,323228,repeat column = events processed so far
+memory,A,crowded,43,10000,1000,checkpoint,5000,,ok,5000,0,,,,,,,,403932,repeat column = events processed so far
+memory,A,crowded,43,10000,1000,checkpoint,6000,,ok,6000,0,,,,,,,,486940,repeat column = events processed so far
+memory,A,crowded,43,10000,1000,checkpoint,7000,,ok,7000,0,,,,,,,,565532,repeat column = events processed so far
+memory,A,crowded,43,10000,1000,checkpoint,8000,,ok,8000,0,,,,,,,,644956,repeat column = events processed so far
+memory,A,crowded,43,10000,1000,checkpoint,9000,,ok,9000,0,,,,,,,,725276,repeat column = events processed so far
+memory,A,crowded,43,10000,1000,checkpoint,10000,,ok,10000,0,,,,,,,,806620,repeat column = events processed so far
+memory,A,crowded,43,10000,1000,replay_peak,,,ok,,,,,,,,,807365,,
+memory,A,crowded,43,10000,1000,book_after,,,ok,10000,0,,,,,,,,805476,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,crowded,43,10000,1000,book_after_incl_input_objects,,,ok,10000,0,,,,,,,,2592703,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,crowded,43,10000,1000,input,,,ok,,,,,,,,,9059468,8905430,
+memory,B,crowded,43,10000,1000,checkpoint,1000,,ok,1000,8,,,,,,,,193204,repeat column = events processed so far
+memory,B,crowded,43,10000,1000,checkpoint,2000,,ok,2000,8,,,,,,,,382136,repeat column = events processed so far
+memory,B,crowded,43,10000,1000,checkpoint,3000,,ok,3000,8,,,,,,,,628056,repeat column = events processed so far
+memory,B,crowded,43,10000,1000,checkpoint,4000,,ok,4000,8,,,,,,,,758632,repeat column = events processed so far
+memory,B,crowded,43,10000,1000,checkpoint,5000,,ok,5000,8,,,,,,,,878632,repeat column = events processed so far
+memory,B,crowded,43,10000,1000,checkpoint,6000,,ok,6000,8,,,,,,,,1271736,repeat column = events processed so far
+memory,B,crowded,43,10000,1000,checkpoint,7000,,ok,7000,8,,,,,,,,1391736,repeat column = events processed so far
+memory,B,crowded,43,10000,1000,checkpoint,8000,,ok,8000,8,,,,,,,,1511736,repeat column = events processed so far
+memory,B,crowded,43,10000,1000,checkpoint,9000,,ok,9000,8,,,,,,,,1631736,repeat column = events processed so far
+memory,B,crowded,43,10000,1000,checkpoint,10000,,ok,10000,8,,,,,,,,1751736,repeat column = events processed so far
+memory,B,crowded,43,10000,1000,replay_peak,,,ok,,,,,,,,,1752486,,
+memory,B,crowded,43,10000,1000,book_after,,,ok,10000,8,,,,,,,,1749952,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,crowded,43,10000,1000,book_after_incl_input_objects,,,ok,10000,8,,,,,,,,3092167,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,crowded,44,10000,1000,input,,,ok,,,,,,,,,9060257,8905419,
+memory,A,crowded,44,10000,1000,checkpoint,1000,,ok,1000,0,,,,,,,,82628,repeat column = events processed so far
+memory,A,crowded,44,10000,1000,checkpoint,2000,,ok,2000,0,,,,,,,,164572,repeat column = events processed so far
+memory,A,crowded,44,10000,1000,checkpoint,3000,,ok,3000,0,,,,,,,,244316,repeat column = events processed so far
+memory,A,crowded,44,10000,1000,checkpoint,4000,,ok,4000,0,,,,,,,,323228,repeat column = events processed so far
+memory,A,crowded,44,10000,1000,checkpoint,5000,,ok,5000,0,,,,,,,,403932,repeat column = events processed so far
+memory,A,crowded,44,10000,1000,checkpoint,6000,,ok,6000,0,,,,,,,,486940,repeat column = events processed so far
+memory,A,crowded,44,10000,1000,checkpoint,7000,,ok,7000,0,,,,,,,,565532,repeat column = events processed so far
+memory,A,crowded,44,10000,1000,checkpoint,8000,,ok,8000,0,,,,,,,,644956,repeat column = events processed so far
+memory,A,crowded,44,10000,1000,checkpoint,9000,,ok,9000,0,,,,,,,,725276,repeat column = events processed so far
+memory,A,crowded,44,10000,1000,checkpoint,10000,,ok,10000,0,,,,,,,,806620,repeat column = events processed so far
+memory,A,crowded,44,10000,1000,replay_peak,,,ok,,,,,,,,,807365,,
+memory,A,crowded,44,10000,1000,book_after,,,ok,10000,0,,,,,,,,805476,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,crowded,44,10000,1000,book_after_incl_input_objects,,,ok,10000,0,,,,,,,,2592692,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,crowded,44,10000,1000,input,,,ok,,,,,,,,,9060257,8905478,
+memory,B,crowded,44,10000,1000,checkpoint,1000,,ok,1000,8,,,,,,,,193204,repeat column = events processed so far
+memory,B,crowded,44,10000,1000,checkpoint,2000,,ok,2000,8,,,,,,,,382136,repeat column = events processed so far
+memory,B,crowded,44,10000,1000,checkpoint,3000,,ok,3000,8,,,,,,,,638632,repeat column = events processed so far
+memory,B,crowded,44,10000,1000,checkpoint,4000,,ok,4000,8,,,,,,,,758632,repeat column = events processed so far
+memory,B,crowded,44,10000,1000,checkpoint,5000,,ok,5000,8,,,,,,,,878632,repeat column = events processed so far
+memory,B,crowded,44,10000,1000,checkpoint,6000,,ok,6000,8,,,,,,,,1271736,repeat column = events processed so far
+memory,B,crowded,44,10000,1000,checkpoint,7000,,ok,7000,8,,,,,,,,1391736,repeat column = events processed so far
+memory,B,crowded,44,10000,1000,checkpoint,8000,,ok,8000,8,,,,,,,,1511736,repeat column = events processed so far
+memory,B,crowded,44,10000,1000,checkpoint,9000,,ok,9000,8,,,,,,,,1631736,repeat column = events processed so far
+memory,B,crowded,44,10000,1000,checkpoint,10000,,ok,10000,8,,,,,,,,1751736,repeat column = events processed so far
+memory,B,crowded,44,10000,1000,replay_peak,,,ok,,,,,,,,,1752486,,
+memory,B,crowded,44,10000,1000,book_after,,,ok,10000,8,,,,,,,,1749952,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,crowded,44,10000,1000,book_after_incl_input_objects,,,ok,10000,8,,,,,,,,3092166,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,mixed,42,10000,1000,input,,,ok,,,,,,,,,7930691,7735923,
+memory,A,mixed,42,10000,1000,checkpoint,1000,,ok,138,0,,,,,,,,15460,repeat column = events processed so far
+memory,A,mixed,42,10000,1000,checkpoint,2000,,ok,302,0,,,,,,,,29476,repeat column = events processed so far
+memory,A,mixed,42,10000,1000,checkpoint,3000,,ok,459,0,,,,,,,,42572,repeat column = events processed so far
+memory,A,mixed,42,10000,1000,checkpoint,4000,,ok,608,0,,,,,,,,54644,repeat column = events processed so far
+memory,A,mixed,42,10000,1000,checkpoint,5000,,ok,776,0,,,,,,,,68276,repeat column = events processed so far
+memory,A,mixed,42,10000,1000,checkpoint,6000,,ok,883,0,,,,,,,,76684,repeat column = events processed so far
+memory,A,mixed,42,10000,1000,checkpoint,7000,,ok,1045,0,,,,,,,,89404,repeat column = events processed so far
+memory,A,mixed,42,10000,1000,checkpoint,8000,,ok,1212,0,,,,,,,,103348,repeat column = events processed so far
+memory,A,mixed,42,10000,1000,checkpoint,9000,,ok,1416,0,,,,,,,,120852,repeat column = events processed so far
+memory,A,mixed,42,10000,1000,checkpoint,10000,,ok,1587,0,,,,,,,,134700,repeat column = events processed so far
+memory,A,mixed,42,10000,1000,replay_peak,,,ok,,,,,,,,,135444,,
+memory,A,mixed,42,10000,1000,book_after,,,ok,1587,0,,,,,,,,130684,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,mixed,42,10000,1000,book_after_incl_input_objects,,,ok,1587,0,,,,,,,,415316,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,mixed,42,10000,1000,input,,,ok,,,,,,,,,7930691,7735864,
+memory,B,mixed,42,10000,1000,checkpoint,1000,,ok,138,124,,,,,,,,80028,repeat column = events processed so far
+memory,B,mixed,42,10000,1000,checkpoint,2000,,ok,302,255,,,,,,,,161396,repeat column = events processed so far
+memory,B,mixed,42,10000,1000,checkpoint,3000,,ok,459,362,,,,,,,,232544,repeat column = events processed so far
+memory,B,mixed,42,10000,1000,checkpoint,4000,,ok,608,432,,,,,,,,274192,repeat column = events processed so far
+memory,B,mixed,42,10000,1000,checkpoint,5000,,ok,776,505,,,,,,,,339208,repeat column = events processed so far
+memory,B,mixed,42,10000,1000,checkpoint,6000,,ok,883,534,,,,,,,,388224,repeat column = events processed so far
+memory,B,mixed,42,10000,1000,checkpoint,7000,,ok,1045,597,,,,,,,,429512,repeat column = events processed so far
+memory,B,mixed,42,10000,1000,checkpoint,8000,,ok,1212,656,,,,,,,,470840,repeat column = events processed so far
+memory,B,mixed,42,10000,1000,checkpoint,9000,,ok,1416,707,,,,,,,,515440,repeat column = events processed so far
+memory,B,mixed,42,10000,1000,checkpoint,10000,,ok,1587,747,,,,,,,,603048,repeat column = events processed so far
+memory,B,mixed,42,10000,1000,replay_peak,,,ok,,,,,,,,,622120,,
+memory,B,mixed,42,10000,1000,book_after,,,ok,1587,747,,,,,,,,600072,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,mixed,42,10000,1000,book_after_incl_input_objects,,,ok,1587,747,,,,,,,,816491,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,mixed,43,10000,1000,input,,,ok,,,,,,,,,7933429,7749143,
+memory,A,mixed,43,10000,1000,checkpoint,1000,,ok,179,0,,,,,,,,18796,repeat column = events processed so far
+memory,A,mixed,43,10000,1000,checkpoint,2000,,ok,322,0,,,,,,,,31300,repeat column = events processed so far
+memory,A,mixed,43,10000,1000,checkpoint,3000,,ok,488,0,,,,,,,,44876,repeat column = events processed so far
+memory,A,mixed,43,10000,1000,checkpoint,4000,,ok,641,0,,,,,,,,57076,repeat column = events processed so far
+memory,A,mixed,43,10000,1000,checkpoint,5000,,ok,793,0,,,,,,,,69460,repeat column = events processed so far
+memory,A,mixed,43,10000,1000,checkpoint,6000,,ok,947,0,,,,,,,,81540,repeat column = events processed so far
+memory,A,mixed,43,10000,1000,checkpoint,7000,,ok,1138,0,,,,,,,,97468,repeat column = events processed so far
+memory,A,mixed,43,10000,1000,checkpoint,8000,,ok,1300,0,,,,,,,,110316,repeat column = events processed so far
+memory,A,mixed,43,10000,1000,checkpoint,9000,,ok,1467,0,,,,,,,,123876,repeat column = events processed so far
+memory,A,mixed,43,10000,1000,checkpoint,10000,,ok,1622,0,,,,,,,,136572,repeat column = events processed so far
+memory,A,mixed,43,10000,1000,replay_peak,,,ok,,,,,,,,,137692,,
+memory,A,mixed,43,10000,1000,book_after,,,ok,1622,0,,,,,,,,133108,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,mixed,43,10000,1000,book_after_incl_input_objects,,,ok,1622,0,,,,,,,,424029,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,mixed,43,10000,1000,input,,,ok,,,,,,,,,7933429,7749084,
+memory,B,mixed,43,10000,1000,checkpoint,1000,,ok,179,159,,,,,,,,97060,repeat column = events processed so far
+memory,B,mixed,43,10000,1000,checkpoint,2000,,ok,322,271,,,,,,,,170980,repeat column = events processed so far
+memory,B,mixed,43,10000,1000,checkpoint,3000,,ok,488,368,,,,,,,,239208,repeat column = events processed so far
+memory,B,mixed,43,10000,1000,checkpoint,4000,,ok,641,461,,,,,,,,288488,repeat column = events processed so far
+memory,B,mixed,43,10000,1000,checkpoint,5000,,ok,793,501,,,,,,,,365344,repeat column = events processed so far
+memory,B,mixed,43,10000,1000,checkpoint,6000,,ok,947,567,,,,,,,,408272,repeat column = events processed so far
+memory,B,mixed,43,10000,1000,checkpoint,7000,,ok,1138,643,,,,,,,,458200,repeat column = events processed so far
+memory,B,mixed,43,10000,1000,checkpoint,8000,,ok,1300,678,,,,,,,,491512,repeat column = events processed so far
+memory,B,mixed,43,10000,1000,checkpoint,9000,,ok,1467,727,,,,,,,,527688,repeat column = events processed so far
+memory,B,mixed,43,10000,1000,checkpoint,10000,,ok,1622,740,,,,,,,,554912,repeat column = events processed so far
+memory,B,mixed,43,10000,1000,replay_peak,,,ok,,,,,,,,,557784,,
+memory,B,mixed,43,10000,1000,book_after,,,ok,1622,740,,,,,,,,550672,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,mixed,43,10000,1000,book_after_incl_input_objects,,,ok,1622,740,,,,,,,,771084,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,mixed,44,10000,1000,input,,,ok,,,,,,,,,7888674,7732876,
+memory,A,mixed,44,10000,1000,checkpoint,1000,,ok,162,0,,,,,,,,17532,repeat column = events processed so far
+memory,A,mixed,44,10000,1000,checkpoint,2000,,ok,323,0,,,,,,,,30948,repeat column = events processed so far
+memory,A,mixed,44,10000,1000,checkpoint,3000,,ok,460,0,,,,,,,,43724,repeat column = events processed so far
+memory,A,mixed,44,10000,1000,checkpoint,4000,,ok,600,0,,,,,,,,54892,repeat column = events processed so far
+memory,A,mixed,44,10000,1000,checkpoint,5000,,ok,777,0,,,,,,,,69204,repeat column = events processed so far
+memory,A,mixed,44,10000,1000,checkpoint,6000,,ok,920,0,,,,,,,,80396,repeat column = events processed so far
+memory,A,mixed,44,10000,1000,checkpoint,7000,,ok,1062,0,,,,,,,,91548,repeat column = events processed so far
+memory,A,mixed,44,10000,1000,checkpoint,8000,,ok,1194,0,,,,,,,,102268,repeat column = events processed so far
+memory,A,mixed,44,10000,1000,checkpoint,9000,,ok,1350,0,,,,,,,,114748,repeat column = events processed so far
+memory,A,mixed,44,10000,1000,checkpoint,10000,,ok,1491,0,,,,,,,,126956,repeat column = events processed so far
+memory,A,mixed,44,10000,1000,replay_peak,,,ok,,,,,,,,,127700,,
+memory,A,mixed,44,10000,1000,book_after,,,ok,1491,0,,,,,,,,122204,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,mixed,44,10000,1000,book_after_incl_input_objects,,,ok,1491,0,,,,,,,,389612,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,mixed,44,10000,1000,input,,,ok,,,,,,,,,7888615,7732817,
+memory,B,mixed,44,10000,1000,checkpoint,1000,,ok,162,152,,,,,,,,91988,repeat column = events processed so far
+memory,B,mixed,44,10000,1000,checkpoint,2000,,ok,323,265,,,,,,,,167412,repeat column = events processed so far
+memory,B,mixed,44,10000,1000,checkpoint,3000,,ok,460,361,,,,,,,,231912,repeat column = events processed so far
+memory,B,mixed,44,10000,1000,checkpoint,4000,,ok,600,429,,,,,,,,273048,repeat column = events processed so far
+memory,B,mixed,44,10000,1000,checkpoint,5000,,ok,777,511,,,,,,,,340832,repeat column = events processed so far
+memory,B,mixed,44,10000,1000,checkpoint,6000,,ok,920,558,,,,,,,,401472,repeat column = events processed so far
+memory,B,mixed,44,10000,1000,checkpoint,7000,,ok,1062,588,,,,,,,,429448,repeat column = events processed so far
+memory,B,mixed,44,10000,1000,checkpoint,8000,,ok,1194,635,,,,,,,,462728,repeat column = events processed so far
+memory,B,mixed,44,10000,1000,checkpoint,9000,,ok,1350,671,,,,,,,,494496,repeat column = events processed so far
+memory,B,mixed,44,10000,1000,checkpoint,10000,,ok,1491,697,,,,,,,,575816,repeat column = events processed so far
+memory,B,mixed,44,10000,1000,replay_peak,,,ok,,,,,,,,,608008,,
+memory,B,mixed,44,10000,1000,book_after,,,ok,1491,697,,,,,,,,570736,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,mixed,44,10000,1000,book_after_incl_input_objects,,,ok,1491,697,,,,,,,,774223,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,sweep,42,10000,1000,input,,,ok,,,,,,,,,8568595,8402278,
+memory,A,sweep,42,10000,1000,checkpoint,1000,,ok,1000,0,,,,,,,,82628,repeat column = events processed so far
+memory,A,sweep,42,10000,1000,checkpoint,2000,,ok,2000,0,,,,,,,,164572,repeat column = events processed so far
+memory,A,sweep,42,10000,1000,checkpoint,3000,,ok,3000,0,,,,,,,,244316,repeat column = events processed so far
+memory,A,sweep,42,10000,1000,checkpoint,4000,,ok,4000,0,,,,,,,,323228,repeat column = events processed so far
+memory,A,sweep,42,10000,1000,checkpoint,5000,,ok,5000,0,,,,,,,,403932,repeat column = events processed so far
+memory,A,sweep,42,10000,1000,checkpoint,6000,,ok,6000,0,,,,,,,,486940,repeat column = events processed so far
+memory,A,sweep,42,10000,1000,checkpoint,7000,,ok,7000,0,,,,,,,,565532,repeat column = events processed so far
+memory,A,sweep,42,10000,1000,checkpoint,8000,,ok,8000,0,,,,,,,,644956,repeat column = events processed so far
+memory,A,sweep,42,10000,1000,checkpoint,9000,,ok,3938,0,,,,,,,,356044,repeat column = events processed so far
+memory,A,sweep,42,10000,1000,checkpoint,10000,,ok,3938,0,,,,,,,,356044,repeat column = events processed so far
+memory,A,sweep,42,10000,1000,replay_peak,,,ok,,,,,,,,,646220,,
+memory,A,sweep,42,10000,1000,book_after,,,ok,3938,0,,,,,,,,351348,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,sweep,42,10000,1000,book_after_incl_input_objects,,,ok,3938,0,,,,,,,,1055986,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,sweep,42,10000,1000,input,,,ok,,,,,,,,,8568595,8402219,
+memory,B,sweep,42,10000,1000,checkpoint,1000,,ok,1000,805,,,,,,,,456292,repeat column = events processed so far
+memory,B,sweep,42,10000,1000,checkpoint,2000,,ok,2000,1281,,,,,,,,763160,repeat column = events processed so far
+memory,B,sweep,42,10000,1000,checkpoint,3000,,ok,3000,1574,,,,,,,,1071672,repeat column = events processed so far
+memory,B,sweep,42,10000,1000,checkpoint,4000,,ok,4000,1736,,,,,,,,1250320,repeat column = events processed so far
+memory,B,sweep,42,10000,1000,checkpoint,5000,,ok,5000,1840,,,,,,,,1412576,repeat column = events processed so far
+memory,B,sweep,42,10000,1000,checkpoint,6000,,ok,6000,1904,,,,,,,,1673856,repeat column = events processed so far
+memory,B,sweep,42,10000,1000,checkpoint,7000,,ok,7000,1935,,,,,,,,1829864,repeat column = events processed so far
+memory,B,sweep,42,10000,1000,checkpoint,8000,,ok,8000,1959,,,,,,,,1981216,repeat column = events processed so far
+memory,B,sweep,42,10000,1000,checkpoint,9000,,ok,3938,978,,,,,,,,1148224,repeat column = events processed so far
+memory,B,sweep,42,10000,1000,checkpoint,10000,,ok,3938,978,,,,,,,,1148224,repeat column = events processed so far
+memory,B,sweep,42,10000,1000,replay_peak,,,ok,,,,,,,,,1981967,,
+memory,B,sweep,42,10000,1000,book_after,,,ok,3938,978,,,,,,,,1132104,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,sweep,42,10000,1000,book_after_incl_input_objects,,,ok,3938,978,,,,,,,,1659320,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,sweep,43,10000,1000,input,,,ok,,,,,,,,,8568217,8402279,
+memory,A,sweep,43,10000,1000,checkpoint,1000,,ok,1000,0,,,,,,,,82628,repeat column = events processed so far
+memory,A,sweep,43,10000,1000,checkpoint,2000,,ok,2000,0,,,,,,,,164572,repeat column = events processed so far
+memory,A,sweep,43,10000,1000,checkpoint,3000,,ok,3000,0,,,,,,,,244316,repeat column = events processed so far
+memory,A,sweep,43,10000,1000,checkpoint,4000,,ok,4000,0,,,,,,,,325276,repeat column = events processed so far
+memory,A,sweep,43,10000,1000,checkpoint,5000,,ok,5000,0,,,,,,,,403932,repeat column = events processed so far
+memory,A,sweep,43,10000,1000,checkpoint,6000,,ok,6000,0,,,,,,,,486940,repeat column = events processed so far
+memory,A,sweep,43,10000,1000,checkpoint,7000,,ok,7000,0,,,,,,,,565532,repeat column = events processed so far
+memory,A,sweep,43,10000,1000,checkpoint,8000,,ok,8000,0,,,,,,,,644956,repeat column = events processed so far
+memory,A,sweep,43,10000,1000,checkpoint,9000,,ok,3998,0,,,,,,,,360180,repeat column = events processed so far
+memory,A,sweep,43,10000,1000,checkpoint,10000,,ok,3998,0,,,,,,,,360180,repeat column = events processed so far
+memory,A,sweep,43,10000,1000,replay_peak,,,ok,,,,,,,,,646924,,
+memory,A,sweep,43,10000,1000,book_after,,,ok,3998,0,,,,,,,,355668,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,sweep,43,10000,1000,book_after_incl_input_objects,,,ok,3998,0,,,,,,,,1071526,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,sweep,43,10000,1000,input,,,ok,,,,,,,,,8568217,8402279,
+memory,B,sweep,43,10000,1000,checkpoint,1000,,ok,1000,801,,,,,,,,454756,repeat column = events processed so far
+memory,B,sweep,43,10000,1000,checkpoint,2000,,ok,2000,1281,,,,,,,,763352,repeat column = events processed so far
+memory,B,sweep,43,10000,1000,checkpoint,3000,,ok,3000,1551,,,,,,,,1065208,repeat column = events processed so far
+memory,B,sweep,43,10000,1000,checkpoint,4000,,ok,4000,1732,,,,,,,,1249384,repeat column = events processed so far
+memory,B,sweep,43,10000,1000,checkpoint,5000,,ok,5000,1845,,,,,,,,1413936,repeat column = events processed so far
+memory,B,sweep,43,10000,1000,checkpoint,6000,,ok,6000,1896,,,,,,,,1672336,repeat column = events processed so far
+memory,B,sweep,43,10000,1000,checkpoint,7000,,ok,7000,1939,,,,,,,,1831712,repeat column = events processed so far
+memory,B,sweep,43,10000,1000,checkpoint,8000,,ok,8000,1966,,,,,,,,1986056,repeat column = events processed so far
+memory,B,sweep,43,10000,1000,checkpoint,9000,,ok,3998,984,,,,,,,,1160192,repeat column = events processed so far
+memory,B,sweep,43,10000,1000,checkpoint,10000,,ok,3998,984,,,,,,,,1160192,repeat column = events processed so far
+memory,B,sweep,43,10000,1000,replay_peak,,,ok,,,,,,,,,1986807,,
+memory,B,sweep,43,10000,1000,book_after,,,ok,3998,984,,,,,,,,1144136,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,sweep,43,10000,1000,book_after_incl_input_objects,,,ok,3998,984,,,,,,,,1679992,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,sweep,44,10000,1000,input,,,ok,,,,,,,,,8568901,8402307,
+memory,A,sweep,44,10000,1000,checkpoint,1000,,ok,1000,0,,,,,,,,82628,repeat column = events processed so far
+memory,A,sweep,44,10000,1000,checkpoint,2000,,ok,2000,0,,,,,,,,164572,repeat column = events processed so far
+memory,A,sweep,44,10000,1000,checkpoint,3000,,ok,3000,0,,,,,,,,244316,repeat column = events processed so far
+memory,A,sweep,44,10000,1000,checkpoint,4000,,ok,4000,0,,,,,,,,323228,repeat column = events processed so far
+memory,A,sweep,44,10000,1000,checkpoint,5000,,ok,5000,0,,,,,,,,403932,repeat column = events processed so far
+memory,A,sweep,44,10000,1000,checkpoint,6000,,ok,6000,0,,,,,,,,486940,repeat column = events processed so far
+memory,A,sweep,44,10000,1000,checkpoint,7000,,ok,7000,0,,,,,,,,565532,repeat column = events processed so far
+memory,A,sweep,44,10000,1000,checkpoint,8000,,ok,8000,0,,,,,,,,644956,repeat column = events processed so far
+memory,A,sweep,44,10000,1000,checkpoint,9000,,ok,4068,0,,,,,,,,365380,repeat column = events processed so far
+memory,A,sweep,44,10000,1000,checkpoint,10000,,ok,3967,0,,,,,,,,357948,repeat column = events processed so far
+memory,A,sweep,44,10000,1000,replay_peak,,,ok,,,,,,,,,646264,,
+memory,A,sweep,44,10000,1000,book_after,,,ok,3967,0,,,,,,,,353436,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,sweep,44,10000,1000,book_after_incl_input_objects,,,ok,3967,0,,,,,,,,1062734,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,sweep,44,10000,1000,input,,,ok,,,,,,,,,8568901,8402248,
+memory,B,sweep,44,10000,1000,checkpoint,1000,,ok,1000,775,,,,,,,,446132,repeat column = events processed so far
+memory,B,sweep,44,10000,1000,checkpoint,2000,,ok,2000,1265,,,,,,,,757984,repeat column = events processed so far
+memory,B,sweep,44,10000,1000,checkpoint,3000,,ok,3000,1547,,,,,,,,1063120,repeat column = events processed so far
+memory,B,sweep,44,10000,1000,checkpoint,4000,,ok,4000,1737,,,,,,,,1251160,repeat column = events processed so far
+memory,B,sweep,44,10000,1000,checkpoint,5000,,ok,5000,1829,,,,,,,,1410136,repeat column = events processed so far
+memory,B,sweep,44,10000,1000,checkpoint,6000,,ok,6000,1897,,,,,,,,1670216,repeat column = events processed so far
+memory,B,sweep,44,10000,1000,checkpoint,7000,,ok,7000,1942,,,,,,,,1830064,repeat column = events processed so far
+memory,B,sweep,44,10000,1000,checkpoint,8000,,ok,8000,1967,,,,,,,,1983736,repeat column = events processed so far
+memory,B,sweep,44,10000,1000,checkpoint,9000,,ok,4068,1008,,,,,,,,1178000,repeat column = events processed so far
+memory,B,sweep,44,10000,1000,checkpoint,10000,,ok,3967,983,,,,,,,,1156144,repeat column = events processed so far
+memory,B,sweep,44,10000,1000,replay_peak,,,ok,,,,,,,,,1984487,,
+memory,B,sweep,44,10000,1000,book_after,,,ok,3967,983,,,,,,,,1140088,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,sweep,44,10000,1000,book_after_incl_input_objects,,,ok,3967,983,,,,,,,,1670659,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,cancel_churn,42,10000,1000,input,,,ok,,,,,,,,,7411210,7265350,
+memory,A,cancel_churn,42,10000,1000,checkpoint,1000,,ok,0,0,,,,,,,,2340,repeat column = events processed so far
+memory,A,cancel_churn,42,10000,1000,checkpoint,2000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,10000,1000,checkpoint,3000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,10000,1000,checkpoint,4000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,10000,1000,checkpoint,5000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,10000,1000,checkpoint,6000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,10000,1000,checkpoint,7000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,10000,1000,checkpoint,8000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,10000,1000,checkpoint,9000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,10000,1000,checkpoint,10000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,10000,1000,replay_peak,,,ok,,,,,,,,,3710,,
+memory,A,cancel_churn,42,10000,1000,book_after,,,ok,0,0,,,,,,,,1828,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,cancel_churn,42,10000,1000,book_after_incl_input_objects,,,ok,0,0,,,,,,,,1078,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,cancel_churn,42,10000,1000,input,,,ok,,,,,,,,,7411210,7265291,
+memory,B,cancel_churn,42,10000,1000,checkpoint,1000,,ok,0,0,,,,,,,,2764,repeat column = events processed so far
+memory,B,cancel_churn,42,10000,1000,checkpoint,2000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,10000,1000,checkpoint,3000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,10000,1000,checkpoint,4000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,10000,1000,checkpoint,5000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,10000,1000,checkpoint,6000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,10000,1000,checkpoint,7000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,10000,1000,checkpoint,8000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,10000,1000,checkpoint,9000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,10000,1000,checkpoint,10000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,10000,1000,replay_peak,,,ok,,,,,,,,,4190,,
+memory,B,cancel_churn,42,10000,1000,book_after,,,ok,0,0,,,,,,,,2268,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,cancel_churn,42,10000,1000,book_after_incl_input_objects,,,ok,0,0,,,,,,,,1398,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,cancel_churn,43,10000,1000,input,,,ok,,,,,,,,,7411140,7265291,
+memory,A,cancel_churn,43,10000,1000,checkpoint,1000,,ok,0,0,,,,,,,,2340,repeat column = events processed so far
+memory,A,cancel_churn,43,10000,1000,checkpoint,2000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,10000,1000,checkpoint,3000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,10000,1000,checkpoint,4000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,10000,1000,checkpoint,5000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,10000,1000,checkpoint,6000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,10000,1000,checkpoint,7000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,10000,1000,checkpoint,8000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,10000,1000,checkpoint,9000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,10000,1000,checkpoint,10000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,10000,1000,replay_peak,,,ok,,,,,,,,,3710,,
+memory,A,cancel_churn,43,10000,1000,book_after,,,ok,0,0,,,,,,,,1828,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,cancel_churn,43,10000,1000,book_after_incl_input_objects,,,ok,0,0,,,,,,,,1078,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,cancel_churn,43,10000,1000,input,,,ok,,,,,,,,,7411140,7265350,
+memory,B,cancel_churn,43,10000,1000,checkpoint,1000,,ok,0,0,,,,,,,,2764,repeat column = events processed so far
+memory,B,cancel_churn,43,10000,1000,checkpoint,2000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,10000,1000,checkpoint,3000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,10000,1000,checkpoint,4000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,10000,1000,checkpoint,5000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,10000,1000,checkpoint,6000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,10000,1000,checkpoint,7000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,10000,1000,checkpoint,8000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,10000,1000,checkpoint,9000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,10000,1000,checkpoint,10000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,10000,1000,replay_peak,,,ok,,,,,,,,,4190,,
+memory,B,cancel_churn,43,10000,1000,book_after,,,ok,0,0,,,,,,,,2268,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,cancel_churn,43,10000,1000,book_after_incl_input_objects,,,ok,0,0,,,,,,,,1398,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,cancel_churn,44,10000,1000,input,,,ok,,,,,,,,,7411145,7265350,
+memory,A,cancel_churn,44,10000,1000,checkpoint,1000,,ok,0,0,,,,,,,,2340,repeat column = events processed so far
+memory,A,cancel_churn,44,10000,1000,checkpoint,2000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,10000,1000,checkpoint,3000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,10000,1000,checkpoint,4000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,10000,1000,checkpoint,5000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,10000,1000,checkpoint,6000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,10000,1000,checkpoint,7000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,10000,1000,checkpoint,8000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,10000,1000,checkpoint,9000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,10000,1000,checkpoint,10000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,10000,1000,replay_peak,,,ok,,,,,,,,,3710,,
+memory,A,cancel_churn,44,10000,1000,book_after,,,ok,0,0,,,,,,,,1828,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,cancel_churn,44,10000,1000,book_after_incl_input_objects,,,ok,0,0,,,,,,,,1078,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,cancel_churn,44,10000,1000,input,,,ok,,,,,,,,,7411145,7265350,
+memory,B,cancel_churn,44,10000,1000,checkpoint,1000,,ok,0,0,,,,,,,,2764,repeat column = events processed so far
+memory,B,cancel_churn,44,10000,1000,checkpoint,2000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,10000,1000,checkpoint,3000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,10000,1000,checkpoint,4000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,10000,1000,checkpoint,5000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,10000,1000,checkpoint,6000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,10000,1000,checkpoint,7000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,10000,1000,checkpoint,8000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,10000,1000,checkpoint,9000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,10000,1000,checkpoint,10000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,10000,1000,replay_peak,,,ok,,,,,,,,,4190,,
+memory,B,cancel_churn,44,10000,1000,book_after,,,ok,0,0,,,,,,,,2268,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,cancel_churn,44,10000,1000,book_after_incl_input_objects,,,ok,0,0,,,,,,,,1398,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,buildup,42,100000,1000,replay_peak,,,not_attempted,,,,,,,,,,,throughput run did not finish within the limit
+memory,B,buildup,42,100000,1000,input,,,ok,,,,,,,,,89210770,89046282,
+memory,B,buildup,42,100000,1000,checkpoint,10000,,ok,10000,1977,,,,,,,,2284828,repeat column = events processed so far
+memory,B,buildup,42,100000,1000,checkpoint,20000,,ok,20000,1999,,,,,,,,4127040,repeat column = events processed so far
+memory,B,buildup,42,100000,1000,checkpoint,30000,,ok,30000,2000,,,,,,,,6251168,repeat column = events processed so far
+memory,B,buildup,42,100000,1000,checkpoint,40000,,ok,40000,2000,,,,,,,,7905904,repeat column = events processed so far
+memory,B,buildup,42,100000,1000,checkpoint,50000,,ok,50000,2000,,,,,,,,10575872,repeat column = events processed so far
+memory,B,buildup,42,100000,1000,checkpoint,60000,,ok,60000,2000,,,,,,,,12037344,repeat column = events processed so far
+memory,B,buildup,42,100000,1000,checkpoint,70000,,ok,70000,2000,,,,,,,,13522960,repeat column = events processed so far
+memory,B,buildup,42,100000,1000,checkpoint,80000,,ok,80000,2000,,,,,,,,15339664,repeat column = events processed so far
+memory,B,buildup,42,100000,1000,checkpoint,90000,,ok,90000,2000,,,,,,,,19223600,repeat column = events processed so far
+memory,B,buildup,42,100000,1000,checkpoint,100000,,ok,100000,2000,,,,,,,,20968384,repeat column = events processed so far
+memory,B,buildup,42,100000,1000,replay_peak,,,ok,,,,,,,,,20969141,,
+memory,B,buildup,42,100000,1000,book_after,,,ok,100000,2000,,,,,,,,20957840,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,buildup,42,100000,1000,book_after_incl_input_objects,,,ok,100000,2000,,,,,,,,34449990,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,buildup,43,100000,1000,replay_peak,,,not_attempted,,,,,,,,,,,throughput run did not finish within the limit
+memory,B,buildup,43,100000,1000,input,,,ok,,,,,,,,,89227580,89046233,
+memory,B,buildup,43,100000,1000,checkpoint,10000,,ok,10000,1989,,,,,,,,2287860,repeat column = events processed so far
+memory,B,buildup,43,100000,1000,checkpoint,20000,,ok,20000,2000,,,,,,,,4127064,repeat column = events processed so far
+memory,B,buildup,43,100000,1000,checkpoint,30000,,ok,30000,2000,,,,,,,,6254152,repeat column = events processed so far
+memory,B,buildup,43,100000,1000,checkpoint,40000,,ok,40000,2000,,,,,,,,7919392,repeat column = events processed so far
+memory,B,buildup,43,100000,1000,checkpoint,50000,,ok,50000,2000,,,,,,,,10555616,repeat column = events processed so far
+memory,B,buildup,43,100000,1000,checkpoint,60000,,ok,60000,2000,,,,,,,,12039936,repeat column = events processed so far
+memory,B,buildup,43,100000,1000,checkpoint,70000,,ok,70000,2000,,,,,,,,13534288,repeat column = events processed so far
+memory,B,buildup,43,100000,1000,checkpoint,80000,,ok,80000,2000,,,,,,,,15347248,repeat column = events processed so far
+memory,B,buildup,43,100000,1000,checkpoint,90000,,ok,90000,2000,,,,,,,,19212224,repeat column = events processed so far
+memory,B,buildup,43,100000,1000,checkpoint,100000,,ok,100000,2000,,,,,,,,20953216,repeat column = events processed so far
+memory,B,buildup,43,100000,1000,replay_peak,,,ok,,,,,,,,,20953973,,
+memory,B,buildup,43,100000,1000,book_after,,,ok,100000,2000,,,,,,,,20942672,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,buildup,43,100000,1000,book_after_incl_input_objects,,,ok,100000,2000,,,,,,,,34434823,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,buildup,44,100000,1000,replay_peak,,,not_attempted,,,,,,,,,,,throughput run did not finish within the limit
+memory,B,buildup,44,100000,1000,input,,,ok,,,,,,,,,89237219,89046201,
+memory,B,buildup,44,100000,1000,checkpoint,10000,,ok,10000,1987,,,,,,,,2285196,repeat column = events processed so far
+memory,B,buildup,44,100000,1000,checkpoint,20000,,ok,20000,2000,,,,,,,,4126328,repeat column = events processed so far
+memory,B,buildup,44,100000,1000,checkpoint,30000,,ok,30000,2000,,,,,,,,6256552,repeat column = events processed so far
+memory,B,buildup,44,100000,1000,checkpoint,40000,,ok,40000,2000,,,,,,,,7914320,repeat column = events processed so far
+memory,B,buildup,44,100000,1000,checkpoint,50000,,ok,50000,2000,,,,,,,,10566192,repeat column = events processed so far
+memory,B,buildup,44,100000,1000,checkpoint,60000,,ok,60000,2000,,,,,,,,12031168,repeat column = events processed so far
+memory,B,buildup,44,100000,1000,checkpoint,70000,,ok,70000,2000,,,,,,,,13540016,repeat column = events processed so far
+memory,B,buildup,44,100000,1000,checkpoint,80000,,ok,80000,2000,,,,,,,,15320704,repeat column = events processed so far
+memory,B,buildup,44,100000,1000,checkpoint,90000,,ok,90000,2000,,,,,,,,19205280,repeat column = events processed so far
+memory,B,buildup,44,100000,1000,checkpoint,100000,,ok,100000,2000,,,,,,,,20940576,repeat column = events processed so far
+memory,B,buildup,44,100000,1000,replay_peak,,,ok,,,,,,,,,20941333,,
+memory,B,buildup,44,100000,1000,book_after,,,ok,100000,2000,,,,,,,,20930032,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,buildup,44,100000,1000,book_after_incl_input_objects,,,ok,100000,2000,,,,,,,,34422182,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,crowded,42,100000,1000,replay_peak,,,not_attempted,,,,,,,,,,,throughput run did not finish within the limit
+memory,B,crowded,42,100000,1000,input,,,ok,,,,,,,,,89243741,89046348,
+memory,B,crowded,42,100000,1000,checkpoint,10000,,ok,10000,8,,,,,,,,1751108,repeat column = events processed so far
+memory,B,crowded,42,100000,1000,checkpoint,20000,,ok,20000,8,,,,,,,,3497832,repeat column = events processed so far
+memory,B,crowded,42,100000,1000,checkpoint,30000,,ok,30000,8,,,,,,,,5921208,repeat column = events processed so far
+memory,B,crowded,42,100000,1000,checkpoint,40000,,ok,40000,8,,,,,,,,7121208,repeat column = events processed so far
+memory,B,crowded,42,100000,1000,checkpoint,50000,,ok,50000,8,,,,,,,,10636776,repeat column = events processed so far
+memory,B,crowded,42,100000,1000,checkpoint,60000,,ok,60000,8,,,,,,,,11836776,repeat column = events processed so far
+memory,B,crowded,42,100000,1000,checkpoint,70000,,ok,70000,8,,,,,,,,13036776,repeat column = events processed so far
+memory,B,crowded,42,100000,1000,checkpoint,80000,,ok,80000,8,,,,,,,,14236776,repeat column = events processed so far
+memory,B,crowded,42,100000,1000,checkpoint,90000,,ok,90000,8,,,,,,,,20068024,repeat column = events processed so far
+memory,B,crowded,42,100000,1000,checkpoint,100000,,ok,100000,8,,,,,,,,21268024,repeat column = events processed so far
+memory,B,crowded,42,100000,1000,replay_peak,,,ok,,,,,,,,,21268778,,
+memory,B,crowded,42,100000,1000,book_after,,,ok,100000,8,,,,,,,,21266240,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,crowded,42,100000,1000,book_after_incl_input_objects,,,ok,100000,8,,,,,,,,34758454,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,crowded,43,100000,1000,replay_peak,,,not_attempted,,,,,,,,,,,throughput run did not finish within the limit
+memory,B,crowded,43,100000,1000,input,,,ok,,,,,,,,,89242175,89046561,
+memory,B,crowded,43,100000,1000,checkpoint,10000,,ok,10000,8,,,,,,,,1751108,repeat column = events processed so far
+memory,B,crowded,43,100000,1000,checkpoint,20000,,ok,20000,8,,,,,,,,3497832,repeat column = events processed so far
+memory,B,crowded,43,100000,1000,checkpoint,30000,,ok,30000,8,,,,,,,,5921208,repeat column = events processed so far
+memory,B,crowded,43,100000,1000,checkpoint,40000,,ok,40000,8,,,,,,,,7121208,repeat column = events processed so far
+memory,B,crowded,43,100000,1000,checkpoint,50000,,ok,50000,8,,,,,,,,10636776,repeat column = events processed so far
+memory,B,crowded,43,100000,1000,checkpoint,60000,,ok,60000,8,,,,,,,,11836776,repeat column = events processed so far
+memory,B,crowded,43,100000,1000,checkpoint,70000,,ok,70000,8,,,,,,,,13036776,repeat column = events processed so far
+memory,B,crowded,43,100000,1000,checkpoint,80000,,ok,80000,8,,,,,,,,14236776,repeat column = events processed so far
+memory,B,crowded,43,100000,1000,checkpoint,90000,,ok,90000,8,,,,,,,,20068024,repeat column = events processed so far
+memory,B,crowded,43,100000,1000,checkpoint,100000,,ok,100000,8,,,,,,,,21268024,repeat column = events processed so far
+memory,B,crowded,43,100000,1000,replay_peak,,,ok,,,,,,,,,21268778,,
+memory,B,crowded,43,100000,1000,book_after,,,ok,100000,8,,,,,,,,21266240,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,crowded,43,100000,1000,book_after_incl_input_objects,,,ok,100000,8,,,,,,,,34758454,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,crowded,44,100000,1000,replay_peak,,,not_attempted,,,,,,,,,,,throughput run did not finish within the limit
+memory,B,crowded,44,100000,1000,input,,,ok,,,,,,,,,89232003,89046182,
+memory,B,crowded,44,100000,1000,checkpoint,10000,,ok,10000,8,,,,,,,,1751108,repeat column = events processed so far
+memory,B,crowded,44,100000,1000,checkpoint,20000,,ok,20000,8,,,,,,,,3497832,repeat column = events processed so far
+memory,B,crowded,44,100000,1000,checkpoint,30000,,ok,30000,8,,,,,,,,5921208,repeat column = events processed so far
+memory,B,crowded,44,100000,1000,checkpoint,40000,,ok,40000,8,,,,,,,,7121208,repeat column = events processed so far
+memory,B,crowded,44,100000,1000,checkpoint,50000,,ok,50000,8,,,,,,,,10636776,repeat column = events processed so far
+memory,B,crowded,44,100000,1000,checkpoint,60000,,ok,60000,8,,,,,,,,11836776,repeat column = events processed so far
+memory,B,crowded,44,100000,1000,checkpoint,70000,,ok,70000,8,,,,,,,,13036776,repeat column = events processed so far
+memory,B,crowded,44,100000,1000,checkpoint,80000,,ok,80000,8,,,,,,,,14236776,repeat column = events processed so far
+memory,B,crowded,44,100000,1000,checkpoint,90000,,ok,90000,8,,,,,,,,20068024,repeat column = events processed so far
+memory,B,crowded,44,100000,1000,checkpoint,100000,,ok,100000,8,,,,,,,,21268024,repeat column = events processed so far
+memory,B,crowded,44,100000,1000,replay_peak,,,ok,,,,,,,,,21268778,,
+memory,B,crowded,44,100000,1000,book_after,,,ok,100000,8,,,,,,,,21266240,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,crowded,44,100000,1000,book_after_incl_input_objects,,,ok,100000,8,,,,,,,,34758455,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,mixed,42,100000,1000,input,,,ok,,,,,,,,,77305180,77104340,
+memory,A,mixed,42,100000,1000,checkpoint,10000,,ok,1587,0,,,,,,,,134164,repeat column = events processed so far
+memory,A,mixed,42,100000,1000,checkpoint,20000,,ok,3105,0,,,,,,,,255836,repeat column = events processed so far
+memory,A,mixed,42,100000,1000,checkpoint,30000,,ok,4624,0,,,,,,,,376556,repeat column = events processed so far
+memory,A,mixed,42,100000,1000,checkpoint,40000,,ok,6011,0,,,,,,,,492380,repeat column = events processed so far
+memory,A,mixed,42,100000,1000,checkpoint,50000,,ok,7523,0,,,,,,,,615484,repeat column = events processed so far
+memory,A,mixed,42,100000,1000,checkpoint,60000,,ok,9075,0,,,,,,,,735740,repeat column = events processed so far
+memory,A,mixed,42,100000,1000,checkpoint,70000,,ok,10542,0,,,,,,,,850772,repeat column = events processed so far
+memory,A,mixed,42,100000,1000,checkpoint,80000,,ok,12093,0,,,,,,,,985132,repeat column = events processed so far
+memory,A,mixed,42,100000,1000,checkpoint,90000,,ok,13612,0,,,,,,,,1108164,repeat column = events processed so far
+memory,A,mixed,42,100000,1000,checkpoint,100000,,ok,15113,0,,,,,,,,1216012,repeat column = events processed so far
+memory,A,mixed,42,100000,1000,replay_peak,,,ok,,,,,,,,,1216760,,
+memory,A,mixed,42,100000,1000,book_after,,,ok,15113,0,,,,,,,,1211628,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,mixed,42,100000,1000,book_after_incl_input_objects,,,ok,15113,0,,,,,,,,3931165,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,mixed,42,100000,1000,input,,,ok,,,,,,,,,77305180,77104340,
+memory,B,mixed,42,100000,1000,checkpoint,10000,,ok,1587,747,,,,,,,,602420,repeat column = events processed so far
+memory,B,mixed,42,100000,1000,checkpoint,20000,,ok,3105,834,,,,,,,,901792,repeat column = events processed so far
+memory,B,mixed,42,100000,1000,checkpoint,30000,,ok,4624,884,,,,,,,,1266968,repeat column = events processed so far
+memory,B,mixed,42,100000,1000,checkpoint,40000,,ok,6011,854,,,,,,,,1706424,repeat column = events processed so far
+memory,B,mixed,42,100000,1000,checkpoint,50000,,ok,7523,873,,,,,,,,1982528,repeat column = events processed so far
+memory,B,mixed,42,100000,1000,checkpoint,60000,,ok,9075,866,,,,,,,,2238240,repeat column = events processed so far
+memory,B,mixed,42,100000,1000,checkpoint,70000,,ok,10542,877,,,,,,,,2475136,repeat column = events processed so far
+memory,B,mixed,42,100000,1000,checkpoint,80000,,ok,12093,864,,,,,,,,2730792,repeat column = events processed so far
+memory,B,mixed,42,100000,1000,checkpoint,90000,,ok,13612,866,,,,,,,,3002120,repeat column = events processed so far
+memory,B,mixed,42,100000,1000,checkpoint,100000,,ok,15113,846,,,,,,,,3831184,repeat column = events processed so far
+memory,B,mixed,42,100000,1000,replay_peak,,,ok,,,,,,,,,3972856,,
+memory,B,mixed,42,100000,1000,book_after,,,ok,15113,846,,,,,,,,3819456,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,mixed,42,100000,1000,book_after_incl_input_objects,,,ok,15113,846,,,,,,,,5873590,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,mixed,43,100000,1000,input,,,ok,,,,,,,,,77315136,77153172,
+memory,A,mixed,43,100000,1000,checkpoint,10000,,ok,1622,0,,,,,,,,136036,repeat column = events processed so far
+memory,A,mixed,43,100000,1000,checkpoint,20000,,ok,3206,0,,,,,,,,262492,repeat column = events processed so far
+memory,A,mixed,43,100000,1000,checkpoint,30000,,ok,4736,0,,,,,,,,388364,repeat column = events processed so far
+memory,A,mixed,43,100000,1000,checkpoint,40000,,ok,6242,0,,,,,,,,509716,repeat column = events processed so far
+memory,A,mixed,43,100000,1000,checkpoint,50000,,ok,7875,0,,,,,,,,641468,repeat column = events processed so far
+memory,A,mixed,43,100000,1000,checkpoint,60000,,ok,9338,0,,,,,,,,755156,repeat column = events processed so far
+memory,A,mixed,43,100000,1000,checkpoint,70000,,ok,10934,0,,,,,,,,890228,repeat column = events processed so far
+memory,A,mixed,43,100000,1000,checkpoint,80000,,ok,12427,0,,,,,,,,1009820,repeat column = events processed so far
+memory,A,mixed,43,100000,1000,checkpoint,90000,,ok,13883,0,,,,,,,,1128188,repeat column = events processed so far
+memory,A,mixed,43,100000,1000,checkpoint,100000,,ok,15357,0,,,,,,,,1249580,repeat column = events processed so far
+memory,A,mixed,43,100000,1000,replay_peak,,,ok,,,,,,,,,1250328,,
+memory,A,mixed,43,100000,1000,book_after,,,ok,15357,0,,,,,,,,1244428,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,mixed,43,100000,1000,book_after_incl_input_objects,,,ok,15357,0,,,,,,,,4008037,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,mixed,43,100000,1000,input,,,ok,,,,,,,,,77315195,77153231,
+memory,B,mixed,43,100000,1000,checkpoint,10000,,ok,1622,740,,,,,,,,554284,repeat column = events processed so far
+memory,B,mixed,43,100000,1000,checkpoint,20000,,ok,3206,856,,,,,,,,1025128,repeat column = events processed so far
+memory,B,mixed,43,100000,1000,checkpoint,30000,,ok,4736,873,,,,,,,,1281736,repeat column = events processed so far
+memory,B,mixed,43,100000,1000,checkpoint,40000,,ok,6242,867,,,,,,,,1538464,repeat column = events processed so far
+memory,B,mixed,43,100000,1000,checkpoint,50000,,ok,7875,882,,,,,,,,2034888,repeat column = events processed so far
+memory,B,mixed,43,100000,1000,checkpoint,60000,,ok,9338,849,,,,,,,,2274128,repeat column = events processed so far
+memory,B,mixed,43,100000,1000,checkpoint,70000,,ok,10934,845,,,,,,,,2522832,repeat column = events processed so far
+memory,B,mixed,43,100000,1000,checkpoint,80000,,ok,12427,844,,,,,,,,3325600,repeat column = events processed so far
+memory,B,mixed,43,100000,1000,checkpoint,90000,,ok,13883,851,,,,,,,,3609880,repeat column = events processed so far
+memory,B,mixed,43,100000,1000,checkpoint,100000,,ok,15357,867,,,,,,,,3876960,repeat column = events processed so far
+memory,B,mixed,43,100000,1000,replay_peak,,,ok,,,,,,,,,3878352,,
+memory,B,mixed,43,100000,1000,book_after,,,ok,15357,867,,,,,,,,3867656,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,mixed,43,100000,1000,book_after_incl_input_objects,,,ok,15357,867,,,,,,,,5955088,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,mixed,44,100000,1000,input,,,ok,,,,,,,,,77349907,77163072,
+memory,A,mixed,44,100000,1000,checkpoint,10000,,ok,1491,0,,,,,,,,126420,repeat column = events processed so far
+memory,A,mixed,44,100000,1000,checkpoint,20000,,ok,2926,0,,,,,,,,243500,repeat column = events processed so far
+memory,A,mixed,44,100000,1000,checkpoint,30000,,ok,4466,0,,,,,,,,365548,repeat column = events processed so far
+memory,A,mixed,44,100000,1000,checkpoint,40000,,ok,6053,0,,,,,,,,495780,repeat column = events processed so far
+memory,A,mixed,44,100000,1000,checkpoint,50000,,ok,7620,0,,,,,,,,622652,repeat column = events processed so far
+memory,A,mixed,44,100000,1000,checkpoint,60000,,ok,9147,0,,,,,,,,741012,repeat column = events processed so far
+memory,A,mixed,44,100000,1000,checkpoint,70000,,ok,10685,0,,,,,,,,871972,repeat column = events processed so far
+memory,A,mixed,44,100000,1000,checkpoint,80000,,ok,12225,0,,,,,,,,994852,repeat column = events processed so far
+memory,A,mixed,44,100000,1000,checkpoint,90000,,ok,13702,0,,,,,,,,1114700,repeat column = events processed so far
+memory,A,mixed,44,100000,1000,checkpoint,100000,,ok,15155,0,,,,,,,,1219444,repeat column = events processed so far
+memory,A,mixed,44,100000,1000,replay_peak,,,ok,,,,,,,,,1220192,,
+memory,A,mixed,44,100000,1000,book_after,,,ok,15155,0,,,,,,,,1214876,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,mixed,44,100000,1000,book_after_incl_input_objects,,,ok,15155,0,,,,,,,,3941658,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,mixed,44,100000,1000,input,,,ok,,,,,,,,,77349907,77163072,
+memory,B,mixed,44,100000,1000,checkpoint,10000,,ok,1491,697,,,,,,,,575188,repeat column = events processed so far
+memory,B,mixed,44,100000,1000,checkpoint,20000,,ok,2926,828,,,,,,,,872568,repeat column = events processed so far
+memory,B,mixed,44,100000,1000,checkpoint,30000,,ok,4466,854,,,,,,,,1233768,repeat column = events processed so far
+memory,B,mixed,44,100000,1000,checkpoint,40000,,ok,6053,866,,,,,,,,1713592,repeat column = events processed so far
+memory,B,mixed,44,100000,1000,checkpoint,50000,,ok,7620,856,,,,,,,,1985944,repeat column = events processed so far
+memory,B,mixed,44,100000,1000,checkpoint,60000,,ok,9147,841,,,,,,,,2234440,repeat column = events processed so far
+memory,B,mixed,44,100000,1000,checkpoint,70000,,ok,10685,846,,,,,,,,2480608,repeat column = events processed so far
+memory,B,mixed,44,100000,1000,checkpoint,80000,,ok,12225,858,,,,,,,,2742936,repeat column = events processed so far
+memory,B,mixed,44,100000,1000,checkpoint,90000,,ok,13702,847,,,,,,,,3013072,repeat column = events processed so far
+memory,B,mixed,44,100000,1000,checkpoint,100000,,ok,15155,850,,,,,,,,3833568,repeat column = events processed so far
+memory,B,mixed,44,100000,1000,replay_peak,,,ok,,,,,,,,,3982016,,
+memory,B,mixed,44,100000,1000,book_after,,,ok,15155,850,,,,,,,,3824048,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,mixed,44,100000,1000,book_after_incl_input_objects,,,ok,15155,850,,,,,,,,5883147,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,sweep,42,100000,1000,replay_peak,,,not_attempted,,,,,,,,,,,throughput run did not finish within the limit
+memory,B,sweep,42,100000,1000,input,,,ok,,,,,,,,,84178034,84016027,
+memory,B,sweep,42,100000,1000,checkpoint,10000,,ok,10000,1977,,,,,,,,2284828,repeat column = events processed so far
+memory,B,sweep,42,100000,1000,checkpoint,20000,,ok,20000,1999,,,,,,,,4127040,repeat column = events processed so far
+memory,B,sweep,42,100000,1000,checkpoint,30000,,ok,30000,2000,,,,,,,,6251168,repeat column = events processed so far
+memory,B,sweep,42,100000,1000,checkpoint,40000,,ok,40000,2000,,,,,,,,7905904,repeat column = events processed so far
+memory,B,sweep,42,100000,1000,checkpoint,50000,,ok,50000,2000,,,,,,,,10575872,repeat column = events processed so far
+memory,B,sweep,42,100000,1000,checkpoint,60000,,ok,60000,2000,,,,,,,,12037344,repeat column = events processed so far
+memory,B,sweep,42,100000,1000,checkpoint,70000,,ok,70000,2000,,,,,,,,13522960,repeat column = events processed so far
+memory,B,sweep,42,100000,1000,checkpoint,80000,,ok,80000,2000,,,,,,,,15339664,repeat column = events processed so far
+memory,B,sweep,42,100000,1000,checkpoint,90000,,ok,39936,1000,,,,,,,,8677224,repeat column = events processed so far
+memory,B,sweep,42,100000,1000,checkpoint,100000,,ok,39936,1000,,,,,,,,8677224,repeat column = events processed so far
+memory,B,sweep,42,100000,1000,replay_peak,,,ok,,,,,,,,,15340419,,
+memory,B,sweep,42,100000,1000,book_after,,,ok,39936,1000,,,,,,,,8660976,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,sweep,42,100000,1000,book_after_incl_input_objects,,,ok,39936,1000,,,,,,,,14048042,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,sweep,43,100000,1000,replay_peak,,,not_attempted,,,,,,,,,,,throughput run did not finish within the limit
+memory,B,sweep,43,100000,1000,input,,,ok,,,,,,,,,84215504,84016226,
+memory,B,sweep,43,100000,1000,checkpoint,10000,,ok,10000,1989,,,,,,,,2287860,repeat column = events processed so far
+memory,B,sweep,43,100000,1000,checkpoint,20000,,ok,20000,2000,,,,,,,,4127064,repeat column = events processed so far
+memory,B,sweep,43,100000,1000,checkpoint,30000,,ok,30000,2000,,,,,,,,6254152,repeat column = events processed so far
+memory,B,sweep,43,100000,1000,checkpoint,40000,,ok,40000,2000,,,,,,,,7919392,repeat column = events processed so far
+memory,B,sweep,43,100000,1000,checkpoint,50000,,ok,50000,2000,,,,,,,,10555616,repeat column = events processed so far
+memory,B,sweep,43,100000,1000,checkpoint,60000,,ok,60000,2000,,,,,,,,12039936,repeat column = events processed so far
+memory,B,sweep,43,100000,1000,checkpoint,70000,,ok,70000,2000,,,,,,,,13534288,repeat column = events processed so far
+memory,B,sweep,43,100000,1000,checkpoint,80000,,ok,80000,2000,,,,,,,,15347248,repeat column = events processed so far
+memory,B,sweep,43,100000,1000,checkpoint,90000,,ok,40125,1002,,,,,,,,8730688,repeat column = events processed so far
+memory,B,sweep,43,100000,1000,checkpoint,100000,,ok,40076,1000,,,,,,,,8721768,repeat column = events processed so far
+memory,B,sweep,43,100000,1000,replay_peak,,,ok,,,,,,,,,15348003,,
+memory,B,sweep,43,100000,1000,book_after,,,ok,40076,1000,,,,,,,,8705584,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,sweep,43,100000,1000,book_after_incl_input_objects,,,ok,40076,1000,,,,,,,,14111970,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,sweep,44,100000,1000,replay_peak,,,not_attempted,,,,,,,,,,,throughput run did not finish within the limit
+memory,B,sweep,44,100000,1000,input,,,ok,,,,,,,,,84189515,84016151,
+memory,B,sweep,44,100000,1000,checkpoint,10000,,ok,10000,1987,,,,,,,,2285196,repeat column = events processed so far
+memory,B,sweep,44,100000,1000,checkpoint,20000,,ok,20000,2000,,,,,,,,4126328,repeat column = events processed so far
+memory,B,sweep,44,100000,1000,checkpoint,30000,,ok,30000,2000,,,,,,,,6256552,repeat column = events processed so far
+memory,B,sweep,44,100000,1000,checkpoint,40000,,ok,40000,2000,,,,,,,,7914320,repeat column = events processed so far
+memory,B,sweep,44,100000,1000,checkpoint,50000,,ok,50000,2000,,,,,,,,10566192,repeat column = events processed so far
+memory,B,sweep,44,100000,1000,checkpoint,60000,,ok,60000,2000,,,,,,,,12031168,repeat column = events processed so far
+memory,B,sweep,44,100000,1000,checkpoint,70000,,ok,70000,2000,,,,,,,,13540016,repeat column = events processed so far
+memory,B,sweep,44,100000,1000,checkpoint,80000,,ok,80000,2000,,,,,,,,15320704,repeat column = events processed so far
+memory,B,sweep,44,100000,1000,checkpoint,90000,,ok,40172,1005,,,,,,,,8716600,repeat column = events processed so far
+memory,B,sweep,44,100000,1000,checkpoint,100000,,ok,40001,1000,,,,,,,,8687552,repeat column = events processed so far
+memory,B,sweep,44,100000,1000,replay_peak,,,ok,,,,,,,,,15321459,,
+memory,B,sweep,44,100000,1000,book_after,,,ok,40001,1000,,,,,,,,8671304,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,sweep,44,100000,1000,book_after_incl_input_objects,,,ok,40001,1000,,,,,,,,14066585,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,cancel_churn,42,100000,1000,input,,,ok,,,,,,,,,72820830,72646160,
+memory,A,cancel_churn,42,100000,1000,checkpoint,10000,,ok,0,0,,,,,,,,2340,repeat column = events processed so far
+memory,A,cancel_churn,42,100000,1000,checkpoint,20000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,100000,1000,checkpoint,30000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,100000,1000,checkpoint,40000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,100000,1000,checkpoint,50000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,100000,1000,checkpoint,60000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,100000,1000,checkpoint,70000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,100000,1000,checkpoint,80000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,100000,1000,checkpoint,90000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,100000,1000,checkpoint,100000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,42,100000,1000,replay_peak,,,ok,,,,,,,,,3711,,
+memory,A,cancel_churn,42,100000,1000,book_after,,,ok,0,0,,,,,,,,1828,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,cancel_churn,42,100000,1000,book_after_incl_input_objects,,,ok,0,0,,,,,,,,1078,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,cancel_churn,42,100000,1000,input,,,ok,,,,,,,,,72820771,72646101,
+memory,B,cancel_churn,42,100000,1000,checkpoint,10000,,ok,0,0,,,,,,,,2764,repeat column = events processed so far
+memory,B,cancel_churn,42,100000,1000,checkpoint,20000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,100000,1000,checkpoint,30000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,100000,1000,checkpoint,40000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,100000,1000,checkpoint,50000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,100000,1000,checkpoint,60000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,100000,1000,checkpoint,70000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,100000,1000,checkpoint,80000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,100000,1000,checkpoint,90000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,100000,1000,checkpoint,100000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,42,100000,1000,replay_peak,,,ok,,,,,,,,,4191,,
+memory,B,cancel_churn,42,100000,1000,book_after,,,ok,0,0,,,,,,,,2268,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,cancel_churn,42,100000,1000,book_after_incl_input_objects,,,ok,0,0,,,,,,,,1398,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,cancel_churn,43,100000,1000,input,,,ok,,,,,,,,,72809383,72646160,
+memory,A,cancel_churn,43,100000,1000,checkpoint,10000,,ok,0,0,,,,,,,,2340,repeat column = events processed so far
+memory,A,cancel_churn,43,100000,1000,checkpoint,20000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,100000,1000,checkpoint,30000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,100000,1000,checkpoint,40000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,100000,1000,checkpoint,50000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,100000,1000,checkpoint,60000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,100000,1000,checkpoint,70000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,100000,1000,checkpoint,80000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,100000,1000,checkpoint,90000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,100000,1000,checkpoint,100000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,43,100000,1000,replay_peak,,,ok,,,,,,,,,3711,,
+memory,A,cancel_churn,43,100000,1000,book_after,,,ok,0,0,,,,,,,,1828,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,cancel_churn,43,100000,1000,book_after_incl_input_objects,,,ok,0,0,,,,,,,,1078,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,cancel_churn,43,100000,1000,input,,,ok,,,,,,,,,72809383,72646101,
+memory,B,cancel_churn,43,100000,1000,checkpoint,10000,,ok,0,0,,,,,,,,2764,repeat column = events processed so far
+memory,B,cancel_churn,43,100000,1000,checkpoint,20000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,100000,1000,checkpoint,30000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,100000,1000,checkpoint,40000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,100000,1000,checkpoint,50000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,100000,1000,checkpoint,60000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,100000,1000,checkpoint,70000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,100000,1000,checkpoint,80000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,100000,1000,checkpoint,90000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,100000,1000,checkpoint,100000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,43,100000,1000,replay_peak,,,ok,,,,,,,,,4191,,
+memory,B,cancel_churn,43,100000,1000,book_after,,,ok,0,0,,,,,,,,2268,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,cancel_churn,43,100000,1000,book_after_incl_input_objects,,,ok,0,0,,,,,,,,1398,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,cancel_churn,44,100000,1000,input,,,ok,,,,,,,,,72828076,72646160,
+memory,A,cancel_churn,44,100000,1000,checkpoint,10000,,ok,0,0,,,,,,,,2340,repeat column = events processed so far
+memory,A,cancel_churn,44,100000,1000,checkpoint,20000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,100000,1000,checkpoint,30000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,100000,1000,checkpoint,40000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,100000,1000,checkpoint,50000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,100000,1000,checkpoint,60000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,100000,1000,checkpoint,70000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,100000,1000,checkpoint,80000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,100000,1000,checkpoint,90000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,100000,1000,checkpoint,100000,,ok,0,0,,,,,,,,2972,repeat column = events processed so far
+memory,A,cancel_churn,44,100000,1000,replay_peak,,,ok,,,,,,,,,3711,,
+memory,A,cancel_churn,44,100000,1000,book_after,,,ok,0,0,,,,,,,,1828,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,A,cancel_churn,44,100000,1000,book_after_incl_input_objects,,,ok,0,0,,,,,,,,1078,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,cancel_churn,44,100000,1000,input,,,ok,,,,,,,,,72828076,72646160,
+memory,B,cancel_churn,44,100000,1000,checkpoint,10000,,ok,0,0,,,,,,,,2764,repeat column = events processed so far
+memory,B,cancel_churn,44,100000,1000,checkpoint,20000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,100000,1000,checkpoint,30000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,100000,1000,checkpoint,40000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,100000,1000,checkpoint,50000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,100000,1000,checkpoint,60000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,100000,1000,checkpoint,70000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,100000,1000,checkpoint,80000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,100000,1000,checkpoint,90000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,100000,1000,checkpoint,100000,,ok,0,0,,,,,,,,3452,repeat column = events processed so far
+memory,B,cancel_churn,44,100000,1000,replay_peak,,,ok,,,,,,,,,4191,,
+memory,B,cancel_churn,44,100000,1000,book_after,,,ok,0,0,,,,,,,,2268,active_orders_peak/price_levels_peak columns = stored entries at the end
+memory,B,cancel_churn,44,100000,1000,book_after_incl_input_objects,,,ok,0,0,,,,,,,,1398,active_orders_peak/price_levels_peak columns = stored entries at the end

@@ -1,0 +1,13 @@
+label: rematch-rules-green
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/check_rematch_rules.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: ddbc4341da6cd2152897dcbca654c690b880480b
+dirty: True
+python: 3.13.15
+utc: 20261122T204848Z
+exit_code: 0
+duration_s: 0.50
+------------------------------------------------------------
+Alternating/default ordering and part-boundary parity PASS.
+Per-scenario statistic,10%/5% boundaries, outliers and missing-data rejection PASS.
+RESULT: PASS (synthetic rematch rule/order checks; no timing or engine execution)

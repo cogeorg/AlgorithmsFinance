@@ -1,0 +1,23 @@
+label: b3r-fast-callback-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest -q 02_tests/test_fast_equivalence.py -k callback_exception --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3c95836e66e797025518c6d66fc9733b5807ea85
+dirty: True
+python: 3.13.15
+utc: 20261122T193456Z
+exit_code: 1
+duration_s: 1.58
+------------------------------------------------------------
+F                                                                        [100%]
+================================== FAILURES ===================================
+___________ test_g1_callback_exception_is_not_swallowed_or_retried ____________
+02_tests\test_fast_equivalence.py:112: in test_g1_callback_exception_is_not_swallowed_or_retried
+    assert calls == ['live'], 'callback must run once, including when it raises'
+E   AssertionError: callback must run once, including when it raises
+E   assert ['live', 'live'] == ['live']
+E     
+E     Left contains one more item: 'live'
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED 02_tests/test_fast_equivalence.py::test_g1_callback_exception_is_not_swallowed_or_retried
+1 failed, 115 deselected in 0.71s

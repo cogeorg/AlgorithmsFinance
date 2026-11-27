@@ -1,0 +1,36 @@
+stage: 06_latency_before_implementation
+started_utc: 2026-11-23T12:21:50.146314+00:00
+finished_utc: 2026-11-23T12:21:50.654938+00:00
+elapsed_seconds: 0.509432
+exit_code: 2
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 2d537dfe02124e257f128ed300ed998ae45798e8
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider tests/test_13_latency_measurement.py
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+____________ ERROR collecting tests/test_13_latency_measurement.py ____________
+ImportError while importing test module 'C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1\tests\test_13_latency_measurement.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Acer\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_13_latency_measurement.py:14: in <module>
+    from limit_order_book.measurement import (
+E   ImportError: cannot import name 'latency_breakdown_ns' from 'limit_order_book.measurement' (C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1\src\limit_order_book\measurement.py)
+=========================== short test summary info ===========================
+ERROR tests/test_13_latency_measurement.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.12s ===============================
+
+=== stderr ===

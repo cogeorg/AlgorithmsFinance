@@ -1,0 +1,6 @@
+# Preserve byte-sensitive scientific evidence and measured source fingerprints.
+01_environment/environment.json -text
+02_data/** -text
+04_implementation/orderbook/** -text
+05_benchmarks/** -text
+07_results/** -text

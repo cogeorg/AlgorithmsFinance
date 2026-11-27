@@ -1,0 +1,64 @@
+label: final-fix-final-hygiene
+command: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\.venv\Scripts\python.exe C:\Users\laubu\AppData\Local\Temp\aif-fix-3e9ebfe-20261125\finish_extra_acceptance.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3e9ebfe152605d80f48c2e9d703b965eda246c78
+dirty: True
+python: 3.13.15
+utc: 20261125T222034Z
+exit_code: 0
+duration_s: 16.70
+------------------------------------------------------------
+{
+  "commands_all_exit_zero": true,
+  "commands": [
+    {
+      "label": "extra-pip",
+      "exit_code": 0,
+      "seconds": 1.761062299949117
+    },
+    {
+      "label": "extra-replay",
+      "exit_code": 0,
+      "seconds": 0.16983280004933476
+    },
+    {
+      "label": "extra-worked-check",
+      "exit_code": 0,
+      "seconds": 0.18541619996540248
+    },
+    {
+      "label": "extra-apptest",
+      "exit_code": 0,
+      "seconds": 9.378154400037602
+    },
+    {
+      "label": "extra-data",
+      "exit_code": 0,
+      "seconds": 248.37005639995914
+    },
+    {
+      "label": "extra-data-verify",
+      "exit_code": 0,
+      "seconds": 8.984042100026272
+    },
+    {
+      "label": "extra-bash-syntax",
+      "exit_code": 0,
+      "seconds": 0.09561290009878576
+    },
+    {
+      "label": "extra-streamlit",
+      "exit_code": 0,
+      "note": "Original helper health assertion passed before data commands and the later duplicate-marker hygiene failure; see extra-streamlit.log."
+    }
+  ],
+  "hygiene_files": 1117,
+  "hit_counts": {
+    "injected_term": 1,
+    "other_students": 0,
+    "personal_paths": 833,
+    "secrets": 0
+  },
+  "tracked_old_diagnostics": 648,
+  "large_files": []
+}

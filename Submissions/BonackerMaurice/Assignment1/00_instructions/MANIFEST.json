@@ -1,0 +1,70 @@
+{
+  "assignment": "Assignment1",
+  "synthetic_data_only": true,
+  "files": {
+    ".DS_Store": {
+      "bytes": 6148,
+      "sha256": "87a2ac61b199f85d7f04bd49237d269c16cc2b257503bbb12a830bea83677e76"
+    },
+    "AlgorithmsFinance_Exercise1.pdf": {
+      "bytes": 172965,
+      "sha256": "c25a0e79f061f82124631bb120edb7d28ce99dd6d5fc3dadfdbbe0f537463c93"
+    },
+    "README.md": {
+      "bytes": 16688,
+      "sha256": "17ce011bb3eec68d608ccbb5416ccc459e17764ae610c8111ba6cb4028961da9"
+    },
+    "data/buildup_10000.jsonl.gz": {
+      "bytes": 132767,
+      "sha256": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5"
+    },
+    "data/buildup_10000.jsonl.gz.metadata.json": {
+      "bytes": 369,
+      "sha256": "3d83dae444458ff819d1bcfe99256aa110c0506b9422850572793f75a469d2d9"
+    },
+    "data/cancel_churn_10000.jsonl.gz": {
+      "bytes": 110782,
+      "sha256": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933"
+    },
+    "data/cancel_churn_10000.jsonl.gz.metadata.json": {
+      "bytes": 374,
+      "sha256": "887692b24a542efea667e595d45a9a46ac296285602e5191a3cecfca1ccacb03"
+    },
+    "data/crowded_10000.jsonl.gz": {
+      "bytes": 111714,
+      "sha256": "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6"
+    },
+    "data/crowded_10000.jsonl.gz.metadata.json": {
+      "bytes": 369,
+      "sha256": "822894454f646dc3479b1cd93a7ce45a2b162bbddb466413cba63f5be6453695"
+    },
+    "data/mixed_10000.jsonl.gz": {
+      "bytes": 125334,
+      "sha256": "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16"
+    },
+    "data/mixed_10000.jsonl.gz.metadata.json": {
+      "bytes": 367,
+      "sha256": "458136d915369ed51d13ea1c5535c1ca22a9576545763a12c3b84e2f5d199fc4"
+    },
+    "data/sweep_10000.jsonl.gz": {
+      "bytes": 123692,
+      "sha256": "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f"
+    },
+    "data/sweep_10000.jsonl.gz.metadata.json": {
+      "bytes": 367,
+      "sha256": "0f9038f6a913cbab8911968fd643623b3a17d9da768db2babd175a0e93785589"
+    },
+    "data/worked_example.jsonl": {
+      "bytes": 754,
+      "sha256": "831015ac71d56ada0898b0bf8f59f125900b4dc32134d6ef37bd3cec304798ec"
+    },
+    "data/worked_expected.json": {
+      "bytes": 1101,
+      "sha256": "c715f52724df6bbfcedcad0e203ddb5a7752d38c809f4cf12b513ba809554d2c"
+    },
+    "generate_orders.py": {
+      "bytes": 4019,
+      "sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d"
+    }
+  }
+}

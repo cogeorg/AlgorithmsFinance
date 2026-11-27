@@ -1,0 +1,363 @@
+label: robustness-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_submission_robustness.py -q --tb=short --basetemp=scratch/pytest-robustness-red
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 47c00484ae46eeb8077150fbb84d5ab650822c99
+dirty: True
+python: 3.13.15
+utc: 20261123T193220Z
+exit_code: 1
+duration_s: 11.92
+------------------------------------------------------------
+FFFFFFFFFFFFFFFFFFFF....FFFF                                             [100%]
+================================== FAILURES ===================================
+__________________ test_default_replay_instantiates_final_b ___________________
+02_tests\test_submission_robustness.py:42: in test_default_replay_instantiates_final_b
+    replay.main()
+01_code\lob\replay.py:37: in main
+    book = METHODS[("lob", args.version)]()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\test_submission_robustness.py:38: in wrong_default
+    raise AssertionError('default replay instantiated A instead of final B')
+E   AssertionError: default replay instantiated A instead of final B
+______________________ test_replay_default_cli_and_help _______________________
+02_tests\test_submission_robustness.py:54: in test_replay_default_cli_and_help
+    assert help_result.returncode == 0 and 'default: B' in help_result.stdout
+E   AssertionError: assert (0 == 0 and 'default: B' in 'usage: replay.py [-h] [--version {A,B,B1,B2,B3,B3r,B3r_fast}] path\n\nReplay JSON Lines (plain or gzip) in file order...  path\n\noptions:\n  -h, --help            show this help message and exit\n  --version {A,B,B1,B2,B3,B3r,B3r_fast}\n')
+E    +  where 0 = CompletedProcess(args=['C:\\Users\\laubu\\.venvs\\aif-a1\\Scripts\\python.exe', 'C:\\Users\\laubu\\dev\\AIF-Lab\\Algor...tions:\n  -h, --help            show this help message and exit\n  --version {A,B,B1,B2,B3,B3r,B3r_fast}\n', stderr='').returncode
+E    +  and   'usage: replay.py [-h] [--version {A,B,B1,B2,B3,B3r,B3r_fast}] path\n\nReplay JSON Lines (plain or gzip) in file order...  path\n\noptions:\n  -h, --help            show this help message and exit\n  --version {A,B,B1,B2,B3,B3r,B3r_fast}\n' = CompletedProcess(args=['C:\\Users\\laubu\\.venvs\\aif-a1\\Scripts\\python.exe', 'C:\\Users\\laubu\\dev\\AIF-Lab\\Algor...tions:\n  -h, --help            show this help message and exit\n  --version {A,B,B1,B2,B3,B3r,B3r_fast}\n', stderr='').stdout
+___________ test_replay_input_error_is_one_located_line[json-plain] ___________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...2 (char 1)\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+___________ test_replay_input_error_is_one_located_line[json-gzip] ____________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...2 (char 1)\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+___________ test_replay_input_error_is_one_located_line[utf8-plain] ___________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...start byte\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+___________ test_replay_input_error_is_one_located_line[utf8-gzip] ____________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...start byte\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+__________ test_replay_input_error_is_one_located_line[utf16-plain] ___________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...start byte\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+___________ test_replay_input_error_is_one_located_line[utf16-gzip] ___________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...start byte\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+_________ test_replay_input_error_is_one_located_line[utf16le-plain] __________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...2 (char 1)\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+__________ test_replay_input_error_is_one_located_line[utf16le-gzip] __________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...2 (char 1)\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+_________ test_replay_input_error_is_one_located_line[utf16be-plain] __________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...1 (char 0)\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+__________ test_replay_input_error_is_one_located_line[utf16be-gzip] __________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...1 (char 0)\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+________ test_replay_input_error_is_one_located_line[double_bom-plain] ________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...1 (char 0)\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+________ test_replay_input_error_is_one_located_line[double_bom-gzip] _________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...1 (char 0)\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+_________ test_replay_input_error_is_one_located_line[mid_bom-plain] __________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...1 (char 0)\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+__________ test_replay_input_error_is_one_located_line[mid_bom-gzip] __________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...1 (char 0)\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+________ test_replay_input_error_is_one_located_line[space_bom-plain] _________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...3 (char 2)\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+_________ test_replay_input_error_is_one_located_line[space_bom-gzip] _________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...3 (char 2)\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+________ test_replay_input_error_is_one_located_line[utf8_late-plain] _________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...start byte\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+_________ test_replay_input_error_is_one_located_line[utf8_late-gzip] _________
+02_tests\test_submission_robustness.py:77: in test_replay_input_error_is_one_located_line
+    assert 'Traceback' not in result.stderr
+E   assert 'Traceback' not in 'Traceback (...start byte\n'
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+E           runpy.run_module(module, run_name="__main__", alter_sys=True)
+E           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+E     
+E     ...Full output truncated, use '-vv' to show
+_____________________ test_missing_git_selects_disk_mode ______________________
+02_tests\test_submission_robustness.py:110: in test_missing_git_selects_disk_mode
+    assert saved.head() is None
+           ^^^^^^^^^^^^
+04_dashboard\saved_results.py:28: in head
+    return subprocess.run(['git','rev-parse','HEAD'], cwd=ROOT, check=True,
+02_tests\test_submission_robustness.py:108: in missing_git
+    def missing_git(*args,**kwargs): raise FileNotFoundError('git is unavailable')
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: git is unavailable
+_____________________ test_disk_store_keeps_the_allowlist _____________________
+02_tests\test_submission_robustness.py:114: in test_disk_store_keeps_the_allowlist
+    assert hasattr(saved,'DiskStore'), 'a labelled disk fallback is required'
+E   AssertionError: a labelled disk fallback is required
+E   assert False
+E    +  where False = hasattr(saved, 'DiskStore')
+____ test_every_tab_in_temporary_submission_copy_without_git[no_checkout] _____
+02_tests\test_submission_robustness.py:160: in test_every_tab_in_temporary_submission_copy_without_git
+    assert result.returncode == 0, result.stdout+'\n'+result.stderr
+E   AssertionError: 
+E     Traceback (most recent call last):
+E       File "<string>", line 7, in <module>
+E         assert saved_results.head() is None
+E                ~~~~~~~~~~~~~~~~~~^^
+E       File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\pytest-robustness-red\test_every_tab_in_temporary_su0\no_checkout\04_dashboard\saved_results.py", line 28, in head
+E         return subprocess.run(['git','rev-parse','HEAD'], cwd=ROOT, check=True,
+E                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                               capture_output=True, text=True).stdout.strip()
+E                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+E         raise CalledProcessError(retcode, process.args,
+E                                  output=stdout, stderr=stderr)
+E     subprocess.CalledProcessError: Command '['git', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\Users\\laubu\\.venvs\\aif-a1\\Scripts\\python.exe', '-c', "\nimport sys\nfrom pathlib impo...)\nsubprocess.CalledProcessError: Command \'[\'git\', \'rev-parse\', \'HEAD\']\' returned non-zero exit status 128.\n').returncode
+_______ test_every_tab_in_temporary_submission_copy_without_git[no_git] _______
+02_tests\test_submission_robustness.py:160: in test_every_tab_in_temporary_submission_copy_without_git
+    assert result.returncode == 0, result.stdout+'\n'+result.stderr
+E   AssertionError: 
+E     Traceback (most recent call last):
+E       File "<string>", line 7, in <module>
+E         assert saved_results.head() is None
+E                ~~~~~~~~~~~~~~~~~~^^
+E       File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\pytest-robustness-red\test_every_tab_in_temporary_su1\no_git\04_dashboard\saved_results.py", line 28, in head
+E         return subprocess.run(['git','rev-parse','HEAD'], cwd=ROOT, check=True,
+E                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                               capture_output=True, text=True).stdout.strip()
+E                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 554, in run
+E         with Popen(*popenargs, **kwargs) as process:
+E              ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+E       File "C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1039, in __init__
+E         self._execute_child(args, executable, preexec_fn, close_fds,
+E         ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                             pass_fds, cwd, env,
+E                             ^^^^^^^^^^^^^^^^^^^
+E         ...<5 lines>...
+E                             gid, gids, uid, umask,
+E                             ^^^^^^^^^^^^^^^^^^^^^^
+E                             start_new_session, process_group)
+E                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1554, in _execute_child
+E         hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+E                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+E                                  # no special security
+E                                  ^^^^^^^^^^^^^^^^^^^^^
+E         ...<4 lines>...
+E                                  cwd,
+E                                  ^^^^
+E                                  startupinfo)
+E                                  ^^^^^^^^^^^^
+E     FileNotFoundError: [WinError 2] Das System kann die angegebene Datei nicht finden
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\Users\\laubu\\.venvs\\aif-a1\\Scripts\\python.exe', '-c', "\nimport sys\nfrom pathlib impo...                    ^^^^^^^^^^^^\nFileNotFoundError: [WinError 2] Das System kann die angegebene Datei nicht finden\n').returncode
+=========================== short test summary info ===========================
+FAILED 02_tests/test_submission_robustness.py::test_default_replay_instantiates_final_b
+FAILED 02_tests/test_submission_robustness.py::test_replay_default_cli_and_help
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[json-plain]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[json-gzip]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[utf8-plain]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[utf8-gzip]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[utf16-plain]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[utf16-gzip]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[utf16le-plain]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[utf16le-gzip]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[utf16be-plain]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[utf16be-gzip]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[double_bom-plain]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[double_bom-gzip]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[mid_bom-plain]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[mid_bom-gzip]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[space_bom-plain]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[space_bom-gzip]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[utf8_late-plain]
+FAILED 02_tests/test_submission_robustness.py::test_replay_input_error_is_one_located_line[utf8_late-gzip]
+FAILED 02_tests/test_submission_robustness.py::test_missing_git_selects_disk_mode
+FAILED 02_tests/test_submission_robustness.py::test_disk_store_keeps_the_allowlist
+FAILED 02_tests/test_submission_robustness.py::test_every_tab_in_temporary_submission_copy_without_git[no_checkout]
+FAILED 02_tests/test_submission_robustness.py::test_every_tab_in_temporary_submission_copy_without_git[no_git]
+24 failed, 4 passed in 10.89s

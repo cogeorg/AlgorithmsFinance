@@ -1,0 +1,41 @@
+{
+  "case": {
+    "case_id": "replay_buildup_n100000_s42_l1000",
+    "experiment": "replay",
+    "scenario": "buildup",
+    "seed": 42,
+    "requested_count": 100000,
+    "levels": 1000,
+    "sale_percent": null,
+    "construction_event_count": 0,
+    "source_event_count": 100000,
+    "event_count": 100000,
+    "actual_controlled_price_levels": null,
+    "source": {
+      "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\buildup_d3c00fcc1bd440e5.jsonl.gz",
+      "sha256": "ba943204ac03cdf580f5ef32687119cd7531468216343fbb94c476180a1142fa",
+      "metadata": {
+        "synthetic": true,
+        "calibrated_to_exchange_data": false,
+        "scenario": "buildup",
+        "events": 100000,
+        "seed": 42,
+        "levels": 1000,
+        "generator": "generate_orders.events / random.Random",
+        "python": "3.14.5",
+        "price_tick_usd": "0.01",
+        "quantity_unit_btc": "0.00000001",
+        "compressed_bytes": 1319072,
+        "sha256": "ba943204ac03cdf580f5ef32687119cd7531468216343fbb94c476180a1142fa",
+        "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "benchmark_source_sha256": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4"
+      },
+      "reused": false
+    }
+  },
+  "version": null,
+  "phase": "io",
+  "checkpoint": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\replay_100000_seed42_revised_batch1\\workers\\0001_replay_buildup_n100000_s42_l1000_shared_io.json",
+  "payload_limit": 134217728,
+  "allocation_limit": 536870912
+}

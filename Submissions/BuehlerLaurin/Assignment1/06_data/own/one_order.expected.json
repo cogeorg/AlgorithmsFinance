@@ -1,0 +1,32 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "one_order",
+ "description": "A single limit buy rests; ask side empty.",
+ "covers": [
+  "one order",
+  "one side empty"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 10,
+   "fills": []
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "b1",
+   "side": "BUY",
+   "price_ticks": 100,
+   "qty_units": 10,
+   "arrival_seq": 1
+  }
+ ],
+ "best_bid": 100,
+ "best_ask": null
+}

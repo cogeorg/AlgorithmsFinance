@@ -1,0 +1,140 @@
+growth: touch_churn B1
+  n=     12500  0.097015 s  (ok, repeats=3)
+  n=     25000  0.195144 s  (ok, repeats=3)
+  n=     50000  0.403855 s  (ok, repeats=3)
+  n=    100000  0.810079 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.090326, 0.097015, 0.110054], "25000": [0.201003, 0.195144, 0.190746], "50000": [0.395856, 0.406736, 0.403855], "100000": [0.819407, 0.810079, 0.794092]}
+  last cell: {"events": 200000, "live": 100000, "rebuilds": null, "heap": null}
+growth: touch_churn B2
+  n=     12500  0.098737 s  (ok, repeats=3)
+  n=     25000  0.198791 s  (ok, repeats=3)
+  n=     50000  0.412165 s  (ok, repeats=3)
+  n=    100000  0.844481 s  (ok, repeats=3)
+  measured exponent: 1.03
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.098737, 0.100616, 0.09474], "25000": [0.198791, 0.197296, 0.19883], "50000": [0.442828, 0.412165, 0.409709], "100000": [0.828984, 0.844491, 0.844481]}
+  last cell: {"events": 200000, "live": 100000, "rebuilds": null, "heap": null}
+growth: touch_churn B3
+  n=     12500  0.103468 s  (ok, repeats=3)
+  n=     25000  0.210007 s  (ok, repeats=3)
+  n=     50000  0.425439 s  (ok, repeats=3)
+  n=    100000  0.863797 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.103468, 0.104275, 0.100926], "25000": [0.210007, 0.208515, 0.210136], "50000": [0.425439, 0.425889, 0.423634], "100000": [0.853882, 0.863797, 0.873973]}
+  last cell: {"events": 200000, "live": 100000, "rebuilds": null, "heap": 100002}
+growth: touch_churn B3rF
+  n=     12500  0.109239 s  (ok, repeats=3)
+  n=     25000  0.265310 s  (ok, repeats=3)
+  n=     50000  0.451148 s  (ok, repeats=3)
+  n=    100000  0.910584 s  (ok, repeats=3)
+  measured exponent: 0.99
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.109239, 0.10304, 0.109554], "25000": [0.216679, 0.26578, 0.26531], "50000": [0.442582, 0.471049, 0.451148], "100000": [0.914816, 0.910584, 0.894299]}
+  last cell: {"events": 200000, "live": 100000, "rebuilds": 0, "heap": 100002}
+growth: improve_cancel_purge B1
+  n=     12500  0.146236 s  (ok, repeats=3)
+  n=     25000  0.388359 s  (ok, repeats=3)
+  n=     50000  1.180078 s  (ok, repeats=3)
+  n=    100000  3.946761 s  (ok, repeats=3)
+  measured exponent: 1.59
+  predicted: 1.00 -> INCONSISTENT (tol 0.3)
+  raw: {"12500": [0.146236, 0.14052, 0.147567], "25000": [0.389573, 0.384691, 0.388359], "50000": [1.153716, 1.180078, 1.196904], "100000": [3.946761, 3.978341, 3.909715]}
+  last cell: {"events": 200002, "live": 0, "rebuilds": null, "heap": null}
+growth: improve_cancel_purge B2
+  n=     12500  0.129803 s  (ok, repeats=3)
+  n=     25000  0.364474 s  (ok, repeats=3)
+  n=     50000  1.106236 s  (ok, repeats=3)
+  n=    100000  3.770964 s  (ok, repeats=3)
+  measured exponent: 1.62
+  predicted: 1.00 -> INCONSISTENT (tol 0.3)
+  raw: {"12500": [0.128254, 0.129803, 0.136335], "25000": [0.358134, 0.364474, 0.369144], "50000": [1.106236, 1.111726, 1.087526], "100000": [3.794096, 3.747946, 3.770964]}
+  last cell: {"events": 200002, "live": 0, "rebuilds": null, "heap": null}
+growth: improve_cancel_purge B3
+  n=     12500  0.097385 s  (ok, repeats=3)
+  n=     25000  0.200903 s  (ok, repeats=3)
+  n=     50000  0.416743 s  (ok, repeats=3)
+  n=    100000  0.924565 s  (ok, repeats=3)
+  measured exponent: 1.08
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.097385, 0.0972, 0.098013], "25000": [0.198819, 0.203325, 0.200903], "50000": [0.410408, 0.425866, 0.416743], "100000": [0.924565, 0.927696, 0.915212]}
+  last cell: {"events": 200002, "live": 0, "rebuilds": null, "heap": 1}
+growth: improve_cancel_purge B3rF
+  n=     12500  0.099705 s  (ok, repeats=3)
+  n=     25000  0.208142 s  (ok, repeats=3)
+  n=     50000  0.432737 s  (ok, repeats=3)
+  n=    100000  0.955620 s  (ok, repeats=3)
+  measured exponent: 1.08
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.101433, 0.099705, 0.098213], "25000": [0.209521, 0.208142, 0.206385], "50000": [0.432296, 0.432737, 0.44328], "100000": [0.996817, 0.95562, 0.949475]}
+  last cell: {"events": 200002, "live": 0, "rebuilds": 16, "heap": 0}
+growth: root_recreate B1
+  n=     12500  0.081336 s  (ok, repeats=3)
+  n=     25000  0.164720 s  (ok, repeats=3)
+  n=     50000  0.330002 s  (ok, repeats=3)
+  n=    100000  0.672232 s  (ok, repeats=3)
+  measured exponent: 1.01
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.081336, 0.078427, 0.08212], "25000": [0.161305, 0.16472, 0.166293], "50000": [0.327346, 0.334256, 0.330002], "100000": [0.672232, 0.691459, 0.667253]}
+  last cell: {"events": 200000, "live": 100000, "rebuilds": null, "heap": null}
+growth: root_recreate B2
+  n=     12500  0.084235 s  (ok, repeats=3)
+  n=     25000  0.157237 s  (ok, repeats=3)
+  n=     50000  0.323786 s  (ok, repeats=3)
+  n=    100000  0.642675 s  (ok, repeats=3)
+  measured exponent: 0.98
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.078942, 0.088428, 0.084235], "25000": [0.156987, 0.160338, 0.157237], "50000": [0.323786, 0.320435, 0.333603], "100000": [0.642675, 0.670887, 0.642017]}
+  last cell: {"events": 200000, "live": 100000, "rebuilds": null, "heap": null}
+growth: root_recreate B3
+  n=     12500  0.074963 s  (ok, repeats=3)
+  n=     25000  0.150436 s  (ok, repeats=3)
+  n=     50000  0.300822 s  (ok, repeats=3)
+  n=    100000  0.603540 s  (ok, repeats=3)
+  measured exponent: 1.00
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.074963, 0.076208, 0.074482], "25000": [0.152092, 0.149583, 0.150436], "50000": [0.300822, 0.30737, 0.292465], "100000": [0.59467, 0.606993, 0.60354]}
+  last cell: {"events": 200000, "live": 100000, "rebuilds": null, "heap": 100001}
+growth: root_recreate B3rF
+  n=     12500  0.077155 s  (ok, repeats=3)
+  n=     25000  0.162123 s  (ok, repeats=3)
+  n=     50000  0.327544 s  (ok, repeats=3)
+  n=    100000  0.645856 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.075327, 0.081553, 0.077155], "25000": [0.157039, 0.162123, 0.163156], "50000": [0.327544, 0.327296, 0.377945], "100000": [0.645856, 0.642642, 0.662859]}
+  last cell: {"events": 200000, "live": 100000, "rebuilds": 0, "heap": 100001}
+growth: compaction_thrash B1
+  n=     12500  0.061947 s  (ok, repeats=3)
+  n=     25000  0.128167 s  (ok, repeats=3)
+  n=     50000  0.253165 s  (ok, repeats=3)
+  n=    100000  0.514076 s  (ok, repeats=3)
+  measured exponent: 1.01
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.059903, 0.062656, 0.061947], "25000": [0.123744, 0.129222, 0.128167], "50000": [0.254892, 0.250385, 0.253165], "100000": [0.529551, 0.50363, 0.514076]}
+  last cell: {"events": 200000, "live": 33, "rebuilds": null, "heap": null}
+growth: compaction_thrash B2
+  n=     12500  0.059770 s  (ok, repeats=3)
+  n=     25000  0.126355 s  (ok, repeats=3)
+  n=     50000  0.251004 s  (ok, repeats=3)
+  n=    100000  0.502244 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.058799, 0.064291, 0.05977], "25000": [0.122406, 0.132367, 0.126355], "50000": [0.257873, 0.250503, 0.251004], "100000": [0.507891, 0.5002, 0.502244]}
+  last cell: {"events": 200000, "live": 33, "rebuilds": null, "heap": null}
+growth: compaction_thrash B3
+  n=     12500  0.062587 s  (ok, repeats=3)
+  n=     25000  0.127267 s  (ok, repeats=3)
+  n=     50000  0.261189 s  (ok, repeats=3)
+  n=    100000  0.528230 s  (ok, repeats=3)
+  measured exponent: 1.03
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.061322, 0.062587, 0.063785], "25000": [0.128718, 0.124276, 0.127267], "50000": [0.259521, 0.261189, 0.271391], "100000": [0.509008, 0.52823, 0.538986]}
+  last cell: {"events": 200000, "live": 33, "rebuilds": null, "heap": 1}
+compaction_thrash B1 100000 events 200033 {"accepted_events": 200033, "limit_events": 100033, "market_sell_events": 0, "cancel_events": 100000, "makers_touched": 0, "levels_visited": 0, "fills": 0, "unfilled_qty_units": 100033, "stale_skipped": 0, "stale_compacted": 99990, "stale_discarded": 0, "compactions": 3030, "compaction_records_scanned": 196950, "active_order_peak": 33, "price_level_peak": 1, "price_list_shifts": 0}
+compaction_thrash B3 100000 events 200033 {"accepted_events": 200033, "limit_events": 100033, "market_sell_events": 0, "cancel_events": 100000, "makers_touched": 0, "levels_visited": 0, "fills": 0, "unfilled_qty_units": 100033, "stale_skipped": 0, "stale_compacted": 99990, "stale_discarded": 0, "compactions": 3030, "compaction_records_scanned": 196950, "active_order_peak": 33, "price_level_peak": 1, "price_list_shifts": 0, "heap_pushes": 1, "heap_pops": 0, "heap_stale_pops": 0, "heap_entry_peak": 1}
+far_end_flicker B1 50000 events 150000 {"accepted_events": 150000, "limit_events": 100000, "market_sell_events": 0, "cancel_events": 50000, "makers_touched": 0, "levels_visited": 0, "fills": 0, "unfilled_qty_units": 100000, "stale_skipped": 0, "stale_compacted": 0, "stale_discarded": 50000, "compactions": 0, "compaction_records_scanned": 0, "active_order_peak": 50001, "price_level_peak": 50001, "price_list_shifts": 5000000000}
+far_end_flicker B1 100000 events 300000 {"accepted_events": 300000, "limit_events": 200000, "market_sell_events": 0, "cancel_events": 100000, "makers_touched": 0, "levels_visited": 0, "fills": 0, "unfilled_qty_units": 200000, "stale_skipped": 0, "stale_compacted": 0, "stale_discarded": 100000, "compactions": 0, "compaction_records_scanned": 0, "active_order_peak": 100001, "price_level_peak": 100001, "price_list_shifts": 20000000000}
+touch_churn B3 100000 events 300000 {"accepted_events": 300000, "limit_events": 200000, "market_sell_events": 100000, "cancel_events": 0, "makers_touched": 100000, "levels_visited": 100000, "fills": 100000, "unfilled_qty_units": 200000, "stale_skipped": 0, "stale_compacted": 0, "stale_discarded": 0, "compactions": 0, "compaction_records_scanned": 0, "active_order_peak": 100001, "price_level_peak": 100001, "price_list_shifts": 0, "heap_pushes": 150001, "heap_pops": 49999, "heap_stale_pops": 49999, "heap_entry_peak": 100002}

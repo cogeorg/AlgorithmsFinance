@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "raw_records": 2538,
+  "latency_samples": 2292107,
+  "histogram_series": 90,
+  "all_raw_and_summary_data_identical": true,
+  "measured_source_hashes_unchanged": true,
+  "no_external_assets_or_requests": true,
+  "current_browser_qa_matches_html": true,
+  "duplicate_ids": false
+}

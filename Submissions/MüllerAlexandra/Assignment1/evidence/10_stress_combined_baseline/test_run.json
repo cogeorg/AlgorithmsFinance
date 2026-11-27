@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "stage": "10_stress_combined_baseline",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "-k",
+    "not revised and not versions_agree"
+  ],
+  "working_directory": ".",
+  "started_utc": "2026-11-23T20:01:12.383547+00:00",
+  "finished_utc": "2026-11-23T20:01:19.751242+00:00",
+  "elapsed_seconds": 7.3683594999602064,
+  "exit_code": 0,
+  "python_version": "3.12.10",
+  "python_implementation": "CPython",
+  "pytest_version": "9.2.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git": {
+    "branch": "assignment1-mueller-alexandra",
+    "head": "03b1db4837ff700bac0dedce6f1acf8dc0d12ae8",
+    "status_before_evidence_files": "M README.md\n M docs/04_measurement_method.md\n M docs/05_revision_log.md\n M docs/06_ai_assistance.md\n?? evidence/10_stress_after_implementation/\n?? evidence/10_stress_before_implementation/\n?? evidence/10_stress_cli_before_implementation/\n?? scripts/08_run_stress.py\n?? src/limit_order_book/stress_experiments.py\n?? tests/test_17_stress_experiments.py\n?? ../phase2_audit_liuhaina/",
+    "clean_before_evidence_files": false
+  }
+}

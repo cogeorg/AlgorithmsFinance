@@ -1,0 +1,9 @@
+{
+  "stage": "tests-first red phase",
+  "python": "3.13.0",
+  "tests_run": 47,
+  "failures": 0,
+  "errors_including_subtests": 93,
+  "all_errors_are_not_implemented": true,
+  "expected_outcome": "Matching and inspection are intentionally unimplemented"
+}

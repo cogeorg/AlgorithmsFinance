@@ -1,0 +1,67 @@
+{
+  "checked_at_utc": "2026-11-20T14:20:07.320278+00:00",
+  "scope": "Isolated copy of local repository files; excludes .git, work, caches, and virtual environments. This is not a fresh remote clone.",
+  "python": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "commands": [
+    {
+      "command": "python3 -B run_tests.py",
+      "exit_code": 0,
+      "log": "work/reproducibility/20261120T141949/01_run_tests.py.log",
+      "output": "\n=== original: search_original.py ===\ntest_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) ... ok\ntest_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) ... ok\ntest_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) ... ok\ntest_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) ... ok\ntest_empty_array (test_search.MembershipContractTests.test_empty_array) ... ok\ntest_empty_queries (test_search.MembershipContractTests.test_empty_queries) ... ok\ntest_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) ... ok\ntest_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) ... ok\ntest_single_entry (test_search.MembershipContractTests.test_single_entry) ... ok\ntest_slide_example (test_search.MembershipContractTests.test_slide_example) ... ok\ntest_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) ... ok\ntest_two_entries (test_search.MembershipContractTests.test_two_entries) ... ok\ntest_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.001s\n\nOK\n\n=== revised: search.py ===\ntest_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) ... ok\ntest_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) ... ok\ntest_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) ... ok\ntest_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) ... ok\ntest_empty_array (test_search.MembershipContractTests.test_empty_array) ... ok\ntest_empty_queries (test_search.MembershipContractTests.test_empty_queries) ... ok\ntest_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) ... ok\ntest_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) ... ok\ntest_single_entry (test_search.MembershipContractTests.test_single_entry) ... ok\ntest_slide_example (test_search.MembershipContractTests.test_slide_example) ... ok\ntest_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) ... ok\ntest_two_entries (test_search.MembershipContractTests.test_two_entries) ... ok\ntest_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "command": "python3 -B validate_data.py",
+      "exit_code": 0,
+      "log": "work/reproducibility/20261120T141949/02_validate_data.py.log",
+      "output": "PASS: fixed-seed regeneration, case coverage, lengths, hashes, duplicates, and hit rates.\nPASS: 18 cases x 2 versions x 3 methods = 108 correct calls; inputs unchanged.\nValidation only: no performance measurements collected.\n"
+    },
+    {
+      "command": "python3 -B generate_data.py --seed 42 --include-empty-queries",
+      "exit_code": 0,
+      "log": "work/reproducibility/20261120T141949/03_generate_data.py.log",
+      "output": "Saved 3 arrays and 18 cases to /Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/work/reproducibility/20261120T141949/repository/Submissions/LiuHaina/data/inputs.json\nSkipped 3 infeasible q=1 mixed cases (reasons saved).\n"
+    },
+    {
+      "command": "python3 -B validate_data.py",
+      "exit_code": 0,
+      "log": "work/reproducibility/20261120T141949/04_validate_data.py.log",
+      "output": "PASS: fixed-seed regeneration, case coverage, lengths, hashes, duplicates, and hit rates.\nPASS: 18 cases x 2 versions x 3 methods = 108 correct calls; inputs unchanged.\nValidation only: no performance measurements collected.\n"
+    },
+    {
+      "command": "python3 -B benchmark.py",
+      "exit_code": 0,
+      "log": "work/reproducibility/20261120T141949/05_benchmark.py.log",
+      "output": "Timing: 18/108 configurations\nTiming: 36/108 configurations\nTiming: 54/108 configurations\nTiming: 72/108 configurations\nTiming: 90/108 configurations\nTiming: 108/108 configurations\nSaved 1620 raw timing rows, 324 summaries, 108 memory rows.\n"
+    },
+    {
+      "command": "python3 -B dashboard.py",
+      "exit_code": 0,
+      "log": "work/reproducibility/20261120T141949/06_dashboard.py.log",
+      "output": "Dashboard saved: /Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/work/reproducibility/20261120T141949/repository/Submissions/LiuHaina/dashboard.html\nOpen this HTML file in a browser; all data and charts work offline.\nRebuild after changing measurements. No algorithm or benchmark was executed.\n"
+    },
+    {
+      "command": "python3 -B build_report.py",
+      "exit_code": 0,
+      "log": "work/reproducibility/20261120T141949/07_build_report.py.log",
+      "output": "Saved English REPORT.md (2,702 words) and results/report_tables.json\n"
+    }
+  ],
+  "regenerated_input_sha256": "bc7d87b23526ba6e81e5d5f3d92b2407b8c61ec91dc29ff8962a7e1028315592",
+  "new_measurement_run_id": "20261120T141950.832436Z",
+  "counts": {
+    "cases": 18,
+    "configurations": 108,
+    "raw_timing_rows": 1620,
+    "summary_rows": 324,
+    "memory_rows": 108
+  },
+  "original_saved_measurements_preserved": true,
+  "notes": [
+    "All seven documented commands exited successfully.",
+    "Fixed-seed input bytes match the original saved dataset.",
+    "Regenerated timings are separate observations, not expected to match the original times.",
+    "English dashboard and report regenerate from the new measurements.",
+    "No third-party Python packages were needed by these commands.",
+    "Browser interaction checks are recorded separately in dashboard_validation.txt."
+  ]
+}

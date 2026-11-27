@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Order book / Assignment 1</title>
+<style>
+:root{--ink:#152c32;--muted:#526a70;--line:#d6e0df;--paper:#f4f7f4;--a:#bd572d;--b:#007d77;--soft:#e8efeb}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 system-ui,-apple-system,sans-serif}main{max-width:1400px;margin:auto;padding:38px 36px 64px}a{color:#006c69}h1{font-size:clamp(30px,4.8vw,58px);line-height:1.08;letter-spacing:-2px;margin:15px 0}h2{font-size:20px;line-height:1.3;margin:0 0 8px}h3{font-size:15px;margin:0 0 6px}p{margin:8px 0 18px}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--b);font-weight:750}.lead{max-width:780px;color:var(--muted);font-size:17px}.topline{display:flex;justify-content:space-between;gap:16px;align-items:center}.pill{border:1px solid var(--line);border-radius:30px;padding:7px 13px;font-size:12px;white-space:nowrap}.filters{display:flex;gap:16px;flex-wrap:wrap;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:28px 0 22px}label{font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:5px;min-width:115px}select{font:inherit;font-size:14px;padding:8px 30px 8px 10px;border:1px solid #b8c9c6;border-radius:6px;background:white;color:var(--ink);min-height:40px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}.card{border:1px solid var(--line);border-radius:9px;padding:18px;background:white}.card small{font-size:12px;color:var(--muted)}.value{font-size:25px;font-weight:650;letter-spacing:-.6px;margin:5px 0;overflow-wrap:anywhere}.note{font-size:12px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:18px 0}.panel{min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:21px}.panel.full{grid-column:1/-1}svg{display:block;width:100%;height:auto;min-height:200px}svg text{font-family:inherit;font-size:10px;fill:var(--muted)}.legend{display:flex;gap:18px;font-size:12px;margin:8px 0 3px}.swatch{display:inline-block;width:17px;height:3px;margin-right:6px;vertical-align:middle}.table-wrap{max-width:100%;overflow:auto}table{width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap}th{text-align:left;color:var(--muted);font-size:11px;font-weight:650}td,th{padding:9px 12px 9px 0;border-bottom:1px solid var(--soft)}.stop{color:#a34b21}.section{margin-top:38px}.inline-controls{display:flex;gap:12px;flex-wrap:wrap;margin:15px 0}.status{border-left:3px solid #bd572d;background:#faf1e7;padding:12px 16px;font-size:13px;margin:18px 0}.links{display:flex;gap:14px;flex-wrap:wrap;font-size:13px}button{font:inherit;font-size:13px;color:var(--b);background:white;border:1px solid #9cbab5;border-radius:5px;padding:8px 12px;cursor:pointer}details{margin-top:20px}summary{cursor:pointer;font-weight:650}code{font-size:12px;overflow-wrap:anywhere}footer{margin-top:35px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.empty{padding:45px 10px;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:760px){main{padding:24px 16px 45px}.grid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:16px}.topline{align-items:flex-start}.pill{white-space:normal;max-width:135px}.value{font-size:21px}h1{letter-spacing:-1px}.filters{gap:12px}label{min-width:calc(50% - 6px);flex:1}.lead{font-size:15px}}
+</style>
+</head>
+<body><main>
+<div class="topline"><span class="eyebrow">Algorithms in Finance / Khushi Hardi</span><span class="pill">Assignment 1 · Saved experiment</span></div>
+<h1>Inside the order book.</h1>
+<p class="lead">A list of orders, then an indexed set of price queues. Explore where the revision helps, what it costs, and what the measurements can establish.</p>
+<div class="legend"><span><i class="swatch" style="background:var(--a)"></i>A · List baseline</span><span><i class="swatch" style="background:var(--b)"></i>B · Indexed FIFO</span></div>
+<div class="filters">
+<label>Workload<select id="scenario"></select></label>
+<label>Seed<select id="seed"></select></label>
+<label>Diagnostic size<select id="size"></select></label>
+<label>Vertical scale<select id="scale"><option value="log">Logarithmic</option><option value="linear">Linear</option></select></label>
+</div>
+<div class="cards">
+<div class="card"><small>Revised replay / selected size</small><div class="value" id="replay-value"></div><small id="replay-note"></small></div>
+<div class="card"><small>Revised throughput</small><div class="value" id="throughput-value"></div><small>events per second · replay only</small></div>
+<div class="card"><small>Peak active book / occupied prices</small><div class="value" id="depth-value"></div><small>measured in a separate diagnostic</small></div>
+<div class="card"><small>Paired replay comparison</small><div class="value" id="ratio-value"></div><small id="ratio-note"></small></div>
+</div>
+<div class="status" id="stop-note"></div>
+<div class="grid">
+<section class="panel"><h2>Engine replay</h2><p class="note">Fresh empty book; input already parsed. Median of five repeats when complete.</p><div id="replay-chart"></div></section>
+<section class="panel"><h2>Throughput</h2><p class="note">Submitted events divided by engine replay seconds.</p><div id="throughput-chart"></div></section>
+<section class="panel"><h2>Construction and application</h2><p class="note">Construction uses passive streams, or the first 80% of sweep. Application includes parsing, seed 42 only.</p><div class="inline-controls"><label>Phase<select id="phase"><option value="construction">Construction</option><option value="application">Application, with parsing</option><option value="parse">Input parsing only</option></select></label></div><div id="construction-chart"></div></section>
+<section class="panel"><h2>Traced engine memory</h2><p class="note">Separate run. Preloaded events excluded; current output included. Not process RSS.</p><div id="memory-chart"></div></section>
+<section class="panel"><h2>Processing latency distribution</h2><p class="note">Separate per-event instrumentation. Cumulative share by powers-of-two microsecond bins; stopped prefixes are labelled.</p><div id="latency-chart"></div><div class="table-wrap"><table id="latency-table"></table></div></section>
+<section class="panel"><h2>Growth and cleanup</h2><p class="note">Current traced bytes at 1 / 10% / 50% / 100% of selected replay. Cancellation churn should end with no live entries.</p><div id="growth-chart"></div><div id="storage-note" class="note"></div></section>
+</div>
+<section class="section"><span class="eyebrow">Controlled liquidation</span><h2 style="margin-top:8px">Same starting book. A fresh copy every time.</h2><p class="note">Fixed initial order count, seed 42. Matching and reset are measured separately. These controls are independent of the workload above.</p>
+<div class="inline-controls"><label>Available bid prices<select id="levels"><option value="4">4 prices</option><option value="1000">1,000 prices</option></select></label><label>Requested share of initial bids<select id="sale"><option value="10">10%</option><option value="100">100%</option><option value="200">200%</option></select></label></div>
+<div class="grid"><section class="panel"><h2>One market sell</h2><div id="sell-chart"></div></section><section class="panel"><h2>Book construction / reset</h2><div id="reset-chart"></div></section><section class="panel full"><h2>Liquidation outcomes</h2><div class="table-wrap"><table id="sell-table"></table></div></section></div>
+</section>
+<section class="section panel"><h2>Correctness comes first</h2><p class="note">Initial failures were recorded before engine code existed. Both versions use unchanged original expectations. Benchmark fingerprints add comparison evidence when the baseline diagnostic completes.</p><div class="table-wrap"><table id="correctness-table"></table></div><p id="correctness-note" class="note"></p><div class="links"><a href="docs/TRACEABILITY.md">Requirements and evidence</a><a href="docs/REPORT.md">Report and complexity reasoning</a><a href="results/FINDINGS.md">Measured findings</a><a href="AI/DECISIONS.md">AI contribution and decisions</a></div></section>
+<section class="section panel"><h2>Raw repeats and stopped trials</h2><p class="note">Selected workload and seed, all sizes. Repeat 0 is warmup. “Stopped” is an incomplete trial, never a zero or a successful repeat.</p><div class="table-wrap" style="max-height:400px"><table id="raw-table"></table></div><div class="links" style="margin-top:16px"><button id="download">Download selected raw JSON</button><a href="results/measurements.jsonl">All measurements</a><a href="results/latency_raw.csv.gz">Individual latency samples</a><a href="results/environment.json">Environment and settings</a><a href="results/inputs.json">Generator commands and checksums</a></div></section>
+<details class="panel"><summary>Measurement boundaries and limits</summary><p class="note" id="method-note"></p><p class="note">Latency uses nearest-rank percentiles (ceil(p × n) − 1), with no interpolation. “Early” and “late” are the first and last 10% of a complete batch. Reciprocal throughput is not tail latency. Sequential replay excludes network and queueing delay and cannot establish overload capacity.</p><p class="note">The million-event feasibility trial is streaming cancellation churn, seed 42. It includes parsing and is not an engine-only comparison. Other million-event workloads were not attempted.</p><div id="million-note" class="note"></div><p class="note">Single machine, sequential run order, no confidence intervals. Synthetic teaching submissions are not calibrated exchange records. No fees, balances, self-trade checks or concurrency.</p><p class="note" id="provenance"></p></details>
+<footer>Built entirely from saved results · No benchmark runs in this page · Python standard library + offline JavaScript</footer>
+</main>
+<script id="saved-data" type="application/json">@@DATA@@</script>
+<script>
+'use strict';
+window.__errors=[]; window.addEventListener('error',e=>window.__errors.push(String(e.message)));
+const DATA=JSON.parse(document.getElementById('saved-data').textContent);
+const $=id=>document.getElementById(id), colors={baseline:'#bd572d',revised:'#007d77',input:'#637c85'};
+const name=v=>({baseline:'A · Baseline',revised:'B · Revised',input:'Input'})[v]||v;
+function fmt(v,d=3){return v==null?'unavailable':Number(v).toLocaleString('en-US',{maximumFractionDigits:d});}
+function options(id,values){$(id).replaceChildren(...values.map(v=>{const o=document.createElement('option');o.value=v;o.textContent=typeof v==='number'?fmt(v,0):v;return o;}));}
+options('scenario',DATA.metadata.settings.scenarios); options('seed',DATA.metadata.settings.seeds);options('size',DATA.metadata.settings.sizes);$('size').value=Math.max(...DATA.metadata.settings.sizes);
+function state(){return {scenario:$('scenario').value,seed:+$('seed').value,size:+$('size').value,log:$('scale').value==='log',levels:+$('levels').value,sale:+$('sale').value};}
+function matching(r,s){return r.scenario===s.scenario&&r.seed===s.seed;}
+function summaries(s,phase){return DATA.summary.filter(r=>matching(r,s)&&r.phase===phase&&r.repeats===5);}
+function series(rows,value='elapsed_seconds'){return ['baseline','revised','input'].map(v=>({name:name(v),color:colors[v],points:rows.filter(r=>r.version===v).map(r=>({x:r.event_count,y:r[value]})).filter(p=>p.y!=null)})).filter(s=>s.points.length);}
+function chart(id,sets,{unit='seconds',xunit='submitted events',log=true,xlog=true,maxY=null}={}){
+ const holder=$(id), points=sets.flatMap(s=>s.points).filter(p=>Number.isFinite(p.x)&&Number.isFinite(p.y)&&p.x>0&&(!log||p.y>0));
+ if(!points.length){holder.innerHTML='<div class="empty">No completed measurements for this selection.</div>';return;}
+ const W=560,H=265,L=62,R=19,T=15,B=51,w=W-L-R,h=H-T-B;
+ const xt=v=>xlog?Math.log10(v):v, yt=v=>log?Math.log10(Math.max(v,1e-12)):v;
+ let xmin=Math.min(...points.map(p=>xt(p.x))),xmax=Math.max(...points.map(p=>xt(p.x))),ymin=log?Math.min(...points.map(p=>yt(p.y))):0,ymax=Math.max(...points.map(p=>yt(p.y)));
+ if(xmin===xmax){xmin-=.3;xmax+=.3;} if(ymin===ymax){ymin=log?ymin-.3:0;ymax+=log?.3:Math.max(1,ymax*.1);}else{const pad=(ymax-ymin)*.12;if(log)ymin-=pad;ymax+=pad;}
+ if(maxY!==null)ymax=maxY;
+ const X=v=>L+(xt(v)-xmin)/(xmax-xmin)*w,Y=v=>T+h-(yt(v)-ymin)/(ymax-ymin)*h;
+ let out=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${unit} versus ${xunit}">`;
+ for(let i=0;i<5;i++){const yv=ymin+(ymax-ymin)*i/4,y=T+h-h*i/4,val=log?10**yv:yv;out+=`<line x1="${L}" y1="${y}" x2="${W-R}" y2="${y}" stroke="#e3eae7"/><text x="${L-8}" y="${y+3}" text-anchor="end">${val===0?'0':val.toPrecision(2)}</text>`;}
+ const ticks=[...new Set(points.map(p=>p.x))].sort((a,b)=>a-b); const candidates=ticks.length>7?ticks.filter((v,i)=>i%Math.ceil(ticks.length/6)===0):ticks;
+ const tickVals=[];for(const x of candidates){const last=ticks[ticks.length-1];if((!tickVals.length||X(x)-X(tickVals[tickVals.length-1])>=62)&&(x===last||X(last)-X(x)>=62))tickVals.push(x);}if(ticks.length&&!tickVals.includes(ticks[ticks.length-1]))tickVals.push(ticks[ticks.length-1]);
+ for(const x of tickVals)out+=`<text class="x-tick" x="${X(x)}" y="${T+h+20}" text-anchor="middle">${fmt(x,x<1?3:0)}</text>`;
+ for(const set of sets){const ps=set.points.filter(p=>Number.isFinite(p.y)&&(!log||p.y>0)).sort((a,b)=>a.x-b.x);if(!ps.length)continue;out+=`<path d="${ps.map((p,i)=>`${i?'L':'M'}${X(p.x)},${Y(p.y)}`).join(' ')}" fill="none" stroke="${set.color}" stroke-width="2.4"/>`;for(const p of ps)out+=`<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="3.6" fill="${set.color}"><title>${set.name}: ${fmt(p.x,3)} ${xunit}, ${p.y.toPrecision(5)} ${unit}</title></circle>`;}
+ out+=`<text x="${L}" y="${H-5}">${xunit}${xlog?' · log scale':''}</text><text x="${W-R}" y="${H-5}" text-anchor="end">${unit}${log?' · log scale':''}</text></svg>`;holder.innerHTML=out;
+}
+function table(id,headers,rows){const t=$(id);t.replaceChildren();const tr=document.createElement('tr');for(const h of headers){const th=document.createElement('th');th.textContent=h;tr.appendChild(th);}const head=document.createElement('thead');head.appendChild(tr);t.appendChild(head);const body=document.createElement('tbody');for(const row of rows){const r=document.createElement('tr');for(const v of row){const td=document.createElement('td');td.textContent=v;r.appendChild(td);}body.appendChild(r);}t.appendChild(body);}
+function render(){
+ const s=state(), raw=DATA.measurements.filter(r=>matching(r,s)), rep=summaries(s,'replay'),pick=v=>rep.find(r=>r.version===v&&r.event_count===s.size),b=pick('revised'),a=pick('baseline');
+ $('replay-value').textContent=b?`${fmt(b.elapsed_seconds,4)} s`:'Unavailable';$('replay-note').textContent=`${fmt(s.size,0)} submitted events · five repeats`;
+ $('throughput-value').textContent=b?fmt(b.throughput_events_per_second,0):'Unavailable';
+ const depth=raw.find(r=>r.phase==='depth'&&r.event_count===s.size);$('depth-value').textContent=depth?`${fmt(depth.active_order_peak,0)} / ${fmt(depth.price_level_peak,0)}`:'Unavailable';
+ $('ratio-value').textContent=a&&b?`${fmt(a.elapsed_seconds/b.elapsed_seconds,2)}×`:a?'Unavailable':'Baseline stopped';$('ratio-note').textContent=a&&b?'baseline seconds ÷ revised seconds':'No complete paired five-repeat median';
+ const stops=raw.filter(r=>r.status==='stopped'&&r.elapsed_seconds!=null);$('stop-note').textContent=`${stops.length} stopped trials in this workload/seed across all measured sizes and phases. Each trial has a ${DATA.metadata.settings.limit_seconds}-second wall limit. Missing curves are unavailable measurements; they are not zero.`;
+ chart('replay-chart',series(rep),{log:s.log});chart('throughput-chart',series(rep,'throughput_events_per_second'),{log:s.log,unit:'events / second'});
+ chart('construction-chart',series(summaries(s,$('phase').value)),{log:s.log});
+ const mem=raw.filter(r=>r.phase==='memory'&&r.status==='ok');chart('memory-chart',series(mem.map(r=>({...r,kib:r.peak_traced_bytes/1024})),'kib'),{log:s.log,unit:'peak KiB'});
+ const selectedMem=mem.filter(r=>r.event_count===s.size);chart('growth-chart',selectedMem.map(r=>({name:name(r.version),color:colors[r.version],points:r.checkpoints.map(p=>({x:p.events_processed,y:p.current_bytes/1024}))})),{log:s.log,unit:'current KiB',xunit:'events processed'});
+ $('storage-note').textContent=selectedMem.map(r=>`${name(r.version)} final: ${r.active_orders} active, ${r.stored_orders} stored, ${r.stale_entries} stale; ${fmt(r.current_traced_bytes/1024,2)} KiB current.`).join(' ')||'No completed allocation measurement at this size.';
+ const hist=DATA.histograms.filter(r=>matching(r,s)&&r.event_count===s.size);chart('latency-chart',hist.map(r=>{let sum=0;return {name:name(r.version),color:colors[r.version],points:r.bins.map(([x,n])=>({x:x*2,y:(sum+=n)*100/r.samples}))};}),{log:false,maxY:100,unit:'cumulative %',xunit:'microseconds / event'});
+ const lat=raw.filter(r=>r.phase==='latency_summary'&&r.event_count===s.size);table('latency-table',['Version / cohort','p50 µs','p95 µs','p99 µs','Samples / status'],lat.map(r=>[`${name(r.version)} / ${r.cohort}`,fmt(r.p50_seconds*1e6,2),fmt(r.p95_seconds*1e6,2),fmt(r.p99_seconds*1e6,2),`${fmt(r.samples,0)} / ${r.status}`]));
+ const sells=DATA.summary.filter(r=>r.scenario==='liquidation'&&r.levels===s.levels&&r.sale_percent===s.sale&&r.repeats===5);chart('sell-chart',series(sells.filter(r=>r.phase==='liquidation')),{log:s.log,xunit:'initial bid orders'});chart('reset-chart',series(sells.filter(r=>r.phase==='reset')),{log:s.log,xunit:'initial bid orders'});
+ const outcomes=DATA.measurements.filter(r=>r.phase==='sale_outcome'&&r.levels===s.levels&&r.sale_percent===s.sale&&(r.repeat===1||r.status==='stopped'));table('sell-table',['Orders','Version','Requested units','Makers / fills','Prices','Unfilled units','Status'],outcomes.map(r=>[fmt(r.event_count,0),name(r.version),fmt(r.requested_qty_units,0),r.fill_count==null?'—':`${fmt(r.makers_touched,0)} / ${fmt(r.fill_count,0)}`,r.prices_visited??'—',r.unfilled_qty_units==null?'—':fmt(r.unfilled_qty_units,0),r.status]));
+ table('raw-table',['Events','Version','Phase','Repeat','Seconds','Status'],raw.filter(r=>['replay','construction','application','parse','memory_run','latency_instrumentation'].includes(r.phase)).map(r=>[fmt(r.event_count,0),name(r.version),r.phase,r.repeat,fmt(r.elapsed_seconds,6),r.status]));
+ window.APP.last={state:s,replay:b??null,stops:stops.length};
+}
+window.APP={render,state,last:null};
+for(const id of ['scenario','seed','size','scale','phase','levels','sale'])$(id).addEventListener('change',render);
+table('correctness-table',['Stage','Test methods','Outcome'],DATA.correctness.map(r=>[r.stage,r.count,r.outcome]));
+const verified=DATA.measurements.filter(r=>r.phase==='correctness').length;$('correctness-note').textContent=`${verified} complete benchmark streams have identical ordered-output/final-book fingerprints between versions. Smaller generated tests also compare full state after every event. Unfinished diagnostics make no correctness claim. Original test hashes verified: ${DATA.verification.original_tests_unchanged}.`;
+$('method-note').textContent=DATA.metadata.timing+'. '+DATA.metadata.memory+'. '+DATA.metadata.limits+'.';
+$('provenance').textContent=`${DATA.metadata.python.split('\n')[0]} · ${DATA.metadata.platform} · ${DATA.metadata.cpu_count} logical CPUs. Engine/source base ${DATA.metadata.code_commit}; actual measured file hashes are saved in environment.json.`;
+$('million-note').textContent=DATA.measurements.filter(r=>r.event_count===1000000&&r.repeat===0).map(r=>`${name(r.version)} ${r.phase}: ${r.status} (${fmt(r.elapsed_seconds,3)} s warmup).`).join(' ')+' '+DATA.summary.filter(r=>r.event_count===1000000).map(r=>`${name(r.version)} ${r.phase}: ${fmt(r.elapsed_seconds,4)} s median, ${r.repeats} repeats.`).join(' ');
+$('download').addEventListener('click',()=>{const s=state(),blob=new Blob([JSON.stringify(DATA.measurements.filter(r=>matching(r,s)),null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`orderbook-${s.scenario}-seed${s.seed}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+render();
+</script>
+</body></html>

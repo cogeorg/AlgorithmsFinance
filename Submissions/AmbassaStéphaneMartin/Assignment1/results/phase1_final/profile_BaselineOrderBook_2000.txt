@@ -1,0 +1,23 @@
+         58001 function calls in 0.124 seconds
+
+   Ordered by: cumulative time
+   List reduced from 23 to 15 due to restriction <15>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     2000    0.001    0.000    0.124    0.000 order_book.py:22(process_event)
+     2000    0.000    0.000    0.123    0.000 order_book.py:68(AddLimitOrder)
+     2000    0.001    0.000    0.122    0.000 order_book.py:152(_handle)
+     2000    0.003    0.000    0.061    0.000 order_book.py:102(_validate)
+     2000    0.002    0.000    0.060    0.000 order_book.py:205(_apply_limit)
+     2000    0.001    0.000    0.057    0.000 order_book.py:176(_match)
+     2000    0.001    0.000    0.056    0.000 order_book.py:255(_best_order)
+     2000    0.001    0.000    0.055    0.000 {built-in method builtins.min}
+     2000    0.001    0.000    0.055    0.000 profile_diagnostic.py:19(_find_order)
+     2000    0.054    0.000    0.054    0.000 order_book.py:256(<genexpr>)
+     2000    0.001    0.000    0.053    0.000 order_book.py:249(_find_order)
+     2000    0.001    0.000    0.052    0.000 {built-in method builtins.next}
+     2000    0.052    0.000    0.052    0.000 order_book.py:251(<genexpr>)
+     4000    0.001    0.000    0.002    0.000 order_book.py:93(_valid_id)
+     6000    0.001    0.000    0.001    0.000 order_book.py:97(_positive_integer)
+
+

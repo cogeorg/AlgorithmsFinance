@@ -1,0 +1,12 @@
+label: dashboard-verified
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py -q --tb=short --basetemp=scratch/pytest-dashboard-verified --junitxml=05_evidence/dashboard-tests.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 87ed911f839877c197cd9458b2cd231537955a17
+dirty: True
+python: 3.13.15
+utc: 20261123T190241Z
+exit_code: 0
+duration_s: 18.48
+------------------------------------------------------------
+................                                                         [100%]
+16 passed in 16.71s

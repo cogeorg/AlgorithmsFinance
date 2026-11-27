@@ -1,0 +1,13 @@
+label: clarity-final-review
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/clarity_checkpoint.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: c4cfc2521f57fc3de60a35d361ff4ceb025e552f
+dirty: True
+python: 3.13.15
+utc: 20261125T120134Z
+exit_code: 0
+duration_s: 0.59
+------------------------------------------------------------
+standard 1032 passed; per-file: {"test_b3r": 6, "test_b_internal": 32, "test_bench_pipeline": 30, "test_contract": 448, "test_dashboard": 21, "test_fast_assessment": 10, "test_fast_equivalence": 116, "test_final_version": 60, "test_mutants": 25, "test_own_datasets": 4, "test_post_attack_pipeline": 13, "test_replay": 21, "test_replay_regressions": 28, "test_stateful": 6, "test_submission_robustness": 28, "test_validation": 184}
+dashboard_and_portability 49 passed; per-file: {"test_dashboard": 21, "test_submission_robustness": 28}
+PASS: nine-tab numerical audit, both suites wholly green, protected sources/results unchanged.

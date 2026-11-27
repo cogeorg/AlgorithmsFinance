@@ -1,0 +1,149 @@
+{
+  "artifact_directory": "results\\benchmarks\\full_20261125\\artifacts\\churn_with_anchor_cycles5000__revised__attempt_001\\latency",
+  "attempt": 1,
+  "case": {
+    "case_id": "churn_with_anchor_cycles5000",
+    "event_count": 10001,
+    "experiment": "cancellation_churn",
+    "generator_settings": {
+      "anchor_order_remains_active": true,
+      "cycles": 5000,
+      "events": 10001,
+      "generator": "anchored cancellation churn builder",
+      "transient_prices": "unique prices below the anchor"
+    },
+    "input_checksums": {
+      "churn_with_anchor_cycles5000.jsonl": "271bcbb4ce75ec75ff6a6128761b9d537060f4d92674786799866471b96867c9"
+    },
+    "input_paths": [
+      "results\\benchmarks\\full_20261125\\inputs\\churn_with_anchor_cycles5000.jsonl"
+    ],
+    "scenario": "churn_with_anchor",
+    "seed": 42
+  },
+  "config_id": "churn_with_anchor_cycles5000__revised",
+  "duration_until_stop_seconds": 0.9826505000237375,
+  "failure": null,
+  "measurement_definition_hash": "e154a603da6a1785e1b0377b363763e8dc1b99cbfa6c93c9bf49f962e33c1303",
+  "measurement_definition_id": "event-latency-v1",
+  "memory_limit_mib": 4096.0,
+  "peak_working_set_bytes_observed": 34185216,
+  "phase_budget_seconds": 30.0,
+  "phase_job": "latency",
+  "phase_settings": {
+    "event_count": 10001,
+    "generator_settings": {
+      "anchor_order_remains_active": true,
+      "cycles": 5000,
+      "events": 10001,
+      "generator": "anchored cancellation churn builder",
+      "transient_prices": "unique prices below the anchor"
+    },
+    "input_checksums": {
+      "churn_with_anchor_cycles5000.jsonl": "271bcbb4ce75ec75ff6a6128761b9d537060f4d92674786799866471b96867c9"
+    },
+    "latency_definition": "event-position-raw-v1"
+  },
+  "progress_file": "results\\benchmarks\\full_20261125\\records\\churn_with_anchor_cycles5000__revised__attempt_001__phase_latency.progress.jsonl",
+  "record_file": "results\\benchmarks\\full_20261125\\records\\churn_with_anchor_cycles5000__revised__attempt_001__phase_latency.json",
+  "record_type": "phase_attempt",
+  "rows": [
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+        "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "early_window_event_count": 1001,
+      "early_window_median_seconds": 8.600065484642982e-06,
+      "early_window_p95_seconds": 1.5700003132224083e-05,
+      "early_window_p99_seconds": 2.869986928999424e-05,
+      "early_window_process_throughput_events_per_second": 104359.97492930644,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 10001,
+      "experiment": "cancellation_churn",
+      "fill_count": null,
+      "generator_settings": {
+        "anchor_order_remains_active": true,
+        "cycles": 5000,
+        "events": 10001,
+        "generator": "anchored cancellation churn builder",
+        "transient_prices": "unique prices below the anchor"
+      },
+      "input_checksums": {
+        "churn_with_anchor_cycles5000.jsonl": "271bcbb4ce75ec75ff6a6128761b9d537060f4d92674786799866471b96867c9"
+      },
+      "late_window_event_count": 1001,
+      "late_window_median_seconds": 1.0599847882986069e-05,
+      "late_window_p95_seconds": 2.4300068616867065e-05,
+      "late_window_p99_seconds": 6.079999729990959e-05,
+      "late_window_process_throughput_events_per_second": 69013.53700533263,
+      "latency_median_seconds": 9.100185707211494e-06,
+      "latency_p95_seconds": 1.9700033590197563e-05,
+      "latency_p99_seconds": 4.710000939667225e-05,
+      "latency_percentile_convention": "nearest rank; median uses statistics.median",
+      "latency_process_throughput_events_per_second": 83661.53186368993,
+      "latency_raw_count": 10001,
+      "latency_raw_path": "artifacts\\churn_with_anchor_cycles5000__revised__attempt_001\\latency\\latencies.jsonl",
+      "measurement_definition_hash": "e154a603da6a1785e1b0377b363763e8dc1b99cbfa6c93c9bf49f962e33c1303",
+      "measurement_definition_id": "event-latency-v1",
+      "measurement_phase": "latency",
+      "memory_limit_mib": 4096.0,
+      "occupied_price_level_peak": null,
+      "phase": "latency_summary",
+      "phase_budget_seconds": 30.0,
+      "phase_settings": {
+        "event_count": 10001,
+        "generator_settings": {
+          "anchor_order_remains_active": true,
+          "cycles": 5000,
+          "events": 10001,
+          "generator": "anchored cancellation churn builder",
+          "transient_prices": "unique prices below the anchor"
+        },
+        "input_checksums": {
+          "churn_with_anchor_cycles5000.jsonl": "271bcbb4ce75ec75ff6a6128761b9d537060f4d92674786799866471b96867c9"
+        },
+        "latency_definition": "event-position-raw-v1"
+      },
+      "repeat": 1,
+      "requested_sell_qty_units": null,
+      "scenario": "churn_with_anchor",
+      "seed": 42,
+      "status": "completed",
+      "time_limit_seconds": 30.0,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    }
+  ],
+  "status": "completed",
+  "time_limit_seconds": 30.0,
+  "version": "revised"
+}

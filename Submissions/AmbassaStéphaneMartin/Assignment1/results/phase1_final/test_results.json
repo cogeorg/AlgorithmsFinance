@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "runs": [
+    {
+      "command": [
+        "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_order_book",
+        "test_price_heaps",
+        "test_lazy_cancellation",
+        "test_benchmark",
+        "test_benchmark_report",
+        "test_phase1_results"
+      ],
+      "exit_code": 0,
+      "tests": 107,
+      "runner_seconds": 1.816,
+      "command_wall_seconds": 7.914797600009479
+    },
+    {
+      "command": [
+        ".venv_phase1\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_order_book",
+        "test_price_heaps",
+        "test_lazy_cancellation",
+        "test_benchmark",
+        "test_benchmark_report",
+        "test_phase1_results"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.430048700014595,
+      "tests": 107,
+      "runner_seconds": 1.813
+    },
+    {
+      "command": [
+        ".venv_phase1\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_order_book",
+        "test_price_heaps",
+        "test_lazy_cancellation",
+        "test_benchmark",
+        "test_benchmark_report",
+        "test_phase1_results"
+      ],
+      "exit_code": 0,
+      "tests": 107,
+      "runner_seconds": 1.77,
+      "command_wall_seconds": 3.30588080000598
+    }
+  ]
+}

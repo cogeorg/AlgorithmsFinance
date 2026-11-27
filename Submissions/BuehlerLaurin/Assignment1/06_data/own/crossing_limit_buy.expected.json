@@ -1,0 +1,102 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "crossing_limit_buy",
+ "description": "A buy at 103 for 10 crosses asks at 101 (a1, a3) and 102 (a2) at the MAKER prices, then rests 4 at 103; the 104 ask stays; the book is not crossed afterwards.",
+ "covers": [
+  "crossing limit buy",
+  "execute at the resting price (taker price improvement)",
+  "residual of a crossing limit rests at its limit",
+  "several levels"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "a1",
+   "status": "resting",
+   "unfilled_qty_units": 2,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "order_id": "a2",
+   "status": "resting",
+   "unfilled_qty_units": 3,
+   "fills": []
+  },
+  {
+   "event_id": "e3",
+   "order_id": "a3",
+   "status": "resting",
+   "unfilled_qty_units": 1,
+   "fills": []
+  },
+  {
+   "event_id": "e4",
+   "order_id": "a4",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e5",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 4,
+   "fills": []
+  },
+  {
+   "event_id": "e6",
+   "order_id": "t1",
+   "status": "resting",
+   "unfilled_qty_units": 4,
+   "fills": [
+    {
+     "maker_id": "a1",
+     "taker_id": "t1",
+     "price_ticks": 101,
+     "qty_units": 2
+    },
+    {
+     "maker_id": "a3",
+     "taker_id": "t1",
+     "price_ticks": 101,
+     "qty_units": 1
+    },
+    {
+     "maker_id": "a2",
+     "taker_id": "t1",
+     "price_ticks": 102,
+     "qty_units": 3
+    }
+   ]
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "t1",
+   "side": "BUY",
+   "price_ticks": 103,
+   "qty_units": 4,
+   "arrival_seq": 6
+  },
+  {
+   "order_id": "b1",
+   "side": "BUY",
+   "price_ticks": 99,
+   "qty_units": 4,
+   "arrival_seq": 5
+  },
+  {
+   "order_id": "a4",
+   "side": "SELL",
+   "price_ticks": 104,
+   "qty_units": 5,
+   "arrival_seq": 4
+  }
+ ],
+ "best_bid": 103,
+ "best_ask": 104
+}

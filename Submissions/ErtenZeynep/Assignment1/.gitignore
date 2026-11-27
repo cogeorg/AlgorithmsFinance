@@ -1,0 +1,33 @@
+# Python caches and compiled files
+__pycache__/
+*.py[cod]
+
+# Test, coverage, and tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments
+.venv/
+venv/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Locally generated workload files
+02_data/generated/
+
+# Deliberately not ignored:
+# - 02_data/supplied/ (original supplied datasets)
+# - 02_data/generated_manifest.json (generation provenance and checksums)
+# - 07_results/ and 07_results/raw/ (required experimental evidence)

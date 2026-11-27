@@ -1,0 +1,4 @@
+# Regenerate benchmark streams; keep commands/settings/checksums in results/.
+work/
+__pycache__/
+*.pyc

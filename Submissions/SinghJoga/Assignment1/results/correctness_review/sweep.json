@@ -1,0 +1,11 @@
+{
+  "scenario": "sweep",
+  "input": "data\\sweep_10000.jsonl.gz",
+  "input_sha256": "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f",
+  "target_events": 10000,
+  "status": "running",
+  "completed_events": 4300,
+  "max_active_orders": 4300,
+  "started_elapsed_seconds": 0.0,
+  "elapsed_seconds": 56.563160199904814
+}

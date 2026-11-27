@@ -1,0 +1,297 @@
+{
+  "command": [
+    "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "-B",
+    "benchmark.py",
+    "run",
+    "--counts",
+    "100000",
+    "--seeds",
+    "42",
+    "--scenarios",
+    "buildup",
+    "crowded",
+    "mixed",
+    "sweep",
+    "cancel_churn",
+    "--experiments",
+    "replay",
+    "--versions",
+    "revised",
+    "--levels",
+    "1000",
+    "--out",
+    "results\\replay_100000_seed42_revised_batch1",
+    "--worker-seconds",
+    "60",
+    "--campaign-seconds",
+    "900",
+    "--label",
+    "first-100000-revised"
+  ],
+  "started_utc": "2026-11-25T22:28:53.899889+00:00",
+  "finished_utc": "2026-11-25T22:30:06.678153+00:00",
+  "exit_code": 0,
+  "total_command_wall_seconds": 72.77823200001149,
+  "progress": [
+    {
+      "job_index": 1,
+      "total_jobs": 25,
+      "case_id": "replay_buildup_n100000_s42_l1000",
+      "version": null,
+      "phase": "io",
+      "status": "complete",
+      "elapsed_command_seconds": 6.487937600002624,
+      "interval_since_previous_progress_seconds": 6.487937600002624
+    },
+    {
+      "job_index": 2,
+      "total_jobs": 25,
+      "case_id": "replay_buildup_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 9.070859499974176,
+      "interval_since_previous_progress_seconds": 2.582921899971552
+    },
+    {
+      "job_index": 3,
+      "total_jobs": 25,
+      "case_id": "replay_buildup_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 10.51844820001861,
+      "interval_since_previous_progress_seconds": 1.4475887000444345
+    },
+    {
+      "job_index": 4,
+      "total_jobs": 25,
+      "case_id": "replay_buildup_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 15.348714799969457,
+      "interval_since_previous_progress_seconds": 4.830266599950846
+    },
+    {
+      "job_index": 5,
+      "total_jobs": 25,
+      "case_id": "replay_buildup_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 19.663233699975535,
+      "interval_since_previous_progress_seconds": 4.314518900006078
+    },
+    {
+      "job_index": 6,
+      "total_jobs": 25,
+      "case_id": "replay_crowded_n100000_s42_l1000",
+      "version": null,
+      "phase": "io",
+      "status": "complete",
+      "elapsed_command_seconds": 22.091846700001042,
+      "interval_since_previous_progress_seconds": 2.428613000025507
+    },
+    {
+      "job_index": 7,
+      "total_jobs": 25,
+      "case_id": "replay_crowded_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 24.495317499968223,
+      "interval_since_previous_progress_seconds": 2.403470799967181
+    },
+    {
+      "job_index": 8,
+      "total_jobs": 25,
+      "case_id": "replay_crowded_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 25.890520999964792,
+      "interval_since_previous_progress_seconds": 1.395203499996569
+    },
+    {
+      "job_index": 9,
+      "total_jobs": 25,
+      "case_id": "replay_crowded_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 30.391436300007626,
+      "interval_since_previous_progress_seconds": 4.500915300042834
+    },
+    {
+      "job_index": 10,
+      "total_jobs": 25,
+      "case_id": "replay_crowded_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 32.384716200002,
+      "interval_since_previous_progress_seconds": 1.993279899994377
+    },
+    {
+      "job_index": 11,
+      "total_jobs": 25,
+      "case_id": "replay_mixed_n100000_s42_l1000",
+      "version": null,
+      "phase": "io",
+      "status": "complete",
+      "elapsed_command_seconds": 34.64382379996823,
+      "interval_since_previous_progress_seconds": 2.259107599966228
+    },
+    {
+      "job_index": 12,
+      "total_jobs": 25,
+      "case_id": "replay_mixed_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 37.07969410001533,
+      "interval_since_previous_progress_seconds": 2.4358703000470996
+    },
+    {
+      "job_index": 13,
+      "total_jobs": 25,
+      "case_id": "replay_mixed_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 38.46190369996475,
+      "interval_since_previous_progress_seconds": 1.3822095999494195
+    },
+    {
+      "job_index": 14,
+      "total_jobs": 25,
+      "case_id": "replay_mixed_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 42.975832299969625,
+      "interval_since_previous_progress_seconds": 4.513928600004874
+    },
+    {
+      "job_index": 15,
+      "total_jobs": 25,
+      "case_id": "replay_mixed_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 45.704448300006334,
+      "interval_since_previous_progress_seconds": 2.728616000036709
+    },
+    {
+      "job_index": 16,
+      "total_jobs": 25,
+      "case_id": "replay_sweep_n100000_s42_l1000",
+      "version": null,
+      "phase": "io",
+      "status": "complete",
+      "elapsed_command_seconds": 48.04408379999222,
+      "interval_since_previous_progress_seconds": 2.3396354999858886
+    },
+    {
+      "job_index": 17,
+      "total_jobs": 25,
+      "case_id": "replay_sweep_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 50.96326659998158,
+      "interval_since_previous_progress_seconds": 2.9191827999893576
+    },
+    {
+      "job_index": 18,
+      "total_jobs": 25,
+      "case_id": "replay_sweep_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 52.60021249996498,
+      "interval_since_previous_progress_seconds": 1.6369458999834023
+    },
+    {
+      "job_index": 19,
+      "total_jobs": 25,
+      "case_id": "replay_sweep_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 58.1959085999988,
+      "interval_since_previous_progress_seconds": 5.59569610003382
+    },
+    {
+      "job_index": 20,
+      "total_jobs": 25,
+      "case_id": "replay_sweep_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 62.23037810000824,
+      "interval_since_previous_progress_seconds": 4.034469500009436
+    },
+    {
+      "job_index": 21,
+      "total_jobs": 25,
+      "case_id": "replay_cancel_churn_n100000_s42_l1000",
+      "version": null,
+      "phase": "io",
+      "status": "complete",
+      "elapsed_command_seconds": 64.49897209997289,
+      "interval_since_previous_progress_seconds": 2.2685939999646507
+    },
+    {
+      "job_index": 22,
+      "total_jobs": 25,
+      "case_id": "replay_cancel_churn_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 66.41981190000661,
+      "interval_since_previous_progress_seconds": 1.9208398000337183
+    },
+    {
+      "job_index": 23,
+      "total_jobs": 25,
+      "case_id": "replay_cancel_churn_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 67.52413490001345,
+      "interval_since_previous_progress_seconds": 1.1043230000068434
+    },
+    {
+      "job_index": 24,
+      "total_jobs": 25,
+      "case_id": "replay_cancel_churn_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 71.20700659998693,
+      "interval_since_previous_progress_seconds": 3.682871699973475
+    },
+    {
+      "job_index": 25,
+      "total_jobs": 25,
+      "case_id": "replay_cancel_churn_n100000_s42_l1000",
+      "version": "revised",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 72.69188629998825,
+      "interval_since_previous_progress_seconds": 1.4848797000013292
+    }
+  ],
+  "boundary": "External perf_counter surrounds command process creation through exit. Includes startup, workload preparation, workers, warm-ups, repetitions, all measurement phases and runner output. Excludes tests, audits and report writing.",
+  "progress_intervals": "Observed stdout completion intervals, not exact worker runtimes; first interval includes startup and preparation.",
+  "declared_limits": {
+    "worker_seconds": 60,
+    "campaign_seconds": 900,
+    "payload_mib": 128,
+    "traced_mib": 512
+  },
+  "measurement_campaign_excludes_workload_preparation": true
+}

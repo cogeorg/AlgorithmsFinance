@@ -1,0 +1,22 @@
+label: phase4a-pipeline-tests
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -m pytest 02_tests/test_bench_pipeline.py -q --tb=short --basetemp=scratch/pytest-bench-pipeline
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 5d8d15a410b380b2eb4f5831c7c637abdc5c3106
+dirty: True
+python: 3.13.15
+utc: 20261122T003426Z
+exit_code: 1
+duration_s: 1.86
+------------------------------------------------------------
+..........F                                                              [100%]
+================================== FAILURES ===================================
+_________ test_counter_parity_for_every_version_on_original_own_files _________
+02_tests\test_bench_pipeline.py:136: in test_counter_parity_for_every_version_on_original_own_files
+    check_case({"id": name, "part": "official"}, events, version, counted=True)
+01_code\bench\core.py:127: in check_case
+    ra, rb = replay(a, [dict(event)]), replay(b, [dict(event)])
+                        ^^^^^^^^^^^
+E   TypeError: cannot convert dictionary update sequence element #0 to a sequence
+=========================== short test summary info ===========================
+FAILED 02_tests/test_bench_pipeline.py::test_counter_parity_for_every_version_on_original_own_files
+1 failed, 10 passed in 1.13s

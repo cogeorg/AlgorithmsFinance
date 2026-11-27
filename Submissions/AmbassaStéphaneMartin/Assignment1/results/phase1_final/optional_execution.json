@@ -1,0 +1,86 @@
+[
+  {
+    "name": "phase1_final/optional_million_mixed",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "benchmark.py",
+      "run",
+      "--counts",
+      "1000000",
+      "--seeds",
+      "42",
+      "--scenarios",
+      "mixed",
+      "--experiments",
+      "replay",
+      "--versions",
+      "baseline",
+      "revised",
+      "--levels",
+      "1000",
+      "--worker-seconds",
+      "60",
+      "--campaign-seconds",
+      "900",
+      "--data-dir",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\.cache\\optional_million",
+      "--label",
+      "optional-million-limit-probe",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\phase1_final\\optional_million_mixed"
+    ],
+    "started_utc": "2026-11-26T07:26:18.568763+00:00",
+    "finished_utc": "2026-11-26T07:32:35.097818+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 376.52904890000354,
+    "progress": [
+      {
+        "line": "[1/9] replay_mixed_n1000000_s42_l1000 shared io: complete",
+        "elapsed_seconds": 29.962650200002827,
+        "interval_seconds": 29.962650200002827
+      },
+      {
+        "line": "[2/9] replay_mixed_n1000000_s42_l1000 baseline timing: incomplete",
+        "elapsed_seconds": 90.06107850000262,
+        "interval_seconds": 60.098428299999796
+      },
+      {
+        "line": "[3/9] replay_mixed_n1000000_s42_l1000 revised timing: complete",
+        "elapsed_seconds": 112.99713350000093,
+        "interval_seconds": 22.936054999998305
+      },
+      {
+        "line": "[4/9] replay_mixed_n1000000_s42_l1000 baseline latency: incomplete",
+        "elapsed_seconds": 173.0907665999839,
+        "interval_seconds": 60.09363309998298
+      },
+      {
+        "line": "[5/9] replay_mixed_n1000000_s42_l1000 revised latency: complete",
+        "elapsed_seconds": 186.2740308000357,
+        "interval_seconds": 13.18326420005178
+      },
+      {
+        "line": "[6/9] replay_mixed_n1000000_s42_l1000 baseline memory: incomplete",
+        "elapsed_seconds": 246.37458290002542,
+        "interval_seconds": 60.10055209998973
+      },
+      {
+        "line": "[7/9] replay_mixed_n1000000_s42_l1000 revised memory: complete",
+        "elapsed_seconds": 289.65899110003375,
+        "interval_seconds": 43.28440820000833
+      },
+      {
+        "line": "[8/9] replay_mixed_n1000000_s42_l1000 baseline diagnostics: incomplete",
+        "elapsed_seconds": 349.75255119998474,
+        "interval_seconds": 60.09356009995099
+      },
+      {
+        "line": "[9/9] replay_mixed_n1000000_s42_l1000 revised diagnostics: complete",
+        "elapsed_seconds": 376.5116831000196,
+        "interval_seconds": 26.759131900034845
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "commit": "8270fac",
+    "check": "source organization; no engine yet",
+    "passed": true
+  },
+  {
+    "commit": "35125e8",
+    "tests": 40,
+    "returncode": 1,
+    "passed": true,
+    "interpretation": "expected missing modules"
+  },
+  {
+    "commit": "52a6c5e",
+    "tests": 22,
+    "returncode": 0,
+    "passed": true,
+    "interpretation": "passing suite"
+  },
+  {
+    "commit": "3276644",
+    "tests": 43,
+    "returncode": 0,
+    "passed": true,
+    "interpretation": "passing suite"
+  }
+]

@@ -1,0 +1,110 @@
+label: post-attack-pipeline-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest -q 02_tests/test_post_attack_pipeline.py --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 958c8b477bc297858893ed74f0a93cd70dc7f665
+dirty: True
+python: 3.13.15
+utc: 20261122T114642Z
+exit_code: 1
+duration_s: 1.41
+------------------------------------------------------------
+FFFFFFFFFFFF                                                             [100%]
+================================== FAILURES ===================================
+__ test_post_attack_builders_match_committed_attack_streams[far_end_flicker] __
+02_tests\test_post_attack_pipeline.py:16: in test_post_attack_builders_match_committed_attack_streams
+    pre, events = build(scenario, 12, burst=7)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\datagen\attack_cases.py:9: in build
+    raise NotImplementedError
+E   NotImplementedError
+_ test_post_attack_builders_match_committed_attack_streams[dead_slot_rebuild] _
+02_tests\test_post_attack_pipeline.py:16: in test_post_attack_builders_match_committed_attack_streams
+    pre, events = build(scenario, 12, burst=7)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\datagen\attack_cases.py:9: in build
+    raise NotImplementedError
+E   NotImplementedError
+__ test_post_attack_builders_match_committed_attack_streams[two_side_thrash] __
+02_tests\test_post_attack_pipeline.py:16: in test_post_attack_builders_match_committed_attack_streams
+    pre, events = build(scenario, 12, burst=7)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\datagen\attack_cases.py:9: in build
+    raise NotImplementedError
+E   NotImplementedError
+_ test_post_attack_builders_match_committed_attack_streams[spike_purge_at_threshold] _
+02_tests\test_post_attack_pipeline.py:16: in test_post_attack_builders_match_committed_attack_streams
+    pre, events = build(scenario, 12, burst=7)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\datagen\attack_cases.py:9: in build
+    raise NotImplementedError
+E   NotImplementedError
+__ test_post_attack_builders_match_committed_attack_streams[rotating_bursts] __
+02_tests\test_post_attack_pipeline.py:16: in test_post_attack_builders_match_committed_attack_streams
+    pre, events = build(scenario, 12, burst=7)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\datagen\attack_cases.py:9: in build
+    raise NotImplementedError
+E   NotImplementedError
+____ test_post_attack_builders_match_committed_attack_streams[pinned_dead] ____
+02_tests\test_post_attack_pipeline.py:16: in test_post_attack_builders_match_committed_attack_streams
+    pre, events = build(scenario, 12, burst=7)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\datagen\attack_cases.py:9: in build
+    raise NotImplementedError
+E   NotImplementedError
+_____ test_post_attack_catalog_labels_modes_and_does_not_change_old_smoke _____
+02_tests\test_post_attack_pipeline.py:34: in test_post_attack_catalog_labels_modes_and_does_not_change_old_smoke
+    entries = post_attack_plans()
+              ^^^^^^^^^^^^^^^^^^^
+01_code\bench\catalog.py:73: in post_attack_plans
+    raise NotImplementedError
+E   NotImplementedError
+_________ test_prefill_is_separate_from_query_and_sample_is_not_empty _________
+02_tests\test_post_attack_pipeline.py:50: in test_prefill_is_separate_from_query_and_sample_is_not_empty
+    assert len(book.snapshot()) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = snapshot()
+E    +      where snapshot = <lob.book_b3r.OrderBookB3r object at 0x000001FA2A6A2E40>.snapshot
+_____________ test_prefilled_worker_modes_use_real_query[timing] ______________
+02_tests\test_post_attack_pipeline.py:62: in test_prefilled_worker_modes_use_real_query
+    pre, work = build("spike_purge_at_threshold", 8)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\datagen\attack_cases.py:9: in build
+    raise NotImplementedError
+E   NotImplementedError
+_____________ test_prefilled_worker_modes_use_real_query[latency] _____________
+02_tests\test_post_attack_pipeline.py:62: in test_prefilled_worker_modes_use_real_query
+    pre, work = build("spike_purge_at_threshold", 8)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\datagen\attack_cases.py:9: in build
+    raise NotImplementedError
+E   NotImplementedError
+_____________ test_prefilled_worker_modes_use_real_query[memory] ______________
+02_tests\test_post_attack_pipeline.py:62: in test_prefilled_worker_modes_use_real_query
+    pre, work = build("spike_purge_at_threshold", 8)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\datagen\attack_cases.py:9: in build
+    raise NotImplementedError
+E   NotImplementedError
+_____________ test_prefilled_worker_modes_use_real_query[counts] ______________
+02_tests\test_post_attack_pipeline.py:62: in test_prefilled_worker_modes_use_real_query
+    pre, work = build("spike_purge_at_threshold", 8)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\datagen\attack_cases.py:9: in build
+    raise NotImplementedError
+E   NotImplementedError
+=========================== short test summary info ===========================
+FAILED 02_tests/test_post_attack_pipeline.py::test_post_attack_builders_match_committed_attack_streams[far_end_flicker]
+FAILED 02_tests/test_post_attack_pipeline.py::test_post_attack_builders_match_committed_attack_streams[dead_slot_rebuild]
+FAILED 02_tests/test_post_attack_pipeline.py::test_post_attack_builders_match_committed_attack_streams[two_side_thrash]
+FAILED 02_tests/test_post_attack_pipeline.py::test_post_attack_builders_match_committed_attack_streams[spike_purge_at_threshold]
+FAILED 02_tests/test_post_attack_pipeline.py::test_post_attack_builders_match_committed_attack_streams[rotating_bursts]
+FAILED 02_tests/test_post_attack_pipeline.py::test_post_attack_builders_match_committed_attack_streams[pinned_dead]
+FAILED 02_tests/test_post_attack_pipeline.py::test_post_attack_catalog_labels_modes_and_does_not_change_old_smoke
+FAILED 02_tests/test_post_attack_pipeline.py::test_prefill_is_separate_from_query_and_sample_is_not_empty
+FAILED 02_tests/test_post_attack_pipeline.py::test_prefilled_worker_modes_use_real_query[timing]
+FAILED 02_tests/test_post_attack_pipeline.py::test_prefilled_worker_modes_use_real_query[latency]
+FAILED 02_tests/test_post_attack_pipeline.py::test_prefilled_worker_modes_use_real_query[memory]
+FAILED 02_tests/test_post_attack_pipeline.py::test_prefilled_worker_modes_use_real_query[counts]
+12 failed in 0.58s

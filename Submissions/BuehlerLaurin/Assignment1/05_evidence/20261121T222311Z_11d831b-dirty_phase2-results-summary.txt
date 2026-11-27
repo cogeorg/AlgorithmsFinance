@@ -1,0 +1,44 @@
+label: phase2-results-summary
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -c from collections import Counter, defaultdict
+from pathlib import Path
+import xml.etree.ElementTree as ET
+root = ET.parse('05_evidence/phase2-all-tests.xml').getroot()
+counts = defaultdict(Counter)
+failures = []
+for case in root.iter('testcase'):
+    name, cls = case.get('name'), case.get('classname')
+    failure = case.find('failure')
+    error = case.find('error')
+    skipped = case.find('skipped')
+    outcome = 'failed' if failure is not None else 'error' if error is not None else 'skipped' if skipped is not None else 'passed'
+    counts[cls.split('.')[0]][outcome] += 1
+    if failure is not None or error is not None:
+        node = failure if failure is not None else error
+        failures.append((cls, name, node.get('message',''), node.text or ''))
+for file, result in sorted(counts.items()):
+    print(file+'.py:', dict(result))
+assert len(failures) == 66
+for cls,name,message,body in failures:
+    assert ('lob-B' in name or cls == '02_tests.test_stateful.TestDifferential'), (cls,name)
+    assert 'NotImplementedError: Version B: Phase 3' in message + body, (cls,name,message)
+assert sum(c['error']+c['skipped'] for c in counts.values()) == 0
+assert sum(c['passed'] for c in counts.values()) == 274
+mutants = [c for c in root.iter('testcase') if c.get('name','').startswith('test_mutant_killed_for_the_intended_reason')]
+assert len(mutants) == 17 and all(c.find('failure') is None for c in mutants)
+print('Mutants killed by named checks: 17/17 (all passed; suite asserts AssertionError kills and no other exceptions)')
+print('Expected red (Phase 3): 64 B contracts + 1 B mutation control + 1 A/B stateful = 66')
+print('Unexpected red: 0; warnings: none in full-run output; skipped: 0')
+print('RESULT: PASS (274 passed; all 66 failures classified as expected Phase 3 B stubs)')
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 11d831b27d5fc46a92095f0ff17e524f6ab63369
+dirty: True
+python: 3.13.15
+utc: 20261121T222311Z
+exit_code: 0
+duration_s: 0.12
+------------------------------------------------------------
+02_tests.py: {'passed': 274, 'failed': 66}
+Mutants killed by named checks: 17/17 (all passed; suite asserts AssertionError kills and no other exceptions)
+Expected red (Phase 3): 64 B contracts + 1 B mutation control + 1 A/B stateful = 66
+Unexpected red: 0; warnings: none in full-run output; skipped: 0
+RESULT: PASS (274 passed; all 66 failures classified as expected Phase 3 B stubs)

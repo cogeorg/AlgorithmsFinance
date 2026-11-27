@@ -1,0 +1,6 @@
+{"seq":1,"event_id":"e1","type":"LIMIT","order_id":"a1","side":"SELL","price_ticks":101,"qty_units":2}
+{"seq":2,"event_id":"e2","type":"LIMIT","order_id":"a2","side":"SELL","price_ticks":102,"qty_units":3}
+{"seq":3,"event_id":"e3","type":"LIMIT","order_id":"a3","side":"SELL","price_ticks":101,"qty_units":1}
+{"seq":4,"event_id":"e4","type":"LIMIT","order_id":"a4","side":"SELL","price_ticks":104,"qty_units":5}
+{"seq":5,"event_id":"e5","type":"LIMIT","order_id":"b1","side":"BUY","price_ticks":99,"qty_units":4}
+{"seq":6,"event_id":"e6","type":"LIMIT","order_id":"t1","side":"BUY","price_ticks":103,"qty_units":10}

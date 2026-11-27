@@ -1,0 +1,7 @@
+﻿.pytest_cache/
+.hypothesis/
+__pycache__/
+*.pyc
+scratch/
+.vscode/
+Thumbs.db

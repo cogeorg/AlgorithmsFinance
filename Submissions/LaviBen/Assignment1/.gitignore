@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Large generated inputs stay local; commands and checksums are submitted.
+generated/
+
+# Temporary benchmark output belongs outside the canonical results directory.
+tmp/

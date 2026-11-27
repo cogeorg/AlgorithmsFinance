@@ -1,0 +1,37 @@
+stage: 12_million_extension_before_implementation
+started_utc: 2026-11-24T17:49:37.874213+00:00
+finished_utc: 2026-11-24T17:49:39.285059+00:00
+elapsed_seconds: 1.411282
+exit_code: 2
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 945a422ee8eac051cf54fa829d1669596ed56414
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0
+collected 214 items / 1 error
+
+=================================== ERRORS ====================================
+_____________ ERROR collecting tests/test_18_million_extension.py _____________
+ImportError while importing test module 'C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1\tests\test_18_million_extension.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Acer\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_18_million_extension.py:7: in <module>
+    from limit_order_book.experiment_matrix import million_input_specs
+E   ImportError: cannot import name 'million_input_specs' from 'limit_order_book.experiment_matrix' (C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1\src\limit_order_book\experiment_matrix.py)
+=========================== short test summary info ===========================
+ERROR tests/test_18_million_extension.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.35s ===============================
+
+=== stderr ===

@@ -1,0 +1,37 @@
+{
+  "upstream_main_ref": "43ff26c35cb9a27439b86ed5054e188639609903",
+  "status": "PASS",
+  "changed_runner_functions": [
+    "source_dirty",
+    "get_run"
+  ],
+  "runner_main_timing_and_aggregation_ast_unchanged": true,
+  "changed_existing_dashboard_tests": [
+    "test_loader_restricts_paths_and_uses_a_fixed_commit"
+  ],
+  "all_other_existing_dashboard_tests_ast_unchanged": true,
+  "protected_paths_unchanged": [
+    "01_code/lob",
+    "06_data",
+    "03_results",
+    "07_attack",
+    "requirements.txt",
+    "04_dashboard",
+    "00_docs/FINAL_SELECTION.md",
+    "05_evidence/chat_reference",
+    "00_docs/DATA_MANIFEST.json",
+    "00_docs/POST_ATTACK_MANIFEST.json",
+    "pytest.ini",
+    "run.py",
+    "submission_tools.py",
+    "evidence.py"
+  ],
+  "entry_scripts_logic_unchanged": true,
+  "runtime_hashes_match_final_overlay": true,
+  "missing_document_links": [],
+  "current_map_stale_statuses": [],
+  "branch_total_changed": 1136,
+  "branch_outside_owner_scope": 0,
+  "scope_condition_satisfied": true,
+  "tracked_smoke_files": 648
+}

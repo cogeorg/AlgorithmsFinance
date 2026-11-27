@@ -1,0 +1,3836 @@
+[
+  {
+    "name": "final_market-sell_n1000_s42_l1000_p10",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "42",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "10",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n1000_s42_l1000_p10"
+    ],
+    "started_utc": "2026-11-26T00:18:31.692406+00:00",
+    "finished_utc": "2026-11-26T00:18:35.119838+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 3.4274291999754496,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n1000_s42_l1000_p10 shared io: complete",
+        "elapsed_seconds": 0.7401345999678597,
+        "interval_seconds": 0.7401345999678597
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n1000_s42_l1000_p10 baseline timing: complete",
+        "elapsed_seconds": 1.186544700001832,
+        "interval_seconds": 0.4464101000339724
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n1000_s42_l1000_p10 revised timing: complete",
+        "elapsed_seconds": 1.4131442999932915,
+        "interval_seconds": 0.2265995999914594
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n1000_s42_l1000_p10 baseline latency: complete",
+        "elapsed_seconds": 1.8464330999995582,
+        "interval_seconds": 0.4332888000062667
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n1000_s42_l1000_p10 revised latency: complete",
+        "elapsed_seconds": 2.065077899955213,
+        "interval_seconds": 0.2186447999556549
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n1000_s42_l1000_p10 baseline memory: complete",
+        "elapsed_seconds": 2.6853539999574423,
+        "interval_seconds": 0.6202761000022292
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n1000_s42_l1000_p10 revised memory: complete",
+        "elapsed_seconds": 2.9286944000050426,
+        "interval_seconds": 0.24334040004760027
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n1000_s42_l1000_p10 baseline diagnostics: complete",
+        "elapsed_seconds": 3.21665859996574,
+        "interval_seconds": 0.28796419996069744
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n1000_s42_l1000_p10 revised diagnostics: complete",
+        "elapsed_seconds": 3.413525899988599,
+        "interval_seconds": 0.19686730002285913
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n1000_s42_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "42",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "100",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n1000_s42_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T00:18:35.125069+00:00",
+    "finished_utc": "2026-11-26T00:18:40.011808+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 4.886731100035831,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n1000_s42_l1000_p100 shared io: complete",
+        "elapsed_seconds": 0.683906799997203,
+        "interval_seconds": 0.683906799997203
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n1000_s42_l1000_p100 baseline timing: complete",
+        "elapsed_seconds": 1.4270547000342049,
+        "interval_seconds": 0.7431479000370018
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n1000_s42_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 1.6424638000316918,
+        "interval_seconds": 0.21540909999748692
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n1000_s42_l1000_p100 baseline latency: complete",
+        "elapsed_seconds": 2.354194200015627,
+        "interval_seconds": 0.7117303999839351
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n1000_s42_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 2.5708385000471026,
+        "interval_seconds": 0.21664430003147572
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n1000_s42_l1000_p100 baseline memory: complete",
+        "elapsed_seconds": 4.007795500045177,
+        "interval_seconds": 1.436956999998074
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n1000_s42_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 4.277665800007526,
+        "interval_seconds": 0.26987029996234924
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n1000_s42_l1000_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 4.664404200040735,
+        "interval_seconds": 0.3867384000332095
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n1000_s42_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 4.871721000003163,
+        "interval_seconds": 0.20731679996242747
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n1000_s42_l1000_p200",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "42",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "200",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n1000_s42_l1000_p200"
+    ],
+    "started_utc": "2026-11-26T00:18:40.017076+00:00",
+    "finished_utc": "2026-11-26T00:18:44.805469+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 4.788386600033846,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n1000_s42_l1000_p200 shared io: complete",
+        "elapsed_seconds": 0.6138784000067972,
+        "interval_seconds": 0.6138784000067972
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n1000_s42_l1000_p200 baseline timing: complete",
+        "elapsed_seconds": 1.3589663000311702,
+        "interval_seconds": 0.7450879000243731
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n1000_s42_l1000_p200 revised timing: complete",
+        "elapsed_seconds": 1.576216600020416,
+        "interval_seconds": 0.21725029998924583
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n1000_s42_l1000_p200 baseline latency: complete",
+        "elapsed_seconds": 2.293577400036156,
+        "interval_seconds": 0.7173608000157401
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n1000_s42_l1000_p200 revised latency: complete",
+        "elapsed_seconds": 2.499982299981639,
+        "interval_seconds": 0.2064048999454826
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n1000_s42_l1000_p200 baseline memory: complete",
+        "elapsed_seconds": 3.9301927000051364,
+        "interval_seconds": 1.4302104000234976
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n1000_s42_l1000_p200 revised memory: complete",
+        "elapsed_seconds": 4.189809700008482,
+        "interval_seconds": 0.2596170000033453
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n1000_s42_l1000_p200 baseline diagnostics: complete",
+        "elapsed_seconds": 4.578507800004445,
+        "interval_seconds": 0.3886980999959633
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n1000_s42_l1000_p200 revised diagnostics: complete",
+        "elapsed_seconds": 4.774209099996369,
+        "interval_seconds": 0.19570129999192432
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n1000_s42_l4_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "42",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "4",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n1000_s42_l4_p100"
+    ],
+    "started_utc": "2026-11-26T00:18:44.810232+00:00",
+    "finished_utc": "2026-11-26T00:18:49.889515+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 5.079277099983301,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n1000_s42_l4_p100 shared io: complete",
+        "elapsed_seconds": 0.6876403999631293,
+        "interval_seconds": 0.6876403999631293
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n1000_s42_l4_p100 baseline timing: complete",
+        "elapsed_seconds": 1.4769684000057168,
+        "interval_seconds": 0.7893280000425875
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n1000_s42_l4_p100 revised timing: complete",
+        "elapsed_seconds": 1.6847582999616861,
+        "interval_seconds": 0.2077898999559693
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n1000_s42_l4_p100 baseline latency: complete",
+        "elapsed_seconds": 2.46903520001797,
+        "interval_seconds": 0.7842769000562839
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n1000_s42_l4_p100 revised latency: complete",
+        "elapsed_seconds": 2.6741962999803945,
+        "interval_seconds": 0.2051610999624245
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n1000_s42_l4_p100 baseline memory: complete",
+        "elapsed_seconds": 4.2304585999809206,
+        "interval_seconds": 1.556262300000526
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n1000_s42_l4_p100 revised memory: complete",
+        "elapsed_seconds": 4.485118100012187,
+        "interval_seconds": 0.25465950003126636
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n1000_s42_l4_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 4.882587499974761,
+        "interval_seconds": 0.39746939996257424
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n1000_s42_l4_p100 revised diagnostics: complete",
+        "elapsed_seconds": 5.06481889996212,
+        "interval_seconds": 0.1822313999873586
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n1000_s42_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "42",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "1000",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n1000_s42_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T00:18:49.892595+00:00",
+    "finished_utc": "2026-11-26T00:18:54.790318+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 4.897718899999745,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n1000_s42_l1000_p100 shared io: complete",
+        "elapsed_seconds": 0.6616107000154443,
+        "interval_seconds": 0.6616107000154443
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n1000_s42_l1000_p100 baseline timing: complete",
+        "elapsed_seconds": 1.3938018000335433,
+        "interval_seconds": 0.732191100018099
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n1000_s42_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 1.6195701000397094,
+        "interval_seconds": 0.2257683000061661
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n1000_s42_l1000_p100 baseline latency: complete",
+        "elapsed_seconds": 2.345493400003761,
+        "interval_seconds": 0.7259232999640517
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n1000_s42_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 2.555856200051494,
+        "interval_seconds": 0.2103628000477329
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n1000_s42_l1000_p100 baseline memory: complete",
+        "elapsed_seconds": 4.020120000001043,
+        "interval_seconds": 1.4642637999495491
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n1000_s42_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 4.302724000008311,
+        "interval_seconds": 0.28260400000726804
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n1000_s42_l1000_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 4.698168700037058,
+        "interval_seconds": 0.3954447000287473
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n1000_s42_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 4.883733400027268,
+        "interval_seconds": 0.1855646999902092
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_cancel-churn_n1000_s42_l1_pNone",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "42",
+      "--experiment",
+      "cancel-churn",
+      "--levels",
+      "1",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_cancel-churn_n1000_s42_l1_pNone"
+    ],
+    "started_utc": "2026-11-26T00:18:54.793521+00:00",
+    "finished_utc": "2026-11-26T00:18:57.291410+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 2.497881299990695,
+    "progress": [
+      {
+        "line": "[1/9] cancel-churn_anchored_cancel_churn_n1000_s42_l1 shared io: complete",
+        "elapsed_seconds": 0.712921499973163,
+        "interval_seconds": 0.712921499973163
+      },
+      {
+        "line": "[2/9] cancel-churn_anchored_cancel_churn_n1000_s42_l1 baseline timing: complete",
+        "elapsed_seconds": 0.925819700001739,
+        "interval_seconds": 0.21289820002857596
+      },
+      {
+        "line": "[3/9] cancel-churn_anchored_cancel_churn_n1000_s42_l1 revised timing: complete",
+        "elapsed_seconds": 1.147756299993489,
+        "interval_seconds": 0.22193659999174997
+      },
+      {
+        "line": "[4/9] cancel-churn_anchored_cancel_churn_n1000_s42_l1 baseline latency: complete",
+        "elapsed_seconds": 1.3415004999842495,
+        "interval_seconds": 0.19374419999076054
+      },
+      {
+        "line": "[5/9] cancel-churn_anchored_cancel_churn_n1000_s42_l1 revised latency: complete",
+        "elapsed_seconds": 1.5347846999648027,
+        "interval_seconds": 0.19328419998055324
+      },
+      {
+        "line": "[6/9] cancel-churn_anchored_cancel_churn_n1000_s42_l1 baseline memory: complete",
+        "elapsed_seconds": 1.8175366999930702,
+        "interval_seconds": 0.2827520000282675
+      },
+      {
+        "line": "[7/9] cancel-churn_anchored_cancel_churn_n1000_s42_l1 revised memory: complete",
+        "elapsed_seconds": 2.0798469000146724,
+        "interval_seconds": 0.2623102000216022
+      },
+      {
+        "line": "[8/9] cancel-churn_anchored_cancel_churn_n1000_s42_l1 baseline diagnostics: complete",
+        "elapsed_seconds": 2.2852735999622382,
+        "interval_seconds": 0.2054266999475658
+      },
+      {
+        "line": "[9/9] cancel-churn_anchored_cancel_churn_n1000_s42_l1 revised diagnostics: complete",
+        "elapsed_seconds": 2.484439999971073,
+        "interval_seconds": 0.1991664000088349
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n1000_s43_l1000_p10",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "43",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "10",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n1000_s43_l1000_p10"
+    ],
+    "started_utc": "2026-11-26T00:18:57.294513+00:00",
+    "finished_utc": "2026-11-26T00:19:00.578417+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 3.2838971000164747,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n1000_s43_l1000_p10 shared io: complete",
+        "elapsed_seconds": 0.6576333999983035,
+        "interval_seconds": 0.6576333999983035
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n1000_s43_l1000_p10 baseline timing: complete",
+        "elapsed_seconds": 1.0914026999962516,
+        "interval_seconds": 0.4337692999979481
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n1000_s43_l1000_p10 revised timing: complete",
+        "elapsed_seconds": 1.2956211999990046,
+        "interval_seconds": 0.204218500002753
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n1000_s43_l1000_p10 baseline latency: complete",
+        "elapsed_seconds": 1.710115100024268,
+        "interval_seconds": 0.41449390002526343
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n1000_s43_l1000_p10 revised latency: complete",
+        "elapsed_seconds": 1.9206327000283636,
+        "interval_seconds": 0.21051760000409558
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n1000_s43_l1000_p10 baseline memory: complete",
+        "elapsed_seconds": 2.5181300999829546,
+        "interval_seconds": 0.597497399954591
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n1000_s43_l1000_p10 revised memory: complete",
+        "elapsed_seconds": 2.783228499989491,
+        "interval_seconds": 0.2650984000065364
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n1000_s43_l1000_p10 baseline diagnostics: complete",
+        "elapsed_seconds": 3.0822616000077687,
+        "interval_seconds": 0.29903310001827776
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n1000_s43_l1000_p10 revised diagnostics: complete",
+        "elapsed_seconds": 3.269702400022652,
+        "interval_seconds": 0.18744080001488328
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n1000_s43_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "43",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "100",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n1000_s43_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T00:19:00.581802+00:00",
+    "finished_utc": "2026-11-26T00:19:05.473691+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 4.891883300035261,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n1000_s43_l1000_p100 shared io: complete",
+        "elapsed_seconds": 0.6746944999904372,
+        "interval_seconds": 0.6746944999904372
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n1000_s43_l1000_p100 baseline timing: complete",
+        "elapsed_seconds": 1.3880726000061259,
+        "interval_seconds": 0.7133781000156887
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n1000_s43_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 1.6185485000023618,
+        "interval_seconds": 0.23047589999623597
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n1000_s43_l1000_p100 baseline latency: complete",
+        "elapsed_seconds": 2.330868199991528,
+        "interval_seconds": 0.7123196999891661
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n1000_s43_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 2.545890600013081,
+        "interval_seconds": 0.21502240002155304
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n1000_s43_l1000_p100 baseline memory: complete",
+        "elapsed_seconds": 3.999381600006018,
+        "interval_seconds": 1.4534909999929368
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n1000_s43_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 4.286165199999232,
+        "interval_seconds": 0.286783599993214
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n1000_s43_l1000_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 4.6793086000252515,
+        "interval_seconds": 0.39314340002601966
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n1000_s43_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 4.877830900019035,
+        "interval_seconds": 0.19852229999378324
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n1000_s43_l1000_p200",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "43",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "200",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n1000_s43_l1000_p200"
+    ],
+    "started_utc": "2026-11-26T00:19:05.476969+00:00",
+    "finished_utc": "2026-11-26T00:19:10.386815+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 4.9098401999799535,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n1000_s43_l1000_p200 shared io: complete",
+        "elapsed_seconds": 0.6452445000177249,
+        "interval_seconds": 0.6452445000177249
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n1000_s43_l1000_p200 baseline timing: complete",
+        "elapsed_seconds": 1.4058525000000373,
+        "interval_seconds": 0.7606079999823123
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n1000_s43_l1000_p200 revised timing: complete",
+        "elapsed_seconds": 1.6356140000279993,
+        "interval_seconds": 0.22976150002796203
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n1000_s43_l1000_p200 baseline latency: complete",
+        "elapsed_seconds": 2.351437699981034,
+        "interval_seconds": 0.7158236999530345
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n1000_s43_l1000_p200 revised latency: complete",
+        "elapsed_seconds": 2.5652986000059173,
+        "interval_seconds": 0.21386090002488345
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n1000_s43_l1000_p200 baseline memory: complete",
+        "elapsed_seconds": 4.0223259999766015,
+        "interval_seconds": 1.4570273999706842
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n1000_s43_l1000_p200 revised memory: complete",
+        "elapsed_seconds": 4.304167599999346,
+        "interval_seconds": 0.2818416000227444
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n1000_s43_l1000_p200 baseline diagnostics: complete",
+        "elapsed_seconds": 4.695329200010747,
+        "interval_seconds": 0.3911616000114009
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n1000_s43_l1000_p200 revised diagnostics: complete",
+        "elapsed_seconds": 4.896666400018148,
+        "interval_seconds": 0.2013372000074014
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n1000_s43_l4_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "43",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "4",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n1000_s43_l4_p100"
+    ],
+    "started_utc": "2026-11-26T00:19:10.390108+00:00",
+    "finished_utc": "2026-11-26T00:19:15.573173+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 5.183059100003447,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 shared io: complete",
+        "elapsed_seconds": 0.6888503999798559,
+        "interval_seconds": 0.6888503999798559
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 baseline timing: complete",
+        "elapsed_seconds": 1.5107251000008546,
+        "interval_seconds": 0.8218747000209987
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 revised timing: complete",
+        "elapsed_seconds": 1.7212188999983482,
+        "interval_seconds": 0.21049379999749362
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 baseline latency: complete",
+        "elapsed_seconds": 2.507754499965813,
+        "interval_seconds": 0.7865355999674648
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 revised latency: complete",
+        "elapsed_seconds": 2.7170979999937117,
+        "interval_seconds": 0.2093435000278987
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 baseline memory: complete",
+        "elapsed_seconds": 4.296737900003791,
+        "interval_seconds": 1.5796399000100791
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 revised memory: complete",
+        "elapsed_seconds": 4.563903699978255,
+        "interval_seconds": 0.2671657999744639
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 4.9764959999592975,
+        "interval_seconds": 0.41259229998104274
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 revised diagnostics: complete",
+        "elapsed_seconds": 5.16954709996935,
+        "interval_seconds": 0.19305110001005232
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n1000_s43_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "43",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "1000",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n1000_s43_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T00:19:15.576714+00:00",
+    "finished_utc": "2026-11-26T00:19:20.432727+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 4.85600600001635,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n1000_s43_l1000_p100 shared io: complete",
+        "elapsed_seconds": 0.6443794000078924,
+        "interval_seconds": 0.6443794000078924
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n1000_s43_l1000_p100 baseline timing: complete",
+        "elapsed_seconds": 1.3687767999945208,
+        "interval_seconds": 0.7243973999866284
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n1000_s43_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 1.6043762000044808,
+        "interval_seconds": 0.23559940000995994
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n1000_s43_l1000_p100 baseline latency: complete",
+        "elapsed_seconds": 2.3233791000093333,
+        "interval_seconds": 0.7190029000048526
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n1000_s43_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 2.5434400999802165,
+        "interval_seconds": 0.22006099997088313
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n1000_s43_l1000_p100 baseline memory: complete",
+        "elapsed_seconds": 3.97386769996956,
+        "interval_seconds": 1.4304275999893434
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n1000_s43_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 4.257981700007804,
+        "interval_seconds": 0.28411400003824383
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n1000_s43_l1000_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 4.645587100007106,
+        "interval_seconds": 0.3876053999993019
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n1000_s43_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 4.842752999975346,
+        "interval_seconds": 0.1971658999682404
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_cancel-churn_n1000_s43_l1_pNone",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "43",
+      "--experiment",
+      "cancel-churn",
+      "--levels",
+      "1",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_cancel-churn_n1000_s43_l1_pNone"
+    ],
+    "started_utc": "2026-11-26T00:19:20.436471+00:00",
+    "finished_utc": "2026-11-26T00:19:22.962406+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 2.5259260999737307,
+    "progress": [
+      {
+        "line": "[1/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 shared io: complete",
+        "elapsed_seconds": 0.7025953999836929,
+        "interval_seconds": 0.7025953999836929
+      },
+      {
+        "line": "[2/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 baseline timing: complete",
+        "elapsed_seconds": 0.9232803999911994,
+        "interval_seconds": 0.22068500000750646
+      },
+      {
+        "line": "[3/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 revised timing: complete",
+        "elapsed_seconds": 1.1436803999822587,
+        "interval_seconds": 0.2203999999910593
+      },
+      {
+        "line": "[4/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 baseline latency: complete",
+        "elapsed_seconds": 1.3333966999780387,
+        "interval_seconds": 0.18971629999578
+      },
+      {
+        "line": "[5/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 revised latency: complete",
+        "elapsed_seconds": 1.5347277999971993,
+        "interval_seconds": 0.20133110001916066
+      },
+      {
+        "line": "[6/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 baseline memory: complete",
+        "elapsed_seconds": 1.827433199970983,
+        "interval_seconds": 0.29270539997378364
+      },
+      {
+        "line": "[7/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 revised memory: complete",
+        "elapsed_seconds": 2.103517399984412,
+        "interval_seconds": 0.2760842000134289
+      },
+      {
+        "line": "[8/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 baseline diagnostics: complete",
+        "elapsed_seconds": 2.310941300005652,
+        "interval_seconds": 0.20742390002124012
+      },
+      {
+        "line": "[9/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 revised diagnostics: complete",
+        "elapsed_seconds": 2.5128073999658227,
+        "interval_seconds": 0.2018660999601707
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n1000_s44_l1000_p10",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "44",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "10",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n1000_s44_l1000_p10"
+    ],
+    "started_utc": "2026-11-26T00:19:22.965842+00:00",
+    "finished_utc": "2026-11-26T00:19:26.271125+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 3.3052748999907635,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n1000_s44_l1000_p10 shared io: complete",
+        "elapsed_seconds": 0.6381918999832124,
+        "interval_seconds": 0.6381918999832124
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n1000_s44_l1000_p10 baseline timing: complete",
+        "elapsed_seconds": 1.0765877999947406,
+        "interval_seconds": 0.4383959000115283
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n1000_s44_l1000_p10 revised timing: complete",
+        "elapsed_seconds": 1.2929034999688156,
+        "interval_seconds": 0.21631569997407496
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n1000_s44_l1000_p10 baseline latency: complete",
+        "elapsed_seconds": 1.736101199989207,
+        "interval_seconds": 0.4431977000203915
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n1000_s44_l1000_p10 revised latency: complete",
+        "elapsed_seconds": 1.9370114000048488,
+        "interval_seconds": 0.20091020001564175
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n1000_s44_l1000_p10 baseline memory: complete",
+        "elapsed_seconds": 2.5407415999798104,
+        "interval_seconds": 0.6037301999749616
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n1000_s44_l1000_p10 revised memory: complete",
+        "elapsed_seconds": 2.794561699964106,
+        "interval_seconds": 0.25382009998429567
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n1000_s44_l1000_p10 baseline diagnostics: complete",
+        "elapsed_seconds": 3.095216799993068,
+        "interval_seconds": 0.3006551000289619
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n1000_s44_l1000_p10 revised diagnostics: complete",
+        "elapsed_seconds": 3.2915917999926023,
+        "interval_seconds": 0.19637499999953434
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n1000_s44_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "44",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "100",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n1000_s44_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T00:19:26.274892+00:00",
+    "finished_utc": "2026-11-26T00:19:31.148482+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 4.873583199980203,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n1000_s44_l1000_p100 shared io: complete",
+        "elapsed_seconds": 0.6376493999850936,
+        "interval_seconds": 0.6376493999850936
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n1000_s44_l1000_p100 baseline timing: complete",
+        "elapsed_seconds": 1.4026306999730878,
+        "interval_seconds": 0.7649812999879941
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n1000_s44_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 1.6241228000144474,
+        "interval_seconds": 0.22149210004135966
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n1000_s44_l1000_p100 baseline latency: complete",
+        "elapsed_seconds": 2.346450500015635,
+        "interval_seconds": 0.7223277000011876
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n1000_s44_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 2.5573804000159726,
+        "interval_seconds": 0.2109299000003375
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n1000_s44_l1000_p100 baseline memory: complete",
+        "elapsed_seconds": 3.994887300010305,
+        "interval_seconds": 1.4375068999943323
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n1000_s44_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 4.27359900000738,
+        "interval_seconds": 0.2787116999970749
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n1000_s44_l1000_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 4.663878799998201,
+        "interval_seconds": 0.39027979999082163
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n1000_s44_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 4.859461600019131,
+        "interval_seconds": 0.19558280002092943
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n1000_s44_l1000_p200",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "44",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "200",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n1000_s44_l1000_p200"
+    ],
+    "started_utc": "2026-11-26T00:19:31.151784+00:00",
+    "finished_utc": "2026-11-26T00:19:36.069863+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 4.918075599998701,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n1000_s44_l1000_p200 shared io: complete",
+        "elapsed_seconds": 0.6730332000297494,
+        "interval_seconds": 0.6730332000297494
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n1000_s44_l1000_p200 baseline timing: complete",
+        "elapsed_seconds": 1.4126902000280097,
+        "interval_seconds": 0.7396569999982603
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n1000_s44_l1000_p200 revised timing: complete",
+        "elapsed_seconds": 1.6295940999989398,
+        "interval_seconds": 0.21690389997093007
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n1000_s44_l1000_p200 baseline latency: complete",
+        "elapsed_seconds": 2.3576142000383697,
+        "interval_seconds": 0.72802010003943
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n1000_s44_l1000_p200 revised latency: complete",
+        "elapsed_seconds": 2.5776826000073925,
+        "interval_seconds": 0.22006839996902272
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n1000_s44_l1000_p200 baseline memory: complete",
+        "elapsed_seconds": 4.032364700047765,
+        "interval_seconds": 1.4546821000403725
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n1000_s44_l1000_p200 revised memory: complete",
+        "elapsed_seconds": 4.305692800029647,
+        "interval_seconds": 0.2733280999818817
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n1000_s44_l1000_p200 baseline diagnostics: complete",
+        "elapsed_seconds": 4.700636300025508,
+        "interval_seconds": 0.3949434999958612
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n1000_s44_l1000_p200 revised diagnostics: complete",
+        "elapsed_seconds": 4.903561000013724,
+        "interval_seconds": 0.20292469998821616
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n1000_s44_l4_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "44",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "4",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n1000_s44_l4_p100"
+    ],
+    "started_utc": "2026-11-26T00:19:36.073140+00:00",
+    "finished_utc": "2026-11-26T00:19:41.271580+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 5.198432600009255,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n1000_s44_l4_p100 shared io: complete",
+        "elapsed_seconds": 0.7213360000168905,
+        "interval_seconds": 0.7213360000168905
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n1000_s44_l4_p100 baseline timing: complete",
+        "elapsed_seconds": 1.537531400041189,
+        "interval_seconds": 0.8161954000242986
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n1000_s44_l4_p100 revised timing: complete",
+        "elapsed_seconds": 1.7546920999884605,
+        "interval_seconds": 0.2171606999472715
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n1000_s44_l4_p100 baseline latency: complete",
+        "elapsed_seconds": 2.590207300032489,
+        "interval_seconds": 0.8355152000440285
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n1000_s44_l4_p100 revised latency: complete",
+        "elapsed_seconds": 2.8017392000183463,
+        "interval_seconds": 0.2115318999858573
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n1000_s44_l4_p100 baseline memory: complete",
+        "elapsed_seconds": 4.317979000043124,
+        "interval_seconds": 1.5162398000247777
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n1000_s44_l4_p100 revised memory: complete",
+        "elapsed_seconds": 4.582492600020487,
+        "interval_seconds": 0.2645135999773629
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n1000_s44_l4_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 4.992340299999341,
+        "interval_seconds": 0.4098476999788545
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n1000_s44_l4_p100 revised diagnostics: complete",
+        "elapsed_seconds": 5.184559700021055,
+        "interval_seconds": 0.19221940002171323
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n1000_s44_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "44",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "1000",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n1000_s44_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T00:19:41.274827+00:00",
+    "finished_utc": "2026-11-26T00:19:46.120437+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 4.84560490003787,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n1000_s44_l1000_p100 shared io: complete",
+        "elapsed_seconds": 0.6320200000191107,
+        "interval_seconds": 0.6320200000191107
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n1000_s44_l1000_p100 baseline timing: complete",
+        "elapsed_seconds": 1.3792132000089623,
+        "interval_seconds": 0.7471931999898516
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n1000_s44_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 1.597381800005678,
+        "interval_seconds": 0.21816859999671578
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n1000_s44_l1000_p100 baseline latency: complete",
+        "elapsed_seconds": 2.3205075000296347,
+        "interval_seconds": 0.7231257000239566
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n1000_s44_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 2.5358322000247426,
+        "interval_seconds": 0.21532469999510795
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n1000_s44_l1000_p100 baseline memory: complete",
+        "elapsed_seconds": 3.9769150000065565,
+        "interval_seconds": 1.4410827999818139
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n1000_s44_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 4.243504900019616,
+        "interval_seconds": 0.2665899000130594
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n1000_s44_l1000_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 4.6341563000460155,
+        "interval_seconds": 0.39065140002639964
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n1000_s44_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 4.831576900032815,
+        "interval_seconds": 0.19742059998679906
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_cancel-churn_n1000_s44_l1_pNone",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "1000",
+      "--seed",
+      "44",
+      "--experiment",
+      "cancel-churn",
+      "--levels",
+      "1",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_cancel-churn_n1000_s44_l1_pNone"
+    ],
+    "started_utc": "2026-11-26T00:19:46.123811+00:00",
+    "finished_utc": "2026-11-26T00:19:48.583688+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 2.45986909995554,
+    "progress": [
+      {
+        "line": "[1/9] cancel-churn_anchored_cancel_churn_n1000_s44_l1 shared io: complete",
+        "elapsed_seconds": 0.6627998999902047,
+        "interval_seconds": 0.6627998999902047
+      },
+      {
+        "line": "[2/9] cancel-churn_anchored_cancel_churn_n1000_s44_l1 baseline timing: complete",
+        "elapsed_seconds": 0.8941556999925524,
+        "interval_seconds": 0.23135580000234768
+      },
+      {
+        "line": "[3/9] cancel-churn_anchored_cancel_churn_n1000_s44_l1 revised timing: complete",
+        "elapsed_seconds": 1.1221831999719143,
+        "interval_seconds": 0.2280274999793619
+      },
+      {
+        "line": "[4/9] cancel-churn_anchored_cancel_churn_n1000_s44_l1 baseline latency: complete",
+        "elapsed_seconds": 1.314025599975139,
+        "interval_seconds": 0.1918424000032246
+      },
+      {
+        "line": "[5/9] cancel-churn_anchored_cancel_churn_n1000_s44_l1 revised latency: complete",
+        "elapsed_seconds": 1.5114323999732733,
+        "interval_seconds": 0.19740679999813437
+      },
+      {
+        "line": "[6/9] cancel-churn_anchored_cancel_churn_n1000_s44_l1 baseline memory: complete",
+        "elapsed_seconds": 1.797197099949699,
+        "interval_seconds": 0.2857646999764256
+      },
+      {
+        "line": "[7/9] cancel-churn_anchored_cancel_churn_n1000_s44_l1 revised memory: complete",
+        "elapsed_seconds": 2.0573945999494754,
+        "interval_seconds": 0.2601974999997765
+      },
+      {
+        "line": "[8/9] cancel-churn_anchored_cancel_churn_n1000_s44_l1 baseline diagnostics: complete",
+        "elapsed_seconds": 2.250004399975296,
+        "interval_seconds": 0.19260980002582073
+      },
+      {
+        "line": "[9/9] cancel-churn_anchored_cancel_churn_n1000_s44_l1 revised diagnostics: complete",
+        "elapsed_seconds": 2.4464260999811813,
+        "interval_seconds": 0.1964217000058852
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n10000_s42_l1000_p10",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "42",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "10",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n10000_s42_l1000_p10"
+    ],
+    "started_utc": "2026-11-26T00:19:48.587758+00:00",
+    "finished_utc": "2026-11-26T00:21:27.930915+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 99.34314680000534,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n10000_s42_l1000_p10 shared io: complete",
+        "elapsed_seconds": 0.8923562000272796,
+        "interval_seconds": 0.8923562000272796
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n10000_s42_l1000_p10 baseline timing: complete",
+        "elapsed_seconds": 24.26922379998723,
+        "interval_seconds": 23.37686759995995
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n10000_s42_l1000_p10 revised timing: complete",
+        "elapsed_seconds": 24.66479850001633,
+        "interval_seconds": 0.3955747000291012
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n10000_s42_l1000_p10 baseline latency: complete",
+        "elapsed_seconds": 48.21925680001732,
+        "interval_seconds": 23.554458300000988
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n10000_s42_l1000_p10 revised latency: complete",
+        "elapsed_seconds": 48.60517539997818,
+        "interval_seconds": 0.38591859996085986
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n10000_s42_l1000_p10 baseline memory: complete",
+        "elapsed_seconds": 87.11787120002555,
+        "interval_seconds": 38.51269580004737
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n10000_s42_l1000_p10 revised memory: complete",
+        "elapsed_seconds": 87.7081254000077,
+        "interval_seconds": 0.5902541999821551
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n10000_s42_l1000_p10 baseline diagnostics: complete",
+        "elapsed_seconds": 98.91381110000657,
+        "interval_seconds": 11.205685699998867
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n10000_s42_l1000_p10 revised diagnostics: complete",
+        "elapsed_seconds": 99.32994349999353,
+        "interval_seconds": 0.4161323999869637
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n10000_s42_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "42",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "100",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n10000_s42_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T00:21:27.935135+00:00",
+    "finished_utc": "2026-11-26T00:24:47.054725+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 199.11958310002228,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n10000_s42_l1000_p100 shared io: complete",
+        "elapsed_seconds": 0.8052526999963447,
+        "interval_seconds": 0.8052526999963447
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n10000_s42_l1000_p100 baseline timing: complete",
+        "elapsed_seconds": 57.60466830001678,
+        "interval_seconds": 56.79941560002044
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n10000_s42_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 58.05860610003583,
+        "interval_seconds": 0.45393780001904815
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n10000_s42_l1000_p100 baseline latency: complete",
+        "elapsed_seconds": 115.18214610003633,
+        "interval_seconds": 57.1235400000005
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n10000_s42_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 115.63689670001622,
+        "interval_seconds": 0.45475059997988865
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n10000_s42_l1000_p100 baseline memory: incomplete",
+        "elapsed_seconds": 175.65295960003277,
+        "interval_seconds": 60.01606290001655
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n10000_s42_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 176.41989880002802,
+        "interval_seconds": 0.7669391999952495
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n10000_s42_l1000_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 198.66564820002532,
+        "interval_seconds": 22.245749399997294
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n10000_s42_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 199.10549790004734,
+        "interval_seconds": 0.43984970002202317
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n10000_s42_l1000_p200",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "42",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "200",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n10000_s42_l1000_p200"
+    ],
+    "started_utc": "2026-11-26T00:24:47.058988+00:00",
+    "finished_utc": "2026-11-26T00:28:04.541134+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 197.48213670001132,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n10000_s42_l1000_p200 shared io: complete",
+        "elapsed_seconds": 0.8193048000102863,
+        "interval_seconds": 0.8193048000102863
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n10000_s42_l1000_p200 baseline timing: complete",
+        "elapsed_seconds": 57.04690770001616,
+        "interval_seconds": 56.22760290000588
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n10000_s42_l1000_p200 revised timing: complete",
+        "elapsed_seconds": 57.52921629999764,
+        "interval_seconds": 0.48230859998147935
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n10000_s42_l1000_p200 baseline latency: complete",
+        "elapsed_seconds": 113.63255500001833,
+        "interval_seconds": 56.103338700020686
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n10000_s42_l1000_p200 revised latency: complete",
+        "elapsed_seconds": 114.08660150005016,
+        "interval_seconds": 0.45404650003183633
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n10000_s42_l1000_p200 baseline memory: incomplete",
+        "elapsed_seconds": 174.1068483000272,
+        "interval_seconds": 60.02024679997703
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n10000_s42_l1000_p200 revised memory: complete",
+        "elapsed_seconds": 174.8801833000034,
+        "interval_seconds": 0.773334999976214
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n10000_s42_l1000_p200 baseline diagnostics: complete",
+        "elapsed_seconds": 197.03320150001673,
+        "interval_seconds": 22.15301820001332
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n10000_s42_l1000_p200 revised diagnostics: complete",
+        "elapsed_seconds": 197.46866500005126,
+        "interval_seconds": 0.4354635000345297
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n10000_s42_l4_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "42",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "4",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n10000_s42_l4_p100"
+    ],
+    "started_utc": "2026-11-26T00:28:04.544890+00:00",
+    "finished_utc": "2026-11-26T00:31:29.626858+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 205.08196229999885,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 shared io: complete",
+        "elapsed_seconds": 0.9092926000012085,
+        "interval_seconds": 0.9092926000012085
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 baseline timing: complete",
+        "elapsed_seconds": 60.44396910001524,
+        "interval_seconds": 59.53467650001403
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 revised timing: complete",
+        "elapsed_seconds": 60.90221600001678,
+        "interval_seconds": 0.4582469000015408
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 baseline latency: complete",
+        "elapsed_seconds": 120.06470970000373,
+        "interval_seconds": 59.16249369998695
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 revised latency: complete",
+        "elapsed_seconds": 120.52031220000936,
+        "interval_seconds": 0.4556025000056252
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 baseline memory: incomplete",
+        "elapsed_seconds": 180.55448940000497,
+        "interval_seconds": 60.03417719999561
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 revised memory: complete",
+        "elapsed_seconds": 181.6861642000149,
+        "interval_seconds": 1.1316748000099324
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 204.73235890001524,
+        "interval_seconds": 23.046194700000342
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 revised diagnostics: complete",
+        "elapsed_seconds": 205.06847160001053,
+        "interval_seconds": 0.33611269999528304
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n10000_s42_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "42",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "1000",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n10000_s42_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T00:31:29.630593+00:00",
+    "finished_utc": "2026-11-26T00:34:46.949196+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 197.3185965999728,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n10000_s42_l1000_p100 shared io: complete",
+        "elapsed_seconds": 0.889954799960833,
+        "interval_seconds": 0.889954799960833
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n10000_s42_l1000_p100 baseline timing: complete",
+        "elapsed_seconds": 57.16033949999837,
+        "interval_seconds": 56.27038470003754
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n10000_s42_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 57.618625599949155,
+        "interval_seconds": 0.45828609995078295
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n10000_s42_l1000_p100 baseline latency: complete",
+        "elapsed_seconds": 113.56384859996615,
+        "interval_seconds": 55.945223000016995
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n10000_s42_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 114.01386779994937,
+        "interval_seconds": 0.4500191999832168
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n10000_s42_l1000_p100 baseline memory: incomplete",
+        "elapsed_seconds": 174.03763109998545,
+        "interval_seconds": 60.02376330003608
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n10000_s42_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 174.81664129998535,
+        "interval_seconds": 0.7790101999999024
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n10000_s42_l1000_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 196.86591499997303,
+        "interval_seconds": 22.04927369998768
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n10000_s42_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 197.30350349994842,
+        "interval_seconds": 0.43758849997539073
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_cancel-churn_n10000_s42_l1_pNone",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "42",
+      "--experiment",
+      "cancel-churn",
+      "--levels",
+      "1",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_cancel-churn_n10000_s42_l1_pNone"
+    ],
+    "started_utc": "2026-11-26T00:34:46.953468+00:00",
+    "finished_utc": "2026-11-26T00:34:52.427348+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 5.473871900001541,
+    "progress": [
+      {
+        "line": "[1/9] cancel-churn_anchored_cancel_churn_n10000_s42_l1 shared io: complete",
+        "elapsed_seconds": 1.0578915000078268,
+        "interval_seconds": 1.0578915000078268
+      },
+      {
+        "line": "[2/9] cancel-churn_anchored_cancel_churn_n10000_s42_l1 baseline timing: complete",
+        "elapsed_seconds": 1.5868895000312477,
+        "interval_seconds": 0.5289980000234209
+      },
+      {
+        "line": "[3/9] cancel-churn_anchored_cancel_churn_n10000_s42_l1 revised timing: complete",
+        "elapsed_seconds": 2.099372500029858,
+        "interval_seconds": 0.5124829999986105
+      },
+      {
+        "line": "[4/9] cancel-churn_anchored_cancel_churn_n10000_s42_l1 baseline latency: complete",
+        "elapsed_seconds": 2.443592900002841,
+        "interval_seconds": 0.3442203999729827
+      },
+      {
+        "line": "[5/9] cancel-churn_anchored_cancel_churn_n10000_s42_l1 revised latency: complete",
+        "elapsed_seconds": 2.8011783999972977,
+        "interval_seconds": 0.35758549999445677
+      },
+      {
+        "line": "[6/9] cancel-churn_anchored_cancel_churn_n10000_s42_l1 baseline memory: complete",
+        "elapsed_seconds": 3.7978898000437766,
+        "interval_seconds": 0.996711400046479
+      },
+      {
+        "line": "[7/9] cancel-churn_anchored_cancel_churn_n10000_s42_l1 revised memory: complete",
+        "elapsed_seconds": 4.644929500005674,
+        "interval_seconds": 0.847039699961897
+      },
+      {
+        "line": "[8/9] cancel-churn_anchored_cancel_churn_n10000_s42_l1 baseline diagnostics: complete",
+        "elapsed_seconds": 5.06286760000512,
+        "interval_seconds": 0.4179380999994464
+      },
+      {
+        "line": "[9/9] cancel-churn_anchored_cancel_churn_n10000_s42_l1 revised diagnostics: complete",
+        "elapsed_seconds": 5.460598600038793,
+        "interval_seconds": 0.3977310000336729
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n10000_s43_l1000_p10",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "43",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "10",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n10000_s43_l1000_p10"
+    ],
+    "started_utc": "2026-11-26T00:34:52.431043+00:00",
+    "finished_utc": "2026-11-26T00:36:28.608187+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 96.17713660001755,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n10000_s43_l1000_p10 shared io: complete",
+        "elapsed_seconds": 0.912375100015197,
+        "interval_seconds": 0.912375100015197
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n10000_s43_l1000_p10 baseline timing: complete",
+        "elapsed_seconds": 23.689559999969788,
+        "interval_seconds": 22.77718489995459
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n10000_s43_l1000_p10 revised timing: complete",
+        "elapsed_seconds": 24.06580009998288,
+        "interval_seconds": 0.37624010001309216
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n10000_s43_l1000_p10 baseline latency: complete",
+        "elapsed_seconds": 46.826001700013876,
+        "interval_seconds": 22.760201600030996
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n10000_s43_l1000_p10 revised latency: complete",
+        "elapsed_seconds": 47.189984199998435,
+        "interval_seconds": 0.36398249998455867
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n10000_s43_l1000_p10 baseline memory: complete",
+        "elapsed_seconds": 84.2964216999826,
+        "interval_seconds": 37.10643749998417
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n10000_s43_l1000_p10 revised memory: complete",
+        "elapsed_seconds": 84.89113890001317,
+        "interval_seconds": 0.5947172000305727
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n10000_s43_l1000_p10 baseline diagnostics: complete",
+        "elapsed_seconds": 95.75611199997365,
+        "interval_seconds": 10.86497309996048
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n10000_s43_l1000_p10 revised diagnostics: complete",
+        "elapsed_seconds": 96.16395000001648,
+        "interval_seconds": 0.40783800004282966
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n10000_s43_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "43",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "100",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n10000_s43_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T00:36:28.611806+00:00",
+    "finished_utc": "2026-11-26T00:39:53.924742+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 205.31293200002983,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n10000_s43_l1000_p100 shared io: complete",
+        "elapsed_seconds": 0.8218286000192165,
+        "interval_seconds": 0.8218286000192165
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n10000_s43_l1000_p100 baseline timing: complete",
+        "elapsed_seconds": 57.24295919999713,
+        "interval_seconds": 56.421130599977914
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n10000_s43_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 57.70559060003143,
+        "interval_seconds": 0.46263140003429726
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n10000_s43_l1000_p100 baseline latency: incomplete",
+        "elapsed_seconds": 117.73007400002098,
+        "interval_seconds": 60.02448339998955
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n10000_s43_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 118.17212930001551,
+        "interval_seconds": 0.44205529999453574
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n10000_s43_l1000_p100 baseline memory: incomplete",
+        "elapsed_seconds": 178.18969500000821,
+        "interval_seconds": 60.0175656999927
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n10000_s43_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 178.99337630002992,
+        "interval_seconds": 0.803681300021708
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n10000_s43_l1000_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 204.85002020001411,
+        "interval_seconds": 25.856643899984192
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n10000_s43_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 205.29900230001658,
+        "interval_seconds": 0.44898210000246763
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n10000_s43_l1000_p200",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "43",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "200",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n10000_s43_l1000_p200"
+    ],
+    "started_utc": "2026-11-26T00:39:53.928222+00:00",
+    "finished_utc": "2026-11-26T00:43:11.364570+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 197.4363412000239,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n10000_s43_l1000_p200 shared io: complete",
+        "elapsed_seconds": 0.808698299981188,
+        "interval_seconds": 0.808698299981188
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n10000_s43_l1000_p200 baseline timing: complete",
+        "elapsed_seconds": 57.311452299996745,
+        "interval_seconds": 56.50275400001556
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n10000_s43_l1000_p200 revised timing: complete",
+        "elapsed_seconds": 57.758665599976666,
+        "interval_seconds": 0.44721329997992143
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n10000_s43_l1000_p200 baseline latency: complete",
+        "elapsed_seconds": 113.77473379997537,
+        "interval_seconds": 56.0160681999987
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n10000_s43_l1000_p200 revised latency: complete",
+        "elapsed_seconds": 114.21219200000633,
+        "interval_seconds": 0.43745820003096014
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n10000_s43_l1000_p200 baseline memory: incomplete",
+        "elapsed_seconds": 174.2283797999844,
+        "interval_seconds": 60.01618779997807
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n10000_s43_l1000_p200 revised memory: complete",
+        "elapsed_seconds": 175.00424599996768,
+        "interval_seconds": 0.7758661999832839
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n10000_s43_l1000_p200 baseline diagnostics: complete",
+        "elapsed_seconds": 196.97865569998976,
+        "interval_seconds": 21.97440970002208
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n10000_s43_l1000_p200 revised diagnostics: complete",
+        "elapsed_seconds": 197.42250099999364,
+        "interval_seconds": 0.4438453000038862
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n10000_s43_l4_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "43",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "4",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n10000_s43_l4_p100"
+    ],
+    "started_utc": "2026-11-26T00:43:11.368599+00:00",
+    "finished_utc": "2026-11-26T00:47:00.854316+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 229.48570709995693,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n10000_s43_l4_p100 shared io: complete",
+        "elapsed_seconds": 0.8845794999506325,
+        "interval_seconds": 0.8845794999506325
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n10000_s43_l4_p100 baseline timing: incomplete",
+        "elapsed_seconds": 60.915406799991615,
+        "interval_seconds": 60.03082730004098
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n10000_s43_l4_p100 revised timing: complete",
+        "elapsed_seconds": 61.38670979999006,
+        "interval_seconds": 0.47130299999844283
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n10000_s43_l4_p100 baseline latency: incomplete",
+        "elapsed_seconds": 121.41926239995519,
+        "interval_seconds": 60.03255259996513
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n10000_s43_l4_p100 revised latency: complete",
+        "elapsed_seconds": 121.9259599999641,
+        "interval_seconds": 0.5066976000089198
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n10000_s43_l4_p100 baseline memory: incomplete",
+        "elapsed_seconds": 181.94207059999462,
+        "interval_seconds": 60.016110600030515
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n10000_s43_l4_p100 revised memory: complete",
+        "elapsed_seconds": 182.67254099994898,
+        "interval_seconds": 0.7304703999543563
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n10000_s43_l4_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 229.09209399996325,
+        "interval_seconds": 46.419553000014275
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n10000_s43_l4_p100 revised diagnostics: complete",
+        "elapsed_seconds": 229.4526786999777,
+        "interval_seconds": 0.3605847000144422
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n10000_s43_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "43",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "1000",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n10000_s43_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T00:47:00.862559+00:00",
+    "finished_utc": "2026-11-26T00:50:22.896029+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 202.03346380003495,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n10000_s43_l1000_p100 shared io: complete",
+        "elapsed_seconds": 0.8580060999956913,
+        "interval_seconds": 0.8580060999956913
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n10000_s43_l1000_p100 baseline timing: incomplete",
+        "elapsed_seconds": 60.8872890000348,
+        "interval_seconds": 60.02928290003911
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n10000_s43_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 61.345868000003975,
+        "interval_seconds": 0.45857899996917695
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n10000_s43_l1000_p100 baseline latency: complete",
+        "elapsed_seconds": 117.92342429998098,
+        "interval_seconds": 56.577556299977005
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n10000_s43_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 118.36660840001423,
+        "interval_seconds": 0.4431841000332497
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n10000_s43_l1000_p100 baseline memory: incomplete",
+        "elapsed_seconds": 178.38684980000835,
+        "interval_seconds": 60.02024139999412
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n10000_s43_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 179.16711969999596,
+        "interval_seconds": 0.7802698999876156
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n10000_s43_l1000_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 201.59703459998127,
+        "interval_seconds": 22.429914899985306
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n10000_s43_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 202.01918290002504,
+        "interval_seconds": 0.4221483000437729
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_cancel-churn_n10000_s43_l1_pNone",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "43",
+      "--experiment",
+      "cancel-churn",
+      "--levels",
+      "1",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_cancel-churn_n10000_s43_l1_pNone"
+    ],
+    "started_utc": "2026-11-26T00:50:22.900164+00:00",
+    "finished_utc": "2026-11-26T00:50:29.193977+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 6.293808699992951,
+    "progress": [
+      {
+        "line": "[1/9] cancel-churn_anchored_cancel_churn_n10000_s43_l1 shared io: complete",
+        "elapsed_seconds": 1.0938527000253089,
+        "interval_seconds": 1.0938527000253089
+      },
+      {
+        "line": "[2/9] cancel-churn_anchored_cancel_churn_n10000_s43_l1 baseline timing: complete",
+        "elapsed_seconds": 1.6806776000303216,
+        "interval_seconds": 0.5868249000050128
+      },
+      {
+        "line": "[3/9] cancel-churn_anchored_cancel_churn_n10000_s43_l1 revised timing: complete",
+        "elapsed_seconds": 2.3145999000407755,
+        "interval_seconds": 0.6339223000104539
+      },
+      {
+        "line": "[4/9] cancel-churn_anchored_cancel_churn_n10000_s43_l1 baseline latency: complete",
+        "elapsed_seconds": 2.7120322000118904,
+        "interval_seconds": 0.39743229997111484
+      },
+      {
+        "line": "[5/9] cancel-churn_anchored_cancel_churn_n10000_s43_l1 revised latency: complete",
+        "elapsed_seconds": 3.145430100033991,
+        "interval_seconds": 0.43339790002210066
+      },
+      {
+        "line": "[6/9] cancel-churn_anchored_cancel_churn_n10000_s43_l1 baseline memory: complete",
+        "elapsed_seconds": 4.2717772999894805,
+        "interval_seconds": 1.1263471999554895
+      },
+      {
+        "line": "[7/9] cancel-churn_anchored_cancel_churn_n10000_s43_l1 revised memory: complete",
+        "elapsed_seconds": 5.234226000029594,
+        "interval_seconds": 0.9624487000401132
+      },
+      {
+        "line": "[8/9] cancel-churn_anchored_cancel_churn_n10000_s43_l1 baseline diagnostics: complete",
+        "elapsed_seconds": 5.803733200009447,
+        "interval_seconds": 0.5695071999798529
+      },
+      {
+        "line": "[9/9] cancel-churn_anchored_cancel_churn_n10000_s43_l1 revised diagnostics: complete",
+        "elapsed_seconds": 6.269557800027542,
+        "interval_seconds": 0.4658246000180952
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n10000_s44_l1000_p10",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "44",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "10",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n10000_s44_l1000_p10"
+    ],
+    "started_utc": "2026-11-26T00:50:29.199558+00:00",
+    "finished_utc": "2026-11-26T00:52:14.408302+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 105.20873899996514,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n10000_s44_l1000_p10 shared io: complete",
+        "elapsed_seconds": 1.0807927999994718,
+        "interval_seconds": 1.0807927999994718
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n10000_s44_l1000_p10 baseline timing: complete",
+        "elapsed_seconds": 25.684112199989613,
+        "interval_seconds": 24.60331939999014
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n10000_s44_l1000_p10 revised timing: complete",
+        "elapsed_seconds": 26.113373300002422,
+        "interval_seconds": 0.42926110001280904
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n10000_s44_l1000_p10 baseline latency: complete",
+        "elapsed_seconds": 50.408757299999706,
+        "interval_seconds": 24.295383999997284
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n10000_s44_l1000_p10 revised latency: complete",
+        "elapsed_seconds": 50.83708129997831,
+        "interval_seconds": 0.42832399997860193
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n10000_s44_l1000_p10 baseline memory: complete",
+        "elapsed_seconds": 92.12214870000025,
+        "interval_seconds": 41.285067400021944
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n10000_s44_l1000_p10 revised memory: complete",
+        "elapsed_seconds": 92.79540199995972,
+        "interval_seconds": 0.6732532999594696
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n10000_s44_l1000_p10 baseline diagnostics: complete",
+        "elapsed_seconds": 104.73260459996527,
+        "interval_seconds": 11.937202600005548
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n10000_s44_l1000_p10 revised diagnostics: complete",
+        "elapsed_seconds": 105.17928549996577,
+        "interval_seconds": 0.4466809000005014
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n10000_s44_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "44",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "100",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n10000_s44_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T00:52:14.412301+00:00",
+    "finished_utc": "2026-11-26T00:55:40.512706+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 206.10039840004174,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n10000_s44_l1000_p100 shared io: complete",
+        "elapsed_seconds": 0.963596600049641,
+        "interval_seconds": 0.963596600049641
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n10000_s44_l1000_p100 baseline timing: incomplete",
+        "elapsed_seconds": 60.988176900020335,
+        "interval_seconds": 60.024580299970694
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n10000_s44_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 61.63650080002844,
+        "interval_seconds": 0.6483239000081085
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n10000_s44_l1000_p100 baseline latency: complete",
+        "elapsed_seconds": 120.94007890002104,
+        "interval_seconds": 59.30357809999259
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n10000_s44_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 121.52357620000839,
+        "interval_seconds": 0.5834972999873571
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n10000_s44_l1000_p100 baseline memory: incomplete",
+        "elapsed_seconds": 181.5500814000261,
+        "interval_seconds": 60.02650520001771
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n10000_s44_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 182.47042490000604,
+        "interval_seconds": 0.9203434999799356
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n10000_s44_l1000_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 205.60624430002645,
+        "interval_seconds": 23.13581940002041
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n10000_s44_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 206.08158250001725,
+        "interval_seconds": 0.4753381999908015
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n10000_s44_l1000_p200",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "44",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "200",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n10000_s44_l1000_p200"
+    ],
+    "started_utc": "2026-11-26T00:55:40.518783+00:00",
+    "finished_utc": "2026-11-26T00:59:08.162137+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 207.64334850001615,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n10000_s44_l1000_p200 shared io: complete",
+        "elapsed_seconds": 1.0442221999983303,
+        "interval_seconds": 1.0442221999983303
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n10000_s44_l1000_p200 baseline timing: incomplete",
+        "elapsed_seconds": 61.08161900000414,
+        "interval_seconds": 60.03739680000581
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n10000_s44_l1000_p200 revised timing: complete",
+        "elapsed_seconds": 61.547395000001416,
+        "interval_seconds": 0.4657759999972768
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n10000_s44_l1000_p200 baseline latency: incomplete",
+        "elapsed_seconds": 121.57995980000123,
+        "interval_seconds": 60.03256479999982
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n10000_s44_l1000_p200 revised latency: complete",
+        "elapsed_seconds": 122.03274350002175,
+        "interval_seconds": 0.45278370002051815
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n10000_s44_l1000_p200 baseline memory: incomplete",
+        "elapsed_seconds": 182.0629785999772,
+        "interval_seconds": 60.03023509995546
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n10000_s44_l1000_p200 revised memory: complete",
+        "elapsed_seconds": 182.86131230002502,
+        "interval_seconds": 0.7983337000478059
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n10000_s44_l1000_p200 baseline diagnostics: complete",
+        "elapsed_seconds": 207.14953950000927,
+        "interval_seconds": 24.28822719998425
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n10000_s44_l1000_p200 revised diagnostics: complete",
+        "elapsed_seconds": 207.6252736999886,
+        "interval_seconds": 0.4757341999793425
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n10000_s44_l4_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "44",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "4",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n10000_s44_l4_p100"
+    ],
+    "started_utc": "2026-11-26T00:59:08.180045+00:00",
+    "finished_utc": "2026-11-26T01:02:36.129943+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 207.9498904000502,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n10000_s44_l4_p100 shared io: complete",
+        "elapsed_seconds": 1.0218232000479475,
+        "interval_seconds": 1.0218232000479475
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n10000_s44_l4_p100 baseline timing: incomplete",
+        "elapsed_seconds": 61.04416350001702,
+        "interval_seconds": 60.02234029996907
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n10000_s44_l4_p100 revised timing: complete",
+        "elapsed_seconds": 61.64214960002573,
+        "interval_seconds": 0.5979861000087112
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n10000_s44_l4_p100 baseline latency: incomplete",
+        "elapsed_seconds": 121.66725430003135,
+        "interval_seconds": 60.02510470000561
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n10000_s44_l4_p100 revised latency: complete",
+        "elapsed_seconds": 122.28109669999685,
+        "interval_seconds": 0.613842399965506
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n10000_s44_l4_p100 baseline memory: incomplete",
+        "elapsed_seconds": 182.27126970002428,
+        "interval_seconds": 59.990173000027426
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n10000_s44_l4_p100 revised memory: complete",
+        "elapsed_seconds": 183.03759170003468,
+        "interval_seconds": 0.7663220000104047
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n10000_s44_l4_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 207.4937753000413,
+        "interval_seconds": 24.456183600006625
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n10000_s44_l4_p100 revised diagnostics: complete",
+        "elapsed_seconds": 207.92963620001683,
+        "interval_seconds": 0.43586089997552335
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n10000_s44_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "44",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "1000",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n10000_s44_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T01:02:36.137752+00:00",
+    "finished_utc": "2026-11-26T01:05:55.317040+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 199.17928480001865,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n10000_s44_l1000_p100 shared io: complete",
+        "elapsed_seconds": 0.9025430000037886,
+        "interval_seconds": 0.9025430000037886
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n10000_s44_l1000_p100 baseline timing: complete",
+        "elapsed_seconds": 58.51924809999764,
+        "interval_seconds": 57.61670509999385
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n10000_s44_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 58.98053280002205,
+        "interval_seconds": 0.46128470002440736
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n10000_s44_l1000_p100 baseline latency: complete",
+        "elapsed_seconds": 115.4573750999989,
+        "interval_seconds": 56.47684229997685
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n10000_s44_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 115.89587900001789,
+        "interval_seconds": 0.4385039000189863
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n10000_s44_l1000_p100 baseline memory: incomplete",
+        "elapsed_seconds": 175.92734440002823,
+        "interval_seconds": 60.03146540001035
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n10000_s44_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 176.73232110001845,
+        "interval_seconds": 0.8049766999902204
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n10000_s44_l1000_p100 baseline diagnostics: complete",
+        "elapsed_seconds": 198.726616800006,
+        "interval_seconds": 21.99429569998756
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n10000_s44_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 199.16296440002043,
+        "interval_seconds": 0.43634760001441464
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_cancel-churn_n10000_s44_l1_pNone",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "10000",
+      "--seed",
+      "44",
+      "--experiment",
+      "cancel-churn",
+      "--levels",
+      "1",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_cancel-churn_n10000_s44_l1_pNone"
+    ],
+    "started_utc": "2026-11-26T01:05:55.321646+00:00",
+    "finished_utc": "2026-11-26T01:06:00.769586+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 5.447935500007588,
+    "progress": [
+      {
+        "line": "[1/9] cancel-churn_anchored_cancel_churn_n10000_s44_l1 shared io: complete",
+        "elapsed_seconds": 1.0470296000130475,
+        "interval_seconds": 1.0470296000130475
+      },
+      {
+        "line": "[2/9] cancel-churn_anchored_cancel_churn_n10000_s44_l1 baseline timing: complete",
+        "elapsed_seconds": 1.5607840999728069,
+        "interval_seconds": 0.5137544999597594
+      },
+      {
+        "line": "[3/9] cancel-churn_anchored_cancel_churn_n10000_s44_l1 revised timing: complete",
+        "elapsed_seconds": 2.0588855000096373,
+        "interval_seconds": 0.49810140003683046
+      },
+      {
+        "line": "[4/9] cancel-churn_anchored_cancel_churn_n10000_s44_l1 baseline latency: complete",
+        "elapsed_seconds": 2.41416390001541,
+        "interval_seconds": 0.3552784000057727
+      },
+      {
+        "line": "[5/9] cancel-churn_anchored_cancel_churn_n10000_s44_l1 revised latency: complete",
+        "elapsed_seconds": 2.7785282999975607,
+        "interval_seconds": 0.36436439998215064
+      },
+      {
+        "line": "[6/9] cancel-churn_anchored_cancel_churn_n10000_s44_l1 baseline memory: complete",
+        "elapsed_seconds": 3.783428199996706,
+        "interval_seconds": 1.0048998999991454
+      },
+      {
+        "line": "[7/9] cancel-churn_anchored_cancel_churn_n10000_s44_l1 revised memory: complete",
+        "elapsed_seconds": 4.6328464999678545,
+        "interval_seconds": 0.8494182999711484
+      },
+      {
+        "line": "[8/9] cancel-churn_anchored_cancel_churn_n10000_s44_l1 baseline diagnostics: complete",
+        "elapsed_seconds": 5.0478810999775305,
+        "interval_seconds": 0.41503460000967607
+      },
+      {
+        "line": "[9/9] cancel-churn_anchored_cancel_churn_n10000_s44_l1 revised diagnostics: complete",
+        "elapsed_seconds": 5.434459200012498,
+        "interval_seconds": 0.38657810003496706
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n100000_s42_l1000_p10",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "42",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "10",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n100000_s42_l1000_p10"
+    ],
+    "started_utc": "2026-11-26T01:06:00.773724+00:00",
+    "finished_utc": "2026-11-26T01:10:15.731248+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 254.95751650002785,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n100000_s42_l1000_p10 shared io: complete",
+        "elapsed_seconds": 3.1038770000450313,
+        "interval_seconds": 3.1038770000450313
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n100000_s42_l1000_p10 baseline timing: incomplete",
+        "elapsed_seconds": 63.131818400055636,
+        "interval_seconds": 60.027941400010604
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n100000_s42_l1000_p10 revised timing: complete",
+        "elapsed_seconds": 65.37682070001028,
+        "interval_seconds": 2.245002299954649
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n100000_s42_l1000_p10 baseline latency: incomplete",
+        "elapsed_seconds": 125.41083390003769,
+        "interval_seconds": 60.0340132000274
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n100000_s42_l1000_p10 revised latency: complete",
+        "elapsed_seconds": 127.72336350003025,
+        "interval_seconds": 2.3125295999925584
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n100000_s42_l1000_p10 baseline memory: incomplete",
+        "elapsed_seconds": 187.7462557000108,
+        "interval_seconds": 60.02289219998056
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n100000_s42_l1000_p10 revised memory: complete",
+        "elapsed_seconds": 192.1095243000309,
+        "interval_seconds": 4.363268600020092
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n100000_s42_l1000_p10 baseline diagnostics: incomplete",
+        "elapsed_seconds": 252.12854420003714,
+        "interval_seconds": 60.01901990000624
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n100000_s42_l1000_p10 revised diagnostics: complete",
+        "elapsed_seconds": 254.9424621000071,
+        "interval_seconds": 2.813917899969965
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n100000_s42_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "42",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "100",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n100000_s42_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T01:10:15.735440+00:00",
+    "finished_utc": "2026-11-26T01:14:33.992497+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 258.2570465999888,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n100000_s42_l1000_p100 shared io: complete",
+        "elapsed_seconds": 2.4853226999985054,
+        "interval_seconds": 2.4853226999985054
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n100000_s42_l1000_p100 baseline timing: incomplete",
+        "elapsed_seconds": 62.519786999968346,
+        "interval_seconds": 60.03446429996984
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n100000_s42_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 65.69222749996698,
+        "interval_seconds": 3.172440499998629
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n100000_s42_l1000_p100 baseline latency: incomplete",
+        "elapsed_seconds": 125.72007250000024,
+        "interval_seconds": 60.02784500003327
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n100000_s42_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 128.84117289999267,
+        "interval_seconds": 3.1211003999924287
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n100000_s42_l1000_p100 baseline memory: incomplete",
+        "elapsed_seconds": 188.86492119997274,
+        "interval_seconds": 60.02374829998007
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n100000_s42_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 195.2360980999656,
+        "interval_seconds": 6.371176899992861
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n100000_s42_l1000_p100 baseline diagnostics: incomplete",
+        "elapsed_seconds": 255.26523209997686,
+        "interval_seconds": 60.029134000011254
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n100000_s42_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 258.2415622000117,
+        "interval_seconds": 2.9763301000348292
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n100000_s42_l1000_p200",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "42",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "200",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n100000_s42_l1000_p200"
+    ],
+    "started_utc": "2026-11-26T01:14:33.997995+00:00",
+    "finished_utc": "2026-11-26T01:18:52.319552+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 258.3215543999686,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n100000_s42_l1000_p200 shared io: complete",
+        "elapsed_seconds": 2.4727198999607936,
+        "interval_seconds": 2.4727198999607936
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n100000_s42_l1000_p200 baseline timing: incomplete",
+        "elapsed_seconds": 62.494675099966116,
+        "interval_seconds": 60.02195520000532
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n100000_s42_l1000_p200 revised timing: complete",
+        "elapsed_seconds": 65.6666331999586,
+        "interval_seconds": 3.17195809999248
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n100000_s42_l1000_p200 baseline latency: incomplete",
+        "elapsed_seconds": 125.68911439995281,
+        "interval_seconds": 60.02248119999422
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n100000_s42_l1000_p200 revised latency: complete",
+        "elapsed_seconds": 128.78067239996744,
+        "interval_seconds": 3.091558000014629
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n100000_s42_l1000_p200 baseline memory: incomplete",
+        "elapsed_seconds": 188.80963189998874,
+        "interval_seconds": 60.0289595000213
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n100000_s42_l1000_p200 revised memory: complete",
+        "elapsed_seconds": 195.17758239997784,
+        "interval_seconds": 6.367950499989092
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n100000_s42_l1000_p200 baseline diagnostics: incomplete",
+        "elapsed_seconds": 255.2044079999905,
+        "interval_seconds": 60.02682560001267
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n100000_s42_l1000_p200 revised diagnostics: complete",
+        "elapsed_seconds": 258.3060475999955,
+        "interval_seconds": 3.101639600005001
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n100000_s42_l4_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "42",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "4",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n100000_s42_l4_p100"
+    ],
+    "started_utc": "2026-11-26T01:18:52.323839+00:00",
+    "finished_utc": "2026-11-26T01:23:09.591044+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 257.26720000000205,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n100000_s42_l4_p100 shared io: complete",
+        "elapsed_seconds": 3.0518125999951735,
+        "interval_seconds": 3.0518125999951735
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n100000_s42_l4_p100 baseline timing: incomplete",
+        "elapsed_seconds": 63.077569300017785,
+        "interval_seconds": 60.02575670002261
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n100000_s42_l4_p100 revised timing: complete",
+        "elapsed_seconds": 66.15770410001278,
+        "interval_seconds": 3.080134799994994
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n100000_s42_l4_p100 baseline latency: incomplete",
+        "elapsed_seconds": 126.19289379997645,
+        "interval_seconds": 60.03518969996367
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n100000_s42_l4_p100 revised latency: complete",
+        "elapsed_seconds": 129.26673059997847,
+        "interval_seconds": 3.0738368000020273
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n100000_s42_l4_p100 baseline memory: incomplete",
+        "elapsed_seconds": 189.2895713999751,
+        "interval_seconds": 60.02284079999663
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n100000_s42_l4_p100 revised memory: complete",
+        "elapsed_seconds": 195.39261219999753,
+        "interval_seconds": 6.103040800022427
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n100000_s42_l4_p100 baseline diagnostics: incomplete",
+        "elapsed_seconds": 255.4147898000083,
+        "interval_seconds": 60.022177600010764
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n100000_s42_l4_p100 revised diagnostics: complete",
+        "elapsed_seconds": 257.2530672000139,
+        "interval_seconds": 1.8382774000056088
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n100000_s42_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "42",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "1000",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n100000_s42_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T01:23:09.594993+00:00",
+    "finished_utc": "2026-11-26T01:27:27.868607+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 258.27361039997777,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n100000_s42_l1000_p100 shared io: complete",
+        "elapsed_seconds": 2.5342579999705777,
+        "interval_seconds": 2.5342579999705777
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n100000_s42_l1000_p100 baseline timing: incomplete",
+        "elapsed_seconds": 62.55878709995886,
+        "interval_seconds": 60.024529099988285
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n100000_s42_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 65.7635820999858,
+        "interval_seconds": 3.204795000026934
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n100000_s42_l1000_p100 baseline latency: incomplete",
+        "elapsed_seconds": 125.79197049996583,
+        "interval_seconds": 60.02838839998003
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n100000_s42_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 128.89770099997986,
+        "interval_seconds": 3.105730500014033
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n100000_s42_l1000_p100 baseline memory: incomplete",
+        "elapsed_seconds": 188.92284949996974,
+        "interval_seconds": 60.02514849998988
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n100000_s42_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 195.2594926999882,
+        "interval_seconds": 6.336643200018443
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n100000_s42_l1000_p100 baseline diagnostics: incomplete",
+        "elapsed_seconds": 255.2838832999696,
+        "interval_seconds": 60.024390599981416
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n100000_s42_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 258.2584276999696,
+        "interval_seconds": 2.9745444000000134
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_cancel-churn_n100000_s42_l1_pNone",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "42",
+      "--experiment",
+      "cancel-churn",
+      "--levels",
+      "1",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_cancel-churn_n100000_s42_l1_pNone"
+    ],
+    "started_utc": "2026-11-26T01:27:27.872708+00:00",
+    "finished_utc": "2026-11-26T01:28:04.163925+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 36.29121140000643,
+    "progress": [
+      {
+        "line": "[1/9] cancel-churn_anchored_cancel_churn_n100000_s42_l1 shared io: complete",
+        "elapsed_seconds": 4.883932000026107,
+        "interval_seconds": 4.883932000026107
+      },
+      {
+        "line": "[2/9] cancel-churn_anchored_cancel_churn_n100000_s42_l1 baseline timing: complete",
+        "elapsed_seconds": 8.303827300027478,
+        "interval_seconds": 3.4198953000013717
+      },
+      {
+        "line": "[3/9] cancel-churn_anchored_cancel_churn_n100000_s42_l1 revised timing: complete",
+        "elapsed_seconds": 11.706900499993935,
+        "interval_seconds": 3.4030731999664567
+      },
+      {
+        "line": "[4/9] cancel-churn_anchored_cancel_churn_n100000_s42_l1 baseline latency: complete",
+        "elapsed_seconds": 13.70428860001266,
+        "interval_seconds": 1.9973881000187248
+      },
+      {
+        "line": "[5/9] cancel-churn_anchored_cancel_churn_n100000_s42_l1 revised latency: complete",
+        "elapsed_seconds": 15.683458500017878,
+        "interval_seconds": 1.9791699000052176
+      },
+      {
+        "line": "[6/9] cancel-churn_anchored_cancel_churn_n100000_s42_l1 baseline memory: complete",
+        "elapsed_seconds": 24.387386100017466,
+        "interval_seconds": 8.703927599999588
+      },
+      {
+        "line": "[7/9] cancel-churn_anchored_cancel_churn_n100000_s42_l1 revised memory: complete",
+        "elapsed_seconds": 31.42110480001429,
+        "interval_seconds": 7.033718699996825
+      },
+      {
+        "line": "[8/9] cancel-churn_anchored_cancel_churn_n100000_s42_l1 baseline diagnostics: complete",
+        "elapsed_seconds": 33.844930100021884,
+        "interval_seconds": 2.423825300007593
+      },
+      {
+        "line": "[9/9] cancel-churn_anchored_cancel_churn_n100000_s42_l1 revised diagnostics: complete",
+        "elapsed_seconds": 36.27647350000916,
+        "interval_seconds": 2.4315433999872766
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n100000_s43_l1000_p10",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "43",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "10",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n100000_s43_l1000_p10"
+    ],
+    "started_utc": "2026-11-26T01:28:04.168370+00:00",
+    "finished_utc": "2026-11-26T01:32:19.105867+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 254.93749139999272,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n100000_s43_l1000_p10 shared io: complete",
+        "elapsed_seconds": 3.0540001000044867,
+        "interval_seconds": 3.0540001000044867
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n100000_s43_l1000_p10 baseline timing: incomplete",
+        "elapsed_seconds": 63.09359589999076,
+        "interval_seconds": 60.03959579998627
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n100000_s43_l1000_p10 revised timing: complete",
+        "elapsed_seconds": 65.37762699997984,
+        "interval_seconds": 2.284031099989079
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n100000_s43_l1000_p10 baseline latency: incomplete",
+        "elapsed_seconds": 125.39951449999353,
+        "interval_seconds": 60.02188750001369
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n100000_s43_l1000_p10 revised latency: complete",
+        "elapsed_seconds": 127.7159510999918,
+        "interval_seconds": 2.3164365999982692
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n100000_s43_l1000_p10 baseline memory: incomplete",
+        "elapsed_seconds": 187.7522319999989,
+        "interval_seconds": 60.036280900007114
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n100000_s43_l1000_p10 revised memory: complete",
+        "elapsed_seconds": 192.08817219996126,
+        "interval_seconds": 4.3359401999623515
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n100000_s43_l1000_p10 baseline diagnostics: incomplete",
+        "elapsed_seconds": 252.1157600999577,
+        "interval_seconds": 60.02758789999643
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n100000_s43_l1000_p10 revised diagnostics: complete",
+        "elapsed_seconds": 254.92340539995348,
+        "interval_seconds": 2.8076452999957837
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n100000_s43_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "43",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "100",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n100000_s43_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T01:32:19.110104+00:00",
+    "finished_utc": "2026-11-26T01:36:37.542245+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 258.4321373999701,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n100000_s43_l1000_p100 shared io: complete",
+        "elapsed_seconds": 2.4657522999914363,
+        "interval_seconds": 2.4657522999914363
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n100000_s43_l1000_p100 baseline timing: incomplete",
+        "elapsed_seconds": 62.508035100006964,
+        "interval_seconds": 60.04228280001553
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n100000_s43_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 65.7526953999768,
+        "interval_seconds": 3.244660299969837
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n100000_s43_l1000_p100 baseline latency: incomplete",
+        "elapsed_seconds": 125.77410539996345,
+        "interval_seconds": 60.021409999986645
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n100000_s43_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 128.9167463000049,
+        "interval_seconds": 3.1426409000414424
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n100000_s43_l1000_p100 baseline memory: incomplete",
+        "elapsed_seconds": 188.9447820999776,
+        "interval_seconds": 60.02803579997271
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n100000_s43_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 195.32194110000273,
+        "interval_seconds": 6.377159000025131
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n100000_s43_l1000_p100 baseline diagnostics: incomplete",
+        "elapsed_seconds": 255.34726569999475,
+        "interval_seconds": 60.02532459999202
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n100000_s43_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 258.4186797000002,
+        "interval_seconds": 3.0714140000054613
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n100000_s43_l1000_p200",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "43",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "200",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n100000_s43_l1000_p200"
+    ],
+    "started_utc": "2026-11-26T01:36:37.546286+00:00",
+    "finished_utc": "2026-11-26T01:40:55.877813+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 258.33151779999025,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n100000_s43_l1000_p200 shared io: complete",
+        "elapsed_seconds": 2.5070680000353605,
+        "interval_seconds": 2.5070680000353605
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n100000_s43_l1000_p200 baseline timing: incomplete",
+        "elapsed_seconds": 62.53783970000222,
+        "interval_seconds": 60.03077169996686
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n100000_s43_l1000_p200 revised timing: complete",
+        "elapsed_seconds": 65.77158920001239,
+        "interval_seconds": 3.2337495000101626
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n100000_s43_l1000_p200 baseline latency: incomplete",
+        "elapsed_seconds": 125.80113099998562,
+        "interval_seconds": 60.02954179997323
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n100000_s43_l1000_p200 revised latency: complete",
+        "elapsed_seconds": 128.92388369998662,
+        "interval_seconds": 3.1227527000010014
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n100000_s43_l1000_p200 baseline memory: incomplete",
+        "elapsed_seconds": 188.94479229999706,
+        "interval_seconds": 60.02090860001044
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n100000_s43_l1000_p200 revised memory: complete",
+        "elapsed_seconds": 195.27853549999418,
+        "interval_seconds": 6.333743199997116
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n100000_s43_l1000_p200 baseline diagnostics: incomplete",
+        "elapsed_seconds": 255.31368459999794,
+        "interval_seconds": 60.035149100003764
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n100000_s43_l1000_p200 revised diagnostics: complete",
+        "elapsed_seconds": 258.3157629999914,
+        "interval_seconds": 3.0020783999934793
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n100000_s43_l4_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "43",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "4",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n100000_s43_l4_p100"
+    ],
+    "started_utc": "2026-11-26T01:40:55.882751+00:00",
+    "finished_utc": "2026-11-26T01:45:13.184290+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 257.3015364999883,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n100000_s43_l4_p100 shared io: complete",
+        "elapsed_seconds": 3.043494199984707,
+        "interval_seconds": 3.043494199984707
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n100000_s43_l4_p100 baseline timing: incomplete",
+        "elapsed_seconds": 63.06696860003285,
+        "interval_seconds": 60.023474400048144
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n100000_s43_l4_p100 revised timing: complete",
+        "elapsed_seconds": 66.14839680003934,
+        "interval_seconds": 3.081428200006485
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n100000_s43_l4_p100 baseline latency: incomplete",
+        "elapsed_seconds": 126.17988640000112,
+        "interval_seconds": 60.03148959996179
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n100000_s43_l4_p100 revised latency: complete",
+        "elapsed_seconds": 129.1909649000154,
+        "interval_seconds": 3.011078500014264
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n100000_s43_l4_p100 baseline memory: incomplete",
+        "elapsed_seconds": 189.22952659998555,
+        "interval_seconds": 60.03856169997016
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n100000_s43_l4_p100 revised memory: complete",
+        "elapsed_seconds": 195.3573228000314,
+        "interval_seconds": 6.12779620004585
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n100000_s43_l4_p100 baseline diagnostics: incomplete",
+        "elapsed_seconds": 255.38360770000145,
+        "interval_seconds": 60.02628489997005
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n100000_s43_l4_p100 revised diagnostics: complete",
+        "elapsed_seconds": 257.2857505999855,
+        "interval_seconds": 1.9021428999840282
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n100000_s43_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "43",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "1000",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n100000_s43_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T01:45:13.188501+00:00",
+    "finished_utc": "2026-11-26T01:49:31.534346+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 258.34583500004373,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n100000_s43_l1000_p100 shared io: complete",
+        "elapsed_seconds": 2.4752144000376575,
+        "interval_seconds": 2.4752144000376575
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n100000_s43_l1000_p100 baseline timing: incomplete",
+        "elapsed_seconds": 62.49942030000966,
+        "interval_seconds": 60.024205899972
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n100000_s43_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 65.74115459999302,
+        "interval_seconds": 3.2417342999833636
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n100000_s43_l1000_p100 baseline latency: incomplete",
+        "elapsed_seconds": 125.76458479999565,
+        "interval_seconds": 60.02343020000262
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n100000_s43_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 128.88828010001453,
+        "interval_seconds": 3.1236953000188805
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n100000_s43_l1000_p100 baseline memory: incomplete",
+        "elapsed_seconds": 188.91737510001985,
+        "interval_seconds": 60.02909500000533
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n100000_s43_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 195.2977244000067,
+        "interval_seconds": 6.380349299986847
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n100000_s43_l1000_p100 baseline diagnostics: incomplete",
+        "elapsed_seconds": 255.32617950002896,
+        "interval_seconds": 60.028455100022256
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n100000_s43_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 258.33092690003105,
+        "interval_seconds": 3.0047474000020884
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_cancel-churn_n100000_s43_l1_pNone",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "43",
+      "--experiment",
+      "cancel-churn",
+      "--levels",
+      "1",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_cancel-churn_n100000_s43_l1_pNone"
+    ],
+    "started_utc": "2026-11-26T01:49:31.538782+00:00",
+    "finished_utc": "2026-11-26T01:50:08.079380+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 36.54058939998504,
+    "progress": [
+      {
+        "line": "[1/9] cancel-churn_anchored_cancel_churn_n100000_s43_l1 shared io: complete",
+        "elapsed_seconds": 4.945082599995658,
+        "interval_seconds": 4.945082599995658
+      },
+      {
+        "line": "[2/9] cancel-churn_anchored_cancel_churn_n100000_s43_l1 baseline timing: complete",
+        "elapsed_seconds": 8.420349999971222,
+        "interval_seconds": 3.4752673999755643
+      },
+      {
+        "line": "[3/9] cancel-churn_anchored_cancel_churn_n100000_s43_l1 revised timing: complete",
+        "elapsed_seconds": 11.869718600006308,
+        "interval_seconds": 3.4493686000350863
+      },
+      {
+        "line": "[4/9] cancel-churn_anchored_cancel_churn_n100000_s43_l1 baseline latency: complete",
+        "elapsed_seconds": 13.864716199983377,
+        "interval_seconds": 1.9949975999770686
+      },
+      {
+        "line": "[5/9] cancel-churn_anchored_cancel_churn_n100000_s43_l1 revised latency: complete",
+        "elapsed_seconds": 15.82622479996644,
+        "interval_seconds": 1.9615085999830626
+      },
+      {
+        "line": "[6/9] cancel-churn_anchored_cancel_churn_n100000_s43_l1 baseline memory: complete",
+        "elapsed_seconds": 24.62115179997636,
+        "interval_seconds": 8.79492700000992
+      },
+      {
+        "line": "[7/9] cancel-churn_anchored_cancel_churn_n100000_s43_l1 revised memory: complete",
+        "elapsed_seconds": 31.645011799992062,
+        "interval_seconds": 7.023860000015702
+      },
+      {
+        "line": "[8/9] cancel-churn_anchored_cancel_churn_n100000_s43_l1 baseline diagnostics: complete",
+        "elapsed_seconds": 34.06689049996203,
+        "interval_seconds": 2.421878699969966
+      },
+      {
+        "line": "[9/9] cancel-churn_anchored_cancel_churn_n100000_s43_l1 revised diagnostics: complete",
+        "elapsed_seconds": 36.52698450000025,
+        "interval_seconds": 2.460094000038225
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n100000_s44_l1000_p10",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "44",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "10",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n100000_s44_l1000_p10"
+    ],
+    "started_utc": "2026-11-26T01:50:08.085166+00:00",
+    "finished_utc": "2026-11-26T01:54:24.312377+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 256.22720740002114,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n100000_s44_l1000_p10 shared io: complete",
+        "elapsed_seconds": 3.1172761999769136,
+        "interval_seconds": 3.1172761999769136
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n100000_s44_l1000_p10 baseline timing: incomplete",
+        "elapsed_seconds": 63.14281699998537,
+        "interval_seconds": 60.02554080000846
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n100000_s44_l1000_p10 revised timing: complete",
+        "elapsed_seconds": 66.68698320002295,
+        "interval_seconds": 3.54416620003758
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n100000_s44_l1000_p10 baseline latency: incomplete",
+        "elapsed_seconds": 126.72159380000085,
+        "interval_seconds": 60.034610599977896
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n100000_s44_l1000_p10 revised latency: complete",
+        "elapsed_seconds": 129.00006480002776,
+        "interval_seconds": 2.2784710000269115
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n100000_s44_l1000_p10 baseline memory: incomplete",
+        "elapsed_seconds": 189.03392870002426,
+        "interval_seconds": 60.033863899996504
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n100000_s44_l1000_p10 revised memory: complete",
+        "elapsed_seconds": 193.37164000002667,
+        "interval_seconds": 4.337711300002411
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n100000_s44_l1000_p10 baseline diagnostics: incomplete",
+        "elapsed_seconds": 253.40455450001173,
+        "interval_seconds": 60.032914499985054
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n100000_s44_l1000_p10 revised diagnostics: complete",
+        "elapsed_seconds": 256.2071342000272,
+        "interval_seconds": 2.8025797000154853
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n100000_s44_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "44",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "100",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n100000_s44_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T01:54:24.317383+00:00",
+    "finished_utc": "2026-11-26T01:58:42.633841+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 258.3164507000474,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n100000_s44_l1000_p100 shared io: complete",
+        "elapsed_seconds": 2.450676900043618,
+        "interval_seconds": 2.450676900043618
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n100000_s44_l1000_p100 baseline timing: incomplete",
+        "elapsed_seconds": 62.4781868000282,
+        "interval_seconds": 60.02750989998458
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n100000_s44_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 65.69924640003592,
+        "interval_seconds": 3.2210596000077203
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n100000_s44_l1000_p100 baseline latency: incomplete",
+        "elapsed_seconds": 125.72146420000354,
+        "interval_seconds": 60.02221779996762
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n100000_s44_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 128.89245410001604,
+        "interval_seconds": 3.1709899000125006
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n100000_s44_l1000_p100 baseline memory: incomplete",
+        "elapsed_seconds": 188.9197369000176,
+        "interval_seconds": 60.02728280000156
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n100000_s44_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 195.3106985000195,
+        "interval_seconds": 6.390961600001901
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n100000_s44_l1000_p100 baseline diagnostics: incomplete",
+        "elapsed_seconds": 255.3332356000319,
+        "interval_seconds": 60.022537100012414
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n100000_s44_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 258.30053900001803,
+        "interval_seconds": 2.967303399986122
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_market-sell_n100000_s44_l1000_p200",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "44",
+      "--experiment",
+      "market-sell",
+      "--levels",
+      "1000",
+      "--sale-percent",
+      "200",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n100000_s44_l1000_p200"
+    ],
+    "started_utc": "2026-11-26T01:58:42.638252+00:00",
+    "finished_utc": "2026-11-26T02:03:01.078111+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 258.43985349999275,
+    "progress": [
+      {
+        "line": "[1/9] market-sell_controlled_bids_n100000_s44_l1000_p200 shared io: complete",
+        "elapsed_seconds": 2.5194786999491043,
+        "interval_seconds": 2.5194786999491043
+      },
+      {
+        "line": "[2/9] market-sell_controlled_bids_n100000_s44_l1000_p200 baseline timing: incomplete",
+        "elapsed_seconds": 62.55529150000075,
+        "interval_seconds": 60.035812800051644
+      },
+      {
+        "line": "[3/9] market-sell_controlled_bids_n100000_s44_l1000_p200 revised timing: complete",
+        "elapsed_seconds": 65.76584229996661,
+        "interval_seconds": 3.2105507999658585
+      },
+      {
+        "line": "[4/9] market-sell_controlled_bids_n100000_s44_l1000_p200 baseline latency: incomplete",
+        "elapsed_seconds": 125.78827479999745,
+        "interval_seconds": 60.022432500030845
+      },
+      {
+        "line": "[5/9] market-sell_controlled_bids_n100000_s44_l1000_p200 revised latency: complete",
+        "elapsed_seconds": 128.95221979997586,
+        "interval_seconds": 3.163944999978412
+      },
+      {
+        "line": "[6/9] market-sell_controlled_bids_n100000_s44_l1000_p200 baseline memory: incomplete",
+        "elapsed_seconds": 188.97383099998115,
+        "interval_seconds": 60.02161120000528
+      },
+      {
+        "line": "[7/9] market-sell_controlled_bids_n100000_s44_l1000_p200 revised memory: complete",
+        "elapsed_seconds": 195.40677719999803,
+        "interval_seconds": 6.432946200016886
+      },
+      {
+        "line": "[8/9] market-sell_controlled_bids_n100000_s44_l1000_p200 baseline diagnostics: incomplete",
+        "elapsed_seconds": 255.43977219995577,
+        "interval_seconds": 60.03299499995774
+      },
+      {
+        "line": "[9/9] market-sell_controlled_bids_n100000_s44_l1000_p200 revised diagnostics: complete",
+        "elapsed_seconds": 258.4244528999552,
+        "interval_seconds": 2.984680699999444
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n100000_s44_l4_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "44",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "4",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n100000_s44_l4_p100"
+    ],
+    "started_utc": "2026-11-26T02:03:01.082785+00:00",
+    "finished_utc": "2026-11-26T02:07:18.399966+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 257.31717479997315,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n100000_s44_l4_p100 shared io: complete",
+        "elapsed_seconds": 3.0315818999661133,
+        "interval_seconds": 3.0315818999661133
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n100000_s44_l4_p100 baseline timing: incomplete",
+        "elapsed_seconds": 63.06262709997827,
+        "interval_seconds": 60.03104520001216
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n100000_s44_l4_p100 revised timing: complete",
+        "elapsed_seconds": 66.14823559997603,
+        "interval_seconds": 3.085608499997761
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n100000_s44_l4_p100 baseline latency: incomplete",
+        "elapsed_seconds": 126.17931249999674,
+        "interval_seconds": 60.03107690002071
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n100000_s44_l4_p100 revised latency: complete",
+        "elapsed_seconds": 129.2234018999734,
+        "interval_seconds": 3.044089399976656
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n100000_s44_l4_p100 baseline memory: incomplete",
+        "elapsed_seconds": 189.2524640999618,
+        "interval_seconds": 60.0290621999884
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n100000_s44_l4_p100 revised memory: complete",
+        "elapsed_seconds": 195.3904531999724,
+        "interval_seconds": 6.1379891000106
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n100000_s44_l4_p100 baseline diagnostics: incomplete",
+        "elapsed_seconds": 255.41596739995293,
+        "interval_seconds": 60.025514199980535
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n100000_s44_l4_p100 revised diagnostics: complete",
+        "elapsed_seconds": 257.3022324999911,
+        "interval_seconds": 1.8862651000381447
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_queue-concentration_n100000_s44_l1000_p100",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "44",
+      "--experiment",
+      "queue-concentration",
+      "--levels",
+      "1000",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n100000_s44_l1000_p100"
+    ],
+    "started_utc": "2026-11-26T02:07:18.405426+00:00",
+    "finished_utc": "2026-11-26T02:11:36.844249+00:00",
+    "exit_code": 2,
+    "total_command_wall_seconds": 258.43881760002114,
+    "progress": [
+      {
+        "line": "[1/9] queue-concentration_controlled_bids_n100000_s44_l1000_p100 shared io: complete",
+        "elapsed_seconds": 2.4971234999829903,
+        "interval_seconds": 2.4971234999829903
+      },
+      {
+        "line": "[2/9] queue-concentration_controlled_bids_n100000_s44_l1000_p100 baseline timing: incomplete",
+        "elapsed_seconds": 62.52490379998926,
+        "interval_seconds": 60.02778030000627
+      },
+      {
+        "line": "[3/9] queue-concentration_controlled_bids_n100000_s44_l1000_p100 revised timing: complete",
+        "elapsed_seconds": 65.75836380000692,
+        "interval_seconds": 3.233460000017658
+      },
+      {
+        "line": "[4/9] queue-concentration_controlled_bids_n100000_s44_l1000_p100 baseline latency: incomplete",
+        "elapsed_seconds": 125.78358230000595,
+        "interval_seconds": 60.02521849999903
+      },
+      {
+        "line": "[5/9] queue-concentration_controlled_bids_n100000_s44_l1000_p100 revised latency: complete",
+        "elapsed_seconds": 128.9487533000065,
+        "interval_seconds": 3.165171000000555
+      },
+      {
+        "line": "[6/9] queue-concentration_controlled_bids_n100000_s44_l1000_p100 baseline memory: incomplete",
+        "elapsed_seconds": 188.98215420002816,
+        "interval_seconds": 60.03340090002166
+      },
+      {
+        "line": "[7/9] queue-concentration_controlled_bids_n100000_s44_l1000_p100 revised memory: complete",
+        "elapsed_seconds": 195.35985589999473,
+        "interval_seconds": 6.377701699966565
+      },
+      {
+        "line": "[8/9] queue-concentration_controlled_bids_n100000_s44_l1000_p100 baseline diagnostics: incomplete",
+        "elapsed_seconds": 255.3823465000023,
+        "interval_seconds": 60.022490600007586
+      },
+      {
+        "line": "[9/9] queue-concentration_controlled_bids_n100000_s44_l1000_p100 revised diagnostics: complete",
+        "elapsed_seconds": 258.42264539998723,
+        "interval_seconds": 3.0402988999849185
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  },
+  {
+    "name": "final_cancel-churn_n100000_s44_l1_pNone",
+    "command": [
+      "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "phase1_campaign.py",
+      "--count",
+      "100000",
+      "--seed",
+      "44",
+      "--experiment",
+      "cancel-churn",
+      "--levels",
+      "1",
+      "--out",
+      "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_cancel-churn_n100000_s44_l1_pNone"
+    ],
+    "started_utc": "2026-11-26T02:11:36.849117+00:00",
+    "finished_utc": "2026-11-26T02:12:13.689704+00:00",
+    "exit_code": 0,
+    "total_command_wall_seconds": 36.84057759999996,
+    "progress": [
+      {
+        "line": "[1/9] cancel-churn_anchored_cancel_churn_n100000_s44_l1 shared io: complete",
+        "elapsed_seconds": 5.108683100028429,
+        "interval_seconds": 5.108683100028429
+      },
+      {
+        "line": "[2/9] cancel-churn_anchored_cancel_churn_n100000_s44_l1 baseline timing: complete",
+        "elapsed_seconds": 8.640476100030355,
+        "interval_seconds": 3.531793000001926
+      },
+      {
+        "line": "[3/9] cancel-churn_anchored_cancel_churn_n100000_s44_l1 revised timing: complete",
+        "elapsed_seconds": 12.069983699999284,
+        "interval_seconds": 3.429507599968929
+      },
+      {
+        "line": "[4/9] cancel-churn_anchored_cancel_churn_n100000_s44_l1 baseline latency: complete",
+        "elapsed_seconds": 14.104152699990664,
+        "interval_seconds": 2.0341689999913797
+      },
+      {
+        "line": "[5/9] cancel-churn_anchored_cancel_churn_n100000_s44_l1 revised latency: complete",
+        "elapsed_seconds": 16.092414500017185,
+        "interval_seconds": 1.988261800026521
+      },
+      {
+        "line": "[6/9] cancel-churn_anchored_cancel_churn_n100000_s44_l1 baseline memory: complete",
+        "elapsed_seconds": 24.85656340001151,
+        "interval_seconds": 8.764148899994325
+      },
+      {
+        "line": "[7/9] cancel-churn_anchored_cancel_churn_n100000_s44_l1 revised memory: complete",
+        "elapsed_seconds": 31.870673600002192,
+        "interval_seconds": 7.014110199990682
+      },
+      {
+        "line": "[8/9] cancel-churn_anchored_cancel_churn_n100000_s44_l1 baseline diagnostics: complete",
+        "elapsed_seconds": 34.34375589998672,
+        "interval_seconds": 2.473082299984526
+      },
+      {
+        "line": "[9/9] cancel-churn_anchored_cancel_churn_n100000_s44_l1 revised diagnostics: complete",
+        "elapsed_seconds": 36.82532639999408,
+        "interval_seconds": 2.481570500007365
+      }
+    ],
+    "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+  }
+]

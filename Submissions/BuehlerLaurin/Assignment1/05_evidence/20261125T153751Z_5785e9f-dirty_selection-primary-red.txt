@@ -1,0 +1,24 @@
+label: selection-primary-red
+command: ./.venv/Scripts/python.exe -m pytest 02_tests/test_dashboard.py::test_selection_primary_bars_binding_table_and_session_effect -q --tb=short --basetemp=scratch/pytest-selection-primary-red
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 5785e9fa99fce4cfebd6c386e8d8d8b1670754d1
+dirty: True
+python: 3.13.15
+utc: 20261125T153751Z
+exit_code: 1
+duration_s: 13.37
+------------------------------------------------------------
+F                                                                        [100%]
+================================== FAILURES ===================================
+________ test_selection_primary_bars_binding_table_and_session_effect _________
+02_tests\test_dashboard.py:141: in test_selection_primary_bars_binding_table_and_session_effect
+    assert len(plots) == 2
+E   assert 1 == 2
+E    +  where 1 = len([UnknownElement()])
+---------------------------- Captured stderr call -----------------------------
+2026-11-25 16:38:01.429 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+------------------------------ Captured log call ------------------------------
+WARNING  streamlit.runtime.scriptrunner_utils.script_run_context:script_run_context.py:522 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+=========================== short test summary info ===========================
+FAILED 02_tests/test_dashboard.py::test_selection_primary_bars_binding_table_and_session_effect
+1 failed in 12.00s

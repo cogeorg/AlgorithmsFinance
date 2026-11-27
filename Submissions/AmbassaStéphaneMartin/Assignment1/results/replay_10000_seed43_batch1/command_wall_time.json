@@ -1,0 +1,498 @@
+{
+  "command": [
+    "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "-B",
+    "benchmark.py",
+    "run",
+    "--counts",
+    "10000",
+    "--seeds",
+    "43",
+    "--scenarios",
+    "buildup",
+    "crowded",
+    "mixed",
+    "sweep",
+    "cancel_churn",
+    "--experiments",
+    "replay",
+    "--versions",
+    "baseline",
+    "revised",
+    "--levels",
+    "1000",
+    "--out",
+    "results\\replay_10000_seed43_batch1",
+    "--worker-seconds",
+    "60",
+    "--campaign-seconds",
+    "900",
+    "--label",
+    "remaining-small-replay"
+  ],
+  "started_utc": "2026-11-25T21:58:41.700310+00:00",
+  "finished_utc": "2026-11-25T22:05:09.095971+00:00",
+  "exit_code": 2,
+  "total_command_wall_seconds": 387.3956411999534,
+  "progress": [
+    {
+      "job_index": 1,
+      "total_jobs": 45,
+      "case_id": "replay_buildup_n10000_s43_l1000",
+      "version": null,
+      "phase": "io",
+      "status": "complete",
+      "elapsed_command_seconds": 1.1838468000059947,
+      "interval_since_previous_progress_seconds": 1.1838468000059947
+    },
+    {
+      "job_index": 2,
+      "total_jobs": 45,
+      "case_id": "replay_buildup_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 32.60639319999609,
+      "interval_since_previous_progress_seconds": 31.422546399990097
+    },
+    {
+      "job_index": 3,
+      "total_jobs": 45,
+      "case_id": "replay_buildup_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 33.01052489998983,
+      "interval_since_previous_progress_seconds": 0.40413169999374077
+    },
+    {
+      "job_index": 4,
+      "total_jobs": 45,
+      "case_id": "replay_buildup_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 43.737878799962346,
+      "interval_since_previous_progress_seconds": 10.727353899972513
+    },
+    {
+      "job_index": 5,
+      "total_jobs": 45,
+      "case_id": "replay_buildup_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 44.02201239997521,
+      "interval_since_previous_progress_seconds": 0.2841336000128649
+    },
+    {
+      "job_index": 6,
+      "total_jobs": 45,
+      "case_id": "replay_buildup_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 101.19922589999624,
+      "interval_since_previous_progress_seconds": 57.177213500021026
+    },
+    {
+      "job_index": 7,
+      "total_jobs": 45,
+      "case_id": "replay_buildup_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 101.8209085999988,
+      "interval_since_previous_progress_seconds": 0.621682700002566
+    },
+    {
+      "job_index": 8,
+      "total_jobs": 45,
+      "case_id": "replay_buildup_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 116.63177049998194,
+      "interval_since_previous_progress_seconds": 14.810861899983138
+    },
+    {
+      "job_index": 9,
+      "total_jobs": 45,
+      "case_id": "replay_buildup_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 117.14783500001067,
+      "interval_since_previous_progress_seconds": 0.5160645000287332
+    },
+    {
+      "job_index": 10,
+      "total_jobs": 45,
+      "case_id": "replay_crowded_n10000_s43_l1000",
+      "version": null,
+      "phase": "io",
+      "status": "complete",
+      "elapsed_command_seconds": 117.6311405999586,
+      "interval_since_previous_progress_seconds": 0.48330559994792566
+    },
+    {
+      "job_index": 11,
+      "total_jobs": 45,
+      "case_id": "replay_crowded_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 118.02044679998653,
+      "interval_since_previous_progress_seconds": 0.3893062000279315
+    },
+    {
+      "job_index": 12,
+      "total_jobs": 45,
+      "case_id": "replay_crowded_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 150.12355489999754,
+      "interval_since_previous_progress_seconds": 32.10310810001101
+    },
+    {
+      "job_index": 13,
+      "total_jobs": 45,
+      "case_id": "replay_crowded_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 150.39654639997752,
+      "interval_since_previous_progress_seconds": 0.2729914999799803
+    },
+    {
+      "job_index": 14,
+      "total_jobs": 45,
+      "case_id": "replay_crowded_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 161.383805999998,
+      "interval_since_previous_progress_seconds": 10.98725960002048
+    },
+    {
+      "job_index": 15,
+      "total_jobs": 45,
+      "case_id": "replay_crowded_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 161.95985439996002,
+      "interval_since_previous_progress_seconds": 0.5760483999620192
+    },
+    {
+      "job_index": 16,
+      "total_jobs": 45,
+      "case_id": "replay_crowded_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 220.06110089999856,
+      "interval_since_previous_progress_seconds": 58.10124650003854
+    },
+    {
+      "job_index": 17,
+      "total_jobs": 45,
+      "case_id": "replay_crowded_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 220.38700300001074,
+      "interval_since_previous_progress_seconds": 0.325902100012172
+    },
+    {
+      "job_index": 18,
+      "total_jobs": 45,
+      "case_id": "replay_crowded_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 234.54197089996887,
+      "interval_since_previous_progress_seconds": 14.154967899958137
+    },
+    {
+      "job_index": 19,
+      "total_jobs": 45,
+      "case_id": "replay_mixed_n10000_s43_l1000",
+      "version": null,
+      "phase": "io",
+      "status": "complete",
+      "elapsed_command_seconds": 235.01153630000772,
+      "interval_since_previous_progress_seconds": 0.46956540003884584
+    },
+    {
+      "job_index": 20,
+      "total_jobs": 45,
+      "case_id": "replay_mixed_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 240.09930359997088,
+      "interval_since_previous_progress_seconds": 5.087767299963161
+    },
+    {
+      "job_index": 21,
+      "total_jobs": 45,
+      "case_id": "replay_mixed_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 240.52590449998388,
+      "interval_since_previous_progress_seconds": 0.4266009000129998
+    },
+    {
+      "job_index": 22,
+      "total_jobs": 45,
+      "case_id": "replay_mixed_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 242.40871729998617,
+      "interval_since_previous_progress_seconds": 1.8828128000022843
+    },
+    {
+      "job_index": 23,
+      "total_jobs": 45,
+      "case_id": "replay_mixed_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 242.68325489998097,
+      "interval_since_previous_progress_seconds": 0.274537599994801
+    },
+    {
+      "job_index": 24,
+      "total_jobs": 45,
+      "case_id": "replay_mixed_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 251.30868459999328,
+      "interval_since_previous_progress_seconds": 8.625429700012319
+    },
+    {
+      "job_index": 25,
+      "total_jobs": 45,
+      "case_id": "replay_mixed_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 251.91758569999365,
+      "interval_since_previous_progress_seconds": 0.6089011000003666
+    },
+    {
+      "job_index": 26,
+      "total_jobs": 45,
+      "case_id": "replay_mixed_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 254.44832179998048,
+      "interval_since_previous_progress_seconds": 2.530736099986825
+    },
+    {
+      "job_index": 27,
+      "total_jobs": 45,
+      "case_id": "replay_mixed_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 254.82858249999117,
+      "interval_since_previous_progress_seconds": 0.38026070001069456
+    },
+    {
+      "job_index": 28,
+      "total_jobs": 45,
+      "case_id": "replay_sweep_n10000_s43_l1000",
+      "version": null,
+      "phase": "io",
+      "status": "complete",
+      "elapsed_command_seconds": 255.32076849997975,
+      "interval_since_previous_progress_seconds": 0.49218599998857826
+    },
+    {
+      "job_index": 29,
+      "total_jobs": 45,
+      "case_id": "replay_sweep_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 255.75400269997772,
+      "interval_since_previous_progress_seconds": 0.43323419999796897
+    },
+    {
+      "job_index": 30,
+      "total_jobs": 45,
+      "case_id": "replay_sweep_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 293.5803280999535,
+      "interval_since_previous_progress_seconds": 37.82632539997576
+    },
+    {
+      "job_index": 31,
+      "total_jobs": 45,
+      "case_id": "replay_sweep_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 293.87291969999205,
+      "interval_since_previous_progress_seconds": 0.29259160003857687
+    },
+    {
+      "job_index": 32,
+      "total_jobs": 45,
+      "case_id": "replay_sweep_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 306.5880895999726,
+      "interval_since_previous_progress_seconds": 12.715169899980538
+    },
+    {
+      "job_index": 33,
+      "total_jobs": 45,
+      "case_id": "replay_sweep_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 307.29936119995546,
+      "interval_since_previous_progress_seconds": 0.7112715999828652
+    },
+    {
+      "job_index": 34,
+      "total_jobs": 45,
+      "case_id": "replay_sweep_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "memory",
+      "status": "incomplete",
+      "elapsed_command_seconds": 367.3235461000004,
+      "interval_since_previous_progress_seconds": 60.02418490004493
+    },
+    {
+      "job_index": 35,
+      "total_jobs": 45,
+      "case_id": "replay_sweep_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 367.82436119997874,
+      "interval_since_previous_progress_seconds": 0.5008150999783538
+    },
+    {
+      "job_index": 36,
+      "total_jobs": 45,
+      "case_id": "replay_sweep_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 384.01373720000265,
+      "interval_since_previous_progress_seconds": 16.189376000023913
+    },
+    {
+      "job_index": 37,
+      "total_jobs": 45,
+      "case_id": "replay_cancel_churn_n10000_s43_l1000",
+      "version": null,
+      "phase": "io",
+      "status": "complete",
+      "elapsed_command_seconds": 384.4824968999601,
+      "interval_since_previous_progress_seconds": 0.46875969995744526
+    },
+    {
+      "job_index": 38,
+      "total_jobs": 45,
+      "case_id": "replay_cancel_churn_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 384.8407259999658,
+      "interval_since_previous_progress_seconds": 0.3582291000057012
+    },
+    {
+      "job_index": 39,
+      "total_jobs": 45,
+      "case_id": "replay_cancel_churn_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 385.1951349999872,
+      "interval_since_previous_progress_seconds": 0.3544090000214055
+    },
+    {
+      "job_index": 40,
+      "total_jobs": 45,
+      "case_id": "replay_cancel_churn_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 385.44105809996836,
+      "interval_since_previous_progress_seconds": 0.24592309998115525
+    },
+    {
+      "job_index": 41,
+      "total_jobs": 45,
+      "case_id": "replay_cancel_churn_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 385.70585599995684,
+      "interval_since_previous_progress_seconds": 0.2647978999884799
+    },
+    {
+      "job_index": 42,
+      "total_jobs": 45,
+      "case_id": "replay_cancel_churn_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 386.2756058999803,
+      "interval_since_previous_progress_seconds": 0.5697499000234529
+    },
+    {
+      "job_index": 43,
+      "total_jobs": 45,
+      "case_id": "replay_cancel_churn_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 386.78175189998,
+      "interval_since_previous_progress_seconds": 0.5061459999997169
+    },
+    {
+      "job_index": 44,
+      "total_jobs": 45,
+      "case_id": "replay_cancel_churn_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 387.0831383999903,
+      "interval_since_previous_progress_seconds": 0.3013865000102669
+    },
+    {
+      "job_index": 45,
+      "total_jobs": 45,
+      "case_id": "replay_cancel_churn_n10000_s43_l1000",
+      "version": "revised",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 387.3806764999754,
+      "interval_since_previous_progress_seconds": 0.29753809998510405
+    }
+  ],
+  "boundary": "External perf_counter surrounds command process creation through process exit. Includes Python startup, workload preparation, workers, warm-ups, repetitions, all measurement phases and runner output; excludes tests, audit and report writing.",
+  "progress_intervals": "Observed stdout completion intervals, not exact worker runtimes. The first interval also includes command startup and preparation.",
+  "declared_limits": {
+    "worker_seconds": 60,
+    "campaign_seconds": 900,
+    "payload_mib": 128,
+    "traced_mib": 512
+  },
+  "measurement_campaign_excludes_workload_preparation": true
+}

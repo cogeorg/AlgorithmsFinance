@@ -1,0 +1,428 @@
+{
+  "cases": [
+    {
+      "case_id": "workload_sweep_M100000_seed42",
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "sweep",
+        "seed": 42,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "sweep_M100000_seed42_levels1000.jsonl.gz": "ae1617715a5380247c7b3c7a9f622a08f5f8d197b9fcaecebd230ab5b6ffacb9"
+      },
+      "input_paths": [
+        "results\\benchmarks\\full_20261125\\inputs\\sweep_M100000_seed42_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "sweep",
+      "seed": 42
+    },
+    {
+      "case_id": "workload_sweep_M100000_seed43",
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "sweep",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "sweep_M100000_seed43_levels1000.jsonl.gz": "1dd2b973f7746afb424f45ba111859f4a5e5e646175d8b435e5d33ebd8f6cf57"
+      },
+      "input_paths": [
+        "results\\benchmarks\\full_20261125\\inputs\\sweep_M100000_seed43_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "sweep",
+      "seed": 43
+    },
+    {
+      "case_id": "workload_sweep_M100000_seed44",
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "sweep",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "sweep_M100000_seed44_levels1000.jsonl.gz": "982e16bbe6117bbf999b0bf9c5eb50805180c800e120430e10293b801bb0316e"
+      },
+      "input_paths": [
+        "results\\benchmarks\\full_20261125\\inputs\\sweep_M100000_seed44_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "sweep",
+      "seed": 44
+    },
+    {
+      "case_id": "workload_cancel_churn_M100000_seed42",
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "cancel_churn",
+        "seed": 42,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "cancel_churn_M100000_seed42_levels1000.jsonl.gz": "5b805477bb4d2dae335d5cb8f024e9f4227526e17614b036ff7a44d10ee9650b"
+      },
+      "input_paths": [
+        "results\\benchmarks\\full_20261125\\inputs\\cancel_churn_M100000_seed42_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "cancel_churn",
+      "seed": 42
+    },
+    {
+      "case_id": "workload_cancel_churn_M100000_seed43",
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "cancel_churn",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "cancel_churn_M100000_seed43_levels1000.jsonl.gz": "cc7e370561b49c66f8995477f63ed683141cb6b1c0695f389d05be96baeb91d2"
+      },
+      "input_paths": [
+        "results\\benchmarks\\full_20261125\\inputs\\cancel_churn_M100000_seed43_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "cancel_churn",
+      "seed": 43
+    },
+    {
+      "case_id": "workload_cancel_churn_M100000_seed44",
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "cancel_churn",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "cancel_churn_M100000_seed44_levels1000.jsonl.gz": "e939dbd4abd52a8bc6287d6409f70e31530eeea7472280cb325d6c47e41e4ecf"
+      },
+      "input_paths": [
+        "results\\benchmarks\\full_20261125\\inputs\\cancel_churn_M100000_seed44_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "cancel_churn",
+      "seed": 44
+    },
+    {
+      "case_id": "workload_mixed_M100000_seed44",
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "mixed",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "mixed_M100000_seed44_levels1000.jsonl.gz": "2605a8860dd6abaef082c6a7db3602c8e0d9e429baa52a97f3a8c686bc37fcee"
+      },
+      "input_paths": [
+        "results\\benchmarks\\full_20261125\\inputs\\mixed_M100000_seed44_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "mixed",
+      "seed": 44
+    },
+    {
+      "available_price_count": 4,
+      "case_id": "queue_concentration_prices4_M10000",
+      "event_count": 10000,
+      "experiment": "queue_concentration",
+      "generator_settings": {
+        "available_prices": 4,
+        "generator": "queue concentration builder",
+        "orders": 10000,
+        "quantity_rule": "same seeded quantity sequence across price concentrations",
+        "seed": 42
+      },
+      "input_checksums": {
+        "queue_concentration_prices4_M10000.jsonl": "e4cdf29f88cb45e710974f8c3db065673f3f7e3c47cb7c8e83ec2ab333cdaa0d"
+      },
+      "input_paths": [
+        "results\\benchmarks\\full_20261125\\inputs\\queue_concentration_prices4_M10000.jsonl"
+      ],
+      "scenario": "queue_4_prices",
+      "seed": 42
+    },
+    {
+      "available_price_count": 1000,
+      "case_id": "queue_concentration_prices1000_M10000",
+      "event_count": 10000,
+      "experiment": "queue_concentration",
+      "generator_settings": {
+        "available_prices": 1000,
+        "generator": "queue concentration builder",
+        "orders": 10000,
+        "quantity_rule": "same seeded quantity sequence across price concentrations",
+        "seed": 42
+      },
+      "input_checksums": {
+        "queue_concentration_prices1000_M10000.jsonl": "f183a28644a12441020074d8f99ad58fbdb8635f3ab1f59873e3fd0188bd915c"
+      },
+      "input_paths": [
+        "results\\benchmarks\\full_20261125\\inputs\\queue_concentration_prices1000_M10000.jsonl"
+      ],
+      "scenario": "queue_1000_prices",
+      "seed": 42
+    },
+    {
+      "case_id": "workload_buildup_M1000000_seed42",
+      "event_count": 1000000,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 1000000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 42,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M1000000_seed42_levels1000.jsonl.gz": "7419d40f1a55a7a5d475e6e1e4d134996fdaff31cd49c555d9880a91e588a3aa"
+      },
+      "input_paths": [
+        "results\\benchmarks\\coverage_recovery_short_20261126_1232\\inputs\\buildup_M1000000_seed42_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "buildup",
+      "seed": 42
+    }
+  ],
+  "code_hashes": {
+    "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+    "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+    "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+    "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+    "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+    "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+    "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+    "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+  },
+  "created_at_utc": "2026-11-26T11:34:24.019268+00:00",
+  "environment": {
+    "dependencies": [
+      "altair==6.3.0",
+      "anyio==4.16.0",
+      "attrs==26.1.0",
+      "certifi==2026.11.20",
+      "charset-normalizer==3.5.3",
+      "click==8.5.1",
+      "colorama==0.4.6",
+      "h11==0.16.0",
+      "idna==3.20",
+      "iniconfig==2.3.1",
+      "itsdangerous==2.2.0",
+      "Jinja2==3.1.6",
+      "jsonschema==4.26.0",
+      "jsonschema-specifications==2025.9.1",
+      "MarkupSafe==3.0.4",
+      "narwhals==2.29.0",
+      "numpy==2.5.5",
+      "packaging==26.4",
+      "pandas==3.1.1",
+      "pillow==13.0.0",
+      "pluggy==1.7.0",
+      "protobuf==7.36.2",
+      "pyarrow==26.0.1",
+      "pydeck==0.9.3",
+      "Pygments==2.21.0",
+      "pytest==9.2.0",
+      "python-dateutil==4.0.0",
+      "python-multipart==0.0.34",
+      "referencing==0.37.0",
+      "requests==2.34.2",
+      "rpds-py==2026.9.1",
+      "starlette==1.10.0",
+      "streamlit==1.67.0",
+      "typing_extensions==4.16.0",
+      "tzdata==2026.6",
+      "urllib3==2.8.0",
+      "uvicorn==0.54.0",
+      "watchdog==7.1.1",
+      "websockets==17.4"
+    ],
+    "git_branch": "assignment1",
+    "git_dirty": true,
+    "git_error": null,
+    "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+    "machine": "AMD64",
+    "os": "nt",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+    "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+    "python_version": "3.14.7"
+  },
+  "execution_scope": {
+    "command": ".\\.venv\\Scripts\\python.exe results\\coverage_recovery_execution.py",
+    "execution_script_sha256": "48d6823d024d197395882a1f08484a4546d1e09e4c7dbbb2fe5fcc77499f8bc4",
+    "note": "Only selected phases were run via the existing bounded phase worker; no engine or benchmark implementation changed.",
+    "one_million_feasibility": {
+      "event_count": 1000000,
+      "generated_bytes": 13153228,
+      "generation_command": [
+        "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\generate_orders.py",
+        "--scenario",
+        "buildup",
+        "--events",
+        "1000000",
+        "--levels",
+        "1000",
+        "--seed",
+        "42",
+        "--out",
+        "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\results\\benchmarks\\coverage_recovery_short_20261126_1232\\inputs\\buildup_M1000000_seed42_levels1000.jsonl.gz"
+      ],
+      "generation_seconds": 18.061085799941793,
+      "scenario": "buildup",
+      "seed": 42,
+      "sha256": "7419d40f1a55a7a5d475e6e1e4d134996fdaff31cd49c555d9880a91e588a3aa"
+    },
+    "phases": [
+      "engine_replay"
+    ],
+    "primary_time_limit_seconds_per_version": 30.0,
+    "sampled_memory_limit_mib_per_version": 4096.0,
+    "selected_cases": [
+      "workload_sweep_M100000_seed42",
+      "workload_sweep_M100000_seed43",
+      "workload_sweep_M100000_seed44",
+      "workload_cancel_churn_M100000_seed42",
+      "workload_cancel_churn_M100000_seed43",
+      "workload_cancel_churn_M100000_seed44",
+      "workload_mixed_M100000_seed44",
+      "queue_concentration_prices4_M10000",
+      "queue_concentration_prices1000_M10000",
+      "workload_buildup_M1000000_seed42"
+    ],
+    "source_run": "full_20261125",
+    "warmup": "one untimed replay before five timed repeats"
+  },
+  "parity_validation": [
+    {
+      "case_id": "workload_sweep_M100000_seed42",
+      "events_compared": 1000,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "workload_sweep_M100000_seed43",
+      "events_compared": 1000,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "workload_sweep_M100000_seed44",
+      "events_compared": 1000,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "workload_cancel_churn_M100000_seed42",
+      "events_compared": 1000,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "workload_cancel_churn_M100000_seed43",
+      "events_compared": 1000,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "workload_cancel_churn_M100000_seed44",
+      "events_compared": 1000,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "workload_mixed_M100000_seed44",
+      "events_compared": 1000,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "queue_concentration_prices4_M10000",
+      "events_compared": 1000,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "queue_concentration_prices1000_M10000",
+      "events_compared": 1000,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    }
+  ],
+  "run_id": "coverage_recovery_short_20261126_1232",
+  "schema_version": 1,
+  "settings": {
+    "churn_cycles": 5000,
+    "event_sizes": [
+      1000,
+      10000,
+      100000
+    ],
+    "fixed_book_orders": 1000,
+    "levels": 1000,
+    "memory_limit_mib": 4096.0,
+    "memory_monitor_poll_seconds": 0.05,
+    "parity_event_limit": 1000,
+    "phase_budgets": {
+      "counters": 30.0,
+      "latency": 30.0,
+      "memory": 30.0,
+      "primary": 30.0,
+      "profile": 30.0,
+      "state_peaks": 30.0
+    },
+    "profile": "full",
+    "profile_event_limit": 2000,
+    "queue_orders": 10000,
+    "scenarios": [
+      "buildup",
+      "crowded",
+      "mixed",
+      "sweep",
+      "cancel_churn"
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "time_limit_seconds": 30.0,
+    "timing_repeats": 5
+  }
+}

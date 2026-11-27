@@ -1,0 +1,16 @@
+{
+ "identical_result_across_versions_and_trials": {
+  "buildup|10000|1000|10%": true,
+  "buildup|10000|1000|100%": true,
+  "buildup|10000|1000|200%": true,
+  "buildup|10000|4|10%": true,
+  "buildup|10000|4|100%": true,
+  "buildup|10000|4|200%": true,
+  "buildup|100000|1000|10%": true,
+  "buildup|100000|1000|100%": true,
+  "buildup|100000|1000|200%": true,
+  "buildup|100000|4|10%": true,
+  "buildup|100000|4|100%": true,
+  "buildup|100000|4|200%": true
+ }
+}

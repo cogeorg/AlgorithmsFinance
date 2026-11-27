@@ -1,0 +1,15 @@
+label: b3r-trap-mutation-probes
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/b3r_trap_probes.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 958c8b477bc297858893ed74f0a93cd70dc7f665
+dirty: True
+python: 3.13.15
+utc: 20261122T115730Z
+exit_code: 0
+duration_s: 0.43
+------------------------------------------------------------
+KILLED by AssertionError: WrongRebuild dead_slot_rebuild rebuild iterated the levels dict
+{"scenario": "dead_slot_rebuild", "cancels": 767, "rebuilds": 12, "scanned": 1229, "stale_removed": 746, "scanned_per_cancel": 1.6023468057366363}
+KILLED by AssertionError: WrongBothSides two_side_thrash 
+{"scenario": "two_side_thrash", "cancels": 257, "rebuilds": 3, "scanned": 102, "stale_removed": 99, "scanned_per_cancel": 0.3968871595330739}
+RESULT: PASS (both attack-trap mutants killed without timing; real B3r logical scan credits <=2 per cancel)

@@ -1,0 +1,103 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "limit_at_touch",
+ "description": "Limits one tick away do not cross; a buy exactly at the best ask and a sell exactly at the best bid do cross (>= and <=).",
+ "covers": [
+  "limit at the touch crosses",
+  "noncrossing residual limits",
+  "crossing on both sides"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "order_id": "a1",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e3",
+   "order_id": "s1",
+   "status": "resting",
+   "unfilled_qty_units": 1,
+   "fills": []
+  },
+  {
+   "event_id": "e4",
+   "order_id": "b2",
+   "status": "resting",
+   "unfilled_qty_units": 1,
+   "fills": []
+  },
+  {
+   "event_id": "e5",
+   "order_id": "x1",
+   "status": "resting",
+   "unfilled_qty_units": 1,
+   "fills": [
+    {
+     "maker_id": "s1",
+     "taker_id": "x1",
+     "price_ticks": 101,
+     "qty_units": 1
+    }
+   ]
+  },
+  {
+   "event_id": "e6",
+   "order_id": "x2",
+   "status": "resting",
+   "unfilled_qty_units": 2,
+   "fills": [
+    {
+     "maker_id": "x1",
+     "taker_id": "x2",
+     "price_ticks": 101,
+     "qty_units": 1
+    }
+   ]
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "b1",
+   "side": "BUY",
+   "price_ticks": 100,
+   "qty_units": 5,
+   "arrival_seq": 1
+  },
+  {
+   "order_id": "b2",
+   "side": "BUY",
+   "price_ticks": 100,
+   "qty_units": 1,
+   "arrival_seq": 4
+  },
+  {
+   "order_id": "x2",
+   "side": "SELL",
+   "price_ticks": 101,
+   "qty_units": 2,
+   "arrival_seq": 6
+  },
+  {
+   "order_id": "a1",
+   "side": "SELL",
+   "price_ticks": 102,
+   "qty_units": 5,
+   "arrival_seq": 2
+  }
+ ],
+ "best_bid": 100,
+ "best_ask": 101
+}

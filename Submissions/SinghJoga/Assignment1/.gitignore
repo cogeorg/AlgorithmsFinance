@@ -1,0 +1,38 @@
+.venv/
+__pycache__/
+.pytest_cache/
+!AGENTS.md
+
+# Generated datasets above the supplied 10,000-event samples.
+data/*_1000.jsonl.gz*
+data/*_100000.jsonl.gz*
+data/*_1000000.jsonl.gz*
+
+# Generated benchmark inputs are reproducible and remain excluded.
+results/benchmarks/*/inputs/
+
+# Keep evidence files while ignoring other incidental artifact files.
+results/benchmarks/*/artifacts/
+!results/benchmarks/*/artifacts/
+!results/benchmarks/*/artifacts/**/
+!results/benchmarks/*/artifacts/**/latencies.jsonl
+!results/benchmarks/*/artifacts/**/*.prof
+!results/benchmarks/*/artifacts/**/*.txt
+
+results/benchmarks/*/records/
+!results/benchmarks/*/records/
+!results/benchmarks/*/records/*.json
+
+results/benchmarks/*/metadata.json
+!results/benchmarks/*/metadata.json
+results/benchmarks/*/generation_or_validation_error.json
+!results/benchmarks/*/generation_or_validation_error.json
+
+results/benchmark_*_console.txt
+!results/benchmark_*_console.txt
+results/benchmark_matrix_*.log
+!results/benchmark_matrix_*.log
+results/coverage.csv
+!results/coverage.csv
+*.tmp
+*.part

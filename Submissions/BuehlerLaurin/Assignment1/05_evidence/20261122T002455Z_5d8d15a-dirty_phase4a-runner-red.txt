@@ -1,0 +1,30 @@
+label: phase4a-runner-red
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -m pytest 02_tests/test_bench_pipeline.py -q --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 5d8d15a410b380b2eb4f5831c7c637abdc5c3106
+dirty: True
+python: 3.13.15
+utc: 20261122T002455Z
+exit_code: 1
+duration_s: 1.33
+------------------------------------------------------------
+..FF.                                                                    [100%]
+================================== FAILURES ===================================
+____________ test_counting_a_is_same_kernel_and_rejects_atomically ____________
+02_tests\test_bench_pipeline.py:30: in test_counting_a_is_same_kernel_and_rejects_atomically
+    a, counted = make_book("A"), make_book("A", counted=True)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\bench\core.py:9: in make_book
+    raise NotImplementedError("Phase 4a counting adapter for A")
+E   NotImplementedError: Phase 4a counting adapter for A
+______ test_phase_guard_stops_one_replay_without_waiting_for_whole_cell _______
+02_tests\test_bench_pipeline.py:46: in test_phase_guard_stops_one_replay_without_waiting_for_whole_cell
+    result = run_phased([sys.executable, "-c", code], 0.05)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\bench\guard.py:5: in run_phased
+    raise NotImplementedError("Phase 4a per-replay watchdog")
+E   NotImplementedError: Phase 4a per-replay watchdog
+=========================== short test summary info ===========================
+FAILED 02_tests/test_bench_pipeline.py::test_counting_a_is_same_kernel_and_rejects_atomically
+FAILED 02_tests/test_bench_pipeline.py::test_phase_guard_stops_one_replay_without_waiting_for_whole_cell
+2 failed, 3 passed in 0.60s

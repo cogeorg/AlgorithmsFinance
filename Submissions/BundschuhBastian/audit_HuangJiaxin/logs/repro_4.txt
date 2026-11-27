@@ -1,0 +1,55 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+___________________ test_odd_ids_hit_rate_zero_gives_no_hits ___________________
+
+    def test_odd_ids_hit_rate_zero_gives_no_hits():
+        ids = [1, 3, 5, 7, 9, 11]
+        queries = make_queries(ids, 10, 0.0, seed=1)
+        hits = sum(x in set(ids) for x in queries)
+>       assert hits == 0, f"hit_rate 0.0 but {hits} of 10 queries are present: {queries}"
+E       AssertionError: hit_rate 0.0 but 7 of 10 queries are present: [21, 25, 3, 9, 3, 23, 5, 1, 11, 9]
+E       assert 7 == 0
+
+audit_HuangJiaxin/reproducers/repro_4_absent_queries_not_absent.py:19: AssertionError
+________________________ test_negative_ids_are_accepted ________________________
+
+    def test_negative_ids_are_accepted():
+        ids = [-10, -4]                       # valid integer trade IDs per the specification
+>       queries = make_queries(ids, 10, 0.5, seed=1)   # ValueError: empty range for randrange()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+audit_HuangJiaxin/reproducers/repro_4_absent_queries_not_absent.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../HuangJiaxin/data.py:34: in make_queries
+    absent = [2 * rng.randrange(top // 2 + 1) + 1 for _ in range(q - n_hit)]  # odd
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <random.Random object at 0x280dfcd0>, start = -2, stop = None, step = 1
+
+    def randrange(self, start, stop=None, step=_ONE):
+        """Choose a random item from range(stop) or range(start, stop[, step]).
+    
+        Roughly equivalent to ``choice(range(start, stop, step))`` but
+        supports arbitrarily large ranges and is optimized for common cases.
+    
+        """
+    
+        # This code is a bit messy to make it fast for the
+        # common case while still doing adequate error checking.
+        istart = _index(start)
+        if stop is None:
+            # We don't check for "step != 1" because it hasn't been
+            # type checked and converted to an integer yet.
+            if step is not _ONE:
+                raise TypeError("Missing a non-None stop argument")
+            if istart > 0:
+                return self._randbelow(istart)
+>           raise ValueError("empty range for randrange()")
+E           ValueError: empty range for randrange()
+
+/usr/local/lib/python3.13/random.py:313: ValueError
+=========================== short test summary info ============================
+FAILED audit_HuangJiaxin/reproducers/repro_4_absent_queries_not_absent.py::test_odd_ids_hit_rate_zero_gives_no_hits
+FAILED audit_HuangJiaxin/reproducers/repro_4_absent_queries_not_absent.py::test_negative_ids_are_accepted
+2 failed in 0.29s

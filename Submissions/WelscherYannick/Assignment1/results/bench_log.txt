@@ -1,0 +1,392 @@
+Thu Nov 26 15:40:40 CET 2026
+buildup_1000_s42_l1000.jsonl.gz               9b3054be934ed3df
+buildup_1000_s43_l1000.jsonl.gz               037e723135ac3bb6
+buildup_1000_s44_l1000.jsonl.gz               6bc6459b09796ef5
+buildup_10000_s42_l1000.jsonl.gz              441db8ecf3710311
+buildup_10000_s43_l1000.jsonl.gz              25f25e183271ebce
+buildup_10000_s44_l1000.jsonl.gz              a2392b86e396c336
+buildup_100000_s42_l1000.jsonl.gz             3d6ffabf40ead705
+buildup_100000_s43_l1000.jsonl.gz             e949f2e93500a226
+buildup_100000_s44_l1000.jsonl.gz             16ddbfcc41557482
+crowded_1000_s42_l1000.jsonl.gz               30053d0b678d452f
+crowded_1000_s43_l1000.jsonl.gz               5ea0ceea89148c35
+crowded_1000_s44_l1000.jsonl.gz               1ee8aace9734c93c
+crowded_10000_s42_l1000.jsonl.gz              112bc3ad120eb436
+crowded_10000_s43_l1000.jsonl.gz              0d482988b03a4ca3
+crowded_10000_s44_l1000.jsonl.gz              d4c3778717962bf4
+crowded_100000_s42_l1000.jsonl.gz             e96395f4d3db4ecc
+crowded_100000_s43_l1000.jsonl.gz             d0fc59f1a3636aee
+crowded_100000_s44_l1000.jsonl.gz             832a37991a5816f2
+mixed_1000_s42_l1000.jsonl.gz                 8c3455dc8370f2e0
+mixed_1000_s43_l1000.jsonl.gz                 002a4bb66fdd24f9
+mixed_1000_s44_l1000.jsonl.gz                 051284b7198e345b
+mixed_10000_s42_l1000.jsonl.gz                f5a027da6b31209d
+mixed_10000_s43_l1000.jsonl.gz                2e6f1d4dfc78d46a
+mixed_10000_s44_l1000.jsonl.gz                b9a68b87f1922d1d
+mixed_100000_s42_l1000.jsonl.gz               83aa4dfb3468228d
+mixed_100000_s43_l1000.jsonl.gz               1ef72b12ab563ce6
+mixed_100000_s44_l1000.jsonl.gz               d015100d548d4d1b
+sweep_1000_s42_l1000.jsonl.gz                 e4ec73a1792d215d
+sweep_1000_s43_l1000.jsonl.gz                 11619704e2b389d1
+sweep_1000_s44_l1000.jsonl.gz                 ea3de66deeef120f
+sweep_10000_s42_l1000.jsonl.gz                c507559642124455
+sweep_10000_s43_l1000.jsonl.gz                c855424b4a836ad1
+sweep_10000_s44_l1000.jsonl.gz                ff72b1d7292b6dba
+sweep_100000_s42_l1000.jsonl.gz               cb15a30b8541947f
+sweep_100000_s43_l1000.jsonl.gz               fccad62402602a0f
+sweep_100000_s44_l1000.jsonl.gz               8896f6c5b343ed34
+cancel_churn_1000_s42_l1000.jsonl.gz          2994e992735f3a2a
+cancel_churn_1000_s43_l1000.jsonl.gz          1a3972c9c249f09d
+cancel_churn_1000_s44_l1000.jsonl.gz          3418127dc6ba01bd
+cancel_churn_10000_s42_l1000.jsonl.gz         7aef5f014e6d1e5d
+cancel_churn_10000_s43_l1000.jsonl.gz         02e85c19c30f2b61
+cancel_churn_10000_s44_l1000.jsonl.gz         533fbc3a190e00d9
+cancel_churn_100000_s42_l1000.jsonl.gz        d633254ec2c5e732
+cancel_churn_100000_s43_l1000.jsonl.gz        332836860cd12dd3
+cancel_churn_100000_s44_l1000.jsonl.gz        b7509b134016db7c
+mixed_1000000_s42_l1000.jsonl.gz              f607056fe5724e55
+buildup_1000000_s42_l1000.jsonl.gz            00c6667cd39145e7
+buildup_10000_s42_l4.jsonl.gz                 112bc3ad120eb436
+buildup_100000_s42_l4.jsonl.gz                e96395f4d3db4ecc
+{"buildup": true, "crowded": true, "mixed": true, "sweep": true, "cancel_churn": true}
+OK   data/buildup_10000.jsonl.gz 
+OK   data/crowded_10000.jsonl.gz 
+OK   data/mixed_10000.jsonl.gz 
+OK   data/sweep_10000.jsonl.gz 
+OK   data/cancel_churn_10000.jsonl.gz 
+OK   data/generated/buildup_1000_s42_l1000.jsonl.gz 
+OK   data/generated/buildup_1000_s43_l1000.jsonl.gz 
+OK   data/generated/buildup_1000_s44_l1000.jsonl.gz 
+OK   data/generated/crowded_1000_s42_l1000.jsonl.gz 
+OK   data/generated/crowded_1000_s43_l1000.jsonl.gz 
+OK   data/generated/crowded_1000_s44_l1000.jsonl.gz 
+OK   data/generated/mixed_1000_s42_l1000.jsonl.gz 
+OK   data/generated/mixed_1000_s43_l1000.jsonl.gz 
+OK   data/generated/mixed_1000_s44_l1000.jsonl.gz 
+OK   data/generated/sweep_1000_s42_l1000.jsonl.gz 
+OK   data/generated/sweep_1000_s43_l1000.jsonl.gz 
+OK   data/generated/sweep_1000_s44_l1000.jsonl.gz 
+OK   data/generated/cancel_churn_1000_s42_l1000.jsonl.gz 
+OK   data/generated/cancel_churn_1000_s43_l1000.jsonl.gz 
+OK   data/generated/cancel_churn_1000_s44_l1000.jsonl.gz 
+['Ran 74 tests in 5.842s', 'OK']
+A buildup          1000 s42: ok                 median 0.0133s (0.1s wall)
+B buildup          1000 s42: ok                 median 0.0005s (0.0s wall)
+A buildup          1000 s43: ok                 median 0.0146s (0.1s wall)
+B buildup          1000 s43: ok                 median 0.0005s (0.0s wall)
+A buildup          1000 s44: ok                 median 0.0131s (0.1s wall)
+B buildup          1000 s44: ok                 median 0.0005s (0.0s wall)
+A crowded          1000 s42: ok                 median 0.0132s (0.1s wall)
+B crowded          1000 s42: ok                 median 0.0004s (0.0s wall)
+A crowded          1000 s43: ok                 median 0.0129s (0.1s wall)
+B crowded          1000 s43: ok                 median 0.0004s (0.0s wall)
+A crowded          1000 s44: ok                 median 0.0129s (0.1s wall)
+B crowded          1000 s44: ok                 median 0.0004s (0.0s wall)
+A mixed            1000 s42: ok                 median 0.0024s (0.0s wall)
+B mixed            1000 s42: ok                 median 0.0005s (0.0s wall)
+A mixed            1000 s43: ok                 median 0.0024s (0.0s wall)
+B mixed            1000 s43: ok                 median 0.0005s (0.0s wall)
+A mixed            1000 s44: ok                 median 0.0025s (0.0s wall)
+B mixed            1000 s44: ok                 median 0.0005s (0.0s wall)
+A sweep            1000 s42: ok                 median 0.0115s (0.1s wall)
+B sweep            1000 s42: ok                 median 0.0006s (0.0s wall)
+A sweep            1000 s43: ok                 median 0.0122s (0.1s wall)
+B sweep            1000 s43: ok                 median 0.0006s (0.0s wall)
+A sweep            1000 s44: ok                 median 0.0114s (0.1s wall)
+B sweep            1000 s44: ok                 median 0.0006s (0.0s wall)
+A cancel_churn     1000 s42: ok                 median 0.0005s (0.0s wall)
+B cancel_churn     1000 s42: ok                 median 0.0004s (0.0s wall)
+A cancel_churn     1000 s43: ok                 median 0.0006s (0.0s wall)
+B cancel_churn     1000 s43: ok                 median 0.0004s (0.0s wall)
+A cancel_churn     1000 s44: ok                 median 0.0005s (0.0s wall)
+B cancel_churn     1000 s44: ok                 median 0.0004s (0.0s wall)
+A buildup         10000 s42: ok                 median 1.3259s (7.8s wall)
+B buildup         10000 s42: ok                 median 0.0049s (0.1s wall)
+A buildup         10000 s43: ok                 median 1.2974s (7.7s wall)
+B buildup         10000 s43: ok                 median 0.0047s (0.1s wall)
+A buildup         10000 s44: ok                 median 1.2601s (7.4s wall)
+B buildup         10000 s44: ok                 median 0.0047s (0.1s wall)
+A crowded         10000 s42: ok                 median 1.3022s (7.6s wall)
+B crowded         10000 s42: ok                 median 0.0042s (0.1s wall)
+A crowded         10000 s43: ok                 median 1.3079s (7.7s wall)
+B crowded         10000 s43: ok                 median 0.0042s (0.1s wall)
+A crowded         10000 s44: ok                 median 1.2873s (7.6s wall)
+B crowded         10000 s44: ok                 median 0.0042s (0.1s wall)
+A mixed           10000 s42: ok                 median 0.1858s (1.2s wall)
+B mixed           10000 s42: ok                 median 0.0053s (0.1s wall)
+A mixed           10000 s43: ok                 median 0.1983s (1.2s wall)
+B mixed           10000 s43: ok                 median 0.0053s (0.1s wall)
+A mixed           10000 s44: ok                 median 0.1874s (1.2s wall)
+B mixed           10000 s44: ok                 median 0.0054s (0.1s wall)
+A sweep           10000 s42: ok                 median 1.1893s (7.0s wall)
+B sweep           10000 s42: ok                 median 0.0059s (0.1s wall)
+A sweep           10000 s43: ok                 median 1.1863s (7.0s wall)
+B sweep           10000 s43: ok                 median 0.0057s (0.1s wall)
+A sweep           10000 s44: ok                 median 1.1874s (7.0s wall)
+B sweep           10000 s44: ok                 median 0.0057s (0.1s wall)
+A cancel_churn    10000 s42: ok                 median 0.0054s (0.1s wall)
+B cancel_churn    10000 s42: ok                 median 0.0038s (0.1s wall)
+A cancel_churn    10000 s43: ok                 median 0.0054s (0.1s wall)
+B cancel_churn    10000 s43: ok                 median 0.0038s (0.1s wall)
+A cancel_churn    10000 s44: ok                 median 0.0054s (0.1s wall)
+B cancel_churn    10000 s44: ok                 median 0.0038s (0.1s wall)
+A buildup        100000 s42: stopped_time_limit median - (120.0s wall)
+B buildup        100000 s42: ok                 median 0.0557s (0.5s wall)
+A buildup        100000 s43: not attempted
+B buildup        100000 s43: ok                 median 0.0556s (0.5s wall)
+A buildup        100000 s44: not attempted
+B buildup        100000 s44: ok                 median 0.0553s (0.5s wall)
+A crowded        100000 s42: stopped_time_limit median - (120.0s wall)
+B crowded        100000 s42: ok                 median 0.0525s (0.5s wall)
+A crowded        100000 s43: not attempted
+B crowded        100000 s43: ok                 median 0.0520s (0.5s wall)
+A crowded        100000 s44: not attempted
+B crowded        100000 s44: ok                 median 0.0515s (0.5s wall)
+A mixed          100000 s42: ok                 median 18.1224s (108.4s wall)
+B mixed          100000 s42: ok                 median 0.0524s (0.5s wall)
+A mixed          100000 s43: ok                 median 18.4801s (110.5s wall)
+B mixed          100000 s43: ok                 median 0.0540s (0.5s wall)
+A mixed          100000 s44: ok                 median 18.0661s (108.0s wall)
+B mixed          100000 s44: ok                 median 0.0535s (0.5s wall)
+A sweep          100000 s42: stopped_time_limit median - (120.0s wall)
+B sweep          100000 s42: ok                 median 0.0726s (0.6s wall)
+A sweep          100000 s43: not attempted
+B sweep          100000 s43: ok                 median 0.0700s (0.6s wall)
+A sweep          100000 s44: not attempted
+B sweep          100000 s44: ok                 median 0.0772s (0.6s wall)
+A cancel_churn   100000 s42: ok                 median 0.0554s (0.5s wall)
+B cancel_churn   100000 s42: ok                 median 0.0381s (0.4s wall)
+A cancel_churn   100000 s43: ok                 median 0.0556s (0.5s wall)
+B cancel_churn   100000 s43: ok                 median 0.0386s (0.4s wall)
+A cancel_churn   100000 s44: ok                 median 0.0548s (0.5s wall)
+B cancel_churn   100000 s44: ok                 median 0.0385s (0.4s wall)
+A mixed         1000000 s42: stopped_time_limit median - (120.0s wall)
+B mixed         1000000 s42: ok                 median 0.6512s (5.1s wall)
+A buildup       1000000 s42: not attempted
+B buildup       1000000 s42: ok                 median 1.4260s (11.0s wall)
+buildup      step1_levels    median    99.6 ms  identical=True
+buildup      step2_fastpath  median    67.5 ms  identical=True
+buildup      step3_lists     median    59.6 ms  identical=True
+crowded      step1_levels    median    96.1 ms  identical=True
+crowded      step2_fastpath  median    60.4 ms  identical=True
+crowded      step3_lists     median    55.2 ms  identical=True
+mixed        step1_levels    median    84.6 ms  identical=True
+mixed        step2_fastpath  median    57.8 ms  identical=True
+mixed        step3_lists     median    53.6 ms  identical=True
+sweep        step1_levels    median   111.6 ms  identical=True
+sweep        step2_fastpath  median    81.1 ms  identical=True
+sweep        step3_lists     median    93.3 ms  identical=True
+cancel_churn step1_levels    median    63.2 ms  identical=True
+cancel_churn step2_fastpath  median    42.0 ms  identical=True
+cancel_churn step3_lists     median    38.2 ms  identical=True
+A buildup_10000_l1000  10%: ok median sell 0.04986s fills 522
+B buildup_10000_l1000  10%: ok median sell 0.00016s fills 522
+A buildup_10000_l1000 100%: ok median sell 0.25035s fills 5025
+B buildup_10000_l1000 100%: ok median sell 0.00137s fills 5025
+A buildup_10000_l1000 200%: ok median sell 0.24966s fills 5025
+B buildup_10000_l1000 200%: ok median sell 0.00148s fills 5025
+A buildup_10000_l4  10%: ok median sell 0.04097s fills 486
+B buildup_10000_l4  10%: ok median sell 0.00012s fills 486
+A buildup_10000_l4 100%: ok median sell 0.21795s fills 4956
+B buildup_10000_l4 100%: ok median sell 0.00111s fills 4956
+A buildup_10000_l4 200%: ok median sell 0.21981s fills 4956
+B buildup_10000_l4 200%: ok median sell 0.00107s fills 4956
+A buildup_100000_l1000  10%: ok median sell 5.04128s fills 4990
+B buildup_100000_l1000  10%: ok median sell 0.00312s fills 4990
+A buildup_100000_l1000 100%: stopped_time_limit median sell 26.13976s fills 49988
+B buildup_100000_l1000 100%: ok median sell 0.02229s fills 49988
+A buildup_100000_l1000 200%: stopped_time_limit median sell 26.97502s fills 49988
+B buildup_100000_l1000 200%: ok median sell 0.02194s fills 49988
+A buildup_100000_l4  10%: ok median sell 4.10953s fills 4950
+B buildup_100000_l4  10%: ok median sell 0.00183s fills 4950
+A buildup_100000_l4 100%: stopped_time_limit median sell 22.76984s fills 49863
+B buildup_100000_l4 100%: ok median sell 0.01626s fills 49863
+A buildup_100000_l4 200%: stopped_time_limit median sell 22.44144s fills 49863
+B buildup_100000_l4 200%: ok median sell 0.01717s fills 49863
+all identical: True
+A buildup        10000: p50 121500 p95 227666 p99 240792 ns; early p50 11791 late p50 227334
+B buildup        10000: p50 459 p95 708 p99 1333 ns; early p50 583 late p50 500
+A crowded        10000: p50 125750 p95 233584 p99 246709 ns; early p50 12375 late p50 233292
+B crowded        10000: p50 458 p95 542 p99 708 ns; early p50 417 late p50 458
+A mixed          10000: p50 15208 p95 50416 p99 73708 ns; early p50 2208 late p50 30875
+B mixed          10000: p50 500 p95 1208 p99 2125 ns; early p50 500 late p50 500
+A sweep          10000: p50 99667 p95 253166 p99 515666 ns; early p50 12458 late p50 47291
+B sweep          10000: p50 459 p95 1833 p99 2709 ns; early p50 583 late p50 291
+A cancel_churn   10000: p50 625 p95 750 p99 875 ns; early p50 625 late p50 625
+B cancel_churn   10000: p50 417 p95 541 p99 583 ns; early p50 417 late p50 417
+A buildup 100000 not attempted
+B buildup       100000: p50 500 p95 917 p99 3875 ns; early p50 500 late p50 542
+A crowded 100000 not attempted
+B crowded       100000: p50 500 p95 750 p99 1292 ns; early p50 500 late p50 500
+A mixed         100000: p50 136084 p95 482417 p99 754167 ns; early p50 15084 late p50 283041
+B mixed         100000: p50 500 p95 1250 p99 2042 ns; early p50 542 late p50 500
+A sweep 100000 not attempted
+B sweep         100000: p50 541 p95 2750 p99 4291 ns; early p50 500 late p50 292
+A cancel_churn  100000: p50 625 p95 833 p99 1042 ns; early p50 666 late p50 625
+B cancel_churn  100000: p50 417 p95 583 p99 667 ns; early p50 458 late p50 417
+A buildup        10000: replay peak 807365 B, book after 805476 B
+B buildup        10000: replay peak 2286393 B, book after 2275096 B
+A crowded        10000: replay peak 807365 B, book after 805476 B
+B crowded        10000: replay peak 1752486 B, book after 1749952 B
+A mixed          10000: replay peak 135444 B, book after 130684 B
+B mixed          10000: replay peak 622120 B, book after 600072 B
+A sweep          10000: replay peak 646220 B, book after 351348 B
+B sweep          10000: replay peak 1981967 B, book after 1132104 B
+A cancel_churn   10000: replay peak 3710 B, book after 1828 B
+B cancel_churn   10000: replay peak 4190 B, book after 2268 B
+A buildup 100000 not attempted
+B buildup       100000: replay peak 20969141 B, book after 20957840 B
+A crowded 100000 not attempted
+B crowded       100000: replay peak 21268778 B, book after 21266240 B
+A mixed         100000: replay peak 1216760 B, book after 1211628 B
+B mixed         100000: replay peak 3972856 B, book after 3819456 B
+A sweep 100000 not attempted
+B sweep         100000: replay peak 15340419 B, book after 8660976 B
+A cancel_churn  100000: replay peak 3711 B, book after 1828 B
+B cancel_churn  100000: replay peak 4191 B, book after 2268 B
+buildup         1000: A steps        749,464  B steps     81,551
+crowded         1000: A steps        749,100  B steps      1,009
+mixed           1000: A steps        100,014  B steps      9,824
+sweep           1000: A steps        679,327  B steps     57,327
+cancel_churn    1000: A steps            500  B steps      1,000
+buildup        10000: A steps     74,994,375  B steps    502,152
+crowded        10000: A steps     74,993,064  B steps     10,009
+mixed          10000: A steps     10,204,537  B steps    240,114
+sweep          10000: A steps     68,079,381  B steps    500,641
+cancel_churn   10000: A steps          5,000  B steps     10,000
+buildup       100000: A not attempted  B steps    605,052
+crowded       100000: A not attempted  B steps    100,009
+mixed         100000: A steps  1,010,497,919  B steps    487,135
+sweep         100000: A not attempted  B steps    655,087
+cancel_churn  100000: A steps         50,000  B steps    100,000
+A buildup 10000: total 1.217s; top: book_a.py:25(_is_live) 57%; book_a.py:34(_best_index) 39%; common.py:88(validate) 1%
+B buildup 10000: total 0.008s; top: book_b.py:57(process) 82%; <method 'get' of 'dict' objects> 9%; <built-in method _bisect.insort_right> 4%
+A mixed 10000: total 0.210s; top: book_a.py:25(_is_live) 39%; book_a.py:34(_best_index) 28%; book_a.py:76(_cancel) 17%
+B mixed 10000: total 0.012s; top: book_b.py:57(process) 55%; book_b.py:180(_take) 20%; book_b.py:166(_add_level) 5%
+B buildup 100000: total 0.115s; top: book_b.py:57(process) 92%; <method 'get' of 'dict' objects> 7%; <built-in method _bisect.insort_right> 0%
+B mixed 100000: total 0.117s; top: book_b.py:57(process) 57%; book_b.py:180(_take) 20%; <method 'get' of 'dict' objects> 5%
+## Replay (median seconds of 5 repeats, seed 42; throughput in events/s)
+
+| scenario | M | peak B | peak P | fills F | A replay s | B replay s | A events/s | B events/s | B parse s | A/B |
+|---|---|---|---|---|---|---|---|---|---|---|
+| buildup | 1,000 | 1,000 | 805 | 0 | 0.01332 | 0.000501 | 75,064 | 1,996,008 | 0.001118 | 26.6 |
+| buildup | 10,000 | 10,000 | 1,977 | 0 | 1.326 | 0.004878 | 7,542 | 2,050,021 | 0.01133 | 272 |
+| buildup | 100,000 | 100,000 | 2,000 | 0 | stopped_time_limit | 0.0557 | – | 1,795,461 | 0.1016 | – |
+| buildup | 1,000,000 | 1,000,000 | 2,000 | 0 | not_attempted | 1.426 | – | 701,260 | 1.032 | – |
+| crowded | 1,000 | 1,000 | 8 | 0 | 0.0132 | 0.000393 | 75,769 | 2,544,529 | 0.001073 | 33.6 |
+| crowded | 10,000 | 10,000 | 8 | 0 | 1.302 | 0.004174 | 7,680 | 2,395,783 | 0.01112 | 312 |
+| crowded | 100,000 | 100,000 | 8 | 0 | stopped_time_limit | 0.05255 | – | 1,903,058 | 0.1027 | – |
+| mixed | 1,000 | 140 | 126 | 374 | 0.002357 | 0.000516 | 424,268 | 1,937,984 | 0.00103 | 4.57 |
+| mixed | 10,000 | 1,588 | 752 | 3,926 | 0.1858 | 0.005254 | 53,811 | 1,903,312 | 0.01008 | 35.4 |
+| mixed | 100,000 | 15,118 | 894 | 38,988 | 18.12 | 0.05241 | 5,518 | 1,908,142 | 0.09514 | 346 |
+| mixed | 1,000,000 | 150,832 | 907 | 390,558 | stopped_time_limit | 0.6512 | – | 1,535,624 | 0.9564 | – |
+| sweep | 1,000 | 800 | 661 | 496 | 0.01152 | 0.000616 | 86,775 | 1,623,377 | 0.001111 | 18.7 |
+| sweep | 10,000 | 8,000 | 1,959 | 5,035 | 1.189 | 0.00587 | 8,409 | 1,703,578 | 0.01051 | 203 |
+| sweep | 100,000 | 80,000 | 2,000 | 50,035 | stopped_time_limit | 0.07259 | – | 1,377,657 | 0.1008 | – |
+| cancel_churn | 1,000 | 1 | 1 | 0 | 0.000543 | 0.000388 | 1,841,621 | 2,577,320 | 0.000955 | 1.4 |
+| cancel_churn | 10,000 | 1 | 1 | 0 | 0.005421 | 0.003803 | 1,844,678 | 2,629,503 | 0.009622 | 1.43 |
+| cancel_churn | 100,000 | 1 | 1 | 0 | 0.05542 | 0.03809 | 1,804,338 | 2,625,154 | 0.0921 | 1.45 |
+
+Seed spread (B replay median over seeds 42/43/44, M = 100,000): buildup 0.05534–0.0557 s, crowded 0.05149–0.05255 s, mixed 0.05241–0.05397 s, sweep 0.07001–0.07717 s, cancel_churn 0.03809–0.0386 s
+
+Stopped / not attempted (version, scenario, M): A buildup 100,000; A buildup 1,000,000; A crowded 100,000; A mixed 1,000,000; A sweep 100,000
+
+## Large market sell (median seconds of 5 trials; reset reported separately)
+
+| book | sale | requested units | fills F | levels L | unfilled | A sell s | B sell s | A reset s | B reset s | A work | B work |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| buildup_l1000 after 10,000 (5025 bid orders) | 10% | 25,592,900,000 | 522 | 97 | 0 | 0.04986 | 0.000157 | 0.002749 | 0.003454 | 2,487,069 | 619 |
+| buildup_l1000 after 10,000 (5025 bid orders) | 100% | 255,929,000,000 | 5025 | 988 | 0 | 0.2503 | 0.001372 | 0.002771 | 0.003229 | 12,627,825 | 6,013 |
+| buildup_l1000 after 10,000 (5025 bid orders) | 200% | 511,858,000,000 | 5025 | 988 | 255929000000 | 0.2497 | 0.001479 | 0.002746 | 0.003439 | 12,627,825 | 6,013 |
+| buildup_l4 after 10,000 (4956 bid orders) | 10% | 24,647,800,000 | 486 | 1 | 0 | 0.04097 | 0.000119 | 0.001965 | 0.002554 | 2,290,761 | 487 |
+| buildup_l4 after 10,000 (4956 bid orders) | 100% | 246,478,000,000 | 4956 | 4 | 0 | 0.2179 | 0.001115 | 0.001984 | 0.002312 | 12,283,446 | 4,960 |
+| buildup_l4 after 10,000 (4956 bid orders) | 200% | 492,956,000,000 | 4956 | 4 | 246478000000 | 0.2198 | 0.001073 | 0.002066 | 0.002302 | 12,283,446 | 4,960 |
+| buildup_l1000 after 100,000 (49988 bid orders) | 10% | 252,002,500,000 | 4990 | 102 | 0 | 5.041 | 0.003116 | 0.04193 | 0.06764 | 236,992,565 | 5,092 |
+| buildup_l1000 after 100,000 (49988 bid orders) | 100% | 2,520,025,000,000 | 49988 | 1000 | 0 | stopped (3 of 5 finished) | 0.02228 | 0.04002 | 0.06594 | 1,249,425,066 | 50,988 |
+| buildup_l1000 after 100,000 (49988 bid orders) | 200% | 5,040,050,000,000 | 49988 | 1000 | 2520025000000 | stopped (3 of 5 finished) | 0.02194 | 0.04162 | 0.06507 | 1,249,425,066 | 50,988 |
+| buildup_l4 after 100,000 (49863 bid orders) | 10% | 251,196,700,000 | 4950 | 1 | 0 | 4.11 | 0.00183 | 0.02537 | 0.04348 | 234,573,075 | 4,951 |
+| buildup_l4 after 100,000 (49863 bid orders) | 100% | 2,511,967,000,000 | 49863 | 4 | 0 | stopped (4 of 5 finished) | 0.01626 | 0.02573 | 0.04085 | 1,243,184,316 | 49,867 |
+| buildup_l4 after 100,000 (49863 bid orders) | 200% | 5,023,934,000,000 | 49863 | 4 | 2511967000000 | stopped (4 of 5 finished) | 0.01717 | 0.02545 | 0.04207 | 1,243,184,316 | 49,867 |
+
+## Per-event processing latency (ns, nearest-rank percentiles)
+
+| version | scenario | M | p50 | p95 | p99 | max | early p50 | late p50 | early p99 | late p99 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| A | buildup | 10,000 | 121,500 | 227,666 | 240,792 | 317,334 | 11,791 | 227,334 | 27,125 | 257,042 |
+| B | buildup | 10,000 | 459 | 708 | 1,333 | 52,000 | 583 | 500 | 917 | 1,000 |
+| A | crowded | 10,000 | 125,750 | 233,584 | 246,709 | 535,208 | 12,375 | 233,292 | 27,625 | 260,041 |
+| B | crowded | 10,000 | 458 | 542 | 708 | 70,667 | 417 | 458 | 1,333 | 625 |
+| A | mixed | 10,000 | 15,208 | 50,416 | 73,708 | 203,666 | 2,208 | 30,875 | 7,250 | 111,916 |
+| B | mixed | 10,000 | 500 | 1,208 | 2,125 | 91,833 | 500 | 500 | 1,750 | 1,917 |
+| A | sweep | 10,000 | 99,667 | 253,166 | 515,666 | 977,625 | 12,458 | 47,291 | 28,250 | 57,667 |
+| B | sweep | 10,000 | 459 | 1,833 | 2,709 | 62,916 | 583 | 291 | 1,083 | 375 |
+| A | cancel_churn | 10,000 | 625 | 750 | 875 | 2,000 | 625 | 625 | 833 | 875 |
+| B | cancel_churn | 10,000 | 417 | 541 | 583 | 1,208 | 417 | 417 | 583 | 542 |
+| A | buildup | 100,000 | not attempted | | | | | | | |
+| B | buildup | 100,000 | 500 | 917 | 3,875 | 1,228,042 | 500 | 542 | 875 | 4,916 |
+| A | crowded | 100,000 | not attempted | | | | | | | |
+| B | crowded | 100,000 | 500 | 750 | 1,292 | 1,091,125 | 500 | 500 | 833 | 1,417 |
+| A | mixed | 100,000 | 136,084 | 482,417 | 754,167 | 14,058,875 | 15,084 | 283,041 | 72,583 | 1,134,458 |
+| B | mixed | 100,000 | 500 | 1,250 | 2,042 | 174,792 | 542 | 500 | 2,083 | 2,000 |
+| A | sweep | 100,000 | not attempted | | | | | | | |
+| B | sweep | 100,000 | 541 | 2,750 | 4,291 | 1,412,625 | 500 | 292 | 1,000 | 1,291 |
+| A | cancel_churn | 100,000 | 625 | 833 | 1,042 | 22,458 | 666 | 625 | 1,041 | 959 |
+| B | cancel_churn | 100,000 | 417 | 583 | 667 | 5,791 | 458 | 417 | 709 | 667 |
+
+## Memory (tracemalloc; input excluded from replay peak)
+
+| version | scenario | M | input bytes | replay peak bytes | book after (structures) | book after (incl. parsed ids/ints) | stored orders | bytes/order (incl.) |
+|---|---|---|---|---|---|---|---|---|
+| A | buildup | 10,000 | 8,905,435 | 807,365 | 805,476 | 2,592,649 | 10,000 | 259 |
+| B | buildup | 10,000 | 8,905,435 | 2,286,393 | 2,275,096 | 3,617,246 | 10,000 | 361 |
+| A | crowded | 10,000 | 8,905,504 | 807,365 | 805,476 | 2,592,718 | 10,000 | 259 |
+| B | crowded | 10,000 | 8,905,504 | 1,752,486 | 1,749,952 | 3,092,167 | 10,000 | 309 |
+| A | mixed | 10,000 | 7,735,923 | 135,444 | 130,684 | 415,316 | 1,587 | 261 |
+| B | mixed | 10,000 | 7,735,923 | 622,120 | 600,072 | 816,491 | 1,587 | 514 |
+| A | sweep | 10,000 | 8,402,278 | 646,220 | 351,348 | 1,055,986 | 3,938 | 268 |
+| B | sweep | 10,000 | 8,402,278 | 1,981,967 | 1,132,104 | 1,659,320 | 3,938 | 421 |
+| A | cancel_churn | 10,000 | 7,265,350 | 3,710 | 1,828 | 1,078 | 0 | – |
+| B | cancel_churn | 10,000 | 7,265,350 | 4,190 | 2,268 | 1,398 | 0 | – |
+| A | buildup | 100,000 | not_attempted | | | | |
+| B | buildup | 100,000 | 89,046,282 | 20,969,141 | 20,957,840 | 34,449,990 | 100,000 | 344 |
+| A | crowded | 100,000 | not_attempted | | | | |
+| B | crowded | 100,000 | 89,046,407 | 21,268,778 | 21,266,240 | 34,758,454 | 100,000 | 347 |
+| A | mixed | 100,000 | 77,104,399 | 1,216,760 | 1,211,628 | 3,931,165 | 15,113 | 260 |
+| B | mixed | 100,000 | 77,104,399 | 3,972,856 | 3,819,456 | 5,873,590 | 15,113 | 388 |
+| A | sweep | 100,000 | not_attempted | | | | |
+| B | sweep | 100,000 | 84,016,086 | 15,340,419 | 8,660,976 | 14,048,042 | 39,936 | 351 |
+| A | cancel_churn | 100,000 | 72,646,160 | 3,711 | 1,828 | 1,078 | 0 | – |
+| B | cancel_churn | 100,000 | 72,646,160 | 4,191 | 2,268 | 1,398 | 0 | – |
+
+## Operation counts per replay (seed 42)
+
+| scenario | M | A list entries visited | A per event | B steps | B per event |
+|---|---|---|---|---|---|
+| buildup | 1,000 | 749,464 | 749.5 | 81,551 | 81.6 |
+| crowded | 1,000 | 749,100 | 749.1 | 1,009 | 1.01 |
+| mixed | 1,000 | 100,014 | 100 | 9,824 | 9.82 |
+| sweep | 1,000 | 679,327 | 679.3 | 57,327 | 57.3 |
+| cancel_churn | 1,000 | 500 | 0.5 | 1,000 | 1 |
+| buildup | 10,000 | 74,994,375 | 7,499 | 502,152 | 50.2 |
+| crowded | 10,000 | 74,993,064 | 7,499 | 10,009 | 1 |
+| mixed | 10,000 | 10,204,537 | 1,020 | 240,114 | 24 |
+| sweep | 10,000 | 68,079,381 | 6,808 | 500,641 | 50.1 |
+| cancel_churn | 10,000 | 5,000 | 0.5 | 10,000 | 1 |
+| buildup | 100,000 | not attempted | – | 605,052 | 6.05 |
+| crowded | 100,000 | not attempted | – | 100,009 | 1 |
+| mixed | 100,000 | 1,010,497,919 | 10,105 | 487,135 | 4.87 |
+| sweep | 100,000 | not attempted | – | 655,087 | 6.55 |
+| cancel_churn | 100,000 | 50,000 | 0.5 | 100,000 | 1 |
+
+## Version B revision steps (100,000 events, seed 42, median ms of 5 replays)
+
+| scenario | step 1 levels | step 2 + fast path | step 3 + list orders | step 3 vs 1 | identical |
+|---|---|---|---|---|---|
+| buildup | 99.6 | 67.5 | 59.6 | -40% | True |
+| crowded | 96.1 | 60.4 | 55.2 | -43% | True |
+| mixed | 84.6 | 57.8 | 53.6 | -37% | True |
+| sweep | 111.6 | 81.1 | 93.3 | -16% | True |
+| cancel_churn | 63.2 | 42.0 | 38.2 | -40% | True |
+wrote dashboard/index.html (675 KiB)
+exit 0
+Thu Nov 26 16:13:13 CET 2026

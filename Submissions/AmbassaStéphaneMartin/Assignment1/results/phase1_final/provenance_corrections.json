@@ -1,0 +1,8 @@
+{
+  "excluded_runs": [
+    {
+      "directory": "final_market-sell_n1000_s42_l1000_p10",
+      "reason": "Replay audit ended at 2026-11-26T00:18:32.9686611Z, after this command started at 00:18:31.692406Z. Its Baseline timing worker completed at elapsed 1.186545 seconds, so audit CPU activity overlapped primary measurement. Preserve all original records, exclude this run from final selection, and repeat only this affected case after the campaign queue."
+    }
+  ]
+}

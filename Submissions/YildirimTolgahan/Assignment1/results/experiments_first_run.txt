@@ -1,0 +1,62 @@
+First run of experiments.py on 25 Nov 2026 (terminal output, other programs open on the laptop).
+results/experiments.json holds the second run, which used more book sizes between 15 and 50.
+Same settings in both: REPEATS 5, CHURN_CYCLES 5000, CANCELS_TIMED 100, STREAM_EVENTS 50000.
+
+Experiment 1: break_even_depth
+ resting orders   A µs/event   B µs/event     B/A
+              0         2.04         1.90    0.93
+              1         1.43         3.70    2.59
+              2         2.90         3.29    1.13
+              3         1.46         3.00    2.06
+              4         2.02         1.81    0.90
+              5         1.73         2.10    1.21
+              6         1.61         3.30    2.05
+              7         2.31         2.88    1.25
+              8         1.86         2.58    1.38
+              9         1.74         1.62    0.93
+             10         1.33         1.80    1.35
+             11         2.13         2.85    1.33
+             12         1.61         2.88    1.79
+             13         2.74         2.28    0.83
+             14         2.67         2.04    0.76
+             15         3.56         2.17    0.61
+             25         2.11         2.36    1.11
+             50         3.15         1.67    0.53
+             75         4.38         2.49    0.57
+            100         4.29         2.60    0.61
+            150         5.56         2.29    0.41
+            200         7.44         1.67    0.22
+            250         7.93         2.00    0.25
+            500        13.24         1.82    0.14
+          1,000        29.42         1.50    0.05
+          2,000        47.71         2.11    0.04
+
+Experiment 2: cancel_position
+ queue length  position  A µs/cancel  B µs/cancel
+           50     front         3.26         4.05
+           50    middle         1.94         4.63
+           50      back         2.47         1.43
+          100     front         2.05         1.62
+          100    middle         1.12         1.24
+          100      back         2.89         1.19
+        1,000     front         0.88         1.65
+        1,000    middle        21.72         0.87
+        1,000      back        43.78         1.26
+        5,000     front        20.72         1.42
+        5,000    middle       148.21         3.56
+        5,000      back       249.91         1.48
+       10,000     front        25.14         1.36
+       10,000    middle       275.68         1.53
+       10,000      back       479.96         1.93
+       30,000     front       175.68         2.40
+       30,000    middle      1105.92         1.75
+       30,000      back      1621.55         1.95
+
+Experiment 3: rejected_events
+ share asked  rejected   A µs/event   B µs/event
+        0.00         0         2.75         1.81
+        0.10     4,999         2.59         2.59
+        0.25    12,500         2.91         2.52
+        0.50    25,000         2.57         2.23
+        0.75    37,500         1.62         1.59
+        0.90    44,999         1.69         1.65

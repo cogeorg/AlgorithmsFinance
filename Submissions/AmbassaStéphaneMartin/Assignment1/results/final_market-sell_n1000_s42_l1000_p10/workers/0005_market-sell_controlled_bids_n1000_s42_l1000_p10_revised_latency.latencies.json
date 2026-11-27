@@ -1,0 +1,37 @@
+{
+  "case_id": "market-sell_controlled_bids_n1000_s42_l1000_p10",
+  "version": "revised",
+  "phase": "latency",
+  "samples": [
+    {
+      "event_id": "measured-sale",
+      "seq": 1001,
+      "repetition": 1,
+      "seconds": 0.0001444000517949462
+    },
+    {
+      "event_id": "measured-sale",
+      "seq": 1001,
+      "repetition": 2,
+      "seconds": 0.00014209997607395053
+    },
+    {
+      "event_id": "measured-sale",
+      "seq": 1001,
+      "repetition": 3,
+      "seconds": 0.00014160003047436476
+    },
+    {
+      "event_id": "measured-sale",
+      "seq": 1001,
+      "repetition": 4,
+      "seconds": 0.00015239999629557133
+    },
+    {
+      "event_id": "measured-sale",
+      "seq": 1001,
+      "repetition": 5,
+      "seconds": 0.00013890000991523266
+    }
+  ]
+}

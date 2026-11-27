@@ -1,0 +1,12 @@
+label: phase3b-internals-entry
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe run.py lob.check_b
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: b5411d4ab22a662820bea6f55510b23381d017f8
+dirty: True
+python: 3.13.15
+utc: 20261121T235750Z
+exit_code: 0
+duration_s: 2.13
+------------------------------------------------------------
+.................                                                        [100%]
+17 passed in 1.27s

@@ -1,0 +1,93 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "market_larger_than_book",
+ "description": "A 1000-unit sell against 6 units of bids: partial, 994 discarded. A later buy at 149 rests, which shows that no residual ask was left behind.",
+ "covers": [
+  "market sell larger than the whole book",
+  "unfilled residual never rests"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 1,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "order_id": "b2",
+   "status": "resting",
+   "unfilled_qty_units": 2,
+   "fills": []
+  },
+  {
+   "event_id": "e3",
+   "order_id": "b3",
+   "status": "resting",
+   "unfilled_qty_units": 3,
+   "fills": []
+  },
+  {
+   "event_id": "e4",
+   "order_id": "a1",
+   "status": "resting",
+   "unfilled_qty_units": 9,
+   "fills": []
+  },
+  {
+   "event_id": "e5",
+   "order_id": "s1",
+   "status": "partial",
+   "unfilled_qty_units": 994,
+   "fills": [
+    {
+     "maker_id": "b1",
+     "taker_id": "s1",
+     "price_ticks": 200,
+     "qty_units": 1
+    },
+    {
+     "maker_id": "b2",
+     "taker_id": "s1",
+     "price_ticks": 150,
+     "qty_units": 2
+    },
+    {
+     "maker_id": "b3",
+     "taker_id": "s1",
+     "price_ticks": 150,
+     "qty_units": 3
+    }
+   ]
+  },
+  {
+   "event_id": "e6",
+   "order_id": "b4",
+   "status": "resting",
+   "unfilled_qty_units": 1,
+   "fills": []
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "b4",
+   "side": "BUY",
+   "price_ticks": 149,
+   "qty_units": 1,
+   "arrival_seq": 6
+  },
+  {
+   "order_id": "a1",
+   "side": "SELL",
+   "price_ticks": 250,
+   "qty_units": 9,
+   "arrival_seq": 4
+  }
+ ],
+ "best_bid": 149,
+ "best_ask": 250
+}

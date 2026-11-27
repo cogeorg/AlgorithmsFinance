@@ -1,0 +1,5 @@
+# Generated benchmark inputs: regenerate with `python make_data.py` (checksums in
+# data/generated_manifest.json). Large files are not uploaded, as the assignment asks.
+data/generated/
+__pycache__/
+.pytest_cache/

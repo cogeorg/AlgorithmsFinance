@@ -1,0 +1,41 @@
+{
+  "case": {
+    "case_id": "market-sell_controlled_bids_n10000_s44_l1000_p100",
+    "experiment": "market-sell",
+    "scenario": "controlled_bids",
+    "seed": 44,
+    "requested_count": 10000,
+    "levels": 1000,
+    "sale_percent": 100,
+    "construction_event_count": 10000,
+    "source_event_count": 10000,
+    "event_count": 10001,
+    "actual_controlled_price_levels": 1000,
+    "source": {
+      "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\controlled_bids_8d2819d2879cac87.jsonl.gz",
+      "sha256": "3adb77fea09169aae944931184706285520ee21b5d97fd876abb536794920399",
+      "metadata": {
+        "synthetic": true,
+        "calibrated_to_exchange_data": false,
+        "scenario": "controlled_bids",
+        "events": 10000,
+        "seed": 44,
+        "levels": 1000,
+        "generator": "benchmark.controlled_orders / random.Random",
+        "python": "3.14.5",
+        "price_tick_usd": "0.01",
+        "quantity_unit_btc": "0.00000001",
+        "compressed_bytes": 131766,
+        "sha256": "3adb77fea09169aae944931184706285520ee21b5d97fd876abb536794920399",
+        "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "benchmark_source_sha256": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4"
+      },
+      "reused": true
+    }
+  },
+  "version": "baseline",
+  "phase": "latency",
+  "checkpoint": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n10000_s44_l1000_p100\\workers\\0004_market-sell_controlled_bids_n10000_s44_l1000_p100_baseline_latency.json",
+  "payload_limit": 134217728,
+  "allocation_limit": 536870912
+}

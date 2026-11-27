@@ -1,0 +1,541 @@
+{
+  "artifact_directory": "results\\benchmarks\\full_20261125\\artifacts\\workload_cancel_churn_M10000_seed44__revised__attempt_001\\empty_engine_construction",
+  "attempt": 1,
+  "case": {
+    "case_id": "workload_cancel_churn_M10000_seed44",
+    "event_count": 10000,
+    "experiment": "workload_replay",
+    "generator_settings": {
+      "events": 10000,
+      "generator": "generate_orders.py",
+      "levels": 1000,
+      "scenario": "cancel_churn",
+      "seed": 44,
+      "source": "generated"
+    },
+    "input_checksums": {
+      "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+    },
+    "input_paths": [
+      "results\\benchmarks\\full_20261125\\inputs\\cancel_churn_M10000_seed44_levels1000.jsonl.gz"
+    ],
+    "profile": false,
+    "scenario": "cancel_churn",
+    "seed": 44
+  },
+  "config_id": "workload_cancel_churn_M10000_seed44__revised",
+  "duration_until_stop_seconds": 0.7563654000405222,
+  "failure": null,
+  "measurement_definition_hash": "aba419d32ead7c60923148aa76be5ad81fcfdb7cda3fed04f13d7f59a81061fa",
+  "measurement_definition_id": "primary-empty-construction-v1",
+  "memory_limit_mib": 4096.0,
+  "peak_working_set_bytes_observed": 33832960,
+  "phase_budget_seconds": 59.066238899948075,
+  "phase_job": "empty_engine_construction",
+  "phase_settings": {
+    "event_count": 10000,
+    "generator_settings": {
+      "events": 10000,
+      "generator": "generate_orders.py",
+      "levels": 1000,
+      "scenario": "cancel_churn",
+      "seed": 44,
+      "source": "generated"
+    },
+    "input_checksums": {
+      "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+    },
+    "timing_repeats": 5
+  },
+  "progress_file": "results\\benchmarks\\full_20261125\\records\\workload_cancel_churn_M10000_seed44__revised__attempt_001__phase_empty_engine_construction.progress.jsonl",
+  "record_file": "results\\benchmarks\\full_20261125\\records\\workload_cancel_churn_M10000_seed44__revised__attempt_001__phase_empty_engine_construction.json",
+  "record_type": "phase_attempt",
+  "rows": [
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+        "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 7.500173524022102e-06,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 10000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 10000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "cancel_churn",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+      },
+      "measurement_definition_hash": "aba419d32ead7c60923148aa76be5ad81fcfdb7cda3fed04f13d7f59a81061fa",
+      "measurement_definition_id": "primary-empty-construction-v1",
+      "measurement_phase": "empty_engine_construction",
+      "memory_limit_mib": 4096.0,
+      "occupied_price_level_peak": null,
+      "phase": "empty_engine_construction",
+      "phase_budget_seconds": 59.066238899948075,
+      "phase_settings": {
+        "event_count": 10000,
+        "generator_settings": {
+          "events": 10000,
+          "generator": "generate_orders.py",
+          "levels": 1000,
+          "scenario": "cancel_churn",
+          "seed": 44,
+          "source": "generated"
+        },
+        "input_checksums": {
+          "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+        },
+        "timing_repeats": 5
+      },
+      "repeat": 1,
+      "requested_sell_qty_units": null,
+      "scenario": "cancel_churn",
+      "seed": 44,
+      "status": "completed",
+      "time_limit_seconds": 59.066238899948075,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+        "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 7.00005330145359e-06,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 10000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 10000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "cancel_churn",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+      },
+      "measurement_definition_hash": "aba419d32ead7c60923148aa76be5ad81fcfdb7cda3fed04f13d7f59a81061fa",
+      "measurement_definition_id": "primary-empty-construction-v1",
+      "measurement_phase": "empty_engine_construction",
+      "memory_limit_mib": 4096.0,
+      "occupied_price_level_peak": null,
+      "phase": "empty_engine_construction",
+      "phase_budget_seconds": 59.066238899948075,
+      "phase_settings": {
+        "event_count": 10000,
+        "generator_settings": {
+          "events": 10000,
+          "generator": "generate_orders.py",
+          "levels": 1000,
+          "scenario": "cancel_churn",
+          "seed": 44,
+          "source": "generated"
+        },
+        "input_checksums": {
+          "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+        },
+        "timing_repeats": 5
+      },
+      "repeat": 2,
+      "requested_sell_qty_units": null,
+      "scenario": "cancel_churn",
+      "seed": 44,
+      "status": "completed",
+      "time_limit_seconds": 59.066238899948075,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+        "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 5.00003807246685e-06,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 10000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 10000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "cancel_churn",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+      },
+      "measurement_definition_hash": "aba419d32ead7c60923148aa76be5ad81fcfdb7cda3fed04f13d7f59a81061fa",
+      "measurement_definition_id": "primary-empty-construction-v1",
+      "measurement_phase": "empty_engine_construction",
+      "memory_limit_mib": 4096.0,
+      "occupied_price_level_peak": null,
+      "phase": "empty_engine_construction",
+      "phase_budget_seconds": 59.066238899948075,
+      "phase_settings": {
+        "event_count": 10000,
+        "generator_settings": {
+          "events": 10000,
+          "generator": "generate_orders.py",
+          "levels": 1000,
+          "scenario": "cancel_churn",
+          "seed": 44,
+          "source": "generated"
+        },
+        "input_checksums": {
+          "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+        },
+        "timing_repeats": 5
+      },
+      "repeat": 3,
+      "requested_sell_qty_units": null,
+      "scenario": "cancel_churn",
+      "seed": 44,
+      "status": "completed",
+      "time_limit_seconds": 59.066238899948075,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+        "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 2.800021320581436e-06,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 10000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 10000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "cancel_churn",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+      },
+      "measurement_definition_hash": "aba419d32ead7c60923148aa76be5ad81fcfdb7cda3fed04f13d7f59a81061fa",
+      "measurement_definition_id": "primary-empty-construction-v1",
+      "measurement_phase": "empty_engine_construction",
+      "memory_limit_mib": 4096.0,
+      "occupied_price_level_peak": null,
+      "phase": "empty_engine_construction",
+      "phase_budget_seconds": 59.066238899948075,
+      "phase_settings": {
+        "event_count": 10000,
+        "generator_settings": {
+          "events": 10000,
+          "generator": "generate_orders.py",
+          "levels": 1000,
+          "scenario": "cancel_churn",
+          "seed": 44,
+          "source": "generated"
+        },
+        "input_checksums": {
+          "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+        },
+        "timing_repeats": 5
+      },
+      "repeat": 4,
+      "requested_sell_qty_units": null,
+      "scenario": "cancel_churn",
+      "seed": 44,
+      "status": "completed",
+      "time_limit_seconds": 59.066238899948075,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+        "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 2.200016751885414e-06,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 10000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 10000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "cancel_churn",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+      },
+      "measurement_definition_hash": "aba419d32ead7c60923148aa76be5ad81fcfdb7cda3fed04f13d7f59a81061fa",
+      "measurement_definition_id": "primary-empty-construction-v1",
+      "measurement_phase": "empty_engine_construction",
+      "memory_limit_mib": 4096.0,
+      "occupied_price_level_peak": null,
+      "phase": "empty_engine_construction",
+      "phase_budget_seconds": 59.066238899948075,
+      "phase_settings": {
+        "event_count": 10000,
+        "generator_settings": {
+          "events": 10000,
+          "generator": "generate_orders.py",
+          "levels": 1000,
+          "scenario": "cancel_churn",
+          "seed": 44,
+          "source": "generated"
+        },
+        "input_checksums": {
+          "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+        },
+        "timing_repeats": 5
+      },
+      "repeat": 5,
+      "requested_sell_qty_units": null,
+      "scenario": "cancel_churn",
+      "seed": 44,
+      "status": "completed",
+      "time_limit_seconds": 59.066238899948075,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+        "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 5.00003807246685e-06,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 10000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 10000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "cancel_churn",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+      },
+      "measurement_definition_hash": "aba419d32ead7c60923148aa76be5ad81fcfdb7cda3fed04f13d7f59a81061fa",
+      "measurement_definition_id": "primary-empty-construction-v1",
+      "measurement_phase": "empty_engine_construction",
+      "median_seconds": 5.00003807246685e-06,
+      "memory_limit_mib": 4096.0,
+      "occupied_price_level_peak": null,
+      "phase": "empty_engine_construction_summary",
+      "phase_budget_seconds": 59.066238899948075,
+      "phase_settings": {
+        "event_count": 10000,
+        "generator_settings": {
+          "events": 10000,
+          "generator": "generate_orders.py",
+          "levels": 1000,
+          "scenario": "cancel_churn",
+          "seed": 44,
+          "source": "generated"
+        },
+        "input_checksums": {
+          "cancel_churn_M10000_seed44_levels1000.jsonl.gz": "f403075acb3775631edaf53e9a3cf0599799855d60aab905718e135d2d1b8e0c"
+        },
+        "timing_repeats": 5
+      },
+      "raw_repeats_seconds": [
+        7.500173524022102e-06,
+        7.00005330145359e-06,
+        5.00003807246685e-06,
+        2.800021320581436e-06,
+        2.200016751885414e-06
+      ],
+      "repeat": null,
+      "requested_sell_qty_units": null,
+      "scenario": "cancel_churn",
+      "seed": 44,
+      "status": "completed",
+      "throughput_events_per_second": null,
+      "time_limit_seconds": 59.066238899948075,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    }
+  ],
+  "status": "completed",
+  "time_limit_seconds": 59.066238899948075,
+  "version": "revised"
+}

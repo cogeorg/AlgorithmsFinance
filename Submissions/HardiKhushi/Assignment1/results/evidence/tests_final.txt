@@ -1,0 +1,52 @@
+test_generated_streams_every_event_and_conservation (test_contract.TestDifferential.test_generated_streams_every_event_and_conservation) ... ok
+test_best_price_before_arrival (test_contract.Test_baseline.test_best_price_before_arrival) ... ok
+test_cancel_active_then_repeat_and_unknown (test_contract.Test_baseline.test_cancel_active_then_repeat_and_unknown) ... ok
+test_cancel_after_partial_and_full_fill (test_contract.Test_baseline.test_cancel_after_partial_and_full_fill) ... ok
+test_cancel_middle_of_long_queue (test_contract.Test_baseline.test_cancel_middle_of_long_queue) ... ok
+test_crossing_buy_uses_resting_ask_prices (test_contract.Test_baseline.test_crossing_buy_uses_resting_ask_prices) ... ok
+test_crossing_sell_and_exact_spread (test_contract.Test_baseline.test_crossing_sell_and_exact_spread) ... ok
+test_empty_book (test_contract.Test_baseline.test_empty_book) ... ok
+test_exact_and_oversized_sales (test_contract.Test_baseline.test_exact_and_oversized_sales) ... ok
+test_fifo_ignores_identifier_spelling (test_contract.Test_baseline.test_fifo_ignores_identifier_spelling) ... ok
+test_generated_sales_against_independent_sorted_expectations (test_contract.Test_baseline.test_generated_sales_against_independent_sorted_expectations) ... ok
+test_invalid_events_are_atomic_and_do_not_advance_sequence (test_contract.Test_baseline.test_invalid_events_are_atomic_and_do_not_advance_sequence) ... ok
+test_market_sale_does_not_touch_asks (test_contract.Test_baseline.test_market_sale_does_not_touch_asks) ... ok
+test_non_crossing_and_canonical_order (test_contract.Test_baseline.test_non_crossing_and_canonical_order) ... ok
+test_one_order_and_defensive_inspection (test_contract.Test_baseline.test_one_order_and_defensive_inspection) ... ok
+test_partial_maker_keeps_priority (test_contract.Test_baseline.test_partial_maker_keeps_priority) ... ok
+test_smaller_sale_and_subsequent_fill (test_contract.Test_baseline.test_smaller_sale_and_subsequent_fill) ... ok
+test_unknown_cancel_advances_sequence (test_contract.Test_baseline.test_unknown_cancel_advances_sequence) ... ok
+test_worked_example (test_contract.Test_baseline.test_worked_example) ... ok
+test_best_price_before_arrival (test_contract.Test_revised.test_best_price_before_arrival) ... ok
+test_cancel_active_then_repeat_and_unknown (test_contract.Test_revised.test_cancel_active_then_repeat_and_unknown) ... ok
+test_cancel_after_partial_and_full_fill (test_contract.Test_revised.test_cancel_after_partial_and_full_fill) ... ok
+test_cancel_middle_of_long_queue (test_contract.Test_revised.test_cancel_middle_of_long_queue) ... ok
+test_crossing_buy_uses_resting_ask_prices (test_contract.Test_revised.test_crossing_buy_uses_resting_ask_prices) ... ok
+test_crossing_sell_and_exact_spread (test_contract.Test_revised.test_crossing_sell_and_exact_spread) ... ok
+test_empty_book (test_contract.Test_revised.test_empty_book) ... ok
+test_exact_and_oversized_sales (test_contract.Test_revised.test_exact_and_oversized_sales) ... ok
+test_fifo_ignores_identifier_spelling (test_contract.Test_revised.test_fifo_ignores_identifier_spelling) ... ok
+test_generated_sales_against_independent_sorted_expectations (test_contract.Test_revised.test_generated_sales_against_independent_sorted_expectations) ... ok
+test_invalid_events_are_atomic_and_do_not_advance_sequence (test_contract.Test_revised.test_invalid_events_are_atomic_and_do_not_advance_sequence) ... ok
+test_market_sale_does_not_touch_asks (test_contract.Test_revised.test_market_sale_does_not_touch_asks) ... ok
+test_non_crossing_and_canonical_order (test_contract.Test_revised.test_non_crossing_and_canonical_order) ... ok
+test_one_order_and_defensive_inspection (test_contract.Test_revised.test_one_order_and_defensive_inspection) ... ok
+test_partial_maker_keeps_priority (test_contract.Test_revised.test_partial_maker_keeps_priority) ... ok
+test_smaller_sale_and_subsequent_fill (test_contract.Test_revised.test_smaller_sale_and_subsequent_fill) ... ok
+test_unknown_cancel_advances_sequence (test_contract.Test_revised.test_unknown_cancel_advances_sequence) ... ok
+test_worked_example (test_contract.Test_revised.test_worked_example) ... ok
+test_churn_and_crowded_structure (test_generator.TestGenerator.test_churn_and_crowded_structure) ... ok
+test_deterministic_all_scenarios_and_schema (test_generator.TestGenerator.test_deterministic_all_scenarios_and_schema) ... ok
+test_stable_gzip_and_roundtrip (test_generator.TestGenerator.test_stable_gzip_and_roundtrip) ... ok
+test_fresh_fixed_bid_input_determinism (test_measurement.TestMeasurement.test_fresh_fixed_bid_input_determinism) ... ok
+test_nearest_rank_percentiles (test_measurement.TestMeasurement.test_nearest_rank_percentiles) ... ok
+test_observer_partial_fill_then_cancel (test_measurement.TestMeasurement.test_observer_partial_fill_then_cancel) ... ok
+test_warmup_and_stopped_samples_do_not_enter_medians (test_measurement.TestMeasurement.test_warmup_and_stopped_samples_do_not_enter_medians) ... ok
+test_churn_releases_logical_entries_and_prices (test_revision_storage.TestRevisionStorage.test_churn_releases_logical_entries_and_prices) ... ok
+test_direct_method_wrong_type_is_atomic (test_revision_storage.TestRevisionStorage.test_direct_method_wrong_type_is_atomic) ... ok
+test_price_can_disappear_and_reappear_with_new_fifo (test_revision_storage.TestRevisionStorage.test_price_can_disappear_and_reappear_with_new_fifo) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 0.402s
+
+OK

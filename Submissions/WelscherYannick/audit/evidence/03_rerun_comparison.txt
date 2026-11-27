@@ -1,0 +1,5 @@
+# input digests of my rerun vs his committed results; linear preparation in my rerun
+input digests identical to his committed run: True (18 cases, Python 3.13.15 vs his 3.14.7)
+my rerun: linear preparation (a no-op) n=  1000: median      396 ns
+my rerun: linear preparation (a no-op) n= 10000: median    2,958 ns
+my rerun: linear preparation (a no-op) n=100000: median   29,979 ns

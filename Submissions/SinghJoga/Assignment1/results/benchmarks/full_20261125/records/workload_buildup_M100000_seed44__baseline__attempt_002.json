@@ -1,0 +1,695 @@
+{
+  "attempt": 2,
+  "case": {
+    "case_id": "workload_buildup_M100000_seed44",
+    "event_count": 100000,
+    "experiment": "workload_replay",
+    "generator_settings": {
+      "events": 100000,
+      "generator": "generate_orders.py",
+      "levels": 1000,
+      "scenario": "buildup",
+      "seed": 44,
+      "source": "generated"
+    },
+    "input_checksums": {
+      "buildup_M100000_seed44_levels1000.jsonl.gz": "08d6a3c11dd06fd3eab0e4c187f8642ba5edc98bb991a333e4bd0aa4654d3e27"
+    },
+    "input_paths": [
+      "results\\benchmarks\\full_20261125\\inputs\\buildup_M100000_seed44_levels1000.jsonl.gz"
+    ],
+    "profile": false,
+    "scenario": "buildup",
+    "seed": 44
+  },
+  "config_id": "workload_buildup_M100000_seed44__baseline",
+  "continuation_plan": {
+    "case": {
+      "case_id": "workload_buildup_M100000_seed44",
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed44_levels1000.jsonl.gz": "08d6a3c11dd06fd3eab0e4c187f8642ba5edc98bb991a333e4bd0aa4654d3e27"
+      },
+      "input_paths": [
+        "results\\benchmarks\\full_20261125\\inputs\\buildup_M100000_seed44_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "buildup",
+      "seed": 44
+    },
+    "config_id": "workload_buildup_M100000_seed44__baseline",
+    "phases": [
+      {
+        "attempt": 1,
+        "budget_seconds": 60.0,
+        "candidate_assessments": [
+          {
+            "attempt": 1,
+            "reasons": [],
+            "reusable": true,
+            "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json"
+          }
+        ],
+        "phase": "input_read_parse",
+        "reason": "input, engine code, phase definition, settings, and complete measurement set match",
+        "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json",
+        "status": "reusable"
+      },
+      {
+        "attempt": 1,
+        "budget_seconds": 60.0,
+        "candidate_assessments": [
+          {
+            "attempt": 1,
+            "reasons": [],
+            "reusable": true,
+            "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json"
+          }
+        ],
+        "phase": "empty_engine_construction",
+        "reason": "input, engine code, phase definition, settings, and complete measurement set match",
+        "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json",
+        "status": "reusable"
+      },
+      {
+        "budget_seconds": 60.0,
+        "candidate_assessments": [
+          {
+            "attempt": 1,
+            "reasons": [
+              "no saved rows for this phase"
+            ],
+            "reusable": false,
+            "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json"
+          }
+        ],
+        "phase": "engine_replay",
+        "reason": "no compatible complete phase; execute as a new phase attempt",
+        "status": "incompatible"
+      },
+      {
+        "budget_seconds": 60.0,
+        "candidate_assessments": [
+          {
+            "attempt": 1,
+            "reasons": [
+              "no saved rows for this phase"
+            ],
+            "reusable": false,
+            "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json"
+          }
+        ],
+        "phase": "total_application",
+        "reason": "no compatible complete phase; execute as a new phase attempt",
+        "status": "incompatible"
+      },
+      {
+        "budget_seconds": 30.0,
+        "candidate_assessments": [
+          {
+            "attempt": 1,
+            "reasons": [
+              "no saved rows for this phase"
+            ],
+            "reusable": false,
+            "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json"
+          }
+        ],
+        "phase": "state_peaks",
+        "reason": "no compatible complete phase; execute as a new phase attempt",
+        "status": "incompatible"
+      },
+      {
+        "budget_seconds": 30.0,
+        "candidate_assessments": [
+          {
+            "attempt": 1,
+            "reasons": [
+              "no saved rows for this phase"
+            ],
+            "reusable": false,
+            "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json"
+          }
+        ],
+        "phase": "latency",
+        "reason": "no compatible complete phase; execute as a new phase attempt",
+        "status": "incompatible"
+      },
+      {
+        "budget_seconds": 60.0,
+        "candidate_assessments": [
+          {
+            "attempt": 1,
+            "reasons": [
+              "no saved rows for this phase"
+            ],
+            "reusable": false,
+            "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json"
+          }
+        ],
+        "phase": "memory",
+        "reason": "no compatible complete phase; execute as a new phase attempt",
+        "status": "incompatible"
+      }
+    ],
+    "version": "baseline"
+  },
+  "phase_statuses": {
+    "empty_engine_construction": {
+      "reason": "input, engine code, phase definition, settings, and complete measurement set match",
+      "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json",
+      "status": "reused"
+    },
+    "engine_replay": {
+      "record": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_002__phase_engine_replay.json",
+      "reuse_assessment": {
+        "budget_seconds": 60.0,
+        "candidate_assessments": [
+          {
+            "attempt": 1,
+            "reasons": [
+              "no saved rows for this phase"
+            ],
+            "reusable": false,
+            "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json"
+          }
+        ],
+        "phase": "engine_replay",
+        "reason": "no compatible complete phase; execute as a new phase attempt",
+        "status": "incompatible"
+      },
+      "status": "stopped_timeout"
+    },
+    "input_read_parse": {
+      "reason": "input, engine code, phase definition, settings, and complete measurement set match",
+      "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json",
+      "status": "reused"
+    },
+    "latency": {
+      "record": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_002__phase_latency.json",
+      "reuse_assessment": {
+        "budget_seconds": 30.0,
+        "candidate_assessments": [
+          {
+            "attempt": 1,
+            "reasons": [
+              "no saved rows for this phase"
+            ],
+            "reusable": false,
+            "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json"
+          }
+        ],
+        "phase": "latency",
+        "reason": "no compatible complete phase; execute as a new phase attempt",
+        "status": "incompatible"
+      },
+      "status": "stopped_timeout"
+    },
+    "memory": {
+      "record": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_002__phase_memory.json",
+      "reuse_assessment": {
+        "budget_seconds": 60.0,
+        "candidate_assessments": [
+          {
+            "attempt": 1,
+            "reasons": [
+              "no saved rows for this phase"
+            ],
+            "reusable": false,
+            "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json"
+          }
+        ],
+        "phase": "memory",
+        "reason": "no compatible complete phase; execute as a new phase attempt",
+        "status": "incompatible"
+      },
+      "status": "stopped_timeout"
+    },
+    "state_peaks": {
+      "record": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_002__phase_state_peaks.json",
+      "reuse_assessment": {
+        "budget_seconds": 30.0,
+        "candidate_assessments": [
+          {
+            "attempt": 1,
+            "reasons": [
+              "no saved rows for this phase"
+            ],
+            "reusable": false,
+            "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json"
+          }
+        ],
+        "phase": "state_peaks",
+        "reason": "no compatible complete phase; execute as a new phase attempt",
+        "status": "incompatible"
+      },
+      "status": "stopped_timeout"
+    },
+    "total_application": {
+      "record": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_002__phase_total_application.json",
+      "reuse_assessment": {
+        "budget_seconds": 60.0,
+        "candidate_assessments": [
+          {
+            "attempt": 1,
+            "reasons": [
+              "no saved rows for this phase"
+            ],
+            "reusable": false,
+            "source": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_001.json"
+          }
+        ],
+        "phase": "total_application",
+        "reason": "no compatible complete phase; execute as a new phase attempt",
+        "status": "incompatible"
+      },
+      "status": "stopped_timeout"
+    }
+  },
+  "record_file": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed44__baseline__attempt_002.json",
+  "record_type": "configuration_attempt",
+  "rows": [
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+        "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "duration_until_stop_seconds": 60.019492299994454,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed44_levels1000.jsonl.gz": "08d6a3c11dd06fd3eab0e4c187f8642ba5edc98bb991a333e4bd0aa4654d3e27"
+      },
+      "measurement_definition_hash": "82690b83c402019ec8ab825647a8e1655046429880e7e9df3f7a39cc9232fec8",
+      "measurement_definition_id": "primary-replay-v1",
+      "measurement_phase": "engine_replay",
+      "memory_limit_mib": 4096.0,
+      "occupied_price_level_peak": null,
+      "peak_working_set_bytes_observed": 129957888,
+      "phase": "worker_stop",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 100000,
+        "generator_settings": {
+          "events": 100000,
+          "generator": "generate_orders.py",
+          "levels": 1000,
+          "scenario": "buildup",
+          "seed": 44,
+          "source": "generated"
+        },
+        "input_checksums": {
+          "buildup_M100000_seed44_levels1000.jsonl.gz": "08d6a3c11dd06fd3eab0e4c187f8642ba5edc98bb991a333e4bd0aa4654d3e27"
+        },
+        "timing_repeats": 5
+      },
+      "repeat": null,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 44,
+      "status": "stopped_timeout",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+        "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "duration_until_stop_seconds": 0,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed44_levels1000.jsonl.gz": "08d6a3c11dd06fd3eab0e4c187f8642ba5edc98bb991a333e4bd0aa4654d3e27"
+      },
+      "measurement_definition_hash": "b22fd00ddac48f06a77b105836d20b7d565625e90d3f655e96cb3d22e471927e",
+      "measurement_definition_id": "primary-total-application-v1",
+      "measurement_phase": "total_application",
+      "memory_limit_mib": 4096.0,
+      "occupied_price_level_peak": null,
+      "peak_working_set_bytes_observed": null,
+      "phase": "worker_stop",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 100000,
+        "generator_settings": {
+          "events": 100000,
+          "generator": "generate_orders.py",
+          "levels": 1000,
+          "scenario": "buildup",
+          "seed": 44,
+          "source": "generated"
+        },
+        "input_checksums": {
+          "buildup_M100000_seed44_levels1000.jsonl.gz": "08d6a3c11dd06fd3eab0e4c187f8642ba5edc98bb991a333e4bd0aa4654d3e27"
+        },
+        "timing_repeats": 5
+      },
+      "repeat": null,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 44,
+      "status": "stopped_timeout",
+      "status_reason": "primary phase budget exhausted before worker start",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+        "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "duration_until_stop_seconds": 30.088996100006625,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed44_levels1000.jsonl.gz": "08d6a3c11dd06fd3eab0e4c187f8642ba5edc98bb991a333e4bd0aa4654d3e27"
+      },
+      "measurement_definition_hash": "cf5f59d11f56d6e0a6d6bb808c78f3db2cb33d801544ad46d0418db632020d55",
+      "measurement_definition_id": "event-result-state-peaks-v1",
+      "measurement_phase": "state_peaks",
+      "memory_limit_mib": 4096.0,
+      "occupied_price_level_peak": null,
+      "peak_working_set_bytes_observed": 129978368,
+      "phase": "worker_stop",
+      "phase_budget_seconds": 30.0,
+      "phase_settings": {
+        "count_source": "accepted-event-results",
+        "event_count": 100000,
+        "generator_settings": {
+          "events": 100000,
+          "generator": "generate_orders.py",
+          "levels": 1000,
+          "scenario": "buildup",
+          "seed": 44,
+          "source": "generated"
+        },
+        "input_checksums": {
+          "buildup_M100000_seed44_levels1000.jsonl.gz": "08d6a3c11dd06fd3eab0e4c187f8642ba5edc98bb991a333e4bd0aa4654d3e27"
+        }
+      },
+      "repeat": null,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 44,
+      "status": "stopped_timeout",
+      "time_limit_seconds": 30.0,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+        "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "duration_until_stop_seconds": 30.021702300058678,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed44_levels1000.jsonl.gz": "08d6a3c11dd06fd3eab0e4c187f8642ba5edc98bb991a333e4bd0aa4654d3e27"
+      },
+      "measurement_definition_hash": "e154a603da6a1785e1b0377b363763e8dc1b99cbfa6c93c9bf49f962e33c1303",
+      "measurement_definition_id": "event-latency-v1",
+      "measurement_phase": "latency",
+      "memory_limit_mib": 4096.0,
+      "occupied_price_level_peak": null,
+      "peak_working_set_bytes_observed": 128540672,
+      "phase": "worker_stop",
+      "phase_budget_seconds": 30.0,
+      "phase_settings": {
+        "event_count": 100000,
+        "generator_settings": {
+          "events": 100000,
+          "generator": "generate_orders.py",
+          "levels": 1000,
+          "scenario": "buildup",
+          "seed": 44,
+          "source": "generated"
+        },
+        "input_checksums": {
+          "buildup_M100000_seed44_levels1000.jsonl.gz": "08d6a3c11dd06fd3eab0e4c187f8642ba5edc98bb991a333e4bd0aa4654d3e27"
+        },
+        "latency_definition": "event-position-raw-v1"
+      },
+      "repeat": null,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 44,
+      "status": "stopped_timeout",
+      "time_limit_seconds": 30.0,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b",
+        "test_benchmark_tools.py": "94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "duration_until_stop_seconds": 60.033656700048596,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 44,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed44_levels1000.jsonl.gz": "08d6a3c11dd06fd3eab0e4c187f8642ba5edc98bb991a333e4bd0aa4654d3e27"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 4096.0,
+      "occupied_price_level_peak": null,
+      "peak_working_set_bytes_observed": 134270976,
+      "phase": "worker_stop",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 100000,
+        "generator_settings": {
+          "events": 100000,
+          "generator": "generate_orders.py",
+          "levels": 1000,
+          "scenario": "buildup",
+          "seed": 44,
+          "source": "generated"
+        },
+        "input_checksums": {
+          "buildup_M100000_seed44_levels1000.jsonl.gz": "08d6a3c11dd06fd3eab0e4c187f8642ba5edc98bb991a333e4bd0aa4654d3e27"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "repeat": null,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 44,
+      "status": "stopped_timeout",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "baseline"
+    }
+  ],
+  "status": "partial",
+  "version": "baseline"
+}

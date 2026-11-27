@@ -1,0 +1,32 @@
+label: manifest-package
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe verify_manifest.py C:/Users/laubu/OneDrive/Dokumente/1_Frankfurt School/Master in Financial Technology/Semester 1/1.4_Algorithms_in_Finance/Assignment1/Assignment1 --metadata
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: bc2576f8ef15b1adc707509cc35dbfd75f65c7b7
+dirty: True
+python: 3.13.15
+utc: 20261121T111536Z
+exit_code: 0
+duration_s: 0.13
+------------------------------------------------------------
+MISSING  .DS_Store  (OS clutter, ignored)
+OK       AlgorithmsFinance_Exercise1.pdf
+OK       README.md
+OK       data/buildup_10000.jsonl.gz
+OK       data/buildup_10000.jsonl.gz.metadata.json
+OK       data/cancel_churn_10000.jsonl.gz
+OK       data/cancel_churn_10000.jsonl.gz.metadata.json
+OK       data/crowded_10000.jsonl.gz
+OK       data/crowded_10000.jsonl.gz.metadata.json
+OK       data/mixed_10000.jsonl.gz
+OK       data/mixed_10000.jsonl.gz.metadata.json
+OK       data/sweep_10000.jsonl.gz
+OK       data/sweep_10000.jsonl.gz.metadata.json
+OK       data/worked_example.jsonl
+OK       data/worked_expected.json
+OK       generate_orders.py
+OK       data/buildup_10000.jsonl.gz (metadata)
+OK       data/cancel_churn_10000.jsonl.gz (metadata)
+OK       data/crowded_10000.jsonl.gz (metadata)
+OK       data/mixed_10000.jsonl.gz (metadata)
+OK       data/sweep_10000.jsonl.gz (metadata)
+RESULT: PASS (20 files verified)

@@ -1,0 +1,32 @@
+Exact command: .\.venv\Scripts\python.exe results\run_correctness_review.py
+Per-stream enforced timeout: 60 seconds; one stream at a time.
+Worker compares ordered results, accepted sequence, canonical books, and invariants after every event.
+{"completed_events": 4600, "deadline_seconds": 60, "elapsed_seconds": 60.035, "progress_file": "results\\correctness_review\\buildup.json", "scenario": "buildup", "status": "stopped_timeout", "stderr_file": "results\\correctness_review\\buildup.stderr.txt", "stdout_file": "results\\correctness_review\\buildup.stdout.txt", "target_events": 10000, "worker_return_code": 1}
+{"completed_events": 4700, "deadline_seconds": 60, "elapsed_seconds": 60.033, "progress_file": "results\\correctness_review\\crowded.json", "scenario": "crowded", "status": "stopped_timeout", "stderr_file": "results\\correctness_review\\crowded.stderr.txt", "stdout_file": "results\\correctness_review\\crowded.stdout.txt", "target_events": 10000, "worker_return_code": 1}
+{"completed_events": 10000, "deadline_seconds": 60, "elapsed_seconds": 39.962, "progress_file": "results\\correctness_review\\mixed.json", "scenario": "mixed", "status": "completed", "stderr_file": "results\\correctness_review\\mixed.stderr.txt", "stdout_file": "results\\correctness_review\\mixed.stdout.txt", "target_events": 10000, "worker_return_code": 0}
+{"completed_events": 4300, "deadline_seconds": 60, "elapsed_seconds": 60.041, "progress_file": "results\\correctness_review\\sweep.json", "scenario": "sweep", "status": "stopped_timeout", "stderr_file": "results\\correctness_review\\sweep.stderr.txt", "stdout_file": "results\\correctness_review\\sweep.stdout.txt", "target_events": 10000, "worker_return_code": 1}
+{"completed_events": 10000, "deadline_seconds": 60, "elapsed_seconds": 0.674, "progress_file": "results\\correctness_review\\cancel_churn.json", "scenario": "cancel_churn", "status": "completed", "stderr_file": "results\\correctness_review\\cancel_churn.stderr.txt", "stdout_file": "results\\correctness_review\\cancel_churn.stdout.txt", "target_events": 10000, "worker_return_code": 0}
+Total elapsed seconds: 220.758
+Completed scenarios: 2
+Stopped scenarios: 3
+Failed scenarios: 0
+
+Preflight: first collection attempt failed because pytest reserves fixture name 'request'; renamed parameter. Next attempt exposed incorrect hand-calculated expected proceeds (1435 vs actual arithmetic 2060) and expected inspection key arrival_seq vs public key seq; corrected only new test expectations, not engines or supplied expected files.
+Focused command: .\.venv\Scripts\python.exe -m pytest -q tests\test_correctness_review.py
+Focused result after correction: 30 passed in 0.63s.
+Bounded oracle: seeds 42, 43, 44; 1,500 events per seed; each engine independently compared with the test-only brute-force model after every event; max active orders asserted below 100.
+
+Supplied stream parity results:
+buildup: running, 4600/10000 events, 58.562986799981445s (limit s), progress 
+cancel_churn: completed, 10000/10000 events, 0.3883844001684338s (limit s), progress 
+crowded: running, 4700/10000 events, 59.13760120002553s (limit s), progress 
+mixed: completed, 10000/10000 events, 39.621622199891135s (limit s), progress 
+sweep: running, 4300/10000 events, 56.563160199904814s (limit s), progress 
+Parity summary: 2 complete (mixed, cancel_churn); 3 stopped at enforced timeout (buildup, crowded, sweep); no mismatches observed in completed prefixes.
+Full suite command: .\.venv\Scripts\python.exe -m pytest -q
+Full suite result: 185 passed in 72.60s (single full-suite run after additions).
+Engine source files unchanged; supplied expected files unchanged; no benchmark commands invoked.
+Coverage limitation: 3 supplied streams did not reach 10,000 events within their separate 60-second limits; preserved progress states/counts are under results/correctness_review/.
+Review window: started 2026-11-26 13:04:55 +01:00; completed 2026-11-26 13:15:50 +01:00; elapsed under 15 minutes.
+Final check: no engine source or supplied expected-answer file changed.
+Final check: no parity workers remain.

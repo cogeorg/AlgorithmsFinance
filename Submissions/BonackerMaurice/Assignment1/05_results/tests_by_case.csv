@@ -1,0 +1,183 @@
+test,case,source,version,result
+test_heap_stays_bounded_under_cancel_churn,,design rule: heap compaction bound (cancel_churn),b_heap,pass
+test_deque_stays_bounded_behind_live_head,,design rule: deque compaction bound (cancels behind FIFO head),b_sorted,pass
+test_deque_stays_bounded_behind_live_head,,design rule: deque compaction bound (cancels behind FIFO head),b_heap,pass
+test_deque_compaction_keeps_fifo_order,,design rule: deque compaction bound (batch cancels),b_sorted,pass
+test_deque_compaction_keeps_fifo_order,,design rule: deque compaction bound (batch cancels),b_heap,pass
+test_versions_agree_after_every_event,,differential: A vs B-sorted vs B-heap (300 generated streams),all,pass
+test_Test1,,my Excel tab Test1,a,pass
+test_Test1,,my Excel tab Test1,b_sorted,pass
+test_Test1,,my Excel tab Test1,b_heap,pass
+test_Test2,,my Excel tab Test2,a,pass
+test_Test2,,my Excel tab Test2,b_sorted,pass
+test_Test2,,my Excel tab Test2,b_heap,pass
+test_Test3,,"Excel tab Test3 (calculated by Claude, checked by Maurice)",a,pass
+test_Test3,,"Excel tab Test3 (calculated by Claude, checked by Maurice)",b_sorted,pass
+test_Test3,,"Excel tab Test3 (calculated by Claude, checked by Maurice)",b_heap,pass
+test_Test4,,"Excel tab Test4 (calculated by Claude, checked by Maurice)",a,pass
+test_Test4,,"Excel tab Test4 (calculated by Claude, checked by Maurice)",b_sorted,pass
+test_Test4,,"Excel tab Test4 (calculated by Claude, checked by Maurice)",b_heap,pass
+test_Test5,,"Excel tab Test5 (calculated by Claude, checked by Maurice)",a,pass
+test_Test5,,"Excel tab Test5 (calculated by Claude, checked by Maurice)",b_sorted,pass
+test_Test5,,"Excel tab Test5 (calculated by Claude, checked by Maurice)",b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,price as string,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,price as float,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,price as bool,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,price zero,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,price negative,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty as string,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty as float,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty as bool,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty zero,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,market qty as string,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,market qty as float,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,market qty as bool,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,side lowercase,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,side unknown,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,type unknown,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,type lowercase,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,type missing,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,order_id missing,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,order_id not a string,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,side missing,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,price missing,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty missing,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,market qty missing,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,market order_id missing,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,cancel target missing,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,cancel target not a string,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq missing,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq as string,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq as float,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq repeated,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq going back,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,event_id missing,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,event is a list,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,event is a string,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,event is a number,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,event is null,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,order_id still live,spec + validation rules: adversarial events are rejected,a,pass
+test_invalid_event_is_rejected_and_changes_nothing,price as string,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,price as float,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,price as bool,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,price zero,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,price negative,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty as string,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty as float,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty as bool,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty zero,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,market qty as string,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,market qty as float,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,market qty as bool,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,side lowercase,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,side unknown,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,type unknown,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,type lowercase,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,type missing,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,order_id missing,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,order_id not a string,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,side missing,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,price missing,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty missing,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,market qty missing,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,market order_id missing,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,cancel target missing,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,cancel target not a string,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq missing,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq as string,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq as float,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq repeated,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq going back,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,event_id missing,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,event is a list,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,event is a string,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,event is a number,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,event is null,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,order_id still live,spec + validation rules: adversarial events are rejected,b_sorted,pass
+test_invalid_event_is_rejected_and_changes_nothing,price as string,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,price as float,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,price as bool,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,price zero,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,price negative,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty as string,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty as float,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty as bool,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty zero,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,market qty as string,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,market qty as float,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,market qty as bool,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,side lowercase,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,side unknown,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,type unknown,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,type lowercase,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,type missing,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,order_id missing,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,order_id not a string,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,side missing,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,price missing,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,qty missing,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,market qty missing,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,market order_id missing,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,cancel target missing,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,cancel target not a string,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq missing,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq as string,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq as float,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq repeated,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,seq going back,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,event_id missing,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,event is a list,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,event is a string,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,event is a number,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,event is null,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_invalid_event_is_rejected_and_changes_nothing,order_id still live,spec + validation rules: adversarial events are rejected,b_heap,pass
+test_huge_quantity_limit_rests,,spec: huge quantity is a valid integer (rests in full),a,pass
+test_huge_quantity_limit_rests,,spec: huge quantity is a valid integer (rests in full),b_sorted,pass
+test_huge_quantity_limit_rests,,spec: huge quantity is a valid integer (rests in full),b_heap,pass
+test_huge_quantity_market_sell,,"spec: huge market sell takes every bid, the rest is discarded",a,pass
+test_huge_quantity_market_sell,,"spec: huge market sell takes every bid, the rest is discarded",b_sorted,pass
+test_huge_quantity_market_sell,,"spec: huge market sell takes every bid, the rest is discarded",b_heap,pass
+test_cancel_of_market_sell_id_is_not_found,,"spec: a market sell never rests, so cancelling its id is not_found",a,pass
+test_cancel_of_market_sell_id_is_not_found,,"spec: a market sell never rests, so cancelling its id is not_found",b_sorted,pass
+test_cancel_of_market_sell_id_is_not_found,,"spec: a market sell never rests, so cancelling its id is not_found",b_heap,pass
+test_order_id_reuse_after_the_order_is_gone,,spec: only LIVE ids are duplicates; a gone id may be reused,a,pass
+test_order_id_reuse_after_the_order_is_gone,,spec: only LIVE ids are duplicates; a gone id may be reused,b_sorted,pass
+test_order_id_reuse_after_the_order_is_gone,,spec: only LIVE ids are duplicates; a gone id may be reused,b_heap,pass
+test_extra_fields_are_ignored,,spec: unknown extra fields are ignored,a,pass
+test_extra_fields_are_ignored,,spec: unknown extra fields are ignored,b_sorted,pass
+test_extra_fields_are_ignored,,spec: unknown extra fields are ignored,b_heap,pass
+test_versions_agree_on_adversarial_stream,,differential: A vs B-sorted vs B-heap on the adversarial stream,all,pass
+test_replay_survives_malformed_lines,timed-.jsonl,"spec: malformed JSON lines are rejected, the replay continues",a,pass
+test_replay_survives_malformed_lines,timed-.jsonl.gz,"spec: malformed JSON lines are rejected, the replay continues",a,pass
+test_replay_survives_malformed_lines,checked-.jsonl,"spec: malformed JSON lines are rejected, the replay continues",a,pass
+test_replay_survives_malformed_lines,checked-.jsonl.gz,"spec: malformed JSON lines are rejected, the replay continues",a,pass
+test_replay_survives_malformed_lines,timed-.jsonl,"spec: malformed JSON lines are rejected, the replay continues",b_sorted,pass
+test_replay_survives_malformed_lines,timed-.jsonl.gz,"spec: malformed JSON lines are rejected, the replay continues",b_sorted,pass
+test_replay_survives_malformed_lines,checked-.jsonl,"spec: malformed JSON lines are rejected, the replay continues",b_sorted,pass
+test_replay_survives_malformed_lines,checked-.jsonl.gz,"spec: malformed JSON lines are rejected, the replay continues",b_sorted,pass
+test_replay_survives_malformed_lines,timed-.jsonl,"spec: malformed JSON lines are rejected, the replay continues",b_heap,pass
+test_replay_survives_malformed_lines,timed-.jsonl.gz,"spec: malformed JSON lines are rejected, the replay continues",b_heap,pass
+test_replay_survives_malformed_lines,checked-.jsonl,"spec: malformed JSON lines are rejected, the replay continues",b_heap,pass
+test_replay_survives_malformed_lines,checked-.jsonl.gz,"spec: malformed JSON lines are rejected, the replay continues",b_heap,pass
+test_replay_prints_final_book,,"spec: --print-book prints the final book, one order per line",a,pass
+test_replay_prints_final_book,,"spec: --print-book prints the final book, one order per line",b_sorted,pass
+test_replay_prints_final_book,,"spec: --print-book prints the final book, one order per line",b_heap,pass
+test_limits_rest_without_trading,,my Excel tab Base,a,pass
+test_limits_rest_without_trading,,my Excel tab Base,b_sorted,pass
+test_limits_rest_without_trading,,my Excel tab Base,b_heap,pass
+test_market_sell_result,,my Excel tab Base,a,pass
+test_market_sell_result,,my Excel tab Base,b_sorted,pass
+test_market_sell_result,,my Excel tab Base,b_heap,pass
+test_remaining_book,,my Excel tab Base,a,pass
+test_remaining_book,,my Excel tab Base,b_sorted,pass
+test_remaining_book,,my Excel tab Base,b_heap,pass
+test_proceeds_and_average_price,,my Excel tab Base,a,pass
+test_proceeds_and_average_price,,my Excel tab Base,b_sorted,pass
+test_proceeds_and_average_price,,my Excel tab Base,b_heap,pass
+test_book_level_conservation,,my Excel tab Base,a,pass
+test_book_level_conservation,,my Excel tab Base,b_sorted,pass
+test_book_level_conservation,,my Excel tab Base,b_heap,pass
+test_hand_values_agree_with_supplied_json,,my Excel tab Base vs professor JSON,none,pass
+test_matches_supplied_json,,professor JSON,a,pass
+test_matches_supplied_json,,professor JSON,b_sorted,pass
+test_matches_supplied_json,,professor JSON,b_heap,pass

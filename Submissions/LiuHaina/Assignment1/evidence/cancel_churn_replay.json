@@ -1,0 +1,14 @@
+{
+  "version": "A",
+  "events": 10000,
+  "rejected_events": 0,
+  "last_result": {
+    "event_id": "e000010000",
+    "target_order_id": "e000009999",
+    "status": "cancelled",
+    "cancelled_qty_units": 30000000
+  },
+  "remaining_orders": [],
+  "total_gross_proceeds_tick_units": 0,
+  "total_gross_proceeds_usd_exact": "0.0000000000"
+}

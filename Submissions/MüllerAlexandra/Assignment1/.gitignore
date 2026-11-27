@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Large locally generated workloads are reproducible from the generator.
+data/generated/*
+!data/generated/.gitignore
+!data/generated/*.metadata.json
+

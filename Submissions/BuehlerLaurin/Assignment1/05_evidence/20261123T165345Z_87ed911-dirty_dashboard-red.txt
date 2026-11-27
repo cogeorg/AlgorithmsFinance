@@ -1,0 +1,95 @@
+label: dashboard-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py -q --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 87ed911f839877c197cd9458b2cd231537955a17
+dirty: True
+python: 3.13.15
+utc: 20261123T165345Z
+exit_code: 1
+duration_s: 3.58
+------------------------------------------------------------
+EEFFFFFFEE                                                               [100%]
+=================================== ERRORS ====================================
+_______ ERROR at setup of test_official_headlines_match_committed_csvs ________
+02_tests\test_dashboard.py:21: in bundle
+    return saved.load_bundle()
+           ^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:3: in load_bundle
+    raise NotImplementedError('committed result loader')
+E   NotImplementedError: committed result loader
+__________ ERROR at setup of test_stopped_a_is_bound_only_not_a_time __________
+02_tests\test_dashboard.py:21: in bundle
+    return saved.load_bundle()
+           ^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:3: in load_bundle
+    raise NotImplementedError('committed result loader')
+E   NotImplementedError: committed result loader
+____ ERROR at setup of test_loader_restricts_paths_and_uses_a_fixed_commit ____
+02_tests\test_dashboard.py:21: in bundle
+    return saved.load_bundle()
+           ^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:3: in load_bundle
+    raise NotImplementedError('committed result loader')
+E   NotImplementedError: committed result loader
+____ ERROR at setup of test_all_eight_tabs_render_and_headlines_match_csv _____
+02_tests\test_dashboard.py:21: in bundle
+    return saved.load_bundle()
+           ^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:3: in load_bundle
+    raise NotImplementedError('committed result loader')
+E   NotImplementedError: committed result loader
+================================== FAILURES ===================================
+________________ test_bad_cells_never_enter_medians[duplicate] ________________
+02_tests\test_dashboard.py:57: in test_bad_cells_never_enter_medians
+    got = saved.validate_summary(summary, timing, cells).iloc[0]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:12: in validate_summary
+    raise NotImplementedError('complete repeats only')
+E   NotImplementedError: complete repeats only
+_________________ test_bad_cells_never_enter_medians[missing] _________________
+02_tests\test_dashboard.py:57: in test_bad_cells_never_enter_medians
+    got = saved.validate_summary(summary, timing, cells).iloc[0]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:12: in validate_summary
+    raise NotImplementedError('complete repeats only')
+E   NotImplementedError: complete repeats only
+___________________ test_bad_cells_never_enter_medians[nan] ___________________
+02_tests\test_dashboard.py:57: in test_bad_cells_never_enter_medians
+    got = saved.validate_summary(summary, timing, cells).iloc[0]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:12: in validate_summary
+    raise NotImplementedError('complete repeats only')
+E   NotImplementedError: complete repeats only
+_________________ test_bad_cells_never_enter_medians[stopped] _________________
+02_tests\test_dashboard.py:57: in test_bad_cells_never_enter_medians
+    got = saved.validate_summary(summary, timing, cells).iloc[0]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:12: in validate_summary
+    raise NotImplementedError('complete repeats only')
+E   NotImplementedError: complete repeats only
+_________________ test_bad_cells_never_enter_medians[not_run] _________________
+02_tests\test_dashboard.py:57: in test_bad_cells_never_enter_medians
+    got = saved.validate_summary(summary, timing, cells).iloc[0]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:12: in validate_summary
+    raise NotImplementedError('complete repeats only')
+E   NotImplementedError: complete repeats only
+_____________________ test_fit_uses_measured_points_only ______________________
+02_tests\test_dashboard.py:65: in test_fit_uses_measured_points_only
+    fit = saved.fit_exponents(rows).iloc[0]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:15: in fit_exponents
+    raise NotImplementedError('measured range fits')
+E   NotImplementedError: measured range fits
+=========================== short test summary info ===========================
+FAILED 02_tests/test_dashboard.py::test_bad_cells_never_enter_medians[duplicate]
+FAILED 02_tests/test_dashboard.py::test_bad_cells_never_enter_medians[missing]
+FAILED 02_tests/test_dashboard.py::test_bad_cells_never_enter_medians[nan] - ...
+FAILED 02_tests/test_dashboard.py::test_bad_cells_never_enter_medians[stopped]
+FAILED 02_tests/test_dashboard.py::test_bad_cells_never_enter_medians[not_run]
+FAILED 02_tests/test_dashboard.py::test_fit_uses_measured_points_only - NotIm...
+ERROR 02_tests/test_dashboard.py::test_official_headlines_match_committed_csvs
+ERROR 02_tests/test_dashboard.py::test_stopped_a_is_bound_only_not_a_time - N...
+ERROR 02_tests/test_dashboard.py::test_loader_restricts_paths_and_uses_a_fixed_commit
+ERROR 02_tests/test_dashboard.py::test_all_eight_tabs_render_and_headlines_match_csv
+6 failed, 4 errors in 2.24s

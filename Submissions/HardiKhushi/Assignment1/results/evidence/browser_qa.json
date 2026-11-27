@@ -1,0 +1,28 @@
+{
+  "browser": "existing macOS Google Chrome, headless",
+  "html_sha256": "a23fa1141b66ef03f5fa3dd7b45fd7937fc89809f4a9d12a752bca9f9833d7dc",
+  "no_external_download": true,
+  "results": [
+    {
+      "ok": true,
+      "states": 90,
+      "checks": 463,
+      "width": 1440,
+      "download_rows": 165,
+      "viewport": "desktop",
+      "screenshot_sha256": "76dc60253d1c6c133a4aa3f0b56679a530253b666c18aae9a43d2ad09b38fb1b",
+      "lower_screenshot_sha256": "30f0a5423a6f64891681d7d1ebf6bf29d2c98cde92e8ed6afbf1f21998598bc3"
+    },
+    {
+      "ok": true,
+      "states": 90,
+      "checks": 463,
+      "width": 500,
+      "download_rows": 165,
+      "viewport": "mobile",
+      "screenshot_sha256": "887da12a8767aca86c6a62d0e2155d077c58409406e1bcb8a1459e0a0d9426c8",
+      "lower_screenshot_sha256": "b9ed22d4c1c8fd66c622d8f72dc07f08133b73eaf38fcfe2dd928794ec42c2b3"
+    }
+  ],
+  "screenshots": ".preview/browser/ (ignored, visually inspected separately)"
+}

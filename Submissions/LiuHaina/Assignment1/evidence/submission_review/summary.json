@@ -1,0 +1,120 @@
+{
+  "status": "ready_for_user_review_commit_pending",
+  "candidate_files": 1171,
+  "candidate_bytes": 15974369,
+  "clean_copy_excluded_generated_inputs": true,
+  "clean_copy_steps": [
+    {
+      "name": "unit_tests",
+      "status": "passed",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ]
+    },
+    {
+      "name": "worked_example_a",
+      "status": "passed",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "lob.replay",
+        "data/worked_example.jsonl",
+        "--version",
+        "a"
+      ]
+    },
+    {
+      "name": "worked_example_b",
+      "status": "passed",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "lob.replay",
+        "data/worked_example.jsonl",
+        "--version",
+        "b"
+      ]
+    },
+    {
+      "name": "saved_results_without_inputs",
+      "status": "passed",
+      "command": [
+        "python3",
+        "-B",
+        "tools/validate_benchmarks.py",
+        "--skip-input-check",
+        "--out",
+        "work/saved_results_audit.json"
+      ]
+    },
+    {
+      "name": "dashboard_rebuild",
+      "status": "passed",
+      "command": [
+        "python3",
+        "-B",
+        "tools/build_dashboard.py",
+        "--out",
+        "work/rebuilt_dashboard.html"
+      ]
+    },
+    {
+      "name": "dashboard_saved_evidence",
+      "status": "passed",
+      "command": [
+        "python3",
+        "-B",
+        "tools/validate_dashboard.py"
+      ]
+    },
+    {
+      "name": "benchmark_smoke",
+      "status": "passed",
+      "command": [
+        "python3",
+        "-B",
+        "benchmark.py",
+        "--smoke",
+        "--out",
+        "work/smoke"
+      ]
+    },
+    {
+      "name": "smoke_results_validation",
+      "status": "passed",
+      "command": [
+        "python3",
+        "-B",
+        "tools/validate_benchmarks.py",
+        "--results",
+        "work/smoke"
+      ]
+    }
+  ],
+  "all_63_tests_passed": true,
+  "worked_examples_exact": true,
+  "saved_results_checked_without_inputs": true,
+  "original_full_validation_preserved": true,
+  "rebuild_matches_browser_verified_html": true,
+  "smoke_cases": 10,
+  "smoke_completed_repeats": 50,
+  "measured_source_hashes_unchanged": true,
+  "git_head_unchanged": true,
+  "git_index_unchanged": true,
+  "staged_files": [],
+  "remote": "https://github.com/cogeorg/AlgorithmsFinance.git",
+  "pending": [
+    "User review of REPORT.md and dashboard.html",
+    "Final authorized submission commit and commit identifier",
+    "Authorized submission to course repository"
+  ]
+}

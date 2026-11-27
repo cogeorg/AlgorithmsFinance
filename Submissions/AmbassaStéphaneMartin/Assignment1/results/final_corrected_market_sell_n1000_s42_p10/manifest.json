@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-26T07:22:44.615641+00:00",
+  "status": "complete",
+  "environment": {
+    "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "implementation": "CPython",
+    "dependencies": {
+      "third_party_required": [],
+      "stdlib": "3.14.5",
+      "zlib_build": "1.3.1.zlib-ng",
+      "zlib_runtime": "1.3.1.zlib-ng"
+    },
+    "machine": {
+      "os": "Windows-11-10.0.26300-SP0",
+      "system": "Windows",
+      "release": "11",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+      "logical_cpus": 22
+    },
+    "clock": {
+      "name": "perf_counter",
+      "resolution_seconds": 1e-07
+    },
+    "git_head": "49c144b687f3d2e1af33eb727212a4d7602ee5a1",
+    "git_dirty": true,
+    "git_status": "M \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/README.md\"\n M \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/benchmark_report.py\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/.gitignore\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/REPORT.md\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/dashboard.py\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_0f435e99504f4bf8.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_0f435e99504f4bf8.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_2f98d1e0bccfe2b2.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_2f98d1e0bccfe2b2.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_4974a6ce11ebcdd6.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_4974a6ce11ebcdd6.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_58c3f7f73607f0ed.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_58c3f7f73607f0ed.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_5bde66b74656e378.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_5bde66b74656e378.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_a6faada3f1fd5948.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_a6faada3f1fd5948.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_bfb789a80efd3ebc.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_bfb789a80efd3ebc.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_e6cb856f6fc1349a.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_e6cb856f6fc1349a.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_f1fe5c8caebd6e80.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/anchored_cancel_churn_f1fe5c8caebd6e80.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_085337cd00c18033.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_085337cd00c18033.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_0c0743a1fc0813ae.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_0c0743a1fc0813ae.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_0cbc187b63572405.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_0cbc187b63572405.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_2d8f80f51147d8fe.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_2d8f80f51147d8fe.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_302cfe60481aa3b9.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_302cfe60481aa3b9.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_35994e0fb5a662b7.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_35994e0fb5a662b7.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_47e8d2bee67fdf62.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_47e8d2bee67fdf62.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_53e95f7a2ea0aec2.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_53e95f7a2ea0aec2.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_559757fe76953a39.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_559757fe76953a39.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_899a653185a00262.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_899a653185a00262.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_8c7390b2f0d49cd2.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_8c7390b2f0d49cd2.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_8d2819d2879cac87.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_8d2819d2879cac87.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_9516d5f871867a30.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_9516d5f871867a30.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_a92e06c72da43a6a.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_a92e06c72da43a6a.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_ce0bf5d56bb71271.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_ce0bf5d56bb71271.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_d6874599e7f3ea6e.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_d6874599e7f3ea6e.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_d92d52148fbd3408.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_d92d52148fbd3408.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_dc14140c542837b5.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/controlled_bids_dc14140c542837b5.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/phase1_campaign.py\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/phase1_finalize.py\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/phase1_queue.py\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/phase1_results.py\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/profile_diagnostic.py\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/requirements.txt\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_cancel-churn_n100000_s42_l1_pNone/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_cancel-churn_n100000_s43_l1_pNone/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_cancel-churn_n100000_s44_l1_pNone/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_cancel-churn_n10000_s42_l1_pNone/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_cancel-churn_n10000_s43_l1_pNone/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_cancel-churn_n10000_s44_l1_pNone/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_cancel-churn_n1000_s42_l1_pNone/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_cancel-churn_n1000_s43_l1_pNone/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_cancel-churn_n1000_s44_l1_pNone/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n100000_s42_l1000_p10/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n100000_s42_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n100000_s42_l1000_p200/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n100000_s43_l1000_p10/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n100000_s43_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n100000_s43_l1000_p200/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n100000_s44_l1000_p10/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n100000_s44_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n100000_s44_l1000_p200/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n10000_s42_l1000_p10/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n10000_s42_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n10000_s42_l1000_p200/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n10000_s43_l1000_p10/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n10000_s43_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n10000_s43_l1000_p200/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n10000_s44_l1000_p10/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n10000_s44_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n10000_s44_l1000_p200/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n1000_s42_l1000_p10/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n1000_s42_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n1000_s42_l1000_p200/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n1000_s43_l1000_p10/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n1000_s43_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n1000_s43_l1000_p200/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n1000_s44_l1000_p10/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n1000_s44_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_market-sell_n1000_s44_l1000_p200/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n100000_s42_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n100000_s42_l4_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n100000_s43_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n100000_s43_l4_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n100000_s44_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n100000_s44_l4_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n10000_s42_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n10000_s42_l4_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n10000_s43_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n10000_s43_l4_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n10000_s44_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n10000_s44_l4_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n1000_s42_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n1000_s42_l4_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n1000_s43_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n1000_s43_l4_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n1000_s44_l1000_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_queue-concentration_n1000_s44_l4_p100/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_revised_100000_s43/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/final_revised_100000_s44/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/phase1_final/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/test_phase1_results.py\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/verify_browser.py\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/verify_dashboard.py\"",
+    "source_sha256": {
+      "benchmark.py": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4",
+      "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+      "order_book.py": "dcbdb2c0e7173e8116fa1c51b287a93cf422c140f74f49f2b5c49a5b025c39a6",
+      "dispatcher.py": "4c4652e95d8112fcdc574e98f41ea494326aa70b5a148b9b892e468784fffce3",
+      "test_order_book.py": "6f143b1616e6c21225b7de12fb4f8853e70a0aff32b6045ca3c3ef2501110595",
+      "test_price_heaps.py": "90498d2ac8d25fb2d669bcf671b954dc42267b866bf0ee89c2ff747614974c3a",
+      "test_lazy_cancellation.py": "f9d7028adb6a4fdbb33599a398755c561f1ec7ba6b10e6a558b6feca4658b423",
+      "test_benchmark.py": "400f876d52961283ce58227e6fdbfa319a406142ae20666cead47f76e821fdac"
+    },
+    "worker_environment": {
+      "PYTHONHASHSEED": "0",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "garbage_collection": "enabled; explicit collection before each fresh-book repetition"
+  },
+  "boundaries": {
+    "clock": "time.perf_counter; GC enabled, collect before each repetition",
+    "io": "Warm-cache reads, gzip decompression and UTF-8/JSON parsing timed separately; validation and SHA-256 checks outside clocks. Five reads plus an untimed warm-up.",
+    "timing": "Preloaded events; direct engine classes; five fresh books and an untimed fresh-book warm-up. No inspection, counters, deepcopy or comparison. Replay discards each returned result; single-sale retains its result until the clock stops. Result creation is included.",
+    "total_compute": "Initialization + construction + replay, summed within each repetition. I/O excluded. Summary is median of these sums, not sum of medians.",
+    "latency": "Separate instrumented pass; clocks surround each process_event call and result disposal for replay. Sample-list append excluded. No overhead subtraction. Single-sale experiments use five fresh books/samples.",
+    "percentiles": "Median uses statistics.median (average middle pair for even n); P95/P99 use nearest rank, sorted[ceil(p*n)-1], without interpolation.",
+    "memory": "Separate worker process and separate tracemalloc run per fresh book. Input, imports and warm-up excluded; book construction, setup, engine allocations and transient results included. No saved event-result history. Current bytes measured after GC; peak includes temporary cleanup and instrumentation allocations. Tracemalloc is Python allocation memory, not process RSS. Five repetitions; construction checkpoint included.",
+    "diagnostics": "Separate untimed pass; counters after every setup/replay event. Final canonical snapshot and ordered-result digests compare versions. Diagnostic costs are never part of primary timing.",
+    "limits": "Per-worker wall timeout and global campaign deadline are enforced by the parent. Compressed/decompressed payload limits checked before parse. Traced-allocation cap checked between memory-run events; an individual event can exceed it before the check. No OS RSS/CPU hard cap.",
+    "sale": "Setup uses a fresh identical passive bid book per sale. Construction timed separately. Integer ceil(depth * percent / 100); 10%, 100%, 200%. Throughput counts one sale, not its setup events. price_levels_visited counts distinct executed fill prices after the primary timer stops; it is reported for single-sale timing and diagnostics only.",
+    "queue_concentration": "Same order count, requested 4 versus 1000 levels. Actual occupied levels are min(order_count, requested_levels).",
+    "churn": "An old active head remains while same-price orders are added/cancelled; capture retained storage and memory before final head cancellation and after it. Stream size is 2 * requested_count + 2."
+  },
+  "command": [
+    "phase1_campaign.py",
+    "--count",
+    "1000",
+    "--seed",
+    "42",
+    "--experiment",
+    "market-sell",
+    "--levels",
+    "1000",
+    "--sale-percent",
+    "10",
+    "--out",
+    "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_corrected_market_sell_n1000_s42_p10"
+  ],
+  "versions": [
+    "baseline",
+    "revised"
+  ],
+  "phases": [
+    "io",
+    "timing",
+    "latency",
+    "memory",
+    "diagnostics"
+  ],
+  "repetitions": 5,
+  "workloads": [
+    {
+      "case_id": "market-sell_controlled_bids_n1000_s42_l1000_p10",
+      "experiment": "market-sell",
+      "scenario": "controlled_bids",
+      "seed": 42,
+      "requested_count": 1000,
+      "levels": 1000,
+      "sale_percent": 10,
+      "construction_event_count": 1000,
+      "source_event_count": 1000,
+      "event_count": 1001,
+      "actual_controlled_price_levels": 1000,
+      "source": {
+        "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\controlled_bids_9516d5f871867a30.jsonl.gz",
+        "sha256": "69240009d6515fa29764175f073f2cf19eb97605b378396c0e15af607a1750e3",
+        "metadata": {
+          "synthetic": true,
+          "calibrated_to_exchange_data": false,
+          "scenario": "controlled_bids",
+          "events": 1000,
+          "seed": 42,
+          "levels": 1000,
+          "generator": "benchmark.controlled_orders / random.Random",
+          "python": "3.14.5",
+          "price_tick_usd": "0.01",
+          "quantity_unit_btc": "0.00000001",
+          "compressed_bytes": 13329,
+          "sha256": "69240009d6515fa29764175f073f2cf19eb97605b378396c0e15af607a1750e3",
+          "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+          "benchmark_source_sha256": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4"
+        },
+        "reused": true
+      }
+    }
+  ],
+  "limits": {
+    "worker_wall_seconds": 60,
+    "measurement_campaign_wall_seconds": 900,
+    "payload_bytes": 134217728,
+    "traced_allocation_bytes": 536870912,
+    "os_rss_hard_limit": null,
+    "preparation": "Generation precedes measurement deadline; no preparation timeout"
+  },
+  "run_kind": "final-controlled",
+  "finished_utc": "2026-11-26T07:22:47.934168+00:00",
+  "raw_rows": 29,
+  "summary_rows": 9,
+  "diagnostic_comparisons": [
+    {
+      "case_id": "market-sell_controlled_bids_n1000_s42_l1000_p10",
+      "status": "passed"
+    }
+  ],
+  "completed_jobs": 9
+}

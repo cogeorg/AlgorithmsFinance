@@ -1,0 +1,57 @@
+test_market_sell_one_btc_against_two_btc_bid (__main__.TestMarketSells.test_market_sell_one_btc_against_two_btc_bid)
+Sell 1 BTC to A at $100, leaving A's remaining 1 BTC on the bid side. ... ok
+test_market_sell_one_btc_on_empty_book (__main__.TestMarketSells.test_market_sell_one_btc_on_empty_book)
+An empty book cannot fill a market sell or retain its residual. ... ok
+test_market_sell_two_btc_against_two_btc_bid (__main__.TestMarketSells.test_market_sell_two_btc_against_two_btc_bid)
+Sell 2 BTC to A at $100, fully consuming and removing A's bid. ... ok
+test_requested_quantity_larger_than_available_bids (__main__.TestMarketSells.test_requested_quantity_larger_than_available_bids) ... ok
+test_resting_asks_unchanged_when_no_bids_are_available (__main__.TestMarketSells.test_resting_asks_unchanged_when_no_bids_are_available) ... ok
+test_better_bid_price_precedes_earlier_arrival (__main__.TestPriceTimePriority.test_better_bid_price_precedes_earlier_arrival) ... ok
+test_bid_fifo_follows_arrival_not_identifier_spelling (__main__.TestPriceTimePriority.test_bid_fifo_follows_arrival_not_identifier_spelling) ... ok
+test_long_queue_preserves_fifo_with_reversed_identifiers (__main__.TestPriceTimePriority.test_long_queue_preserves_fifo_with_reversed_identifiers) ... ok
+test_partially_filled_maker_retains_priority_for_next_sale (__main__.TestPriceTimePriority.test_partially_filled_maker_retains_priority_for_next_sale) ... ok
+test_resting_asks_obey_fifo (__main__.TestPriceTimePriority.test_resting_asks_obey_fifo) ... ok
+test_sale_walks_price_levels_in_descending_order (__main__.TestPriceTimePriority.test_sale_walks_price_levels_in_descending_order) ... ok
+test_crossing_buy_uses_resting_ask_prices_and_rests_residual (__main__.TestLimitOrders.test_crossing_buy_uses_resting_ask_prices_and_rests_residual) ... ok
+test_crossing_sell_uses_resting_bid_prices_and_rests_residual (__main__.TestLimitOrders.test_crossing_sell_uses_resting_bid_prices_and_rests_residual) ... ok
+test_equal_prices_cross_with_no_residual_after_exact_fill (__main__.TestLimitOrders.test_equal_prices_cross_with_no_residual_after_exact_fill) ... ok
+test_noncrossing_limits_remain_on_their_respective_sides (__main__.TestLimitOrders.test_noncrossing_limits_remain_on_their_respective_sides) ... ok
+test_cancel_before_any_execution (__main__.TestCancellations.test_cancel_before_any_execution) ... ok
+test_cancel_fully_filled_order_returns_not_found (__main__.TestCancellations.test_cancel_fully_filled_order_returns_not_found) ... ok
+test_cancel_only_remaining_quantity_after_partial_fill (__main__.TestCancellations.test_cancel_only_remaining_quantity_after_partial_fill) ... ok
+test_cancelling_ask_preserves_other_active_orders (__main__.TestCancellations.test_cancelling_ask_preserves_other_active_orders) ... ok
+test_cancelling_middle_of_queue_preserves_other_orders_fifo (__main__.TestCancellations.test_cancelling_middle_of_queue_preserves_other_orders_fifo) ... ok
+test_repeat_cancellation_returns_not_found_and_zero_quantity (__main__.TestCancellations.test_repeat_cancellation_returns_not_found_and_zero_quantity) ... ok
+test_unknown_cancellation_is_valid_and_advances_sequence (__main__.TestCancellations.test_unknown_cancellation_is_valid_and_advances_sequence) ... ok
+test_duplicate_live_submission_ids_rejected (__main__.TestValidation.test_duplicate_live_submission_ids_rejected) ... ok
+test_event_id_values_preserved_for_every_result_kind (__main__.TestValidation.test_event_id_values_preserved_for_every_result_kind) ... ok
+test_external_dispatcher_closes_file_when_handler_fails (__main__.TestValidation.test_external_dispatcher_closes_file_when_handler_fails) ... ok
+test_external_dispatcher_reports_path_and_line_for_invalid_records (__main__.TestValidation.test_external_dispatcher_reports_path_and_line_for_invalid_records) ... ok
+test_external_dispatcher_validates_file_paths (__main__.TestValidation.test_external_dispatcher_validates_file_paths) ... ok
+test_invalid_event_id_values_rejected (__main__.TestValidation.test_invalid_event_id_values_rejected) ... ok
+test_invalid_numeric_values_rejected_without_changing_book (__main__.TestValidation.test_invalid_numeric_values_rejected_without_changing_book) ... ok
+test_large_integer_prices_and_quantities_remain_exact (__main__.TestValidation.test_large_integer_prices_and_quantities_remain_exact) ... ok
+test_missing_required_fields_rejected (__main__.TestValidation.test_missing_required_fields_rejected) ... ok
+test_nonincreasing_or_invalid_arrival_sequences_rejected (__main__.TestValidation.test_nonincreasing_or_invalid_arrival_sequences_rejected) ... ok
+test_reference_file_paths_are_present (__main__.TestValidation.test_reference_file_paths_are_present) ... ok
+test_rejected_event_does_not_consume_arrival_sequence (__main__.TestValidation.test_rejected_event_does_not_consume_arrival_sequence) ... ok
+test_unknown_event_types_and_sides_rejected (__main__.TestValidation.test_unknown_event_types_and_sides_rejected) ... ok
+test_call_each_public_handler_directly (__main__.TestIntegration.test_call_each_public_handler_directly) ... ok
+test_compare_mode_allows_different_rejection_explanations (__main__.TestIntegration.test_compare_mode_allows_different_rejection_explanations) ... ok
+test_compare_mode_checks_results_and_book_after_every_event (__main__.TestIntegration.test_compare_mode_checks_results_and_book_after_every_event) ... ok
+test_compare_mode_detects_numeric_type_mismatch (__main__.TestIntegration.test_compare_mode_detects_numeric_type_mismatch) ... ok
+test_compare_mode_detects_transient_book_mismatch (__main__.TestIntegration.test_compare_mode_detects_transient_book_mismatch) ... ok
+test_compare_mode_detects_transient_result_mismatch (__main__.TestIntegration.test_compare_mode_detects_transient_result_mismatch) ... ok
+test_dispatch_limit_market_sell_and_cancel_on_one_book (__main__.TestIntegration.test_dispatch_limit_market_sell_and_cancel_on_one_book) ... ok
+test_explicit_baseline_and_revised_selection (__main__.TestIntegration.test_explicit_baseline_and_revised_selection) ... ok
+test_external_dispatcher_replays_jsonl_file (__main__.TestIntegration.test_external_dispatcher_replays_jsonl_file) ... ok
+test_external_dispatcher_replays_jsonl_gz_file (__main__.TestIntegration.test_external_dispatcher_replays_jsonl_gz_file) ... ok
+test_inspect_both_sides_in_canonical_price_time_order (__main__.TestIntegration.test_inspect_both_sides_in_canonical_price_time_order) ... ok
+test_inspect_empty_book (__main__.TestIntegration.test_inspect_empty_book) ... ok
+test_invariants_after_every_event_in_small_generated_streams (__main__.TestIntegration.test_invariants_after_every_event_in_small_generated_streams) ... ok
+test_replay_professors_six_btc_reference_example (__main__.TestIntegration.test_replay_professors_six_btc_reference_example) ... ok
+
+----------------------------------------------------------------------
+Ran 49 tests in 0.078s
+
+OK

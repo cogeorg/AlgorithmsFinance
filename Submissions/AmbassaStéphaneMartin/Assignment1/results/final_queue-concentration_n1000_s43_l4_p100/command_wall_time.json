@@ -1,0 +1,69 @@
+{
+  "command": [
+    "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "-B",
+    "phase1_campaign.py",
+    "--count",
+    "1000",
+    "--seed",
+    "43",
+    "--experiment",
+    "queue-concentration",
+    "--levels",
+    "4",
+    "--out",
+    "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n1000_s43_l4_p100"
+  ],
+  "started_utc": "2026-11-26T00:19:10.390108+00:00",
+  "finished_utc": "2026-11-26T00:19:15.573173+00:00",
+  "exit_code": 0,
+  "total_command_wall_seconds": 5.183059100003447,
+  "progress": [
+    {
+      "line": "[1/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 shared io: complete",
+      "elapsed_seconds": 0.6888503999798559,
+      "interval_seconds": 0.6888503999798559
+    },
+    {
+      "line": "[2/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 baseline timing: complete",
+      "elapsed_seconds": 1.5107251000008546,
+      "interval_seconds": 0.8218747000209987
+    },
+    {
+      "line": "[3/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 revised timing: complete",
+      "elapsed_seconds": 1.7212188999983482,
+      "interval_seconds": 0.21049379999749362
+    },
+    {
+      "line": "[4/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 baseline latency: complete",
+      "elapsed_seconds": 2.507754499965813,
+      "interval_seconds": 0.7865355999674648
+    },
+    {
+      "line": "[5/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 revised latency: complete",
+      "elapsed_seconds": 2.7170979999937117,
+      "interval_seconds": 0.2093435000278987
+    },
+    {
+      "line": "[6/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 baseline memory: complete",
+      "elapsed_seconds": 4.296737900003791,
+      "interval_seconds": 1.5796399000100791
+    },
+    {
+      "line": "[7/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 revised memory: complete",
+      "elapsed_seconds": 4.563903699978255,
+      "interval_seconds": 0.2671657999744639
+    },
+    {
+      "line": "[8/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 baseline diagnostics: complete",
+      "elapsed_seconds": 4.9764959999592975,
+      "interval_seconds": 0.41259229998104274
+    },
+    {
+      "line": "[9/9] queue-concentration_controlled_bids_n1000_s43_l4_p100 revised diagnostics: complete",
+      "elapsed_seconds": 5.16954709996935,
+      "interval_seconds": 0.19305110001005232
+    }
+  ],
+  "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+}

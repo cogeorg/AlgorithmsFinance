@@ -1,0 +1,126 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "interleaved_cancel_fill",
+ "description": "Four buys in one queue; cancels and sells alternate at the same level; queue order of the survivors is preserved.",
+ "covers": [
+  "interleaved cancel and fill at the same level",
+  "cancel in the middle of a queue",
+  "cancel after partial fill"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 2,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "order_id": "b2",
+   "status": "resting",
+   "unfilled_qty_units": 3,
+   "fills": []
+  },
+  {
+   "event_id": "e3",
+   "order_id": "b3",
+   "status": "resting",
+   "unfilled_qty_units": 4,
+   "fills": []
+  },
+  {
+   "event_id": "e4",
+   "order_id": "b4",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e5",
+   "target_order_id": "b2",
+   "status": "cancelled",
+   "cancelled_qty_units": 3
+  },
+  {
+   "event_id": "e6",
+   "order_id": "s1",
+   "status": "filled",
+   "unfilled_qty_units": 0,
+   "fills": [
+    {
+     "maker_id": "b1",
+     "taker_id": "s1",
+     "price_ticks": 100,
+     "qty_units": 2
+    },
+    {
+     "maker_id": "b3",
+     "taker_id": "s1",
+     "price_ticks": 100,
+     "qty_units": 2
+    }
+   ]
+  },
+  {
+   "event_id": "e7",
+   "target_order_id": "b3",
+   "status": "cancelled",
+   "cancelled_qty_units": 2
+  },
+  {
+   "event_id": "e8",
+   "order_id": "b5",
+   "status": "resting",
+   "unfilled_qty_units": 1,
+   "fills": []
+  },
+  {
+   "event_id": "e9",
+   "order_id": "s2",
+   "status": "filled",
+   "unfilled_qty_units": 0,
+   "fills": [
+    {
+     "maker_id": "b4",
+     "taker_id": "s2",
+     "price_ticks": 100,
+     "qty_units": 5
+    },
+    {
+     "maker_id": "b5",
+     "taker_id": "s2",
+     "price_ticks": 100,
+     "qty_units": 1
+    }
+   ]
+  },
+  {
+   "event_id": "e10",
+   "target_order_id": "b4",
+   "status": "not_found",
+   "cancelled_qty_units": 0
+  },
+  {
+   "event_id": "e11",
+   "order_id": "b6",
+   "status": "resting",
+   "unfilled_qty_units": 7,
+   "fills": []
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "b6",
+   "side": "BUY",
+   "price_ticks": 100,
+   "qty_units": 7,
+   "arrival_seq": 11
+  }
+ ],
+ "best_bid": 100,
+ "best_ask": null
+}

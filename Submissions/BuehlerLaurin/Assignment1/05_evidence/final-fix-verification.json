@@ -1,0 +1,3677 @@
+{
+  "reviewed_base": "3e9ebfe152605d80f48c2e9d703b965eda246c78",
+  "upstream_main": "43ff26c35cb9a27439b86ed5054e188639609903",
+  "runtime_sha256": {
+    "01_code/bench/run_all.py": "4904e221f6f91e3aac367e32eaa00e48c78a71d97b89619541bf32632a35be87",
+    "02_tests/test_dashboard.py": "de22e10f284bac1ac1a522e36d7dbf3870d6a8753a13b0485aa3dc01cf9b7eff",
+    "02_tests/test_checkout_portability.py": "79254722e7b5beef894843863ab274b1435ab15ef870173665b32cf542a1489d",
+    "run_all.ps1": "665d0dfee6f67da11fa857d6833bda5e12085ea6ab6d41405dbc3af8e4a3aaa0",
+    "run_all.sh": "193f4e4c16815f850f085b6f476944bff8adbe9cb59e46b90c2fa6d108a037c4"
+  },
+  "full_suite": {
+    "seconds": 908.11,
+    "tests": 1040,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "per_file": {
+      "test_b3r": 6,
+      "test_b_internal": 32,
+      "test_bench_pipeline": 30,
+      "test_checkout_portability": 7,
+      "test_contract": 448,
+      "test_dashboard": 22,
+      "test_fast_assessment": 10,
+      "test_fast_equivalence": 116,
+      "test_final_version": 60,
+      "test_mutants": 25,
+      "test_own_datasets": 4,
+      "test_post_attack_pipeline": 13,
+      "test_replay": 21,
+      "test_replay_regressions": 28,
+      "test_stateful": 6,
+      "test_submission_robustness": 28,
+      "test_validation": 184
+    },
+    "sha256": "bb2ed191ac7686a3736a423abc7a4278f4639b1d33b4d6b61d1173126e3623f9",
+    "xml_seconds": 908.11,
+    "reported_pytest_seconds": 908.12
+  },
+  "dashboard_robustness_suite": {
+    "seconds": 56.044,
+    "tests": 50,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "per_file": {
+      "test_dashboard": 22,
+      "test_submission_robustness": 28
+    },
+    "sha256": "de0b6391af59e5865c2284dd7e509c0215918de0d060f6a0222bc90de07e3bd1",
+    "xml_seconds": 56.044,
+    "reported_pytest_seconds": 56.31
+  },
+  "fresh_overlay_suite": {
+    "seconds": 873.493,
+    "tests": 1040,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "per_file": {
+      "test_b3r": 6,
+      "test_b_internal": 32,
+      "test_bench_pipeline": 30,
+      "test_checkout_portability": 7,
+      "test_contract": 448,
+      "test_dashboard": 22,
+      "test_fast_assessment": 10,
+      "test_fast_equivalence": 116,
+      "test_final_version": 60,
+      "test_mutants": 25,
+      "test_own_datasets": 4,
+      "test_post_attack_pipeline": 13,
+      "test_replay": 21,
+      "test_replay_regressions": 28,
+      "test_stateful": 6,
+      "test_submission_robustness": 28,
+      "test_validation": 184
+    },
+    "sha256": "22caeef97dd9d09232585dd774022db591ae4d9e434e556afd9eb2a5384d3c94"
+  },
+  "head_only_cleanroom": {
+    "snapshot": "unmodified git archive HEAD at 3e9ebfe",
+    "command": ".\\run_all.ps1 -NoDashboard",
+    "exit_code": 1,
+    "seconds": 1045.9984035999514,
+    "overlay_files": []
+  },
+  "working_overlay_cleanroom": {
+    "command": ".\\run_all.ps1 -NoDashboard",
+    "snapshot": "pre-commit working-file overlay; NOT an unchanged HEAD archive",
+    "exit_code": 0,
+    "seconds": 982.1616805999074
+  },
+  "overlay_source": {
+    "base_commit": "3e9ebfe152605d80f48c2e9d703b965eda246c78",
+    "archive_sha256": "312a880ae5e450a3f71b6e76922042d98868e15c0f059a5679bab9132ee9ebbd",
+    "kind": "pre-commit working-file overlay; NOT an unchanged HEAD archive",
+    "overlaid_files": [
+      {
+        "path": "01_code/bench/run_all.py",
+        "sha256": "4904e221f6f91e3aac367e32eaa00e48c78a71d97b89619541bf32632a35be87"
+      },
+      {
+        "path": "02_tests/test_dashboard.py",
+        "sha256": "de22e10f284bac1ac1a522e36d7dbf3870d6a8753a13b0485aa3dc01cf9b7eff"
+      },
+      {
+        "path": "02_tests/test_checkout_portability.py",
+        "sha256": "79254722e7b5beef894843863ab274b1435ab15ef870173665b32cf542a1489d"
+      },
+      {
+        "path": "run_all.ps1",
+        "sha256": "665d0dfee6f67da11fa857d6833bda5e12085ea6ab6d41405dbc3af8e4a3aaa0"
+      },
+      {
+        "path": "run_all.sh",
+        "sha256": "193f4e4c16815f850f085b6f476944bff8adbe9cb59e46b90c2fa6d108a037c4"
+      },
+      {
+        "path": "README.md",
+        "sha256": "fe1f2c3c97834060106501ba2ed1992df47bc37b62d05f23f681743d51dd662d"
+      },
+      {
+        "path": "SPEC.md",
+        "sha256": "4dca45b95ed5d55700aca96107eb7f95eb4d51b5bdcf3b0e2fdef0b3b073e2af"
+      },
+      {
+        "path": "00_docs/REPORT.md",
+        "sha256": "a54774bf310fee0db106f47e63e0742f7499e40e350f899d37e884ecc5b3d219"
+      },
+      {
+        "path": "00_docs/REPORT_FACT_CHECK.md",
+        "sha256": "2ba4bbd41800c4b336dd93c14388d0ecc8608f9bf4fc95a96c52dcde7fde308e"
+      },
+      {
+        "path": "00_docs/REQUIREMENTS_MAP.md",
+        "sha256": "7fbedd728f2035d1d6b8b2d8afe3f420572e620960195b416469ce219cb6a5d9"
+      }
+    ],
+    "removed_files": [
+      "00_docs/LEARNING.md"
+    ]
+  },
+  "step_seconds": [
+    {
+      "stage": "create venv",
+      "seconds": 8.077302
+    },
+    {
+      "stage": "install requirements",
+      "seconds": 52.746044
+    },
+    {
+      "stage": "full tests",
+      "seconds": 875.416193
+    },
+    {
+      "stage": "worked example",
+      "seconds": 0.294953
+    },
+    {
+      "stage": "1k smoke",
+      "seconds": 44.9005
+    },
+    {
+      "stage": "dashboard skip",
+      "seconds": 0.033899
+    }
+  ],
+  "smoke": {
+    "workers": 108,
+    "all_status": "ok",
+    "source_provenance": "no git checkout (source not commit-verified)",
+    "source_commit_verified": false
+  },
+  "apptest": {
+    "seconds": 7.210239099920727,
+    "head": null,
+    "tabs": [
+      "Final selection",
+      "Overview",
+      "Scaling",
+      "Original vs revised & variants",
+      "Throughput & latency",
+      "Memory",
+      "Correctness",
+      "Bottleneck explained",
+      "Method & data"
+    ],
+    "exceptions": [],
+    "metrics": {
+      "B3r official 100k geomean": "0.4247 s",
+      "A replay limits": "13",
+      "10k speedup range (non-churn)": "21-186x",
+      "Selected median (s)": "0.593281"
+    },
+    "warning": [
+      "Reading files from disk (no git checkout): values are not verified against a commit.",
+      "Algorithmic spike \u2014 spike_purge_at_threshold: maximum recorded B3r latency 57.415 ms. This declared heap-purge cost is distinct from runtime GC pauses. FINAL_SELECTION reports the literal 3x-filter qualification explicitly."
+    ]
+  },
+  "extra_commands": [
+    {
+      "label": "extra-pip",
+      "command": [
+        "C:\\Users\\laubu\\AppData\\Local\\Temp\\aif-fix-3e9ebfe-20261125\\working-overlay-final\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "requirements.txt"
+      ],
+      "exit_code": 0,
+      "seconds": 1.761062299949117
+    },
+    {
+      "label": "extra-replay",
+      "command": [
+        "C:\\Users\\laubu\\AppData\\Local\\Temp\\aif-fix-3e9ebfe-20261125\\working-overlay-final\\.venv\\Scripts\\python.exe",
+        "-m",
+        "run",
+        "lob.replay",
+        "06_data/supplied/worked_example.jsonl",
+        "--version",
+        "B"
+      ],
+      "exit_code": 0,
+      "seconds": 0.16983280004933476
+    },
+    {
+      "label": "extra-worked-check",
+      "command": [
+        "C:\\Users\\laubu\\AppData\\Local\\Temp\\aif-fix-3e9ebfe-20261125\\working-overlay-final\\.venv\\Scripts\\python.exe",
+        "-m",
+        "submission_tools",
+        "check-worked",
+        "scratch/manual-worked.jsonl"
+      ],
+      "exit_code": 0,
+      "seconds": 0.18541619996540248
+    },
+    {
+      "label": "extra-apptest",
+      "command": [
+        "C:\\Users\\laubu\\AppData\\Local\\Temp\\aif-fix-3e9ebfe-20261125\\working-overlay-final\\.venv\\Scripts\\python.exe",
+        "-c",
+        "\nfrom pathlib import Path\nimport sys,os,json,time\nfrom streamlit.testing.v1 import AppTest\ncopy=Path(sys.argv[1]);sys.path.insert(0,str(copy/'04_dashboard'));os.environ['PATH']=''\nimport saved_results\nassert saved_results.head() is None\nstart=time.perf_counter();app=AppTest.from_file(str(copy/'04_dashboard/app.py'),default_timeout=180).run()\nassert not app.exception and not app.error,([e.message for e in app.exception],[e.value for e in app.error])\nassert len(app.tabs)==9 and all(len(t.dataframe)+len(t.markdown)>0 for t in app.tabs)\nassert 'Reading files from disk (no git checkout): values are not verified against a commit.' in [w.value for w in app.warning]\nr={'seconds':time.perf_counter()-start,'head':None,'tabs':[t.label for t in app.tabs],'exceptions':[],'metrics':{m.label:m.value for m in app.metric},'warning':[w.value for w in app.warning]}\nassert r['metrics']['B3r official 100k geomean']=='0.4247 s'\nPath(sys.argv[2]).write_text(json.dumps(r,indent=2),encoding='utf-8');print(json.dumps(r))\n",
+        "C:\\Users\\laubu\\AppData\\Local\\Temp\\aif-fix-3e9ebfe-20261125\\working-overlay-final",
+        "C:\\Users\\laubu\\AppData\\Local\\Temp\\aif-fix-3e9ebfe-20261125\\extra-apptest.json"
+      ],
+      "exit_code": 0,
+      "seconds": 9.378154400037602
+    },
+    {
+      "label": "extra-data",
+      "command": [
+        "C:\\Users\\laubu\\AppData\\Local\\Temp\\aif-fix-3e9ebfe-20261125\\working-overlay-final\\.venv\\Scripts\\python.exe",
+        "-m",
+        "submission_tools",
+        "data"
+      ],
+      "exit_code": 0,
+      "seconds": 248.37005639995914
+    },
+    {
+      "label": "extra-data-verify",
+      "command": [
+        "C:\\Users\\laubu\\AppData\\Local\\Temp\\aif-fix-3e9ebfe-20261125\\working-overlay-final\\.venv\\Scripts\\python.exe",
+        "-m",
+        "submission_tools",
+        "data",
+        "--verify-only"
+      ],
+      "exit_code": 0,
+      "seconds": 8.984042100026272
+    },
+    {
+      "label": "extra-bash-syntax",
+      "command": [
+        "C:\\Program Files\\Git\\bin\\bash.exe",
+        "-n",
+        "run_all.sh"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09561290009878576
+    },
+    {
+      "label": "extra-streamlit",
+      "exit_code": 0,
+      "note": "Original helper health assertion passed before data commands and the later duplicate-marker hygiene failure; see extra-streamlit.log."
+    }
+  ],
+  "hygiene": {
+    "submitted_files_scanned": 1117,
+    "hits": {
+      "injected_term": [
+        {
+          "path": "00_docs/AI_LOG.md",
+          "line": 10
+        }
+      ],
+      "other_students": [],
+      "personal_paths": [
+        {
+          "path": "00_docs/AI_LOG.md",
+          "line": 868
+        },
+        {
+          "path": "00_docs/AI_LOG.md",
+          "line": 1105
+        },
+        {
+          "path": "03_results/runs/20261121T224807Z_efee8d4-dirty_phase3_sanity_not_benchmark/tests.txt",
+          "line": 2
+        },
+        {
+          "path": "03_results/runs/20261121T224807Z_efee8d4-dirty_phase3_sanity_not_benchmark/tests.txt",
+          "line": 3
+        },
+        {
+          "path": "03_results/runs/20261121T234816Z_b5411d4-dirty_phase3b_sanity_not_benchmark/tests.txt",
+          "line": 2
+        },
+        {
+          "path": "03_results/runs/20261121T234816Z_b5411d4-dirty_phase3b_sanity_not_benchmark/tests.txt",
+          "line": 3
+        },
+        {
+          "path": "03_results/runs/20261122T004602Z_5d8d15a-dirty_smoke/tests.txt",
+          "line": 2
+        },
+        {
+          "path": "03_results/runs/20261122T004602Z_5d8d15a-dirty_smoke/tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T111536Z_bc2576f-dirty_manifest-package.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T111536Z_bc2576f-dirty_manifest-package.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T111537Z_bc2576f-dirty_manifest-supplied-copies.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T111537Z_bc2576f-dirty_manifest-supplied-copies.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T111558Z_bc2576f-dirty_generator-reproduces-seed42-10k.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T111558Z_bc2576f-dirty_generator-reproduces-seed42-10k.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T111558Z_bc2576f-dirty_generator-reproduces-seed42-10k.txt",
+          "line": 11
+        },
+        {
+          "path": "05_evidence/20261121T111636Z_bc2576f-dirty_worked-files-sha.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T111636Z_bc2576f-dirty_worked-files-sha.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T135911Z_fea364d-dirty_tests-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T135911Z_fea364d-dirty_tests-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T135911Z_fea364d-dirty_tests-red.txt",
+          "line": 4047
+        },
+        {
+          "path": "05_evidence/20261121T135911Z_fea364d-dirty_tests-red.txt",
+          "line": 4049
+        },
+        {
+          "path": "05_evidence/20261121T135911Z_fea364d-dirty_tests-red.txt",
+          "line": 4051
+        },
+        {
+          "path": "05_evidence/20261121T135944Z_fea364d-dirty_tests-red-rerun-after-helper-rename.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T135944Z_fea364d-dirty_tests-red-rerun-after-helper-rename.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T135944Z_fea364d-dirty_tests-red-rerun-after-helper-rename.txt",
+          "line": 4025
+        },
+        {
+          "path": "05_evidence/20261121T135944Z_fea364d-dirty_tests-red-rerun-after-helper-rename.txt",
+          "line": 4027
+        },
+        {
+          "path": "05_evidence/20261121T135944Z_fea364d-dirty_tests-red-rerun-after-helper-rename.txt",
+          "line": 4029
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2145
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2151
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2154
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2159
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2164
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2170
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2173
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2178
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2183
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2189
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2192
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2197
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2199
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2201
+        },
+        {
+          "path": "05_evidence/20261121T221448Z_11d831b-dirty_phase2-tests-red.txt",
+          "line": 2203
+        },
+        {
+          "path": "05_evidence/20261121T221611Z_11d831b-dirty_phase2-a-first-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T221611Z_11d831b-dirty_phase2-a-first-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T221732Z_11d831b-dirty_phase2-mutants.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T221732Z_11d831b-dirty_phase2-mutants.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T222030Z_11d831b-dirty_phase2-all-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T222030Z_11d831b-dirty_phase2-all-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T222030Z_11d831b-dirty_phase2-all-tests.txt",
+          "line": 1046
+        },
+        {
+          "path": "05_evidence/20261121T222030Z_11d831b-dirty_phase2-all-tests.txt",
+          "line": 1048
+        },
+        {
+          "path": "05_evidence/20261121T222030Z_11d831b-dirty_phase2-all-tests.txt",
+          "line": 1050
+        },
+        {
+          "path": "05_evidence/20261121T222311Z_11d831b-dirty_phase2-results-summary.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T222311Z_11d831b-dirty_phase2-results-summary.txt",
+          "line": 32
+        },
+        {
+          "path": "05_evidence/20261121T222312Z_11d831b-dirty_phase2-replay-worked.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T222312Z_11d831b-dirty_phase2-replay-worked.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T222348Z_11d831b-dirty_phase2-results-summary-corrected-file-grouping.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T222348Z_11d831b-dirty_phase2-results-summary-corrected-file-grouping.txt",
+          "line": 32
+        },
+        {
+          "path": "05_evidence/20261121T222630Z_11d831b-dirty_phase2-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T222630Z_11d831b-dirty_phase2-final-review.txt",
+          "line": 28
+        },
+        {
+          "path": "05_evidence/20261121T224224Z_efee8d4-dirty_phase3-tests-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T224224Z_efee8d4-dirty_phase3-tests-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T224224Z_efee8d4-dirty_phase3-tests-red.txt",
+          "line": 1034
+        },
+        {
+          "path": "05_evidence/20261121T224224Z_efee8d4-dirty_phase3-tests-red.txt",
+          "line": 1036
+        },
+        {
+          "path": "05_evidence/20261121T224224Z_efee8d4-dirty_phase3-tests-red.txt",
+          "line": 1038
+        },
+        {
+          "path": "05_evidence/20261121T224231Z_efee8d4-dirty_phase3-internals-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T224231Z_efee8d4-dirty_phase3-internals-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T224231Z_efee8d4-dirty_phase3-internals-red.txt",
+          "line": 12
+        },
+        {
+          "path": "05_evidence/20261121T224231Z_efee8d4-dirty_phase3-internals-red.txt",
+          "line": 18
+        },
+        {
+          "path": "05_evidence/20261121T224231Z_efee8d4-dirty_phase3-internals-red.txt",
+          "line": 21
+        },
+        {
+          "path": "05_evidence/20261121T224231Z_efee8d4-dirty_phase3-internals-red.txt",
+          "line": 24
+        },
+        {
+          "path": "05_evidence/20261121T224231Z_efee8d4-dirty_phase3-internals-red.txt",
+          "line": 26
+        },
+        {
+          "path": "05_evidence/20261121T224231Z_efee8d4-dirty_phase3-internals-red.txt",
+          "line": 29
+        },
+        {
+          "path": "05_evidence/20261121T224429Z_efee8d4-dirty_phase3-internals-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T224429Z_efee8d4-dirty_phase3-internals-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T224534Z_efee8d4-dirty_phase3-b-contract-stateful-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T224534Z_efee8d4-dirty_phase3-b-contract-stateful-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T224807Z_efee8d4-dirty_phase3-sanity-not-a-benchmark.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T224807Z_efee8d4-dirty_phase3-sanity-not-a-benchmark.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T224926Z_efee8d4-dirty_phase3-all-tests-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T224926Z_efee8d4-dirty_phase3-all-tests-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T225246Z_efee8d4-dirty_phase3-results-summary.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T225246Z_efee8d4-dirty_phase3-results-summary.txt",
+          "line": 24
+        },
+        {
+          "path": "05_evidence/20261121T225550Z_efee8d4-dirty_phase3-replay-b-worked.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T225550Z_efee8d4-dirty_phase3-replay-b-worked.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T225839Z_efee8d4-dirty_phase3-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T225839Z_efee8d4-dirty_phase3-final-review.txt",
+          "line": 38
+        },
+        {
+          "path": "05_evidence/20261121T233959Z_b5411d4-dirty_phase3b-internals-port-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T233959Z_b5411d4-dirty_phase3b-internals-port-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T233959Z_b5411d4_phase3b-q11-generator-sha.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T233959Z_b5411d4_phase3b-q11-generator-sha.txt",
+          "line": 5
+        },
+        {
+          "path": "05_evidence/20261121T233959Z_b5411d4_phase3b-q11-generator-sha.txt",
+          "line": 22
+        },
+        {
+          "path": "05_evidence/20261121T233959Z_b5411d4_phase3b-q11-generator-sha.txt",
+          "line": 30
+        },
+        {
+          "path": "05_evidence/20261121T233959Z_b5411d4_phase3b-q11-generator-sha.txt",
+          "line": 31
+        },
+        {
+          "path": "05_evidence/20261121T234202Z_b5411d4-dirty_phase3b-variants-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T234202Z_b5411d4-dirty_phase3b-variants-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T234202Z_b5411d4-dirty_phase3b-variants-red.txt",
+          "line": 1369
+        },
+        {
+          "path": "05_evidence/20261121T234202Z_b5411d4-dirty_phase3b-variants-red.txt",
+          "line": 1371
+        },
+        {
+          "path": "05_evidence/20261121T234202Z_b5411d4-dirty_phase3b-variants-red.txt",
+          "line": 1373
+        },
+        {
+          "path": "05_evidence/20261121T234202Z_b5411d4-dirty_phase3b-variants-red.txt",
+          "line": 1384
+        },
+        {
+          "path": "05_evidence/20261121T234202Z_b5411d4-dirty_phase3b-variants-red.txt",
+          "line": 1386
+        },
+        {
+          "path": "05_evidence/20261121T234202Z_b5411d4-dirty_phase3b-variants-red.txt",
+          "line": 1388
+        },
+        {
+          "path": "05_evidence/20261121T234259Z_b5411d4-dirty_phase3b-b2-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T234259Z_b5411d4-dirty_phase3b-b2-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T234403Z_b5411d4-dirty_phase3b-b3-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T234403Z_b5411d4-dirty_phase3b-b3-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T234510Z_b5411d4-dirty_phase3b-internal-and-cli-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T234510Z_b5411d4-dirty_phase3b-internal-and-cli-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T234742Z_b5411d4-dirty_phase3b-internal-mutation-probes.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T234742Z_b5411d4-dirty_phase3b-internal-mutation-probes.txt",
+          "line": 41
+        },
+        {
+          "path": "05_evidence/20261121T234816Z_b5411d4-dirty_phase3b-sanity-not-a-benchmark.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T234816Z_b5411d4-dirty_phase3b-sanity-not-a-benchmark.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T234932Z_b5411d4-dirty_phase3b-all-tests-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T234932Z_b5411d4-dirty_phase3b-all-tests-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T234959Z_b5411d4-dirty_phase3b-copied-generator-reproduces.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T234959Z_b5411d4-dirty_phase3b-copied-generator-reproduces.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T235750Z_b5411d4-dirty_phase3b-internals-entry.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T235750Z_b5411d4-dirty_phase3b-internals-entry.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261121T235750Z_b5411d4-dirty_phase3b-results-summary.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261121T235750Z_b5411d4-dirty_phase3b-results-summary.txt",
+          "line": 30
+        },
+        {
+          "path": "05_evidence/20261122T000304Z_b5411d4-dirty_phase3b-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T000304Z_b5411d4-dirty_phase3b-final-review.txt",
+          "line": 58
+        },
+        {
+          "path": "05_evidence/20261122T000414Z_b5411d4-dirty_phase3b-generator-byte-policy.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T000414Z_b5411d4-dirty_phase3b-generator-byte-policy.txt",
+          "line": 12
+        },
+        {
+          "path": "05_evidence/20261122T002236Z_5d8d15a-dirty_phase4a-inputs-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T002236Z_5d8d15a-dirty_phase4a-inputs-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T002240Z_5d8d15a-dirty_phase4a-inputs-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T002240Z_5d8d15a-dirty_phase4a-inputs-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T002242Z_5d8d15a-dirty_phase4a-generate-data.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T002242Z_5d8d15a-dirty_phase4a-generate-data.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T002455Z_5d8d15a-dirty_phase4a-runner-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T002455Z_5d8d15a-dirty_phase4a-runner-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T002614Z_5d8d15a-dirty_phase4a-runner-core-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T002614Z_5d8d15a-dirty_phase4a-runner-core-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T003426Z_5d8d15a-dirty_phase4a-pipeline-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T003426Z_5d8d15a-dirty_phase4a-pipeline-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T003523Z_5d8d15a-dirty_phase4a-sample-checker-regression-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T003523Z_5d8d15a-dirty_phase4a-sample-checker-regression-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T003527Z_5d8d15a-dirty_phase4a-pipeline-tests-after-checker-fix.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T003527Z_5d8d15a-dirty_phase4a-pipeline-tests-after-checker-fix.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T003529Z_5d8d15a-dirty_phase4a-smoke.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T003529Z_5d8d15a-dirty_phase4a-smoke.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T003928Z_5d8d15a-dirty_phase4a-stop-phase-regression-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T003928Z_5d8d15a-dirty_phase4a-stop-phase-regression-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T004230Z_5d8d15a-dirty_phase4a-manifest-verified.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T004230Z_5d8d15a-dirty_phase4a-manifest-verified.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T004236Z_5d8d15a-dirty_phase4a-runtime-estimate-draft.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T004236Z_5d8d15a-dirty_phase4a-runtime-estimate-draft.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T004241Z_5d8d15a-dirty_phase4a-pipeline-tests-final.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T004241Z_5d8d15a-dirty_phase4a-pipeline-tests-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T004558Z_5d8d15a-dirty_phase4a-pipeline-tests-frozen.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T004558Z_5d8d15a-dirty_phase4a-pipeline-tests-frozen.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T004600Z_5d8d15a-dirty_phase4a-smoke-verified-initial.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T004600Z_5d8d15a-dirty_phase4a-smoke-verified-initial.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T004601Z_5d8d15a-dirty_phase4a-smoke-final.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T004601Z_5d8d15a-dirty_phase4a-smoke-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T004829Z_5d8d15a-dirty_phase4a-per-replay-budget-proof.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T004829Z_5d8d15a-dirty_phase4a-per-replay-budget-proof.txt",
+          "line": 15
+        },
+        {
+          "path": "05_evidence/20261122T005130Z_5d8d15a-dirty_phase4a-runtime-estimate-final.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T005130Z_5d8d15a-dirty_phase4a-runtime-estimate-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T005130Z_5d8d15a-dirty_phase4a-smoke-verified-final.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T005130Z_5d8d15a-dirty_phase4a-smoke-verified-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T005136Z_5d8d15a-dirty_phase4a-all-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T005136Z_5d8d15a-dirty_phase4a-all-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T005707Z_5d8d15a-dirty_phase4a-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T005707Z_5d8d15a-dirty_phase4a-final-review.txt",
+          "line": 40
+        },
+        {
+          "path": "05_evidence/20261122T005749Z_5d8d15a-dirty_phase4a-final-review-file.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T005749Z_5d8d15a-dirty_phase4a-final-review-file.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T011036Z_6c2a8d1-dirty_phase4a-amendment-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T011036Z_6c2a8d1-dirty_phase4a-amendment-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T011200Z_6c2a8d1-dirty_phase4a-amendment-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T011200Z_6c2a8d1-dirty_phase4a-amendment-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T011203Z_6c2a8d1-dirty_phase4a-archive-smoke.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T011203Z_6c2a8d1-dirty_phase4a-archive-smoke.txt",
+          "line": 11
+        },
+        {
+          "path": "05_evidence/20261122T011203Z_6c2a8d1-dirty_phase4a-archive-smoke.txt",
+          "line": 12
+        },
+        {
+          "path": "05_evidence/20261122T011207Z_6c2a8d1-dirty_phase4a-estimate-single-large.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T011207Z_6c2a8d1-dirty_phase4a-estimate-single-large.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T011341Z_6c2a8d1-dirty_phase4a-estimate-storage.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T011341Z_6c2a8d1-dirty_phase4a-estimate-storage.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T011345Z_6c2a8d1-dirty_phase4a-amendment-all-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T011345Z_6c2a8d1-dirty_phase4a-amendment-all-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T011803Z_6c2a8d1-dirty_phase4a-amendment-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T011803Z_6c2a8d1-dirty_phase4a-amendment-final-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 60
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 66
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 69
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 72
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 75
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 81
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 86
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 92
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 95
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 98
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 101
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 107
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 112
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 118
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 121
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 124
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 127
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 133
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 138
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 144
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 147
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 150
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 153
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 159
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 164
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 170
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 173
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 175
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 180
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 185
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 191
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 194
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 197
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 200
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 206
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 211
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 217
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 220
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 223
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 226
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 232
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 237
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 243
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 246
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 249
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 252
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 258
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 263
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 269
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 272
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 275
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 278
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 284
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 289
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 295
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 298
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 300
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 305
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 310
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 316
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 319
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 322
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 325
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 328
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 331
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 337
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 342
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 348
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 351
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 354
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 357
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 360
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 363
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 369
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 374
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 380
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 383
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 386
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 389
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 392
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 395
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 401
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 406
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 412
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 415
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 418
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 421
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 424
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 427
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 433
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 438
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 444
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 447
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 449
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 454
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 459
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 465
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 468
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 471
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 474
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 477
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 480
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 486
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 491
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 497
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 500
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 503
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 506
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 509
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 512
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 518
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 523
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 529
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 532
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 535
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 538
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 541
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 544
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 550
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 555
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 561
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 564
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 567
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 570
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 573
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 576
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 582
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 587
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 593
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 596
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 598
+        },
+        {
+          "path": "05_evidence/20261122T114415Z_958c8b4-dirty_b3r-and-replay-red.txt",
+          "line": 603
+        },
+        {
+          "path": "05_evidence/20261122T114514Z_958c8b4-dirty_b3r-and-replay-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T114514Z_958c8b4-dirty_b3r-and-replay-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T114642Z_958c8b4-dirty_post-attack-pipeline-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T114642Z_958c8b4-dirty_post-attack-pipeline-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T114906Z_958c8b4-dirty_post-attack-pipeline-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T114906Z_958c8b4-dirty_post-attack-pipeline-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T115051Z_958c8b4-dirty_post-attack-data-preparation.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T115051Z_958c8b4-dirty_post-attack-data-preparation.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T115232Z_958c8b4-dirty_b3r-all-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T115232Z_958c8b4-dirty_b3r-all-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T115525Z_958c8b4-dirty_post-attack-manifest-idempotence-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T115525Z_958c8b4-dirty_post-attack-manifest-idempotence-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T115547Z_958c8b4-dirty_post-attack-manifest-idempotence-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T115547Z_958c8b4-dirty_post-attack-manifest-idempotence-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T115548Z_958c8b4-dirty_b3r-night-plan-only.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T115638Z_958c8b4-dirty_b3r-all-tests-final.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T115638Z_958c8b4-dirty_b3r-all-tests-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T115730Z_958c8b4-dirty_b3r-trap-mutation-probes.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T115730Z_958c8b4-dirty_b3r-trap-mutation-probes.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T120050Z_958c8b4-dirty_atk01-original-reproducer-fixed.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T120050Z_958c8b4-dirty_atk01-original-reproducer-fixed.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T120132Z_958c8b4-dirty_b3r-committed-attack-suite.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T120132Z_958c8b4-dirty_b3r-committed-attack-suite.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T120353Z_958c8b4-dirty_b3r-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T120353Z_958c8b4-dirty_b3r-final-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T123817Z_6d93da6-dirty_a-scope-runtime-estimate.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T123817Z_6d93da6-dirty_a-scope-runtime-estimate.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T123818Z_6d93da6-dirty_a-scope-plan-only.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T123822Z_6d93da6-dirty_a-scope-all-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T123822Z_6d93da6-dirty_a-scope-all-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T123940Z_6d93da6-dirty_a-scope-runtime-estimate-final.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T123940Z_6d93da6-dirty_a-scope-runtime-estimate-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T124514Z_6d93da6-dirty_a-scope-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T124514Z_6d93da6-dirty_a-scope-final-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T192427Z_3c95836-dirty_b3r-fast-gates-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T192427Z_3c95836-dirty_b3r-fast-gates-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T192534Z_3c95836-dirty_b3r-fast-g1-small-g2-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T192534Z_3c95836-dirty_b3r-fast-g1-small-g2-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T193053Z_3c95836-dirty_b3r-fast-assessment-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T193053Z_3c95836-dirty_b3r-fast-assessment-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T193351Z_3c95836-dirty_b3r-fast-assessment-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T193351Z_3c95836-dirty_b3r-fast-assessment-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T193456Z_3c95836-dirty_b3r-fast-callback-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T193456Z_3c95836-dirty_b3r-fast-callback-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T193532Z_3c95836-dirty_b3r-fast-callback-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T193532Z_3c95836-dirty_b3r-fast-callback-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T193624Z_3c95836-dirty_b3r-fast-all-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T193624Z_3c95836-dirty_b3r-fast-all-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T193657Z_3c95836-dirty_b3r-fast-attack-suite.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T193657Z_3c95836-dirty_b3r-fast-attack-suite.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T193658Z_3c95836-dirty_b3r-fast-plan-only.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T194115Z_3c95836-dirty_b3r-fast-gate-mutants.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T194115Z_3c95836-dirty_b3r-fast-gate-mutants.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T194837Z_3c95836-dirty_b3r-fast-correctness-proof.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T194837Z_3c95836-dirty_b3r-fast-correctness-proof.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T194837Z_3c95836-dirty_b3r-fast-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T194837Z_3c95836-dirty_b3r-fast-final-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T204557Z_ddbc434-dirty_rematch-rules-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T204557Z_ddbc434-dirty_rematch-rules-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T204557Z_ddbc434-dirty_rematch-rules-red.txt",
+          "line": 12
+        },
+        {
+          "path": "05_evidence/20261122T204557Z_ddbc434-dirty_rematch-rules-red.txt",
+          "line": 14
+        },
+        {
+          "path": "05_evidence/20261122T204848Z_ddbc434-dirty_rematch-plan-only.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T204848Z_ddbc434-dirty_rematch-rules-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T204848Z_ddbc434-dirty_rematch-rules-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T205047Z_ddbc434-dirty_rematch-binding-checks.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T205047Z_ddbc434-dirty_rematch-binding-checks.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T205138Z_ddbc434-dirty_rematch-all-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T205138Z_ddbc434-dirty_rematch-all-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T205139Z_ddbc434-dirty_rematch-attack-suite.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T205139Z_ddbc434-dirty_rematch-attack-suite.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T205140Z_ddbc434-dirty_rematch-plan-only-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T210340Z_ddbc434-dirty_rematch-correctness-proof.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T210340Z_ddbc434-dirty_rematch-correctness-proof.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261122T210349Z_ddbc434-dirty_rematch-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261122T210349Z_ddbc434-dirty_rematch-final-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T161747Z_dd88f22-dirty_final-b-alias-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T161747Z_dd88f22-dirty_final-b-alias-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T161952Z_dd88f22-dirty_final-b-alias-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T161952Z_dd88f22-dirty_final-b-alias-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T162212Z_dd88f22-dirty_final-b-all-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T162212Z_dd88f22-dirty_final-b-all-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T162213Z_dd88f22-dirty_final-b-attack-suite.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T162213Z_dd88f22-dirty_final-b-attack-suite.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T163814Z_dd88f22-dirty_final-b-registry-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T163814Z_dd88f22-dirty_final-b-registry-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T165345Z_87ed911-dirty_dashboard-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T165345Z_87ed911-dirty_dashboard-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 17
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 18
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 23
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 25
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 28
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 31
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 34
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 42
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 44
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 47
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 50
+        },
+        {
+          "path": "05_evidence/20261123T185205Z_87ed911-dirty_dashboard-first-check.txt",
+          "line": 53
+        },
+        {
+          "path": "05_evidence/20261123T185513Z_87ed911-dirty_dashboard-git-path-check.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T185513Z_87ed911-dirty_dashboard-git-path-check.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T185549Z_87ed911-dirty_dashboard-render-check.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T185549Z_87ed911-dirty_dashboard-render-check.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T185731Z_87ed911-dirty_dashboard-b1-counter-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T185731Z_87ed911-dirty_dashboard-b1-counter-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 17
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 20
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 23
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 25
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 28
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 31
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 34
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 36
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 38
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 41
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 54
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 57
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 60
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 65
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 68
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 71
+        },
+        {
+          "path": "05_evidence/20261123T185908Z_87ed911-dirty_dashboard-expanded-check.txt",
+          "line": 74
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 17
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 20
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 23
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 25
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 28
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 31
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 34
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 36
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 38
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 41
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 53
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 56
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 64
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 72
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 75
+        },
+        {
+          "path": "05_evidence/20261123T190026Z_87ed911-dirty_dashboard-green.txt",
+          "line": 78
+        },
+        {
+          "path": "05_evidence/20261123T190200Z_87ed911-dirty_dashboard-green-final.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T190200Z_87ed911-dirty_dashboard-green-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T190241Z_87ed911-dirty_dashboard-verified.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T190241Z_87ed911-dirty_dashboard-verified.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T190332Z_87ed911-dirty_dashboard-all-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T190332Z_87ed911-dirty_dashboard-all-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T190442Z_87ed911-dirty_dashboard-values-audit.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T190442Z_87ed911-dirty_dashboard-values-audit.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T191421Z_337cc61-dirty_dashboard-reproducible-audit.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T191421Z_337cc61-dirty_dashboard-reproducible-audit.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T191536Z_337cc61-dirty_dashboard-current-head-smoke.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T191536Z_337cc61-dirty_dashboard-current-head-smoke.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T191653Z_337cc61-dirty_dashboard-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T191653Z_337cc61-dirty_dashboard-final-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 26
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 27
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 36
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 49
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 62
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 75
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 88
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 101
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 114
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 127
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 140
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 153
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 166
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 179
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 192
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 205
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 218
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 231
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 244
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 257
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 286
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 291
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 297
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 306
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 311
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 314
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 324
+        },
+        {
+          "path": "05_evidence/20261123T193220Z_47c0048-dirty_robustness-red.txt",
+          "line": 337
+        },
+        {
+          "path": "05_evidence/20261123T193940Z_47c0048-dirty_robustness-targeted.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T193940Z_47c0048-dirty_robustness-targeted.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T194432Z_47c0048-dirty_robustness-all-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T194432Z_47c0048-dirty_robustness-all-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T194432Z_47c0048-dirty_robustness-attack-suite.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T194432Z_47c0048-dirty_robustness-attack-suite.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261123T201613Z_47c0048-dirty_robustness-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261123T201613Z_47c0048-dirty_robustness-final-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T103109Z_c4cfc25-dirty_clarity-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T103109Z_c4cfc25-dirty_clarity-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T103109Z_c4cfc25-dirty_clarity-red.txt",
+          "line": 29
+        },
+        {
+          "path": "05_evidence/20261125T103109Z_c4cfc25-dirty_clarity-red.txt",
+          "line": 60
+        },
+        {
+          "path": "05_evidence/20261125T111939Z_c4cfc25-dirty_clarity-dashboard.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T111939Z_c4cfc25-dirty_clarity-dashboard.txt",
+          "line": 11
+        },
+        {
+          "path": "05_evidence/20261125T113051Z_c4cfc25-dirty_clarity-dashboard-venv.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T113051Z_c4cfc25-dirty_clarity-dashboard-venv.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T114620Z_c4cfc25-dirty_clarity-dashboard-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T114620Z_c4cfc25-dirty_clarity-dashboard-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T114659Z_c4cfc25-dirty_clarity-saved-audit.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T114659Z_c4cfc25-dirty_clarity-saved-audit.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T114659Z_c4cfc25-dirty_clarity-saved-audit.txt",
+          "line": 16
+        },
+        {
+          "path": "05_evidence/20261125T114813Z_c4cfc25-dirty_clarity-all-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T114813Z_c4cfc25-dirty_clarity-all-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T114828Z_c4cfc25-dirty_clarity-saved-audit-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T114828Z_c4cfc25-dirty_clarity-saved-audit-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T115050Z_c4cfc25-dirty_clarity-bound-rounding-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T115050Z_c4cfc25-dirty_clarity-bound-rounding-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T115206Z_c4cfc25-dirty_clarity-dashboard-final.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T115206Z_c4cfc25-dirty_clarity-dashboard-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T115403Z_c4cfc25-dirty_clarity-dashboard-pass.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T115403Z_c4cfc25-dirty_clarity-dashboard-pass.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T115416Z_c4cfc25-dirty_clarity-audit-final.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T115416Z_c4cfc25-dirty_clarity-audit-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T120134Z_c4cfc25-dirty_clarity-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T120134Z_c4cfc25-dirty_clarity-final-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T125721Z_d885f6e-dirty_handoff-selection-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T125721Z_d885f6e-dirty_handoff-selection-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T125721Z_d885f6e-dirty_handoff-selection-red.txt",
+          "line": 17
+        },
+        {
+          "path": "05_evidence/20261125T130319Z_d885f6e-dirty_handoff-report-values.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T130319Z_d885f6e-dirty_handoff-report-values.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T131701Z_d885f6e-dirty_handoff-dashboard.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T131701Z_d885f6e-dirty_handoff-dashboard.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T132027Z_d885f6e-dirty_handoff-bash-syntax.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T132117Z_d885f6e-dirty_handoff-run-all.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T132117Z_d885f6e-dirty_handoff-run-all.txt",
+          "line": 154
+        },
+        {
+          "path": "05_evidence/20261125T132117Z_d885f6e-dirty_handoff-run-all.txt",
+          "line": 167
+        },
+        {
+          "path": "05_evidence/20261125T132117Z_d885f6e-dirty_handoff-run-all.txt",
+          "line": 279
+        },
+        {
+          "path": "05_evidence/20261125T132117Z_d885f6e-dirty_handoff-run-all.txt",
+          "line": 283
+        },
+        {
+          "path": "05_evidence/20261125T133135Z_d885f6e-dirty_handoff-report-check.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T133135Z_d885f6e-dirty_handoff-report-check.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T133135Z_d885f6e-dirty_handoff-report-check.txt",
+          "line": 12
+        },
+        {
+          "path": "05_evidence/20261125T133243Z_d885f6e-dirty_handoff-report-check-final.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T133243Z_d885f6e-dirty_handoff-report-check-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T144429Z_d885f6e-dirty_handoff-smoke-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T144429Z_d885f6e-dirty_handoff-smoke-final.txt",
+          "line": 11
+        },
+        {
+          "path": "05_evidence/20261125T144429Z_d885f6e-dirty_handoff-smoke-final.txt",
+          "line": 24
+        },
+        {
+          "path": "05_evidence/20261125T144429Z_d885f6e-dirty_handoff-smoke-final.txt",
+          "line": 136
+        },
+        {
+          "path": "05_evidence/20261125T145611Z_d885f6e-dirty_handoff-final-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T150020Z_d885f6e-dirty_handoff-review-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T153751Z_5785e9f-dirty_selection-primary-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T154659Z_5785e9f-dirty_selection-primary-dashboard.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T155536Z_5785e9f-dirty_selection-primary-portability.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T161049Z_5785e9f-dirty_selection-primary-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 35
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 58
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 62
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 75
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 80
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 86
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 89
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 91
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 93
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 96
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 100
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 103
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 108
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 113
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 115
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 117
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 120
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 122
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 125
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 128
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 139
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 141
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 144
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 147
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 157
+        },
+        {
+          "path": "05_evidence/20261125T215000Z_3e9ebfe-dirty_final-fix-portability-red.txt",
+          "line": 170
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 32
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 33
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 53
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 54
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 55
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 68
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 73
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 79
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 82
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 84
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 86
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 89
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 93
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 96
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 97
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 99
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 100
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 102
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 103
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 108
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 110
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 113
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 116
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 126
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 139
+        },
+        {
+          "path": "05_evidence/20261125T215048Z_3e9ebfe-dirty_final-fix-portability-red-confirmed.txt",
+          "line": 140
+        },
+        {
+          "path": "05_evidence/20261125T215219Z_3e9ebfe-dirty_final-fix-portability-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T215219Z_3e9ebfe-dirty_final-fix-portability-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T215332Z_3e9ebfe-dirty_final-fix-head-only-cleanroom.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T215332Z_3e9ebfe-dirty_final-fix-head-only-cleanroom.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T215332Z_3e9ebfe-dirty_final-fix-head-only-cleanroom.txt",
+          "line": 12
+        },
+        {
+          "path": "05_evidence/20261125T215332Z_3e9ebfe-dirty_final-fix-head-only-cleanroom.txt",
+          "line": 14
+        },
+        {
+          "path": "05_evidence/20261125T215332Z_3e9ebfe-dirty_final-fix-head-only-cleanroom.txt",
+          "line": 17
+        },
+        {
+          "path": "05_evidence/20261125T215332Z_3e9ebfe-dirty_final-fix-head-only-cleanroom.txt",
+          "line": 27
+        },
+        {
+          "path": "05_evidence/20261125T215356Z_3e9ebfe-dirty_final-fix-head-only-cleanroom-rerun.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T215356Z_3e9ebfe-dirty_final-fix-head-only-cleanroom-rerun.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T215356Z_3e9ebfe-dirty_final-fix-head-only-cleanroom-rerun.txt",
+          "line": 172
+        },
+        {
+          "path": "05_evidence/20261125T215630Z_3e9ebfe-dirty_final-fix-all-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T215630Z_3e9ebfe-dirty_final-fix-all-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T215717Z_3e9ebfe-dirty_final-fix-working-overlay-cleanroom.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T215717Z_3e9ebfe-dirty_final-fix-working-overlay-cleanroom.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T215717Z_3e9ebfe-dirty_final-fix-working-overlay-cleanroom.txt",
+          "line": 139
+        },
+        {
+          "path": "05_evidence/20261125T215717Z_3e9ebfe-dirty_final-fix-working-overlay-cleanroom.txt",
+          "line": 141
+        },
+        {
+          "path": "05_evidence/20261125T215929Z_3e9ebfe-dirty_final-fix-ancestor-provenance-red.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T215929Z_3e9ebfe-dirty_final-fix-ancestor-provenance-red.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T215929Z_3e9ebfe-dirty_final-fix-ancestor-provenance-red.txt",
+          "line": 16
+        },
+        {
+          "path": "05_evidence/20261125T215929Z_3e9ebfe-dirty_final-fix-ancestor-provenance-red.txt",
+          "line": 17
+        },
+        {
+          "path": "05_evidence/20261125T220056Z_3e9ebfe-dirty_final-fix-portability-final-green.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T220056Z_3e9ebfe-dirty_final-fix-portability-final-green.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T220130Z_3e9ebfe-dirty_final-fix-dashboard-tests.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T220130Z_3e9ebfe-dirty_final-fix-dashboard-tests.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T220142Z_3e9ebfe-dirty_final-fix-all-tests-final.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T220142Z_3e9ebfe-dirty_final-fix-all-tests-final.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T220244Z_3e9ebfe-dirty_final-fix-overlay-final-cleanroom.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T220244Z_3e9ebfe-dirty_final-fix-overlay-final-cleanroom.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T220244Z_3e9ebfe-dirty_final-fix-overlay-final-cleanroom.txt",
+          "line": 156
+        },
+        {
+          "path": "05_evidence/20261125T220244Z_3e9ebfe-dirty_final-fix-overlay-final-cleanroom.txt",
+          "line": 164
+        },
+        {
+          "path": "05_evidence/20261125T220244Z_3e9ebfe-dirty_final-fix-overlay-final-cleanroom.txt",
+          "line": 166
+        },
+        {
+          "path": "05_evidence/20261125T220244Z_3e9ebfe-dirty_final-fix-overlay-final-cleanroom.txt",
+          "line": 168
+        },
+        {
+          "path": "05_evidence/20261125T220244Z_3e9ebfe-dirty_final-fix-overlay-final-cleanroom.txt",
+          "line": 170
+        },
+        {
+          "path": "05_evidence/20261125T220244Z_3e9ebfe-dirty_final-fix-overlay-final-cleanroom.txt",
+          "line": 172
+        },
+        {
+          "path": "05_evidence/20261125T220244Z_3e9ebfe-dirty_final-fix-overlay-final-cleanroom.txt",
+          "line": 174
+        },
+        {
+          "path": "05_evidence/20261125T220244Z_3e9ebfe-dirty_final-fix-overlay-final-cleanroom.txt",
+          "line": 287
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 11
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 55
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 64
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 68
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 73
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 126
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 128
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 130
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 132
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 134
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 138
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 140
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 142
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 144
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 146
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 150
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 152
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 154
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 156
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 158
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 162
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 164
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 166
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 168
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 170
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 174
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 176
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 178
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 180
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 182
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 186
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 188
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 190
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 192
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 194
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 198
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 200
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 202
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 204
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 206
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 210
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 212
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 214
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 216
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 218
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 222
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 224
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 226
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 228
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 230
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 232
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 234
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 236
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 238
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 240
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 242
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 244
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 246
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 248
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 250
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 252
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 254
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 256
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 258
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 260
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 262
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 264
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 266
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 268
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 270
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 272
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 274
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 277
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 330
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 332
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 334
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 336
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 338
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 342
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 344
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 346
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 348
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 350
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 354
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 356
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 358
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 360
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 362
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 366
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 368
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 370
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 372
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 374
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 378
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 380
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 382
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 384
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 386
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 390
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 392
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 394
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 396
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 398
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 402
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 404
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 406
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 408
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 410
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 414
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 416
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 418
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 420
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 422
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 426
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 428
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 430
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 432
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 434
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 436
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 438
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 440
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 442
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 444
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 446
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 448
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 450
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 452
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 454
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 456
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 458
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 460
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 462
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 464
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 466
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 468
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 470
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 472
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 474
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 476
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 478
+        },
+        {
+          "path": "05_evidence/20261125T220501Z_3e9ebfe-dirty_final-fix-extra-acceptance.txt",
+          "line": 485
+        },
+        {
+          "path": "05_evidence/20261125T220628Z_3e9ebfe-dirty_final-fix-source-doc-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T220628Z_3e9ebfe-dirty_final-fix-source-doc-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T221359Z_3e9ebfe-dirty_final-fix-extra-acceptance-final-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T221359Z_3e9ebfe-dirty_final-fix-extra-acceptance-final-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/20261125T222033Z_3e9ebfe-dirty_final-fix-final-source-doc-review.txt",
+          "line": 2
+        },
+        {
+          "path": "05_evidence/20261125T222033Z_3e9ebfe-dirty_final-fix-final-source-doc-review.txt",
+          "line": 3
+        },
+        {
+          "path": "05_evidence/INDEX.md",
+          "line": 150
+        },
+        {
+          "path": "05_evidence/chat_reference/log_profile_b3r.txt",
+          "line": 13
+        },
+        {
+          "path": "05_evidence/chat_reference/log_profile_b3r.txt",
+          "line": 14
+        },
+        {
+          "path": "05_evidence/chat_reference/log_profile_b3r.txt",
+          "line": 15
+        },
+        {
+          "path": "05_evidence/chat_reference/log_profile_b3r.txt",
+          "line": 17
+        },
+        {
+          "path": "05_evidence/chat_reference/log_profile_b3r.txt",
+          "line": 18
+        },
+        {
+          "path": "05_evidence/chat_reference/log_profile_b3r.txt",
+          "line": 19
+        },
+        {
+          "path": "05_evidence/chat_reference/log_profile_b3r.txt",
+          "line": 20
+        },
+        {
+          "path": "05_evidence/chat_reference/log_profile_b3r.txt",
+          "line": 21
+        },
+        {
+          "path": "05_evidence/chat_reference/log_profile_b3r.txt",
+          "line": 22
+        },
+        {
+          "path": "05_evidence/chat_reference/log_profile_b3r.txt",
+          "line": 24
+        },
+        {
+          "path": "05_evidence/final-fix-verification.json",
+          "line": 206
+        },
+        {
+          "path": "05_evidence/final-fix-verification.json",
+          "line": 219
+        },
+        {
+          "path": "05_evidence/final-fix-verification.json",
+          "line": 233
+        },
+        {
+          "path": "05_evidence/final-fix-verification.json",
+          "line": 245
+        },
+        {
+          "path": "05_evidence/final-fix-verification.json",
+          "line": 248
+        },
+        {
+          "path": "05_evidence/final-fix-verification.json",
+          "line": 249
+        },
+        {
+          "path": "05_evidence/final-fix-verification.json",
+          "line": 257
+        },
+        {
+          "path": "05_evidence/final-fix-verification.json",
+          "line": 268
+        },
+        {
+          "path": "05_evidence/phase2-all-tests.xml",
+          "line": 899
+        },
+        {
+          "path": "05_evidence/phase2-all-tests.xml",
+          "line": 901
+        },
+        {
+          "path": "05_evidence/phase2-all-tests.xml",
+          "line": 903
+        }
+      ],
+      "secrets": []
+    },
+    "large_files": [],
+    "tracked_ignored_environments_or_data": [],
+    "tracked_old_diagnostics": 648,
+    "duplicate_marker_redacted_in_review_doc": true,
+    "scope": "current tracked/new submission files; pure committed archive retains historical duplicate until commit"
+  },
+  "evidence_logs": {
+    "full": "20261125T220142Z_3e9ebfe-dirty_final-fix-all-tests-final.txt",
+    "dashboard": "20261125T220130Z_3e9ebfe-dirty_final-fix-dashboard-tests.txt",
+    "head_only": "20261125T215356Z_3e9ebfe-dirty_final-fix-head-only-cleanroom-rerun.txt",
+    "overlay": "20261125T220244Z_3e9ebfe-dirty_final-fix-overlay-final-cleanroom.txt",
+    "extra": "20261125T221359Z_3e9ebfe-dirty_final-fix-extra-acceptance-final-review.txt",
+    "regressions": "20261125T220056Z_3e9ebfe-dirty_final-fix-portability-final-green.txt",
+    "final_source_doc": "20261125T222033Z_3e9ebfe-dirty_final-fix-final-source-doc-review.txt",
+    "final_hygiene": "20261125T222034Z_3e9ebfe-dirty_final-fix-final-hygiene.txt"
+  },
+  "committed_HEAD_acceptance": "FAIL: unchanged HEAD has pre-fix M1; rerun after human commit",
+  "working_files_acceptance": "PASS",
+  "interrupted_runs": [
+    "final-fix-all-tests",
+    "final-fix-working-overlay-cleanroom"
+  ],
+  "documentation_only_edits_after_overlay": [
+    "README.md (explicit run-all subject)",
+    "00_docs/REPORT.md (prose clarification)",
+    "00_docs/REQUIREMENTS_MAP.md (fresh zero-outside branch scope)",
+    "00_docs/FINAL_REVIEW_CLAUDE.md (duplicate marker redaction)"
+  ],
+  "final_document_sha256": {
+    "README.md": "050d921333d8224e5939108277ae57b319a95c0be63464760a2b83ff2daecb16",
+    "SPEC.md": "4dca45b95ed5d55700aca96107eb7f95eb4d51b5bdcf3b0e2fdef0b3b073e2af",
+    "00_docs/REPORT.md": "feb4588b3d08c16ebfc16f1017bdce681b35be102432e03a2309497903659fb0",
+    "00_docs/REPORT_FACT_CHECK.md": "2ba4bbd41800c4b336dd93c14388d0ecc8608f9bf4fc95a96c52dcde7fde308e",
+    "00_docs/REQUIREMENTS_MAP.md": "b089262d860d374dd19f90817a952e3b1e8f9074f2a54b7b8dfdc793941479bb",
+    "00_docs/FINAL_REVIEW_CLAUDE.md": "8bf922273d0881c2a7292a9b4519a72cdbf06e962d700537a1c62b7394d19f3e",
+    "00_docs/AI_LOG.md": "5e00d27cb22ed8cb22f4e14c8c2f7ef449a49ab5c25114ee83fd46623c08ac01",
+    "00_docs/FINAL_FIX_VERIFICATION.md": "a973f8c2901a46abf4a23a3301fb8e8efb11abd948218e7a0337481fff44824a"
+  }
+}

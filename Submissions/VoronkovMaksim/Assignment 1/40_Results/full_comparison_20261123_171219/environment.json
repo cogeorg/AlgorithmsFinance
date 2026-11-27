@@ -1,0 +1,20 @@
+{
+  "limit_seconds": 10.0,
+  "input_load_limit_seconds": 60,
+  "memory_limit": "not enforced",
+  "python": "3.14.6",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+  "dependencies": "Python standard library",
+  "code_sha256": {
+    "order_book_v1.py": "63ba639d51527c31aa6175f62b355bd6d56c87d6f3fd8c4b24ee40c54b8c9527",
+    "order_book_v2.py": "95831ec46f4660275b23d629ba177e2e4999d83e9770c49abc708e7c09025a60",
+    "generate_orders.py": "6ea1f91ef8ad82fd23a12c5fe4004b473f0dcf5f60a18bb1410c1c4e5fb310a9",
+    "full_benchmark.py": "8d5c5f9b79e2cbfe7ad1069502aa846ee367b6fabb92201ab7c0a8aab890d3f8"
+  },
+  "input_generator": "generate_orders.py",
+  "generator_levels": 1000,
+  "replay_progress": "one shared progress write per event; timed replay includes this overhead",
+  "memory_boundary": "input preloaded before tracing; live book, returned output and instrumentation included; not total process memory"
+}

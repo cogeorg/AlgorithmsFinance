@@ -1,0 +1,36 @@
+stage: 06_latency_combined_baseline
+started_utc: 2026-11-23T12:31:31.976748+00:00
+finished_utc: 2026-11-23T12:31:34.110163+00:00
+elapsed_seconds: 2.133388
+exit_code: 0
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 7cfef398ed786225d4f18e9519ea1ca139e612ba
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider -k "not revised and not versions_agree"
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0
+collected 181 items / 75 deselected / 106 selected
+
+tests\test_01_interface.py .....                                         [  4%]
+tests\test_02_validation.py .....................................        [ 39%]
+tests\test_03_limit_matching.py ........                                 [ 47%]
+tests\test_04_market_sells.py ......                                     [ 52%]
+tests\test_05_cancellations.py .......                                   [ 59%]
+tests\test_06_invariants.py .....                                        [ 64%]
+tests\test_07_worked_example.py .                                        [ 65%]
+tests\test_09_stream_io.py ...                                           [ 67%]
+tests\test_10_generated_streams.py ....                                  [ 71%]
+tests\test_11_measurement_helpers.py ..............                      [ 84%]
+tests\test_12_benchmark_harness.py .........                             [ 93%]
+tests\test_13_latency_measurement.py .......                             [100%]
+
+===================== 106 passed, 75 deselected in 1.72s ======================
+
+=== stderr ===

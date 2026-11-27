@@ -1,0 +1,9 @@
+buildup_10000.jsonl.gz       {'B3r': 0, 'B3r_fast': 0} True
+cancel_churn_10000.jsonl.gz  {'B3r': 0, 'B3r_fast': 0} True
+crowded_10000.jsonl.gz       {'B3r': 0, 'B3r_fast': 0} True
+mixed_10000.jsonl.gz         {'B3r': 0, 'B3r_fast': 0} True
+sweep_10000.jsonl.gz         {'B3r': 0, 'B3r_fast': 0} True
+fuzz few prices / long queues: events=45000 {'B3r': 0, 'B3r_fast': 0}
+fuzz many prices, crossing: events=45000 {'B3r': 0, 'B3r_fast': 0}
+fuzz drifting prices (heap stale keys): events=45000 {'B3r': 0, 'B3r_fast': 0}
+exit=0

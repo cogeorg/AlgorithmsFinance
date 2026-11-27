@@ -1,0 +1,61 @@
+{
+  "task": {
+    "task_id": "revised_extension_1m_throughput_mixed_1000000_seed42_levels1000",
+    "version": "revised",
+    "phase": "throughput",
+    "scenario": "mixed",
+    "event_count": 1000000,
+    "seed": 42,
+    "levels": 1000,
+    "input_path": "data/generated/mixed_1000000_seed42_levels1000.jsonl.gz",
+    "sha256": "f607056fe5724e550a18b44b4ebe5025e96d7a188f0ef80a5830a47305ad540e",
+    "result_path": "results/extension_1m/raw/revised/throughput/mixed_1000000_seed42_levels1000.json.gz",
+    "status_path": "results/extension_1m/status/revised/throughput/mixed_1000000_seed42_levels1000.json"
+  },
+  "task_id": "revised_extension_1m_throughput_mixed_1000000_seed42_levels1000",
+  "timeout_seconds": 60,
+  "elapsed_seconds": 45.40647819987498,
+  "started_utc": "2026-11-24T19:24:18.411073+00:00",
+  "finished_utc": "2026-11-24T19:25:03.817602+00:00",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\scripts\\04_benchmark.py",
+    "--phase",
+    "throughput",
+    "--version",
+    "revised",
+    "--input",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\data\\generated\\mixed_1000000_seed42_levels1000.jsonl.gz",
+    "--warmups",
+    "1",
+    "--repeats",
+    "5",
+    "--out",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\results\\extension_1m\\raw\\revised\\throughput\\mixed_1000000_seed42_levels1000.json.pending.gz"
+  ],
+  "environment": {
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "python_executable": "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "dependencies": {
+      "pytest": "9.2.0",
+      "pandas": "3.1.1",
+      "streamlit": "1.67.0"
+    },
+    "git": {
+      "commit": "9323452b3f036883a87aba9e80bf023ce68af98a",
+      "branch": "assignment1-mueller-alexandra",
+      "dirty": true,
+      "assignment_dirty": true,
+      "code_dirty": false
+    }
+  },
+  "returncode": 0,
+  "stdout": "{\"output\": \"C:\\\\Users\\\\Acer\\\\Documents\\\\Algorithms\\\\AlgorithmsFinance\\\\Submissions\\\\M\\u00fcllerAlexandra\\\\Assignment1\\\\results\\\\extension_1m\\\\raw\\\\revised\\\\throughput\\\\mixed_1000000_seed42_levels1000.json.pending.gz\", \"summary\": {\"repeat_count\": 5, \"median_construction_seconds\": 0.1027303000446409, \"median_replay_seconds\": 6.182731800014153, \"median_total_engine_seconds\": 6.3061324001755565, \"median_throughput_events_per_second\": 161740.80201856903}}\n",
+  "stderr": "",
+  "outcome": "completed",
+  "result_path": "results/extension_1m/raw/revised/throughput/mixed_1000000_seed42_levels1000.json.gz"
+}

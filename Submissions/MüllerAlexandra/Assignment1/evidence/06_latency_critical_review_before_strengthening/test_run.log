@@ -1,0 +1,384 @@
+stage: 06_latency_critical_review_before_strengthening
+started_utc: 2026-11-23T15:33:31.582486+00:00
+finished_utc: 2026-11-23T15:33:34.348031+00:00
+elapsed_seconds: 2.765746
+exit_code: 1
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 7cfef398ed786225d4f18e9519ea1ca139e612ba
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider tests/test_13_latency_measurement.py
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 16 items
+
+tests\test_13_latency_measurement.py FFFFFFFFFF....FF                    [100%]
+
+================================== FAILURES ===================================
+_____ test_event_latencies_use_fresh_warmup_and_measured_books_per_repeat _____
+
+    def test_event_latencies_use_fresh_warmup_and_measured_books_per_repeat() -> None:
+        books: list[FakeBook] = []
+        clock_values: Iterator[int] = iter(
+            [100, 110, 200, 225, 300, 315, 400, 440]
+        )
+    
+        def factory() -> FakeBook:
+            book = FakeBook()
+            books.append(book)
+            return book
+    
+>       records = measure_event_latencies(
+            factory,
+            [
+                {"seq": 1, "type": "LIMIT"},
+                {"seq": 2, "type": "CANCEL"},
+            ],
+            warmups=2,
+            repeats=2,
+            clock_ns=lambda: next(clock_values),
+        )
+E       TypeError: measure_event_latencies() got an unexpected keyword argument 'repeats'
+
+tests\test_13_latency_measurement.py:46: TypeError
+_______ test_latency_measurement_rejects_empty_input_or_negative_clock ________
+
+    def test_latency_measurement_rejects_empty_input_or_negative_clock() -> None:
+        with pytest.raises(ValueError):
+            measure_event_latencies(FakeBook, [])
+    
+        clock_values: Iterator[int] = iter([10, 9])
+        with pytest.raises(ValueError):
+>           measure_event_latencies(
+                FakeBook,
+                [{"seq": 1, "type": "LIMIT"}],
+                warmups=0,
+                repeats=1,
+                clock_ns=lambda: next(clock_values),
+            )
+E           TypeError: measure_event_latencies() got an unexpected keyword argument 'repeats'
+
+tests\test_13_latency_measurement.py:93: TypeError
+_____________ test_latency_run_configuration_must_be_valid[-1-1] ______________
+
+warmups = -1, repeats = 1
+
+    @pytest.mark.parametrize(
+        ("warmups", "repeats"),
+        [(-1, 1), (True, 1), (1.0, 1), (0, 0), (0, -1), (0, True), (0, 1.0)],
+    )
+    def test_latency_run_configuration_must_be_valid(
+        warmups: object, repeats: object
+    ) -> None:
+        with pytest.raises(ValueError):
+>           measure_event_latencies(
+                FakeBook,
+                [{"seq": 1, "type": "LIMIT"}],
+                warmups=warmups,
+                repeats=repeats,
+            )
+E           TypeError: measure_event_latencies() got an unexpected keyword argument 'repeats'
+
+tests\test_13_latency_measurement.py:110: TypeError
+____________ test_latency_run_configuration_must_be_valid[True-1] _____________
+
+warmups = True, repeats = 1
+
+    @pytest.mark.parametrize(
+        ("warmups", "repeats"),
+        [(-1, 1), (True, 1), (1.0, 1), (0, 0), (0, -1), (0, True), (0, 1.0)],
+    )
+    def test_latency_run_configuration_must_be_valid(
+        warmups: object, repeats: object
+    ) -> None:
+        with pytest.raises(ValueError):
+>           measure_event_latencies(
+                FakeBook,
+                [{"seq": 1, "type": "LIMIT"}],
+                warmups=warmups,
+                repeats=repeats,
+            )
+E           TypeError: measure_event_latencies() got an unexpected keyword argument 'repeats'
+
+tests\test_13_latency_measurement.py:110: TypeError
+_____________ test_latency_run_configuration_must_be_valid[1.0-1] _____________
+
+warmups = 1.0, repeats = 1
+
+    @pytest.mark.parametrize(
+        ("warmups", "repeats"),
+        [(-1, 1), (True, 1), (1.0, 1), (0, 0), (0, -1), (0, True), (0, 1.0)],
+    )
+    def test_latency_run_configuration_must_be_valid(
+        warmups: object, repeats: object
+    ) -> None:
+        with pytest.raises(ValueError):
+>           measure_event_latencies(
+                FakeBook,
+                [{"seq": 1, "type": "LIMIT"}],
+                warmups=warmups,
+                repeats=repeats,
+            )
+E           TypeError: measure_event_latencies() got an unexpected keyword argument 'repeats'
+
+tests\test_13_latency_measurement.py:110: TypeError
+______________ test_latency_run_configuration_must_be_valid[0-0] ______________
+
+warmups = 0, repeats = 0
+
+    @pytest.mark.parametrize(
+        ("warmups", "repeats"),
+        [(-1, 1), (True, 1), (1.0, 1), (0, 0), (0, -1), (0, True), (0, 1.0)],
+    )
+    def test_latency_run_configuration_must_be_valid(
+        warmups: object, repeats: object
+    ) -> None:
+        with pytest.raises(ValueError):
+>           measure_event_latencies(
+                FakeBook,
+                [{"seq": 1, "type": "LIMIT"}],
+                warmups=warmups,
+                repeats=repeats,
+            )
+E           TypeError: measure_event_latencies() got an unexpected keyword argument 'repeats'
+
+tests\test_13_latency_measurement.py:110: TypeError
+_____________ test_latency_run_configuration_must_be_valid[0--1] ______________
+
+warmups = 0, repeats = -1
+
+    @pytest.mark.parametrize(
+        ("warmups", "repeats"),
+        [(-1, 1), (True, 1), (1.0, 1), (0, 0), (0, -1), (0, True), (0, 1.0)],
+    )
+    def test_latency_run_configuration_must_be_valid(
+        warmups: object, repeats: object
+    ) -> None:
+        with pytest.raises(ValueError):
+>           measure_event_latencies(
+                FakeBook,
+                [{"seq": 1, "type": "LIMIT"}],
+                warmups=warmups,
+                repeats=repeats,
+            )
+E           TypeError: measure_event_latencies() got an unexpected keyword argument 'repeats'
+
+tests\test_13_latency_measurement.py:110: TypeError
+____________ test_latency_run_configuration_must_be_valid[0-True] _____________
+
+warmups = 0, repeats = True
+
+    @pytest.mark.parametrize(
+        ("warmups", "repeats"),
+        [(-1, 1), (True, 1), (1.0, 1), (0, 0), (0, -1), (0, True), (0, 1.0)],
+    )
+    def test_latency_run_configuration_must_be_valid(
+        warmups: object, repeats: object
+    ) -> None:
+        with pytest.raises(ValueError):
+>           measure_event_latencies(
+                FakeBook,
+                [{"seq": 1, "type": "LIMIT"}],
+                warmups=warmups,
+                repeats=repeats,
+            )
+E           TypeError: measure_event_latencies() got an unexpected keyword argument 'repeats'
+
+tests\test_13_latency_measurement.py:110: TypeError
+_____________ test_latency_run_configuration_must_be_valid[0-1.0] _____________
+
+warmups = 0, repeats = 1.0
+
+    @pytest.mark.parametrize(
+        ("warmups", "repeats"),
+        [(-1, 1), (True, 1), (1.0, 1), (0, 0), (0, -1), (0, True), (0, 1.0)],
+    )
+    def test_latency_run_configuration_must_be_valid(
+        warmups: object, repeats: object
+    ) -> None:
+        with pytest.raises(ValueError):
+>           measure_event_latencies(
+                FakeBook,
+                [{"seq": 1, "type": "LIMIT"}],
+                warmups=warmups,
+                repeats=repeats,
+            )
+E           TypeError: measure_event_latencies() got an unexpected keyword argument 'repeats'
+
+tests\test_13_latency_measurement.py:110: TypeError
+_____ test_latency_breakdown_reports_overall_type_and_ten_percent_windows _____
+
+    def test_latency_breakdown_reports_overall_type_and_ten_percent_windows() -> None:
+        records = [
+            {
+                "repeat": 1,
+                "event_index": index,
+                "event_type": "LIMIT" if index % 2 else "CANCEL",
+                "latency_ns": index,
+            }
+            for index in range(1, 12)
+        ]
+    
+>       assert latency_breakdown_ns(records) == {
+            "overall": {
+                "sample_count": 11,
+                "median_ns": 6,
+                "p95_ns": 11,
+                "p99_ns": 11,
+            },
+            "by_event_type": {
+                "CANCEL": {
+                    "sample_count": 5,
+                    "median_ns": 6,
+                    "p95_ns": 10,
+                    "p99_ns": 10,
+                },
+                "LIMIT": {
+                    "sample_count": 6,
+                    "median_ns": 6.0,
+                    "p95_ns": 11,
+                    "p99_ns": 11,
+                },
+            },
+            "early_10_percent": {
+                "sample_count": 2,
+                "median_ns": 1.5,
+                "p95_ns": 2,
+                "p99_ns": 2,
+            },
+            "late_10_percent": {
+                "sample_count": 2,
+                "median_ns": 10.5,
+                "p95_ns": 11,
+                "p99_ns": 11,
+            },
+            "repeat_count": 1,
+            "window_size_per_repeat": 2,
+        }
+E       AssertionError: assert {'overall': {...ns': 11}, ...} == {'overall': {...ns': 11}, ...}
+E         
+E         Omitting 4 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'window_size': 2}
+E         Right contains 2 more items:
+E         {'repeat_count': 1, 'window_size_per_repeat': 2}
+E         Use -v to get more diff
+
+tests\test_13_latency_measurement.py:129: AssertionError
+____________ test_latency_windows_are_selected_within_each_repeat _____________
+
+    def test_latency_windows_are_selected_within_each_repeat() -> None:
+        records = [
+            {
+                "repeat": repeat,
+                "event_index": index,
+                "event_type": "LIMIT",
+                "latency_ns": offset + index,
+            }
+            for repeat, offset in ((1, 0), (2, 100))
+            for index in range(1, 12)
+        ]
+    
+        summary = latency_breakdown_ns(records)
+    
+>       assert summary["repeat_count"] == 2
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'repeat_count'
+
+tests\test_13_latency_measurement.py:201: KeyError
+___________ test_latency_cli_writes_distinct_raw_and_summary_output ___________
+
+tmp_path = WindowsPath('C:/Users/Acer/AppData/Local/Temp/pytest-of-Acer/pytest-13/test_latency_cli_writes_distin0')
+
+    def test_latency_cli_writes_distinct_raw_and_summary_output(tmp_path: Path) -> None:
+        source = tmp_path / "events.jsonl"
+        source.write_text(
+            "\n".join(
+                [
+                    json.dumps(
+                        {
+                            "seq": 1,
+                            "event_id": "e1",
+                            "type": "CANCEL",
+                            "target_order_id": "x",
+                        }
+                    ),
+                    json.dumps(
+                        {
+                            "seq": 2,
+                            "event_id": "e2",
+                            "type": "CANCEL",
+                            "target_order_id": "y",
+                        }
+                    ),
+                ]
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        output = tmp_path / "latency.json"
+    
+        completed = subprocess.run(
+            [
+                sys.executable,
+                str(BENCHMARK_SCRIPT),
+                "--phase",
+                "latency",
+                "--version",
+                "baseline",
+                "--input",
+                str(source),
+                "--max-events",
+                "2",
+                "--warmups",
+                "0",
+                "--repeats",
+                "2",
+                "--out",
+                str(output),
+            ],
+            cwd=PROJECT_ROOT,
+            env=benchmark_environment(),
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+    
+        assert completed.returncode == 0, completed.stderr
+        document = json.loads(output.read_text(encoding="utf-8"))
+        assert document["phase"] == "latency"
+>       assert document["settings"] == {
+            "clock": "time.perf_counter_ns",
+            "warmups": 0,
+            "repeats": 2,
+            "window_fraction": 0.1,
+        }
+E       AssertionError: assert {'clock': 'ti...raction': 0.1} == {'clock': 'ti...raction': 0.1}
+E         
+E         Omitting 3 identical items, use -vv to show
+E         Right contains 1 more item:
+E         {'repeats': 2}
+E         Use -v to get more diff
+
+tests\test_13_latency_measurement.py:273: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_13_latency_measurement.py::test_event_latencies_use_fresh_warmup_and_measured_books_per_repeat
+FAILED tests/test_13_latency_measurement.py::test_latency_measurement_rejects_empty_input_or_negative_clock
+FAILED tests/test_13_latency_measurement.py::test_latency_run_configuration_must_be_valid[-1-1]
+FAILED tests/test_13_latency_measurement.py::test_latency_run_configuration_must_be_valid[True-1]
+FAILED tests/test_13_latency_measurement.py::test_latency_run_configuration_must_be_valid[1.0-1]
+FAILED tests/test_13_latency_measurement.py::test_latency_run_configuration_must_be_valid[0-0]
+FAILED tests/test_13_latency_measurement.py::test_latency_run_configuration_must_be_valid[0--1]
+FAILED tests/test_13_latency_measurement.py::test_latency_run_configuration_must_be_valid[0-True]
+FAILED tests/test_13_latency_measurement.py::test_latency_run_configuration_must_be_valid[0-1.0]
+FAILED tests/test_13_latency_measurement.py::test_latency_breakdown_reports_overall_type_and_ten_percent_windows
+FAILED tests/test_13_latency_measurement.py::test_latency_windows_are_selected_within_each_repeat
+FAILED tests/test_13_latency_measurement.py::test_latency_cli_writes_distinct_raw_and_summary_output
+======================== 12 failed, 4 passed in 1.74s =========================
+
+=== stderr ===

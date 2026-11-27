@@ -1,0 +1,39 @@
+stage: 09_runner_combined_baseline
+started_utc: 2026-11-23T18:28:59.926343+00:00
+finished_utc: 2026-11-23T18:29:06.032598+00:00
+elapsed_seconds: 6.106815
+exit_code: 0
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 79fe4d28d82d90297a9b83884425ab9d2c77023d
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider -k "not revised and not versions_agree"
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0
+collected 209 items / 75 deselected / 134 selected
+
+tests\test_01_interface.py .....                                         [  3%]
+tests\test_02_validation.py .....................................        [ 31%]
+tests\test_03_limit_matching.py ........                                 [ 37%]
+tests\test_04_market_sells.py ......                                     [ 41%]
+tests\test_05_cancellations.py .......                                   [ 47%]
+tests\test_06_invariants.py .....                                        [ 50%]
+tests\test_07_worked_example.py .                                        [ 51%]
+tests\test_09_stream_io.py ...                                           [ 53%]
+tests\test_10_generated_streams.py ....                                  [ 56%]
+tests\test_11_measurement_helpers.py ..............                      [ 67%]
+tests\test_12_benchmark_harness.py ..........                            [ 74%]
+tests\test_13_latency_measurement.py ................                    [ 86%]
+tests\test_14_memory_measurement.py ........                             [ 92%]
+tests\test_15_experiment_matrix.py .....                                 [ 96%]
+tests\test_16_experiment_runner.py .....                                 [100%]
+
+===================== 134 passed, 75 deselected in 5.36s ======================
+
+=== stderr ===

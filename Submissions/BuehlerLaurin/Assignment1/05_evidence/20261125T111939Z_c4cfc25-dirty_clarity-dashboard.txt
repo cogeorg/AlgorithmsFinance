@@ -1,0 +1,11 @@
+label: clarity-dashboard
+command: python -m pytest 02_tests/test_dashboard.py 02_tests/test_submission_robustness.py -q --tb=short --basetemp=scratch/pytest-clarity-ui --junitxml=05_evidence/clarity-dashboard-tests.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: c4cfc2521f57fc3de60a35d361ff4ceb025e552f
+dirty: True
+python: 3.13.15
+utc: 20261125T111939Z
+exit_code: 1
+duration_s: 0.07
+------------------------------------------------------------
+C:\Users\laubu\AppData\Local\Programs\Python\Python313\python.exe: No module named pytest

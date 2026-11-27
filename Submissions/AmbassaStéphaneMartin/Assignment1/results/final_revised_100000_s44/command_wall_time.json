@@ -1,0 +1,164 @@
+{
+  "command": [
+    "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "-B",
+    "benchmark.py",
+    "run",
+    "--counts",
+    "100000",
+    "--seeds",
+    "44",
+    "--scenarios",
+    "buildup",
+    "crowded",
+    "mixed",
+    "sweep",
+    "cancel_churn",
+    "--experiments",
+    "replay",
+    "--versions",
+    "revised",
+    "--levels",
+    "1000",
+    "--worker-seconds",
+    "60",
+    "--campaign-seconds",
+    "900",
+    "--label",
+    "final-revised-replay",
+    "--out",
+    "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_revised_100000_s44"
+  ],
+  "started_utc": "2026-11-26T00:16:04.368162+00:00",
+  "finished_utc": "2026-11-26T00:17:08.935816+00:00",
+  "exit_code": 0,
+  "total_command_wall_seconds": 64.56765049998648,
+  "progress": [
+    {
+      "line": "[1/25] replay_buildup_n100000_s44_l1000 shared io: complete",
+      "elapsed_seconds": 2.4671224000048824,
+      "interval_seconds": 2.4671224000048824
+    },
+    {
+      "line": "[2/25] replay_buildup_n100000_s44_l1000 revised timing: complete",
+      "elapsed_seconds": 4.851967599999625,
+      "interval_seconds": 2.384845199994743
+    },
+    {
+      "line": "[3/25] replay_buildup_n100000_s44_l1000 revised latency: complete",
+      "elapsed_seconds": 6.137803799996618,
+      "interval_seconds": 1.285836199996993
+    },
+    {
+      "line": "[4/25] replay_buildup_n100000_s44_l1000 revised memory: complete",
+      "elapsed_seconds": 10.749673999962397,
+      "interval_seconds": 4.611870199965779
+    },
+    {
+      "line": "[5/25] replay_buildup_n100000_s44_l1000 revised diagnostics: complete",
+      "elapsed_seconds": 14.741265399963595,
+      "interval_seconds": 3.991591400001198
+    },
+    {
+      "line": "[6/25] replay_crowded_n100000_s44_l1000 shared io: complete",
+      "elapsed_seconds": 16.93747289996827,
+      "interval_seconds": 2.1962075000046752
+    },
+    {
+      "line": "[7/25] replay_crowded_n100000_s44_l1000 revised timing: complete",
+      "elapsed_seconds": 19.273572999984026,
+      "interval_seconds": 2.3361001000157557
+    },
+    {
+      "line": "[8/25] replay_crowded_n100000_s44_l1000 revised latency: complete",
+      "elapsed_seconds": 20.55621000000974,
+      "interval_seconds": 1.2826370000257157
+    },
+    {
+      "line": "[9/25] replay_crowded_n100000_s44_l1000 revised memory: complete",
+      "elapsed_seconds": 24.866028899967205,
+      "interval_seconds": 4.309818899957463
+    },
+    {
+      "line": "[10/25] replay_crowded_n100000_s44_l1000 revised diagnostics: complete",
+      "elapsed_seconds": 26.646905199973844,
+      "interval_seconds": 1.7808763000066392
+    },
+    {
+      "line": "[11/25] replay_mixed_n100000_s44_l1000 shared io: complete",
+      "elapsed_seconds": 28.79650880000554,
+      "interval_seconds": 2.1496036000316963
+    },
+    {
+      "line": "[12/25] replay_mixed_n100000_s44_l1000 revised timing: complete",
+      "elapsed_seconds": 31.088171800016426,
+      "interval_seconds": 2.2916630000108853
+    },
+    {
+      "line": "[13/25] replay_mixed_n100000_s44_l1000 revised latency: complete",
+      "elapsed_seconds": 32.34578869998222,
+      "interval_seconds": 1.2576168999657966
+    },
+    {
+      "line": "[14/25] replay_mixed_n100000_s44_l1000 revised memory: complete",
+      "elapsed_seconds": 36.613386999990325,
+      "interval_seconds": 4.267598300008103
+    },
+    {
+      "line": "[15/25] replay_mixed_n100000_s44_l1000 revised diagnostics: complete",
+      "elapsed_seconds": 39.19838499999605,
+      "interval_seconds": 2.5849980000057258
+    },
+    {
+      "line": "[16/25] replay_sweep_n100000_s44_l1000 shared io: complete",
+      "elapsed_seconds": 41.35824460000731,
+      "interval_seconds": 2.1598596000112593
+    },
+    {
+      "line": "[17/25] replay_sweep_n100000_s44_l1000 revised timing: complete",
+      "elapsed_seconds": 44.10248289996525,
+      "interval_seconds": 2.744238299957942
+    },
+    {
+      "line": "[18/25] replay_sweep_n100000_s44_l1000 revised latency: complete",
+      "elapsed_seconds": 45.526292699971236,
+      "interval_seconds": 1.4238098000059836
+    },
+    {
+      "line": "[19/25] replay_sweep_n100000_s44_l1000 revised memory: complete",
+      "elapsed_seconds": 50.98988090001512,
+      "interval_seconds": 5.463588200043887
+    },
+    {
+      "line": "[20/25] replay_sweep_n100000_s44_l1000 revised diagnostics: complete",
+      "elapsed_seconds": 54.83366870001191,
+      "interval_seconds": 3.8437877999967895
+    },
+    {
+      "line": "[21/25] replay_cancel_churn_n100000_s44_l1000 shared io: complete",
+      "elapsed_seconds": 56.892133999965154,
+      "interval_seconds": 2.058465299953241
+    },
+    {
+      "line": "[22/25] replay_cancel_churn_n100000_s44_l1000 revised timing: complete",
+      "elapsed_seconds": 58.713166199973784,
+      "interval_seconds": 1.8210322000086308
+    },
+    {
+      "line": "[23/25] replay_cancel_churn_n100000_s44_l1000 revised latency: complete",
+      "elapsed_seconds": 59.799482900009025,
+      "interval_seconds": 1.0863167000352405
+    },
+    {
+      "line": "[24/25] replay_cancel_churn_n100000_s44_l1000 revised memory: complete",
+      "elapsed_seconds": 63.24237270001322,
+      "interval_seconds": 3.4428898000041954
+    },
+    {
+      "line": "[25/25] replay_cancel_churn_n100000_s44_l1000 revised diagnostics: complete",
+      "elapsed_seconds": 64.55132709996542,
+      "interval_seconds": 1.3089543999521993
+    }
+  ],
+  "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+}

@@ -1,0 +1,20 @@
+{
+  "source_sha256": "f82455f1ced229fd6d5cffb29727b67b4cce1a53e6c6d7b649ce66d7f03dcbd2",
+  "G1": true,
+  "G2": true,
+  "G3": true,
+  "evidence": [
+    {
+      "suite": "standard",
+      "path": "05_evidence\\b3r-fast-all-tests.xml",
+      "cases": 848,
+      "sha256": "862da0ad7067ae8ec79344b43161d918a22ecab521eceeafce950d5f137e0770"
+    },
+    {
+      "suite": "attack",
+      "path": "05_evidence\\b3r-fast-attack-tests.xml",
+      "cases": 1697,
+      "sha256": "ea36880687ed0a56613d8fb03679422ec5ce1ef9960cd87b14fac4b6f06f7a76"
+    }
+  ]
+}

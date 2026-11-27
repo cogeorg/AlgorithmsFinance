@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "address": "http://127.0.0.1:8501",
+  "health": "ok",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.79",
+    "revision": "@6dc9bc3bdaea5c35ed6d41fceab2f7a3a2227c4f",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.43"
+  },
+  "title": "Phase 1 order book benchmarks",
+  "screenshots": [
+    "dashboard_scaling.png",
+    "dashboard_memory_and_cleanup.png",
+    "dashboard_sales_and_correctness.png",
+    "dashboard_coverage_and_provenance.png"
+  ],
+  "panels": [
+    {
+      "tab": "Scaling",
+      "visible_images": [
+        {
+          "width": 1460,
+          "height": 2633
+        }
+      ],
+      "visible_text": "Skip to main content\n\nExperiment\n\nScenario\n\nRequested counts\n\n1000\n10000\n100000\n\nSeeds\n\n42\n43\n44\n\nImplementations\n\nbaseline\nrevised\n\nPrice-level setting\n\n1000\n\nComparable pairs only in plots\n\nStop\nDeploy\nBTC order book \u2014 Phase 1\n\nSaved data only \u00b7 integer cents/BTC and 10^-8 BTC quantities \u00b7 complete groups and documented limits\n\nCompleted groups\n\n69\n\nStopped groups\n\n12\n\nUnattempted groups\n\n0\n\nFailed groups\n\n0\n\nStopped groups retain partial raw repetitions but no complete median. A 60-second worker budget includes loading and warm-up. Unpaired curves are independent observations; speedups require matching complete groups and diagnostics.\n\nScaling\n\nLatency\n\nMemory and cleanup\n\nSales and correctness\n\nCoverage and provenance\n\nConstruction, replay / individual sale, and total compute"
+    },
+    {
+      "tab": "Memory and cleanup",
+      "visible_images": [
+        {
+          "width": 1460,
+          "height": 2621
+        }
+      ],
+      "visible_text": "Skip to main content\n\nExperiment\n\nScenario\n\nRequested counts\n\n1000\n10000\n100000\n\nSeeds\n\n42\n43\n44\n\nImplementations\n\nbaseline\nrevised\n\nPrice-level setting\n\n1000\n\nComparable pairs only in plots\n\nStop\nDeploy\nBTC order book \u2014 Phase 1\n\nSaved data only \u00b7 integer cents/BTC and 10^-8 BTC quantities \u00b7 complete groups and documented limits\n\nCompleted groups\n\n69\n\nStopped groups\n\n12\n\nUnattempted groups\n\n0\n\nFailed groups\n\n0\n\nStopped groups retain partial raw repetitions but no complete median. A 60-second worker budget includes loading and warm-up. Unpaired curves are independent observations; speedups require matching complete groups and diagnostics.\n\nScaling\n\nLatency\n\nMemory and cleanup\n\nSales and correctness\n\nCoverage and provenance\n\nSeparate-process tracemalloc: preloaded input/imports excluded; book construction, transient results and cleanup included; no result history. Python allocation bytes, not RSS."
+    },
+    {
+      "tab": "Sales and correctness",
+      "visible_images": [
+        {
+          "width": 1460,
+          "height": 1303
+        }
+      ],
+      "visible_text": "Skip to main content\n\nExperiment\n\nScenario\n\nRequested counts\n\n1000\n10000\n100000\n\nSeeds\n\n42\n43\n44\n\nImplementations\n\nbaseline\nrevised\n\nPrice-level setting\n\n1000\n\nComparable pairs only in plots\n\nDeploy\nBTC order book \u2014 Phase 1\n\nSaved data only \u00b7 integer cents/BTC and 10^-8 BTC quantities \u00b7 complete groups and documented limits\n\nCompleted groups\n\n69\n\nStopped groups\n\n12\n\nUnattempted groups\n\n0\n\nFailed groups\n\n0\n\nStopped groups retain partial raw repetitions but no complete median. A 60-second worker budget includes loading and warm-up. Unpaired curves are independent observations; speedups require matching complete groups and diagnostics.\n\nScaling\n\nLatency\n\nMemory and cleanup\n\nSales and correctness\n\nCoverage and provenance\n\nSingle-sale fields describe only the measured sale. Replay/churn fill and residual fields aggregate their task; returned limit residuals are included in replay residual totals.\n\nThe original 99-test gate passed before the campaigns. Final verification is recorded in results/phase1_final/verification.json.\n\n{\n\"status\":\"incomplete\"\n\"tests\":{\n\"status\":\"passed\"\n\"runs\":[\n0:{\n\"command\":[\n0:\"C:\\\\Users\\\\clair\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python314\\\\python.exe\"\n1:\"-B\"\n2:\"-m\"\n3:\"unittest\"\n4:\"-v\"\n5:\"test_order_book\"\n6:\"test_price_heaps\"\n7:\"test_lazy_cancellation\"\n8:\"test_benchmark\"\n9:\"test_benchmark_report\"\n10:\"test_phase1_results\"\n]\n\"exit_code\":0\n\"tests\":107\n\"runner_seconds\":1.816\n\"command_wall_seconds\":7.914797600009479\n}\n]\n}\n\"dashboard\":{\n\"status\":\"not_yet_verified\"\n}\n\"unmet_requirements\":[\n0:\"No contemporaneous initial failing TDD record was available; this historical requirement cannot be verified retroactively.\"\n1:\"See missing cases, validation or execution states above.\"\n]\n}\n\nIndependent expected tests supplement shared-logic differential tests. Source-only sale oracles verify ordered result digests, maker fills, executed prices, requested units and residuals."
+    },
+    {
+      "tab": "Coverage and provenance",
+      "visible_images": [],
+      "visible_text": "Skip to main content\n\nExperiment\n\nScenario\n\nRequested counts\n\n1000\n10000\n100000\n\nSeeds\n\n42\n43\n44\n\nImplementations\n\nbaseline\nrevised\n\nPrice-level setting\n\n1000\n\nComparable pairs only in plots\n\nDeploy\nBTC order book \u2014 Phase 1\n\nSaved data only \u00b7 integer cents/BTC and 10^-8 BTC quantities \u00b7 complete groups and documented limits\n\nCompleted groups\n\n69\n\nStopped groups\n\n12\n\nUnattempted groups\n\n0\n\nFailed groups\n\n0\n\nStopped groups retain partial raw repetitions but no complete median. A 60-second worker budget includes loading and warm-up. Unpaired curves are independent observations; speedups require matching complete groups and diagnostics.\n\nScaling\n\nLatency\n\nMemory and cleanup\n\nSales and correctness\n\nCoverage and provenance\n\nComplete identity includes experiment, both count meanings, seed, level setting, percentage, implementation and phase. No partial group is displayed as a five-repeat median.\n\nController progress intervals are wall-clock observations between job completion messages; the first includes preparation. They are not individual replay durations.\n\nShow saved raw repetitions (including partial groups)\n\n{\n\"completed\":813\n\"stopped\":132\n}\n{\n\"excluded_runs\":[\n0:{\n\"directory\":\"final_market-sell_n1000_s42_l1000_p10\"\n\"reason\":\"Replay audit ended at 2026-11-26T00:18:32.9686611Z, after this command started at 00:18:31.692406Z. Its Baseline timing worker completed at elapsed 1.186545 seconds, so audit CPU activity overlapped primary measurement. Preserve all original records, exclude this run from final selection, and repeat only this affected case after the campaign queue.\"\n}\n]\n}\nSeparate optional million-event limit probe\n\nOne bounded mixed-workload million-event probe was feasible after mandatory coverage; no other million-event cases attempted.\n\n{\n\"states\":{\n\"completed\":5\n\"stopped\":4\n}\n\"actual_command_wall_seconds\":376.52904890000354\n\"workload_sha256\":\"7522129470525229eaa8fb9b886f7548994e761e7616b76fd663327a347b25ac\"\n\"comparison_status\":\"not performed: no completed Baseline/Revised diagnostic pair\"\n}\n\nSource/environment fingerprints and raw values are preserved in the audited index; historical manifests and audit files are never rewritten by this application.\n\nDownload audited index"
+    }
+  ],
+  "initial_visible_text": "Skip to main content\n\nExperiment\n\nScenario\n\nRequested counts\n\n1000\n10000\n100000\n\nSeeds\n\n42\n43\n44\n\nImplementations\n\nbaseline\nrevised\n\nPrice-level setting\n\n1000\n\nComparable pairs only in plots\n\nStop\nDeploy\nBTC order book \u2014 Phase 1\n\nSaved data only \u00b7 integer cents/BTC and 10^-8 BTC quantities \u00b7 complete groups and documented limits\n\nCompleted groups\n\n69\n\nStopped groups\n\n12\n\nUnattempted groups\n\n0\n\nFailed groups\n\n0\n\nStopped groups retain partial raw repetitions but no complete median. A 60-second worker budget includes loading and warm-up. Unpaired curves are independent observations; speedups require matching complete groups and diagnostics.\n\nScaling\n\nLatency\n\nMemory and cleanup\n\nSales and correctness\n\nCoverage and provenance\n\nConstruction, replay / individual sale, and total compute",
+  "note": "Local headless Chromium inspection; benchmarks were not running."
+}

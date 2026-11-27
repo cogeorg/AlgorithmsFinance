@@ -1,0 +1,244 @@
+commit 88971c5ba9a9b057f2f5e6b223c0d80e10ea7462
+Date:   2026-11-26 15:07:26 +0100
+
+    Add course package as received (unchanged)
+
+
+ .gitignore                                     |   5 +
+ AlgorithmsFinance_Exercise1.pdf                | Bin 0 -> 172965 bytes
+ MANIFEST.json                                  |  70 ++++++++++++
+ README.md                                      | 144 +++++++++++++++++++++++++
+ data/buildup_10000.jsonl.gz                    | Bin 0 -> 132767 bytes
+ data/buildup_10000.jsonl.gz.metadata.json      |  14 +++
+ data/cancel_churn_10000.jsonl.gz               | Bin 0 -> 110782 bytes
+ data/cancel_churn_10000.jsonl.gz.metadata.json |  14 +++
+ data/crowded_10000.jsonl.gz                    | Bin 0 -> 111714 bytes
+ data/crowded_10000.jsonl.gz.metadata.json      |  14 +++
+ data/mixed_10000.jsonl.gz                      | Bin 0 -> 125334 bytes
+ data/mixed_10000.jsonl.gz.metadata.json        |  14 +++
+ data/sweep_10000.jsonl.gz                      | Bin 0 -> 123692 bytes
+ data/sweep_10000.jsonl.gz.metadata.json        |  14 +++
+ data/worked_example.jsonl                      |   6 ++
+ data/worked_expected.json                      |  53 +++++++++
+ generate_orders.py                             |  85 +++++++++++++++
+ 17 files changed, 433 insertions(+)
+commit fbc4f71d980ffaf97a150484681df40d96707ff7
+Date:   2026-11-26 15:11:07 +0100
+
+    Tests first: spec tests, independent oracle, A-vs-B equivalence (stubs fail)
+
+
+ README.md => ASSIGNMENT.md              |   0
+ lob/__init__.py                         |   1 +
+ lob/book_a.py                           |   6 +
+ lob/book_b.py                           |   6 +
+ lob/common.py                           |  39 ++++
+ results/tests_before_implementation.txt |  16 ++
+ tests/__init__.py                       |   0
+ tests/oracle.py                         | 166 +++++++++++++++
+ tests/streams.py                        |  62 ++++++
+ tests/test_equivalence.py               |  76 +++++++
+ tests/test_spec.py                      | 344 ++++++++++++++++++++++++++++++++
+ 11 files changed, 716 insertions(+)
+commit 4070621e3231e058aecb6ed5a0249a94559568ee
+Date:   2026-11-26 15:12:31 +0100
+
+    Version A: list-scan baseline; shared validation and dispatcher
+
+
+ lob/book_a.py |  91 ++++++++++++++++++++++++++++++-
+ lob/common.py | 172 ++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+ 2 files changed, 250 insertions(+), 13 deletions(-)
+commit baebd398e49e1d68e73768bbca597c36dc2b2881
+Date:   2026-11-26 15:14:25 +0100
+
+    Version B: price levels (OrderedDict FIFO), sorted keys, order index; replay CLI
+
+
+ lob/book_b.py             | 158 +++++++++++++++++++++++++++++++++++++++++++++-
+ replay.py                 |  44 +++++++++++++
+ tests/test_equivalence.py |  22 +++++++
+ 3 files changed, 221 insertions(+), 3 deletions(-)
+commit 2b3c439e02281be27a2d87d4c0cd150723128069
+Date:   2026-11-26 15:20:57 +0100
+
+    Benchmark, verification and dashboard scripts; snapshot restore for fresh books
+
+
+ bench/_util.py                |  99 +++++++++
+ bench/make_data.py            |  54 +++++
+ bench/run_all.sh              |  11 +
+ bench/run_latency.py          |  92 +++++++++
+ bench/run_liquidation.py      | 128 ++++++++++++
+ bench/run_memory.py           | 110 ++++++++++
+ bench/run_timing.py           | 103 ++++++++++
+ bench/verify_correctness.py   |  66 ++++++
+ dashboard/build.py            | 373 ++++++++++++++++++++++++++++++++++
+ lob/book_a.py                 |  10 +
+ lob/book_b.py                 |  17 ++
+ results/correctness.json      | 289 +++++++++++++++++++++++++++
+ results/generated_inputs.json | 452 ++++++++++++++++++++++++++++++++++++++++++
+ results/verify_log.txt        |  21 ++
+ tests/test_equivalence.py     |  21 ++
+ 15 files changed, 1846 insertions(+)
+commit 591f6e116dcfa35b358ed535cc9d215080a15a27
+Date:   2026-11-26 15:28:21 +0100
+
+    Add op counts, profiling, summary; SVG dashboard; README, REPORT draft, AI log
+
+
+ AI_LOG.md                |  53 ++++++++++++++
+ README.md                | 150 ++++++++++++++++++++++++++++++++++++++++
+ REPORT.md                | 124 +++++++++++++++++++++++++++++++++
+ bench/_util.py           |   2 +-
+ bench/run_all.sh         |   3 +
+ bench/run_counts.py      | 102 +++++++++++++++++++++++++++
+ bench/run_liquidation.py |   6 ++
+ bench/run_profile.py     |  44 ++++++++++++
+ bench/summarize.py       | 137 ++++++++++++++++++++++++++++++++++++
+ dashboard/build.py       | 176 ++++++++++++++++++++++++++++++++++++-----------
+ 10 files changed, 756 insertions(+), 41 deletions(-)
+commit 48076ba3886a8c33fd463184f92723317b2f7227
+Date:   2026-11-26 15:40:34 +0100
+
+    Optimize Version B: fused fast-path dispatcher and list orders (1.5-1.7x faster)
+
+
+ README.md                               |   9 +-
+ REPORT.md                               |  36 ++++
+ bench/run_all.sh                        |   3 +-
+ bench/run_revision_steps.py             |  65 +++++++
+ bench/summarize.py                      |  11 ++
+ bench/variants/__init__.py              |   0
+ bench/variants/book_b_step1_levels.py   | 177 +++++++++++++++++++
+ bench/variants/book_b_step2_fastpath.py | 289 ++++++++++++++++++++++++++++++++
+ dashboard/build.py                      |  15 ++
+ lob/book_b.py                           | 208 ++++++++++++++++++-----
+ tests/test_equivalence.py               |  65 +++++++
+ 11 files changed, 834 insertions(+), 44 deletions(-)
+commit 6506e1995ea25ffd9e0b3ed32f7c3cd22a165587
+Date:   2026-11-26 16:14:37 +0100
+
+    Trap check: original tests restored byte-identical, added checks in new file; worker exit codes; seeds 42-44 for latency/memory; parse and mutation scripts; dashboard redesign
+
+
+ AI_LOG.md                          |   41 ++
+ README.md                          |   45 +-
+ REPORT.md                          |   74 ++-
+ bench/run_all.sh                   |    4 +-
+ bench/run_latency.py               |    4 +-
+ bench/run_liquidation.py           |   22 +-
+ bench/run_memory.py                |   39 +-
+ bench/run_mutations.py             |  115 ++++
+ bench/run_parse.py                 |   39 ++
+ bench/run_timing.py                |   16 +-
+ bench/summarize.py                 |   55 +-
+ dashboard/build.py                 |  448 +++++++++++-----
+ dashboard/index.html               |  619 +++++++++++++++++++++
+ lob/book_b.py                      |    3 +-
+ results/bench_log.txt              |  392 ++++++++++++++
+ results/correctness.json           |   10 +-
+ results/env.json                   |  525 ++++++++++++++++++
+ results/latency.json               | 1037 ++++++++++++++++++++++++++++++++++++
+ results/latency_raw_10000.json.gz  |  Bin 0 -> 131764 bytes
+ results/liquidation.csv            |  281 ++++++++++
+ results/liquidation_agreement.json |   16 +
+ results/memory.csv                 |  242 +++++++++
+ results/op_counts.csv              |   31 ++
+ results/profile.json               |  353 ++++++++++++
+ results/revision_steps.csv         |   91 ++++
+ results/summary.md                 |  122 +++++
+ results/timing.csv                 |  597 +++++++++++++++++++++
+ tests/test_added_checks.py         |  127 +++++
+ 28 files changed, 5138 insertions(+), 210 deletions(-)
+commit a56899a029dac707e775f682bc328d796ca383d0
+Date:   2026-11-26 16:29:39 +0100
+
+    Final results (latency/memory seeds 42-44, parse, mutations 20/20, GC check), REPORT with five aspects, dashboard sale scaling
+
+
+ AI_LOG.md                         |   22 +
+ README.md                         |   42 +-
+ REPORT.md                         |  275 ++-
+ bench/provenance.py               |   51 +
+ bench/run_all.sh                  |    1 +
+ bench/run_gc_check.py             |   56 +
+ dashboard/build.py                |   48 +-
+ dashboard/index.html              |   50 +-
+ results/bench_log2.txt            |  110 ++
+ results/gc_check.json             |  101 ++
+ results/latency.json              | 3312 ++++++++++++++++++++++++++++++-------
+ results/latency_raw_10000.json.gz |  Bin 131764 -> 410358 bytes
+ results/memory.csv                |  498 +++++-
+ results/memory_log.txt            |   61 +
+ results/mutations.json            |  149 ++
+ results/mutations_log.txt         |   23 +
+ results/parse.csv                 |  283 ++++
+ results/summary.md                |   92 +-
+ 18 files changed, 4468 insertions(+), 706 deletions(-)
+commit d1f7d32c3d384a1d41e3f1f0deddf0fef73156ec
+Date:   2026-11-26 16:29:39 +0100
+
+    Provenance: code fingerprints, readable history, git bundle
+
+
+ provenance/git_history.txt    | 178 ++++++++++++++++++++++++++++++++++++++
+ provenance/history.bundle     | Bin 0 -> 1350661 bytes
+ results/code_fingerprint.json | 194 ++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 372 insertions(+)
+commit c34a4adf7e444fd686f04ac6f2ce098b9c4faf66
+Date:   2026-11-26 16:44:03 +0100
+
+    Version C experiment (deque + lazy cancel): tested, measured, not adopted
+
+
+ AI_LOG.md                      |  12 ++
+ README.md                      |   7 +-
+ REPORT.md                      |  46 ++++-
+ bench/run_all.sh               |   1 +
+ bench/run_version_c.py         | 102 ++++++++++
+ bench/variants/book_c_deque.py | 308 ++++++++++++++++++++++++++++++
+ dashboard/build.py             |  16 ++
+ dashboard/index.html           |  17 +-
+ results/version_c.json         | 420 +++++++++++++++++++++++++++++++++++++++++
+ tests/test_version_c.py        |  88 +++++++++
+ 10 files changed, 1013 insertions(+), 4 deletions(-)
+commit 623ce4d91fc4a1be3670af378c66cda7a6fbd92d
+Date:   2026-11-26 16:44:04 +0100
+
+    Refresh provenance (bundle, history, fingerprints)
+
+
+ provenance/git_history.txt    |  27 +++++++++++++++++++++++++++
+ provenance/history.bundle     | Bin 1350661 -> 2720071 bytes
+ results/code_fingerprint.json |  24 +++++++++++++++++++++---
+ 3 files changed, 48 insertions(+), 3 deletions(-)
+commit e38dcf34d17951e51451da97230c545780fcf02b
+Date:   2026-11-26 16:50:43 +0100
+
+    Final check: per-event verification rerun on final code (124 tests), report test count, precise provenance note
+
+
+ README.md                | 18 +++++++++++++++---
+ REPORT.md                |  5 +++--
+ dashboard/index.html     |  2 +-
+ results/correctness.json | 10 +++++-----
+ 4 files changed, 24 insertions(+), 11 deletions(-)
+commit fa949cd221690091a8c868a67630684fc598e246
+Date:   2026-11-26 16:50:43 +0100
+
+    Refresh provenance (bundle, history, fingerprints)
+
+
+ provenance/git_history.txt    |  21 +++++++++++++++++++++
+ provenance/history.bundle     | Bin 2720071 -> 4119896 bytes
+ results/code_fingerprint.json |   2 +-
+ 3 files changed, 22 insertions(+), 1 deletion(-)
+commit 46eb924b51aa2a405465d611dba7cb328fdbfe73
+Date:   2026-11-26 16:54:49 +0100
+
+    AI log: record the author's decisions in section 4
+
+
+ AI_LOG.md | 35 ++++++++++++++++++++++++++---------
+ 1 file changed, 26 insertions(+), 9 deletions(-)

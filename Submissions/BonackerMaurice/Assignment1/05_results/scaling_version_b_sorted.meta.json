@@ -1,0 +1,30 @@
+{
+  "what": "single-run scaling exploration, engine replay time only",
+  "time_limit_seconds_per_run": 600,
+  "time_limit_covers": "child wall time: loading + replay + peak counting",
+  "seconds_covers": "process_event loop only; loading/parsing excluded",
+  "invariant_checks": false,
+  "repeats": 1,
+  "seed": 42,
+  "sizes": [
+    1000,
+    10000,
+    30000,
+    100000
+  ],
+  "scenarios": [
+    "buildup",
+    "crowded",
+    "mixed",
+    "sweep",
+    "cancel_churn"
+  ],
+  "levels": 1000,
+  "python": "3.13.15",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+  "git_commit": "4b3f2cb",
+  "code_dirty": true,
+  "started_utc": "2026-11-22T19:44:44+00:00",
+  "finished_utc": "2026-11-22T19:44:52+00:00"
+}

@@ -1,0 +1,9 @@
+# Generated event data: regenerate with 04_benchmarks/generate_data.py or
+# 04_benchmarks/run_benchmark.py (checksums are in the .metadata.json files
+# and in 05_results/benchmark_datasets.csv, which are kept).
+05_results/data/*.jsonl.gz
+05_results/data/**/*.jsonl.gz
+# Smoke runs of the benchmark (M = 1,000 only): not results.
+05_results/smoke/
+__pycache__/
+.pytest_cache/

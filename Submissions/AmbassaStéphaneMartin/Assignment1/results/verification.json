@@ -1,0 +1,115 @@
+{
+  "status": "passed",
+  "protected_files": {
+    "order_book.py": {
+      "before": "dcbdb2c0e7173e8116fa1c51b287a93cf422c140f74f49f2b5c49a5b025c39a6",
+      "after": "dcbdb2c0e7173e8116fa1c51b287a93cf422c140f74f49f2b5c49a5b025c39a6"
+    },
+    "generate_orders.py": {
+      "before": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+      "after": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d"
+    },
+    "test_order_book.py": {
+      "before": "6f143b1616e6c21225b7de12fb4f8853e70a0aff32b6045ca3c3ef2501110595",
+      "after": "6f143b1616e6c21225b7de12fb4f8853e70a0aff32b6045ca3c3ef2501110595"
+    },
+    "test_price_heaps.py": {
+      "before": "90498d2ac8d25fb2d669bcf671b954dc42267b866bf0ee89c2ff747614974c3a",
+      "after": "90498d2ac8d25fb2d669bcf671b954dc42267b866bf0ee89c2ff747614974c3a"
+    },
+    "test_lazy_cancellation.py": {
+      "before": "f9d7028adb6a4fdbb33599a398755c561f1ec7ba6b10e6a558b6feca4658b423",
+      "after": "f9d7028adb6a4fdbb33599a398755c561f1ec7ba6b10e6a558b6feca4658b423"
+    },
+    "data\\buildup_10000.jsonl.gz": {
+      "before": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5",
+      "after": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5"
+    },
+    "data\\buildup_10000.jsonl.gz.metadata.json": {
+      "before": "3d83dae444458ff819d1bcfe99256aa110c0506b9422850572793f75a469d2d9",
+      "after": "3d83dae444458ff819d1bcfe99256aa110c0506b9422850572793f75a469d2d9"
+    },
+    "data\\cancel_churn_10000.jsonl.gz": {
+      "before": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933",
+      "after": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933"
+    },
+    "data\\cancel_churn_10000.jsonl.gz.metadata.json": {
+      "before": "887692b24a542efea667e595d45a9a46ac296285602e5191a3cecfca1ccacb03",
+      "after": "887692b24a542efea667e595d45a9a46ac296285602e5191a3cecfca1ccacb03"
+    },
+    "data\\crowded_10000.jsonl.gz": {
+      "before": "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6",
+      "after": "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6"
+    },
+    "data\\crowded_10000.jsonl.gz.metadata.json": {
+      "before": "822894454f646dc3479b1cd93a7ce45a2b162bbddb466413cba63f5be6453695",
+      "after": "822894454f646dc3479b1cd93a7ce45a2b162bbddb466413cba63f5be6453695"
+    },
+    "data\\mixed_10000.jsonl.gz": {
+      "before": "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16",
+      "after": "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16"
+    },
+    "data\\mixed_10000.jsonl.gz.metadata.json": {
+      "before": "458136d915369ed51d13ea1c5535c1ca22a9576545763a12c3b84e2f5d199fc4",
+      "after": "458136d915369ed51d13ea1c5535c1ca22a9576545763a12c3b84e2f5d199fc4"
+    },
+    "data\\sweep_10000.jsonl.gz": {
+      "before": "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f",
+      "after": "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f"
+    },
+    "data\\sweep_10000.jsonl.gz.metadata.json": {
+      "before": "0f9038f6a913cbab8911968fd643623b3a17d9da768db2babd175a0e93785589",
+      "after": "0f9038f6a913cbab8911968fd643623b3a17d9da768db2babd175a0e93785589"
+    },
+    "data\\worked_example.jsonl": {
+      "before": "831015ac71d56ada0898b0bf8f59f125900b4dc32134d6ef37bd3cec304798ec",
+      "after": "831015ac71d56ada0898b0bf8f59f125900b4dc32134d6ef37bd3cec304798ec"
+    },
+    "data\\worked_expected.json": {
+      "before": "c715f52724df6bbfcedcad0e203ddb5a7752d38c809f4cf12b513ba809554d2c",
+      "after": "c715f52724df6bbfcedcad0e203ddb5a7752d38c809f4cf12b513ba809554d2c"
+    }
+  },
+  "correctness": {
+    "command": "python -B -m unittest -v test_order_book test_price_heaps test_lazy_cancellation",
+    "before_exit_code": 0,
+    "after_exit_code": 0,
+    "before_tests": 69,
+    "after_tests": 69,
+    "benchmark_tests": 15
+  },
+  "independent_calculation_checks": {
+    "throughput": "10 events / 2 seconds = 5 events per second",
+    "percentiles": "Samples 1..100: median 50.5, P95 95, P99 99; all saved samples audited",
+    "integer_sales": "Depth 11: 10%=2, 100%=11, 200%=22; exact above 2**53",
+    "total_compute": "Median of per-repetition totals 102; sum of component medians would be 20",
+    "artifacts": "Every raw total, throughput, latency percentile and summary median recalculated",
+    "sale_paths": "Every controlled sale fill count and residual checked with an integer price-time oracle",
+    "stopped_runs": "Timeout simulated: retain one finished repetition, label four stopped with null metrics"
+  },
+  "campaigns": {
+    "smoke_1000_seed42": {
+      "status": "complete",
+      "raw_rows": 145,
+      "summary_rows": 45,
+      "latency_samples": 10000,
+      "diagnostic_comparisons": 5,
+      "primary_timing_repetitions": 50
+    },
+    "small_experiment_validation": {
+      "status": "complete",
+      "raw_rows": 174,
+      "summary_rows": 54,
+      "latency_samples": 534,
+      "diagnostic_comparisons": 6,
+      "primary_timing_repetitions": 60
+    }
+  },
+  "supplied_workload_reuse_verified": [
+    "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\buildup_10000.jsonl.gz",
+    "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\crowded_10000.jsonl.gz",
+    "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\mixed_10000.jsonl.gz",
+    "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\sweep_10000.jsonl.gz",
+    "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\cancel_churn_10000.jsonl.gz"
+  ]
+}

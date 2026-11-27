@@ -1,0 +1,14 @@
+{
+  "repeats": 5,
+  "phase_limit_seconds": 5.0,
+  "rss_limit_bytes": 536870912,
+  "results_dir": "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/results/benchmark",
+  "scenario": "mixed",
+  "event_count": 100000,
+  "seed": 43,
+  "levels": 1000,
+  "path": "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/work/benchmark_inputs/mixed_m100000_s43_p1000.jsonl.gz",
+  "job_id": "mixed_m100000_s43_p1000_metadata",
+  "version": "shared",
+  "mode": "metadata"
+}

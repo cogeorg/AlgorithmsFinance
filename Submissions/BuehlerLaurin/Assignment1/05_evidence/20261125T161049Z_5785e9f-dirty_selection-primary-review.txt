@@ -1,0 +1,14 @@
+label: selection-primary-review
+command: ./.venv/Scripts/python.exe scratch/verify_selection_primary.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 5785e9fa99fce4cfebd6c386e8d8d8b1670754d1
+dirty: True
+python: 3.13.15
+utc: 20261125T161049Z
+exit_code: 0
+duration_s: 8.52
+------------------------------------------------------------
+PRIMARY: [{"version":"B1","geomean_s":0.4243545364,"run":"20261122T012525Z_5eaeb03_phase4","commit":"5eaeb03718d24193864dcf7ea4f5161a3bfa6559"},{"version":"B2","geomean_s":0.4725658756,"run":"20261122T012525Z_5eaeb03_phase4","commit":"5eaeb03718d24193864dcf7ea4f5161a3bfa6559"},{"version":"B3","geomean_s":0.4289266917,"run":"20261122T012525Z_5eaeb03_phase4","commit":"5eaeb03718d24193864dcf7ea4f5161a3bfa6559"},{"version":"B3r","geomean_s":0.4246844292,"run":"20261122T130145Z_00bb1ad_phase4_b3r_20261122","commit":"00bb1ade7111d84d5558de5c805f6bf5ed5f687b"},{"version":"B3r_fast","geomean_s":0.3768920145,"run":"20261122T200528Z_8a22753_phase4_b3r_fast_20261122","commit":"8a22753fb122ed91f2f2175802d3a1b0ab7462fa"}]
+SESSION EFFECT: [{"comparison":"Primary sessions (different sessions)","version":"B3r","geomean_s":0.4246844292,"cells":15,"run":"20261122T130145Z_00bb1ad_phase4_b3r_20261122","commit":"00bb1ade7111d84d5558de5c805f6bf5ed5f687b","ratio":0.8874636993},{"comparison":"Primary sessions (different sessions)","version":"B3r_fast","geomean_s":0.3768920145,"cells":15,"run":"20261122T200528Z_8a22753_phase4_b3r_fast_20261122","commit":"8a22753fb122ed91f2f2175802d3a1b0ab7462fa","ratio":0.8874636993},{"comparison":"Same session, alternating order (binding)","version":"B3r","geomean_s":0.4687556667,"cells":15,"run":"20261122T210801Z_e4fd928_phase4_b3r_fast_rematch_20261122","commit":"e4fd92864c6f8f7f93d40fb5d58128a307c2b907","ratio":0.8731749845},{"comparison":"Same session, alternating order (binding)","version":"B3r_fast","geomean_s":0.409305722,"cells":15,"run":"20261122T210801Z_e4fd928_phase4_b3r_fast_rematch_20261122","commit":"e4fd92864c6f8f7f93d40fb5d58128a307c2b907","ratio":0.8731749845}]
+PERCENT SHIFT: {"B3r": 10.377408387513398, "B3r_fast": 8.600263805158725}
+PASS: 22 dashboard + 2 portability tests; five primary bars; two sourced pairs/ratios; six blank-safe rows; protected files unchanged

@@ -1,3 +1,4 @@
+1
 """Class 1: three specified algorithms, unprofiled scaling, separate profiles.
 
 Run from the course root:

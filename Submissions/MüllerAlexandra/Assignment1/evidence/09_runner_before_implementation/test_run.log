@@ -1,0 +1,121 @@
+stage: 09_runner_before_implementation
+started_utc: 2026-11-23T18:24:14.059123+00:00
+finished_utc: 2026-11-23T18:24:14.947205+00:00
+elapsed_seconds: 0.887965
+exit_code: 1
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 79fe4d28d82d90297a9b83884425ab9d2c77023d
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider tests/test_16_experiment_runner.py
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 5 items
+
+tests\test_16_experiment_runner.py FFFFF                                 [100%]
+
+================================== FAILURES ===================================
+______________ test_formal_task_plan_has_declared_phase_coverage ______________
+
+    def test_formal_task_plan_has_declared_phase_coverage() -> None:
+>       tasks = formal_task_specs("baseline")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_16_experiment_runner.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+version = 'baseline'
+
+    def formal_task_specs(version: str) -> list[TaskSpec]:
+>       raise NotImplementedError("formal task plan is not implemented")
+E       NotImplementedError: formal task plan is not implemented
+
+src\limit_order_book\experiment_runner.py:17: NotImplementedError
+____ test_versions_receive_identical_tasks_except_version_and_result_path _____
+
+    def test_versions_receive_identical_tasks_except_version_and_result_path() -> None:
+>       baseline = formal_task_specs("baseline")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_16_experiment_runner.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+version = 'baseline'
+
+    def formal_task_specs(version: str) -> list[TaskSpec]:
+>       raise NotImplementedError("formal task plan is not implemented")
+E       NotImplementedError: formal task plan is not implemented
+
+src\limit_order_book\experiment_runner.py:17: NotImplementedError
+____ test_task_command_uses_fixed_measurement_settings_and_pending_output _____
+
+    def test_task_command_uses_fixed_measurement_settings_and_pending_output() -> None:
+        task = next(
+            task
+>           for task in formal_task_specs("baseline")
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            if task["phase"] == "latency"
+        )
+
+tests\test_16_experiment_runner.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+version = 'baseline'
+
+    def formal_task_specs(version: str) -> list[TaskSpec]:
+>       raise NotImplementedError("formal task plan is not implemented")
+E       NotImplementedError: formal task plan is not implemented
+
+src\limit_order_book\experiment_runner.py:17: NotImplementedError
+_______ test_timeout_is_saved_without_a_result_or_invented_measurement ________
+
+tmp_path = WindowsPath('C:/Users/Acer/AppData/Local/Temp/pytest-of-Acer/pytest-26/test_timeout_is_saved_without_0')
+
+    def test_timeout_is_saved_without_a_result_or_invented_measurement(
+        tmp_path: Path,
+    ) -> None:
+>       task = formal_task_specs("baseline")[0]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_16_experiment_runner.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+version = 'baseline'
+
+    def formal_task_specs(version: str) -> list[TaskSpec]:
+>       raise NotImplementedError("formal task plan is not implemented")
+E       NotImplementedError: formal task plan is not implemented
+
+src\limit_order_book\experiment_runner.py:17: NotImplementedError
+__________ test_completed_task_validates_and_promotes_pending_result __________
+
+tmp_path = WindowsPath('C:/Users/Acer/AppData/Local/Temp/pytest-of-Acer/pytest-26/test_completed_task_validates_0')
+
+    def test_completed_task_validates_and_promotes_pending_result(tmp_path: Path) -> None:
+>       task = formal_task_specs("baseline")[0]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_16_experiment_runner.py:112: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+version = 'baseline'
+
+    def formal_task_specs(version: str) -> list[TaskSpec]:
+>       raise NotImplementedError("formal task plan is not implemented")
+E       NotImplementedError: formal task plan is not implemented
+
+src\limit_order_book\experiment_runner.py:17: NotImplementedError
+=========================== short test summary info ===========================
+FAILED tests/test_16_experiment_runner.py::test_formal_task_plan_has_declared_phase_coverage
+FAILED tests/test_16_experiment_runner.py::test_versions_receive_identical_tasks_except_version_and_result_path
+FAILED tests/test_16_experiment_runner.py::test_task_command_uses_fixed_measurement_settings_and_pending_output
+FAILED tests/test_16_experiment_runner.py::test_timeout_is_saved_without_a_result_or_invented_measurement
+FAILED tests/test_16_experiment_runner.py::test_completed_task_validates_and_promotes_pending_result
+============================== 5 failed in 0.19s ==============================
+
+=== stderr ===

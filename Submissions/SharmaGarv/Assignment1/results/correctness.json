@@ -1,0 +1,9 @@
+{
+  "tests_run": 20,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "success": true,
+  "source_sha256": "89cab8112991dc47868a1d47ae7cf13c7b6f4687d3deb18c8e1b773106848882",
+  "command": "python -B -m unittest discover -s tests -v"
+}

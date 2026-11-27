@@ -1,0 +1,15 @@
+label: robustness-final-review
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/review_robustness.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 47c00484ae46eeb8077150fbb84d5ab650822c99
+dirty: True
+python: 3.13.15
+utc: 20261123T201613Z
+exit_code: 0
+duration_s: 0.53
+------------------------------------------------------------
+Engine algorithms/registry/shared validator, existing tests/expectations, results/data, attack sources and pins unchanged.
+standard 1027 passed; per file/class {"TestDifferential_B": 1, "TestDifferential_B1": 1, "TestDifferential_B2": 1, "TestDifferential_B3": 1, "TestDifferential_B3r": 1, "TestDifferential_B3r_fast": 1, "TestFastDifferential": 1, "test_b3r": 6, "test_b_internal": 32, "test_bench_pipeline": 30, "test_contract": 448, "test_dashboard": 16, "test_fast_assessment": 10, "test_fast_equivalence": 115, "test_final_version": 60, "test_mutants": 25, "test_own_datasets": 4, "test_post_attack_pipeline": 13, "test_replay": 21, "test_replay_regressions": 28, "test_submission_robustness": 28, "test_validation": 184}
+attack 1995 passed; per file/class {"test_attack": 1995}
+Disk copies render eight tabs with exact warning; default B factory and valid/invalid replay cases covered.
+RESULT: PASS (three robustness fixes, complete fresh suites and protected-file scope verified)

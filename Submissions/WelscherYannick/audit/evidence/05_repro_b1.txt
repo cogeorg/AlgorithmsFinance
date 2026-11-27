@@ -1,0 +1,25 @@
+# python3 audit/reproducers/repro_b1_preparation_includes_freeing.py <LaviBen>
+Part 1: LaviBen's _measure_fixed_inputs, unchanged, with two test doubles
+repeat pos  algorithm                       preparation
+     1   1  A: state takes 5 ms to free        0.001 ms
+     1   2  B: prepare does nothing            6.271 ms
+     2   1  B: prepare does nothing            0.000 ms
+     2   2  A: state takes 5 ms to free        0.001 ms
+     3   1  A: state takes 5 ms to free        6.266 ms
+     3   2  B: prepare does nothing            6.277 ms
+     4   1  B: prepare does nothing            0.001 ms
+     4   2  A: state takes 5 ms to free        0.001 ms
+
+Expected: B's preparation far below 1 ms (it does nothing).
+Actual:   B's preparation up to 6.277 ms, i.e. the 5 ms of freeing A's state.
+
+Part 2: LaviBen's prepare_linear (a no-op) timed as in benchmark.py, median of 15
+  n=  1,000 after sorted copy: as benchmarked       458 ns | previous state released first    84 ns
+  n=  1,000 after hash set   : as benchmarked       333 ns | previous state released first    42 ns
+  n= 10,000 after sorted copy: as benchmarked     7,042 ns | previous state released first    83 ns
+  n= 10,000 after hash set   : as benchmarked     2,791 ns | previous state released first    42 ns
+  n=100,000 after sorted copy: as benchmarked    76,500 ns | previous state released first   208 ns
+  n=100,000 after hash set   : as benchmarked    29,833 ns | previous state released first    83 ns
+
+BUG PRESENT: preparation time includes freeing the previous algorithm's state.
+exit 1

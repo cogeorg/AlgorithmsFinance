@@ -1,0 +1,335 @@
+label: final-b-alias-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_final_version.py -q --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: dd88f2253fcc659b1b294f371555c59c08867ce5
+dirty: True
+python: 3.13.15
+utc: 20261123T161747Z
+exit_code: 1
+duration_s: 3.86
+------------------------------------------------------------
+.FF......FF..........F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F             [100%]
+================================== FAILURES ===================================
+_______________ test_final_registry_version_map[B-OrderBookB3r] _______________
+02_tests\test_final_version.py:24: in test_final_registry_version_map
+    assert METHODS.get(('lob', version)) is expected
+E   AssertionError: assert <class 'lob.book_b.OrderBookB'> is <class 'lob.book_b3r.OrderBookB3r'>
+E    +  where <class 'lob.book_b.OrderBookB'> = <built-in method get of dict object at 0x0000020A950E8E40>(('lob', 'B'))
+E    +    where <built-in method get of dict object at 0x0000020A950E8E40> = {('lob', 'A'): <class 'lob.book_a.OrderBookA'>, ('lob', 'B'): <class 'lob.book_b.OrderBookB'>, ('lob', 'B2'): <class 'lob.book_b2.OrderBookB2'>, ('lob', 'B3'): <class 'lob.book_b3.OrderBookB3'>, ...}.get
+_______________ test_final_registry_version_map[B1-OrderBookB] ________________
+02_tests\test_final_version.py:24: in test_final_registry_version_map
+    assert METHODS.get(('lob', version)) is expected
+E   AssertionError: assert None is <class 'lob.book_b.OrderBookB'>
+E    +  where None = <built-in method get of dict object at 0x0000020A950E8E40>(('lob', 'B1'))
+E    +    where <built-in method get of dict object at 0x0000020A950E8E40> = {('lob', 'A'): <class 'lob.book_a.OrderBookA'>, ('lob', 'B'): <class 'lob.book_b.OrderBookB'>, ('lob', 'B2'): <class 'lob.book_b2.OrderBookB2'>, ('lob', 'B3'): <class 'lob.book_b3.OrderBookB3'>, ...}.get
+________ test_factory_preserves_explicit_version[B-OrderBookB3r-False] ________
+02_tests\test_final_version.py:34: in test_factory_preserves_explicit_version
+    assert type(make_book(version, counted)) is expected
+E   AssertionError: assert <class 'lob.book_b.OrderBookB'> is <class 'lob.book_b3r.OrderBookB3r'>
+E    +  where <class 'lob.book_b.OrderBookB'> = type(<lob.book_b.OrderBookB object at 0x0000020A951B0050>)
+E    +    where <lob.book_b.OrderBookB object at 0x0000020A951B0050> = make_book('B', False)
+________ test_factory_preserves_explicit_version[B-OrderBookB3r-True] _________
+02_tests\test_final_version.py:34: in test_factory_preserves_explicit_version
+    assert type(make_book(version, counted)) is expected
+E   AssertionError: assert <class 'lob.book_b.OrderBookB'> is <class 'lob.book_b3r.OrderBookB3r'>
+E    +  where <class 'lob.book_b.OrderBookB'> = type(<lob.book_b.OrderBookB object at 0x0000020A95270B90>)
+E    +    where <lob.book_b.OrderBookB object at 0x0000020A95270B90> = make_book('B', True)
+________________________ test_sanity_uses_explicit_b1 _________________________
+02_tests\test_final_version.py:38: in test_sanity_uses_explicit_b1
+    assert dict(SANITY_VERSIONS)['B1'] == 'B1'
+E   AssertionError: assert 'B' == 'B1'
+E     
+E     - B1
+E     + B
+_______ test_final_b_matches_b3r_after_every_event[worked_example-True] _______
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('worked_example', {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+_________ test_final_b_matches_b3r_after_every_event[empty_book-True] _________
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('empty_book', {'seq': 1, 'event_id': 'e1', 'type': 'MARKET_SELL', 'order_id': 's1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 0,
+E      'heap_pops': 0,
+E      'heap_pushes': 0,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+_________ test_final_b_matches_b3r_after_every_event[one_order-True] __________
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('one_order', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+_______ test_final_b_matches_b3r_after_every_event[fifo_one_price-True] _______
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('fifo_one_price', {'seq': 10, 'event_id': 'e10', 'type': 'LIMIT', 'order_id': 'z9', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+________ test_final_b_matches_b3r_after_every_event[sweep_levels-True] ________
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('sweep_levels', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+_________ test_final_b_matches_b3r_after_every_event[sell_sizes-True] _________
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('sell_sizes', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+__ test_final_b_matches_b3r_after_every_event[market_larger_than_book-True] ___
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('market_larger_than_book', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+_ test_final_b_matches_b3r_after_every_event[market_sell_empty_bid_side-True] _
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('market_sell_empty_bid_side', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'a1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+_ test_final_b_matches_b3r_after_every_event[partial_then_another_sale-True] __
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('partial_then_another_sale', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+________ test_final_b_matches_b3r_after_every_event[cancel_cases-True] ________
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('cancel_cases', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+__ test_final_b_matches_b3r_after_every_event[interleaved_cancel_fill-True] ___
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('interleaved_cancel_fill', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+_____ test_final_b_matches_b3r_after_every_event[crossing_limit_buy-True] _____
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('crossing_limit_buy', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'a1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+____ test_final_b_matches_b3r_after_every_event[crossing_limit_sell-True] _____
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('crossing_limit_sell', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+_______ test_final_b_matches_b3r_after_every_event[limit_at_touch-True] _______
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('limit_at_touch', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+___ test_final_b_matches_b3r_after_every_event[noncrossing_residuals-True] ____
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('noncrossing_residuals', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'a1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+__________ test_final_b_matches_b3r_after_every_event[id_reuse-True] __________
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('id_reuse', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+________ test_final_b_matches_b3r_after_every_event[huge_values-True] _________
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('huge_values', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+_________ test_final_b_matches_b3r_after_every_event[long_queue-True] _________
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('long_queue', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'qudaxih', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+_______ test_final_b_matches_b3r_after_every_event[invalid_fields-True] _______
+02_tests\test_final_version.py:59: in test_final_b_matches_b3r_after_every_event
+    assert alias.counters.as_dict() == explicit.counters.as_dict(), (name, event)
+E   AssertionError: ('invalid_fields', {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'b1', ...})
+E   assert {'accepted_ev...ents': 0, ...} == {'accepted_ev...ents': 0, ...}
+E     
+E     Omitting 16 identical items, use -vv to show
+E     Right contains 7 more items:
+E     {'heap_entry_peak': 1,
+E      'heap_pops': 0,
+E      'heap_pushes': 1,
+E      'heap_rebuild_keys_scanned': 0,...
+E     
+E     ...Full output truncated, use '-vv' to show
+=========================== short test summary info ===========================
+FAILED 02_tests/test_final_version.py::test_final_registry_version_map[B-OrderBookB3r]
+FAILED 02_tests/test_final_version.py::test_final_registry_version_map[B1-OrderBookB]
+FAILED 02_tests/test_final_version.py::test_factory_preserves_explicit_version[B-OrderBookB3r-False]
+FAILED 02_tests/test_final_version.py::test_factory_preserves_explicit_version[B-OrderBookB3r-True]
+FAILED 02_tests/test_final_version.py::test_sanity_uses_explicit_b1 - Asserti...
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[worked_example-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[empty_book-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[one_order-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[fifo_one_price-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[sweep_levels-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[sell_sizes-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[market_larger_than_book-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[market_sell_empty_bid_side-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[partial_then_another_sale-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[cancel_cases-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[interleaved_cancel_fill-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[crossing_limit_buy-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[crossing_limit_sell-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[limit_at_touch-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[noncrossing_residuals-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[id_reuse-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[huge_values-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[long_queue-True]
+FAILED 02_tests/test_final_version.py::test_final_b_matches_b3r_after_every_event[invalid_fields-True]
+24 failed, 36 passed in 1.46s

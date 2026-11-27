@@ -1,0 +1,39 @@
+label: b3r-final-review
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/b3r_final_review.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 958c8b477bc297858893ed74f0a93cd70dc7f665
+dirty: True
+python: 3.13.15
+utc: 20261122T120353Z
+exit_code: 0
+duration_s: 7.10
+------------------------------------------------------------
+All prior engines/validator/test sources/expectations/attack artifacts/original data+results unchanged.
+Final standard-suite cases: {"TestDifferential_B": 1, "TestDifferential_B2": 1, "TestDifferential_B3": 1, "TestDifferential_B3r": 1, "test_b3r": 6, "test_b_internal": 22, "test_bench_pipeline": 30, "test_contract": 320, "test_mutants": 23, "test_own_datasets": 4, "test_post_attack_pipeline": 13, "test_replay": 18, "test_replay_regressions": 20, "test_validation": 184}
+post_attack_far_end_flicker_1000 ad311d09186a870d53fae5fe0d46fc4aa38dd4bfefcdbcd80919ae80f870cdbb
+post_attack_far_end_flicker_10000 5a3dccc1e5a92e1672337230d056c3513ea7c69fb17ca50e656ff58caf0b4283
+post_attack_far_end_flicker_100000 51b7125b622f09fcc969ce91aa2e1639428ad6fa25921143801e66e976fe9b03
+post_attack_dead_slot_rebuild_1000 937020fe42f2852871777fc5133338954efa594469cde957d2733a698e290138
+post_attack_dead_slot_rebuild_10000 281eeba353e7e38c1892cfd35e7b4d9fa017b27c39353c0572453a22bd8c17c5
+post_attack_dead_slot_rebuild_100000 60d7bc78f5f82396bebb7a50e0ba01d8406c3469582689915a5ffc2d1925949b
+post_attack_two_side_thrash_1000 15a41422e9da3f6ef796c24be8971d1498185bd07cbb8ce6cd9f79bd1aa0ef9b
+post_attack_two_side_thrash_10000 3f8d35a7012f753f7e4abcc2db9d420d5cc2b031b26561d70adc0fbbb5864f1a
+post_attack_two_side_thrash_100000 5b43f12b00e43a796da4942e46e236fb40239af0286c1f1e3070ea3d7eb2300c
+post_attack_spike_purge_at_threshold_1000 a09b4fcda559f4b41c0deb118627ee0a22c9b12bdd217bc1e7c22968e056daeb
+post_attack_spike_purge_at_threshold_10000 c585439d3cc8aa9a039fc67a079801a786028d8c6114ab9f6e774b9e9a65a209
+post_attack_spike_purge_at_threshold_100000 48f16dece0f2c0e755a3cd57463109d895603a8459c2c757904074e2f82e881b
+post_attack_rotating_bursts_25 8ce43a8864527a669f9c3ac6aea302d00d14338b73f4a579af0515b6272a9702
+post_attack_rotating_bursts_50 5774b05801bf7397329df0c55933467aa5804cc2dfda5b885505918642631034
+post_attack_rotating_bursts_100 bca4d014b45b2fd34372565f44117c368d66a0d22d2231f81e360321ac71e294
+post_attack_rotating_bursts_200 53a605228fa9e74a256e7123e4fef639d059a2b2f876e0778b3a7d5df812028c
+post_attack_pinned_dead_500 cf04ada13e7b7bfe9bf67c7018f54ffb2c460b9b7f0286b8f218e0ccbc95e88a
+post_attack_pinned_dead_1000 e6da5a808ba3acc413779480bb55029550298c145d8cc37832ec832e39d3861c
+post_attack_pinned_dead_2000 f95d5ae96dec244050c73a61a412df3ddf7536cffa6dc55338329f87c382f58c
+post_attack_pinned_dead_4000 e7d1ad8e299d9cb52e91acb3cce8186c45e59194e8b7b3fa55377f033135d816
+RESULT: PASS (20 added cases generated/hash-verified outside timing; original manifest unchanged)
+New manifest verification byte-stable; original entries identical; all20 new files/hash labels verified.
+Added input counts: 3541884 events, 30603345 gzip bytes
+Nightly preview verified: 564 B3r +168 old comparison +564 A =1296 workers; zero books executed.
+Historical duration estimator omits unmeasured B3r/post_attack rather than fabricating times.
+Scope/whitespace/generated-data exclusion PASS. Source fingerprint: 1a0b3cff7b325e3a88216fc23f864d3878cc3b52517426316acdd249905e9135
+RESULT: PASS (B3r scope, source preservation, all standard tests, input hashes and exact nightly plan verified; no long engine measurements)

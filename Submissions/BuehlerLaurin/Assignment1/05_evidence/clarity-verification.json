@@ -1,0 +1,63 @@
+{
+  "commit": "c4cfc2521f57fc3de60a35d361ff4ceb025e552f",
+  "dirty": true,
+  "created_utc": "2026-11-25T12:01:34.691006+00:00",
+  "measurements_executed": false,
+  "protected_unchanged": [
+    "01_code",
+    "03_results",
+    "06_data",
+    "07_attack",
+    "requirements.txt",
+    "00_docs/FINAL_SELECTION.md",
+    "05_evidence/dashboard-audit.json"
+  ],
+  "source_sha256": {
+    "04_dashboard/app.py": "ee8b7537fa72d7d70b37b70bc5cba938ad00b8d61eb35d3519634b82adba804e",
+    "04_dashboard/saved_results.py": "aba14d483018f93d42d702383d55fe39a4c92a1c63eaa2bcd03722f51812b4a9",
+    "04_dashboard/views.py": "b0bdc724ea006e5943bcc489d3c16cc1caf61deff20621d97e0a636b59d82afa",
+    "04_dashboard/charting.py": "d652533d808813fc057b230c65e15aaf31ab9303e3f8cf7f569a640f663a2818",
+    "04_dashboard/verify_saved.py": "83cc1dc87ae80ece399e7294f7f06da30666972fdf9bf581a95104d481c46728",
+    "02_tests/test_dashboard.py": "3df15edd293d6b8ff6bddc04d297236c1763a169140530eae4ac74f9aef6546f",
+    "02_tests/test_submission_robustness.py": "b14d6bb14e281d4b489500e5c38fd4db91cccb2f490ef2bdc4aa8580d2c4070c"
+  },
+  "suites": [
+    {
+      "suite": "standard",
+      "path": "05_evidence/clarity-all-tests.xml",
+      "tests": 1032,
+      "presentation_stage": "Started before final display-rounding and AppTest adapter cleanup; all engine sources unchanged throughout. Final presentation covered by targeted suite.",
+      "per_file": {
+        "test_b3r": 6,
+        "test_b_internal": 32,
+        "test_bench_pipeline": 30,
+        "test_contract": 448,
+        "test_dashboard": 21,
+        "test_fast_assessment": 10,
+        "test_fast_equivalence": 116,
+        "test_final_version": 60,
+        "test_mutants": 25,
+        "test_own_datasets": 4,
+        "test_post_attack_pipeline": 13,
+        "test_replay": 21,
+        "test_replay_regressions": 28,
+        "test_stateful": 6,
+        "test_submission_robustness": 28,
+        "test_validation": 184
+      },
+      "sha256": "f1778e5efd15d2742039c960a1d61f413a87863e545f9a114f56bbe72d772a87"
+    },
+    {
+      "suite": "dashboard_and_portability",
+      "path": "05_evidence/clarity-dashboard-tests.xml",
+      "tests": 49,
+      "presentation_stage": "Final dashboard and test sources.",
+      "per_file": {
+        "test_dashboard": 21,
+        "test_submission_robustness": 28
+      },
+      "sha256": "5905f1e7a3d9a18afd3b02cbef7518edb5ac194f7844b968011a74d178a92036"
+    }
+  ],
+  "audited_tabs": 9
+}

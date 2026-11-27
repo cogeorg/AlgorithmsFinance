@@ -1,0 +1,4 @@
+# Final offline HTML dashboard generator (tested version).
+plotly==6.9.0
+# Earlier static diagnostic dashboard generator (tested version).
+matplotlib==3.11.1

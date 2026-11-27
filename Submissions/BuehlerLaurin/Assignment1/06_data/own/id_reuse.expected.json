@@ -1,0 +1,92 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "id_reuse",
+ "description": "Duplicate LIVE ids are rejected (limit and market sell); re-using an id after it was filled or cancelled is accepted as a new order (historical reuse is out of scope).",
+ "covers": [
+  "duplicate live id rejected",
+  "market sell with a live id rejected",
+  "id reuse after fill",
+  "id reuse after cancel",
+  "market-sell id reuse"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 2,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "status": "rejected",
+   "reason": "duplicate_live_order_id"
+  },
+  {
+   "event_id": "e3",
+   "status": "rejected",
+   "reason": "duplicate_live_order_id"
+  },
+  {
+   "event_id": "e4",
+   "order_id": "s1",
+   "status": "filled",
+   "unfilled_qty_units": 0,
+   "fills": [
+    {
+     "maker_id": "b1",
+     "taker_id": "s1",
+     "price_ticks": 100,
+     "qty_units": 2
+    }
+   ]
+  },
+  {
+   "event_id": "e5",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 3,
+   "fills": []
+  },
+  {
+   "event_id": "e6",
+   "target_order_id": "b1",
+   "status": "cancelled",
+   "cancelled_qty_units": 3
+  },
+  {
+   "event_id": "e7",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 1,
+   "fills": []
+  },
+  {
+   "event_id": "e8",
+   "order_id": "s1",
+   "status": "unfilled",
+   "unfilled_qty_units": 1,
+   "fills": []
+  },
+  {
+   "event_id": "e9",
+   "target_order_id": "s1",
+   "status": "not_found",
+   "cancelled_qty_units": 0
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "b1",
+   "side": "SELL",
+   "price_ticks": 120,
+   "qty_units": 1,
+   "arrival_seq": 7
+  }
+ ],
+ "best_bid": null,
+ "best_ask": 120
+}

@@ -1,0 +1,41 @@
+{
+  "cells": 216,
+  "cell_status": {
+    "ok": 216
+  },
+  "cases": 15,
+  "size": 1000,
+  "seed": 42,
+  "raw_timing_rows": 988,
+  "phase_summaries": 208,
+  "latency_rows": 372,
+  "memory_rows": 3132,
+  "count_rows": 1360,
+  "sample_checks": 216,
+  "drift_memory_smoke_only": {
+    "A": {
+      "at_200_bytes": 1344,
+      "at_1000_bytes": 1376,
+      "live_orders_final": 2,
+      "heap_entries_final": 0
+    },
+    "B1": {
+      "at_200_bytes": 3416,
+      "at_1000_bytes": 3448,
+      "live_orders_final": 2,
+      "heap_entries_final": 0
+    },
+    "B2": {
+      "at_200_bytes": 2552,
+      "at_1000_bytes": 2584,
+      "live_orders_final": 2,
+      "heap_entries_final": 0
+    },
+    "B3": {
+      "at_200_bytes": 16056,
+      "at_1000_bytes": 56760,
+      "live_orders_final": 2,
+      "heap_entries_final": 501
+    }
+  }
+}

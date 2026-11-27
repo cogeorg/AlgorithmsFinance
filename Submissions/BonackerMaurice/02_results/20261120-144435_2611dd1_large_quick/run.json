@@ -1,0 +1,102 @@
+{
+  "run_id": "20261120-144435_2611dd1_large_quick",
+  "grid": {
+    "sizes": [
+      100000,
+      1000000,
+      10000000
+    ],
+    "query_counts": [
+      10
+    ],
+    "scenarios": [
+      "all_absent",
+      "mixed"
+    ],
+    "seed": 2026,
+    "duplicate_policy": "allow",
+    "id_space_factor": 2,
+    "repeats": 3,
+    "min_measure_seconds": 0.01
+  },
+  "methods": [
+    {
+      "key": "linear_v1",
+      "method": "linear",
+      "version": "v1",
+      "role": "original",
+      "label": "LinearSearch v1",
+      "description": "Defensive copy of the input, then an index-based while-loop scan per query."
+    },
+    {
+      "key": "linear_v2",
+      "method": "linear",
+      "version": "v2",
+      "role": "revised",
+      "label": "LinearSearch v2",
+      "description": "No copy (the scan never mutates the input); direct for-loop iteration per query."
+    },
+    {
+      "key": "binary_v1",
+      "method": "binary",
+      "version": "v1",
+      "role": "original",
+      "label": "BinarySearch v1",
+      "description": "sorted() copy, then recursive binary search with early exit on equality."
+    },
+    {
+      "key": "binary_v2",
+      "method": "binary",
+      "version": "v2",
+      "role": "revised",
+      "label": "BinarySearch v2",
+      "description": "sorted() copy, then iterative lower-bound binary search (no recursion)."
+    },
+    {
+      "key": "hash_v1",
+      "method": "hash",
+      "version": "v1",
+      "role": "only",
+      "label": "HashSet",
+      "description": "set() of the input, then one membership test per query."
+    }
+  ],
+  "current": {
+    "linear": "v2",
+    "binary": "v2",
+    "hash": "v1"
+  },
+  "segments": [
+    "prepare",
+    "query",
+    "total"
+  ],
+  "units": "seconds (elapsed_s, median_s, min_s, max_s); bytes (memory)",
+  "definitions": {
+    "prepare": "One call of prepare(ids). linear v1: list copy; linear v2: no work (returns the input); binary: sorted() copy; hash: set() construction. Includes freeing the returned structure (each result is discarded inside the timed loop).",
+    "query": "One complete batch of q queries, query(state, queries), on a state prepared freshly for each repeat outside the timed loop. Includes building the output list. Warm-cache, steady-state figure: within one measurement the same state and queries are reused calls_per_measurement times.",
+    "total": "One prepare(ids) followed by one complete query batch, timed together (measured directly, not the sum of prepare and query). Every call builds a fresh structure and frees it, so total is generally not equal to prepare + query.",
+    "elapsed_s": "Seconds per call: per prepare, per complete query batch, or per prepare+batch. Each measurement runs the call calls_per_measurement times in a loop and divides the elapsed time.perf_counter() time by that count. Per-query values (query batch / q) are derived, not measured.",
+    "repeats": "A calibration run (which is also the warm-up) picks calls_per_measurement, plus a 25% margin, so one measurement lasts about >= min_measure_seconds; calls that already take that long run once. Actual duration of a measurement = elapsed_s * calls_per_measurement. Then `repeats` measurements per (dataset, method, version, segment); method order rotates each repeat. Report the median; all raw values are kept.",
+    "datasets": "Grid n x q x scenario, except q=1 'mixed' (one query cannot be half present). Present queries are placed by first occurrence, evenly spread over the array (mean_first_hit_frac ~ 0.5), so linear-search hit costs are comparable across n and q. IDs are dense small ints (< 2^30): a best case for hashing and comparisons.",
+    "gc": "Garbage collection is disabled inside timed loops (as timeit does); gc.collect() runs before each measurement.",
+    "excluded": "Data generation, input validation, tests, correctness preflight checks, printing, memory tracing and dashboard rendering are outside timed regions.",
+    "memory": "tracemalloc, in a separate process after timing. The input is built before tracing starts; each (dataset, method) gets a fresh tracing run. prepare_* is read after prepare(), total_* after the query batch, with state and output kept alive. Includes: the prepared structure, the output list, transient buffers (e.g. timsort's merge buffer, set resizing) in the peaks, and about 50-110 bytes of harness objects (see memory_baseline in run.json, not subtracted). Excludes: the input array and queries, and native allocations tracemalloc does not see. *_peak = highest traced bytes since tracing started; *_current = bytes still allocated then.",
+    "noop_call_s": "Per-call overhead of the timing loop with the prepare/query wrapper (functools.partial around a no-op); noop_lambda_call_s is the same for the total segment's lambda. Not subtracted. Values within about 10x of these are dominated by overhead."
+  },
+  "phases": {
+    "timing": {
+      "status": "done",
+      "finished_utc": "2026-11-20T14:53:37+00:00",
+      "datasets": 6,
+      "raw_rows": 270
+    }
+  },
+  "quick": true,
+  "status": "complete",
+  "command": "exploratory large-n run, sizes (100000, 1000000, 10000000)",
+  "noop_call_s": 6.64069652100941e-08,
+  "noop_lambda_call_s": 6.720295965729994e-08,
+  "source_unchanged": true,
+  "finished_utc": "2026-11-20T14:53:37+00:00"
+}

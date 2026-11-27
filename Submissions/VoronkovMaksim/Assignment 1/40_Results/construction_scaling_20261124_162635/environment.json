@@ -1,0 +1,17 @@
+{
+  "seed": 42,
+  "python": "3.14.6",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+  "timeout_seconds": 30.0,
+  "source_sha256": {
+    "order_book_v1.py": "10483d2fe9857cbbe388e9ac36fa55977fa54c86b89a66681e0c77d9a348c530",
+    "order_book_v2.py": "a2bbd7a92c2a692460c1cbe68e8e94ab74f17e6bbbd328e2f90d14f07efe6e9d",
+    "construction_scaling.py": "6a971d841a6357b9601d11d117077cf72d749a7e77bfec7d11fb0625fb12b25b"
+  },
+  "input_generation": "price indices cycle through all levels then shuffle; quantities use a separate seeded RNG",
+  "timer_boundary": "book initialization and event processing included; input loading, validation and verification excluded",
+  "overhead": "one shared progress write per 100 completed events is included in timed replay",
+  "counts": "ID lookup calls inferred from accepted submissions; no actual internal comparisons instrumented; N*(N-1)/2 is theoretical for unique IDs in Version A"
+}

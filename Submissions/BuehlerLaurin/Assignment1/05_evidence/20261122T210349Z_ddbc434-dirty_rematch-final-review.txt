@@ -1,0 +1,25 @@
+label: rematch-final-review
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/review_rematch_checkpoint.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: ddbc4341da6cd2152897dcbca654c690b880480b
+dirty: True
+python: 3.13.15
+utc: 20261122T210349Z
+exit_code: 0
+duration_s: 0.58
+------------------------------------------------------------
+Engines/tests/expectations/data/all old results/old proof and per-cell assessor unchanged.
+Historical comparison retained: tried and rejected 0.8874636992618936
+Historical cell: official_buildup_10000_s42_l1000 0.023255800013430417 0.04168309998931363 1.7923743739300002
+Historical cell: official_sweep_100000_s43_l1000 0.2829003999941051 0.4684357999940403 1.6558329362694477
+Historical cell: post_attack_spike_purge_at_threshold_1000 0.0004290000069886446 0.0004534000181593001 1.056876481988732
+Historical cell: post_attack_spike_purge_at_threshold_10000 0.004934899974614382 0.0055682999663986266 1.1283511307306162
+Historical cell: post_attack_spike_purge_at_threshold_100000 0.05766059999587014 0.06455220002681017 1.119520088785646
+All114 preview positions independently verified:57 pairs, global parity including case46.
+Default runner request ordering exactly matches the old expression across the complete two-part catalog.
+Current-source suite: standard 848 passed
+Per-file/class counts: {"TestDifferential_B": 1, "TestDifferential_B2": 1, "TestDifferential_B3": 1, "TestDifferential_B3r": 1, "TestDifferential_B3r_fast": 1, "TestFastDifferential": 1, "test_b3r": 6, "test_b_internal": 27, "test_bench_pipeline": 30, "test_contract": 384, "test_fast_assessment": 10, "test_fast_equivalence": 115, "test_mutants": 24, "test_own_datasets": 4, "test_post_attack_pipeline": 13, "test_replay": 21, "test_replay_regressions": 24, "test_validation": 184}
+Current-source suite: attack 1697 passed
+Real single attempt remains unclaimed: no marker,session pointer or run folder.
+Source fingerprint: 4911010c34d0bd0f385c15fcfec9fb700db3b7e4859de57c4a7d1030b7569c64
+RESULT: PASS (current gates, complete interleaving/default ordering and immutable historical evidence verified; no rematch run)

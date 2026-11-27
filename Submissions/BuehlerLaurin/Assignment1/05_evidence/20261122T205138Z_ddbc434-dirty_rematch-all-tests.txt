@@ -1,0 +1,286 @@
+label: rematch-all-tests
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest -q -s --tb=short --basetemp=scratch/pytest-rematch --junitxml=05_evidence/rematch-all-tests.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: ddbc4341da6cd2152897dcbca654c690b880480b
+dirty: True
+python: 3.13.15
+utc: 20261122T205138Z
+exit_code: 0
+duration_s: 714.89
+------------------------------------------------------------
+......18 own cases: A == B plain == B counted after every event; original expectations match
+.18 own cases: A == B plain == B counted after every event; original expectations match
+.18 own cases: A == B plain == B counted after every event; original expectations match
+.18 own cases: A == B plain == B counted after every event; original expectations match
+.18 own cases: A == B plain == B counted after every event; original expectations match
+.Cancel compaction: both sides, strict >32 and >live thresholds, complete deletion and recreation
+.Cancel compaction: both sides, strict >32 and >live thresholds, complete deletion and recreation
+.Cancel compaction: both sides, strict >32 and >live thresholds, complete deletion and recreation
+.Cancel compaction: both sides, strict >32 and >live thresholds, complete deletion and recreation
+.Matching compaction: fills can trigger the same stale/live threshold
+.Matching compaction: fills can trigger the same stale/live threshold
+.Matching compaction: fills can trigger the same stale/live threshold
+.Matching compaction: fills can trigger the same stale/live threshold
+.Hand-counted counters and cancelled-id reuse: exact; counters default off
+.Hand-counted counters and cancelled-id reuse: exact; counters default off
+.Hand-counted counters and cancelled-id reuse: exact; counters default off
+.Hand-counted counters and cancelled-id reuse: exact; counters default off
+.Hand-counted counters and cancelled-id reuse: exact; counters default off
+...................{"bench_phase": "input_hash", "action": "start"}
+{"bench_phase": "input_hash", "action": "end", "elapsed_s": 0.001220199977979064}
+{"bench_phase": "parse", "action": "start"}
+{"bench_phase": "parse", "action": "end", "elapsed_s": 0.0009608999826014042}
+{"bench_phase": "sample_check", "action": "start"}
+{"bench_phase": "sample_check", "action": "end", "elapsed_s": 0.0012919000000692904}
+{"bench_phase": "memory_peak", "action": "start"}
+...{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 0.010550700011663139}
+...............{"bench_phase": "input_hash", "action": "start"}
+{"bench_phase": "input_hash", "action": "end", "elapsed_s": 0.0010766999912448227}
+{"bench_phase": "parse", "action": "start"}
+{"bench_phase": "parse", "action": "end", "elapsed_s": 0.0005003999685868621}
+{"bench_phase": "sample_check", "action": "start"}
+{"bench_phase": "sample_check", "action": "end", "elapsed_s": 0.0002041999832727015}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 1.7300015315413475e-05}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 5.400000372901559e-05}
+.{"bench_phase": "input_hash", "action": "start"}
+{"bench_phase": "input_hash", "action": "end", "elapsed_s": 0.001146000053267926}
+{"bench_phase": "parse", "action": "start"}
+{"bench_phase": "parse", "action": "end", "elapsed_s": 0.0006165000377222896}
+{"bench_phase": "sample_check", "action": "start"}
+{"bench_phase": "sample_check", "action": "end", "elapsed_s": 0.00026970001636072993}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 1.580000389367342e-05}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 5.420000525191426e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 8.700008038431406e-06}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 4.150002496317029e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 9.100011084228754e-06}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 3.619998460635543e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 5.999987479299307e-06}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 2.9100046958774328e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 7.199996616691351e-06}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 4.0700018871575594e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 7.099995855242014e-06}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 4.689994966611266e-05}
+.{"bench_phase": "input_hash", "action": "start"}
+{"bench_phase": "input_hash", "action": "end", "elapsed_s": 0.0012173000141046941}
+{"bench_phase": "parse", "action": "start"}
+{"bench_phase": "parse", "action": "end", "elapsed_s": 0.0007220000261440873}
+{"bench_phase": "sample_check", "action": "start"}
+{"bench_phase": "sample_check", "action": "end", "elapsed_s": 0.00033220002660527825}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 1.4599994756281376e-05}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 6.490002851933241e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 9.899958968162537e-06}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 8.279999019578099e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 1.2700038496404886e-05}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 6.439996650442481e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 1.179997343569994e-05}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 6.470002699643373e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 1.3599987141788006e-05}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 6.170000415295362e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 1.7899961676448584e-05}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 0.00012909999350085855}
+...........................................................................................................................................................................................................................................................................................................................................................................................................G1 exhaustive validator comparisons: 1797952; callback traces identical
+...G2 buildup_10000.jsonl.gz, counted=False: 10000 every-event comparisons
+.G2 buildup_10000.jsonl.gz, counted=True: 10000 every-event comparisons
+.G2 cancel_churn_10000.jsonl.gz, counted=False: 10000 every-event comparisons
+.G2 cancel_churn_10000.jsonl.gz, counted=True: 10000 every-event comparisons
+.G2 crowded_10000.jsonl.gz, counted=False: 10000 every-event comparisons
+.G2 crowded_10000.jsonl.gz, counted=True: 10000 every-event comparisons
+.G2 mixed_10000.jsonl.gz, counted=False: 10000 every-event comparisons
+.G2 mixed_10000.jsonl.gz, counted=True: 10000 every-event comparisons
+.G2 sweep_10000.jsonl.gz, counted=False: 10000 every-event comparisons
+.G2 sweep_10000.jsonl.gz, counted=True: 10000 every-event comparisons
+.G2 worked_example.jsonl, counted=False: 6 every-event comparisons
+.G2 worked_example.jsonl, counted=True: 6 every-event comparisons
+.G2 cancel_cases.jsonl, counted=False: 12 every-event comparisons
+.G2 cancel_cases.jsonl, counted=True: 12 every-event comparisons
+.G2 crossing_limit_buy.jsonl, counted=False: 6 every-event comparisons
+.G2 crossing_limit_buy.jsonl, counted=True: 6 every-event comparisons
+.G2 crossing_limit_sell.jsonl, counted=False: 6 every-event comparisons
+.G2 crossing_limit_sell.jsonl, counted=True: 6 every-event comparisons
+.G2 empty_book.jsonl, counted=False: 4 every-event comparisons
+.G2 empty_book.jsonl, counted=True: 4 every-event comparisons
+.G2 fifo_one_price.jsonl, counted=False: 4 every-event comparisons
+.G2 fifo_one_price.jsonl, counted=True: 4 every-event comparisons
+.G2 huge_values.jsonl, counted=False: 4 every-event comparisons
+.G2 huge_values.jsonl, counted=True: 4 every-event comparisons
+.G2 id_reuse.jsonl, counted=False: 9 every-event comparisons
+.G2 id_reuse.jsonl, counted=True: 9 every-event comparisons
+.G2 interleaved_cancel_fill.jsonl, counted=False: 11 every-event comparisons
+.G2 interleaved_cancel_fill.jsonl, counted=True: 11 every-event comparisons
+.G2 invalid_fields.jsonl, counted=False: 86 every-event comparisons
+.G2 invalid_fields.jsonl, counted=True: 86 every-event comparisons
+.G2 limit_at_touch.jsonl, counted=False: 6 every-event comparisons
+.G2 limit_at_touch.jsonl, counted=True: 6 every-event comparisons
+.G2 long_queue.jsonl, counted=False: 304 every-event comparisons
+.G2 long_queue.jsonl, counted=True: 304 every-event comparisons
+.G2 market_larger_than_book.jsonl, counted=False: 6 every-event comparisons
+.G2 market_larger_than_book.jsonl, counted=True: 6 every-event comparisons
+.G2 market_sell_empty_bid_side.jsonl, counted=False: 2 every-event comparisons
+.G2 market_sell_empty_bid_side.jsonl, counted=True: 2 every-event comparisons
+.G2 noncrossing_residuals.jsonl, counted=False: 8 every-event comparisons
+.G2 noncrossing_residuals.jsonl, counted=True: 8 every-event comparisons
+.G2 one_order.jsonl, counted=False: 1 every-event comparisons
+.G2 one_order.jsonl, counted=True: 1 every-event comparisons
+.G2 partial_then_another_sale.jsonl, counted=False: 5 every-event comparisons
+.G2 partial_then_another_sale.jsonl, counted=True: 5 every-event comparisons
+.G2 sell_sizes.jsonl, counted=False: 8 every-event comparisons
+.G2 sell_sizes.jsonl, counted=True: 8 every-event comparisons
+.G2 sweep_levels.jsonl, counted=False: 6 every-event comparisons
+.G2 sweep_levels.jsonl, counted=True: 6 every-event comparisons
+.G2 amortized_rebuild, counted=False: 480 every-event comparisons
+.G2 amortized_rebuild, counted=True: 480 every-event comparisons
+.G2 compaction_thrash, counted=False: 225 every-event comparisons
+.G2 compaction_thrash, counted=True: 225 every-event comparisons
+.G2 dead_slot_rebuild, counted=False: 287 every-event comparisons
+.G2 dead_slot_rebuild, counted=True: 287 every-event comparisons
+.G2 dense_control, counted=False: 96 every-event comparisons
+.G2 dense_control, counted=True: 96 every-event comparisons
+.G2 drift_churn, counted=False: 193 every-event comparisons
+.G2 drift_churn, counted=True: 193 every-event comparisons
+.G2 far_end_cancel, counted=False: 192 every-event comparisons
+.G2 far_end_cancel, counted=True: 192 every-event comparisons
+.G2 far_end_flicker, counted=False: 288 every-event comparisons
+.G2 far_end_flicker, counted=True: 288 every-event comparisons
+.G2 far_end_insert, counted=False: 96 every-event comparisons
+.G2 far_end_insert, counted=True: 96 every-event comparisons
+.G2 flicker_set, counted=False: 193 every-event comparisons
+.G2 flicker_set, counted=True: 193 every-event comparisons
+.G2 hash_control, counted=False: 96 every-event comparisons
+.G2 hash_control, counted=True: 96 every-event comparisons
+.G2 hash_full, counted=False: 96 every-event comparisons
+.G2 hash_full, counted=True: 96 every-event comparisons
+.G2 hash_lowbits, counted=False: 96 every-event comparisons
+.G2 hash_lowbits, counted=True: 96 every-event comparisons
+.G2 hash_match, counted=False: 144 every-event comparisons
+.G2 hash_match, counted=True: 144 every-event comparisons
+.G2 improve_cancel_purge, counted=False: 194 every-event comparisons
+.G2 improve_cancel_purge, counted=True: 194 every-event comparisons
+.G2 lat_growing, counted=False: 192 every-event comparisons
+.G2 lat_growing, counted=True: 192 every-event comparisons
+.G2 lat_normal, counted=False: 192 every-event comparisons
+.G2 lat_normal, counted=True: 192 every-event comparisons
+.G2 lat_rolling, counted=False: 192 every-event comparisons
+.G2 lat_rolling, counted=True: 192 every-event comparisons
+.G2 mem_crowded, counted=False: 192 every-event comparisons
+.G2 mem_crowded, counted=True: 192 every-event comparisons
+.G2 mem_deep, counted=False: 192 every-event comparisons
+.G2 mem_deep, counted=True: 192 every-event comparisons
+.G2 mem_drift, counted=False: 385 every-event comparisons
+.G2 mem_drift, counted=True: 385 every-event comparisons
+.G2 mem_peak_then_empty, counted=False: 383 every-event comparisons
+.G2 mem_peak_then_empty, counted=True: 383 every-event comparisons
+.G2 mem_pinned_dead, counted=False: 12480 every-event comparisons
+.G2 mem_pinned_dead, counted=True: 12480 every-event comparisons
+.G2 mem_rotating_bursts, counted=False: 3372 every-event comparisons
+.G2 mem_rotating_bursts, counted=True: 3372 every-event comparisons
+.G2 root_recreate, counted=False: 288 every-event comparisons
+.G2 root_recreate, counted=True: 288 every-event comparisons
+.G2 spike_compaction, counted=False: 289 every-event comparisons
+.G2 spike_compaction, counted=True: 289 every-event comparisons
+.G2 spike_head_skip, counted=False: 289 every-event comparisons
+.G2 spike_head_skip, counted=True: 289 every-event comparisons
+.G2 spike_purge, counted=False: 194 every-event comparisons
+.G2 spike_purge, counted=True: 194 every-event comparisons
+.G2 spike_purge_at_threshold, counted=False: 289 every-event comparisons
+.G2 spike_purge_at_threshold, counted=True: 289 every-event comparisons
+.G2 spike_rebuild, counted=False: 290 every-event comparisons
+.G2 spike_rebuild, counted=True: 290 every-event comparisons
+.G2 spike_sweep, counted=False: 97 every-event comparisons
+.G2 spike_sweep, counted=True: 97 every-event comparisons
+.G2 touch_churn, counted=False: 288 every-event comparisons
+.G2 touch_churn, counted=True: 288 every-event comparisons
+.G2 two_side_thrash, counted=False: 483 every-event comparisons
+.G2 two_side_thrash, counted=True: 483 every-event comparisons
+......................................{"bench_phase": "input_hash", "action": "start"}
+{"bench_phase": "input_hash", "action": "end", "elapsed_s": 0.0011325000086799264}
+{"bench_phase": "parse", "action": "start"}
+{"bench_phase": "parse", "action": "end", "elapsed_s": 0.0007316999835893512}
+{"bench_phase": "sample_check", "action": "start"}
+{"bench_phase": "sample_check", "action": "end", "elapsed_s": 0.0009730000165291131}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 0.00023960001999512315}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 3.689998993650079e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 0.00026780000189319253}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 3.389996709302068e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 0.0001900999923236668}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 2.600002335384488e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 0.00018590001855045557}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 4.240003181621432e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 0.00016729999333620071}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 2.7900037821382284e-05}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 0.00019829999655485153}
+{"bench_phase": "replay", "action": "start"}
+{"bench_phase": "replay", "action": "end", "elapsed_s": 2.4099950678646564e-05}
+.{"bench_phase": "input_hash", "action": "start"}
+{"bench_phase": "input_hash", "action": "end", "elapsed_s": 0.001056100009009242}
+{"bench_phase": "parse", "action": "start"}
+{"bench_phase": "parse", "action": "end", "elapsed_s": 0.0006647999980486929}
+{"bench_phase": "sample_check", "action": "start"}
+{"bench_phase": "sample_check", "action": "end", "elapsed_s": 0.0009266000124625862}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 0.00022479996550828218}
+{"bench_phase": "latency", "action": "start"}
+{"bench_phase": "latency", "action": "end", "elapsed_s": 2.7799978852272034e-05}
+.{"bench_phase": "input_hash", "action": "start"}
+{"bench_phase": "input_hash", "action": "end", "elapsed_s": 0.0010109000140801072}
+{"bench_phase": "parse", "action": "start"}
+{"bench_phase": "parse", "action": "end", "elapsed_s": 0.0006027999916113913}
+{"bench_phase": "sample_check", "action": "start"}
+{"bench_phase": "sample_check", "action": "end", "elapsed_s": 0.0010927999974228442}
+{"bench_phase": "memory_peak", "action": "start"}
+{"bench_phase": "memory_peak", "action": "end", "elapsed_s": 0.04001319996314123}
+{"bench_phase": "memory_curve", "action": "start"}
+{"bench_phase": "memory_curve", "action": "end", "elapsed_s": 0.03729299997212365}
+.{"bench_phase": "input_hash", "action": "start"}
+{"bench_phase": "input_hash", "action": "end", "elapsed_s": 0.0011957999668084085}
+{"bench_phase": "parse", "action": "start"}
+{"bench_phase": "parse", "action": "end", "elapsed_s": 0.0009826000314205885}
+{"bench_phase": "sample_check", "action": "start"}
+{"bench_phase": "sample_check", "action": "end", "elapsed_s": 0.0010209999745711684}
+{"bench_phase": "construction", "action": "start"}
+{"bench_phase": "construction", "action": "end", "elapsed_s": 0.0002598999999463558}
+{"bench_phase": "counts", "action": "start"}
+{"bench_phase": "counts", "action": "end", "elapsed_s": 5.339999916031957e-05}
+.fixture 6d727736099a9d3a4ce893c7926efdf50d61429a1267cc3db1a681d2484a057d
+RESULT: PASS (1 added cases generated/hash-verified outside timing; original manifest unchanged)
+fixture 6d727736099a9d3a4ce893c7926efdf50d61429a1267cc3db1a681d2484a057d
+RESULT: PASS (1 added cases generated/hash-verified outside timing; original manifest unchanged)
+...........................................................................................................................................................................................................................................
+848 passed in 713.71s (0:11:53)

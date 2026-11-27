@@ -1,0 +1,39 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "market_sell_empty_bid_side",
+ "description": "Only an ask rests; a market sell finds no bids and returns unfilled; the ask is unchanged.",
+ "covers": [
+  "market sell on empty bid side",
+  "one side empty"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "a1",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "order_id": "s1",
+   "status": "unfilled",
+   "unfilled_qty_units": 3,
+   "fills": []
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "a1",
+   "side": "SELL",
+   "price_ticks": 100,
+   "qty_units": 5,
+   "arrival_seq": 1
+  }
+ ],
+ "best_bid": null,
+ "best_ask": 100
+}

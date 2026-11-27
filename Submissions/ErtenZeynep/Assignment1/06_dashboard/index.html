@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Limit Order Book Benchmark Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f7fa;
+      --panel: #ffffff;
+      --text: #17212b;
+      --muted: #596775;
+      --line: #d9e0e7;
+      --baseline: #b54a42;
+      --optimized: #176b87;
+      --accent: #3454d1;
+      --warning: #a86800;
+      --ok: #227447;
+      --track: #e9eef3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #11161c;
+        --panel: #19212a;
+        --text: #eef3f7;
+        --muted: #a8b5c1;
+        --line: #34404b;
+        --baseline: #ed8178;
+        --optimized: #5bc0de;
+        --accent: #8aa4ff;
+        --warning: #f2b84b;
+        --ok: #5bc48a;
+        --track: #29343e;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, sans-serif; }
+    header, main, footer { width: min(1180px, calc(100% - 32px)); margin: auto; }
+    header { padding: 28px 0 14px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 6px; font-size: clamp(1.55rem, 4vw, 2.15rem); }
+    h2 { margin-bottom: 12px; font-size: 1.35rem; }
+    h3 { margin-bottom: 8px; font-size: 1rem; }
+    .subtitle, .note { color: var(--muted); }
+    nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 20px; }
+    nav a { color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 6px 11px; text-decoration: none; background: var(--panel); }
+    section { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin: 0 0 18px; }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 12px 0; }
+    .metric { border-left: 4px solid var(--accent); padding: 8px 12px; background: color-mix(in srgb, var(--panel), var(--accent) 5%); }
+    .metric strong { display: block; font-size: 1.35rem; font-variant-numeric: tabular-nums; }
+    .metric span { color: var(--muted); font-size: .88rem; }
+    .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin: 10px 0 16px; }
+    label { display: grid; gap: 4px; font-size: .88rem; color: var(--muted); }
+    select { min-width: 150px; padding: 7px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--text); }
+    .chart { display: grid; gap: 8px; margin: 12px 0 18px; }
+    .chart-row { display: grid; grid-template-columns: minmax(145px, 1.2fr) minmax(130px, 4fr) minmax(105px, 1fr); gap: 10px; align-items: center; }
+    .chart-label, .chart-value { font-size: .86rem; font-variant-numeric: tabular-nums; }
+    .chart-value { text-align: right; }
+    .track { height: 18px; background: var(--track); border-radius: 4px; overflow: hidden; }
+    .track.censored-track { border: 1px dashed var(--warning); background: repeating-linear-gradient(135deg, transparent 0 6px, color-mix(in srgb, var(--warning), transparent 82%) 6px 12px); }
+    .bar { height: 100%; min-width: 2px; background: var(--accent); }
+    .bar.baseline { background: var(--baseline); }
+    .bar.optimized { background: var(--optimized); }
+    .bar.warning { background: var(--warning); }
+    .legend { display: flex; flex-wrap: wrap; gap: 14px; color: var(--muted); font-size: .86rem; }
+    .scale-note { grid-column: 1 / -1; color: var(--muted); font-size: .8rem; font-style: italic; }
+    .swatch { display: inline-block; width: 12px; height: 12px; margin-right: 5px; vertical-align: -1px; border-radius: 2px; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: .86rem; }
+    th, td { padding: 7px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    #diagnostics-table table { min-width: 1080px; table-layout: fixed; }
+    #diagnostics-table th, #diagnostics-table td { white-space: normal; overflow-wrap: anywhere; }
+    #diagnostics-table th:nth-child(1) { width: 9%; }
+    #diagnostics-table th:nth-child(2) { width: 9%; }
+    #diagnostics-table th:nth-child(3), #diagnostics-table th:nth-child(4), #diagnostics-table th:nth-child(5), #diagnostics-table th:nth-child(6) { width: 8%; }
+    #diagnostics-table th:nth-child(7) { width: 25%; }
+    #diagnostics-table th:nth-child(8) { width: 25%; }
+    .status { font-weight: 650; }
+    .status.pass { color: var(--ok); }
+    .status.censored { color: var(--warning); }
+    .grid-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .callout { border-left: 4px solid var(--warning); padding: 10px 12px; background: color-mix(in srgb, var(--panel), var(--warning) 7%); margin: 12px 0; }
+    code { color: var(--accent); }
+    details { margin: 14px 0; }
+    summary { font-weight: 600; }
+    .hash { overflow-wrap: anywhere; font-family: ui-monospace, monospace; font-size: .82rem; }
+    footer { color: var(--muted); padding: 0 0 28px; font-size: .86rem; }
+    #error { display: none; color: var(--warning); white-space: pre-wrap; }
+    @media (max-width: 720px) {
+      .grid-two { grid-template-columns: 1fr; }
+      .chart-row { grid-template-columns: 1fr; gap: 3px; }
+      .chart-value { text-align: left; }
+      section { padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Limit Order Book Benchmark Dashboard</h1>
+    <p class="subtitle">Saved evidence only. Warmed-primary timing is the default; cold-process and pilot evidence are not mixed into statistics.</p>
+    <nav aria-label="Dashboard sections">
+      <a href="#evidence">Evidence</a><a href="#primary">Primary timing</a><a href="#parsing">Parsing</a><a href="#latency">Latency</a>
+      <a href="#memory">Memory</a><a href="#liquidation">Liquidation</a><a href="#concentration">Concentration</a>
+      <a href="#diagnostics">Diagnostics</a><a href="#correctness">Correctness</a>
+    </nav>
+    <p id="error" role="alert"></p>
+  </header>
+  <main id="dashboard" hidden>
+    <section id="evidence">
+      <h2>Evidence coverage</h2>
+      <div id="evidence-metrics" class="metrics"></div>
+      <p class="note">A timeout is retained as censored evidence. Missing durations are never replaced by the timeout threshold, and incomplete configurations receive no ordinary median, throughput, or speedup.</p>
+    </section>
+
+    <section id="primary">
+      <h2>Warmed-primary replay timing</h2>
+      <p class="note">Median of exactly five completed engine-only repeats. The buildup scenario represents passive book construction; all scenarios represent full-stream replay.</p>
+      <div class="controls">
+        <label>Scenario<select id="primary-scenario"></select></label>
+        <label>Seed<select id="primary-seed"></select></label>
+        <label>Raw-repeat size<select id="primary-size"></select></label>
+        <label>Raw-repeat engine<select id="primary-engine"><option value="baseline">Version A baseline</option><option value="optimized">Version B optimized</option></select></label>
+      </div>
+      <div class="legend"><span><span class="swatch" style="background:var(--baseline)"></span>Version A baseline</span><span><span class="swatch" style="background:var(--optimized)"></span>Version B optimized</span></div>
+      <div id="primary-chart" class="chart" role="img" aria-label="Median warmed replay time by size and engine"></div>
+      <div id="primary-table" class="table-wrap"></div>
+      <details open>
+        <summary>Selected workload settings and five planned raw repeats</summary>
+        <p id="primary-workload" class="note"></p>
+        <div id="primary-repeats" class="table-wrap"></div>
+      </details>
+    </section>
+
+    <section id="parsing">
+      <h2>Reading, gzip decompression, and JSON decoding</h2>
+      <p class="note">Parsing-only protocol: warmed filesystem cache, no engine import or replay. Read/decompress includes file reading, gzip validation/decompression, and decompressed-byte allocation. JSON decoding starts from preloaded bytes and includes JSONL splitting, <code>json.loads</code>, and mapping validation.</p>
+      <div class="controls">
+        <label>Scenario<select id="parsing-scenario"></select></label>
+        <label>Seed<select id="parsing-seed"></select></label>
+      </div>
+      <div id="parsing-chart" class="chart"></div>
+      <div id="parsing-table" class="table-wrap"></div>
+    </section>
+
+    <section id="latency">
+      <h2>Instrumented per-event latency</h2>
+      <p class="note">Separate from primary timing. Ordinary median and nearest-rank P95/P99 over five 10,000-event repetitions; early/late means the first/last 10% by stream position.</p>
+      <div class="controls">
+        <label>Scenario<select id="latency-scenario"></select></label>
+        <label>Histogram engine<select id="latency-engine"><option value="baseline">Version A baseline</option><option value="optimized">Version B optimized</option></select></label>
+      </div>
+      <div class="grid-two">
+        <div><h3>Percentile comparison (microseconds)</h3><div id="latency-percentiles" class="chart"></div></div>
+        <div><h3>Latency distribution (log-spaced bins)</h3><div id="latency-histogram" class="chart"></div></div>
+      </div>
+      <div id="latency-table" class="table-wrap"></div>
+    </section>
+
+    <section id="memory">
+      <h2>Traced Python memory</h2>
+      <p class="note">Engine/book allocations are included; preloaded events and saved history are excluded. The current event result remains retained through its allocation reading. <code>tracemalloc</code> is not process RSS or native memory.</p>
+      <div id="memory-chart" class="chart"></div>
+      <div id="memory-table" class="table-wrap"></div>
+      <h3 style="margin-top:18px">Insertion and post-stream checkpoints</h3>
+      <div id="memory-checkpoints" class="table-wrap"></div>
+    </section>
+
+    <section id="liquidation">
+      <h2>Fresh-book liquidation</h2>
+      <p class="note">Each trial reconstructs the same deterministic 10,000-event buildup book. Construction is reported separately; sale timing includes matching, state updates, and fill-list construction.</p>
+      <div id="liquidation-chart" class="chart"></div>
+      <div id="liquidation-table" class="table-wrap"></div>
+    </section>
+
+    <section id="concentration">
+      <h2>Queue concentration: original versus four levels</h2>
+      <p class="note">The paired transformation changes price-level count, FIFO queue lengths, and later matching relationships. It is not a pure lookup-cost intervention.</p>
+      <div class="controls">
+        <label>Event count<select id="concentration-size"></select></label>
+        <label>Seed<select id="concentration-seed"></select></label>
+      </div>
+      <div id="concentration-chart" class="chart"></div>
+      <div id="concentration-table" class="table-wrap"></div>
+    </section>
+
+    <section id="diagnostics">
+      <h2>Diagnostic operation counts</h2>
+      <div class="callout"><strong>Measured bottleneck and code complexity.</strong> Version A duplicate checks, cancellation, maker filtering, and exhausted-order cleanup each scan up to <em>B</em> active orders: O(B) per scan. Eligible makers are additionally sorted in O(K log K). As passive buildup makes B grow with M, repeated scans sum to quadratic-like O(M²) work; the diagnostic estimate reaches 49,995,000 comparisons/scanned entries per category at 10,000 events. Version B uses expected O(1) dictionary lookup by ID and price plus expected O(1) FIFO insertion/removal inside an <code>OrderedDict</code> level. New-level insertion and each stale-top pop cost O(log H), where H is the actual heap length—not simply P. The implementation can rebuild a heap in O(P) when H &gt; 2P + 64, so heap maintenance is best described with explicit rebuild cost and amortized cleanup, not unconditional O(log P). Under cancellation churn, B stays near one, making Version A scans cheap, while Version B pays dictionary, queue, stale-entry, and periodic heap-rebuild overhead.</div>
+      <p class="note">Version A scan counts are analytical estimates from pre-event state. Version B wrapper calls and heap changes are directly observed where labelled. Diagnostic time is instrumented and is never treated as primary timing.</p>
+      <div id="diagnostics-table" class="table-wrap"></div>
+    </section>
+
+    <section id="correctness">
+      <h2>Correctness outcomes</h2>
+      <div id="correctness-table" class="table-wrap"></div>
+      <h3 style="margin-top:18px">Scientific limitations</h3>
+      <ul id="limitations"></ul>
+    </section>
+  </main>
+  <footer>Dashboard views load <code>07_results/processed/aggregated_results.json</code>; changing controls does not execute an experiment.</footer>
+
+  <script>
+    "use strict";
+    const DATA_PATH = "../07_results/processed/aggregated_results.json";
+    const $ = id => document.getElementById(id);
+    const esc = value => String(value).replace(/[&<>"']/g, character => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[character]);
+    const fmt = (value, digits = 3) => value == null ? "—" : Number(value).toLocaleString(undefined, {maximumFractionDigits: digits});
+    const seconds = value => value == null ? "—" : `${fmt(value, value < 0.01 ? 6 : 3)} s`;
+    const micros = valueNs => valueNs == null ? "—" : `${fmt(valueNs / 1000, 2)} µs`;
+    const mib = bytes => `${fmt(bytes / 1048576, 3)} MiB`;
+    const engineLabel = engine => engine === "baseline" ? "Version A" : "Version B";
+    const option = value => `<option value="${esc(value)}">${esc(value)}</option>`;
+    const unique = values => [...new Set(values)].sort((a, b) => typeof a === "number" ? a - b : String(a).localeCompare(String(b)));
+    const tableCell = (cell, index) => {
+      if (cell != null && typeof cell === "object") {
+        if (Object.hasOwn(cell, "html")) return `<td>${cell.html}</td>`;
+        if (Object.hasOwn(cell, "raw")) {
+          const value = cell.raw;
+          return `<td class="${index && typeof value === "number" ? "num" : ""}">${value == null ? "&mdash;" : esc(value)}</td>`;
+        }
+      }
+      return `<td>${cell == null ? "&mdash;" : esc(cell)}</td>`;
+    };
+    const table = (headers, rows) => `<table><thead><tr>${headers.map(h => `<th>${esc(h)}</th>`).join("")}</tr></thead><tbody>${rows.map(row => `<tr>${row.map(tableCell).join("")}</tr>`).join("")}</tbody></table>`;
+
+    function fillSelect(select, values, initial) {
+      select.innerHTML = values.map(option).join("");
+      if (initial != null) select.value = String(initial);
+    }
+
+    function barRows(target, items, {log = false} = {}) {
+      const usable = items.filter(item => Number.isFinite(item.value) && item.value > 0);
+      const transformed = usable.map(item => log ? Math.log10(item.value) : item.value);
+      const min = transformed.length ? Math.min(...transformed) : 0;
+      const max = transformed.length ? Math.max(...transformed) : 1;
+      const scaleLabel = log ? '<div class="scale-note">Logarithmic bar scale; bar length is not linear in time or count.</div>' : '';
+      target.innerHTML = scaleLabel + items.map(item => {
+        if (!Number.isFinite(item.value) || item.value <= 0) {
+          return `<div class="chart-row"><span class="chart-label">${esc(item.label)}</span><div class="track censored-track" aria-label="No observed duration"></div><span class="chart-value status censored">TIMEOUT / CENSORED</span></div>`;
+        }
+        const transformedValue = log ? Math.log10(item.value) : item.value;
+        const width = max === min ? 100 : 8 + 92 * (transformedValue - min) / (max - min);
+        return `<div class="chart-row"><span class="chart-label">${esc(item.label)}</span><div class="track"><div class="bar ${esc(item.className || "")}" style="width:${width}%"></div></div><span class="chart-value">${esc(item.display)}</span></div>`;
+      }).join("");
+    }
+
+    function renderEvidence(data) {
+      const warmed = data.evidence_counts.warmed_primary;
+      const stage4e = data.evidence_counts.stage4e;
+      $("evidence-metrics").innerHTML = [
+        [warmed.records, "warmed-primary records"], [warmed.complete_configurations, "complete five-repeat configurations"],
+        [warmed.censored_configurations, "censored primary configurations"], [warmed.valid_speedups, "valid paired speedups"],
+        [stage4e.records, "Stage 4E observations"], [stage4e.latency_artifacts, "per-event latency files"]
+      ].map(([value, label]) => `<div class="metric"><strong>${fmt(value, 0)}</strong><span>${esc(label)}</span></div>`).join("");
+    }
+
+    function renderPrimary(data) {
+      const scenario = $("primary-scenario").value;
+      const seed = Number($("primary-seed").value);
+      const rows = data.primary_configurations.filter(item => item.scenario === scenario && item.seed === seed)
+        .sort((a, b) => a.event_count - b.event_count || a.engine.localeCompare(b.engine));
+      barRows($("primary-chart"), rows.map(item => ({
+        label: `${fmt(item.event_count, 0)} · ${engineLabel(item.engine)}`,
+        value: item.median_engine_seconds,
+        display: seconds(item.median_engine_seconds),
+        className: item.engine
+      })), {log: true});
+      const speedups = new Map(data.primary_speedups.filter(item => item.scenario === scenario && item.seed === seed).map(item => [item.event_count, item.baseline_over_optimized_speedup]));
+      $("primary-table").innerHTML = table(
+        ["Events", "Engine", "Statuses", "Median engine runtime", "Controller invocation wall cost", "Throughput (events/s)", "Paired speedup", "Eligibility"],
+        rows.map(item => [
+          {raw: item.event_count}, engineLabel(item.engine), Object.entries(item.status_counts).map(([k,v]) => `${k}: ${v}`).join(", "),
+          seconds(item.median_engine_seconds), seconds(item.median_controller_invocation_wall_seconds), {raw: item.throughput_events_per_second == null ? null : Math.round(item.throughput_events_per_second)},
+          item.engine === "optimized" && speedups.has(item.event_count) ? `${fmt(speedups.get(item.event_count), 2)}×` : "—",
+          {html: item.five_repeat_complete ? '<span class="status pass">complete</span>' : '<span class="status censored">timeout-censored</span>'}
+        ])
+      );
+      const selected = rows.find(item => item.event_count === Number($("primary-size").value) && item.engine === $("primary-engine").value);
+      if (selected) {
+        $("primary-workload").innerHTML = `Scenario <strong>${esc(selected.scenario)}</strong>; events <strong>${fmt(selected.event_count,0)}</strong>; seed <strong>${fmt(selected.seed,0)}</strong>; engine <strong>${esc(engineLabel(selected.engine))}</strong>; workload <code>${esc(selected.workload_id)}</code><br>SHA-256: <span class="hash">${esc(selected.workload_sha256)}</span>`;
+        $("primary-repeats").innerHTML = table(
+          ["Repetition", "Status", "Engine duration (s)", "Preparation (s)", "Controller wall (s)"],
+          selected.raw_repeats.map(repeat => [
+            {raw:repeat.repetition},
+            {html: repeat.status === "completed" ? '<span class="status pass">completed</span>' : `<span class="status censored">${esc(repeat.status)}</span>`},
+            repeat.engine_seconds == null ? "—" : seconds(repeat.engine_seconds),
+            repeat.preparation_seconds == null ? "—" : seconds(repeat.preparation_seconds),
+            repeat.controller_wall_seconds == null ? "—" : seconds(repeat.controller_wall_seconds)
+          ])
+        );
+      }
+    }
+
+    function renderParsing(data) {
+      const scenario = $("parsing-scenario").value;
+      const seed = Number($("parsing-seed").value);
+      const rows = data.parsing_configurations.filter(item => item.scenario === scenario && item.seed === seed).sort((a,b) => a.event_count-b.event_count);
+      const items = [];
+      for (const row of rows) {
+        items.push({label:`${fmt(row.event_count,0)} · read+decompress`, value:row.median_read_decompress_seconds, display:seconds(row.median_read_decompress_seconds), className:"baseline"});
+        items.push({label:`${fmt(row.event_count,0)} · JSON decode`, value:row.median_json_decode_seconds, display:seconds(row.median_json_decode_seconds), className:"optimized"});
+      }
+      barRows($("parsing-chart"), items, {log:true});
+      $("parsing-table").innerHTML = table(
+        ["Events", "Seed", "Compressed", "Decompressed", "Median read+decompress", "Median JSON decode", "Median combined", "Raw repeats"],
+        rows.map(item => [{raw:item.event_count}, {raw:item.seed}, `${fmt(item.compressed_bytes/1048576,3)} MiB`, `${fmt(item.decompressed_bytes/1048576,3)} MiB`, seconds(item.median_read_decompress_seconds), seconds(item.median_json_decode_seconds), seconds(item.median_combined_seconds), item.raw_repeats.map(repeat => `${repeat.repetition}: ${fmt(repeat.combined_seconds,6)} s`).join("; ")])
+      );
+    }
+
+    function renderLatency(data) {
+      const scenario = $("latency-scenario").value;
+      const selectedEngine = $("latency-engine").value;
+      const groups = data.latency_groups.filter(item => item.scenario === scenario);
+      const percentileItems = [];
+      for (const group of groups) {
+        for (const [label, key] of [["P50", "median_ns"], ["P95", "p95_nearest_rank_ns"], ["P99", "p99_nearest_rank_ns"]]) {
+          percentileItems.push({label: `${engineLabel(group.engine)} ${label}`, value: group.all_events[key] / 1000, display: micros(group.all_events[key]), className: group.engine});
+        }
+      }
+      barRows($("latency-percentiles"), percentileItems, {log: true});
+      const selected = groups.find(item => item.engine === selectedEngine);
+      const hist = selected.histogram.filter(bin => bin.count > 0);
+      barRows($("latency-histogram"), hist.map(bin => ({
+        label: bin.upper_us == null ? `≥ ${fmt(bin.lower_us)} µs` : `${fmt(bin.lower_us)}–${fmt(bin.upper_us)} µs`,
+        value: bin.count, display: fmt(bin.count, 0), className: selectedEngine
+      })), {log: true});
+      const detailRows = [];
+      for (const group of groups) {
+        for (const [scope, stats] of Object.entries({all: group.all_events, ...Object.fromEntries(Object.entries(group.event_types).map(([k,v]) => [`type: ${k}`, v])), ...Object.fromEntries(Object.entries(group.windows).map(([k,v]) => [`window: ${k}`, v]))})) {
+          detailRows.push([engineLabel(group.engine), scope, {raw: stats.observations}, micros(stats.median_ns), micros(stats.p95_nearest_rank_ns), micros(stats.p99_nearest_rank_ns)]);
+        }
+      }
+      $("latency-table").innerHTML = table(["Engine", "Scope", "Events", "Median", "P95", "P99"], detailRows);
+    }
+
+    function renderMemory(data) {
+      barRows($("memory-chart"), data.memory_observations.map(item => ({label: `${item.scenario} · ${engineLabel(item.engine)} peak`, value: item.traced_peak_bytes, display: mib(item.traced_peak_bytes), className: item.engine})));
+      $("memory-table").innerHTML = table(
+        ["Scenario", "Engine", "Events", "Peak traced", "Final current", "Active peak", "Final active", "Final stale heap entries"],
+        data.memory_observations.map(item => [item.scenario, engineLabel(item.engine), {raw:item.event_count}, mib(item.traced_peak_bytes), mib(item.traced_current_bytes), {raw:item.active_order_peak}, {raw:item.post_stream.state.active_orders}, {raw:item.post_stream.state.stale_heap_entries}])
+      );
+      const order = {"10_percent":1,"50_percent":2,"100_percent":3,"post_stream":4};
+      const checkpoints = [];
+      for (const item of data.memory_observations) {
+        for (const sample of item.samples) {
+          const state = sample.state_from_untraced_equivalent_pass;
+          checkpoints.push({scenario:item.scenario,engine:item.engine,checkpoint:sample.checkpoint,eventIndex:sample.event_index,current:sample.traced_current_bytes,peak:sample.traced_peak_bytes,state});
+        }
+        checkpoints.push({scenario:item.scenario,engine:item.engine,checkpoint:"post_stream",eventIndex:item.event_count,current:item.post_stream.traced_current_bytes,peak:item.post_stream.traced_peak_bytes,state:item.post_stream.state});
+      }
+      checkpoints.sort((a,b) => a.scenario.localeCompare(b.scenario) || a.engine.localeCompare(b.engine) || order[a.checkpoint]-order[b.checkpoint]);
+      $("memory-checkpoints").innerHTML = table(
+        ["Scenario", "Engine", "Checkpoint", "Event index", "Traced current", "Traced peak so far", "Active orders", "Price levels", "Stale heap entries"],
+        checkpoints.map(item => [item.scenario,engineLabel(item.engine),item.checkpoint === "post_stream" && item.scenario === "cancel_churn" ? "post-cancellation" : item.checkpoint.replace("_"," "),{raw:item.eventIndex},mib(item.current),mib(item.peak),{raw:item.state.active_orders},{raw:item.state.occupied_price_levels},{raw:item.state.stale_heap_entries}])
+      );
+    }
+
+    function renderLiquidation(data) {
+      barRows($("liquidation-chart"), data.liquidation_groups.map(item => ({label: `${item.ratio_percent}% · ${engineLabel(item.engine)} sale`, value: item.median_sale_seconds, display: seconds(item.median_sale_seconds), className: item.engine})), {log:true});
+      $("liquidation-table").innerHTML = table(
+        ["Engine", "Ratio", "Median construction", "Median sale", "Makers", "Price levels", "Fills", "Unfilled units", "Proceeds (tick×qty units)"],
+        data.liquidation_groups.map(item => [engineLabel(item.engine), `${item.ratio_percent}%`, seconds(item.median_construction_seconds), seconds(item.median_sale_seconds), {raw:item.makers_touched}, {raw:item.price_levels_visited}, {raw:item.fill_count}, {raw:item.unfilled_qty_units}, item.proceeds_tick_quantity_units])
+      );
+    }
+
+    function renderConcentration(data) {
+      const eventCount = Number($("concentration-size").value);
+      const seed = Number($("concentration-seed").value);
+      const rows = data.concentration_configurations.filter(item => item.event_count === eventCount && item.seed === seed).sort((a,b) => a.engine.localeCompare(b.engine) || a.variant.localeCompare(b.variant));
+      barRows($("concentration-chart"), rows.map(item => ({label: `${engineLabel(item.engine)} · ${item.variant === "original" ? "original" : "four levels"}`, value:item.median_engine_seconds, display:seconds(item.median_engine_seconds), className:item.engine})), {log:true});
+      $("concentration-table").innerHTML = table(
+        ["Engine", "Variant", "Statuses", "Median runtime", "Throughput", "Price-level peak", "Maximum FIFO", "Eligibility"],
+        rows.map(item => [engineLabel(item.engine), item.variant === "original" ? "original" : "four-level paired", Object.entries(item.status_counts).map(([k,v]) => `${k}: ${v}`).join(", "), seconds(item.median_engine_seconds), {raw:item.throughput_events_per_second == null ? null : Math.round(item.throughput_events_per_second)}, {raw:item.occupied_price_level_peak}, {raw:item.maximum_fifo_length}, {html:item.five_repeat_complete ? '<span class="status pass">complete</span>' : '<span class="status censored">timeout-censored</span>'}])
+      );
+    }
+
+    function renderDiagnostics(data) {
+      $("diagnostics-table").innerHTML = table(
+        ["Scenario", "Engine", "Events", "Active peak", "Price-level peak", "Maximum FIFO", "Key operation evidence", "Counter provenance"],
+        data.diagnostic_observations.map(item => {
+          const counts = item.operation_counts;
+          const evidence = item.engine === "baseline"
+            ? Object.entries(counts).filter(([key]) => key.includes("comparisons") || key.includes("scan_entries") || key === "fills").map(([key,value]) => `${key}: ${fmt(value,0)}`).join("; ")
+            : Object.entries(counts).filter(([key]) => ["best_level_queries","heap_rebuilds","stale_top_pops","final_stale_heap_entries","fills"].includes(key)).map(([key,value]) => `${key}: ${fmt(value,0)}`).join("; ");
+          return [item.scenario, engineLabel(item.engine), {raw:item.event_count}, {raw:item.active_order_peak}, {raw:item.occupied_price_level_peak}, {raw:item.maximum_fifo_length}, evidence, item.operation_count_semantics];
+        })
+      );
+    }
+
+    function renderCorrectness(data) {
+      $("correctness-table").innerHTML = table(["Check", "Result", "Evidence", "Source"], data.correctness_outcomes.map(item => [item.check, {html:`<span class="status pass">${esc(item.result)}</span>`}, item.evidence, item.source]));
+      $("limitations").innerHTML = data.limitations.map(item => `<li>${esc(item)}</li>`).join("");
+    }
+
+    async function start() {
+      try {
+        const response = await fetch(DATA_PATH, {cache:"no-store"});
+        if (!response.ok) throw new Error(`HTTP ${response.status} while loading ${DATA_PATH}`);
+        const data = await response.json();
+        renderEvidence(data);
+        fillSelect($("primary-scenario"), unique(data.primary_configurations.map(item => item.scenario)), "buildup");
+        fillSelect($("primary-seed"), unique(data.primary_configurations.map(item => item.seed)), 42);
+        fillSelect($("primary-size"), unique(data.primary_configurations.map(item => item.event_count)), 10000);
+        fillSelect($("parsing-scenario"), unique(data.parsing_configurations.map(item => item.scenario)), "buildup");
+        fillSelect($("parsing-seed"), unique(data.parsing_configurations.map(item => item.seed)), 42);
+        fillSelect($("latency-scenario"), unique(data.latency_groups.map(item => item.scenario)), "buildup");
+        fillSelect($("concentration-size"), unique(data.concentration_configurations.map(item => item.event_count)), 10000);
+        fillSelect($("concentration-seed"), unique(data.concentration_configurations.map(item => item.seed)), 42);
+        renderPrimary(data); renderParsing(data); renderLatency(data); renderMemory(data); renderLiquidation(data); renderConcentration(data); renderDiagnostics(data); renderCorrectness(data);
+        ["primary-scenario","primary-seed","primary-size","primary-engine"].forEach(id => $(id).addEventListener("change", () => renderPrimary(data)));
+        ["parsing-scenario","parsing-seed"].forEach(id => $(id).addEventListener("change", () => renderParsing(data)));
+        ["latency-scenario","latency-engine"].forEach(id => $(id).addEventListener("change", () => renderLatency(data)));
+        ["concentration-size","concentration-seed"].forEach(id => $(id).addEventListener("change", () => renderConcentration(data)));
+        $("dashboard").hidden = false;
+      } catch (error) {
+        $("error").style.display = "block";
+        $("error").textContent = `Dashboard data could not be loaded. Start the documented local HTTP server from the project root.\n${error}`;
+      }
+    }
+    start();
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# commit 87ed911f839877c197cd9458b2cd231537955a17; 2026-11-23T16:45:38Z; python -B 07_attack/campaign_final.py 150 400 4 3000
+registry B is B3r class: True | B -> lob.book_b3r.OrderBookB3r | B3r_fast -> lob.book_b3r_fast.OrderBookB3rFast
+planted bug Lifo found at ('narrow', 0)
+planted bug SeqOnReject found at ('narrow', 0)
+planted bug RestMarket found at ('narrow', 0)
+planted bug StrictCross found at ('narrow', 0)
+planted bug OneEntryCancelZero found at ('wide', 0)
+planted bug StaleTouchAfterCancel found at ('narrow', 0)
+planted bug RequeuePartialMaker found at ('narrow', 0)
+B        short narrow  seeds 20000..20149 x 400 = 60000 events, 4 modes = 240000 event comparisons; breaks so far 0
+B        short wide    seeds 20000..20149 x 400 = 60000 events, 4 modes = 240000 event comparisons; breaks so far 0
+B        short churn   seeds 20000..20149 x 400 = 60000 events, 4 modes = 240000 event comparisons; breaks so far 0
+B        short drift   seeds 20000..20149 x 400 = 60000 events, 4 modes = 240000 event comparisons; breaks so far 0
+B        long  narrow  seeds 30000..30003 x 3000 = 12000 events, 4 modes = 48000 event comparisons; breaks so far 0
+B        long  wide    seeds 30000..30003 x 3000 = 12000 events, 4 modes = 48000 event comparisons; breaks so far 0
+B        long  churn   seeds 30000..30003 x 3000 = 12000 events, 4 modes = 48000 event comparisons; breaks so far 0
+B        long  drift   seeds 30000..30003 x 3000 = 12000 events, 4 modes = 48000 event comparisons; breaks so far 0
+B3r_fast short narrow  seeds 20000..20149 x 400 = 60000 events, 4 modes = 240000 event comparisons; breaks so far 0
+B3r_fast short wide    seeds 20000..20149 x 400 = 60000 events, 4 modes = 240000 event comparisons; breaks so far 0
+B3r_fast short churn   seeds 20000..20149 x 400 = 60000 events, 4 modes = 240000 event comparisons; breaks so far 0
+B3r_fast short drift   seeds 20000..20149 x 400 = 60000 events, 4 modes = 240000 event comparisons; breaks so far 0
+B3r_fast long  narrow  seeds 30000..30003 x 3000 = 12000 events, 4 modes = 48000 event comparisons; breaks so far 0
+B3r_fast long  wide    seeds 30000..30003 x 3000 = 12000 events, 4 modes = 48000 event comparisons; breaks so far 0
+B3r_fast long  churn   seeds 30000..30003 x 3000 = 12000 events, 4 modes = 48000 event comparisons; breaks so far 0
+B3r_fast long  drift   seeds 30000..30003 x 3000 = 12000 events, 4 modes = 48000 event comparisons; breaks so far 0
+total breaks 0 seconds 547
+exit 0

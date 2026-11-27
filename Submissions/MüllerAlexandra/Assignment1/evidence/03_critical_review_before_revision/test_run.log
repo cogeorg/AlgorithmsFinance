@@ -1,0 +1,32 @@
+stage: 03_critical_review_before_revision
+started_utc: 2026-11-22T19:38:34.972338+00:00
+finished_utc: 2026-11-22T19:38:36.638721+00:00
+elapsed_seconds: 1.666277
+exit_code: 0
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 5bbdb8eaa456e17f5b2c91e65f406dc16ce9004f
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider tests/test_01_interface.py tests/test_02_validation.py tests/test_03_limit_matching.py tests/test_04_market_sells.py tests/test_05_cancellations.py tests/test_06_invariants.py tests/test_07_worked_example.py tests/test_09_stream_io.py tests/test_10_generated_streams.py -k "not revised"
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 150 items / 74 deselected / 76 selected
+
+tests\test_01_interface.py .....                                         [  6%]
+tests\test_02_validation.py .....................................        [ 55%]
+tests\test_03_limit_matching.py ........                                 [ 65%]
+tests\test_04_market_sells.py ......                                     [ 73%]
+tests\test_05_cancellations.py .......                                   [ 82%]
+tests\test_06_invariants.py .....                                        [ 89%]
+tests\test_07_worked_example.py .                                        [ 90%]
+tests\test_09_stream_io.py ...                                           [ 94%]
+tests\test_10_generated_streams.py ....                                  [100%]
+
+====================== 76 passed, 74 deselected in 0.69s ======================
+
+=== stderr ===

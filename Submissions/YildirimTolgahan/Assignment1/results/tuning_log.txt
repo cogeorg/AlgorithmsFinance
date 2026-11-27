@@ -1,0 +1,8 @@
+buildup                      B1 original    845.9 ms  B1    720.8 ms  B    525.8 ms   B/original 0.62
+crowded                      B1 original    655.6 ms  B1    552.8 ms  B    445.7 ms   B/original 0.68
+mixed                        B1 original    699.9 ms  B1    701.5 ms  B    622.9 ms   B/original 0.89
+sweep                        B1 original   1396.9 ms  B1   1472.2 ms  B   1276.8 ms   B/original 0.91
+cancel_churn                 B1 original    392.5 ms  B1    370.1 ms  B    377.2 ms   B/original 0.96
+mass_cancel                  B1 original    437.3 ms  B1    437.1 ms  B    365.4 ms   B/original 0.84
+bid book + 100% market sell  B1 original    677.6 ms  B1    638.7 ms  B    603.5 ms   B/original 0.89
+Wrote C:\Users\Tolgahan\Downloads\Assignment1\Assignment1\Submissions\YildirimTolgahan\Assignment1\results\tuning.json

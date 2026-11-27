@@ -1,0 +1,24 @@
+stage: 06_latency_after_implementation
+started_utc: 2026-11-23T12:27:13.317794+00:00
+finished_utc: 2026-11-23T12:27:14.301560+00:00
+elapsed_seconds: 0.983174
+exit_code: 0
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 7cfef398ed786225d4f18e9519ea1ca139e612ba
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider tests/test_13_latency_measurement.py
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 5 items
+
+tests\test_13_latency_measurement.py .....                               [100%]
+
+============================== 5 passed in 0.61s ==============================
+
+=== stderr ===

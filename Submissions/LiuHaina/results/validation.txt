@@ -1,0 +1,5 @@
+PASS: 108 configurations, 1,620 raw timing rows, 324 summaries, 108 memory rows.
+PASS: each timing metric has exactly five repeats; medians/min/max match raw values.
+PASS: grouped time normalization, finite positive times, units, run IDs, and memory labels.
+PASS: input and all measured source SHA-256 hashes match metadata.
+PASS: all 108 memory configurations are unique; current <= peak for every trace.

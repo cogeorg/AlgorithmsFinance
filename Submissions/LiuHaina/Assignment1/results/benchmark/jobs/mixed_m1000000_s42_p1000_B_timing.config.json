@@ -1,0 +1,19 @@
+{
+  "repeats": 5,
+  "phase_limit_seconds": 5.0,
+  "rss_limit_bytes": 536870912,
+  "results_dir": "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/results/benchmark",
+  "job_id": "mixed_m1000000_s42_p1000_B_timing",
+  "version": "B",
+  "mode": "timing",
+  "scenario": "mixed",
+  "event_count": 1000000,
+  "seed": 42,
+  "levels": 1000,
+  "path": "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/work/benchmark_inputs/mixed_m1000000_s42_p1000.jsonl.gz",
+  "metadata": {
+    "final_digest": null,
+    "active_order_peak": null,
+    "price_level_peak": null
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "timeout_seconds": 120.0,
+  "no_memory_limit": true,
+  "python": "3.14.6",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+  "code_sha256": {
+    "order_book_v1.py": "10483d2fe9857cbbe388e9ac36fa55977fa54c86b89a66681e0c77d9a348c530",
+    "order_book_v2.py": "a2bbd7a92c2a692460c1cbe68e8e94ab74f17e6bbbd328e2f90d14f07efe6e9d",
+    "generate_orders.py": "6ea1f91ef8ad82fd23a12c5fe4004b473f0dcf5f60a18bb1410c1c4e5fb310a9",
+    "scaling_experiment.py": "23eb100e9b6f4c170f2cc7978fe18bea185b12852c840993bdf67a4c24ab2300"
+  },
+  "historical_b_sha256": "95831ec46f4660275b23d629ba177e2e4999d83e9770c49abc708e7c09025a60",
+  "historical_source": "40_Results\\full_comparison_20261123_171219",
+  "baseline_source": "40_Results\\targeted_comparison_20261123_175037",
+  "inputs": "10_Data/full_benchmark_inputs; 100000 events; levels=1000; seeds 42,43,44",
+  "timing": "inputs preloaded; fresh book; perf_counter; no warmup; one attempt; IPC progress after every 1000 completed events included",
+  "historical_method": "five-repeat median; 10-second limit; shared progress write each event; pre-validation-harmonization code",
+  "correctness": "Historical 100,000-event comparisons: 12 stopped, three cancel-churn checks completed for the earlier code. No full 100,000-event correctness check was rerun for the current code.",
+  "models": "linear=10*matching 10000 median; quadratic=100*matching 10000 median; hypothetical, not a range",
+  "post_run_correction": "The executed source is preserved as scaling_experiment_executed.py. attempts_original.csv preserves original rows. In attempts.csv only speedup_lower_bound was corrected from supervisor timeout / B to last confirmed A processing timestamp / B, since the supervisor starts slightly before the child processing timer. Observations and all other fields are unchanged."
+}

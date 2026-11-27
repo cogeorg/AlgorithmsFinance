@@ -1,0 +1,27 @@
+Reviewed folder history (latest first):
+63002bc 2026-11-20 15:40:18 +0100 Lab 1: simpler report-style dashboard
+e3dc272 2026-11-20 15:28:42 +0100 Lab 1: AI_LOG own checks
+9b2d584 2026-11-20 15:25:23 +0100 Lab 1 step 9: AI_LOG.md
+e3e1db2 2026-11-20 15:24:02 +0100 Lab 1 step 8: README with commands, definitions, revision and complexity claims
+09e09f0 2026-11-20 15:23:07 +0100 Lab 1: memory tests compare growth, not absolute bytes; Python 3.11+ note
+d0f4e8a 2026-11-20 15:19:07 +0100 Lab 1 step 7: Streamlit dashboard loading saved results
+605ee70 2026-11-20 15:15:20 +0100 Lab 1: make memory tests robust to Python-version overhead
+66c0834 2026-11-20 15:12:47 +0100 Lab 1 step 6: memory results
+01093c8 2026-11-20 15:12:30 +0100 Lab 1 step 6: memory script with tests
+9e3262c 2026-11-20 15:11:44 +0100 Lab 1: check total vs prepare+query, document in metadata
+66fa279 2026-11-20 15:08:45 +0100 Lab 1 step 5: timing results and REVISIONS update
+dfc2968 2026-11-20 15:07:45 +0100 Lab 1 step 5: prepare/answer split and timing script with tests
+f49a805 2026-11-20 15:05:24 +0100 Lab 1: version-independent call-depth tests for binary v1/v2
+4d94ecb 2026-11-20 14:58:55 +0100 Lab 1 step 4: v2 iterative binary search, extra tests, REVISIONS.md
+7fb87a3 2026-11-20 14:57:56 +0100 Lab 1: pin requirements (pytest, streamlit, pandas)
+374920b 2026-11-20 14:51:58 +0100 Lab 1 step 3: v1 linear, recursive binary, hash set membership
+0d39e62 2026-11-20 14:50:47 +0100 Lab 1 step 2: synthetic data generator with tests
+a4ac058 2026-11-20 14:50:03 +0100 Merge origin/submission/bundschuh-bastian
+4ed17fc 2026-11-20 14:48:35 +0100 Bastian Bundschuh Submission
+201b447 2026-11-20 14:46:19 +0100 Lab 1 step 1: membership tests and failing stubs
+
+last change to membership.py: dfc2968 Lab 1 step 5: prepare/answer split and timing script with tests
+last change to bench_time.py: dfc2968 Lab 1 step 5: prepare/answer split and timing script with tests
+last change to check_total.py: 9e3262c Lab 1: check total vs prepare+query, document in metadata
+last change to bench_memory.py: 01093c8 Lab 1 step 6: memory script with tests
+last change to datagen.py: 0d39e62 Lab 1 step 2: synthetic data generator with tests

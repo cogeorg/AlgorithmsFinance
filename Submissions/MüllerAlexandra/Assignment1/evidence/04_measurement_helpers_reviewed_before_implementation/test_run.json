@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "stage": "04_measurement_helpers_reviewed_before_implementation",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_11_measurement_helpers.py"
+  ],
+  "working_directory": ".",
+  "started_utc": "2026-11-23T11:15:52.020791+00:00",
+  "finished_utc": "2026-11-23T11:15:52.542712+00:00",
+  "elapsed_seconds": 0.5222252999665216,
+  "exit_code": 2,
+  "python_version": "3.12.10",
+  "python_implementation": "CPython",
+  "pytest_version": "9.2.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git": {
+    "branch": "assignment1-mueller-alexandra",
+    "head": "cffa1b64a906577092d666cc499cd4c6fc323019",
+    "status_before_evidence_files": "?? docs/04_measurement_method.md\n?? evidence/04_measurement_helpers_before_implementation/\n?? tests/test_11_measurement_helpers.py\n?? ../phase2_audit_liuhaina/",
+    "clean_before_evidence_files": false
+  }
+}

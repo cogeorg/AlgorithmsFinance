@@ -1,0 +1,419 @@
+{
+  "manifest_verification": {
+    "assignment": "Assignment1",
+    "comparisons": [
+      {
+        "expected_bytes": 6148,
+        "expected_sha256": "87a2ac61b199f85d7f04bd49237d269c16cc2b257503bbb12a830bea83677e76",
+        "path": ".DS_Store",
+        "status": "missing"
+      },
+      {
+        "actual_bytes": 172965,
+        "actual_sha256": "c25a0e79f061f82124631bb120edb7d28ce99dd6d5fc3dadfdbbe0f537463c93",
+        "expected_bytes": 172965,
+        "expected_sha256": "c25a0e79f061f82124631bb120edb7d28ce99dd6d5fc3dadfdbbe0f537463c93",
+        "path": "AlgorithmsFinance_Exercise1.pdf",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 16688,
+        "actual_sha256": "17ce011bb3eec68d608ccbb5416ccc459e17764ae610c8111ba6cb4028961da9",
+        "expected_bytes": 16688,
+        "expected_sha256": "17ce011bb3eec68d608ccbb5416ccc459e17764ae610c8111ba6cb4028961da9",
+        "path": "README.md",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 132767,
+        "actual_sha256": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5",
+        "expected_bytes": 132767,
+        "expected_sha256": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5",
+        "path": "data/buildup_10000.jsonl.gz",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 369,
+        "actual_sha256": "3d83dae444458ff819d1bcfe99256aa110c0506b9422850572793f75a469d2d9",
+        "expected_bytes": 369,
+        "expected_sha256": "3d83dae444458ff819d1bcfe99256aa110c0506b9422850572793f75a469d2d9",
+        "path": "data/buildup_10000.jsonl.gz.metadata.json",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 110782,
+        "actual_sha256": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933",
+        "expected_bytes": 110782,
+        "expected_sha256": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933",
+        "path": "data/cancel_churn_10000.jsonl.gz",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 374,
+        "actual_sha256": "887692b24a542efea667e595d45a9a46ac296285602e5191a3cecfca1ccacb03",
+        "expected_bytes": 374,
+        "expected_sha256": "887692b24a542efea667e595d45a9a46ac296285602e5191a3cecfca1ccacb03",
+        "path": "data/cancel_churn_10000.jsonl.gz.metadata.json",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 111714,
+        "actual_sha256": "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6",
+        "expected_bytes": 111714,
+        "expected_sha256": "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6",
+        "path": "data/crowded_10000.jsonl.gz",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 369,
+        "actual_sha256": "822894454f646dc3479b1cd93a7ce45a2b162bbddb466413cba63f5be6453695",
+        "expected_bytes": 369,
+        "expected_sha256": "822894454f646dc3479b1cd93a7ce45a2b162bbddb466413cba63f5be6453695",
+        "path": "data/crowded_10000.jsonl.gz.metadata.json",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 125334,
+        "actual_sha256": "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16",
+        "expected_bytes": 125334,
+        "expected_sha256": "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16",
+        "path": "data/mixed_10000.jsonl.gz",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 367,
+        "actual_sha256": "458136d915369ed51d13ea1c5535c1ca22a9576545763a12c3b84e2f5d199fc4",
+        "expected_bytes": 367,
+        "expected_sha256": "458136d915369ed51d13ea1c5535c1ca22a9576545763a12c3b84e2f5d199fc4",
+        "path": "data/mixed_10000.jsonl.gz.metadata.json",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 123692,
+        "actual_sha256": "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f",
+        "expected_bytes": 123692,
+        "expected_sha256": "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f",
+        "path": "data/sweep_10000.jsonl.gz",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 367,
+        "actual_sha256": "0f9038f6a913cbab8911968fd643623b3a17d9da768db2babd175a0e93785589",
+        "expected_bytes": 367,
+        "expected_sha256": "0f9038f6a913cbab8911968fd643623b3a17d9da768db2babd175a0e93785589",
+        "path": "data/sweep_10000.jsonl.gz.metadata.json",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 754,
+        "actual_sha256": "831015ac71d56ada0898b0bf8f59f125900b4dc32134d6ef37bd3cec304798ec",
+        "expected_bytes": 754,
+        "expected_sha256": "831015ac71d56ada0898b0bf8f59f125900b4dc32134d6ef37bd3cec304798ec",
+        "path": "data/worked_example.jsonl",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 1101,
+        "actual_sha256": "c715f52724df6bbfcedcad0e203ddb5a7752d38c809f4cf12b513ba809554d2c",
+        "expected_bytes": 1101,
+        "expected_sha256": "c715f52724df6bbfcedcad0e203ddb5a7752d38c809f4cf12b513ba809554d2c",
+        "path": "data/worked_expected.json",
+        "status": "matched"
+      },
+      {
+        "actual_bytes": 4019,
+        "actual_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "expected_bytes": 4019,
+        "expected_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "path": "generate_orders.py",
+        "status": "matched"
+      }
+    ],
+    "manifest_path": "02_data/supplied/MANIFEST.json",
+    "synthetic_data_only": true,
+    "unlisted_actual_files": [
+      "MANIFEST.json"
+    ]
+  },
+  "metadata_verification": [
+    {
+      "errors": [],
+      "events": 10000,
+      "levels": 1000,
+      "path": "data/buildup_10000.jsonl.gz.metadata.json",
+      "python": "3.11.9",
+      "scenario": "buildup",
+      "seed": 42,
+      "status": "valid",
+      "stream_path": "data/buildup_10000.jsonl.gz"
+    },
+    {
+      "errors": [],
+      "events": 10000,
+      "levels": 1000,
+      "path": "data/cancel_churn_10000.jsonl.gz.metadata.json",
+      "python": "3.11.9",
+      "scenario": "cancel_churn",
+      "seed": 42,
+      "status": "valid",
+      "stream_path": "data/cancel_churn_10000.jsonl.gz"
+    },
+    {
+      "errors": [],
+      "events": 10000,
+      "levels": 1000,
+      "path": "data/crowded_10000.jsonl.gz.metadata.json",
+      "python": "3.11.9",
+      "scenario": "crowded",
+      "seed": 42,
+      "status": "valid",
+      "stream_path": "data/crowded_10000.jsonl.gz"
+    },
+    {
+      "errors": [],
+      "events": 10000,
+      "levels": 1000,
+      "path": "data/mixed_10000.jsonl.gz.metadata.json",
+      "python": "3.11.9",
+      "scenario": "mixed",
+      "seed": 42,
+      "status": "valid",
+      "stream_path": "data/mixed_10000.jsonl.gz"
+    },
+    {
+      "errors": [],
+      "events": 10000,
+      "levels": 1000,
+      "path": "data/sweep_10000.jsonl.gz.metadata.json",
+      "python": "3.11.9",
+      "scenario": "sweep",
+      "seed": 42,
+      "status": "valid",
+      "stream_path": "data/sweep_10000.jsonl.gz"
+    }
+  ],
+  "project_root": ".",
+  "streams": {
+    "data/buildup_10000.jsonl.gz": {
+      "bytes": 132767,
+      "errors": [],
+      "event_type_counts": {
+        "LIMIT": 10000
+      },
+      "events": 10000,
+      "first_seq": 1,
+      "last_seq": 10000,
+      "limit_price_ranges": {
+        "BUY": {
+          "max": 6000000,
+          "min": 5999001
+        },
+        "SELL": {
+          "max": 6001099,
+          "min": 6000100
+        }
+      },
+      "limit_side_counts": {
+        "BUY": 5025,
+        "SELL": 4975
+      },
+      "path": "02_data/supplied/data/buildup_10000.jsonl.gz",
+      "sha256": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5",
+      "status": "valid",
+      "unique_event_ids": 10000,
+      "unique_limit_price_counts": {
+        "BUY": 988,
+        "SELL": 989
+      },
+      "unique_submission_ids": 10000
+    },
+    "data/cancel_churn_10000.jsonl.gz": {
+      "bytes": 110782,
+      "errors": [],
+      "event_type_counts": {
+        "CANCEL": 5000,
+        "LIMIT": 5000
+      },
+      "events": 10000,
+      "first_seq": 1,
+      "last_seq": 10000,
+      "limit_price_ranges": {
+        "BUY": {
+          "max": 6000000,
+          "min": 5999001
+        },
+        "SELL": null
+      },
+      "limit_side_counts": {
+        "BUY": 5000
+      },
+      "path": "02_data/supplied/data/cancel_churn_10000.jsonl.gz",
+      "sha256": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933",
+      "status": "valid",
+      "unique_event_ids": 10000,
+      "unique_limit_price_counts": {
+        "BUY": 998,
+        "SELL": 0
+      },
+      "unique_submission_ids": 5000
+    },
+    "data/crowded_10000.jsonl.gz": {
+      "bytes": 111714,
+      "errors": [],
+      "event_type_counts": {
+        "LIMIT": 10000
+      },
+      "events": 10000,
+      "first_seq": 1,
+      "last_seq": 10000,
+      "limit_price_ranges": {
+        "BUY": {
+          "max": 6000000,
+          "min": 5999997
+        },
+        "SELL": {
+          "max": 6000103,
+          "min": 6000100
+        }
+      },
+      "limit_side_counts": {
+        "BUY": 4956,
+        "SELL": 5044
+      },
+      "path": "02_data/supplied/data/crowded_10000.jsonl.gz",
+      "sha256": "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6",
+      "status": "valid",
+      "unique_event_ids": 10000,
+      "unique_limit_price_counts": {
+        "BUY": 4,
+        "SELL": 4
+      },
+      "unique_submission_ids": 10000
+    },
+    "data/mixed_10000.jsonl.gz": {
+      "bytes": 125334,
+      "errors": [],
+      "event_type_counts": {
+        "CANCEL": 2438,
+        "LIMIT": 6075,
+        "MARKET_SELL": 1487
+      },
+      "events": 10000,
+      "first_seq": 1,
+      "last_seq": 10000,
+      "limit_price_ranges": {
+        "BUY": {
+          "max": 6001100,
+          "min": 5999001
+        },
+        "SELL": {
+          "max": 6001099,
+          "min": 5999000
+        }
+      },
+      "limit_side_counts": {
+        "BUY": 3065,
+        "SELL": 3010
+      },
+      "path": "02_data/supplied/data/mixed_10000.jsonl.gz",
+      "sha256": "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16",
+      "status": "valid",
+      "unique_event_ids": 10000,
+      "unique_limit_price_counts": {
+        "BUY": 924,
+        "SELL": 930
+      },
+      "unique_submission_ids": 7562
+    },
+    "data/sweep_10000.jsonl.gz": {
+      "bytes": 123692,
+      "errors": [],
+      "event_type_counts": {
+        "LIMIT": 8000,
+        "MARKET_SELL": 2000
+      },
+      "events": 10000,
+      "first_seq": 1,
+      "last_seq": 10000,
+      "limit_price_ranges": {
+        "BUY": {
+          "max": 6000000,
+          "min": 5999001
+        },
+        "SELL": {
+          "max": 6001099,
+          "min": 6000100
+        }
+      },
+      "limit_side_counts": {
+        "BUY": 4062,
+        "SELL": 3938
+      },
+      "path": "02_data/supplied/data/sweep_10000.jsonl.gz",
+      "sha256": "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f",
+      "status": "valid",
+      "unique_event_ids": 10000,
+      "unique_limit_price_counts": {
+        "BUY": 981,
+        "SELL": 978
+      },
+      "unique_submission_ids": 10000
+    },
+    "data/worked_example.jsonl": {
+      "bytes": 754,
+      "errors": [],
+      "event_type_counts": {
+        "LIMIT": 5,
+        "MARKET_SELL": 1
+      },
+      "events": 6,
+      "first_seq": 1,
+      "last_seq": 6,
+      "limit_price_ranges": {
+        "BUY": {
+          "max": 6000000,
+          "min": 5970000
+        },
+        "SELL": {
+          "max": 6010000,
+          "min": 6010000
+        }
+      },
+      "limit_side_counts": {
+        "BUY": 4,
+        "SELL": 1
+      },
+      "path": "02_data/supplied/data/worked_example.jsonl",
+      "sha256": "831015ac71d56ada0898b0bf8f59f125900b4dc32134d6ef37bd3cec304798ec",
+      "status": "valid",
+      "unique_event_ids": 6,
+      "unique_limit_price_counts": {
+        "BUY": 3,
+        "SELL": 1
+      },
+      "unique_submission_ids": 6
+    }
+  },
+  "supplied_dir": "02_data/supplied",
+  "worked_expected": {
+    "bytes": 1101,
+    "fill_count": 4,
+    "path": "data/worked_expected.json",
+    "remaining_order_count": 2,
+    "sha256": "c715f52724df6bbfcedcad0e203ddb5a7752d38c809f4cf12b513ba809554d2c",
+    "top_level_keys": [
+      "gross_proceeds_tick_units",
+      "gross_proceeds_usd",
+      "market_sell_result",
+      "remaining_orders",
+      "synthetic"
+    ]
+  },
+  "privacy_redaction": {
+    "applied_on": "2026-11-25",
+    "purpose": "Remove personal machine-specific paths from the public submission.",
+    "path_policy": "Active project-contained paths are project-root-relative POSIX strings.",
+    "scientific_fields_changed": false,
+    "final_file_sha256_location": "Recorded externally in AI_DECISIONS.md."
+  }
+}

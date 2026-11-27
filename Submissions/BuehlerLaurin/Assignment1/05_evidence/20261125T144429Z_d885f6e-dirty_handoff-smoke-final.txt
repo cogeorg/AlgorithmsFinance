@@ -1,0 +1,136 @@
+label: handoff-smoke-final
+command: ./.venv/Scripts/python.exe -m submission_tools smoke
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: d885f6e96da935ea4f73f24ed6da9aea012f8bbf
+dirty: True
+python: 3.13.15
+utc: 20261125T144429Z
+exit_code: 0
+duration_s: 58.07
+------------------------------------------------------------
+SMOKE ONLY: M=1000, seed 42, A/B3r; all inputs/results under C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\submission_smoke_3f4lqucn
+SHA256 OK: official_buildup_1000_s42_l1000 9b3054be934ed3df5aad49b61622e9af79309646518fcc9de11d590eb77618db
+SHA256 OK: official_crowded_1000_s42_l1000 30053d0b678d452ff32b6e08fab431ef6d6676829f227686bbb1159fedfa306e
+SHA256 OK: official_mixed_1000_s42_l1000 8c3455dc8370f2e006eda834f5bfeb47abdb7dc3766775cf12cdc8444f974d9d
+SHA256 OK: official_sweep_1000_s42_l1000 e4ec73a1792d215d2f56a5ba4dc92fcb012886a741603dc939827d567f11c2fe
+SHA256 OK: official_cancel_churn_1000_s42_l1000 2994e992735f3a2a324c6832d8883570e486cbf1a6761b3174d2a5014bf5b2d6
+SHA256 OK: queue_buildup_1000_s42_l4 30053d0b678d452ff32b6e08fab431ef6d6676829f227686bbb1159fedfa306e
+SHA256 OK: queue_buildup_1000_s42_l1000 9b3054be934ed3df5aad49b61622e9af79309646518fcc9de11d590eb77618db
+SHA256 OK: liquidation_liquidation_1000_s42_l1000 155dc2d09fbfd48f8d719ac50870120ea26cfdcdeccf0d43ea66651b47895782
+SHA256 OK: adversarial_deep_book_1000_s42_l1000 277db941cc190950d1cbbf096222787de4c048d6b5a1d17d2035bed4e553f8cf
+SHA256 OK: adversarial_mid_queue_cancels_1000_s42_l4 8a600f1f8058b711863d485efdc3f4451d9362dbdaeb18e9a7fa0d063833dc27
+SHA256 OK: adversarial_repeated_full_sweeps_1000_s42_l199 8c0193b9422368f62a454e9c3ee5d8f893964a01cc4fff1acdf08994abfc4fb1
+SHA256 OK: churn_drift_1000_s42_l1000 c02c436cc206db90eac1aaf5e7f9a3c1d2a61b1dda84d11fd94fd61846f39266
+OK: 12 catalog entries / 11 files; local manifest: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\submission_smoke_3f4lqucn\06_data\generated\reproduction\manifest.json
+[1/108] adversarial_deep_book_1000_s42_l1000__A__timing: ok (0.905s)
+[2/108] adversarial_deep_book_1000_s42_l1000__A__latency: ok (0.693s)
+[3/108] adversarial_deep_book_1000_s42_l1000__A__memory: ok (0.912s)
+[4/108] adversarial_deep_book_1000_s42_l1000__A__counts: ok (0.758s)
+[5/108] adversarial_deep_book_1000_s42_l1000__B3r__timing: ok (0.639s)
+[6/108] adversarial_deep_book_1000_s42_l1000__B3r__latency: ok (0.553s)
+[7/108] adversarial_deep_book_1000_s42_l1000__B3r__memory: ok (0.697s)
+[8/108] adversarial_deep_book_1000_s42_l1000__B3r__counts: ok (0.322s)
+[9/108] adversarial_mid_queue_cancels_1000_s42_l4__A__timing: ok (0.474s)
+[10/108] adversarial_mid_queue_cancels_1000_s42_l4__A__latency: ok (0.355s)
+[11/108] adversarial_mid_queue_cancels_1000_s42_l4__A__memory: ok (0.445s)
+[12/108] adversarial_mid_queue_cancels_1000_s42_l4__A__counts: ok (0.397s)
+[13/108] adversarial_mid_queue_cancels_1000_s42_l4__B3r__timing: ok (0.344s)
+[14/108] adversarial_mid_queue_cancels_1000_s42_l4__B3r__latency: ok (0.350s)
+[15/108] adversarial_mid_queue_cancels_1000_s42_l4__B3r__memory: ok (0.381s)
+[16/108] adversarial_mid_queue_cancels_1000_s42_l4__B3r__counts: ok (0.389s)
+[17/108] adversarial_repeated_full_sweeps_1000_s42_l199__A__timing: ok (0.500s)
+[18/108] adversarial_repeated_full_sweeps_1000_s42_l199__A__latency: ok (0.354s)
+[19/108] adversarial_repeated_full_sweeps_1000_s42_l199__A__memory: ok (0.445s)
+[20/108] adversarial_repeated_full_sweeps_1000_s42_l199__A__counts: ok (0.385s)
+[21/108] adversarial_repeated_full_sweeps_1000_s42_l199__B3r__timing: ok (0.400s)
+[22/108] adversarial_repeated_full_sweeps_1000_s42_l199__B3r__latency: ok (0.341s)
+[23/108] adversarial_repeated_full_sweeps_1000_s42_l199__B3r__memory: ok (0.412s)
+[24/108] adversarial_repeated_full_sweeps_1000_s42_l199__B3r__counts: ok (0.319s)
+[25/108] churn_drift_1000_s42_l1000__A__memory: ok (0.389s)
+[26/108] churn_drift_1000_s42_l1000__B3r__memory: ok (0.374s)
+[27/108] churn_official_cancel_churn_1000_s42_l1000__A__memory: ok (0.415s)
+[28/108] churn_official_cancel_churn_1000_s42_l1000__B3r__memory: ok (0.376s)
+[29/108] liquidation_liquidation_1000_s42_l1000_p10__A__timing: ok (0.582s)
+[30/108] liquidation_liquidation_1000_s42_l1000_p10__A__latency: ok (0.349s)
+[31/108] liquidation_liquidation_1000_s42_l1000_p10__A__memory: ok (0.554s)
+[32/108] liquidation_liquidation_1000_s42_l1000_p10__A__counts: ok (0.463s)
+[33/108] liquidation_liquidation_1000_s42_l1000_p10__B3r__timing: ok (0.354s)
+[34/108] liquidation_liquidation_1000_s42_l1000_p10__B3r__latency: ok (0.327s)
+[35/108] liquidation_liquidation_1000_s42_l1000_p10__B3r__memory: ok (0.409s)
+[36/108] liquidation_liquidation_1000_s42_l1000_p10__B3r__counts: ok (0.324s)
+[37/108] liquidation_liquidation_1000_s42_l1000_p100__A__timing: ok (0.942s)
+[38/108] liquidation_liquidation_1000_s42_l1000_p100__A__latency: ok (0.415s)
+[39/108] liquidation_liquidation_1000_s42_l1000_p100__A__memory: ok (0.971s)
+[40/108] liquidation_liquidation_1000_s42_l1000_p100__A__counts: ok (0.550s)
+[41/108] liquidation_liquidation_1000_s42_l1000_p100__B3r__timing: ok (0.355s)
+[42/108] liquidation_liquidation_1000_s42_l1000_p100__B3r__latency: ok (0.324s)
+[43/108] liquidation_liquidation_1000_s42_l1000_p100__B3r__memory: ok (0.421s)
+[44/108] liquidation_liquidation_1000_s42_l1000_p100__B3r__counts: ok (0.315s)
+[45/108] liquidation_liquidation_1000_s42_l1000_p200__A__timing: ok (1.007s)
+[46/108] liquidation_liquidation_1000_s42_l1000_p200__A__latency: ok (0.429s)
+[47/108] liquidation_liquidation_1000_s42_l1000_p200__A__memory: ok (0.993s)
+[48/108] liquidation_liquidation_1000_s42_l1000_p200__A__counts: ok (0.547s)
+[49/108] liquidation_liquidation_1000_s42_l1000_p200__B3r__timing: ok (0.376s)
+[50/108] liquidation_liquidation_1000_s42_l1000_p200__B3r__latency: ok (0.320s)
+[51/108] liquidation_liquidation_1000_s42_l1000_p200__B3r__memory: ok (0.430s)
+[52/108] liquidation_liquidation_1000_s42_l1000_p200__B3r__counts: ok (0.355s)
+[53/108] official_buildup_1000_s42_l1000__A__timing: ok (0.717s)
+[54/108] official_buildup_1000_s42_l1000__A__latency: ok (0.465s)
+[55/108] official_buildup_1000_s42_l1000__A__memory: ok (0.582s)
+[56/108] official_buildup_1000_s42_l1000__A__counts: ok (0.549s)
+[57/108] official_buildup_1000_s42_l1000__B3r__timing: ok (0.361s)
+[58/108] official_buildup_1000_s42_l1000__B3r__latency: ok (0.342s)
+[59/108] official_buildup_1000_s42_l1000__B3r__memory: ok (0.426s)
+[60/108] official_buildup_1000_s42_l1000__B3r__counts: ok (0.326s)
+[61/108] official_cancel_churn_1000_s42_l1000__A__timing: ok (0.335s)
+[62/108] official_cancel_churn_1000_s42_l1000__A__latency: ok (0.349s)
+[63/108] official_cancel_churn_1000_s42_l1000__A__memory: ok (0.363s)
+[64/108] official_cancel_churn_1000_s42_l1000__A__counts: ok (0.345s)
+[65/108] official_cancel_churn_1000_s42_l1000__B3r__timing: ok (0.346s)
+[66/108] official_cancel_churn_1000_s42_l1000__B3r__latency: ok (0.341s)
+[67/108] official_cancel_churn_1000_s42_l1000__B3r__memory: ok (0.393s)
+[68/108] official_cancel_churn_1000_s42_l1000__B3r__counts: ok (0.321s)
+[69/108] official_crowded_1000_s42_l1000__A__timing: ok (0.744s)
+[70/108] official_crowded_1000_s42_l1000__A__latency: ok (0.394s)
+[71/108] official_crowded_1000_s42_l1000__A__memory: ok (0.568s)
+[72/108] official_crowded_1000_s42_l1000__A__counts: ok (0.511s)
+[73/108] official_crowded_1000_s42_l1000__B3r__timing: ok (0.344s)
+[74/108] official_crowded_1000_s42_l1000__B3r__latency: ok (0.322s)
+[75/108] official_crowded_1000_s42_l1000__B3r__memory: ok (0.382s)
+[76/108] official_crowded_1000_s42_l1000__B3r__counts: ok (0.334s)
+[77/108] official_mixed_1000_s42_l1000__A__timing: ok (0.413s)
+[78/108] official_mixed_1000_s42_l1000__A__latency: ok (0.366s)
+[79/108] official_mixed_1000_s42_l1000__A__memory: ok (0.482s)
+[80/108] official_mixed_1000_s42_l1000__A__counts: ok (0.348s)
+[81/108] official_mixed_1000_s42_l1000__B3r__timing: ok (0.346s)
+[82/108] official_mixed_1000_s42_l1000__B3r__latency: ok (0.357s)
+[83/108] official_mixed_1000_s42_l1000__B3r__memory: ok (0.394s)
+[84/108] official_mixed_1000_s42_l1000__B3r__counts: ok (0.320s)
+[85/108] official_sweep_1000_s42_l1000__A__timing: ok (0.686s)
+[86/108] official_sweep_1000_s42_l1000__A__latency: ok (0.386s)
+[87/108] official_sweep_1000_s42_l1000__A__memory: ok (0.571s)
+[88/108] official_sweep_1000_s42_l1000__A__counts: ok (0.480s)
+[89/108] official_sweep_1000_s42_l1000__B3r__timing: ok (0.377s)
+[90/108] official_sweep_1000_s42_l1000__B3r__latency: ok (0.369s)
+[91/108] official_sweep_1000_s42_l1000__B3r__memory: ok (0.395s)
+[92/108] official_sweep_1000_s42_l1000__B3r__counts: ok (0.365s)
+[93/108] queue_buildup_1000_s42_l1000__A__timing: ok (0.861s)
+[94/108] queue_buildup_1000_s42_l1000__A__latency: ok (0.473s)
+[95/108] queue_buildup_1000_s42_l1000__A__memory: ok (0.625s)
+[96/108] queue_buildup_1000_s42_l1000__A__counts: ok (0.539s)
+[97/108] queue_buildup_1000_s42_l1000__B3r__timing: ok (0.361s)
+[98/108] queue_buildup_1000_s42_l1000__B3r__latency: ok (0.365s)
+[99/108] queue_buildup_1000_s42_l1000__B3r__memory: ok (0.422s)
+[100/108] queue_buildup_1000_s42_l1000__B3r__counts: ok (0.340s)
+[101/108] queue_buildup_1000_s42_l4__A__timing: ok (0.738s)
+[102/108] queue_buildup_1000_s42_l4__A__latency: ok (0.446s)
+[103/108] queue_buildup_1000_s42_l4__A__memory: ok (0.610s)
+[104/108] queue_buildup_1000_s42_l4__A__counts: ok (0.533s)
+[105/108] queue_buildup_1000_s42_l4__B3r__timing: ok (0.355s)
+[106/108] queue_buildup_1000_s42_l4__B3r__latency: ok (0.395s)
+[107/108] queue_buildup_1000_s42_l4__B3r__memory: ok (0.381s)
+[108/108] queue_buildup_1000_s42_l4__B3r__counts: ok (0.362s)
+RUN_DIR=03_results\runs\20261125T144434Z_d885f6e-dirty_smoke
+CELL_STATUS={'ok': 108}
+RESULT: PASS (108 requested cells; 104 phase summaries; part=smoke)
+OK: smoke 108 workers; sampled result checks passed; C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\submission_smoke_3f4lqucn\03_results\runs\20261125T144434Z_d885f6e-dirty_smoke

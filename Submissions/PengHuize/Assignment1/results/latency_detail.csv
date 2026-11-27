@@ -1,0 +1,21 @@
+version,scenario,seed,event_count,group,category,sample_count,median_us,p95_us,p99_us,percentile_convention
+A-list,mixed,42,10000,overall,all,10000,64.000,413.791,683.125,nearest rank
+A-list,mixed,42,10000,position,early_10pct,1000,8.605,41.208,67.833,nearest rank
+A-list,mixed,42,10000,position,late_10pct,1000,100.833,464.333,1115.625,nearest rank
+A-list,mixed,42,10000,event_type,CANCEL,2438,38.083,89.750,94.750,nearest rank
+A-list,mixed,42,10000,event_type,LIMIT,6075,87.458,449.708,790.292,nearest rank
+A-list,mixed,42,10000,event_type,MARKET_SELL,1487,54.708,101.708,114.583,nearest rank
+B-indexed,mixed,42,10000,overall,all,10000,3.625,7.417,11.833,nearest rank
+B-indexed,mixed,42,10000,position,early_10pct,1000,3.542,7.500,11.417,nearest rank
+B-indexed,mixed,42,10000,position,late_10pct,1000,3.583,7.500,11.833,nearest rank
+B-indexed,mixed,42,10000,event_type,CANCEL,2438,1.459,2.625,2.792,nearest rank
+B-indexed,mixed,42,10000,event_type,LIMIT,6075,3.709,6.333,8.875,nearest rank
+B-indexed,mixed,42,10000,event_type,MARKET_SELL,1487,3.833,13.042,19.084,nearest rank
+A-list,buildup,42,10000,overall,all,10000,878.938,1668.208,2133.833,nearest rank
+A-list,buildup,42,10000,position,early_10pct,1000,89.854,168.667,177.042,nearest rank
+A-list,buildup,42,10000,position,late_10pct,1000,1660.938,2465.625,3457.417,nearest rank
+A-list,buildup,42,10000,event_type,LIMIT,10000,878.938,1668.208,2133.833,nearest rank
+B-indexed,buildup,42,10000,overall,all,10000,3.958,4.916,13.125,nearest rank
+B-indexed,buildup,42,10000,position,early_10pct,1000,4.042,4.542,14.291,nearest rank
+B-indexed,buildup,42,10000,position,late_10pct,1000,3.917,4.833,7.708,nearest rank
+B-indexed,buildup,42,10000,event_type,LIMIT,10000,3.958,4.916,13.125,nearest rank

@@ -1,0 +1,21 @@
+growth: 20 x snapshot() with ONE live order after a peak of n levels, B
+  n=     12500  0.000043 s  (ok, repeats=3)
+  n=     25000  0.000039 s  (ok, repeats=3)
+  n=     50000  0.000074 s  (ok, repeats=3)
+  n=    100000  0.000039 s  (ok, repeats=3)
+  measured exponent: 0.05
+  predicted: 0.00 -> consistent (tol 0.3)
+growth: 20 x snapshot() with ONE live order after a peak of n levels, B2
+  n=     12500  0.000060 s  (ok, repeats=3)
+  n=     25000  0.000040 s  (ok, repeats=3)
+  n=     50000  0.000042 s  (ok, repeats=3)
+  n=    100000  0.000043 s  (ok, repeats=3)
+  measured exponent: -0.14
+  predicted: 0.00 -> consistent (tol 0.3)
+growth: 20 x snapshot() with ONE live order after a peak of n levels, B3
+  n=     12500  0.000286 s  (ok, repeats=3)
+  n=     25000  0.000543 s  (ok, repeats=3)
+  n=     50000  0.000967 s  (ok, repeats=3)
+  n=    100000  0.001778 s  (ok, repeats=3)
+  measured exponent: 0.87
+  predicted: 1.00 -> consistent (tol 0.3)

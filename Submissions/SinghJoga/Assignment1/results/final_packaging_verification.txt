@@ -1,0 +1,61 @@
+Assignment 1 final packaging verification
+Date: 2026-11-26
+Scope: read-only verification of the staged Assignment1 content; no benchmark
+was run, and no engine or expected-answer file was changed.
+
+Index-only candidate
+--------------------
+Exported from the Git index with:
+  git -c core.longpaths=true checkout-index --all --force --prefix=<TEMP>\A1-final-index-b5834bd9\
+Assignment subtree: 2,177 files; 180,448,486 bytes after checkout line-ending
+conversion. Before test setup, the export had no .venv, .pytest_cache, or
+generated benchmark input directories. Generated inputs (including the
+million-event dataset) remained excluded from the index. A new venv was then
+created under the temporary copy only.
+Final staged Assignment 1 blob size: 178,393,653 bytes (170.129 MiB).
+
+Environment and tests
+---------------------
+Python: 3.14.7
+Commands, run from the temporary copy's Submissions\SinghJoga\Assignment1:
+  py -3.14 -m venv .venv
+  .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+  .\.venv\Scripts\python.exe -m pip check
+  .\.venv\Scripts\python.exe -m pytest -q
+  .\.venv\Scripts\python.exe -m pytest -q tests\test_dashboard.py
+Results:
+  Pinned dependency installation: succeeded
+  pip check: No broken requirements found.
+  Full suite: 185 passed in 62.04s
+  Dashboard AppTest/filter suite: 5 passed in 73.81s
+
+Worked-example replay
+--------------------
+Commands:
+  .\.venv\Scripts\python.exe -m orderbook.replay data\worked_example.jsonl --version baseline
+  .\.venv\Scripts\python.exe -m orderbook.replay data\worked_example.jsonl --version revised
+Both exited 0. Each result was compared with data\worked_expected.json:
+final event fills, residual bid/ask book, accepted sequence 6, and integer
+gross proceeds all matched.
+
+Dashboard and evidence references
+---------------------------------
+Started the server with:
+  .\.venv\Scripts\python.exe -m streamlit run dashboard\app.py --server.headless=true --server.port=18570 --server.address=127.0.0.1
+Uvicorn reported the server started on 127.0.0.1:18570. Health endpoint
+http://127.0.0.1:18570/_stcore/health returned HTTP 200 ("ok"); listener PID
+5472 was stopped after the check.
+
+The report path check found 5 Markdown links and 7 unique results paths;
+all resolved. The saved dashboard loader returned 6,367 rows; all 6,367
+source-record paths and 179 latency-artifact references existed. The
+coverage CSV existed. Missing report/dashboard evidence paths: 0.
+
+Index scope and exclusions
+--------------------------
+At final verification staging, 2,143 changed paths were staged, all under
+Submissions/SinghJoga/Assignment1/. No .venv, __pycache__, .pytest_cache,
+generated benchmark inputs, or million-event dataset paths were staged.
+Required benchmark metadata, phase/configuration records, latency JSONL,
+profiles, coverage CSV, and logs were included through targeted .gitignore
+exceptions. No files were committed or pushed.

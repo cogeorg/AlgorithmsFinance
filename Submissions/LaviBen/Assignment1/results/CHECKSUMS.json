@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "measurement_commit": "e3a5ee630b7d221722953b953bb9ae2c5cd9acc5",
+  "datasets": 73,
+  "records": 3744,
+  "files": {
+    "REPORT.md": {
+      "bytes": 29558,
+      "sha256": "6917d97d0b370d0a7037b9d60629d31967cdcedeb7e1f4aa4d7921e742068773"
+    },
+    "results/dashboard.html": {
+      "bytes": 23815233,
+      "sha256": "41a555469d86805f3acd25d9b32e32f6f19c80c31e5f1d322850c3be7a9995c6"
+    },
+    "results/raw_measurements.json.gz": {
+      "bytes": 5764834,
+      "sha256": "56430f8979083507fe723139acf6e98ecafdce421561d0deb12e9db5f196bcd1"
+    }
+  }
+}

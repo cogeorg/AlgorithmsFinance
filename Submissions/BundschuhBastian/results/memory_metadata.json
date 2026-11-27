@@ -1,0 +1,59 @@
+{
+  "script": "bench_memory.py",
+  "started_utc": "2026-11-20T14:12:30.923659+00:00",
+  "finished_utc": "2026-11-20T14:12:39.083714+00:00",
+  "seed": 20260,
+  "generator": {
+    "module": "datagen.generate",
+    "duplicates": "none",
+    "sizes_n": [
+      1000,
+      10000,
+      100000
+    ],
+    "query_counts_q": [
+      1,
+      100
+    ],
+    "hit_rates": [
+      "all-present",
+      "all-absent",
+      "mixed"
+    ]
+  },
+  "units": {
+    "current_bytes": "bytes still allocated when the traced call returned (output / prepared structure kept alive)",
+    "peak_bytes": "largest number of bytes allocated at any moment of the traced call"
+  },
+  "method": "tracemalloc; fresh trace per method and phase; input built before tracing (not included); output kept alive; run separately from the timing script",
+  "included": {
+    "input": "NOT included (built before tracing). input_list_bytes_not_traced is sys.getsizeof(ids), the list's pointer array only, for reference",
+    "prepared_structure": "included in prepare.current and in total.peak (sorted copy: list of n references; set: hash table)",
+    "output": "included in query/total current and peak (list of q bool references)"
+  },
+  "phases": {
+    "prepare": "prepare(ids)",
+    "query": "answer(state, queries)",
+    "total": "method(ids, queries)"
+  },
+  "repeats": 3,
+  "environment": {
+    "python_version": "3.11.0 (v3.11.0:deaf509e8f, Oct 24 2022, 14:43:23) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "python_implementation": "CPython",
+    "python_executable": "/Users/bastian/Developer/AlgorithmsFinance/Submissions/BundschuhBastian/.venv/bin/python",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "cpu_count_logical": 10,
+    "perf_counter": {
+      "implementation": "mach_absolute_time()",
+      "resolution_seconds": 4.166666666666667e-08,
+      "monotonic": true
+    },
+    "git_commit": "01093c81aefd282d9da97f1334c9f7259a952506",
+    "git_branch": "lab1-BundschuhBastian",
+    "git_uncommitted_changes_outside_results": false,
+    "cpu_model": "Apple M4",
+    "memory_bytes": 17179869184
+  }
+}

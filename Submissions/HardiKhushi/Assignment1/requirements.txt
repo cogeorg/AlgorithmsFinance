@@ -1,0 +1,2 @@
+# No third-party Python packages. Python 3.10+.
+# Benchmarks require POSIX signal timers (macOS/Linux); dashboard needs JavaScript.

@@ -1,0 +1,27 @@
+label: b3r-fast-gates-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest -q 02_tests/test_fast_equivalence.py -k exhaustive or hypothesis_arbitrary or all_attack_stream_families -x --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3c95836e66e797025518c6d66fc9733b5807ea85
+dirty: True
+python: 3.13.15
+utc: 20261122T192427Z
+exit_code: 1
+duration_s: 2.35
+------------------------------------------------------------
+F
+================================== FAILURES ===================================
+_____________________ test_g1_exhaustive_validator_corpus _____________________
+02_tests\test_fast_equivalence.py:78: in test_g1_exhaustive_validator_corpus
+    check(base)
+02_tests\test_fast_equivalence.py:75: in check
+    validator_pair(event, last, expected, live)
+02_tests\test_fast_equivalence.py:55: in validator_pair
+    b = validate_fast(event, last_seq, is_live_b, expected)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\lob\book_b3r_fast.py:6: in validate_fast
+    raise NotImplementedError
+E   NotImplementedError
+=========================== short test summary info ===========================
+FAILED 02_tests/test_fast_equivalence.py::test_g1_exhaustive_validator_corpus
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 59 deselected in 1.10s

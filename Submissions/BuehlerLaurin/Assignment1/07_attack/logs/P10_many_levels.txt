@@ -1,0 +1,27 @@
+growth: touch_churn B1
+  n=     50000  0.412925 s  (ok, repeats=3)
+  n=    100000  0.825539 s  (ok, repeats=3)
+  n=    200000  1.729118 s  (ok, repeats=3)
+  n=    400000  3.657730 s  (ok, repeats=3)
+  measured exponent: 1.05
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"50000": [0.412925, 0.414533, 0.402402], "100000": [0.809032, 0.841618, 0.825539], "200000": [1.762654, 1.723797, 1.729118], "400000": [3.578984, 3.65773, 3.727326]}
+  last cell: {"events": 800000, "live": 400000, "rebuilds": null, "heap": null}
+growth: touch_churn B3
+  n=     50000  0.432907 s  (ok, repeats=3)
+  n=    100000  0.898583 s  (ok, repeats=3)
+  n=    200000  1.849154 s  (ok, repeats=3)
+  n=    400000  3.959885 s  (ok, repeats=3)
+  measured exponent: 1.06
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"50000": [0.419978, 0.432907, 0.443576], "100000": [0.922534, 0.898583, 0.877574], "200000": [1.849154, 0.999761, 1.990054], "400000": [4.167268, 3.959885, 3.740021]}
+  last cell: {"events": 800000, "live": 400000, "rebuilds": null, "heap": 400002}
+growth: touch_churn B3rF
+  n=     50000  0.539050 s  (ok, repeats=3)
+  n=    100000  1.008395 s  (ok, repeats=3)
+  n=    200000  2.044588 s  (ok, repeats=3)
+  n=    400000  4.512884 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"50000": [0.53905, 0.528985, 0.569985], "100000": [1.008395, 1.004156, 1.023131], "200000": [2.126432, 1.997505, 2.044588], "400000": [4.512884, 4.102418, 5.103377]}
+  last cell: {"events": 800000, "live": 400000, "rebuilds": 0, "heap": 400002}

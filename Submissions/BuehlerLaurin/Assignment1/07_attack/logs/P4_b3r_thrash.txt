@@ -1,0 +1,117 @@
+growth: flicker_set B1
+  n=     12500  0.075383 s  (ok, repeats=3)
+  n=     25000  0.157032 s  (ok, repeats=3)
+  n=     50000  0.310698 s  (ok, repeats=3)
+  n=    100000  0.622278 s  (ok, repeats=3)
+  measured exponent: 1.01
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.075383, 0.077423, 0.075309], "25000": [0.16687, 0.155401, 0.157032], "50000": [0.310698, 0.312654, 0.309435], "100000": [0.622278, 0.620044, 0.645948]}
+  last cell: {"events": 200000, "live": 1, "rebuilds": null, "heap": null}
+growth: flicker_set B2
+  n=     12500  0.072568 s  (ok, repeats=3)
+  n=     25000  0.144569 s  (ok, repeats=3)
+  n=     50000  0.303738 s  (ok, repeats=3)
+  n=    100000  0.627039 s  (ok, repeats=3)
+  measured exponent: 1.04
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.072568, 0.071729, 0.074177], "25000": [0.147838, 0.144146, 0.144569], "50000": [0.303738, 0.298637, 0.304787], "100000": [0.627039, 0.603521, 0.646764]}
+  last cell: {"events": 200000, "live": 1, "rebuilds": null, "heap": null}
+growth: flicker_set B3
+  n=     12500  0.073028 s  (ok, repeats=3)
+  n=     25000  0.144717 s  (ok, repeats=3)
+  n=     50000  0.299277 s  (ok, repeats=3)
+  n=    100000  0.608439 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.072513, 0.073028, 0.077984], "25000": [0.144258, 0.150466, 0.144717], "50000": [0.294911, 0.299277, 0.300316], "100000": [0.608439, 0.61222, 0.5857]}
+  last cell: {"events": 200000, "live": 1, "rebuilds": null, "heap": 3}
+growth: flicker_set B3rF
+  n=     12500  0.084271 s  (ok, repeats=3)
+  n=     25000  0.171686 s  (ok, repeats=3)
+  n=     50000  0.346234 s  (ok, repeats=3)
+  n=    100000  0.693871 s  (ok, repeats=3)
+  measured exponent: 1.01
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.086644, 0.084271, 0.080833], "25000": [0.171686, 0.169447, 0.210741], "50000": [0.346234, 0.347247, 0.344209], "100000": [0.696446, 0.693871, 0.682786]}
+  last cell: {"events": 200000, "live": 1, "rebuilds": 50000, "heap": 1}
+growth: flicker_set B3rL
+  n=     12500  0.083480 s  (ok, repeats=3)
+  n=     25000  0.168500 s  (ok, repeats=3)
+  n=     50000  0.332793 s  (ok, repeats=3)
+  n=    100000  0.697182 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.085381, 0.08348, 0.0812], "25000": [0.1685, 0.167839, 0.171103], "50000": [0.332793, 0.330868, 0.341951], "100000": [0.686043, 0.699482, 0.697182]}
+  last cell: {"events": 200000, "live": 1, "rebuilds": 50000, "heap": 1}
+growth: amortized_rebuild B3
+  n=     12500  0.150027 s  (ok, repeats=3)
+  n=     25000  0.306730 s  (ok, repeats=3)
+  n=     50000  0.608606 s  (ok, repeats=3)
+  n=    100000  1.212896 s  (ok, repeats=3)
+  measured exponent: 1.00
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.154139, 0.150027, 0.148512], "25000": [0.307021, 0.30673, 0.297607], "50000": [0.619658, 0.60626, 0.608606], "100000": [1.230192, 1.206317, 1.212896]}
+  last cell: {"events": 400000, "live": 100000, "rebuilds": null, "heap": 300000}
+growth: amortized_rebuild B3rF
+  n=     12500  0.165518 s  (ok, repeats=3)
+  n=     25000  0.335991 s  (ok, repeats=3)
+  n=     50000  0.677844 s  (ok, repeats=3)
+  n=    100000  1.341442 s  (ok, repeats=3)
+  measured exponent: 1.01
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.165518, 0.170378, 0.163811], "25000": [0.330743, 0.370762, 0.335991], "50000": [0.668523, 0.708159, 0.677844], "100000": [1.341442, 1.353719, 1.320455]}
+  last cell: {"events": 400000, "live": 100000, "rebuilds": 1, "heap": 199999}
+growth: amortized_rebuild B3rL
+  n=     12500  0.162897 s  (ok, repeats=3)
+  n=     25000  0.327657 s  (ok, repeats=3)
+  n=     50000  0.677029 s  (ok, repeats=3)
+  n=    100000  1.369794 s  (ok, repeats=3)
+  measured exponent: 1.03
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.161251, 0.167899, 0.162897], "25000": [0.327969, 0.327657, 0.326451], "50000": [0.658424, 0.677029, 0.705756], "100000": [1.368551, 1.378804, 1.369794]}
+  last cell: {"events": 400000, "live": 100000, "rebuilds": 1, "heap": 199999}
+growth: drift_churn A
+  n=     12500  0.059799 s  (ok, repeats=3)
+  n=     25000  0.119313 s  (ok, repeats=3)
+  n=     50000  0.239420 s  (ok, repeats=3)
+  n=    100000  0.481803 s  (ok, repeats=3)
+  measured exponent: 1.00
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.059799, 0.060137, 0.058913], "25000": [0.116358, 0.119313, 0.123517], "50000": [0.243509, 0.237969, 0.23942], "100000": [0.489044, 0.481803, 0.48033]}
+  last cell: {"events": 200000, "live": 1, "rebuilds": null, "heap": null}
+growth: drift_churn B1
+  n=     12500  0.074572 s  (ok, repeats=3)
+  n=     25000  0.152596 s  (ok, repeats=3)
+  n=     50000  0.309345 s  (ok, repeats=3)
+  n=    100000  0.611797 s  (ok, repeats=3)
+  measured exponent: 1.01
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.074572, 0.073395, 0.079272], "25000": [0.154533, 0.152011, 0.152596], "50000": [0.311955, 0.309345, 0.302571], "100000": [0.611797, 0.608906, 0.617397]}
+  last cell: {"events": 200000, "live": 1, "rebuilds": null, "heap": null}
+growth: drift_churn B2
+  n=     12500  0.073023 s  (ok, repeats=3)
+  n=     25000  0.143295 s  (ok, repeats=3)
+  n=     50000  0.287210 s  (ok, repeats=3)
+  n=    100000  0.591163 s  (ok, repeats=3)
+  measured exponent: 1.01
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.071521, 0.073344, 0.073023], "25000": [0.143295, 0.158714, 0.141072], "50000": [0.288554, 0.28721, 0.284832], "100000": [0.592598, 0.585664, 0.591163]}
+  last cell: {"events": 200000, "live": 1, "rebuilds": null, "heap": null}
+growth: drift_churn B3
+  n=     12500  0.073899 s  (ok, repeats=3)
+  n=     25000  0.150525 s  (ok, repeats=3)
+  n=     50000  0.300595 s  (ok, repeats=3)
+  n=    100000  0.611557 s  (ok, repeats=3)
+  measured exponent: 1.01
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.075, 0.073202, 0.073899], "25000": [0.150525, 0.152056, 0.147144], "50000": [0.298027, 0.300595, 0.305023], "100000": [0.603225, 0.612031, 0.611557]}
+  last cell: {"events": 200000, "live": 1, "rebuilds": null, "heap": 100001}
+growth: drift_churn B3rF
+  n=     12500  0.085717 s  (ok, repeats=3)
+  n=     25000  0.172185 s  (ok, repeats=3)
+  n=     50000  0.342768 s  (ok, repeats=3)
+  n=    100000  0.698804 s  (ok, repeats=3)
+  measured exponent: 1.01
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"12500": [0.082273, 0.085717, 0.087376], "25000": [0.165792, 0.172185, 0.1733], "50000": [0.349049, 0.337141, 0.342768], "100000": [0.698804, 0.718921, 0.676595]}
+  last cell: {"events": 200000, "live": 1, "rebuilds": 50000, "heap": 1}

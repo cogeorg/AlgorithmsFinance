@@ -1,0 +1,20 @@
+{
+  "source_sha256": "4911010c34d0bd0f385c15fcfec9fb700db3b7e4859de57c4a7d1030b7569c64",
+  "G1": true,
+  "G2": true,
+  "G3": true,
+  "evidence": [
+    {
+      "suite": "standard",
+      "path": "05_evidence\\rematch-all-tests.xml",
+      "cases": 848,
+      "sha256": "97612edc9864a557731a7cec9001e0736ecba158c8f9b68fa3dda083daa336a8"
+    },
+    {
+      "suite": "attack",
+      "path": "05_evidence\\rematch-attack-tests.xml",
+      "cases": 1697,
+      "sha256": "e53fa323f357b34df866679dbe642f1409ec491cb004f3c758c4ea39caabf8a3"
+    }
+  ]
+}

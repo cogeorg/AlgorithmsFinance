@@ -1,0 +1,100 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "sweep_levels",
+ "description": "Bids on three levels (two orders at the best); an 8-unit sell takes 105 (b1, b3), then 103 (b2), then 1 unit at 101 (b4). The ask is untouched.",
+ "covers": [
+  "sweep through several levels",
+  "best price first",
+  "market sell ignores asks"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 2,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "order_id": "b2",
+   "status": "resting",
+   "unfilled_qty_units": 4,
+   "fills": []
+  },
+  {
+   "event_id": "e3",
+   "order_id": "b3",
+   "status": "resting",
+   "unfilled_qty_units": 1,
+   "fills": []
+  },
+  {
+   "event_id": "e4",
+   "order_id": "b4",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e5",
+   "order_id": "a1",
+   "status": "resting",
+   "unfilled_qty_units": 7,
+   "fills": []
+  },
+  {
+   "event_id": "e6",
+   "order_id": "s1",
+   "status": "filled",
+   "unfilled_qty_units": 0,
+   "fills": [
+    {
+     "maker_id": "b1",
+     "taker_id": "s1",
+     "price_ticks": 105,
+     "qty_units": 2
+    },
+    {
+     "maker_id": "b3",
+     "taker_id": "s1",
+     "price_ticks": 105,
+     "qty_units": 1
+    },
+    {
+     "maker_id": "b2",
+     "taker_id": "s1",
+     "price_ticks": 103,
+     "qty_units": 4
+    },
+    {
+     "maker_id": "b4",
+     "taker_id": "s1",
+     "price_ticks": 101,
+     "qty_units": 1
+    }
+   ]
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "b4",
+   "side": "BUY",
+   "price_ticks": 101,
+   "qty_units": 4,
+   "arrival_seq": 4
+  },
+  {
+   "order_id": "a1",
+   "side": "SELL",
+   "price_ticks": 110,
+   "qty_units": 7,
+   "arrival_seq": 5
+  }
+ ],
+ "best_bid": 101,
+ "best_ask": 110
+}

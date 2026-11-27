@@ -1,0 +1,69 @@
+{
+  "command": [
+    "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "-B",
+    "phase1_campaign.py",
+    "--count",
+    "1000",
+    "--seed",
+    "43",
+    "--experiment",
+    "cancel-churn",
+    "--levels",
+    "1",
+    "--out",
+    "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_cancel-churn_n1000_s43_l1_pNone"
+  ],
+  "started_utc": "2026-11-26T00:19:20.436471+00:00",
+  "finished_utc": "2026-11-26T00:19:22.962406+00:00",
+  "exit_code": 0,
+  "total_command_wall_seconds": 2.5259260999737307,
+  "progress": [
+    {
+      "line": "[1/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 shared io: complete",
+      "elapsed_seconds": 0.7025953999836929,
+      "interval_seconds": 0.7025953999836929
+    },
+    {
+      "line": "[2/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 baseline timing: complete",
+      "elapsed_seconds": 0.9232803999911994,
+      "interval_seconds": 0.22068500000750646
+    },
+    {
+      "line": "[3/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 revised timing: complete",
+      "elapsed_seconds": 1.1436803999822587,
+      "interval_seconds": 0.2203999999910593
+    },
+    {
+      "line": "[4/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 baseline latency: complete",
+      "elapsed_seconds": 1.3333966999780387,
+      "interval_seconds": 0.18971629999578
+    },
+    {
+      "line": "[5/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 revised latency: complete",
+      "elapsed_seconds": 1.5347277999971993,
+      "interval_seconds": 0.20133110001916066
+    },
+    {
+      "line": "[6/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 baseline memory: complete",
+      "elapsed_seconds": 1.827433199970983,
+      "interval_seconds": 0.29270539997378364
+    },
+    {
+      "line": "[7/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 revised memory: complete",
+      "elapsed_seconds": 2.103517399984412,
+      "interval_seconds": 0.2760842000134289
+    },
+    {
+      "line": "[8/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 baseline diagnostics: complete",
+      "elapsed_seconds": 2.310941300005652,
+      "interval_seconds": 0.20742390002124012
+    },
+    {
+      "line": "[9/9] cancel-churn_anchored_cancel_churn_n1000_s43_l1 revised diagnostics: complete",
+      "elapsed_seconds": 2.5128073999658227,
+      "interval_seconds": 0.2018660999601707
+    }
+  ],
+  "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+}

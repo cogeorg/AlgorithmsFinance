@@ -1,0 +1,61 @@
+{
+  "task": {
+    "task_id": "baseline_latency_buildup_1000_seed43_levels1000",
+    "version": "baseline",
+    "phase": "latency",
+    "scenario": "buildup",
+    "event_count": 1000,
+    "seed": 43,
+    "levels": 1000,
+    "input_path": "data/generated/buildup_1000_seed43_levels1000.jsonl.gz",
+    "sha256": "037e723135ac3bb6cbee903f66b9c9e4074ba372dbed7b9fc0306da176e525c6",
+    "result_path": "results/raw/baseline/latency/buildup_1000_seed43_levels1000.json.gz",
+    "status_path": "results/status/baseline/latency/buildup_1000_seed43_levels1000.json"
+  },
+  "task_id": "baseline_latency_buildup_1000_seed43_levels1000",
+  "timeout_seconds": 60,
+  "elapsed_seconds": 2.3638607000466436,
+  "started_utc": "2026-11-23T19:44:56.241744+00:00",
+  "finished_utc": "2026-11-23T19:44:58.605670+00:00",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\scripts\\04_benchmark.py",
+    "--phase",
+    "latency",
+    "--version",
+    "baseline",
+    "--input",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\data\\generated\\buildup_1000_seed43_levels1000.jsonl.gz",
+    "--warmups",
+    "1",
+    "--repeats",
+    "5",
+    "--out",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\results\\raw\\baseline\\latency\\buildup_1000_seed43_levels1000.json.pending.gz"
+  ],
+  "environment": {
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "python_executable": "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "dependencies": {
+      "pytest": "9.2.0",
+      "pandas": "3.1.1",
+      "streamlit": "1.67.0"
+    },
+    "git": {
+      "commit": "1efbc9506181256881948fac9c6f6bb2aa9d6469",
+      "branch": "assignment1-mueller-alexandra",
+      "dirty": true,
+      "assignment_dirty": true,
+      "code_dirty": false
+    }
+  },
+  "returncode": 0,
+  "stdout": "{\"output\": \"C:\\\\Users\\\\Acer\\\\Documents\\\\Algorithms\\\\AlgorithmsFinance\\\\Submissions\\\\M\\u00fcllerAlexandra\\\\Assignment1\\\\results\\\\raw\\\\baseline\\\\latency\\\\buildup_1000_seed43_levels1000.json.pending.gz\", \"summary\": {\"overall\": {\"sample_count\": 5000, \"median_ns\": 54900.0, \"p95_ns\": 140600, \"p99_ns\": 467700}, \"by_event_type\": {\"LIMIT\": {\"sample_count\": 5000, \"median_ns\": 54900.0, \"p95_ns\": 140600, \"p99_ns\": 467700}}, \"early_10_percent\": {\"sample_count\": 500, \"median_ns\": 7500.0, \"p95_ns\": 16500, \"p99_ns\": 17700}, \"late_10_percent\": {\"sample_count\": 500, \"median_ns\": 123700.0, \"p95_ns\": 259200, \"p99_ns\": 670900}, \"repeat_count\": 5, \"window_size_per_repeat\": 100}}\n",
+  "stderr": "",
+  "outcome": "completed",
+  "result_path": "results/raw/baseline/latency/buildup_1000_seed43_levels1000.json.gz"
+}

@@ -1,0 +1,65 @@
+{
+  "status": "estimate_only_no_additional_campaigns_executed",
+  "scope": "Remaining replay matrix after completed seed-42 1000 smoke and this attempted seed-42 10000 batch. Excludes complementary experiments and a retry of this stopped memory job.",
+  "remaining_batches": 7,
+  "remaining_workload_cases": 35,
+  "versions": [
+    "baseline",
+    "revised"
+  ],
+  "unchanged_limits": {
+    "worker_seconds": 60,
+    "measurement_campaign_seconds": 900
+  },
+  "groups": [
+    {
+      "event_count": 1000,
+      "seeds": [
+        43,
+        44
+      ],
+      "batches": 2,
+      "low_attempt_seconds": 22.778544,
+      "high_attempt_seconds": 42.70977,
+      "basis": "Prior seed-42 smoke manifest interval, 14.23659 seconds, multiplied by 0.8 to 1.5 per batch."
+    },
+    {
+      "event_count": 10000,
+      "seeds": [
+        43,
+        44
+      ],
+      "batches": 2,
+      "low_attempt_seconds": 620.8460044799373,
+      "high_attempt_seconds": 1164.0862583998824,
+      "basis": "Current total command wall time multiplied by 0.8 to 1.5 per batch. Worker timeouts can still leave incomplete memory data."
+    },
+    {
+      "event_count": 100000,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "batches": 3,
+      "low_attempt_seconds": 2700,
+      "high_attempt_seconds": 2700,
+      "basis": "Assuming quadratic Baseline work for buildup/crowded/mixed/sweep, 16 Baseline phase workers are projected to reach the 60-second cap; the 900-second campaign deadline is expected to stop each batch first. This is a capped-attempt estimate, not a completion estimate."
+    }
+  ],
+  "low_total_attempt_seconds": 3343.6245484799374,
+  "high_total_attempt_seconds": 3906.7960283998823,
+  "uncertainty": "Ranges are planning envelopes, not confidence intervals. Preparation for missing datasets and verification are additional and unmeasured. Same machine/load, unchanged engines, phase boundaries and workload settings are assumed. Seed-dependent depth and cleanup costs can change runtime.",
+  "large_model": "10x events -> 100x growing-depth Baseline work; near-linear Revised and I/O scaling. Several large workers are expected to time out during warm-up. The current worker timeout is not used as a single-replay timing.",
+  "uncapped_primary_only": {
+    "assumption": "Quadratic Baseline scaling; four growing-depth scenarios, one warm-up plus five measured replays, three seeds. Excludes I/O, latency, memory, diagnostics, data generation and orchestration.",
+    "seconds_per_100000_seed": 10610.590799991041,
+    "seconds_for_three_seeds": 31831.772399973124
+  },
+  "prior_small_reference": {
+    "path": "results\\smoke_price_levels\\manifest.json",
+    "manifest_interval_seconds": 14.23659,
+    "caveat": "Measurement-span proxy for small command wall time; preparation/startup are not separately known."
+  },
+  "current_reference_command_wall_seconds": 388.0287527999608
+}

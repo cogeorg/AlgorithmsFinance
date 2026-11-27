@@ -1,0 +1,30 @@
+{
+  "git_head": "49c144b687f3d2e1af33eb727212a4d7602ee5a1",
+  "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\.venv_phase1\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "dependencies": {
+    "streamlit": "1.67.0",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.5",
+    "numpy": "2.5.1"
+  },
+  "authored_source_sha256": {
+    "README.md": "e7622d762b6655c6469efcda8ff1afd00f844d74bbe7827976eb9af26b955eb5",
+    "REPORT.md": "63f8b570ccb0426c9b475833d9c5cf0c001d71d1377db32aa695fbde3b168c31",
+    "requirements.txt": "d5f437990e5a2c8787f78fdb8f56e0c409ad2794abac20000b42b8df5826e2f4",
+    "dashboard.py": "7d4fcd13c1f873a9d4ecc82e31ed5eb5e4cda054e9fc20adbe3ef50f9ce8fceb",
+    "dashboard.html": "9916868b572dbd5e22cc4ca8bcb52065311fd3b77e77afc826bca5df7d00d67b",
+    "benchmark_report.py": "d378edd760f250ec11889cf52e0af90e9c4500bf2df256798b95dc0ed826686f",
+    "phase1_campaign.py": "9bcda2b38249e6702159627eba58ec152ea928a1ea49931a92b96ceb41577403",
+    "phase1_queue.py": "99b971251c2cb1478cd4b25a8894b9f4c53fd5577913871470b300e746692a6f",
+    "phase1_results.py": "11f0294277379fff30e52b07b58860abe0a06dc2764c4a99fcbdacf392193eb8",
+    "phase1_finalize.py": "554556f9d5bcfadf69f58702bde884135922892346ad656c440f60bab828628a",
+    "profile_diagnostic.py": "384ab189233dd8a1f99a17e6d5acf8b242805ffe9ec5d2dcd83d88098cb1ef32",
+    "test_phase1_results.py": "e7765ec364863da571c23def124eddf5c488ef4e5017c0549dd06a1adeadf6a6",
+    "verify_dashboard.py": "4ef1d956da80b0e0b3ef489065c2e0192081d035bbbcee1ed497cf2aaa348934",
+    "verify_browser.py": "90ada8e41e6bf897273190afe696e978ef69026b7b30692e79590b6b9c779355",
+    "audit_optional.py": "b1a3824166d52b73824ddd90eb50db000a7f896f041043ea5294034fed16fca0"
+  },
+  "note": "Reporting/UI provenance only. This does not replace historical benchmark manifests or imply changed measured engine code."
+}

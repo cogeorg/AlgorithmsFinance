@@ -1,0 +1,6 @@
+Submitted snapshot commit: c424184900b46c35d9e59e25937b2ce33152fe5d
+Repository: https://github.com/garvsharma1118-code/AlgorithmsFinance
+Path: Submissions/SharmaGarv/Assignment1/
+Measured source SHA-256: 89cab8112991dc47868a1d47ae7cf13c7b6f4687d3deb18c8e1b773106848882
+
+The follow-up receipt commit records this immutable code/results snapshot.

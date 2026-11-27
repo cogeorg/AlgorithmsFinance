@@ -1,0 +1,58 @@
+{
+  "source_package": "course-supplied Assignment1 package",
+  "copied_byte_for_byte": true,
+  "files": {
+    "tools/generate_orders.py": {
+      "bytes": 4019,
+      "sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d"
+    },
+    "fixtures/worked_example.jsonl": {
+      "bytes": 754,
+      "sha256": "831015ac71d56ada0898b0bf8f59f125900b4dc32134d6ef37bd3cec304798ec"
+    },
+    "fixtures/worked_expected.json": {
+      "bytes": 1101,
+      "sha256": "c715f52724df6bbfcedcad0e203ddb5a7752d38c809f4cf12b513ba809554d2c"
+    },
+    "fixtures/supplied/buildup_10000.jsonl.gz": {
+      "bytes": 132767,
+      "sha256": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5"
+    },
+    "fixtures/supplied/buildup_10000.jsonl.gz.metadata.json": {
+      "bytes": 369,
+      "sha256": "3d83dae444458ff819d1bcfe99256aa110c0506b9422850572793f75a469d2d9"
+    },
+    "fixtures/supplied/cancel_churn_10000.jsonl.gz": {
+      "bytes": 110782,
+      "sha256": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933"
+    },
+    "fixtures/supplied/cancel_churn_10000.jsonl.gz.metadata.json": {
+      "bytes": 374,
+      "sha256": "887692b24a542efea667e595d45a9a46ac296285602e5191a3cecfca1ccacb03"
+    },
+    "fixtures/supplied/crowded_10000.jsonl.gz": {
+      "bytes": 111714,
+      "sha256": "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6"
+    },
+    "fixtures/supplied/crowded_10000.jsonl.gz.metadata.json": {
+      "bytes": 369,
+      "sha256": "822894454f646dc3479b1cd93a7ce45a2b162bbddb466413cba63f5be6453695"
+    },
+    "fixtures/supplied/mixed_10000.jsonl.gz": {
+      "bytes": 125334,
+      "sha256": "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16"
+    },
+    "fixtures/supplied/mixed_10000.jsonl.gz.metadata.json": {
+      "bytes": 367,
+      "sha256": "458136d915369ed51d13ea1c5535c1ca22a9576545763a12c3b84e2f5d199fc4"
+    },
+    "fixtures/supplied/sweep_10000.jsonl.gz": {
+      "bytes": 123692,
+      "sha256": "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f"
+    },
+    "fixtures/supplied/sweep_10000.jsonl.gz.metadata.json": {
+      "bytes": 367,
+      "sha256": "0f9038f6a913cbab8911968fd643623b3a17d9da768db2babd175a0e93785589"
+    }
+  }
+}

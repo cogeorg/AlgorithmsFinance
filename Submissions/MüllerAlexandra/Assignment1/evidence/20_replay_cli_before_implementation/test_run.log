@@ -1,0 +1,37 @@
+stage: 20_replay_cli_before_implementation
+started_utc: 2026-11-25T09:47:55.371851+00:00
+finished_utc: 2026-11-25T09:47:58.422339+00:00
+elapsed_seconds: 3.050318
+exit_code: 2
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 11abd4af502da99861be9b04f62ab12fa50ebb34
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0
+collected 221 items / 1 error
+
+=================================== ERRORS ====================================
+________________ ERROR collecting tests/test_21_replay_cli.py _________________
+ImportError while importing test module 'C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1\tests\test_21_replay_cli.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Acer\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_21_replay_cli.py:11: in <module>
+    from limit_order_book.replay_cli import build_replay_document, main
+E   ModuleNotFoundError: No module named 'limit_order_book.replay_cli'
+=========================== short test summary info ===========================
+ERROR tests/test_21_replay_cli.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 2.14s ===============================
+
+=== stderr ===

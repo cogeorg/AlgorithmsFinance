@@ -1,0 +1,41 @@
+{
+  "case": {
+    "case_id": "cancel-churn_anchored_cancel_churn_n100000_s42_l1",
+    "experiment": "cancel-churn",
+    "scenario": "anchored_cancel_churn",
+    "seed": 42,
+    "requested_count": 100000,
+    "levels": 1,
+    "sale_percent": null,
+    "construction_event_count": 0,
+    "source_event_count": 200002,
+    "event_count": 200002,
+    "actual_controlled_price_levels": null,
+    "source": {
+      "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\anchored_cancel_churn_f1fe5c8caebd6e80.jsonl.gz",
+      "sha256": "b48608ba71e4e9dfe517ea3e51564260f046070ccf45928273a6d865c2a0a04d",
+      "metadata": {
+        "synthetic": true,
+        "calibrated_to_exchange_data": false,
+        "scenario": "anchored_cancel_churn",
+        "events": 200002,
+        "seed": 42,
+        "levels": 1,
+        "generator": "benchmark.churn_orders / deterministic",
+        "python": "3.14.5",
+        "price_tick_usd": "0.01",
+        "quantity_unit_btc": "0.00000001",
+        "compressed_bytes": 1713067,
+        "sha256": "b48608ba71e4e9dfe517ea3e51564260f046070ccf45928273a6d865c2a0a04d",
+        "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "benchmark_source_sha256": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4"
+      },
+      "reused": false
+    }
+  },
+  "version": "baseline",
+  "phase": "timing",
+  "checkpoint": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_cancel-churn_n100000_s42_l1_pNone\\workers\\0002_cancel-churn_anchored_cancel_churn_n100000_s42_l1_baseline_timing.json",
+  "payload_limit": 134217728,
+  "allocation_limit": 536870912
+}

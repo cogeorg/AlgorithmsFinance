@@ -1,0 +1,462 @@
+[
+  {
+    "file": "work/benchmark_inputs/buildup_m1000_s42_p1000.jsonl.gz",
+    "scenario": "buildup",
+    "event_count": 1000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "9b3054be934ed3df5aad49b61622e9af79309646518fcc9de11d590eb77618db",
+    "compressed_bytes": 13493,
+    "command": "python3 generate_orders.py --scenario buildup --events 1000 --seed 42 --levels 1000 --out work/benchmark_inputs/buildup_m1000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/buildup_m1000_s43_p1000.jsonl.gz",
+    "scenario": "buildup",
+    "event_count": 1000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "037e723135ac3bb6cbee903f66b9c9e4074ba372dbed7b9fc0306da176e525c6",
+    "compressed_bytes": 13515,
+    "command": "python3 generate_orders.py --scenario buildup --events 1000 --seed 43 --levels 1000 --out work/benchmark_inputs/buildup_m1000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/buildup_m1000_s44_p1000.jsonl.gz",
+    "scenario": "buildup",
+    "event_count": 1000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "6bc6459b09796ef555707cff9daebd865b5f67758cf6d2d4e604591ab6f485d8",
+    "compressed_bytes": 13562,
+    "command": "python3 generate_orders.py --scenario buildup --events 1000 --seed 44 --levels 1000 --out work/benchmark_inputs/buildup_m1000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/buildup_m10000_s42_p1000.jsonl.gz",
+    "scenario": "buildup",
+    "event_count": 10000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5",
+    "compressed_bytes": 132767,
+    "command": "python3 generate_orders.py --scenario buildup --events 10000 --seed 42 --levels 1000 --out work/benchmark_inputs/buildup_m10000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/buildup_m10000_s43_p1000.jsonl.gz",
+    "scenario": "buildup",
+    "event_count": 10000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "25f25e183271ebce17807d04bd426059e34573e29d657e2dccd60e5698818739",
+    "compressed_bytes": 132923,
+    "command": "python3 generate_orders.py --scenario buildup --events 10000 --seed 43 --levels 1000 --out work/benchmark_inputs/buildup_m10000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/buildup_m10000_s44_p1000.jsonl.gz",
+    "scenario": "buildup",
+    "event_count": 10000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "a2392b86e396c33634f98a4592a7e390bf9cdb9c2d35d51dbbeb3c2286589d01",
+    "compressed_bytes": 132925,
+    "command": "python3 generate_orders.py --scenario buildup --events 10000 --seed 44 --levels 1000 --out work/benchmark_inputs/buildup_m10000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/buildup_m100000_s42_p1000.jsonl.gz",
+    "scenario": "buildup",
+    "event_count": 100000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "3d6ffabf40ead705eccaf54c8d14aea9667f95f8bfdfe404ada38c4c18ef08ac",
+    "compressed_bytes": 1318514,
+    "command": "python3 generate_orders.py --scenario buildup --events 100000 --seed 42 --levels 1000 --out work/benchmark_inputs/buildup_m100000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/buildup_m100000_s43_p1000.jsonl.gz",
+    "scenario": "buildup",
+    "event_count": 100000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "e949f2e93500a22660e5f169645a76f98341464d923dc1ba417ff7904cc6141e",
+    "compressed_bytes": 1318265,
+    "command": "python3 generate_orders.py --scenario buildup --events 100000 --seed 43 --levels 1000 --out work/benchmark_inputs/buildup_m100000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/buildup_m100000_s44_p1000.jsonl.gz",
+    "scenario": "buildup",
+    "event_count": 100000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "16ddbfcc4155748214f8875be81b3b0ace7d5d80b4a165ecadfacff6dcb77fce",
+    "compressed_bytes": 1318121,
+    "command": "python3 generate_orders.py --scenario buildup --events 100000 --seed 44 --levels 1000 --out work/benchmark_inputs/buildup_m100000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/crowded_m1000_s42_p1000.jsonl.gz",
+    "scenario": "crowded",
+    "event_count": 1000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "30053d0b678d452ff32b6e08fab431ef6d6676829f227686bbb1159fedfa306e",
+    "compressed_bytes": 11450,
+    "command": "python3 generate_orders.py --scenario crowded --events 1000 --seed 42 --levels 1000 --out work/benchmark_inputs/crowded_m1000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/crowded_m1000_s43_p1000.jsonl.gz",
+    "scenario": "crowded",
+    "event_count": 1000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "5ea0ceea89148c356116d8471f28abd16a52c550f918eb24d48db064fc8295a5",
+    "compressed_bytes": 11407,
+    "command": "python3 generate_orders.py --scenario crowded --events 1000 --seed 43 --levels 1000 --out work/benchmark_inputs/crowded_m1000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/crowded_m1000_s44_p1000.jsonl.gz",
+    "scenario": "crowded",
+    "event_count": 1000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "1ee8aace9734c93cbc2cb1fff2dd6ecc257260623da4fc5478a1e26df2f51b25",
+    "compressed_bytes": 11426,
+    "command": "python3 generate_orders.py --scenario crowded --events 1000 --seed 44 --levels 1000 --out work/benchmark_inputs/crowded_m1000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/crowded_m10000_s42_p1000.jsonl.gz",
+    "scenario": "crowded",
+    "event_count": 10000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6",
+    "compressed_bytes": 111714,
+    "command": "python3 generate_orders.py --scenario crowded --events 10000 --seed 42 --levels 1000 --out work/benchmark_inputs/crowded_m10000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/crowded_m10000_s43_p1000.jsonl.gz",
+    "scenario": "crowded",
+    "event_count": 10000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "0d482988b03a4ca3dcf425acacf1d003d00f262c86b1df65cd484847e520d490",
+    "compressed_bytes": 111824,
+    "command": "python3 generate_orders.py --scenario crowded --events 10000 --seed 43 --levels 1000 --out work/benchmark_inputs/crowded_m10000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/crowded_m10000_s44_p1000.jsonl.gz",
+    "scenario": "crowded",
+    "event_count": 10000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "d4c3778717962bf4a09c944c7d48df531c729fcead2aab0454251ff3b439a9ea",
+    "compressed_bytes": 111762,
+    "command": "python3 generate_orders.py --scenario crowded --events 10000 --seed 44 --levels 1000 --out work/benchmark_inputs/crowded_m10000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/crowded_m100000_s42_p1000.jsonl.gz",
+    "scenario": "crowded",
+    "event_count": 100000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "e96395f4d3db4ecce0cc52c5ba388db6eaefe6fdadce5d3325fa3c34da00a179",
+    "compressed_bytes": 1104154,
+    "command": "python3 generate_orders.py --scenario crowded --events 100000 --seed 42 --levels 1000 --out work/benchmark_inputs/crowded_m100000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/crowded_m100000_s43_p1000.jsonl.gz",
+    "scenario": "crowded",
+    "event_count": 100000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "d0fc59f1a3636aee0d1651a2192c0c1e72887834c246aac5c0c199ee7dcf0c8e",
+    "compressed_bytes": 1104001,
+    "command": "python3 generate_orders.py --scenario crowded --events 100000 --seed 43 --levels 1000 --out work/benchmark_inputs/crowded_m100000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/crowded_m100000_s44_p1000.jsonl.gz",
+    "scenario": "crowded",
+    "event_count": 100000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "832a37991a5816f273b64445f274fce59122b0cb27efcf211ebd3346c21ab8d8",
+    "compressed_bytes": 1104343,
+    "command": "python3 generate_orders.py --scenario crowded --events 100000 --seed 44 --levels 1000 --out work/benchmark_inputs/crowded_m100000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/mixed_m1000_s42_p1000.jsonl.gz",
+    "scenario": "mixed",
+    "event_count": 1000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "8c3455dc8370f2e006eda834f5bfeb47abdb7dc3766775cf12cdc8444f974d9d",
+    "compressed_bytes": 12595,
+    "command": "python3 generate_orders.py --scenario mixed --events 1000 --seed 42 --levels 1000 --out work/benchmark_inputs/mixed_m1000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/mixed_m1000_s43_p1000.jsonl.gz",
+    "scenario": "mixed",
+    "event_count": 1000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "002a4bb66fdd24f97d72a086b89d3f19b62c0f47713daaf5260773b95f44b4da",
+    "compressed_bytes": 12534,
+    "command": "python3 generate_orders.py --scenario mixed --events 1000 --seed 43 --levels 1000 --out work/benchmark_inputs/mixed_m1000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/mixed_m1000_s44_p1000.jsonl.gz",
+    "scenario": "mixed",
+    "event_count": 1000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "051284b7198e345b741e175b9f426613638efca10e13f580215ea704f6c5bc37",
+    "compressed_bytes": 12620,
+    "command": "python3 generate_orders.py --scenario mixed --events 1000 --seed 44 --levels 1000 --out work/benchmark_inputs/mixed_m1000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/mixed_m10000_s42_p1000.jsonl.gz",
+    "scenario": "mixed",
+    "event_count": 10000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16",
+    "compressed_bytes": 125334,
+    "command": "python3 generate_orders.py --scenario mixed --events 10000 --seed 42 --levels 1000 --out work/benchmark_inputs/mixed_m10000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/mixed_m10000_s43_p1000.jsonl.gz",
+    "scenario": "mixed",
+    "event_count": 10000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "2e6f1d4dfc78d46a8cd0cefd48e8417da4f448d6cf2c5d4e28af3842aa5f60a6",
+    "compressed_bytes": 125238,
+    "command": "python3 generate_orders.py --scenario mixed --events 10000 --seed 43 --levels 1000 --out work/benchmark_inputs/mixed_m10000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/mixed_m10000_s44_p1000.jsonl.gz",
+    "scenario": "mixed",
+    "event_count": 10000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "b9a68b87f1922d1d137ef391a5f7bbe4eaf6efe6c843aa599c0b7a2646b4dea8",
+    "compressed_bytes": 125173,
+    "command": "python3 generate_orders.py --scenario mixed --events 10000 --seed 44 --levels 1000 --out work/benchmark_inputs/mixed_m10000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/mixed_m100000_s42_p1000.jsonl.gz",
+    "scenario": "mixed",
+    "event_count": 100000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "83aa4dfb3468228dd9cfad3419d54f21186df9a140aaafe42164dd08dac55424",
+    "compressed_bytes": 1255375,
+    "command": "python3 generate_orders.py --scenario mixed --events 100000 --seed 42 --levels 1000 --out work/benchmark_inputs/mixed_m100000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/mixed_m100000_s43_p1000.jsonl.gz",
+    "scenario": "mixed",
+    "event_count": 100000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "1ef72b12ab563ce63ed5dec88a43b59fc70149ece4d0d9263fc1072e6aee0a64",
+    "compressed_bytes": 1256281,
+    "command": "python3 generate_orders.py --scenario mixed --events 100000 --seed 43 --levels 1000 --out work/benchmark_inputs/mixed_m100000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/mixed_m100000_s44_p1000.jsonl.gz",
+    "scenario": "mixed",
+    "event_count": 100000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "d015100d548d4d1bf3f910e099553f67541bb226bced623c6d09964feb1b8eb8",
+    "compressed_bytes": 1255703,
+    "command": "python3 generate_orders.py --scenario mixed --events 100000 --seed 44 --levels 1000 --out work/benchmark_inputs/mixed_m100000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/sweep_m1000_s42_p1000.jsonl.gz",
+    "scenario": "sweep",
+    "event_count": 1000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "e4ec73a1792d215d2f56a5ba4dc92fcb012886a741603dc939827d567f11c2fe",
+    "compressed_bytes": 12837,
+    "command": "python3 generate_orders.py --scenario sweep --events 1000 --seed 42 --levels 1000 --out work/benchmark_inputs/sweep_m1000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/sweep_m1000_s43_p1000.jsonl.gz",
+    "scenario": "sweep",
+    "event_count": 1000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "11619704e2b389d1832c7cdafb86854cd5fda300a05d9c7e0655083502cccad0",
+    "compressed_bytes": 12874,
+    "command": "python3 generate_orders.py --scenario sweep --events 1000 --seed 43 --levels 1000 --out work/benchmark_inputs/sweep_m1000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/sweep_m1000_s44_p1000.jsonl.gz",
+    "scenario": "sweep",
+    "event_count": 1000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "ea3de66deeef120f55c310cbe9db82f0c76073c0029404560ff696153753b9cf",
+    "compressed_bytes": 12913,
+    "command": "python3 generate_orders.py --scenario sweep --events 1000 --seed 44 --levels 1000 --out work/benchmark_inputs/sweep_m1000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/sweep_m10000_s42_p1000.jsonl.gz",
+    "scenario": "sweep",
+    "event_count": 10000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f",
+    "compressed_bytes": 123692,
+    "command": "python3 generate_orders.py --scenario sweep --events 10000 --seed 42 --levels 1000 --out work/benchmark_inputs/sweep_m10000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/sweep_m10000_s43_p1000.jsonl.gz",
+    "scenario": "sweep",
+    "event_count": 10000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "c855424b4a836ad16b9a60c2aa5be78f690d26aba2512ac2950bb3723ff06a8e",
+    "compressed_bytes": 123816,
+    "command": "python3 generate_orders.py --scenario sweep --events 10000 --seed 43 --levels 1000 --out work/benchmark_inputs/sweep_m10000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/sweep_m10000_s44_p1000.jsonl.gz",
+    "scenario": "sweep",
+    "event_count": 10000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "ff72b1d7292b6dba3589d761a3d4e4951916dd4def8bdb2b10bf99635361970c",
+    "compressed_bytes": 123956,
+    "command": "python3 generate_orders.py --scenario sweep --events 10000 --seed 44 --levels 1000 --out work/benchmark_inputs/sweep_m10000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/sweep_m100000_s42_p1000.jsonl.gz",
+    "scenario": "sweep",
+    "event_count": 100000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "cb15a30b8541947f8ccc45d2b6e59104cb69b18d2b617bd874f691271cc39c53",
+    "compressed_bytes": 1228090,
+    "command": "python3 generate_orders.py --scenario sweep --events 100000 --seed 42 --levels 1000 --out work/benchmark_inputs/sweep_m100000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/sweep_m100000_s43_p1000.jsonl.gz",
+    "scenario": "sweep",
+    "event_count": 100000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "fccad62402602a0f3c9fcb727703147c598ee5228956395ecace9631234cef4b",
+    "compressed_bytes": 1228145,
+    "command": "python3 generate_orders.py --scenario sweep --events 100000 --seed 43 --levels 1000 --out work/benchmark_inputs/sweep_m100000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/sweep_m100000_s44_p1000.jsonl.gz",
+    "scenario": "sweep",
+    "event_count": 100000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "8896f6c5b343ed34186f1eb8fb39bfc29087ff512e9a15bf58f42a7896cb1d2d",
+    "compressed_bytes": 1227897,
+    "command": "python3 generate_orders.py --scenario sweep --events 100000 --seed 44 --levels 1000 --out work/benchmark_inputs/sweep_m100000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/cancel_churn_m1000_s42_p1000.jsonl.gz",
+    "scenario": "cancel_churn",
+    "event_count": 1000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "2994e992735f3a2a324c6832d8883570e486cbf1a6761b3174d2a5014bf5b2d6",
+    "compressed_bytes": 11336,
+    "command": "python3 generate_orders.py --scenario cancel_churn --events 1000 --seed 42 --levels 1000 --out work/benchmark_inputs/cancel_churn_m1000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/cancel_churn_m1000_s43_p1000.jsonl.gz",
+    "scenario": "cancel_churn",
+    "event_count": 1000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "1a3972c9c249f09d53cd5fe5ad71f53e93147b7162c6cb0a89e8007d106731e2",
+    "compressed_bytes": 11322,
+    "command": "python3 generate_orders.py --scenario cancel_churn --events 1000 --seed 43 --levels 1000 --out work/benchmark_inputs/cancel_churn_m1000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/cancel_churn_m1000_s44_p1000.jsonl.gz",
+    "scenario": "cancel_churn",
+    "event_count": 1000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "3418127dc6ba01bdfe2b522e75fe11b5be42407980332dbec51bc76384e9f594",
+    "compressed_bytes": 11269,
+    "command": "python3 generate_orders.py --scenario cancel_churn --events 1000 --seed 44 --levels 1000 --out work/benchmark_inputs/cancel_churn_m1000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/cancel_churn_m10000_s42_p1000.jsonl.gz",
+    "scenario": "cancel_churn",
+    "event_count": 10000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933",
+    "compressed_bytes": 110782,
+    "command": "python3 generate_orders.py --scenario cancel_churn --events 10000 --seed 42 --levels 1000 --out work/benchmark_inputs/cancel_churn_m10000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/cancel_churn_m10000_s43_p1000.jsonl.gz",
+    "scenario": "cancel_churn",
+    "event_count": 10000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "02e85c19c30f2b61c7b3fc1336c4a48576434a328779cdc2c76b49c189d55982",
+    "compressed_bytes": 110729,
+    "command": "python3 generate_orders.py --scenario cancel_churn --events 10000 --seed 43 --levels 1000 --out work/benchmark_inputs/cancel_churn_m10000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/cancel_churn_m10000_s44_p1000.jsonl.gz",
+    "scenario": "cancel_churn",
+    "event_count": 10000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "533fbc3a190e00d91af1b6c538405848e0539132a084e69f9931d18a01c1df61",
+    "compressed_bytes": 110661,
+    "command": "python3 generate_orders.py --scenario cancel_churn --events 10000 --seed 44 --levels 1000 --out work/benchmark_inputs/cancel_churn_m10000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/cancel_churn_m100000_s42_p1000.jsonl.gz",
+    "scenario": "cancel_churn",
+    "event_count": 100000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "d633254ec2c5e73284c58f123978dcada972bf3e80f3e4e4e2ea952458c1f5aa",
+    "compressed_bytes": 1097574,
+    "command": "python3 generate_orders.py --scenario cancel_churn --events 100000 --seed 42 --levels 1000 --out work/benchmark_inputs/cancel_churn_m100000_s42_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/cancel_churn_m100000_s43_p1000.jsonl.gz",
+    "scenario": "cancel_churn",
+    "event_count": 100000,
+    "seed": 43,
+    "levels": 1000,
+    "sha256": "332836860cd12dd36893a0c2af5c20246af6242d3abcc5e05dd3115d8368d0e5",
+    "compressed_bytes": 1096900,
+    "command": "python3 generate_orders.py --scenario cancel_churn --events 100000 --seed 43 --levels 1000 --out work/benchmark_inputs/cancel_churn_m100000_s43_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/cancel_churn_m100000_s44_p1000.jsonl.gz",
+    "scenario": "cancel_churn",
+    "event_count": 100000,
+    "seed": 44,
+    "levels": 1000,
+    "sha256": "b7509b134016db7c0db8372bc22cc9a59d623026a8842cfe2c8ee153a5d44cdc",
+    "compressed_bytes": 1097459,
+    "command": "python3 generate_orders.py --scenario cancel_churn --events 100000 --seed 44 --levels 1000 --out work/benchmark_inputs/cancel_churn_m100000_s44_p1000.jsonl.gz"
+  },
+  {
+    "file": "work/benchmark_inputs/mixed_m1000000_s42_p1000.jsonl.gz",
+    "scenario": "mixed",
+    "event_count": 1000000,
+    "seed": 42,
+    "levels": 1000,
+    "sha256": "f607056fe5724e550a18b44b4ebe5025e96d7a188f0ef80a5830a47305ad540e",
+    "compressed_bytes": 12666112,
+    "command": "python3 generate_orders.py --scenario mixed --events 1000000 --seed 42 --levels 1000 --out work/benchmark_inputs/mixed_m1000000_s42_p1000.jsonl.gz"
+  }
+]

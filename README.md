@@ -8,6 +8,8 @@ This repository is linked from the course folder as `50_code/`.
 | Path | Purpose |
 |---|---|
 | `Class1-2/` | Code for the Classes 1–2 slides, including the runtime and profiling figures |
+| `Class3/` | Code for the Class 3–4 slides; see `Class3/README.md` to reproduce the profiling figures |
+| `Class3/data/` | Hourly prices for the Class 3 lab (Bitcoin, gold, 38 more assets; S&P 500 via a fetch script); see `Class3/data/README.md` |
 | `Submissions/` | Place your own lab and exercise files here |
 
 Instructor literature crawlers and glossary generators stay in the course

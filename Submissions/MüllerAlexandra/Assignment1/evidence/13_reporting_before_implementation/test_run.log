@@ -1,0 +1,37 @@
+stage: 13_reporting_before_implementation
+started_utc: 2026-11-25T07:40:40.597290+00:00
+finished_utc: 2026-11-25T07:40:41.647530+00:00
+elapsed_seconds: 1.050322
+exit_code: 2
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: ebac18d34c5f812796f184f1240bb8a981dbca48
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0
+collected 217 items / 1 error
+
+=================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_19_reporting.py _________________
+ImportError while importing test module 'C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1\tests\test_19_reporting.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Acer\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_19_reporting.py:11: in <module>
+    from limit_order_book.reporting import collect_dashboard_data, write_dashboard_data
+E   ModuleNotFoundError: No module named 'limit_order_book.reporting'
+=========================== short test summary info ===========================
+ERROR tests/test_19_reporting.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.24s ===============================
+
+=== stderr ===

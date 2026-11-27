@@ -1,0 +1,6 @@
+# Preserve measured-source and archive hashes across checkout platforms.
+* -text
+# Python's csv writer uses standard CRLF record endings.
+*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# The historical snapshot is immutable, including its original whitespace.
+archive/pre_revision/** -whitespace

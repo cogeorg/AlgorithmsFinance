@@ -1,0 +1,22 @@
+{
+  "python": "3.14.6",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+  "seed": 42,
+  "levels": 1000,
+  "timing": "perf_counter",
+  "v1_sha256": "63ba639d51527c31aa6175f62b355bd6d56c87d6f3fd8c4b24ee40c54b8c9527",
+  "input_sha256": {
+    "buildup_1000": "2b1a45d97f64dd90dcd3ff73f32e124518ddf159ff436d364aed3a9202ab9b74",
+    "buildup_10000": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5",
+    "crowded_1000": "30053d0b678d452ff32b6e08fab431ef6d6676829f227686bbb1159fedfa306e",
+    "crowded_10000": "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6",
+    "mixed_1000": "676598d8c2a1430422228d3acf7d54d28f3545e18d5d235c43e2fc15aafa8e55",
+    "mixed_10000": "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16",
+    "sweep_1000": "96c054ce17ff1f2586d2c94d11529b0286246b0fdc553a7447d98142d7a70d42",
+    "sweep_10000": "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f",
+    "cancel_churn_1000": "2994e992735f3a2a324c6832d8883570e486cbf1a6761b3174d2a5014bf5b2d6",
+    "cancel_churn_10000": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933"
+  }
+}

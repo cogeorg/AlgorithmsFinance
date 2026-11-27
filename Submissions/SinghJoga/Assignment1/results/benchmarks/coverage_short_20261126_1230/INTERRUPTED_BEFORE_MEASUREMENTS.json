@@ -1,0 +1,8 @@
+{
+  "status": "interrupted_before_measurements",
+  "command": ".\\.venv\\Scripts\\python.exe benchmarks\\run_benchmarks.py --run-id coverage_short_20261126_1230 --scenarios sweep,cancel_churn --events 100000 --seeds 42,43,44 --primary-time-limit-seconds 30 --latency-time-limit-seconds 1 --memory-time-limit-seconds 1 --state-peaks-time-limit-seconds 1 --counter-time-limit-seconds 1 --profile-time-limit-seconds 1 --memory-limit-mib 4096",
+  "reason": "The CLI scenario filter still generated fixed-book, queue-concentration, and anchored-churn inputs. The process was stopped before any measurement phase records were written to avoid rerunning completed experiments.",
+  "measurement_records_written": 0,
+  "generated_inputs_preserved": true,
+  "no_workers_left_running": true
+}

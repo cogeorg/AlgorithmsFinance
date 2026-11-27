@@ -1,0 +1,16 @@
+{
+  "test_data_generator.py": "d8ed30ffd5dc0474afd8d33fa56022feb97bff77f102617c7236db1d98824103",
+  "benchmark.py": "fc009f142cba45562102db362ee587a5bbc91bfcd8917a06985b32bee33b2f8e",
+  "test_search.py": "e6c639f7d8a8a71b6bd2eec696a21d75f88fea78b14e563fafe4bb43e1ff0dc8",
+  "PROGRESS.md": "e483fa48bc2f132bdfbcb990b0a15adf4633008215473a661c53e1a637de9b10",
+  "dashboard.html": "a549599a2942ca436ea750afade7bf51a2a0c0f6b10baf29b846d3b33aaac6e5",
+  "README.md": "0a748f7c64d470f29e06aa409f85af45ed10988ceff1b1dc53b303d97a2bed66",
+  "dashboard.py": "f7e8ea29228c5229e888f0c8c437058d8808498ae80cb7ad2afe977326bba3ca",
+  "search.py": "ae475ffa8b0cbffc26f085f36294cbdf4a0cd21440d05967ee12c2dab99532cb",
+  "AGENTS.md": "201294400494ef9a95b642838b3e6ab3a1e874a93e6a10fd237cd333fd3a42b6",
+  "data_generator.py": "7bc52593875830bedead5ff5d05dab6b2e225bbea8ab3338a9a085e873974d6c",
+  "AI_USAGE.md": "afca21c2269739b587eb099325ffbd11d9642dc4fa980590355a40d6808cecc1",
+  "results/memory.csv": "6ab05a21c9f930aed8b7db3a9df70b1b2154a509c1f97f81c3b7a40d87220906",
+  "results/README.md": "f75a71aafe7c42930bd133915bff9fdb1580cd34bcdf2f1f756050db902e1f40",
+  "results/timing.csv": "d1f4c4772142ff8e64eb4a82a511237ce4a961f32b34bce6c9b60cb6a77a39fd"
+}

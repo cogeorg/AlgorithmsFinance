@@ -1,0 +1,62 @@
+# Report factual cross-check (2026-11-25)
+
+Draft reviewed at d885f6e. Only factual replacements; structure and style retained.
+All benchmark values read from committed blobs, not local/new smoke results.
+At the original d885f6e cross-check FINAL_SELECTION.md was unchanged; it was subsequently edited in 5785e9f (including 25/27 wording) and corrected in the latest fix, 3e9ebfe. This ledger describes the original report replacements, not an unchanged selection document.
+
+| # | Old | New | Source |
+|---|---|---|---|
+| 1 | On the five official workloads at 10,000 events B3r is 21x to 186x faster than the baseline A; | On the four non-churn official workloads at 10,000 events B3r is 21x to 186x faster than the baseline A (median speedup across seeds); | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv |
+| 2 | while B3r needs under half a second. | while B3r needs under half a second (median across seeds). | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv |
+| 3 | one shared, ordered validator for all versions | one shared, ordered validator for A through B3r; B3r_fast has an equivalent fast path | SPEC.md: B3r_fast correctness gates G1; 01_code/lob/book_b3r_fast.py |
+| 4 | empty levels are removed lazily. | keys of emptied levels are removed lazily. | SPEC.md: B3/B3r data structures; 01_code/lob/book_b3.py _empty_level |
+| 5 |     m = L.head; q = min(e.qty, m.qty); emit fill(m, e, p, q)<br>    if m.qty == 0: L.popleft(); del orders[m.id] |     m = L.head; q = min(e.qty, m.qty); emit fill(m, e, p, q)<br>    e.qty -= q; m.qty -= q<br>    if m.qty == 0: L.popleft(); del orders[m.id]; L.live -= 1 | SPEC.md: matching rules 2-3, I7; 01_code/lob/book_b3.py _match |
+| 6 | **Invariants** checked after every accepted event (`SPEC.md` I1–I7): the resting book is never crossed; every resting quantity is positive; no order is stored twice; within a price, orders are in arrival (`seq`) order, never identifier order; fills execute at the maker's price; a partially filled maker keeps its position; rejected events leave state and last `seq` unchanged. For B3r additionally: inspection never shows dead records or empty levels. | **Invariants** checked after every accepted event (`SPEC.md` I1-I7): the resting book is never crossed (I1); every resting quantity is positive (I2); no order is stored twice (I3); orders follow price-time priority (I4); inspection shows no dead records or empty levels (I5); last `seq` tracks the last accepted event (I6); cached counts equal their members (I7). Matching rules 2-3 additionally require maker-price execution and a partially filled maker keeping its position; rejected events leave the book and last `seq` unchanged. | SPEC.md: Invariants I1-I7, matching rules 2-3, rejection atomicity |
+| 7 | a cancel removes the record from `orders` and its residual from the level's live count in one step. | a cancel removes the record from `orders` and decrements the level's live order count by one. | SPEC.md: I7; 01_code/lob/book_b.py _process CANCEL |
+| 8 | &#124; Full test suite / attack suite &#124; 1,032 / 1,995 tests pass &#124; | &#124; Committed Phase 5b full test suite / attack suite &#124; 1,032 / 1,995 tests pass &#124; | 05_evidence/clarity-all-tests.xml; 05_evidence/robustness-attack-tests.xml |
+| 9 | L levels emptied by it, S stale entries skipped, M incoming events. | L levels emptied by it, S stale deque entries skipped, J stale heap roots popped, H allocated price-table capacity, M incoming events. | SPEC.md: B3 bounds (J, K, H), D1 inheritance and heap/deque cleanup |
+| 10 | &#124; Insert, non-crossing &#124; O(B) &#124; O(1) expected; O(log P) if a new level is created &#124; | &#124; Insert, non-crossing &#124; O(B) &#124; O(1) expected base; O(log(P+1)) for a new heap key, plus pending root cleanup O(J log(P+1)) &#124; | SPEC.md: B3 Noncrossing limit/New level bounds, D1 |
+| 11 | &#124; Insert/market sell with F fills &#124; O((F+1)·B) worst &#124; O(F + L·log P + S) amortized; S is paid by earlier cancels &#124; | &#124; Insert/market sell with F fills &#124; O((F+1)(B+1)) worst &#124; O(F + L + S + J log(P+1) + 1) expected amortized, plus new residual-key insertion; deque/rebuild work charged to prior removals &#124; | SPEC.md: Version A bounds; B3 Market sell/Crossing limit bounds; D1 |
+| 12 | &#124; Best bid/ask &#124; O(B) &#124; O(1) amortized (stale pops paid by level removals) &#124; | &#124; Best bid/ask &#124; O(B) &#124; O(1) expected when the root is live; O(J log(P+1)+1) expected amortized with stale-root cleanup &#124; | SPEC.md: B3 Best bid/ask; D1 retains logarithmic heap pops |
+| 13 | &#124; Snapshot &#124; O(B log B) &#124; O(B + P log P) &#124; | &#124; Snapshot &#124; O(B log B) &#124; O(H + B + P log(P+1) + 1) expected; allocated-table scan included &#124; | SPEC.md: B3 Snapshot/storage bounds; D1 |
+| 14 | &#124; Space &#124; O(B) &#124; O(B + P) live, plus stale ≤ max(live, 32) per level and ≤ max(P, 32) heap keys per side &#124; | &#124; Space &#124; O(B) &#124; O(B + P + 1) logical live/stale storage; stale deque entries <= max(live, 32) per level and stale heap keys <= max(P, 32) per side; allocated hash capacity extra &#124; | SPEC.md: B1 deque bound, B3 allocated capacity, D1 per-side stale-key bound |
+| 15 | Each cancel pays two credits: one for skipping or popping its dead record later, one for copying it once during compaction. | Each cancelled record funds its later skip, or at most two compaction visits (itself and one survivor). | SPEC.md: cancellation-credit compaction argument |
+| 16 | a rebuild or a purge of many stale heap keys costs O(live + stale), measured at 57 ms in an adversarial case (section 9). | a rebuild costs O(live + stale); purging J stale heap roots costs O(J log(P+1)+1), measured at 57 ms in an adversarial case (section 9). | SPEC.md: D1 rebuild bound and inherited B3 heap-pop bound; 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/latency.csv |
+| 17 | &#124; crowded &#124; 17x &#124; 186x &#124; > 1,300x (A stopped) &#124; | &#124; crowded &#124; 17x &#124; 186x &#124; > 1,299x (A stopped) &#124; | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv: median lower bound 1299.2643132694 |
+| 18 | A 200 % sale costs the same as 100 %: | A 200 % sale does the same matching work as 100 %: | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv; summary.csv retains different measured durations |
+| 19 | (167x vs 189x at 10k) | (189x vs 167x at 10k) | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv: queue levels4 vs levels1000 |
+| 20 | on buildup at 100k has median 4.1 us and p99 11.2 us, | on buildup at 100k has median 4.1 us and p99 11.2 us (medians across seeds), | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/latency.csv |
+| 21 | Rare maxima of tens of milliseconds in large runs are Python generation-2 garbage collections, not order-book work: in a 100,000-order deep book the slowest event (26 ms) contained the one gen-2 collection, and with GC disabled the maximum fell to 3.5 ms. | Some rare maxima of tens of milliseconds in large runs are Python garbage collections, not order-book work: in the attack's 400,000-order B1/B3 runs GC accounted for 44-46 ms events; with GC disabled the maximum was 10-13 ms (dict resize). | 07_attack/ATTACK_REPORT.md ATK-P7; 07_attack/logs/P8_latency.txt |
+| 22 | on cancel_churn both stay around 10 KB. | on cancel_churn A stays around 1.4 KB and B3r around 6.8 KB. | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv peak rows |
+| 23 | scans the whole side F+1 times | scans the whole side up to F+1 times | SPEC.md: A O((F+1)(B+1)); 01_code/lob/book_a.py _match |
+| 24 | on buildup, A's duplicate-id check scans | on buildup with seed 42, A's duplicate-id check scans | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv |
+| 25 | (three `isinstance`-based integer checks per event) | (up to three `isinstance`-based integer checks per event) | SPEC.md validation check-order table; 01_code/lob/validation.py |
+| 26 | 461 vs 463 ms on buildup | 461 vs 463 ms on buildup, seed 42 | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv parse/replay |
+| 27 | on any official or own adversarial scenario, or keeps memory | on any official or own adversarial scenario at its largest measured size, or keeps memory | SPEC.md: pre-registered robustness filter |
+| 28 | (2) among survivors, the lowest geometric mean of the 15 official 100k median replay times; | (2) among survivors, the lowest geometric mean of the 15 official 100k median replay times, preferring the simpler variant within 5 %; | SPEC.md: pre-registered speed/simplicity rule |
+| 29 | Session-to-session noise of up to ±30-50 % appeared in individual cells; | Session-to-session differences approaching 2x appeared in individual cells; | 03_results/runs/20261122T200528Z_8a22753_phase4_b3r_fast_20261122/fast_acceptance.json; FINAL_SELECTION.md section 4 |
+| 30 | `…130145Z_00bb1ad_phase4_b3r_20261122/` | `03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/` | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/env.json |
+| 31 | `…200528Z_8a22753_…b3r_fast…/` and `…210801Z_e4fd928_…rematch…/` | `03_results/runs/20261122T200528Z_8a22753_phase4_b3r_fast_20261122/` and `03_results/runs/20261122T210801Z_e4fd928_phase4_b3r_fast_rematch_20261122/` | 00_docs/FINAL_SELECTION.md Sources; respective env.json files |
+| 32 | single-threaded CPython timings on one laptop (section 10). | single-threaded CPython timings on one laptop (env.json, section 11). | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/env.json |
+| 33 | Protocol (README "Runtime"): | Protocol (`SPEC.md`, "Fast" means; A deviations in section 10): | SPEC.md: Fast means and Declared baseline scope deviation |
+| 34 | Large inputs are regenerated with the supplied `generate_orders.py` (commands and SHA-256 in `00_docs/DATA_MANIFEST.json`); | Large inputs are regenerated with the supplied `generate_orders.py` and our own generators (commands and SHA-256 in `00_docs/DATA_MANIFEST.json` and `00_docs/POST_ATTACK_MANIFEST.json`); | 00_docs/DATA_MANIFEST.json and 00_docs/POST_ATTACK_MANIFEST.json command/kind fields |
+
+| 35 | &#124; sweep &#124; 10x &#124; 139x &#124; | &#124; sweep &#124; 11x &#124; 139x &#124; | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv: 1k seed-median ratio 10.535659638968633 |
+| 36 | Peak traced memory on the official workloads at 10k (excluding cancel_churn): | Peak traced memory on the official workloads at 10k (medians across seeds, excluding cancel_churn): | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv |
+| 37 | (13x slower, because a Python dict keeps its peak capacity) | (13x slower than B3, because a Python dict keeps its peak capacity) | 07_attack/ATTACK_REPORT.md ATK-P8 |
+| 38 | one (299x slower). | one (299x slower than B3). | 07_attack/ATTACK_REPORT.md ATK-P8 |
+| 39 | 57 ms for B3r vs 0.03 ms for B1. | 57.7 ms for B3r vs 0.03 ms for B1. | 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv: replay median 0.05766059999587014 s |
+
+| 40 | 17/17 killed, plus 2 rebuild-trap mutants | 17/17 killed; 2 rebuild-trap scenarios checked by work-count tests | 02_tests/test_mutants.py; 02_tests/test_b3r.py test_rebuild_scan_work_per_cancel_is_amortized_at_most_two |
+
+Unchanged numeric claims were also checked: section 6 speedup medians, A stops,
+1M times, throughput, liquidation construction/sales/makers/levels, latency seed medians;
+section 5 exponents; section 7 traced peaks/churn/drift; section 8 scan counts/parse time;
+section 9 geomeans, attack ratios, rebuild counters, spike and both fast decisions.
+Sources/derived values: 05_evidence/*handoff-report-values.txt and handoff-report-check.json.
+Correctness counts/reference checks are attributed historical evidence, not new runs:
+05_evidence/clarity-all-tests.xml, robustness-attack-tests.xml, 00_docs/AI_LOG.md,
+00_docs/FINAL_SELECTION.md and 07_attack/ATTACK_REPORT.md final-B addendum.
+Physical units, years in bibliographic attributions, variable names and experiment
+parameters are not replay measurements. Bibliographic attributions are retained;
+no external literature/network verification was performed.

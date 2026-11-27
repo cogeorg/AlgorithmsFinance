@@ -1,0 +1,59 @@
+label: dashboard-first-check
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py -q --tb=short --basetemp=scratch/pytest-dashboard
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 87ed911f839877c197cd9458b2cd231537955a17
+dirty: True
+python: 3.13.15
+utc: 20261123T185205Z
+exit_code: 1
+duration_s: 22.30
+------------------------------------------------------------
+.........F                                                               [100%]
+================================== FAILURES ===================================
+_____________ test_all_eight_tabs_render_and_headlines_match_csv ______________
+02_tests\test_dashboard.py:81: in test_all_eight_tabs_render_and_headlines_match_csv
+    assert not app.exception, [e.message for e in app.exception]
+E   AssertionError: ["'scenario_losses'"]
+E   assert not ElementList(_list=[Exception(message="'scenario_losses'", stack_trace=['File "C:\\Users\\laubu\\dev\\AIF-Lab\\Algorith...tch\']; loss = rematch[\'scenario_losses\'][0]\n                                        ~~~~~~~^^^^^^^^^^^^^^^^^^^'])])
+E    +  where ElementList(_list=[Exception(message="'scenario_losses'", stack_trace=['File "C:\\Users\\laubu\\dev\\AIF-Lab\\Algorith...tch\']; loss = rematch[\'scenario_losses\'][0]\n                                        ~~~~~~~^^^^^^^^^^^^^^^^^^^'])]) = AppTest(\n    _script_path='C:\\Users\\laubu\\dev\\AIF-Lab\\AlgorithmsFinance\\Submissions\\BuehlerLaurin\\Assignment1\...\n                4: Info()\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).exception
+---------------------------- Captured stderr call -----------------------------
+2026-11-23 19:52:15.228 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-23 19:52:26.767 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 936, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\04_dashboard\app.py", line 12, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\04_dashboard\views.py", line 295, in main
+    with tab: render()
+              ~~~~~~^^
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\04_dashboard\views.py", line 112, in variants
+    rematch = self.b['rematch']; loss = rematch['scenario_losses'][0]
+                                        ~~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'scenario_losses'
+------------------------------ Captured log call ------------------------------
+WARNING  streamlit.runtime.scriptrunner_utils.script_run_context:script_run_context.py:522 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ERROR    streamlit.error_util:error_util.py:117 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 936, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\04_dashboard\app.py", line 12, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\04_dashboard\views.py", line 295, in main
+    with tab: render()
+              ~~~~~~^^
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\04_dashboard\views.py", line 112, in variants
+    rematch = self.b['rematch']; loss = rematch['scenario_losses'][0]
+                                        ~~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'scenario_losses'
+=========================== short test summary info ===========================
+FAILED 02_tests/test_dashboard.py::test_all_eight_tabs_render_and_headlines_match_csv
+1 failed, 9 passed in 20.45s

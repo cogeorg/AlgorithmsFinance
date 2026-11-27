@@ -1,0 +1,12 @@
+label: final-fix-dashboard-tests
+command: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\.venv\Scripts\python.exe -m pytest -q 02_tests/test_dashboard.py 02_tests/test_submission_robustness.py --tb=short --basetemp=scratch/final-fix-dashboard --junitxml=05_evidence/final-fix-dashboard-tests.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3e9ebfe152605d80f48c2e9d703b965eda246c78
+dirty: True
+python: 3.13.15
+utc: 20261125T220130Z
+exit_code: 0
+duration_s: 57.97
+------------------------------------------------------------
+..................................................                       [100%]
+50 passed in 56.31s

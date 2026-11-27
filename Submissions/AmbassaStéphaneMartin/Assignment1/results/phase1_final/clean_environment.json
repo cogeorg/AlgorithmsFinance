@@ -1,0 +1,126 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "test_order_book.py",
+        "--implementation",
+        "baseline"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.23341590003110468
+    },
+    {
+      "command": [
+        "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "dispatcher.py",
+        "data/worked_example.jsonl",
+        "--implementation",
+        "baseline"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.10134870000183582
+    },
+    {
+      "command": [
+        "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "test_order_book.py",
+        "--implementation",
+        "revised"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2073302999488078
+    },
+    {
+      "command": [
+        "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "dispatcher.py",
+        "data/worked_example.jsonl",
+        "--implementation",
+        "revised"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.10379079997073859
+    },
+    {
+      "command": [
+        "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "test_order_book.py",
+        "--implementation",
+        "compare"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5109919999958947
+    },
+    {
+      "command": [
+        "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "dispatcher.py",
+        "data/worked_example.jsonl",
+        "--implementation",
+        "compare"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.09740299999248236
+    },
+    {
+      "command": [
+        "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-m",
+        "venv",
+        ".venv_phase1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 5.7560457000508904
+    },
+    {
+      "command": [
+        ".venv_phase1\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "requirements.txt"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 40.91843149997294
+    },
+    {
+      "command": [
+        ".venv_phase1\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_order_book",
+        "test_price_heaps",
+        "test_lazy_cancellation",
+        "test_benchmark",
+        "test_benchmark_report",
+        "test_phase1_results"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.430048700014595,
+      "tests": 107,
+      "runner_seconds": 1.813
+    },
+    {
+      "command": [
+        ".venv_phase1\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "freeze"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.44848580000689253
+    }
+  ],
+  "requirements_sha256": "d5f437990e5a2c8787f78fdb8f56e0c409ad2794abac20000b42b8df5826e2f4"
+}

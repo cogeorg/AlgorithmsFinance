@@ -1,0 +1,75 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "fifo_one_price",
+ "description": "Three buys at one price, ids z9/a1/m5 (id order != arrival order), seq with gaps; a 9-unit sell fills them in arrival order, the last one partially.",
+ "covers": [
+  "FIFO at one price",
+  "multiple makers at one price",
+  "identifier order differs from arrival order",
+  "seq gaps allowed",
+  "partial fill keeps remainder"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e10",
+   "order_id": "z9",
+   "status": "resting",
+   "unfilled_qty_units": 3,
+   "fills": []
+  },
+  {
+   "event_id": "e20",
+   "order_id": "a1",
+   "status": "resting",
+   "unfilled_qty_units": 4,
+   "fills": []
+  },
+  {
+   "event_id": "e30",
+   "order_id": "m5",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e40",
+   "order_id": "s1",
+   "status": "filled",
+   "unfilled_qty_units": 0,
+   "fills": [
+    {
+     "maker_id": "z9",
+     "taker_id": "s1",
+     "price_ticks": 100,
+     "qty_units": 3
+    },
+    {
+     "maker_id": "a1",
+     "taker_id": "s1",
+     "price_ticks": 100,
+     "qty_units": 4
+    },
+    {
+     "maker_id": "m5",
+     "taker_id": "s1",
+     "price_ticks": 100,
+     "qty_units": 2
+    }
+   ]
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "m5",
+   "side": "BUY",
+   "price_ticks": 100,
+   "qty_units": 3,
+   "arrival_seq": 30
+  }
+ ],
+ "best_bid": 100,
+ "best_ask": null
+}

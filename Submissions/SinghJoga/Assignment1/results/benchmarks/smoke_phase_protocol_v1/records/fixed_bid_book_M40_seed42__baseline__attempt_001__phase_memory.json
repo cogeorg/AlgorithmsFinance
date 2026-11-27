@@ -1,0 +1,1501 @@
+{
+  "artifact_directory": "results\\benchmarks\\smoke_phase_protocol_v1\\artifacts\\fixed_bid_book_M40_seed42__baseline__attempt_001\\memory",
+  "attempt": 1,
+  "case": {
+    "available_bid_qty_units": 152000000,
+    "case_id": "fixed_bid_book_M40_seed42",
+    "event_count": 41,
+    "experiment": "fixed_liquidation",
+    "generator_settings": {
+      "generator": "fixed bid-book builder",
+      "orders": 40,
+      "price_levels": 40,
+      "quantity_rule": "seeded integer multiples of 1,000,000 units",
+      "seed": 42
+    },
+    "initial_book_event_count": 40,
+    "input_checksums": {
+      "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+    },
+    "input_paths": [
+      "results\\benchmarks\\smoke_phase_protocol_v1\\inputs\\fixed_bid_book_M40_seed42.jsonl"
+    ],
+    "scenario": "fixed_bid_book",
+    "seed": 42,
+    "sell_quantities": [
+      {
+        "percent": 10,
+        "qty_units": 15200000
+      },
+      {
+        "percent": 100,
+        "qty_units": 152000000
+      },
+      {
+        "percent": 200,
+        "qty_units": 304000000
+      }
+    ]
+  },
+  "config_id": "fixed_bid_book_M40_seed42__baseline",
+  "duration_until_stop_seconds": 0.38442520005628467,
+  "failure": null,
+  "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+  "measurement_definition_id": "tracemalloc-checkpoints-v1",
+  "memory_limit_mib": 2048,
+  "peak_working_set_bytes_observed": 25337856,
+  "phase_budget_seconds": 60.0,
+  "phase_job": "memory",
+  "phase_settings": {
+    "event_count": 41,
+    "generator_settings": {
+      "generator": "fixed bid-book builder",
+      "orders": 40,
+      "price_levels": 40,
+      "quantity_rule": "seeded integer multiples of 1,000,000 units",
+      "seed": 42
+    },
+    "input_checksums": {
+      "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+    },
+    "memory_checkpoint_fractions": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ]
+  },
+  "progress_file": "results\\benchmarks\\smoke_phase_protocol_v1\\records\\fixed_bid_book_M40_seed42__baseline__attempt_001__phase_memory.progress.jsonl",
+  "record_file": "results\\benchmarks\\smoke_phase_protocol_v1\\records\\fixed_bid_book_M40_seed42__baseline__attempt_001__phase_memory.json",
+  "record_type": "phase_attempt",
+  "rows": [
+    {
+      "active_order_peak": null,
+      "active_orders": 11,
+      "checkpoint": "after_event_11",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 11,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 11,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 11,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 11,
+      "repeat": 1,
+      "requested_sell_qty_units": 15200000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 10,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 3830,
+      "traced_peak_bytes": 4015,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 21,
+      "checkpoint": "after_event_21",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 21,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 21,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 21,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 21,
+      "repeat": 1,
+      "requested_sell_qty_units": 15200000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 10,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 6957,
+      "traced_peak_bytes": 7142,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 31,
+      "checkpoint": "after_event_31",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 31,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 31,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 31,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 31,
+      "repeat": 1,
+      "requested_sell_qty_units": 15200000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 10,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 10084,
+      "traced_peak_bytes": 10517,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 40,
+      "checkpoint": "after_event_40",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 40,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 40,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 40,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 40,
+      "repeat": 1,
+      "requested_sell_qty_units": 15200000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 10,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 13027,
+      "traced_peak_bytes": 13620,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 36,
+      "checkpoint": "final",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 41,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 36,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 36,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 36,
+      "repeat": 1,
+      "requested_sell_qty_units": 15200000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 10,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 16331,
+      "traced_peak_bytes": 16651,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 11,
+      "checkpoint": "after_event_11",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 11,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 11,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 11,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 11,
+      "repeat": 1,
+      "requested_sell_qty_units": 152000000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 100,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 1303,
+      "traced_peak_bytes": 1672,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 21,
+      "checkpoint": "after_event_21",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 21,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 21,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 21,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 21,
+      "repeat": 1,
+      "requested_sell_qty_units": 152000000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 100,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 1854,
+      "traced_peak_bytes": 2599,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 31,
+      "checkpoint": "after_event_31",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 31,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 31,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 31,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 31,
+      "repeat": 1,
+      "requested_sell_qty_units": 152000000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 100,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 2373,
+      "traced_peak_bytes": 4838,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 40,
+      "checkpoint": "after_event_40",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 40,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 40,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 40,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 40,
+      "repeat": 1,
+      "requested_sell_qty_units": 152000000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 100,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 2892,
+      "traced_peak_bytes": 5357,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 0,
+      "checkpoint": "final",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 41,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 0,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 0,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 0,
+      "repeat": 1,
+      "requested_sell_qty_units": 152000000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 100,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 9860,
+      "traced_peak_bytes": 10212,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 11,
+      "checkpoint": "after_event_11",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 11,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 11,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 11,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 11,
+      "repeat": 1,
+      "requested_sell_qty_units": 304000000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 200,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 1295,
+      "traced_peak_bytes": 1664,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 21,
+      "checkpoint": "after_event_21",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 21,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 21,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 21,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 21,
+      "repeat": 1,
+      "requested_sell_qty_units": 304000000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 200,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 1846,
+      "traced_peak_bytes": 2591,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 31,
+      "checkpoint": "after_event_31",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 31,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 31,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 31,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 31,
+      "repeat": 1,
+      "requested_sell_qty_units": 304000000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 200,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 2365,
+      "traced_peak_bytes": 4830,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 40,
+      "checkpoint": "after_event_40",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 40,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 40,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 40,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 40,
+      "repeat": 1,
+      "requested_sell_qty_units": 304000000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 200,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 2884,
+      "traced_peak_bytes": 5349,
+      "version": "baseline"
+    },
+    {
+      "active_order_peak": null,
+      "active_orders": 0,
+      "checkpoint": "final",
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "current_result_retained": true,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "event_position": 41,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "a05b529b50cb2bf08bae55300b0f8f330aacf78c4c8d108817cd4663dbe3713f",
+      "measurement_definition_id": "tracemalloc-checkpoints-v1",
+      "measurement_phase": "memory",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "occupied_price_levels": 0,
+      "phase": "memory",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "memory_checkpoint_fractions": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "physical_heap_entries": 0,
+      "physical_heap_members": 0,
+      "physical_id_entries": 0,
+      "physical_order_entries": 0,
+      "physical_price_level_entries": 0,
+      "physical_queue_entries": 0,
+      "physical_storage_entries": 0,
+      "repeat": 1,
+      "requested_sell_qty_units": 304000000,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_percent": 200,
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": 3908,
+      "traced_peak_bytes": 5868,
+      "version": "baseline"
+    }
+  ],
+  "status": "completed",
+  "time_limit_seconds": 60.0,
+  "version": "baseline"
+}

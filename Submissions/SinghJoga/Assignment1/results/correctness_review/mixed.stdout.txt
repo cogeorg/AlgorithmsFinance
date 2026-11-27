@@ -1,0 +1,12 @@
+{
+  "scenario": "mixed",
+  "input": "data\\mixed_10000.jsonl.gz",
+  "input_sha256": "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16",
+  "target_events": 10000,
+  "status": "completed",
+  "completed_events": 10000,
+  "max_active_orders": 1588,
+  "started_elapsed_seconds": 0.0,
+  "elapsed_seconds": 39.621622199891135,
+  "last_accepted_seq": 10000
+}

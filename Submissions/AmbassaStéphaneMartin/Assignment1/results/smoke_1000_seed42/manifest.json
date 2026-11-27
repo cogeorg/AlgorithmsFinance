@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-25T19:42:26.919311+00:00",
+  "status": "complete",
+  "environment": {
+    "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "implementation": "CPython",
+    "dependencies": {
+      "third_party_required": [],
+      "stdlib": "3.14.5",
+      "zlib_build": "1.3.1.zlib-ng",
+      "zlib_runtime": "1.3.1.zlib-ng"
+    },
+    "machine": {
+      "os": "Windows-11-10.0.26300-SP0",
+      "system": "Windows",
+      "release": "11",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+      "logical_cpus": 22
+    },
+    "clock": {
+      "name": "perf_counter",
+      "resolution_seconds": 1e-07
+    },
+    "git_head": "7494cca3fe6ed9e61e4f2c10d03ad80960f333a2",
+    "git_dirty": true,
+    "git_status": "?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/benchmark.py\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/results/\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/test_benchmark.py\"",
+    "source_sha256": {
+      "benchmark.py": "3ee0b0a464c04bb6b7537d79c2e0d657e9c2ef90925a468c7fac5d6c6431636e",
+      "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+      "order_book.py": "dcbdb2c0e7173e8116fa1c51b287a93cf422c140f74f49f2b5c49a5b025c39a6",
+      "dispatcher.py": "4c4652e95d8112fcdc574e98f41ea494326aa70b5a148b9b892e468784fffce3",
+      "test_order_book.py": "6f143b1616e6c21225b7de12fb4f8853e70a0aff32b6045ca3c3ef2501110595",
+      "test_price_heaps.py": "90498d2ac8d25fb2d669bcf671b954dc42267b866bf0ee89c2ff747614974c3a",
+      "test_lazy_cancellation.py": "f9d7028adb6a4fdbb33599a398755c561f1ec7ba6b10e6a558b6feca4658b423",
+      "test_benchmark.py": "a3a2f6d075ee44a6b985d82da4885b27a20381fef5b3db4886fb178ecbe06a7f"
+    },
+    "worker_environment": {
+      "PYTHONHASHSEED": "0",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "garbage_collection": "enabled; explicit collection before each fresh-book repetition"
+  },
+  "boundaries": {
+    "clock": "time.perf_counter; GC enabled, collect before each repetition",
+    "io": "Warm-cache reads, gzip decompression and UTF-8/JSON parsing timed separately; validation and SHA-256 checks outside clocks. Five reads plus an untimed warm-up.",
+    "timing": "Preloaded events; direct engine classes; five fresh books and an untimed fresh-book warm-up. No inspection, counters, deepcopy or comparison. Replay discards each returned result; single-sale retains its result until the clock stops. Result creation is included.",
+    "total_compute": "Initialization + construction + replay, summed within each repetition. I/O excluded. Summary is median of these sums, not sum of medians.",
+    "latency": "Separate instrumented pass; clocks surround each process_event call and result disposal for replay. Sample-list append excluded. No overhead subtraction. Single-sale experiments use five fresh books/samples.",
+    "percentiles": "Median uses statistics.median (average middle pair for even n); P95/P99 use nearest rank, sorted[ceil(p*n)-1], without interpolation.",
+    "memory": "Separate worker process and separate tracemalloc run per fresh book. Input, imports and warm-up excluded; book construction, setup, engine allocations and transient results included. No saved event-result history. Current bytes measured after GC; peak includes temporary cleanup and instrumentation allocations. Tracemalloc is Python allocation memory, not process RSS. Five repetitions; construction checkpoint included.",
+    "diagnostics": "Separate untimed pass; counters after every setup/replay event. Final canonical snapshot and ordered-result digests compare versions. Diagnostic costs are never part of primary timing.",
+    "limits": "Per-worker wall timeout and global campaign deadline are enforced by the parent. Compressed/decompressed payload limits checked before parse. Traced-allocation cap checked between memory-run events; an individual event can exceed it before the check. No OS RSS/CPU hard cap.",
+    "sale": "Setup uses a fresh identical passive bid book per sale. Construction timed separately. Integer ceil(depth * percent / 100); 10%, 100%, 200%. Throughput counts one sale, not its setup events.",
+    "queue_concentration": "Same order count, requested 4 versus 1000 levels. Actual occupied levels are min(order_count, requested_levels).",
+    "churn": "An old active head remains while same-price orders are added/cancelled; capture retained storage and memory before final head cancellation and after it. Stream size is 2 * requested_count + 2."
+  },
+  "command": [
+    "benchmark.py",
+    "run",
+    "--counts",
+    "1000",
+    "--seeds",
+    "42",
+    "--scenarios",
+    "buildup",
+    "crowded",
+    "mixed",
+    "sweep",
+    "cancel_churn",
+    "--experiments",
+    "replay",
+    "--out",
+    "results/smoke_1000_seed42",
+    "--worker-seconds",
+    "60",
+    "--campaign-seconds",
+    "300",
+    "--label",
+    "smoke-validation"
+  ],
+  "versions": [
+    "baseline",
+    "revised"
+  ],
+  "phases": [
+    "io",
+    "timing",
+    "latency",
+    "memory",
+    "diagnostics"
+  ],
+  "repetitions": 5,
+  "workloads": [
+    {
+      "case_id": "replay_buildup_n1000_s42_l1000",
+      "experiment": "replay",
+      "scenario": "buildup",
+      "seed": 42,
+      "requested_count": 1000,
+      "levels": 1000,
+      "sale_percent": null,
+      "construction_event_count": 0,
+      "source_event_count": 1000,
+      "event_count": 1000,
+      "actual_controlled_price_levels": null,
+      "source": {
+        "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\buildup_c146ca395f0ea6ac.jsonl.gz",
+        "sha256": "2b1a45d97f64dd90dcd3ff73f32e124518ddf159ff436d364aed3a9202ab9b74",
+        "metadata": {
+          "synthetic": true,
+          "calibrated_to_exchange_data": false,
+          "scenario": "buildup",
+          "events": 1000,
+          "seed": 42,
+          "levels": 1000,
+          "generator": "generate_orders.events / random.Random",
+          "python": "3.14.5",
+          "price_tick_usd": "0.01",
+          "quantity_unit_btc": "0.00000001",
+          "compressed_bytes": 13502,
+          "sha256": "2b1a45d97f64dd90dcd3ff73f32e124518ddf159ff436d364aed3a9202ab9b74",
+          "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+          "benchmark_source_sha256": "3ee0b0a464c04bb6b7537d79c2e0d657e9c2ef90925a468c7fac5d6c6431636e"
+        },
+        "reused": false
+      }
+    },
+    {
+      "case_id": "replay_crowded_n1000_s42_l1000",
+      "experiment": "replay",
+      "scenario": "crowded",
+      "seed": 42,
+      "requested_count": 1000,
+      "levels": 1000,
+      "sale_percent": null,
+      "construction_event_count": 0,
+      "source_event_count": 1000,
+      "event_count": 1000,
+      "actual_controlled_price_levels": null,
+      "source": {
+        "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\crowded_db937494347b523f.jsonl.gz",
+        "sha256": "30053d0b678d452ff32b6e08fab431ef6d6676829f227686bbb1159fedfa306e",
+        "metadata": {
+          "synthetic": true,
+          "calibrated_to_exchange_data": false,
+          "scenario": "crowded",
+          "events": 1000,
+          "seed": 42,
+          "levels": 1000,
+          "generator": "generate_orders.events / random.Random",
+          "python": "3.14.5",
+          "price_tick_usd": "0.01",
+          "quantity_unit_btc": "0.00000001",
+          "compressed_bytes": 11450,
+          "sha256": "30053d0b678d452ff32b6e08fab431ef6d6676829f227686bbb1159fedfa306e",
+          "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+          "benchmark_source_sha256": "3ee0b0a464c04bb6b7537d79c2e0d657e9c2ef90925a468c7fac5d6c6431636e"
+        },
+        "reused": false
+      }
+    },
+    {
+      "case_id": "replay_mixed_n1000_s42_l1000",
+      "experiment": "replay",
+      "scenario": "mixed",
+      "seed": 42,
+      "requested_count": 1000,
+      "levels": 1000,
+      "sale_percent": null,
+      "construction_event_count": 0,
+      "source_event_count": 1000,
+      "event_count": 1000,
+      "actual_controlled_price_levels": null,
+      "source": {
+        "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\mixed_1cfe5122ddda6293.jsonl.gz",
+        "sha256": "676598d8c2a1430422228d3acf7d54d28f3545e18d5d235c43e2fc15aafa8e55",
+        "metadata": {
+          "synthetic": true,
+          "calibrated_to_exchange_data": false,
+          "scenario": "mixed",
+          "events": 1000,
+          "seed": 42,
+          "levels": 1000,
+          "generator": "generate_orders.events / random.Random",
+          "python": "3.14.5",
+          "price_tick_usd": "0.01",
+          "quantity_unit_btc": "0.00000001",
+          "compressed_bytes": 12614,
+          "sha256": "676598d8c2a1430422228d3acf7d54d28f3545e18d5d235c43e2fc15aafa8e55",
+          "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+          "benchmark_source_sha256": "3ee0b0a464c04bb6b7537d79c2e0d657e9c2ef90925a468c7fac5d6c6431636e"
+        },
+        "reused": false
+      }
+    },
+    {
+      "case_id": "replay_sweep_n1000_s42_l1000",
+      "experiment": "replay",
+      "scenario": "sweep",
+      "seed": 42,
+      "requested_count": 1000,
+      "levels": 1000,
+      "sale_percent": null,
+      "construction_event_count": 0,
+      "source_event_count": 1000,
+      "event_count": 1000,
+      "actual_controlled_price_levels": null,
+      "source": {
+        "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\sweep_12fe3a319821f392.jsonl.gz",
+        "sha256": "96c054ce17ff1f2586d2c94d11529b0286246b0fdc553a7447d98142d7a70d42",
+        "metadata": {
+          "synthetic": true,
+          "calibrated_to_exchange_data": false,
+          "scenario": "sweep",
+          "events": 1000,
+          "seed": 42,
+          "levels": 1000,
+          "generator": "generate_orders.events / random.Random",
+          "python": "3.14.5",
+          "price_tick_usd": "0.01",
+          "quantity_unit_btc": "0.00000001",
+          "compressed_bytes": 12842,
+          "sha256": "96c054ce17ff1f2586d2c94d11529b0286246b0fdc553a7447d98142d7a70d42",
+          "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+          "benchmark_source_sha256": "3ee0b0a464c04bb6b7537d79c2e0d657e9c2ef90925a468c7fac5d6c6431636e"
+        },
+        "reused": false
+      }
+    },
+    {
+      "case_id": "replay_cancel_churn_n1000_s42_l1000",
+      "experiment": "replay",
+      "scenario": "cancel_churn",
+      "seed": 42,
+      "requested_count": 1000,
+      "levels": 1000,
+      "sale_percent": null,
+      "construction_event_count": 0,
+      "source_event_count": 1000,
+      "event_count": 1000,
+      "actual_controlled_price_levels": null,
+      "source": {
+        "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\cancel_churn_db89c89781f81cf7.jsonl.gz",
+        "sha256": "2994e992735f3a2a324c6832d8883570e486cbf1a6761b3174d2a5014bf5b2d6",
+        "metadata": {
+          "synthetic": true,
+          "calibrated_to_exchange_data": false,
+          "scenario": "cancel_churn",
+          "events": 1000,
+          "seed": 42,
+          "levels": 1000,
+          "generator": "generate_orders.events / random.Random",
+          "python": "3.14.5",
+          "price_tick_usd": "0.01",
+          "quantity_unit_btc": "0.00000001",
+          "compressed_bytes": 11336,
+          "sha256": "2994e992735f3a2a324c6832d8883570e486cbf1a6761b3174d2a5014bf5b2d6",
+          "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+          "benchmark_source_sha256": "3ee0b0a464c04bb6b7537d79c2e0d657e9c2ef90925a468c7fac5d6c6431636e"
+        },
+        "reused": false
+      }
+    }
+  ],
+  "limits": {
+    "worker_wall_seconds": 60.0,
+    "measurement_campaign_wall_seconds": 300.0,
+    "payload_bytes": 134217728,
+    "traced_allocation_bytes": 536870912,
+    "os_rss_hard_limit": null,
+    "preparation": "Generation precedes measurement deadline; no preparation timeout"
+  },
+  "run_kind": "smoke-validation",
+  "finished_utc": "2026-11-25T19:42:40.972681+00:00",
+  "raw_rows": 145,
+  "summary_rows": 45,
+  "diagnostic_comparisons": [
+    {
+      "case_id": "replay_buildup_n1000_s42_l1000",
+      "status": "passed"
+    },
+    {
+      "case_id": "replay_crowded_n1000_s42_l1000",
+      "status": "passed"
+    },
+    {
+      "case_id": "replay_mixed_n1000_s42_l1000",
+      "status": "passed"
+    },
+    {
+      "case_id": "replay_sweep_n1000_s42_l1000",
+      "status": "passed"
+    },
+    {
+      "case_id": "replay_cancel_churn_n1000_s42_l1000",
+      "status": "passed"
+    }
+  ],
+  "completed_jobs": 45
+}

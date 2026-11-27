@@ -1,0 +1,4 @@
+PASS: 54 filter/unit combinations; valid chart coordinates and version curves.
+PASS: empty-query hit rate, no-method state, memory/raw/environment tabs, and CSV download.
+PASS: mobile layout has no page overflow; no browser errors or HTTP requests.
+Browser: 153.0.8010.12

@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.DS_Store
+# Large generated benchmark inputs: regenerate with bench/make_data.py (checksums in results/)
+data/generated/

@@ -1,0 +1,14 @@
+     rerun environment: Python 3.11.18, Linux-7.0.12-linuxkit-aarch64-with-glibc2.41, CPU unknown
+     saved (Bastian): n = 100,000, q = 1, mixed, total: linear_v1 0.13 ms < hash_v1 6.92 ms < binary_v1 20.01 ms < binary_v2 20.50 ms
+     saved (Bastian): n = 100,000, q = 100, mixed, total: hash_v1 9.29 ms < binary_v2 21.76 ms < binary_v1 21.93 ms < linear_v1 130.30 ms
+     rerun (reviewer): n = 100,000, q = 1, mixed, total: linear_v1 0.18 ms < hash_v1 4.94 ms < binary_v1 16.17 ms < binary_v2 16.44 ms
+     rerun (reviewer): n = 100,000, q = 100, mixed, total: hash_v1 5.02 ms < binary_v2 16.01 ms < binary_v1 16.18 ms < linear_v1 218.22 ms
+PASS rerun: for q = 1 linear search has the smallest total
+PASS rerun: for q = 100 the hash set has the smallest total
+FAIL rerun: linear query time grows about 10x per 10x n (10.4x, 51.1x)
+PASS rerun: hash query time is flat in n (max/min 1.01)
+PASS rerun: binary_v2 query phase faster than v1 in all 18 configurations (v2/v1 0.66 to 0.93; v2 not faster in 0)
+     rerun, q = 100 only: v2/v1 0.74 to 0.93
+     rerun total/(prepare+query): 0.67 to 1.81, ranges not overlapping in 15 of 72 (saved: 0.73 to 1.25, 12 of 72)
+
+compare_rerun: 12 lines, 1 FAIL

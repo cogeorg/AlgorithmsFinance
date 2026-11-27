@@ -1,0 +1,327 @@
+{
+  "cases": [
+    {
+      "case_id": "workload_buildup_M25_seed42",
+      "event_count": 25,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 25,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 42,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M25_seed42_levels1000.jsonl.gz": "2da00dcaef8e915a92cc2645a07f90dece5db489f5ee51fba551dbabeb07ac46"
+      },
+      "input_paths": [
+        "results\\benchmarks\\smoke_final_04\\inputs\\buildup_M25_seed42_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "buildup",
+      "seed": 42
+    },
+    {
+      "case_id": "workload_crowded_M25_seed42",
+      "event_count": 25,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 25,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "crowded",
+        "seed": 42,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "crowded_M25_seed42_levels1000.jsonl.gz": "e7220e25f0c4028922d76cdd5ec94b4b6c1397ffce8c112329cefc8c1f633228"
+      },
+      "input_paths": [
+        "results\\benchmarks\\smoke_final_04\\inputs\\crowded_M25_seed42_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "crowded",
+      "seed": 42
+    },
+    {
+      "case_id": "workload_mixed_M25_seed42",
+      "event_count": 25,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 25,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "mixed",
+        "seed": 42,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "mixed_M25_seed42_levels1000.jsonl.gz": "b4ad409f7833c2f67aa8c88ffffa81e9910989dda9c3453f3281858ce0aae934"
+      },
+      "input_paths": [
+        "results\\benchmarks\\smoke_final_04\\inputs\\mixed_M25_seed42_levels1000.jsonl.gz"
+      ],
+      "profile": true,
+      "scenario": "mixed",
+      "seed": 42
+    },
+    {
+      "case_id": "workload_sweep_M25_seed42",
+      "event_count": 25,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 25,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "sweep",
+        "seed": 42,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "sweep_M25_seed42_levels1000.jsonl.gz": "ad7ef476766a1a64c5c202193ea6ae85649e68d6f8de8bd47addc215548f17a2"
+      },
+      "input_paths": [
+        "results\\benchmarks\\smoke_final_04\\inputs\\sweep_M25_seed42_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "sweep",
+      "seed": 42
+    },
+    {
+      "case_id": "workload_cancel_churn_M25_seed42",
+      "event_count": 25,
+      "experiment": "workload_replay",
+      "generator_settings": {
+        "events": 25,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "cancel_churn",
+        "seed": 42,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "cancel_churn_M25_seed42_levels1000.jsonl.gz": "7be47783d404df8a899e6c1d09b139aee12dd338c4a4ce93be98f2f75ef62e66"
+      },
+      "input_paths": [
+        "results\\benchmarks\\smoke_final_04\\inputs\\cancel_churn_M25_seed42_levels1000.jsonl.gz"
+      ],
+      "profile": false,
+      "scenario": "cancel_churn",
+      "seed": 42
+    },
+    {
+      "available_bid_qty_units": 152000000,
+      "case_id": "fixed_bid_book_M40_seed42",
+      "event_count": 41,
+      "experiment": "fixed_liquidation",
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "initial_book_event_count": 40,
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "input_paths": [
+        "results\\benchmarks\\smoke_final_04\\inputs\\fixed_bid_book_M40_seed42.jsonl"
+      ],
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "sell_quantities": [
+        {
+          "percent": 10,
+          "qty_units": 15200000
+        },
+        {
+          "percent": 100,
+          "qty_units": 152000000
+        },
+        {
+          "percent": 200,
+          "qty_units": 304000000
+        }
+      ]
+    },
+    {
+      "available_price_count": 4,
+      "case_id": "queue_concentration_prices4_M1000",
+      "event_count": 1000,
+      "experiment": "queue_concentration",
+      "generator_settings": {
+        "available_prices": 4,
+        "generator": "queue concentration builder",
+        "orders": 1000,
+        "quantity_rule": "same seeded quantity sequence across price concentrations",
+        "seed": 42
+      },
+      "input_checksums": {
+        "queue_concentration_prices4_M1000.jsonl": "a904ad2cce0ec7cbfb07408f5ab70f6b288d411d2460b0fdb1a283b9e15b6124"
+      },
+      "input_paths": [
+        "results\\benchmarks\\smoke_final_04\\inputs\\queue_concentration_prices4_M1000.jsonl"
+      ],
+      "scenario": "queue_4_prices",
+      "seed": 42
+    },
+    {
+      "available_price_count": 1000,
+      "case_id": "queue_concentration_prices1000_M1000",
+      "event_count": 1000,
+      "experiment": "queue_concentration",
+      "generator_settings": {
+        "available_prices": 1000,
+        "generator": "queue concentration builder",
+        "orders": 1000,
+        "quantity_rule": "same seeded quantity sequence across price concentrations",
+        "seed": 42
+      },
+      "input_checksums": {
+        "queue_concentration_prices1000_M1000.jsonl": "3355ba97519c172379d2132b464e815def92e46f86d08bf48d2d8e9d6ea05a2f"
+      },
+      "input_paths": [
+        "results\\benchmarks\\smoke_final_04\\inputs\\queue_concentration_prices1000_M1000.jsonl"
+      ],
+      "scenario": "queue_1000_prices",
+      "seed": 42
+    },
+    {
+      "case_id": "churn_with_anchor_cycles20",
+      "event_count": 41,
+      "experiment": "cancellation_churn",
+      "generator_settings": {
+        "anchor_order_remains_active": true,
+        "cycles": 20,
+        "events": 41,
+        "generator": "anchored cancellation churn builder",
+        "transient_prices": "unique prices below the anchor"
+      },
+      "input_checksums": {
+        "churn_with_anchor_cycles20.jsonl": "7cb3c5aed365f0e1f968f14b538e0dd5a909d0f813f0040293f4bd2765c02dbe"
+      },
+      "input_paths": [
+        "results\\benchmarks\\smoke_final_04\\inputs\\churn_with_anchor_cycles20.jsonl"
+      ],
+      "scenario": "churn_with_anchor",
+      "seed": 42
+    }
+  ],
+  "code_hashes": {
+    "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+    "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+    "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+    "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+    "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+    "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+    "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+    "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+  },
+  "created_at_utc": "2026-11-25T21:25:52.186746+00:00",
+  "environment": {
+    "dependencies": [
+      "colorama==0.4.6",
+      "iniconfig==2.3.1",
+      "packaging==26.4",
+      "pluggy==1.7.0",
+      "Pygments==2.21.0",
+      "pytest==9.2.0"
+    ],
+    "git_branch": "assignment1",
+    "git_dirty": true,
+    "git_error": null,
+    "git_head": "a096d426f8d576c54e3a5334a7bc6d1a1c57dfa4",
+    "machine": "AMD64",
+    "os": "nt",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+    "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+    "python_version": "3.14.7"
+  },
+  "parity_validation": [
+    {
+      "case_id": "workload_buildup_M25_seed42",
+      "events_compared": 25,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "workload_crowded_M25_seed42",
+      "events_compared": 25,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "workload_mixed_M25_seed42",
+      "events_compared": 25,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "workload_sweep_M25_seed42",
+      "events_compared": 25,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "workload_cancel_churn_M25_seed42",
+      "events_compared": 25,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "fixed_bid_book_M40_seed42",
+      "events_compared": 40,
+      "sale_cases_compared": 3,
+      "status": "passed"
+    },
+    {
+      "case_id": "queue_concentration_prices4_M1000",
+      "events_compared": 1000,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "queue_concentration_prices1000_M1000",
+      "events_compared": 1000,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    },
+    {
+      "case_id": "churn_with_anchor_cycles20",
+      "events_compared": 41,
+      "sale_cases_compared": 0,
+      "status": "passed"
+    }
+  ],
+  "run_id": "smoke_final_04",
+  "schema_version": 1,
+  "settings": {
+    "churn_cycles": 20,
+    "event_sizes": [
+      25
+    ],
+    "fixed_book_orders": 40,
+    "levels": 1000,
+    "memory_limit_mib": 2048,
+    "memory_monitor_poll_seconds": 0.05,
+    "parity_event_limit": 1000,
+    "profile": "smoke",
+    "profile_event_limit": 2000,
+    "queue_orders": 1000,
+    "scenarios": [
+      "buildup",
+      "crowded",
+      "mixed",
+      "sweep",
+      "cancel_churn"
+    ],
+    "seeds": [
+      42
+    ],
+    "time_limit_seconds": 60,
+    "timing_repeats": 5
+  }
+}

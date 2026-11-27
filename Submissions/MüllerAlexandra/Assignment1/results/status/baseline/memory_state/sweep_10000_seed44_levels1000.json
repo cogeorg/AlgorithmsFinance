@@ -1,0 +1,59 @@
+{
+  "task": {
+    "task_id": "baseline_memory_state_sweep_10000_seed44_levels1000",
+    "version": "baseline",
+    "phase": "memory_state",
+    "scenario": "sweep",
+    "event_count": 10000,
+    "seed": 44,
+    "levels": 1000,
+    "input_path": "data/generated/sweep_10000_seed44_levels1000.jsonl.gz",
+    "sha256": "ff72b1d7292b6dba3589d761a3d4e4951916dd4def8bdb2b10bf99635361970c",
+    "result_path": "results/raw/baseline/memory_state/sweep_10000_seed44_levels1000.json.gz",
+    "status_path": "results/status/baseline/memory_state/sweep_10000_seed44_levels1000.json"
+  },
+  "task_id": "baseline_memory_state_sweep_10000_seed44_levels1000",
+  "timeout_seconds": 60,
+  "elapsed_seconds": 26.570737599977292,
+  "started_utc": "2026-11-23T19:37:14.986057+00:00",
+  "finished_utc": "2026-11-23T19:37:41.557227+00:00",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\scripts\\05_measure_memory.py",
+    "--version",
+    "baseline",
+    "--mode",
+    "memory_state",
+    "--input",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\data\\generated\\sweep_10000_seed44_levels1000.jsonl.gz",
+    "--checkpoints",
+    "10",
+    "--out",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\results\\raw\\baseline\\memory_state\\sweep_10000_seed44_levels1000.json.pending.gz"
+  ],
+  "environment": {
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "python_executable": "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "dependencies": {
+      "pytest": "9.2.0",
+      "pandas": "3.1.1",
+      "streamlit": "1.67.0"
+    },
+    "git": {
+      "commit": "1efbc9506181256881948fac9c6f6bb2aa9d6469",
+      "branch": "assignment1-mueller-alexandra",
+      "dirty": true,
+      "assignment_dirty": true,
+      "code_dirty": false
+    }
+  },
+  "returncode": 0,
+  "stdout": "{\"output\": \"C:\\\\Users\\\\Acer\\\\Documents\\\\Algorithms\\\\AlgorithmsFinance\\\\Submissions\\\\M\\u00fcllerAlexandra\\\\Assignment1\\\\results\\\\raw\\\\baseline\\\\memory_state\\\\sweep_10000_seed44_levels1000.json.pending.gz\", \"final\": {\"current_bytes\": 569556, \"peak_bytes\": 1671472, \"active_orders\": 3967, \"occupied_price_levels\": 983, \"retained_output_count\": 0}}\n",
+  "stderr": "",
+  "outcome": "completed",
+  "result_path": "results/raw/baseline/memory_state/sweep_10000_seed44_levels1000.json.gz"
+}

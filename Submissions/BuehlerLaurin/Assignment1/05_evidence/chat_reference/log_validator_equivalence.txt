@@ -1,0 +1,7 @@
+validator equivalence: 300000 random events, differences=0
+buildup        B3r   28.0 ms  fast   22.2 ms  ratio 0.79
+cancel_churn   B3r   18.8 ms  fast   16.2 ms  ratio 0.86
+crowded        B3r   26.4 ms  fast   18.8 ms  ratio 0.71
+mixed          B3r   25.5 ms  fast   23.0 ms  ratio 0.90
+sweep          B3r   29.3 ms  fast   26.7 ms  ratio 0.91
+exit=0

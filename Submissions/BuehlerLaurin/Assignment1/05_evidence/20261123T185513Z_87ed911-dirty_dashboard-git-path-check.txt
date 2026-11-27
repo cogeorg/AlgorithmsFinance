@@ -1,0 +1,69 @@
+label: dashboard-git-path-check
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py -q --tb=short --basetemp=scratch/pytest-dashboard-path
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 87ed911f839877c197cd9458b2cd231537955a17
+dirty: True
+python: 3.13.15
+utc: 20261123T185513Z
+exit_code: 1
+duration_s: 4.05
+------------------------------------------------------------
+EE......EEE                                                              [100%]
+=================================== ERRORS ====================================
+_______ ERROR at setup of test_official_headlines_match_committed_csvs ________
+02_tests\test_dashboard.py:21: in bundle
+    return saved.load_bundle()
+           ^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:109: in load_bundle
+    text = store.text(prefix+name+'.csv')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:54: in text
+    raise RuntimeError(cp.stderr.strip())
+E   RuntimeError: fatal: bad revision '87ed911f839877c197cd9458b2cd231537955a17:Submissions/BuehlerLaurin/Assignment1/03_results/runs/20261122T012525Z_5eaeb03_phase4/stops.csv'
+__________ ERROR at setup of test_stopped_a_is_bound_only_not_a_time __________
+02_tests\test_dashboard.py:21: in bundle
+    return saved.load_bundle()
+           ^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:109: in load_bundle
+    text = store.text(prefix+name+'.csv')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:54: in text
+    raise RuntimeError(cp.stderr.strip())
+E   RuntimeError: fatal: bad revision '87ed911f839877c197cd9458b2cd231537955a17:Submissions/BuehlerLaurin/Assignment1/03_results/runs/20261122T012525Z_5eaeb03_phase4/stops.csv'
+____ ERROR at setup of test_loader_restricts_paths_and_uses_a_fixed_commit ____
+02_tests\test_dashboard.py:21: in bundle
+    return saved.load_bundle()
+           ^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:109: in load_bundle
+    text = store.text(prefix+name+'.csv')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:54: in text
+    raise RuntimeError(cp.stderr.strip())
+E   RuntimeError: fatal: bad revision '87ed911f839877c197cd9458b2cd231537955a17:Submissions/BuehlerLaurin/Assignment1/03_results/runs/20261122T012525Z_5eaeb03_phase4/stops.csv'
+_______ ERROR at setup of test_regression_long_committed_git_blob_path ________
+02_tests\test_dashboard.py:21: in bundle
+    return saved.load_bundle()
+           ^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:109: in load_bundle
+    text = store.text(prefix+name+'.csv')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:54: in text
+    raise RuntimeError(cp.stderr.strip())
+E   RuntimeError: fatal: bad revision '87ed911f839877c197cd9458b2cd231537955a17:Submissions/BuehlerLaurin/Assignment1/03_results/runs/20261122T012525Z_5eaeb03_phase4/stops.csv'
+____ ERROR at setup of test_all_eight_tabs_render_and_headlines_match_csv _____
+02_tests\test_dashboard.py:21: in bundle
+    return saved.load_bundle()
+           ^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:109: in load_bundle
+    text = store.text(prefix+name+'.csv')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+04_dashboard\saved_results.py:54: in text
+    raise RuntimeError(cp.stderr.strip())
+E   RuntimeError: fatal: bad revision '87ed911f839877c197cd9458b2cd231537955a17:Submissions/BuehlerLaurin/Assignment1/03_results/runs/20261122T012525Z_5eaeb03_phase4/stops.csv'
+=========================== short test summary info ===========================
+ERROR 02_tests/test_dashboard.py::test_official_headlines_match_committed_csvs
+ERROR 02_tests/test_dashboard.py::test_stopped_a_is_bound_only_not_a_time - R...
+ERROR 02_tests/test_dashboard.py::test_loader_restricts_paths_and_uses_a_fixed_commit
+ERROR 02_tests/test_dashboard.py::test_regression_long_committed_git_blob_path
+ERROR 02_tests/test_dashboard.py::test_all_eight_tabs_render_and_headlines_match_csv
+6 passed, 5 errors in 2.89s

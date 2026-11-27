@@ -1,0 +1,5 @@
+# python3 audit/reproducers/run_contract_checks.py <LaviBen> <WelscherYannick>
+FAIL linear               check_state_independent_of_later_changes: the prepared state follows later changes to ids
+71 passed, 1 failed (18 checks x 4 methods)
+public functions: spec example and unchanged input OK
+exit 0

@@ -1,0 +1,11 @@
+algorithm_version,source,scenario,events,median_seconds,throughput_events_per_second
+Version A,"Version A | seed 42, levels 1000 | diagnostic_v1_20261123_152031",buildup,1000,0.0657381999772042,15211.855516986567
+Version A,"Version A | seed 42, levels 1000 | diagnostic_v1_20261123_152031",buildup,10000,6.407801800000016,1560.5975827779155
+Version A,"Version A | seed 42, levels 1000 | diagnostic_v1_20261123_152031",cancel_churn,1000,0.0038475999608635902,259902.2793875772
+Version A,"Version A | seed 42, levels 1000 | diagnostic_v1_20261123_152031",cancel_churn,10000,0.030371800006832927,329252.79363588063
+Version A,"Version A | seed 42, levels 1000 | diagnostic_v1_20261123_152031",crowded,1000,0.04753439995693043,21037.396094324777
+Version A,"Version A | seed 42, levels 1000 | diagnostic_v1_20261123_152031",crowded,10000,5.255897900031414,1902.6244782913745
+Version A,"Version A | seed 42, levels 1000 | diagnostic_v1_20261123_152031",mixed,1000,0.013014900032430887,76835.01198688983
+Version A,"Version A | seed 42, levels 1000 | diagnostic_v1_20261123_152031",mixed,10000,0.8026439999812283,12458.823588332902
+Version A,"Version A | seed 42, levels 1000 | diagnostic_v1_20261123_152031",sweep,1000,0.05227010004455224,19131.396326918326
+Version A,"Version A | seed 42, levels 1000 | diagnostic_v1_20261123_152031",sweep,10000,33.26769350003451,300.59192411369384

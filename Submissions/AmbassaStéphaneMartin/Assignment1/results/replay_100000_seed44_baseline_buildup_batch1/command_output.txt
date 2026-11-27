@@ -1,0 +1,6 @@
+[1/5] replay_buildup_n100000_s44_l1000 shared io: complete
+[2/5] replay_buildup_n100000_s44_l1000 baseline timing: incomplete
+[3/5] replay_buildup_n100000_s44_l1000 baseline latency: incomplete
+[4/5] replay_buildup_n100000_s44_l1000 baseline memory: incomplete
+[5/5] replay_buildup_n100000_s44_l1000 baseline diagnostics: incomplete
+{"results": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\replay_100000_seed44_baseline_buildup_batch1", "status": "incomplete", "raw_rows": 17, "summary_rows": 5}

@@ -1,0 +1,16 @@
+label: manifest-supplied-copies
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe verify_manifest.py 06_data/supplied --metadata
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: bc2576f8ef15b1adc707509cc35dbfd75f65c7b7
+dirty: True
+python: 3.13.15
+utc: 20261121T111537Z
+exit_code: 0
+duration_s: 0.12
+------------------------------------------------------------
+OK       buildup_10000.jsonl.gz (metadata)
+OK       cancel_churn_10000.jsonl.gz (metadata)
+OK       crowded_10000.jsonl.gz (metadata)
+OK       mixed_10000.jsonl.gz (metadata)
+OK       sweep_10000.jsonl.gz (metadata)
+RESULT: PASS (5 files verified)

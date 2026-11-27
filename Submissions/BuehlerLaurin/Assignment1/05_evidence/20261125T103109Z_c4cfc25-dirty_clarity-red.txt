@@ -1,0 +1,75 @@
+label: clarity-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py -q --tb=short --basetemp=scratch/pytest-clarity-red
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: c4cfc2521f57fc3de60a35d361ff4ceb025e552f
+dirty: True
+python: 3.13.15
+utc: 20261125T103109Z
+exit_code: 1
+duration_s: 22.71
+------------------------------------------------------------
+...........F..F.FFFFF                                                    [100%]
+================================== FAILURES ===================================
+________________ test_all_tabs_render_and_headlines_match_csv _________________
+02_tests\test_dashboard.py:106: in test_all_tabs_render_and_headlines_match_csv
+    assert [t.label for t in app.tabs] == TABS
+E   AssertionError: assert ['Overview', ...ectness', ...] == ['Final selec...'Memory', ...]
+E     
+E     At index 0 diff: 'Overview' != 'Final selection'
+E     Right contains one more item: 'Method & data'
+E     Use -v to get more diff
+---------------------------- Captured stderr call -----------------------------
+2026-11-25 11:31:23.603 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+------------------------------ Captured log call ------------------------------
+WARNING  streamlit.runtime.scriptrunner_utils.script_run_context:script_run_context.py:522 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+___________________ test_dashboard_interactive_views_render ___________________
+02_tests\test_dashboard.py:147: in test_dashboard_interactive_views_render
+    app.radio(key='scale_axes').set_value('linear axes')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\streamlit\testing\v1\element_tree.py:602: in __call__
+    raise KeyError(key)
+E   KeyError: 'scale_axes'
+---------------------------- Captured stderr call -----------------------------
+2026-11-25 11:31:26.687 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+------------------------------ Captured log call ------------------------------
+WARNING  streamlit.runtime.scriptrunner_utils.script_run_context:script_run_context.py:522 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+__________ test_compact_overview_is_seed_median_with_explicit_bounds __________
+02_tests\test_dashboard.py:166: in test_compact_overview_is_seed_median_with_explicit_bounds
+    assert hasattr(saved,'overview_speedups')
+E   AssertionError: assert False
+E    +  where False = hasattr(saved, 'overview_speedups')
+_____________ test_reference_lines_are_labelled_power_law_guides ______________
+02_tests\test_dashboard.py:186: in test_reference_lines_are_labelled_power_law_guides
+    assert hasattr(views,'reference_data') and hasattr(views,'line_plot')
+E   AssertionError: assert (False)
+E    +  where False = hasattr(views, 'reference_data')
+_______ test_raw_repeat_view_preserves_warmup_and_every_measured_value ________
+02_tests\test_dashboard.py:202: in test_raw_repeat_view_preserves_warmup_and_every_measured_value
+    assert hasattr(saved,'raw_repeats')
+E   AssertionError: assert False
+E    +  where False = hasattr(saved, 'raw_repeats')
+__________ test_workload_settings_keep_protocol_origin_and_checksums __________
+02_tests\test_dashboard.py:215: in test_workload_settings_keep_protocol_origin_and_checksums
+    assert hasattr(saved,'workload_settings')
+E   AssertionError: assert False
+E    +  where False = hasattr(saved, 'workload_settings')
+__________________ test_method_raw_view_and_clarity_captions __________________
+02_tests\test_dashboard.py:227: in test_method_raw_view_and_clarity_captions
+    app.selectbox(key='raw_case').select('official_buildup_1000_s42_l1000')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\streamlit\testing\v1\element_tree.py:602: in __call__
+    raise KeyError(key)
+E   KeyError: 'raw_case'
+---------------------------- Captured stderr call -----------------------------
+2026-11-25 11:31:28.093 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+------------------------------ Captured log call ------------------------------
+WARNING  streamlit.runtime.scriptrunner_utils.script_run_context:script_run_context.py:522 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+=========================== short test summary info ===========================
+FAILED 02_tests/test_dashboard.py::test_all_tabs_render_and_headlines_match_csv
+FAILED 02_tests/test_dashboard.py::test_dashboard_interactive_views_render - ...
+FAILED 02_tests/test_dashboard.py::test_compact_overview_is_seed_median_with_explicit_bounds
+FAILED 02_tests/test_dashboard.py::test_reference_lines_are_labelled_power_law_guides
+FAILED 02_tests/test_dashboard.py::test_raw_repeat_view_preserves_warmup_and_every_measured_value
+FAILED 02_tests/test_dashboard.py::test_workload_settings_keep_protocol_origin_and_checksums
+FAILED 02_tests/test_dashboard.py::test_method_raw_view_and_clarity_captions
+7 failed, 14 passed in 19.80s

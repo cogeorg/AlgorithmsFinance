@@ -1,0 +1,11 @@
+{
+  "scenario": "crowded",
+  "input": "data\\crowded_10000.jsonl.gz",
+  "input_sha256": "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6",
+  "target_events": 10000,
+  "status": "running",
+  "completed_events": 4700,
+  "max_active_orders": 4700,
+  "started_elapsed_seconds": 0.0,
+  "elapsed_seconds": 59.13760120002553
+}

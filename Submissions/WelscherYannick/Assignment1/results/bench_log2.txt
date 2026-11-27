@@ -1,0 +1,110 @@
+Thu Nov 26 16:14:42 CET 2026
+buildup          1000 s42: parse median 0.0011s
+buildup          1000 s43: parse median 0.0010s
+buildup          1000 s44: parse median 0.0010s
+crowded          1000 s42: parse median 0.0010s
+crowded          1000 s43: parse median 0.0009s
+crowded          1000 s44: parse median 0.0009s
+mixed            1000 s42: parse median 0.0009s
+mixed            1000 s43: parse median 0.0008s
+mixed            1000 s44: parse median 0.0009s
+sweep            1000 s42: parse median 0.0009s
+sweep            1000 s43: parse median 0.0009s
+sweep            1000 s44: parse median 0.0009s
+cancel_churn     1000 s42: parse median 0.0008s
+cancel_churn     1000 s43: parse median 0.0008s
+cancel_churn     1000 s44: parse median 0.0008s
+buildup         10000 s42: parse median 0.0096s
+buildup         10000 s43: parse median 0.0094s
+buildup         10000 s44: parse median 0.0093s
+crowded         10000 s42: parse median 0.0093s
+crowded         10000 s43: parse median 0.0093s
+crowded         10000 s44: parse median 0.0094s
+mixed           10000 s42: parse median 0.0087s
+mixed           10000 s43: parse median 0.0087s
+mixed           10000 s44: parse median 0.0088s
+sweep           10000 s42: parse median 0.0090s
+sweep           10000 s43: parse median 0.0090s
+sweep           10000 s44: parse median 0.0090s
+cancel_churn    10000 s42: parse median 0.0082s
+cancel_churn    10000 s43: parse median 0.0082s
+cancel_churn    10000 s44: parse median 0.0083s
+buildup        100000 s42: parse median 0.0983s
+buildup        100000 s43: parse median 0.0981s
+buildup        100000 s44: parse median 0.0987s
+crowded        100000 s42: parse median 0.0972s
+crowded        100000 s43: parse median 0.0970s
+crowded        100000 s44: parse median 0.0964s
+mixed          100000 s42: parse median 0.0902s
+mixed          100000 s43: parse median 0.0901s
+mixed          100000 s44: parse median 0.0897s
+sweep          100000 s42: parse median 0.0917s
+sweep          100000 s43: parse median 0.0919s
+sweep          100000 s44: parse median 0.0917s
+cancel_churn   100000 s42: parse median 0.0832s
+cancel_churn   100000 s43: parse median 0.0833s
+cancel_churn   100000 s44: parse median 0.0832s
+mixed         1000000 s42: parse median 0.9281s
+buildup       1000000 s42: parse median 0.9971s
+A buildup        10000: p50 119458 p95 225416 p99 239041 ns; early p50 12333 late p50 224791
+B buildup        10000: p50 458 p95 667 p99 1084 ns; early p50 542 late p50 459
+A buildup        10000: p50 126166 p95 234417 p99 248917 ns; early p50 12708 late p50 233042
+B buildup        10000: p50 459 p95 667 p99 792 ns; early p50 583 late p50 459
+A buildup        10000: p50 127958 p95 234917 p99 248416 ns; early p50 12459 late p50 233834
+B buildup        10000: p50 459 p95 708 p99 833 ns; early p50 583 late p50 458
+A crowded        10000: p50 127834 p95 236666 p99 251792 ns; early p50 12583 late p50 235959
+B crowded        10000: p50 417 p95 542 p99 667 ns; early p50 417 late p50 458
+A crowded        10000: p50 125583 p95 235333 p99 249459 ns; early p50 12291 late p50 234291
+B crowded        10000: p50 417 p95 542 p99 667 ns; early p50 417 late p50 458
+A crowded        10000: p50 128541 p95 235500 p99 282666 ns; early p50 12208 late p50 228125
+B crowded        10000: p50 458 p95 583 p99 1125 ns; early p50 417 late p50 458
+A mixed          10000: p50 15625 p95 52792 p99 79250 ns; early p50 2291 late p50 30833
+B mixed          10000: p50 542 p95 1291 p99 2250 ns; early p50 542 late p50 500
+A mixed          10000: p50 16625 p95 55791 p99 92125 ns; early p50 2333 late p50 32834
+B mixed          10000: p50 542 p95 1292 p99 2416 ns; early p50 584 late p50 500
+A mixed          10000: p50 16250 p95 53416 p99 89041 ns; early p50 2208 late p50 30958
+B mixed          10000: p50 541 p95 1209 p99 2167 ns; early p50 542 late p50 459
+A sweep          10000: p50 99334 p95 275458 p99 541916 ns; early p50 12750 late p50 49167
+B sweep          10000: p50 459 p95 1792 p99 2750 ns; early p50 541 late p50 291
+A sweep          10000: p50 100666 p95 263958 p99 525500 ns; early p50 12750 late p50 48125
+B sweep          10000: p50 459 p95 1750 p99 2667 ns; early p50 541 late p50 250
+A sweep          10000: p50 104250 p95 274833 p99 536125 ns; early p50 12916 late p50 49958
+B sweep          10000: p50 583 p95 2500 p99 4042 ns; early p50 583 late p50 292
+A cancel_churn   10000: p50 666 p95 833 p99 958 ns; early p50 625 late p50 667
+B cancel_churn   10000: p50 458 p95 625 p99 750 ns; early p50 542 late p50 417
+A cancel_churn   10000: p50 666 p95 833 p99 917 ns; early p50 625 late p50 666
+B cancel_churn   10000: p50 417 p95 542 p99 625 ns; early p50 417 late p50 417
+A cancel_churn   10000: p50 625 p95 833 p99 917 ns; early p50 625 late p50 625
+B cancel_churn   10000: p50 417 p95 583 p99 667 ns; early p50 458 late p50 417
+A buildup 100000 not attempted
+B buildup       100000: p50 583 p95 1250 p99 5208 ns; early p50 459 late p50 667
+A buildup 100000 not attempted
+B buildup       100000: p50 542 p95 1125 p99 4375 ns; early p50 583 late p50 584
+A buildup 100000 not attempted
+B buildup       100000: p50 541 p95 959 p99 4333 ns; early p50 500 late p50 583
+A crowded 100000 not attempted
+B crowded       100000: p50 500 p95 792 p99 1000 ns; early p50 459 late p50 500
+A crowded 100000 not attempted
+B crowded       100000: p50 500 p95 792 p99 1125 ns; early p50 458 late p50 542
+A crowded 100000 not attempted
+B crowded       100000: p50 500 p95 833 p99 1125 ns; early p50 458 late p50 542
+A mixed         100000: p50 136500 p95 486083 p99 765666 ns; early p50 15209 late p50 286917
+B mixed         100000: p50 500 p95 1250 p99 2083 ns; early p50 583 late p50 500
+A mixed         100000: p50 141042 p95 505375 p99 783125 ns; early p50 16125 late p50 292583
+B mixed         100000: p50 500 p95 1250 p99 2083 ns; early p50 542 late p50 500
+A mixed         100000: p50 134583 p95 488000 p99 764000 ns; early p50 15625 late p50 286583
+B mixed         100000: p50 500 p95 1250 p99 2083 ns; early p50 583 late p50 500
+A sweep 100000 not attempted
+B sweep         100000: p50 542 p95 2667 p99 4167 ns; early p50 542 late p50 292
+A sweep 100000 not attempted
+B sweep         100000: p50 542 p95 2709 p99 4167 ns; early p50 541 late p50 292
+A sweep 100000 not attempted
+B sweep         100000: p50 542 p95 2750 p99 4208 ns; early p50 541 late p50 292
+A cancel_churn  100000: p50 625 p95 833 p99 1000 ns; early p50 666 late p50 666
+B cancel_churn  100000: p50 458 p95 584 p99 708 ns; early p50 459 late p50 417
+A cancel_churn  100000: p50 625 p95 833 p99 1000 ns; early p50 666 late p50 666
+B cancel_churn  100000: p50 417 p95 583 p99 667 ns; early p50 417 late p50 417
+A cancel_churn  100000: p50 666 p95 833 p99 959 ns; early p50 666 late p50 666
+B cancel_churn  100000: p50 417 p95 584 p99 708 ns; early p50 458 late p50 417
+exit 0
+Thu Nov 26 16:16:15 CET 2026

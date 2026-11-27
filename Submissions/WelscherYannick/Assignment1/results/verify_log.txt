@@ -1,0 +1,21 @@
+OK   data/buildup_10000.jsonl.gz 
+OK   data/crowded_10000.jsonl.gz 
+OK   data/mixed_10000.jsonl.gz 
+OK   data/sweep_10000.jsonl.gz 
+OK   data/cancel_churn_10000.jsonl.gz 
+OK   data/generated/buildup_1000_s42_l1000.jsonl.gz 
+OK   data/generated/buildup_1000_s43_l1000.jsonl.gz 
+OK   data/generated/buildup_1000_s44_l1000.jsonl.gz 
+OK   data/generated/crowded_1000_s42_l1000.jsonl.gz 
+OK   data/generated/crowded_1000_s43_l1000.jsonl.gz 
+OK   data/generated/crowded_1000_s44_l1000.jsonl.gz 
+OK   data/generated/mixed_1000_s42_l1000.jsonl.gz 
+OK   data/generated/mixed_1000_s43_l1000.jsonl.gz 
+OK   data/generated/mixed_1000_s44_l1000.jsonl.gz 
+OK   data/generated/sweep_1000_s42_l1000.jsonl.gz 
+OK   data/generated/sweep_1000_s43_l1000.jsonl.gz 
+OK   data/generated/sweep_1000_s44_l1000.jsonl.gz 
+OK   data/generated/cancel_churn_1000_s42_l1000.jsonl.gz 
+OK   data/generated/cancel_churn_1000_s43_l1000.jsonl.gz 
+OK   data/generated/cancel_churn_1000_s44_l1000.jsonl.gz 
+['Ran 71 tests in 5.321s', 'OK']

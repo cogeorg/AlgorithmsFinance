@@ -1,0 +1,36 @@
+{
+  "status": "estimate_only",
+  "measured_reference": {
+    "event_count": 100000,
+    "seed": 42,
+    "implementation": "revised",
+    "command_wall_seconds": 72.77823200001149
+  },
+  "unexecuted_seeds": [
+    43,
+    44
+  ],
+  "per_batch_estimated_command_wall_seconds": {
+    "low": 58.22258560000919,
+    "high": 109.16734800001723
+  },
+  "combined_estimated_command_wall_seconds": {
+    "low": 116.44517120001838,
+    "high": 218.33469600003446
+  },
+  "assumptions": [
+    "Same machine and similar background load; unchanged source and workload settings.",
+    "Five scenarios, Revised only, all five phases, one warm-up and five measured repetitions where required.",
+    "Same 60-second worker and 900-second measurement campaign caps.",
+    "Comparable missing-workload generation is included because the reference command generated all five workloads.",
+    "Planning interval is 0.8 to 1.5 times the one observed command duration, not a confidence interval.",
+    "Different seeds can change book depth, fill counts and cleanup costs; one large seed is not a runtime guarantee.",
+    "Post-run tests, audits, report generation and inter-command gaps are excluded."
+  ],
+  "observed_max_progress_interval_seconds": 6.487937600002624,
+  "observed_max_later_progress_interval_seconds": 5.59569610003382,
+  "interval_caveat": "Progress intervals include parent work and are not exact worker execution measurements; the first includes preparation.",
+  "other_seeds_measured": false,
+  "Baseline_measured": false,
+  "cross_version_speedup": null
+}

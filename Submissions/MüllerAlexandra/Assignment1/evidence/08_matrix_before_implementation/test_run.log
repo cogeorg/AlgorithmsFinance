@@ -1,0 +1,115 @@
+stage: 08_matrix_before_implementation
+started_utc: 2026-11-23T18:16:05.962193+00:00
+finished_utc: 2026-11-23T18:16:06.911926+00:00
+elapsed_seconds: 0.950254
+exit_code: 1
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: ffbbaa05287c3d0e249a91237dd54ca7863fe36a
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider tests/test_15_experiment_matrix.py
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 4 items
+
+tests\test_15_experiment_matrix.py FFFF                                  [100%]
+
+================================== FAILURES ===================================
+_______ test_core_matrix_is_five_scenarios_three_sizes_and_three_seeds ________
+
+    def test_core_matrix_is_five_scenarios_three_sizes_and_three_seeds() -> None:
+>       specs = core_input_specs()
+                ^^^^^^^^^^^^^^^^^^
+
+tests\test_15_experiment_matrix.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def core_input_specs() -> list[InputSpec]:
+>       raise NotImplementedError("experiment matrix is not implemented")
+E       NotImplementedError: experiment matrix is not implemented
+
+src\limit_order_book\experiment_matrix.py:14: NotImplementedError
+_____ test_queue_concentration_holds_count_and_seed_while_varying_levels ______
+
+    def test_queue_concentration_holds_count_and_seed_while_varying_levels() -> None:
+>       specs = queue_concentration_specs()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_15_experiment_matrix.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def queue_concentration_specs() -> list[InputSpec]:
+>       raise NotImplementedError("experiment matrix is not implemented")
+E       NotImplementedError: experiment matrix is not implemented
+
+src\limit_order_book\experiment_matrix.py:18: NotImplementedError
+_______ test_combined_plan_deduplicates_the_reused_thousand_level_input _______
+
+    def test_combined_plan_deduplicates_the_reused_thousand_level_input() -> None:
+>       specs = experiment_input_specs()
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_15_experiment_matrix.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def experiment_input_specs() -> list[InputSpec]:
+>       raise NotImplementedError("experiment matrix is not implemented")
+E       NotImplementedError: experiment matrix is not implemented
+
+src\limit_order_book\experiment_matrix.py:22: NotImplementedError
+________ test_metadata_verification_checks_settings_size_and_checksum _________
+
+tmp_path = WindowsPath('C:/Users/Acer/AppData/Local/Temp/pytest-of-Acer/pytest-22/test_metadata_verification_che0')
+
+    def test_metadata_verification_checks_settings_size_and_checksum(tmp_path: Path) -> None:
+        data_path = tmp_path / "mixed_3_seed43_levels1000.jsonl.gz"
+        data_path.write_bytes(b"deterministic compressed bytes")
+        metadata_path = data_path.with_suffix(data_path.suffix + ".metadata.json")
+        metadata = {
+            "scenario": "mixed",
+            "events": 3,
+            "seed": 43,
+            "levels": 1_000,
+            "compressed_bytes": data_path.stat().st_size,
+            "sha256": hashlib.sha256(data_path.read_bytes()).hexdigest(),
+        }
+        metadata_path.write_text(json.dumps(metadata), encoding="utf-8")
+        spec = {
+            "scenario": "mixed",
+            "event_count": 3,
+            "seed": 43,
+            "levels": 1_000,
+            "input_kind": "generated",
+            "input_path": str(data_path),
+            "metadata_path": str(metadata_path),
+        }
+    
+>       verified = verify_input_metadata(spec, project_root=tmp_path)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_15_experiment_matrix.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+spec = {'scenario': 'mixed', 'event_count': 3, 'seed': 43, 'levels': 1000, ...}
+project_root = WindowsPath('C:/Users/Acer/AppData/Local/Temp/pytest-of-Acer/pytest-22/test_metadata_verification_che0')
+
+    def verify_input_metadata(
+        spec: Mapping[str, Any], *, project_root: Path
+    ) -> dict[str, Any]:
+>       raise NotImplementedError("input verification is not implemented")
+E       NotImplementedError: input verification is not implemented
+
+src\limit_order_book\experiment_matrix.py:28: NotImplementedError
+=========================== short test summary info ===========================
+FAILED tests/test_15_experiment_matrix.py::test_core_matrix_is_five_scenarios_three_sizes_and_three_seeds
+FAILED tests/test_15_experiment_matrix.py::test_queue_concentration_holds_count_and_seed_while_varying_levels
+FAILED tests/test_15_experiment_matrix.py::test_combined_plan_deduplicates_the_reused_thousand_level_input
+FAILED tests/test_15_experiment_matrix.py::test_metadata_verification_checks_settings_size_and_checksum
+============================== 4 failed in 0.15s ==============================
+
+=== stderr ===

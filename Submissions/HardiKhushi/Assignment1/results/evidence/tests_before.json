@@ -1,0 +1,8 @@
+{
+  "engine_python_files": [],
+  "returncode": 1,
+  "tests": {
+    "tests/test_generator.py": "e74b7af86c630dcd897765ef11c9adddc363cd7d4acf79fe44bbaf26474fe594",
+    "tests/test_contract.py": "0192af636d1237e892ae686f0033e268b6ba48b527d168125e185588fe639114"
+  }
+}

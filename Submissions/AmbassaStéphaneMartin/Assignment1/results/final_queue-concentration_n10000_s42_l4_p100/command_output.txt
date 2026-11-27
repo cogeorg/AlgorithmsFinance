@@ -1,0 +1,10 @@
+[1/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 shared io: complete
+[2/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 baseline timing: complete
+[3/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 revised timing: complete
+[4/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 baseline latency: complete
+[5/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 revised latency: complete
+[6/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 baseline memory: incomplete
+[7/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 revised memory: complete
+[8/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 baseline diagnostics: complete
+[9/9] queue-concentration_controlled_bids_n10000_s42_l4_p100 revised diagnostics: complete
+{"results": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_queue-concentration_n10000_s42_l4_p100", "status": "incomplete", "raw_rows": 29, "summary_rows": 9}

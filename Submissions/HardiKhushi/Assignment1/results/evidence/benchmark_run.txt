@@ -1,0 +1,52 @@
+stream buildup M=1000 seed=42
+stream buildup M=1000 seed=43
+stream buildup M=1000 seed=44
+stream crowded M=1000 seed=42
+stream crowded M=1000 seed=43
+stream crowded M=1000 seed=44
+stream mixed M=1000 seed=42
+stream mixed M=1000 seed=43
+stream mixed M=1000 seed=44
+stream sweep M=1000 seed=42
+stream sweep M=1000 seed=43
+stream sweep M=1000 seed=44
+stream cancel_churn M=1000 seed=42
+stream cancel_churn M=1000 seed=43
+stream cancel_churn M=1000 seed=44
+stream buildup M=10000 seed=42
+stream buildup M=10000 seed=43
+stream buildup M=10000 seed=44
+stream crowded M=10000 seed=42
+stream crowded M=10000 seed=43
+stream crowded M=10000 seed=44
+stream mixed M=10000 seed=42
+stream mixed M=10000 seed=43
+stream mixed M=10000 seed=44
+stream sweep M=10000 seed=42
+stream sweep M=10000 seed=43
+stream sweep M=10000 seed=44
+stream cancel_churn M=10000 seed=42
+stream cancel_churn M=10000 seed=43
+stream cancel_churn M=10000 seed=44
+stream buildup M=100000 seed=42
+stream buildup M=100000 seed=43
+stream buildup M=100000 seed=44
+stream crowded M=100000 seed=42
+stream crowded M=100000 seed=43
+stream crowded M=100000 seed=44
+stream mixed M=100000 seed=42
+stream mixed M=100000 seed=43
+stream mixed M=100000 seed=44
+stream sweep M=100000 seed=42
+stream sweep M=100000 seed=43
+stream sweep M=100000 seed=44
+stream cancel_churn M=100000 seed=42
+stream cancel_churn M=100000 seed=43
+stream cancel_churn M=100000 seed=44
+liquidations B=1000 levels=4
+liquidations B=1000 levels=1000
+liquidations B=10000 levels=4
+liquidations B=10000 levels=1000
+liquidations B=100000 levels=4
+liquidations B=100000 levels=1000
+million-event streaming feasibility trial recorded

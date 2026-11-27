@@ -1,0 +1,11 @@
+# Keep reproducible text bytes across Windows, macOS, and Linux checkouts.
+* text=auto eol=lf
+
+# Compressed data and future media artifacts must never be line-normalized.
+*.gz binary
+*.png binary
+*.pdf binary
+
+# Pytest tracebacks reproduce source lines verbatim, including their spacing.
+evidence/**/test_run.log -whitespace
+

@@ -1,0 +1,20 @@
+label: dashboard-green-final
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py -q --tb=short --basetemp=scratch/pytest-dashboard-green-final --junitxml=05_evidence/dashboard-tests.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 87ed911f839877c197cd9458b2cd231537955a17
+dirty: True
+python: 3.13.15
+utc: 20261123T190200Z
+exit_code: 1
+duration_s: 17.74
+------------------------------------------------------------
+...............F                                                         [100%]
+================================== FAILURES ===================================
+____________ test_subprocess_timeouts_do_not_create_replay_bounds _____________
+02_tests\test_dashboard.py:150: in test_subprocess_timeouts_do_not_create_replay_bounds
+    app.selectbox(key='lat_case').select('official_buildup_10000_s42_l1000')
+    ^^^
+E   NameError: name 'app' is not defined
+=========================== short test summary info ===========================
+FAILED 02_tests/test_dashboard.py::test_subprocess_timeouts_do_not_create_replay_bounds
+1 failed, 15 passed in 16.04s

@@ -1,0 +1,37 @@
+{
+  "case_id": "queue-concentration_controlled_bids_n120_s42_l1000_p100",
+  "version": "revised",
+  "phase": "latency",
+  "samples": [
+    {
+      "event_id": "measured-sale",
+      "seq": 121,
+      "repetition": 1,
+      "seconds": 0.00015870004426687956
+    },
+    {
+      "event_id": "measured-sale",
+      "seq": 121,
+      "repetition": 2,
+      "seconds": 0.000159399991389364
+    },
+    {
+      "event_id": "measured-sale",
+      "seq": 121,
+      "repetition": 3,
+      "seconds": 0.00015279999934136868
+    },
+    {
+      "event_id": "measured-sale",
+      "seq": 121,
+      "repetition": 4,
+      "seconds": 0.00015189999248832464
+    },
+    {
+      "event_id": "measured-sale",
+      "seq": 121,
+      "repetition": 5,
+      "seconds": 0.00020400003995746374
+    }
+  ]
+}

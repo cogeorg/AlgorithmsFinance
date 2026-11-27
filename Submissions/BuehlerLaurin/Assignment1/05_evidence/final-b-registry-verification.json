@@ -1,0 +1,56 @@
+{
+  "commit": "dd88f2253fcc659b1b294f371555c59c08867ce5",
+  "source_sha256": "7de83f9fc36058f417ca003a29e855094a5f10c659d0bb515a92ebf73ca238e5",
+  "final_version": "B3r",
+  "registry": {
+    "A": "OrderBookA",
+    "B": "OrderBookB3r",
+    "B1": "OrderBookB",
+    "B2": "OrderBookB2",
+    "B3": "OrderBookB3",
+    "B3r": "OrderBookB3r",
+    "B3r_fast": "OrderBookB3rFast"
+  },
+  "suites": [
+    {
+      "suite": "standard",
+      "path": "05_evidence/final-b-all-tests.xml",
+      "tests": 983,
+      "sha256": "da0c4fafad30d76ae5b283634acd1c89a3a7dc5c570b140ac8621dc2fce2bd7a",
+      "per_file": {
+        "test_b3r": 6,
+        "test_b_internal": 32,
+        "test_bench_pipeline": 30,
+        "test_contract": 448,
+        "test_fast_assessment": 10,
+        "test_fast_equivalence": 115,
+        "TestFastDifferential": 1,
+        "test_final_version": 60,
+        "test_mutants": 25,
+        "test_own_datasets": 4,
+        "test_post_attack_pipeline": 13,
+        "test_replay": 21,
+        "test_replay_regressions": 28,
+        "TestDifferential_B": 1,
+        "TestDifferential_B1": 1,
+        "TestDifferential_B2": 1,
+        "TestDifferential_B3": 1,
+        "TestDifferential_B3r": 1,
+        "TestDifferential_B3r_fast": 1,
+        "test_validation": 184
+      }
+    },
+    {
+      "suite": "attack",
+      "path": "05_evidence/final-b-attack-tests.xml",
+      "tests": 1995,
+      "sha256": "d02bd0e21eff698a0f5bb2cf08dab501ffc588638c58ff21f50eacaabdd1a8ad",
+      "per_file": {
+        "test_attack": 1995
+      }
+    }
+  ],
+  "engine_logic_changed": false,
+  "historical_results_changed": false,
+  "measurements_executed": false
+}

@@ -1,0 +1,5 @@
+# python3 benchmark.py --sizes 10 --query-counts 0 --repeats 1 --output <tmp>/run_q0 ; dashboard on it
+Wrote <tmp>/run_q0b/benchmark_results.json, <tmp>/run_q0b/benchmark_results.csv, <tmp>/run_q0b/raw_timings.csv, <tmp>/run_q0b/input_manifest.json
+exit 0
+Wrote <tmp>/run_q0b/d.html
+exit 0

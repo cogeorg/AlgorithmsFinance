@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Saved, reproducible limit order book benchmarks. No experiments run in this dashboard.">
+<title>Order Book Lab · LiuHaina</title>
+<style>/*__STYLE__*/</style>
+</head>
+<body>
+<header class="masthead"><a class="brand" href="#overview">LOB<span>/</span>LAB</a><span class="course">Algorithms in Finance <span>Assignment 01 · LiuHaina</span></span><span class="saved">● Saved measurements</span></header>
+<main>
+<section id="overview" class="hero">
+<p class="eyebrow">IMPLEMENT · REVISE · MEASURE</p>
+<h1>A market under pressure.</h1>
+<p class="lead">Two Python order books. The same event streams. Inspect where a price index helps—and where its overhead costs more.</p>
+<nav aria-label="Dashboard sections"><a href="#scaling">Scaling</a><a href="#liquidation">Liquidation</a><a href="#latency">Latency</a><a href="#memory">Memory</a><a href="#evidence">Evidence</a><a href="#raw">Raw records</a></nav>
+<div id="stats" class="stats" aria-label="Experiment coverage"></div>
+</section>
+<div class="filterbar" aria-label="Global workload filters">
+<label>Workload<select id="scenario"><option value="buildup">Book buildup</option><option value="crowded">Crowded queues</option><option value="mixed" selected>Mixed flow</option><option value="sweep">Depth sweep</option><option value="cancel_churn">Cancellation churn</option></select></label>
+<label>Seed<select id="seed"><option>42</option><option>43</option><option>44</option></select></label>
+<label>Detail size · M<select id="size"><option value="1000">1,000 events</option><option value="10000" selected>10,000 events</option><option value="100000">100,000 events</option></select></label>
+<div class="legend"><span class="version-a">● A · list baseline</span><span class="version-b">■ B · price index</span></div>
+</div>
+<p id="workload-context" class="context" aria-live="polite"></p>
+<section id="scaling">
+<div class="section-title"><div><p class="eyebrow">01 / THE GROWING BOOK</p><h2>Scale is more than event count.</h2></div><label>Time boundary<select id="phase"><option value="replay">Engine replay</option><option value="construction">Book construction</option><option value="input_parse">Read + gzip + JSON</option><option value="parse_plus_replay">Parse + replay sum</option></select></label></div>
+<div class="chart-grid"><article><h3 id="time-title">Engine replay</h3><div id="time-chart" class="chart"></div><p id="time-note" class="caption"></p></article><article><h3>Throughput</h3><div id="throughput-chart" class="chart"></div><p class="caption">Events / engine replay seconds. Completed runs only; not a latency estimate.</p></article></div>
+<div id="scaling-table" class="table-wrap"></div>
+<p class="caption">Points are medians of five repeats on this seed. Missing points are stopped or unmeasured, never zero. Construction is a checkpoint within replay, not an additional cost.</p>
+</section>
+<section id="liquidation">
+<div class="section-title"><div><p class="eyebrow">02 / ONE LARGE SELL</p><h2>A fresh book for every sale.</h2></div><div class="inline-controls"><label>Available prices<select id="sell-levels"><option value="4">4 levels</option><option value="1000" selected>1,000 levels</option></select></label><label>Sale / bid quantity<select id="sell-ratio"><option value="10">10%</option><option value="100" selected>100%</option><option value="200">200%</option></select></label></div></div>
+<p class="context">Fixed seed 42. Detail size selects the initial bid count N. Each trial deep-copies an untouched template; construction, reset and sell are measured separately.</p>
+<div class="chart-grid"><article><h3>Individual-sale scaling</h3><div id="sell-chart" class="chart"></div></article><article><h3>Queue concentration at fixed N</h3><div id="concentration-chart" class="chart"></div></article></div>
+<div id="sell-table" class="table-wrap"></div>
+<p class="caption">The table's quantities use integer 10⁻⁸ BTC units. A stopped template build means the sale was not run. A template is built once per N/price/version combination; reset and sell have five repeats.</p>
+</section>
+<section id="latency">
+<div class="section-title"><div><p class="eyebrow">03 / INDIVIDUAL EVENTS</p><h2>Look beyond average throughput.</h2></div></div>
+<div class="chart-grid"><article><h3>Processing latency distribution</h3><div id="latency-chart" class="chart"></div><p id="latency-note" class="caption"></p></article><article><h3>Early versus late · P99</h3><div id="position-chart" class="chart"></div><p class="caption">First / last 10% of the original stream, in one uninterrupted instrumentation replay. A prefix that never reached the end has no late result.</p></article></div>
+<div id="latency-table" class="table-wrap"></div>
+<p class="caption">Separate run; excludes network and queueing. Median averages the middle pair for even n; P95/P99 use nearest rank, ceil(p×n). Distribution bins are logarithmic in microseconds. Partial prefixes remain visibly labelled.</p>
+</section>
+<section id="memory">
+<div class="section-title"><div><p class="eyebrow">04 / ALLOCATION & CLEANUP</p><h2>What remains after the orders leave?</h2></div><label>Trace reading<select id="memory-metric"><option value="traced_current_bytes">Current allocations</option><option value="traced_peak_bytes">Peak allocations so far</option></select></label></div>
+<div class="chart-grid"><article><h3>Allocation through the selected stream</h3><div id="memory-chart" class="chart"></div><p id="memory-note" class="caption"></p></article><article><h3>After cancellation churn</h3><div id="churn-chart" class="chart"></div><p class="caption">Fixed workload: cancel_churn; selected seed. Final traced allocations versus M. Final active order count is zero.</p></article></div>
+<div id="memory-table" class="table-wrap"></div>
+<p class="caption">tracemalloc starts after input preload. Includes incremental engine state, latest output and small probe/guard allocations; excludes pre-existing input allocations. Traced bytes are not auxiliary space alone or whole-process RSS.</p>
+</section>
+<section id="evidence">
+<p class="eyebrow">05 / TRUST THE BOUNDARIES</p><h2>Correctness, limits and provenance.</h2>
+<div id="correctness-table" class="table-wrap"></div>
+<details open><summary>A measured bottleneck</summary><div id="bottleneck"></div></details>
+<details><summary>Optional one-million-event attempt</summary><div id="million-table" class="table-wrap"></div><p class="caption">RSS covers preloaded input and engine allocations. No full million-event replay completed. No missing run is extrapolated.</p></details>
+<details><summary>Environment and measurement boundaries</summary><div id="environment"></div></details>
+<details><summary>Stopped or blocked records · selected workload and seed</summary><div id="stopped-table" class="table-wrap"></div></details>
+</section>
+<section id="raw">
+<div class="section-title"><div><p class="eyebrow">06 / EVERY REPEAT COUNTS</p><h2>Inspect the saved records.</h2></div><button id="download" type="button">Download filtered CSV ↓</button></div>
+<div class="inline-controls"><label>Phase<select id="raw-phase"><option value="all">All phases</option></select></label><label>Status<select id="raw-status"><option value="all">All statuses</option><option value="completed">Completed only</option><option value="stopped">Stopped / blocked only</option></select></label><label class="check"><input type="checkbox" id="raw-all">All workloads and seeds</label><span id="raw-count" aria-live="polite"></span></div>
+<div id="raw-table" class="table-wrap"></div><div class="pagination"><button id="previous" type="button">← Previous</button><span id="raw-page"></span><button id="next" type="button">Next →</button></div>
+<p class="caption">Select “Details” for the full original record, including snapshots or operation counts. Latency source files remain in results/benchmark/latency/. Filters never execute an experiment.</p>
+</section>
+<footer><span>LIUHAINA / ALGORITHMS IN FINANCE</span><span>Saved results · no network services · no experiment runner</span></footer>
+</main>
+<dialog id="record-dialog"><div class="dialog-heading"><h3>Original saved record</h3><button id="close-dialog" type="button">Close ×</button></div><pre id="record-json"></pre></dialog>
+<script id="saved-data" type="application/json">/*__DATA__*/</script>
+<script>/*__SCRIPT__*/</script>
+</body>
+</html>

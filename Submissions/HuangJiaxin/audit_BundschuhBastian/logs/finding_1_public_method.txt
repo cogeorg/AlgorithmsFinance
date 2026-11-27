@@ -1,0 +1,11 @@
+     public method binary_v2(ids, []): output [], preparation calls 0
+     answer(prepare(ids), []) via PHASES: output [], preparation calls 1
+     public method binary_v1(ids, []): output [], preparation calls 1
+FAIL binary_v2 public method runs prepare like answer(prepare(ids), queries) for an empty query list (observed 0 calls)
+PASS for q >= 1, every public method gives the same output as answer(prepare(ids), queries)
+     outside the spec: binary_v1([1, 'a'], []) -> TypeError: '<' not supported between instances of 'str' and 'int'
+     outside the spec: binary_v2([1, 'a'], []) -> []
+     timing q = 0, n = 100,000: binary_v1 median 16.1116 ms (5 repeats: 17.0349, 16.4437, 15.8193, 16.1116, 15.7610 ms)
+     timing q = 0, n = 100,000: binary_v2 median 0.0001 ms (5 repeats: 0.0003, 0.0001, 0.0001, 0.0001, 0.0001 ms)
+
+finding_1_public_method: 9 lines, 1 FAIL

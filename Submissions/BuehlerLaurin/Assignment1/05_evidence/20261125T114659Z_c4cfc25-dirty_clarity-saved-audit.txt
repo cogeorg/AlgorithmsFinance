@@ -1,0 +1,19 @@
+label: clarity-saved-audit
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe 04_dashboard/verify_saved.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: c4cfc2521f57fc3de60a35d361ff4ceb025e552f
+dirty: True
+python: 3.13.15
+utc: 20261125T114659Z
+exit_code: 1
+duration_s: 8.77
+------------------------------------------------------------
+{"tab": "Final selection", "description": "B1 official100k geometric mean", "value": 0.4243545364100857, "unit": "s", "run": "20261122T012525Z_5eaeb03_phase4", "commit": "5eaeb03718d24193864dcf7ea4f5161a3bfa6559", "file": "summary.csv", "case": null}
+{"tab": "Final selection", "description": "B2 official100k geometric mean", "value": 0.47256587563691005, "unit": "s", "run": "20261122T012525Z_5eaeb03_phase4", "commit": "5eaeb03718d24193864dcf7ea4f5161a3bfa6559", "file": "summary.csv", "case": null}
+{"tab": "Final selection", "description": "B3 official100k geometric mean", "value": 0.4289266916744883, "unit": "s", "run": "20261122T012525Z_5eaeb03_phase4", "commit": "5eaeb03718d24193864dcf7ea4f5161a3bfa6559", "file": "summary.csv", "case": null}
+{"tab": "Final selection", "description": "B3r official100k geometric mean", "value": 0.42468442915061183, "unit": "s", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "summary.csv", "case": null}
+Traceback (most recent call last):
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\04_dashboard\verify_saved.py", line 38, in <module>
+    assert b['rematch']['decision'] == b['cross']['decision'] == 'rejected'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

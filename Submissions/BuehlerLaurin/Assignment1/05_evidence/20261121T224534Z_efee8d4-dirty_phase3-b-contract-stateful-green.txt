@@ -1,0 +1,12 @@
+label: phase3-b-contract-stateful-green
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -m pytest 02_tests/test_contract.py 02_tests/test_stateful.py -k lob-B or TestDifferential -q --tb=short --junitxml=05_evidence/phase3-b-contract-stateful.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: efee8d4ba8d3425e51a31c5a8e361cd8986fe168
+dirty: True
+python: 3.13.15
+utc: 20261121T224534Z
+exit_code: 0
+duration_s: 17.12
+------------------------------------------------------------
+.................................................................        [100%]
+65 passed, 64 deselected in 16.18s

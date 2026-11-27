@@ -1,0 +1,49 @@
+label: phase3b-results-summary
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -c from collections import Counter,defaultdict
+from pathlib import Path
+import xml.etree.ElementTree as ET
+root=ET.parse('05_evidence/phase3b-all-tests.xml').getroot()
+counts=defaultdict(Counter)
+stateful=[]
+contracts=Counter()
+for case in root.iter('testcase'):
+    for tag in ('failure','error','skipped'):
+        assert case.find(tag) is None,(case.get('classname'),case.get('name'),tag)
+    module=case.get('classname').split('.')[1]
+    counts[module]['passed']+=1
+    if module=='test_stateful': stateful.append(case.get('classname'))
+    if module=='test_contract':
+        contracts[case.get('name').split('lob-')[1].split('-check_')[0]]+=1
+for file,result in sorted(counts.items()): print(file+'.py:',dict(result))
+assert sum(v['passed'] for v in counts.values())==501
+assert contracts=={'A':64,'B':64,'B2':64,'B3':64},contracts
+assert len(stateful)==3 and len(set(stateful))==3,stateful
+print('Contracts per registry version:',dict(contracts))
+print('Stateful machines:',stateful)
+log=Path('05_evidence/20261121T234932Z_b5411d4-dirty_phase3b-all-tests-green.txt').read_text(encoding='utf-8')
+assert 'warnings summary' not in log
+run=Path('03_results/runs/20261121T234816Z_b5411d4-dirty_phase3b_sanity_not_benchmark')
+(run/'tests.txt').write_text(log,encoding='utf-8')
+print('Original A mutants: 17/17 killed; real-version controls: 4/4 green; internal cases: 17; CLI cases: 15')
+print('Failure/error/skip/warning counts: 0/0/0/0')
+print('RESULT: PASS (501 passed; every registered version and all three A/B stateful machines covered)')
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: b5411d4ab22a662820bea6f55510b23381d017f8
+dirty: True
+python: 3.13.15
+utc: 20261121T235750Z
+exit_code: 0
+duration_s: 0.14
+------------------------------------------------------------
+test_b_internal.py: {'passed': 17}
+test_contract.py: {'passed': 256}
+test_mutants.py: {'passed': 22}
+test_own_datasets.py: {'passed': 4}
+test_replay.py: {'passed': 15}
+test_stateful.py: {'passed': 3}
+test_validation.py: {'passed': 184}
+Contracts per registry version: {'A': 64, 'B': 64, 'B2': 64, 'B3': 64}
+Stateful machines: ['02_tests.test_stateful.TestDifferential_B', '02_tests.test_stateful.TestDifferential_B2', '02_tests.test_stateful.TestDifferential_B3']
+Original A mutants: 17/17 killed; real-version controls: 4/4 green; internal cases: 17; CLI cases: 15
+Failure/error/skip/warning counts: 0/0/0/0
+RESULT: PASS (501 passed; every registered version and all three A/B stateful machines covered)

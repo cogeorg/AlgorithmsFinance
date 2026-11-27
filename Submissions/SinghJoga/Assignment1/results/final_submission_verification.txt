@@ -1,0 +1,149 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261126125045
+Username: BBQEDU-G1241H8X\Joga Singh
+RunAs User: BBQEDU-G1241H8X\Joga Singh
+Configuration Name: 
+Machine: BBQEDU-G1241H8X (Microsoft Windows NT 10.0.26200.0)
+Host Application: powershell.exe -NoProfile -NoLogo -NonInteractive -Command try { [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false) } catch {}; try { if (Microsoft.PowerShell.Utility\Get-Variable -Name PSStyle -ErrorAction Ignore) { $PSStyle.OutputRendering = 'PlainText' } } catch {}; function Clear-Host {}; $global:LASTEXITCODE = 0; $__copilotCommandFinished = $false; $__copilotSuccess = $false; try { $global:LASTEXITCODE = 0
+$ErrorActionPreference = 'Stop'
+$src = (Resolve-Path 'Submissions\SinghJoga\Assignment1').Path
+$log = Join-Path $src 'results\final_submission_verification.txt'
+$tmp = Join-Path $env:TEMP 'Assignment1-final-verify-20261126'
+Start-Transcript -Path $log -Force
+try {
+  Write-Output "Source: $src"
+  Write-Output "Temporary copy: $tmp"
+  if (Test-Path $tmp) { Remove-Item -LiteralPath $tmp -Recurse -Force }
+  New-Item -ItemType Directory -Path $tmp | Out-Null
+  robocopy $src $tmp /E /XD .venv .pytest_cache /XF *.pyc /NFL /NDL /NJH /NJS | Out-Null
+  if ($LASTEXITCODE -ge 8) { throw "robocopy failed: $LASTEXITCODE" }
+  $python = 'C:\Users\Joga Singh\AppData\Local\Python\bin\python3.14.exe'
+  Write-Output 'COMMAND: py3.14 -m venv <temporary-copy>\.venv'
+  & $python -m venv (Join-Path $tmp '.venv')
+  if ($LASTEXITCODE -ne 0) { throw 'venv creation failed' }
+  $vp = Join-Path $tmp '.venv\Scripts\python.exe'
+  Write-Output 'COMMAND: <temporary-copy>\.venv\Scripts\python.exe -m pip install -r requirements.txt'
+  Push-Location $tmp
+  & $vp -m pip install -r requirements.txt
+  if ($LASTEXITCODE -ne 0) { throw 'dependency installation failed' }
+  Write-Output 'COMMAND: python -m pip check'
+  & $vp -m pip check
+  if ($LASTEXITCODE -ne 0) { throw 'pip check failed' }
+  Write-Output 'COMMAND: python -m pytest -q'
+  & $vp -m pytest -q
+  if ($LASTEXITCODE -ne 0) { throw 'full test suite failed' }
+  Write-Output 'COMMAND: replay worked example using baseline and revised'
+  & $vp -m orderbook.replay data\worked_example.jsonl --version baseline
+  if ($LASTEXITCODE -ne 0) { throw 'baseline worked-example replay failed' }
+  & $vp -m orderbook.replay data\worked_example.jsonl --version revised
+  if ($LASTEXITCODE -ne 0) { throw 'revised worked-example replay failed' }
+  Write-Output 'COMMAND: documented small benchmark smoke (temporary results only)'
+  & $vp benchmarks\run_benchmarks.py --smoke --run-id final_submission_smoke_20261126
+  if ($LASTEXITCODE -ne 0) { throw 'benchmark smoke failed' }
+  Write-Output 'COMMAND: dashboard AppTest checks (included in full suite above)'
+  Write-Output 'COMMAND: start Streamlit, HTTP health check, then stop exact PID'
+  $server = Start-Process -FilePath $vp -ArgumentList @('-m','streamlit','run','dashboard\app.py','--server.headless','true','--server.port','8765') -WorkingDirectory $tmp -PassThru -WindowStyle Hidden
+  try {
+    $ready = $false
+    for ($i=0; $i -lt 30; $i++) {
+      Start-Sleep -Seconds 1
+      try { $response = Invoke-WebRequest -Uri 'http://127.0.0.1:8765/_stcore/health' -UseBasicParsing -TimeoutSec 2; if ($response.StatusCode -eq 200) { $ready = $true; break } } catch {}
+    }
+    if (-not $ready) { throw 'Streamlit health endpoint did not become ready' }
+    Write-Output "Streamlit health: HTTP $($response.StatusCode)"
+  } finally {
+    if (-not $server.HasExited) { Stop-Process -Id $server.Id }
+  }
+  Write-Output 'Fresh-copy verification: PASS'
+  Pop-Location
+} catch {
+  Write-Output "VERIFICATION FAILURE: $_"
+  if ((Get-Location).Path -eq $tmp) { Pop-Location }
+  throw
+} finally {
+  Stop-Transcript
+}
+$__copilotSuccess = $?
+$__copilotCommandFinished = $true
+ } finally { if ($__copilotCommandFinished) { if (-not $__copilotSuccess -and $LASTEXITCODE -is [int] -and $LASTEXITCODE -ne 0) { $host.SetShouldExit($LASTEXITCODE) } elseif (-not $__copilotSuccess) { $host.SetShouldExit(1) } else { $host.SetShouldExit(0) } } }
+Process ID: 23696
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\results\final_submission_verification.txt
+Source: C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1
+Temporary copy: C:\Users\JOGASI~1\AppData\Local\Temp\Assignment1-final-verify-20261126
+COMMAND: py3.14 -m venv <temporary-copy>\.venv
+
+COMMAND: <temporary-copy>\.venv\Scripts\python.exe -m pip install -r requirements.txt
+
+COMMAND: python -m pip check
+
+COMMAND: python -m pytest -q
+
+COMMAND: replay worked example using baseline and revised
+
+
+COMMAND: documented small benchmark smoke (temporary results only)
+
+COMMAND: dashboard AppTest checks (included in full suite above)
+COMMAND: start Streamlit, HTTP health check, then stop exact PID
+Streamlit health: HTTP 200
+Fresh-copy verification: PASS
+**********************
+Windows PowerShell transcript end
+End time: 20261126125521
+**********************
+
+FINAL AUDIT (PowerShell)
+README actual SHA256=942652afe0bb915e843007da4483dca40bb6a57f92e77a35c978a9c8ad9deae1; supplied manifest SHA256=17ce011bb3eec68d608ccbb5416ccc459e17764ae610c8111ba6cb4028961da9 (expected authorized quick-start delta).
+baseline.py measured=b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52 current=b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52 match=True
+revised.py measured=b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157 current=b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157 match=True
+generate_orders.py measured=ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d current=ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d match=True
+metrics.py measured=ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235 current=ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235 match=True
+run_benchmarks.py measured=5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b current=5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b match=True
+test_benchmark_tools.py measured=94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa current=94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa match=True
+test_generated_streams.py measured=4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b current=4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b match=True
+test_specification.py measured=3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda current=3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda match=True
+Submission payload estimate excluding environments, caches, and generated benchmark inputs: 2172 files, 178758787 bytes.
+Scope audit: all working-tree changes are under Submissions/SinghJoga/Assignment1/.
+Historical hash mismatch: results\benchmarks\full_20261125\metadata.json run_benchmarks.py recorded=aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b current=5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b
+Historical hash mismatch: results\benchmarks\full_20261125\metadata.json test_benchmark_tools.py recorded=27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a current=94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa
+Historical hash mismatch: results\benchmarks\full_20261125\metadata.json metrics.py recorded=3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb current=ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235
+Historical hash mismatch: results\benchmarks\smoke_final_04\metadata.json run_benchmarks.py recorded=aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b current=5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b
+Historical hash mismatch: results\benchmarks\smoke_final_04\metadata.json test_benchmark_tools.py recorded=27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a current=94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa
+Historical hash mismatch: results\benchmarks\smoke_final_04\metadata.json metrics.py recorded=3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb current=ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235
+Historical hash mismatch: results\benchmarks\smoke_phase_protocol_v1\metadata.json run_benchmarks.py recorded=3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52 current=5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b
+Historical hash mismatch: results\benchmarks\smoke_phase_protocol_v1\metadata.json test_benchmark_tools.py recorded=98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c current=94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa
+Historical hash mismatch: results\benchmarks\smoke_phase_protocol_v2\metadata.json run_benchmarks.py recorded=896d8780dd8010b238774d20795a3e554e348e84b7238d72a7ff196feb083b88 current=5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b
+Historical hash mismatch: results\benchmarks\smoke_phase_protocol_v2\metadata.json test_benchmark_tools.py recorded=98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c current=94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa
+Historical hash mismatch: results\benchmarks\smoke_timeout_validation_01\metadata.json run_benchmarks.py recorded=04d3a31e37e5a3199d70e01d67c21fe207f6c0dad783cb9bfca339c3d6044d7a current=5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b
+Historical hash mismatch: results\benchmarks\smoke_timeout_validation_01\metadata.json test_benchmark_tools.py recorded=81869f535a448a6b9accd201290f68e3a543ff7a7e564bc55b8236ee537c416a current=94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa
+Historical hash mismatch: results\benchmarks\smoke_timeout_validation_01\metadata.json metrics.py recorded=3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb current=ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235
+Historical hash mismatch: results\benchmarks\smoke_validation_01\metadata.json run_benchmarks.py recorded=ef75220d900d46a836071bd38a26a6608f40cc0dcae3d4f025172b8b43711047 current=5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b
+Historical hash mismatch: results\benchmarks\smoke_validation_01\metadata.json test_benchmark_tools.py recorded=c4c67bcc6dedc86e1f25e161cbdae18e46a51b951e1a87446437228dd320e12e current=94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa
+Historical hash mismatch: results\benchmarks\smoke_validation_01\metadata.json metrics.py recorded=3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb current=ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235
+Historical hash mismatch: results\benchmarks\smoke_verified_02\metadata.json run_benchmarks.py recorded=04d3a31e37e5a3199d70e01d67c21fe207f6c0dad783cb9bfca339c3d6044d7a current=5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b
+Historical hash mismatch: results\benchmarks\smoke_verified_02\metadata.json test_benchmark_tools.py recorded=81869f535a448a6b9accd201290f68e3a543ff7a7e564bc55b8236ee537c416a current=94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa
+Historical hash mismatch: results\benchmarks\smoke_verified_02\metadata.json metrics.py recorded=3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb current=ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235
+Historical hash mismatch: results\benchmarks\smoke_verified_03\metadata.json run_benchmarks.py recorded=fb0de3fa8dd918a911e200869e5b0126b93311345e17c5d47d98739600ffbd1c current=5924296a3686fea01226d9b1e64ce777ce466ab4a7e918f08bc18ce2b27e242b
+Historical hash mismatch: results\benchmarks\smoke_verified_03\metadata.json test_benchmark_tools.py recorded=81869f535a448a6b9accd201290f68e3a543ff7a7e564bc55b8236ee537c416a current=94e63895563dd254a302418171b7409672cf47a61b2fac3948bdc74a90fc4bfa
+Historical hash mismatch: results\benchmarks\smoke_verified_03\metadata.json metrics.py recorded=3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb current=ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235
+Metadata hash audit: 22 historical mismatches across benchmark metadata files.
+Final README verification: git diff numstat=33	0	Submissions/SinghJoga/Assignment1/README.md (insertions only; no supplied lines removed); actual SHA256=d9d4b68c82110646eb13befd93775783170c0dded4358ea9e74cbaf129d49aba; supplied manifest SHA256=17ce011bb3eec68d608ccbb5416ccc459e17764ae610c8111ba6cb4028961da9 (authorized quick-start delta).
+Final quick-start wording audit: from repository root use cd .\Submissions\SinghJoga\Assignment1. README final SHA256=afba4d6f7e9ee3feccfd9c1a1c9113b250b32db5f02d33217c35a78b2ed756d5; manifest SHA256=17ce011bb3eec68d608ccbb5416ccc459e17764ae610c8111ba6cb4028961da9; mismatch is the authorized preamble only.
+
+LIMITATIONS AND SCOPE
+No full benchmark matrix was run; only the documented small smoke was run in the temporary copy.
+The saved full matrix remains incomplete; see results/coverage.csv and docs/report.md for stopped, interrupted, and never-attempted phases.
+The bounded one-million-event attempt remains incomplete (baseline 0/5, revised 1/5); no complete timing median is claimed.
+The separate document-embedded keyword check remains pending by instruction.
+Historical harness/metrics/test hashes differ for earlier runs and remain unchanged; engine and generator hashes match. README manifest mismatch is the authorized quick-start addition.
+Changes are confined to Submissions/SinghJoga/Assignment1; no commit or push.

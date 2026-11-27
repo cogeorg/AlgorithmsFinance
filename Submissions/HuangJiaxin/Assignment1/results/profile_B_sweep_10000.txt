@@ -1,0 +1,43 @@
+cProfile, version B, sweep, 10000 events, seed 42
+Own time (tottime) excludes called functions; cumulative time includes them.
+
+         352956 function calls in 0.153 seconds
+
+   Ordered by: internal time
+   List reduced from 25 to 12 due to restriction <12>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.033    0.000    0.080    0.000 /app/lob/validation.py:21(check)
+    84000    0.018    0.000    0.018    0.000 {method 'get' of 'dict' objects}
+     8000    0.014    0.000    0.111    0.000 /app/lob/book_b.py:143(add_limit_order)
+    96000    0.012    0.000    0.012    0.000 {built-in method builtins.isinstance}
+    10000    0.012    0.000    0.019    0.000 /app/lob/book_b.py:93(_match)
+    28000    0.011    0.000    0.018    0.000 /app/lob/validation.py:12(_is_int)
+     8000    0.010    0.000    0.017    0.000 /app/lob/book_b.py:81(_rest)
+    28000    0.009    0.000    0.027    0.000 /app/lob/validation.py:17(_positive_int)
+    10000    0.008    0.000    0.150    0.000 /app/lob/book_b.py:131(process)
+    10000    0.005    0.000    0.085    0.000 /app/lob/book_b.py:124(_validate)
+    10980    0.003    0.000    0.004    0.000 /app/lob/book_b.py:65(_best_price)
+        1    0.003    0.003    0.153    0.153 /app/bench/common.py:61(replay)
+
+
+         352956 function calls in 0.153 seconds
+
+   Ordered by: cumulative time
+   List reduced from 25 to 12 due to restriction <12>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.003    0.003    0.153    0.153 /app/bench/common.py:61(replay)
+    10000    0.008    0.000    0.150    0.000 /app/lob/book_b.py:131(process)
+     8000    0.014    0.000    0.111    0.000 /app/lob/book_b.py:143(add_limit_order)
+    10000    0.005    0.000    0.085    0.000 /app/lob/book_b.py:124(_validate)
+    10000    0.033    0.000    0.080    0.000 /app/lob/validation.py:21(check)
+     2000    0.002    0.000    0.028    0.000 /app/lob/book_b.py:157(fill_market_sell)
+    28000    0.009    0.000    0.027    0.000 /app/lob/validation.py:17(_positive_int)
+    10000    0.012    0.000    0.019    0.000 /app/lob/book_b.py:93(_match)
+    28000    0.011    0.000    0.018    0.000 /app/lob/validation.py:12(_is_int)
+    84000    0.018    0.000    0.018    0.000 {method 'get' of 'dict' objects}
+     8000    0.010    0.000    0.017    0.000 /app/lob/book_b.py:81(_rest)
+    96000    0.012    0.000    0.012    0.000 {built-in method builtins.isinstance}
+
+

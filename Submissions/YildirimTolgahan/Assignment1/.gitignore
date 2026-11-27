@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+# Generated event files are reproduced by benchmark.py; checksums are in results/measurements.json.
+data/generated/
+results/smoke/
+results/measurements.partial.json

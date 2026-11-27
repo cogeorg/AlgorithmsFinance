@@ -1,0 +1,50 @@
+growth: dead_slot_rebuild B1
+  n=     10924  0.034336 s  (ok, repeats=3)
+  n=     21847  0.070417 s  (ok, repeats=3)
+  n=     43692  0.139350 s  (ok, repeats=3)
+  n=     87383  0.287198 s  (ok, repeats=3)
+  n=    174764  0.579940 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 2.00 -> INCONSISTENT (tol 0.3)
+  raw: {"10924": [0.037616, 0.034336, 0.033619], "21847": [0.068588, 0.070417, 0.075774], "43692": [0.13935, 0.138574, 0.14689], "87383": [0.282446, 0.287198, 0.29385], "174764": [0.592134, 0.556066, 0.57994]}
+  last cell: {"events": 174764, "live": 1, "rebuilds": null, "heap": null}
+growth: dead_slot_rebuild B3
+  n=     10924  0.032237 s  (ok, repeats=3)
+  n=     21847  0.065285 s  (ok, repeats=3)
+  n=     43692  0.129339 s  (ok, repeats=3)
+  n=     87383  0.270030 s  (ok, repeats=3)
+  n=    174764  0.535525 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"10924": [0.032237, 0.031548, 0.0337], "21847": [0.064873, 0.066004, 0.065285], "43692": [0.129339, 0.127272, 0.134154], "87383": [0.282725, 0.27003, 0.266055], "174764": [0.535525, 0.539643, 0.526286]}
+  last cell: {"events": 174764, "live": 1, "rebuilds": null, "heap": 262146}
+growth: dead_slot_rebuild B3rF
+  n=     10924  0.037690 s  (ok, repeats=3)
+  n=     21847  0.074704 s  (ok, repeats=3)
+  n=     43692  0.150164 s  (ok, repeats=3)
+  n=     87383  0.298546 s  (ok, repeats=3)
+  n=    174764  0.629811 s  (ok, repeats=3)
+  measured exponent: 1.01
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"10924": [0.046669, 0.036315, 0.03769], "21847": [0.07387, 0.074704, 0.075557], "43692": [0.150677, 0.150164, 0.15008], "87383": [0.302305, 0.298546, 0.298526], "174764": [0.629811, 0.681535, 0.608343]}
+  last cell: {"events": 174764, "live": 1, "rebuilds": 43707, "heap": 1}
+growth: dead_slot_rebuild B3rL
+  n=     10924  0.060194 s  (ok, repeats=3)
+  n=     21847  0.155621 s  (ok, repeats=3)
+  n=     43692  0.519323 s  (ok, repeats=3)
+  n=     87383  1.759625 s  (ok, repeats=3)
+  n=    174764  6.924784 s  (ok, repeats=3)
+  measured exponent: 1.72
+  predicted: 2.00 -> consistent (tol 0.3)
+  raw: {"10924": [0.060182, 0.109402, 0.060194], "21847": [0.155621, 0.156169, 0.154955], "43692": [0.519323, 0.539857, 0.517107], "87383": [1.746284, 1.759625, 1.764191], "174764": [7.453688, 6.87606, 6.924784]}
+  last cell: {"events": 174764, "live": 1, "rebuilds": 43707, "heap": 1}
+growth: dead_slot_rebuild B1
+  n=     10924  0.033487 s  (ok, repeats=3)
+  n=     21847  0.069261 s  (ok, repeats=3)
+  n=     43692  0.141875 s  (ok, repeats=3)
+  n=     87383  0.283601 s  (ok, repeats=3)
+  n=    174764  0.568363 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"10924": [0.033487, 0.035722, 0.03306], "21847": [0.069261, 0.069058, 0.069676], "43692": [0.140752, 0.141875, 0.142198], "87383": [0.306436, 0.283601, 0.278762], "174764": [0.568363, 0.563772, 0.578936]}
+  last cell: {"events": 174764, "live": 1, "rebuilds": null, "heap": null}

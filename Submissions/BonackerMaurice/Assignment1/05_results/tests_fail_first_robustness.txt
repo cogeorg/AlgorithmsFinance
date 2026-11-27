@@ -1,0 +1,54 @@
+# Fail-first evidence for 02_tests/test_robustness.py, run BEFORE the replay.py change.
+# Command: python -m pytest 02_tests/test_robustness.py -q --tb=line
+# Expected: the engine-level cases already pass (validation existed); the replay cases fail
+# (malformed line crashes the replay; --print-book does not exist yet).
+
+........................................................................ [ 50%]
+.......................................................FFFFFFFFFFFFFFF   [100%]
+================================== FAILURES ===================================
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+<frozen codecs>:325: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+<frozen codecs>:325: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+<frozen codecs>:325: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+<frozen codecs>:325: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+<frozen codecs>:325: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+<frozen codecs>:325: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+<frozen codecs>:325: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+<frozen codecs>:325: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+<frozen codecs>:325: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+<frozen codecs>:325: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+<frozen codecs>:325: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+<frozen codecs>:325: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 321: invalid start byte
+E   SystemExit: 2
+---------------------------- Captured stderr call -----------------------------
+usage: __main__.py [-h] --version {a,b_sorted,b_heap} [--check]
+                   [--results RESULTS] [--csv CSV]
+                   files [files ...]
+__main__.py: error: unrecognized arguments: --print-book
+<home>\AppData\Local\Programs\Python\Python313\Lib\argparse.py:2673: SystemExit: 2
+E   SystemExit: 2
+---------------------------- Captured stderr call -----------------------------
+usage: __main__.py [-h] --version {a,b_sorted,b_heap} [--check]
+                   [--results RESULTS] [--csv CSV]
+                   files [files ...]
+__main__.py: error: unrecognized arguments: --print-book
+<home>\AppData\Local\Programs\Python\Python313\Lib\argparse.py:2673: SystemExit: 2
+E   SystemExit: 2
+---------------------------- Captured stderr call -----------------------------
+usage: __main__.py [-h] --version {a,b_sorted,b_heap} [--check]
+                   [--results RESULTS] [--csv CSV]
+                   files [files ...]
+__main__.py: error: unrecognized arguments: --print-book
+<home>\AppData\Local\Programs\Python\Python313\Lib\argparse.py:2673: SystemExit: 2
+15 failed, 127 passed in 0.23s

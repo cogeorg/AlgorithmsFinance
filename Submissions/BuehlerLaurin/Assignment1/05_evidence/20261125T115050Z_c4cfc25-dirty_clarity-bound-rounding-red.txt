@@ -1,0 +1,23 @@
+label: clarity-bound-rounding-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py::test_compact_overview_is_seed_median_with_explicit_bounds -q --tb=short --basetemp=scratch/pytest-clarity-rounding-red
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: c4cfc2521f57fc3de60a35d361ff4ceb025e552f
+dirty: True
+python: 3.13.15
+utc: 20261125T115050Z
+exit_code: 1
+duration_s: 10.83
+------------------------------------------------------------
+F                                                                        [100%]
+================================== FAILURES ===================================
+__________ test_compact_overview_is_seed_median_with_explicit_bounds __________
+02_tests\test_dashboard.py:197: in test_compact_overview_is_seed_median_with_explicit_bounds
+    assert displayed <= pd.Series(ratios).median()
+E   AssertionError: assert 1300.0 <= np.float64(1295.7163831965615)
+E    +  where np.float64(1295.7163831965615) = median()
+E    +    where median = 0    1295.082077\n1    1295.716383\n2    2124.843780\ndtype: float64.median
+E    +      where 0    1295.082077\n1    1295.716383\n2    2124.843780\ndtype: float64 = <class 'pandas.Series'>([np.float64(1295.0820769239954), np.float64(1295.7163831965615), np.float64(2124.8437797155148)])
+E    +        where <class 'pandas.Series'> = pd.Series
+=========================== short test summary info ===========================
+FAILED 02_tests/test_dashboard.py::test_compact_overview_is_seed_median_with_explicit_bounds
+1 failed in 9.47s

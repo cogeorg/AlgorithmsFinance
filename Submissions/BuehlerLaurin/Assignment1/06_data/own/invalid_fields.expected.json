@@ -1,0 +1,471 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "invalid_fields",
+ "description": "Every invalid-event row of INVALID_EVENTS after a two-order setup; none changes the book or the last accepted seq; seq 3 is still accepted afterwards.",
+ "covers": [
+  "every invalid-field case",
+  "rejection leaves book unchanged",
+  "rejected events do not advance seq",
+  "check order of validation rules"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "order_id": "a1",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "not_an_object"
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "not_an_object"
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "not_an_object"
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "not_an_object"
+  },
+  {
+   "event_id": "x-seq-missing",
+   "status": "rejected",
+   "reason": "missing_field:seq"
+  },
+  {
+   "event_id": "x-seq-zero",
+   "status": "rejected",
+   "reason": "bad_seq"
+  },
+  {
+   "event_id": "x-seq-negative",
+   "status": "rejected",
+   "reason": "bad_seq"
+  },
+  {
+   "event_id": "x-seq-bool",
+   "status": "rejected",
+   "reason": "bad_seq"
+  },
+  {
+   "event_id": "x-seq-float",
+   "status": "rejected",
+   "reason": "bad_seq"
+  },
+  {
+   "event_id": "x-seq-string",
+   "status": "rejected",
+   "reason": "bad_seq"
+  },
+  {
+   "event_id": "x-seq-null",
+   "status": "rejected",
+   "reason": "bad_seq"
+  },
+  {
+   "event_id": "x-seq-equal-limit",
+   "status": "rejected",
+   "reason": "nonincreasing_seq"
+  },
+  {
+   "event_id": "x-seq-lower-limit",
+   "status": "rejected",
+   "reason": "nonincreasing_seq"
+  },
+  {
+   "event_id": "x-seq-equal-market",
+   "status": "rejected",
+   "reason": "nonincreasing_seq"
+  },
+  {
+   "event_id": "x-seq-lower-cancel",
+   "status": "rejected",
+   "reason": "nonincreasing_seq"
+  },
+  {
+   "event_id": "x-type-missing",
+   "status": "rejected",
+   "reason": "missing_field:type"
+  },
+  {
+   "event_id": "x-type-market-buy",
+   "status": "rejected",
+   "reason": "unknown_type"
+  },
+  {
+   "event_id": "x-type-lowercase",
+   "status": "rejected",
+   "reason": "unknown_type"
+  },
+  {
+   "event_id": "x-type-empty",
+   "status": "rejected",
+   "reason": "unknown_type"
+  },
+  {
+   "event_id": "x-type-null",
+   "status": "rejected",
+   "reason": "unknown_type"
+  },
+  {
+   "event_id": "x-type-number",
+   "status": "rejected",
+   "reason": "unknown_type"
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "missing_field:event_id"
+  },
+  {
+   "event_id": "x-limit-no-order-id",
+   "status": "rejected",
+   "reason": "missing_field:order_id"
+  },
+  {
+   "event_id": "x-limit-no-side",
+   "status": "rejected",
+   "reason": "missing_field:side"
+  },
+  {
+   "event_id": "x-limit-no-price",
+   "status": "rejected",
+   "reason": "missing_field:price_ticks"
+  },
+  {
+   "event_id": "x-limit-no-qty",
+   "status": "rejected",
+   "reason": "missing_field:qty_units"
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "missing_field:event_id"
+  },
+  {
+   "event_id": "x-market-no-order-id",
+   "status": "rejected",
+   "reason": "missing_field:order_id"
+  },
+  {
+   "event_id": "x-market-no-qty",
+   "status": "rejected",
+   "reason": "missing_field:qty_units"
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "missing_field:event_id"
+  },
+  {
+   "event_id": "x-cancel-no-target",
+   "status": "rejected",
+   "reason": "missing_field:target_order_id"
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "bad_id:event_id"
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "bad_id:event_id"
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "bad_id:event_id"
+  },
+  {
+   "event_id": "x-order-id-empty",
+   "status": "rejected",
+   "reason": "bad_id:order_id"
+  },
+  {
+   "event_id": "x-order-id-number",
+   "status": "rejected",
+   "reason": "bad_id:order_id"
+  },
+  {
+   "event_id": "x-order-id-null",
+   "status": "rejected",
+   "reason": "bad_id:order_id"
+  },
+  {
+   "event_id": "x-market-order-id-number",
+   "status": "rejected",
+   "reason": "bad_id:order_id"
+  },
+  {
+   "event_id": "x-target-empty",
+   "status": "rejected",
+   "reason": "bad_id:target_order_id"
+  },
+  {
+   "event_id": "x-target-number",
+   "status": "rejected",
+   "reason": "bad_id:target_order_id"
+  },
+  {
+   "event_id": "x-target-null",
+   "status": "rejected",
+   "reason": "bad_id:target_order_id"
+  },
+  {
+   "event_id": "x-side-lowercase",
+   "status": "rejected",
+   "reason": "unknown_side"
+  },
+  {
+   "event_id": "x-side-hold",
+   "status": "rejected",
+   "reason": "unknown_side"
+  },
+  {
+   "event_id": "x-side-empty",
+   "status": "rejected",
+   "reason": "unknown_side"
+  },
+  {
+   "event_id": "x-side-null",
+   "status": "rejected",
+   "reason": "unknown_side"
+  },
+  {
+   "event_id": "x-side-number",
+   "status": "rejected",
+   "reason": "unknown_side"
+  },
+  {
+   "event_id": "x-price-zero",
+   "status": "rejected",
+   "reason": "bad_price"
+  },
+  {
+   "event_id": "x-price-negative",
+   "status": "rejected",
+   "reason": "bad_price"
+  },
+  {
+   "event_id": "x-price-integral-float",
+   "status": "rejected",
+   "reason": "bad_price"
+  },
+  {
+   "event_id": "x-price-float",
+   "status": "rejected",
+   "reason": "bad_price"
+  },
+  {
+   "event_id": "x-price-true",
+   "status": "rejected",
+   "reason": "bad_price"
+  },
+  {
+   "event_id": "x-price-false",
+   "status": "rejected",
+   "reason": "bad_price"
+  },
+  {
+   "event_id": "x-price-string",
+   "status": "rejected",
+   "reason": "bad_price"
+  },
+  {
+   "event_id": "x-price-null",
+   "status": "rejected",
+   "reason": "bad_price"
+  },
+  {
+   "event_id": "x-price-nan",
+   "status": "rejected",
+   "reason": "bad_price"
+  },
+  {
+   "event_id": "x-price-inf",
+   "status": "rejected",
+   "reason": "bad_price"
+  },
+  {
+   "event_id": "x-qty-zero",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-qty-negative",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-qty-integral-float",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-qty-float",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-qty-true",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-qty-false",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-qty-string",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-qty-null",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-qty-nan",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-qty-inf",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-market-qty-zero",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-market-qty-true",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-market-qty-integral-float",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "x-dup-live-bid-id",
+   "status": "rejected",
+   "reason": "duplicate_live_order_id"
+  },
+  {
+   "event_id": "x-dup-live-ask-id",
+   "status": "rejected",
+   "reason": "duplicate_live_order_id"
+  },
+  {
+   "event_id": "x-dup-market-bid-id",
+   "status": "rejected",
+   "reason": "duplicate_live_order_id"
+  },
+  {
+   "event_id": "x-dup-market-ask-id",
+   "status": "rejected",
+   "reason": "duplicate_live_order_id"
+  },
+  {
+   "event_id": "x-order-seq-before-type",
+   "status": "rejected",
+   "reason": "bad_seq"
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "nonincreasing_seq"
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "unknown_type"
+  },
+  {
+   "event_id": "x-order-missing-before-side",
+   "status": "rejected",
+   "reason": "missing_field:qty_units"
+  },
+  {
+   "event_id": null,
+   "status": "rejected",
+   "reason": "bad_id:event_id"
+  },
+  {
+   "event_id": "x-order-side-before-price",
+   "status": "rejected",
+   "reason": "unknown_side"
+  },
+  {
+   "event_id": "x-order-price-before-qty",
+   "status": "rejected",
+   "reason": "bad_price"
+  },
+  {
+   "event_id": "x-order-qty-before-duplicate",
+   "status": "rejected",
+   "reason": "bad_qty"
+  },
+  {
+   "event_id": "e3",
+   "order_id": "b2",
+   "status": "resting",
+   "unfilled_qty_units": 1,
+   "fills": []
+  },
+  {
+   "event_id": "x-seq3-again",
+   "status": "rejected",
+   "reason": "nonincreasing_seq"
+  },
+  {
+   "event_id": "e4",
+   "target_order_id": "b1",
+   "status": "cancelled",
+   "cancelled_qty_units": 5
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "b2",
+   "side": "BUY",
+   "price_ticks": 99,
+   "qty_units": 1,
+   "arrival_seq": 3
+  },
+  {
+   "order_id": "a1",
+   "side": "SELL",
+   "price_ticks": 110,
+   "qty_units": 5,
+   "arrival_seq": 2
+  }
+ ],
+ "best_bid": 99,
+ "best_ask": 110
+}

@@ -1,0 +1,17 @@
+{
+  "cells": {
+    "read_parse": 66,
+    "replay": 132,
+    "fixed_book": 84
+  },
+  "cells_ok": 188,
+  "cells_stopped_at_declared_limit": 28,
+  "raw_csv_rows": 2224,
+  "stream_workloads_identical_between_versions": "49 of 49 comparable",
+  "single_sales_identical_between_versions": 31,
+  "completed_sales_matching_sorted_fill_plan": 73,
+  "medians_csv_coverage_and_checksums": "PASS",
+  "source_hashes_match_measured_code": true,
+  "tuning_rows_checked": 7,
+  "dashboard_byte_identical_rebuild": true
+}

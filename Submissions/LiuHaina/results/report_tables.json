@@ -1,0 +1,24 @@
+{
+  "measurement_run_id": "20261120T135856.334525Z",
+  "tables": {
+    "mixed_batch_totals": "| n | Linear search (ms) | Binary search (ms) | Hash set (ms) |\n| --- | --- | --- | --- |\n| 1,000 | 0.713599 | 0.104204 | 0.008426 |\n| 10,000 | 5.961500 | 0.875250 | 0.111876 |\n| 100,000 | 61.841333 | 9.835375 | 1.486927 |",
+    "single_query_totals": "| n | Scenario | Linear search (ms) | Binary search (ms) | Hash set (ms) |\n| --- | --- | --- | --- | --- |\n| 1,000 | all present | 0.006470 | 0.040641 | 0.006833 |\n| 1,000 | all absent | 0.010981 | 0.040278 | 0.007025 |\n| 10,000 | all present | 0.011927 | 0.807906 | 0.116220 |\n| 10,000 | all absent | 0.095010 | 0.849563 | 0.105779 |\n| 100,000 | all present | 0.720667 | 9.815625 | 1.453677 |\n| 100,000 | all absent | 0.915656 | 9.693750 | 1.446385 |",
+    "phase_comparison": "| Method | Preparation (ms) | Query batch (ms) | Total (ms) |\n| --- | --- | --- | --- |\n| Linear search | 0.000053 | 62.773542 | 61.841333 |\n| Binary search | 10.521542 | 0.117116 | 9.835375 |\n| Hash set | 1.454375 | 0.001686 | 1.486927 |",
+    "hit_scenarios": "| Scenario | Linear search (ms) | Binary search (ms) | Hash set (ms) |\n| --- | --- | --- | --- |\n| all present | 26.219834 | 9.669291 | 1.532021 |\n| mixed | 61.841333 | 9.835375 | 1.486927 |\n| all absent | 93.532083 | 9.804334 | 1.534458 |",
+    "version_comparison": "| Method | Original total (ms) | Revised total (ms) | Original / Revised |\n| --- | --- | --- | --- |\n| Linear search | 62.822333 | 61.841333 | 1.016x |\n| Binary search | 9.664916 | 9.835375 | 0.983x |\n| Hash set | 1.511406 | 1.486927 | 1.016x |",
+    "empty_query_revision": "| n | Method | Original total (ms) | Revised total (ms) | Original peak (KiB) | Revised peak (KiB) |\n| --- | --- | --- | --- | --- | --- |\n| 1,000 | Binary search | 0.037842 | 0.0001216 | 11.842 | 0.176 |\n| 1,000 | Hash set | 0.007427 | 0.0001158 | 40.320 | 0.178 |\n| 10,000 | Binary search | 0.720120 | 0.0001185 | 117.357 | 0.176 |\n| 10,000 | Hash set | 0.106526 | 0.0001191 | 160.320 | 0.178 |\n| 100,000 | Binary search | 10.234500 | 0.0001187 | 1171.896 | 0.176 |\n| 100,000 | Hash set | 1.469573 | 0.0001150 | 2560.320 | 0.178 |",
+    "memory_comparison": "| Method | Version | Current traced (KiB) | Peak traced (KiB) |\n| --- | --- | --- | --- |\n| Linear search | Original | 0.957 | 1.051 |\n| Linear search | Revised | 0.957 | 1.051 |\n| Binary search | Original | 782.322 | 1171.896 |\n| Binary search | Revised | 782.322 | 1171.896 |\n| Hash set | Original | 2049.232 | 2560.320 |\n| Hash set | Revised | 2049.170 | 2560.320 |",
+    "array_composition": "| Array length n | Distinct IDs | Duplicate entries beyond first occurrences |\n| --- | --- | --- |\n| 1,000 | 431 | 569 |\n| 10,000 | 4,308 | 5,692 |\n| 100,000 | 43,230 | 56,770 |"
+  },
+  "source_files_sha256": {
+    "timing_raw.csv": "9e9c72eee32999a5d7631152baf2d511b64a37ff790f8649912a5e1cb80ed567",
+    "timing_summary.csv": "c763adc87fccd0ea6cfb7bd49158281871c01763965af0008cc6f32aea711166",
+    "memory.csv": "353558e268a1d9e436493d4bf70de9a0fc6f5b6249e4b0ba6093510575bc9c70",
+    "metadata.json": "f4243b22dc89e3475111e2e06a647bc25369a1d0274a1289e5a5ce7607de66bc"
+  },
+  "nonempty_original_over_revised": {
+    "min": 0.8531658933921874,
+    "max": 1.1499261810600987,
+    "median": 1.0059480325794905
+  }
+}

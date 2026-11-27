@@ -1,0 +1,27 @@
+stage: 07_memory_after_implementation
+started_utc: 2026-11-23T18:09:50.666961+00:00
+finished_utc: 2026-11-23T18:09:54.522545+00:00
+elapsed_seconds: 3.855602
+exit_code: 0
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: a8fc71c5a68f4557da02186cc1cdd243ccf9a4f3
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider tests/test_14_memory_measurement.py tests/test_13_latency_measurement.py tests/test_12_benchmark_harness.py tests/test_11_measurement_helpers.py
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 47 items
+
+tests\test_14_memory_measurement.py ........                             [ 17%]
+tests\test_13_latency_measurement.py ................                    [ 51%]
+tests\test_12_benchmark_harness.py .........                             [ 70%]
+tests\test_11_measurement_helpers.py ..............                      [100%]
+
+============================= 47 passed in 3.03s ==============================
+
+=== stderr ===

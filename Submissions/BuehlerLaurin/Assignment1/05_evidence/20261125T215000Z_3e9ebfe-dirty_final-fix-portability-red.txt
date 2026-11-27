@@ -1,0 +1,179 @@
+label: final-fix-portability-red
+command: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\.venv\Scripts\python.exe -m pytest -q 02_tests/test_checkout_portability.py --tb=short --basetemp=scratch/final-fix-red
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3e9ebfe152605d80f48c2e9d703b965eda246c78
+dirty: True
+python: 3.13.15
+utc: 20261125T215000Z
+exit_code: 1
+duration_s: 27.81
+------------------------------------------------------------
+FFFFFFF                                                                  [100%]
+================================== FAILURES ===================================
+_______ test_dashboard_loader_contract_in_no_checkout_copy[no_checkout] _______
+02_tests\test_checkout_portability.py:51: in test_dashboard_loader_contract_in_no_checkout_copy
+    assert result.returncode==0,result.stdout+'\n'+result.stderr
+E   AssertionError: F                                                                        [100%]
+E     ================================== FAILURES ===================================
+E     _____________ test_loader_restricts_paths_and_uses_a_fixed_commit _____________
+E     
+E     bundle = {'store': <saved_results.DiskStore object at 0x000001D41AAD8590>, 'tables': {'candidates': {'summary':                ...w per-scenario method and rationale.\nThis implementation checkpoint executes tests/preview only, no rematch.\n'}, ...}
+E     
+E         def test_loader_restricts_paths_and_uses_a_fixed_commit(bundle):
+E             store = bundle['store']
+E     >       assert len(store.revision) == 40
+E                    ^^^^^^^^^^^^^^^^^^^
+E     E       TypeError: object of type 'NoneType' has no len()
+E     
+E     02_tests\test_dashboard.py:78: TypeError
+E     =========================== short test summary info ===========================
+E     FAILED 02_tests/test_dashboard.py::test_loader_restricts_paths_and_uses_a_fixed_commit
+E     1 failed in 7.14s
+E     
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\Users\\laubu\\dev\\AIF-Lab\\AlgorithmsFinance\\Submissions\\BuehlerLaurin\\Assignment1\\.v...AILED 02_tests/test_dashboard.py::test_loader_restricts_paths_and_uses_a_fixed_commit\n1 failed in 7.14s\n", stderr='').returncode
+_________ test_dashboard_loader_contract_in_no_checkout_copy[no_git] __________
+02_tests\test_checkout_portability.py:51: in test_dashboard_loader_contract_in_no_checkout_copy
+    assert result.returncode==0,result.stdout+'\n'+result.stderr
+E   AssertionError: F                                                                        [100%]
+E     ================================== FAILURES ===================================
+E     _____________ test_loader_restricts_paths_and_uses_a_fixed_commit _____________
+E     
+E     bundle = {'store': <saved_results.DiskStore object at 0x000002798D2B8590>, 'tables': {'candidates': {'summary':                ...w per-scenario method and rationale.\nThis implementation checkpoint executes tests/preview only, no rematch.\n'}, ...}
+E     
+E         def test_loader_restricts_paths_and_uses_a_fixed_commit(bundle):
+E             store = bundle['store']
+E     >       assert len(store.revision) == 40
+E                    ^^^^^^^^^^^^^^^^^^^
+E     E       TypeError: object of type 'NoneType' has no len()
+E     
+E     02_tests\test_dashboard.py:78: TypeError
+E     =========================== short test summary info ===========================
+E     FAILED 02_tests/test_dashboard.py::test_loader_restricts_paths_and_uses_a_fixed_commit
+E     1 failed in 7.67s
+E     
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\Users\\laubu\\dev\\AIF-Lab\\AlgorithmsFinance\\Submissions\\BuehlerLaurin\\Assignment1\\.v...AILED 02_tests/test_dashboard.py::test_loader_restricts_paths_and_uses_a_fixed_commit\n1 failed in 7.67s\n", stderr='').returncode
+__________________ test_submission_smoke_in_no_checkout_copy __________________
+02_tests\test_checkout_portability.py:58: in test_submission_smoke_in_no_checkout_copy
+    assert result.returncode==0,result.stdout+'\n'+result.stderr
+E   AssertionError: SMOKE ONLY: M=1000, seed 42, A/B3r; all inputs/results under C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\final-fix-red\test_submission_smoke_in_no_ch0\submission\scratch\submission_smoke__5fdmkxs
+E     SHA256 OK: official_buildup_1000_s42_l1000 9b3054be934ed3df5aad49b61622e9af79309646518fcc9de11d590eb77618db
+E     SHA256 OK: official_crowded_1000_s42_l1000 30053d0b678d452ff32b6e08fab431ef6d6676829f227686bbb1159fedfa306e
+E     SHA256 OK: official_mixed_1000_s42_l1000 8c3455dc8370f2e006eda834f5bfeb47abdb7dc3766775cf12cdc8444f974d9d
+E     SHA256 OK: official_sweep_1000_s42_l1000 e4ec73a1792d215d2f56a5ba4dc92fcb012886a741603dc939827d567f11c2fe
+E     SHA256 OK: official_cancel_churn_1000_s42_l1000 2994e992735f3a2a324c6832d8883570e486cbf1a6761b3174d2a5014bf5b2d6
+E     SHA256 OK: queue_buildup_1000_s42_l4 30053d0b678d452ff32b6e08fab431ef6d6676829f227686bbb1159fedfa306e
+E     SHA256 OK: queue_buildup_1000_s42_l1000 9b3054be934ed3df5aad49b61622e9af79309646518fcc9de11d590eb77618db
+E     SHA256 OK: liquidation_liquidation_1000_s42_l1000 155dc2d09fbfd48f8d719ac50870120ea26cfdcdeccf0d43ea66651b47895782
+E     SHA256 OK: adversarial_deep_book_1000_s42_l1000 277db941cc190950d1cbbf096222787de4c048d6b5a1d17d2035bed4e553f8cf
+E     SHA256 OK: adversarial_mid_queue_cancels_1000_s42_l4 8a600f1f8058b711863d485efdc3f4451d9362dbdaeb18e9a7fa0d063833dc27
+E     SHA256 OK: adversarial_repeated_full_sweeps_1000_s42_l199 8c0193b9422368f62a454e9c3ee5d8f893964a01cc4fff1acdf08994abfc4fb1
+E     SHA256 OK: churn_drift_1000_s42_l1000 c02c436cc206db90eac1aaf5e7f9a3c1d2a61b1dda84d11fd94fd61846f39266
+E     OK: 12 catalog entries / 11 files; local manifest: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\final-fix-red\test_submission_smoke_in_no_ch0\submission\scratch\submission_smoke__5fdmkxs\06_data\generated\reproduction\manifest.json
+E     
+E     Traceback (most recent call last):
+E       File "<frozen runpy>", line 203, in _run_module_as_main
+E       File "<frozen runpy>", line 88, in _run_code
+E       File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\final-fix-red\test_submission_smoke_in_no_ch0\submission\scratch\submission_smoke__5fdmkxs\run.py", line 22, in <module>
+E         runpy.run_module(module, run_name="__main__", alter_sys=True)
+E         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "<frozen runpy>", line 231, in run_module
+E       File "<frozen runpy>", line 98, in _run_module_code
+E       File "<frozen runpy>", line 88, in _run_code
+E       File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\final-fix-red\test_submission_smoke_in_no_ch0\submission\scratch\submission_smoke__5fdmkxs\01_code\bench\run_all.py", line 300, in <module>
+E         raise SystemExit(main())
+E                          ~~~~^^
+E       File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\final-fix-red\test_submission_smoke_in_no_ch0\submission\scratch\submission_smoke__5fdmkxs\01_code\bench\run_all.py", line 231, in main
+E         directory = get_run(args)
+E       File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\final-fix-red\test_submission_smoke_in_no_ch0\submission\scratch\submission_smoke__5fdmkxs\01_code\bench\run_all.py", line 162, in get_run
+E         dirty = source_dirty()
+E       File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\final-fix-red\test_submission_smoke_in_no_ch0\submission\scratch\submission_smoke__5fdmkxs\01_code\bench\run_all.py", line 49, in source_dirty
+E         cp = subprocess.run(["git", "status", "--porcelain=v1", "--untracked-files=all", "--", "."],
+E                             cwd=ROOT, capture_output=True, text=True, check=True)
+E       File "C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+E         raise CalledProcessError(retcode, process.args,
+E                                  output=stdout, stderr=stderr)
+E     subprocess.CalledProcessError: Command '['git', 'status', '--porcelain=v1', '--untracked-files=all', '--', '.']' returned non-zero exit status 128.
+E     FAIL: Command '['C:\\Users\\laubu\\dev\\AIF-Lab\\AlgorithmsFinance\\Submissions\\BuehlerLaurin\\Assignment1\\.venv\\Scripts\\python.exe', '-m', 'run', 'bench.run_all', '--part', 'smoke', '--versions', 'A,B3r', '--max-size', '1000', '--manifest', 'C:\\Users\\laubu\\dev\\AIF-Lab\\AlgorithmsFinance\\Submissions\\BuehlerLaurin\\Assignment1\\scratch\\final-fix-red\\test_submission_smoke_in_no_ch0\\submission\\scratch\\submission_smoke__5fdmkxs\\06_data\\generated\\reproduction\\manifest.json']' returned non-zero exit status 1.
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\Users\\laubu\\dev\\AIF-Lab\\AlgorithmsFinance\\Submissions\\BuehlerLaurin\\Assignment1\\.v...ssion_smoke__5fdmkxs\\\\06_data\\\\generated\\\\reproduction\\\\manifest.json\']\' returned non-zero exit status 1.\n').returncode
+______________ test_official_run_rejected_without_checkout[new] _______________
+02_tests\test_checkout_portability.py:95: in test_official_run_rejected_without_checkout
+    assert 'official runs require committed source in a git checkout' in result.stderr
+E   assert 'official runs require committed source in a git checkout' in 'Traceback (most recent call last):\n  File "<frozen runpy>", line 203, in _run_module_as_main\n  File "<frozen runpy>...it\', \'status\', \'--porcelain=v1\', \'--untracked-files=all\', \'--\', \'.\']\' returned non-zero exit status 128.\n'
+E    +  where 'Traceback (most recent call last):\n  File "<frozen runpy>", line 203, in _run_module_as_main\n  File "<frozen runpy>...it\', \'status\', \'--porcelain=v1\', \'--untracked-files=all\', \'--\', \'.\']\' returned non-zero exit status 128.\n' = CompletedProcess(args=['C:\\Users\\laubu\\dev\\AIF-Lab\\AlgorithmsFinance\\Submissions\\BuehlerLaurin\\Assignment1\\.v...t\', \'status\', \'--porcelain=v1\', \'--untracked-files=all\', \'--\', \'.\']\' returned non-zero exit status 128.\n').stderr
+_____________ test_official_run_rejected_without_checkout[resume] _____________
+02_tests\test_checkout_portability.py:95: in test_official_run_rejected_without_checkout
+    assert 'official runs require committed source in a git checkout' in result.stderr
+E   assert 'official runs require committed source in a git checkout' in 'Traceback (most recent call last):\n  File "<frozen runpy>", line 203, in _run_module_as_main\n  File "<frozen runpy>...: [WinError 3] Das System kann den angegebenen Pfad nicht finden: \'03_results\\\\runs\\\\forbidden-resume\\\\jobs\'\n'
+E    +  where 'Traceback (most recent call last):\n  File "<frozen runpy>", line 203, in _run_module_as_main\n  File "<frozen runpy>...: [WinError 3] Das System kann den angegebenen Pfad nicht finden: \'03_results\\\\runs\\\\forbidden-resume\\\\jobs\'\n' = CompletedProcess(args=['C:\\Users\\laubu\\dev\\AIF-Lab\\AlgorithmsFinance\\Submissions\\BuehlerLaurin\\Assignment1\\.v... [WinError 3] Das System kann den angegebenen Pfad nicht finden: \'03_results\\\\runs\\\\forbidden-resume\\\\jobs\'\n').stderr
+________________ test_official_run_still_rejects_dirty_source _________________
+C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\02_tests\test_checkout_portability.py:106: in test_official_run_still_rejects_dirty_source
+    runner.get_run(Namespace(session=None,part='official',limit_s=600,limit_bytes=4*1024**3))
+C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\01_code\bench\run_all.py:153: in get_run
+    code = fingerprint()
+           ^^^^^^^^^^^^^
+C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\01_code\bench\run_all.py:44: in fingerprint
+    return hashlib.sha256("\n".join(p.as_posix()+":"+hashlib.sha256(p.read_bytes()).hexdigest()
+C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\01_code\bench\run_all.py:44: in <genexpr>
+    return hashlib.sha256("\n".join(p.as_posix()+":"+hashlib.sha256(p.read_bytes()).hexdigest()
+                                                                    ^^^^^^^^^^^^^^
+C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:625: in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:537: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'pytest.ini'
+________________ test_missing_git_smoke_metadata_is_unverified ________________
+02_tests\test_checkout_portability.py:124: in test_missing_git_smoke_metadata_is_unverified
+    assert result.returncode==0,result.stdout+'\n'+result.stderr
+E   AssertionError: 
+E     Traceback (most recent call last):
+E       File "<string>", line 6, in <module>
+E         path=get_run(Namespace(session=None,part='smoke',limit_s=600,limit_bytes=4*1024**3))
+E       File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\final-fix-red\test_missing_git_smoke_metadat0\submission\01_code\bench\run_all.py", line 162, in get_run
+E         dirty = source_dirty()
+E       File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\final-fix-red\test_missing_git_smoke_metadat0\submission\01_code\bench\run_all.py", line 49, in source_dirty
+E         cp = subprocess.run(["git", "status", "--porcelain=v1", "--untracked-files=all", "--", "."],
+E                             cwd=ROOT, capture_output=True, text=True, check=True)
+E       File "C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 554, in run
+E         with Popen(*popenargs, **kwargs) as process:
+E              ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+E       File "C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1039, in __init__
+E         self._execute_child(args, executable, preexec_fn, close_fds,
+E         ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                             pass_fds, cwd, env,
+E                             ^^^^^^^^^^^^^^^^^^^
+E         ...<5 lines>...
+E                             gid, gids, uid, umask,
+E                             ^^^^^^^^^^^^^^^^^^^^^^
+E                             start_new_session, process_group)
+E                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1554, in _execute_child
+E         hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+E                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+E                                  # no special security
+E                                  ^^^^^^^^^^^^^^^^^^^^^
+E         ...<4 lines>...
+E                                  cwd,
+E                                  ^^^^
+E                                  startupinfo)
+E                                  ^^^^^^^^^^^^
+E     FileNotFoundError: [WinError 2] Das System kann die angegebene Datei nicht finden
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\Users\\laubu\\dev\\AIF-Lab\\AlgorithmsFinance\\Submissions\\BuehlerLaurin\\Assignment1\\.v...                    ^^^^^^^^^^^^\nFileNotFoundError: [WinError 2] Das System kann die angegebene Datei nicht finden\n').returncode
+=========================== short test summary info ===========================
+FAILED 02_tests/test_checkout_portability.py::test_dashboard_loader_contract_in_no_checkout_copy[no_checkout]
+FAILED 02_tests/test_checkout_portability.py::test_dashboard_loader_contract_in_no_checkout_copy[no_git]
+FAILED 02_tests/test_checkout_portability.py::test_submission_smoke_in_no_checkout_copy
+FAILED 02_tests/test_checkout_portability.py::test_official_run_rejected_without_checkout[new]
+FAILED 02_tests/test_checkout_portability.py::test_official_run_rejected_without_checkout[resume]
+FAILED 02_tests/test_checkout_portability.py::test_official_run_still_rejects_dirty_source
+FAILED 02_tests/test_checkout_portability.py::test_missing_git_smoke_metadata_is_unverified
+7 failed in 26.39s

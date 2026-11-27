@@ -1,0 +1,77 @@
+n=  1000 q=  1 hit=1.0 linear_v1 total median     0.044 ms
+n=  1000 q=  1 hit=1.0 linear_v2 total median     0.021 ms
+n=  1000 q=  1 hit=1.0 binary_v1 total median     0.105 ms
+n=  1000 q=  1 hit=1.0 binary_v2 total median     0.085 ms
+n=  1000 q=  1 hit=1.0 hash      total median     0.017 ms
+n=  1000 q=  1 hit=1.0 bisect_ref total median     0.102 ms
+n=  1000 q=  1 hit=0.0 linear_v1 total median     0.061 ms
+n=  1000 q=  1 hit=0.0 linear_v2 total median     0.022 ms
+n=  1000 q=  1 hit=0.0 binary_v1 total median     0.127 ms
+n=  1000 q=  1 hit=0.0 binary_v2 total median     0.122 ms
+n=  1000 q=  1 hit=0.0 hash      total median     0.020 ms
+n=  1000 q=  1 hit=0.0 bisect_ref total median     0.071 ms
+n=  1000 q=  1 hit=0.5 linear_v1 total median     0.048 ms
+n=  1000 q=  1 hit=0.5 linear_v2 total median     0.021 ms
+n=  1000 q=  1 hit=0.5 binary_v1 total median     0.111 ms
+n=  1000 q=  1 hit=0.5 binary_v2 total median     0.076 ms
+n=  1000 q=  1 hit=0.5 hash      total median     0.017 ms
+n=  1000 q=  1 hit=0.5 bisect_ref total median     0.078 ms
+n=  1000 q=100 hit=1.0 linear_v1 total median     2.335 ms
+n=  1000 q=100 hit=1.0 linear_v2 total median     1.092 ms
+n=  1000 q=100 hit=1.0 binary_v1 total median     0.398 ms
+n=  1000 q=100 hit=1.0 binary_v2 total median     0.162 ms
+n=  1000 q=100 hit=1.0 hash      total median     0.020 ms
+n=  1000 q=100 hit=1.0 bisect_ref total median     0.137 ms
+n=  1000 q=100 hit=0.0 linear_v1 total median     5.946 ms
+n=  1000 q=100 hit=0.0 linear_v2 total median     2.246 ms
+n=  1000 q=100 hit=0.0 binary_v1 total median     0.611 ms
+n=  1000 q=100 hit=0.0 binary_v2 total median     0.261 ms
+n=  1000 q=100 hit=0.0 hash      total median     0.019 ms
+n=  1000 q=100 hit=0.0 bisect_ref total median     0.116 ms
+n=  1000 q=100 hit=0.5 linear_v1 total median     3.234 ms
+n=  1000 q=100 hit=0.5 linear_v2 total median     1.358 ms
+n=  1000 q=100 hit=0.5 binary_v1 total median     0.563 ms
+n=  1000 q=100 hit=0.5 binary_v2 total median     0.169 ms
+n=  1000 q=100 hit=0.5 hash      total median     0.015 ms
+n=  1000 q=100 hit=0.5 bisect_ref total median     0.087 ms
+n= 10000 q=  1 hit=1.0 linear_v1 total median     0.355 ms
+n= 10000 q=  1 hit=1.0 linear_v2 total median     0.174 ms
+n= 10000 q=  1 hit=1.0 binary_v1 total median     1.457 ms
+n= 10000 q=  1 hit=1.0 binary_v2 total median     1.743 ms
+n= 10000 q=  1 hit=1.0 hash      total median     0.371 ms
+n= 10000 q=  1 hit=1.0 bisect_ref total median     1.617 ms
+n= 10000 q=  1 hit=0.0 linear_v1 total median     0.430 ms
+n= 10000 q=  1 hit=0.0 linear_v2 total median     0.196 ms
+n= 10000 q=  1 hit=0.0 binary_v1 total median     1.456 ms
+n= 10000 q=  1 hit=0.0 binary_v2 total median     1.378 ms
+n= 10000 q=  1 hit=0.0 hash      total median     0.340 ms
+n= 10000 q=  1 hit=0.0 bisect_ref total median     1.413 ms
+n= 10000 q=  1 hit=0.5 linear_v1 total median     0.431 ms
+n= 10000 q=  1 hit=0.5 linear_v2 total median     0.192 ms
+n= 10000 q=  1 hit=0.5 binary_v1 total median     1.466 ms
+n= 10000 q=  1 hit=0.5 binary_v2 total median     1.405 ms
+n= 10000 q=  1 hit=0.5 hash      total median     0.418 ms
+n= 10000 q=  1 hit=0.5 bisect_ref total median     1.824 ms
+n= 10000 q=100 hit=1.0 linear_v1 total median    23.765 ms
+n= 10000 q=100 hit=1.0 linear_v2 total median     9.972 ms
+n= 10000 q=100 hit=1.0 binary_v1 total median     4.470 ms
+n= 10000 q=100 hit=1.0 binary_v2 total median     1.498 ms
+n= 10000 q=100 hit=1.0 hash      total median     0.376 ms
+n= 10000 q=100 hit=1.0 bisect_ref total median     1.382 ms
+n= 10000 q=100 hit=0.0 linear_v1 total median    42.946 ms
+n= 10000 q=100 hit=0.0 linear_v2 total median    18.864 ms
+n= 10000 q=100 hit=0.0 binary_v1 total median     4.479 ms
+n= 10000 q=100 hit=0.0 binary_v2 total median     1.496 ms
+n= 10000 q=100 hit=0.0 hash      total median     0.365 ms
+n= 10000 q=100 hit=0.0 bisect_ref total median     1.371 ms
+n= 10000 q=100 hit=0.5 linear_v1 total median    31.863 ms
+n= 10000 q=100 hit=0.5 linear_v2 total median    14.362 ms
+n= 10000 q=100 hit=0.5 binary_v1 total median     4.452 ms
+n= 10000 q=100 hit=0.5 binary_v2 total median     1.540 ms
+n= 10000 q=100 hit=0.5 hash      total median     0.345 ms
+n= 10000 q=100 hit=0.5 bisect_ref total median     1.410 ms
+saved /tmp/hj/Submissions/HuangJiaxin/results/timing_raw.csv, /tmp/hj/Submissions/HuangJiaxin/results/timing_summary.csv, /tmp/hj/Submissions/HuangJiaxin/results/environment.json
+
+real	0m2.388s
+user	0m2.357s
+sys	0m0.010s

@@ -1,0 +1,12 @@
+label: clarity-dashboard-pass
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py 02_tests/test_submission_robustness.py -q --tb=short --basetemp=scratch/pytest-clarity-ui-pass --junitxml=05_evidence/clarity-dashboard-tests.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: c4cfc2521f57fc3de60a35d361ff4ceb025e552f
+dirty: True
+python: 3.13.15
+utc: 20261125T115403Z
+exit_code: 0
+duration_s: 49.34
+------------------------------------------------------------
+.................................................                        [100%]
+49 passed in 47.91s

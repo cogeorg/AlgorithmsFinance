@@ -1,0 +1,149 @@
+{
+ "tests": [
+  "tests.test_spec",
+  "tests.test_equivalence"
+ ],
+ "baseline_passes": true,
+ "mutations": [
+  {
+   "name": "A: LIFO instead of FIFO at equal price",
+   "file": "lob/book_a.py",
+   "detected": true,
+   "failures": 168,
+   "summary": "FAILED (failures=168)"
+  },
+  {
+   "name": "B: partially filled maker loses its queue position",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 283,
+   "summary": "FAILED (failures=283)"
+  },
+  {
+   "name": "B: limit order trades at the taker's limit instead of the resting price",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 164,
+   "summary": "FAILED (failures=164)"
+  },
+  {
+   "name": "shared: JSON true accepted as an integer",
+   "file": "lob/common.py",
+   "detected": true,
+   "failures": 40,
+   "summary": "FAILED (failures=40)"
+  },
+  {
+   "name": "B (generic cancel): empty price level kept",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 1,
+   "summary": "FAILED (failures=1)"
+  },
+  {
+   "name": "shared: rejected event advances the last accepted seq",
+   "file": "lob/common.py",
+   "detected": true,
+   "failures": 6,
+   "summary": "FAILED (failures=6)"
+  },
+  {
+   "name": "A: market-sell residual rests in the book",
+   "file": "lob/book_a.py",
+   "detected": true,
+   "failures": 166,
+   "summary": "FAILED (failures=166)"
+  },
+  {
+   "name": "B: an equal price does not cross",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 134,
+   "summary": "FAILED (failures=134)"
+  },
+  {
+   "name": "fast path: LIMIT accepts bool price/qty",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 97,
+   "summary": "FAILED (failures=97)"
+  },
+  {
+   "name": "fast path: LIMIT skips the duplicate-live-id check",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 64,
+   "summary": "FAILED (failures=64)"
+  },
+  {
+   "name": "fast path: BUY at the best ask does not cross",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 183,
+   "summary": "FAILED (failures=183)"
+  },
+  {
+   "name": "fast path: SELL at the best bid does not cross",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 177,
+   "summary": "FAILED (failures=177)"
+  },
+  {
+   "name": "fast path: cancel keeps an empty price level",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 35,
+   "summary": "FAILED (failures=35)"
+  },
+  {
+   "name": "fast path: cancel does not advance seq",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 108,
+   "summary": "FAILED (failures=108)"
+  },
+  {
+   "name": "fast path: market-sell status partial/unfilled swapped",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 249,
+   "summary": "FAILED (failures=249)"
+  },
+  {
+   "name": "fast path: MARKET_SELL skips the duplicate-live-id check",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 27,
+   "summary": "FAILED (failures=27)"
+  },
+  {
+   "name": "fast path: accepts an equal (nonincreasing) seq",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 124,
+   "summary": "FAILED (failures=124)"
+  },
+  {
+   "name": "fast path: wrong arrival seq stored for a resting BUY",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 280,
+   "summary": "FAILED (failures=280)"
+  },
+  {
+   "name": "fast path: cancel accepts a non-string target",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 35,
+   "summary": "FAILED (failures=35)"
+  },
+  {
+   "name": "fast path: resting SELL stored on the bid side",
+   "file": "lob/book_b.py",
+   "detected": true,
+   "failures": 306,
+   "summary": "FAILED (failures=290, errors=16)"
+  }
+ ]
+}

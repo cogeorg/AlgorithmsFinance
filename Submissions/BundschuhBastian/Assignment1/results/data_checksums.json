@@ -1,0 +1,66 @@
+{
+  "buildup_10000.jsonl.gz": {
+    "gz_sha256": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5",
+    "gz_sha256_matches_metadata": true,
+    "decompressed_sha256": "b567082aa6de1878ef788bd6092738fb7427ceeac371e3673bfcb31b733a7c67",
+    "events": 10000,
+    "types": {
+      "LIMIT": 10000
+    },
+    "scenario": "buildup",
+    "seed": 42,
+    "levels": 1000
+  },
+  "cancel_churn_10000.jsonl.gz": {
+    "gz_sha256": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933",
+    "gz_sha256_matches_metadata": true,
+    "decompressed_sha256": "3a01070cf86e22cc24767fa9f8cfdca523a4d11bbbf348971e364edb573ff9cc",
+    "events": 10000,
+    "types": {
+      "LIMIT": 5000,
+      "CANCEL": 5000
+    },
+    "scenario": "cancel_churn",
+    "seed": 42,
+    "levels": 1000
+  },
+  "crowded_10000.jsonl.gz": {
+    "gz_sha256": "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6",
+    "gz_sha256_matches_metadata": true,
+    "decompressed_sha256": "be6670a85788f95478e6bdf0051a4fd77ded726e144430f5eee98089810d548a",
+    "events": 10000,
+    "types": {
+      "LIMIT": 10000
+    },
+    "scenario": "crowded",
+    "seed": 42,
+    "levels": 1000
+  },
+  "mixed_10000.jsonl.gz": {
+    "gz_sha256": "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16",
+    "gz_sha256_matches_metadata": true,
+    "decompressed_sha256": "09136667f41a2996178e2625f349592a4ce470d47a5bb6f8542652d1b56442d4",
+    "events": 10000,
+    "types": {
+      "LIMIT": 6075,
+      "CANCEL": 2438,
+      "MARKET_SELL": 1487
+    },
+    "scenario": "mixed",
+    "seed": 42,
+    "levels": 1000
+  },
+  "sweep_10000.jsonl.gz": {
+    "gz_sha256": "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f",
+    "gz_sha256_matches_metadata": true,
+    "decompressed_sha256": "b232f56e2cd5301e47b851492fdf72ffe9aec968948a459a548eb74c5e6279e1",
+    "events": 10000,
+    "types": {
+      "LIMIT": 8000,
+      "MARKET_SELL": 2000
+    },
+    "scenario": "sweep",
+    "seed": 42,
+    "levels": 1000
+  }
+}

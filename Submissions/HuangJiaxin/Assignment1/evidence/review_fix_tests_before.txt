@@ -1,0 +1,8 @@
+New validation tests (JSON list/object in type or side) on the code before the review fix:
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-type is a JSON list]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-type is a JSON object]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-side is a JSON list]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-type is a JSON list]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-type is a JSON object]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-side is a JSON list]
+6 failed, 58 passed in 0.07s

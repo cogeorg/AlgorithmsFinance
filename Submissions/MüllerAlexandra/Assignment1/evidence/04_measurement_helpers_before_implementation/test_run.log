@@ -1,0 +1,36 @@
+stage: 04_measurement_helpers_before_implementation
+started_utc: 2026-11-23T11:13:52.851911+00:00
+finished_utc: 2026-11-23T11:13:53.693376+00:00
+elapsed_seconds: 0.841613
+exit_code: 2
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: cffa1b64a906577092d666cc499cd4c6fc323019
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider tests/test_11_measurement_helpers.py
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+____________ ERROR collecting tests/test_11_measurement_helpers.py ____________
+ImportError while importing test module 'C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1\tests\test_11_measurement_helpers.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Acer\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_11_measurement_helpers.py:7: in <module>
+    from limit_order_book.measurement import (
+E   ModuleNotFoundError: No module named 'limit_order_book.measurement'
+=========================== short test summary info ===========================
+ERROR tests/test_11_measurement_helpers.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.13s ===============================
+
+=== stderr ===

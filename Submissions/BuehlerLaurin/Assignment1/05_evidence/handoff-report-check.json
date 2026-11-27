@@ -1,0 +1,626 @@
+{
+  "commit": "d885f6e96da935ea4f73f24ed6da9aea012f8bbf",
+  "measurements_executed": false,
+  "checks": [
+    {
+      "claim": "buildup/1000: 11x",
+      "value": 11.33750506779127,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "buildup/10000: 170x",
+      "value": 169.59311655679232,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "buildup/100000: > 1,295x (A stopped at 600 s)",
+      "value": 1295.7163831965615,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "cancel_churn/1000: 0.7x",
+      "value": 0.7382953840679414,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "cancel_churn/10000: 0.8x",
+      "value": 0.7672121080595276,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "cancel_churn/100000: 0.7x",
+      "value": 0.7031550520271238,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "crowded/1000: 17x",
+      "value": 16.980169788858714,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "crowded/10000: 186x",
+      "value": 185.77235723603303,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "crowded/100000: > 1,299x (A stopped)",
+      "value": 1299.264313269356,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "mixed/1000: 2.8x",
+      "value": 2.752223621714529,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "mixed/10000: 21x",
+      "value": 21.238580644180715,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "mixed/100000: 299x",
+      "value": 299.40011363494114,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "sweep/1000: 11x",
+      "value": 10.535659638968633,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "sweep/10000: 139x",
+      "value": 138.96517001195852,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "sweep/100000: > 1,260x (A stopped)",
+      "value": 1260.1944480462382,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv + stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "A stopped replays",
+      "value": 13,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/stops.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "1M B3r/buildup: ok",
+      "value": 6.760411399998702,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "1M B3r/cancel_churn: ok",
+      "value": 4.792762900004163,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "1M B3r/crowded: ok",
+      "value": 5.838497800054029,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "1M B3r/mixed: ok",
+      "value": 4.8669591000070795,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "1M B3r/sweep: ok",
+      "value": 5.48165999999037,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "1M A/buildup: stopped",
+      "value": null,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "1M A/cancel_churn: ok",
+      "value": 2.658180699974764,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "1M A/crowded: stopped",
+      "value": null,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "1M A/mixed: stopped",
+      "value": null,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "1M A/sweep: stopped",
+      "value": null,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 replay/liquidation_100pct/1000",
+      "value": 35.74666554218961,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 replay/liquidation_100pct/10000",
+      "value": 879.6300721839586,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 replay/liquidation_100pct/100000",
+      "value": null,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 replay/liquidation_10pct/1000",
+      "value": 42.13323568833402,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 replay/liquidation_10pct/10000",
+      "value": 1164.5535743696996,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 replay/liquidation_10pct/100000",
+      "value": null,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 replay/liquidation_200pct/1000",
+      "value": 34.97929580558278,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 replay/liquidation_200pct/10000",
+      "value": 865.6974832807238,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 replay/liquidation_200pct/100000",
+      "value": null,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 construction/liquidation_100pct/1000",
+      "value": 6.739273389491266,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 construction/liquidation_100pct/10000",
+      "value": 99.59404428633098,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 construction/liquidation_100pct/100000",
+      "value": null,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 construction/liquidation_10pct/1000",
+      "value": 6.429320737167898,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 construction/liquidation_10pct/10000",
+      "value": 71.0455919677287,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 construction/liquidation_10pct/100000",
+      "value": null,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 construction/liquidation_200pct/1000",
+      "value": 6.854799479836264,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 construction/liquidation_200pct/10000",
+      "value": 98.00009331774308,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "Q7 construction/liquidation_200pct/100000",
+      "value": null,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "queue levels4/levels1000 at10k",
+      "value": {
+        "buildup_levels1000": 167.42565538410864,
+        "buildup_levels4": 189.30621252375096
+      },
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "A measured exponents",
+      "value": [
+        {
+          "workload": "buildup",
+          "exponent": 2.0910964590515313
+        },
+        {
+          "workload": "cancel_churn",
+          "exponent": 1.0287690796780222
+        },
+        {
+          "workload": "crowded",
+          "exponent": 2.087795597753009
+        },
+        {
+          "workload": "mixed",
+          "exponent": 1.9142426256120462
+        },
+        {
+          "workload": "sweep",
+          "exponent": 2.1269472365308837
+        }
+      ],
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "B3r measured exponents",
+      "value": [
+        {
+          "workload": "buildup",
+          "exponent": 0.9162057321069143
+        },
+        {
+          "workload": "cancel_churn",
+          "exponent": 1.0216936476575318
+        },
+        {
+          "workload": "crowded",
+          "exponent": 1.055527989021197
+        },
+        {
+          "workload": "mixed",
+          "exponent": 1.0153652820470023
+        },
+        {
+          "workload": "sweep",
+          "exponent": 1.0068312120832965
+        }
+      ],
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "buildup100k all p50/p99 ns",
+      "value": [
+        4100.0,
+        11200.0
+      ],
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/latency.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "buildup100k early p50/p99 ns",
+      "value": [
+        4000.0,
+        11300.0
+      ],
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/latency.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "buildup100k late p50/p99 ns",
+      "value": [
+        4100.0,
+        12000.0
+      ],
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/latency.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median A/buildup/10000",
+      "value": 1924712.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median A/cancel_churn/10000",
+      "value": 1392.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median A/crowded/10000",
+      "value": 1924712.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median A/mixed/10000",
+      "value": 308256.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median A/sweep/10000",
+      "value": 1539880.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median A/cancel_churn/100000",
+      "value": 1392.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median A/mixed/100000",
+      "value": 2912248.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median B3r/buildup/10000",
+      "value": 2851432.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median B3r/cancel_churn/10000",
+      "value": 6848.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median B3r/crowded/10000",
+      "value": 1099336.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median B3r/mixed/10000",
+      "value": 949792.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median B3r/sweep/10000",
+      "value": 2673720.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median B3r/buildup/100000",
+      "value": 15622688.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median B3r/cancel_churn/100000",
+      "value": 6848.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median B3r/crowded/100000",
+      "value": 13487856.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median B3r/mixed/100000",
+      "value": 3733560.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "peak median B3r/sweep/100000",
+      "value": 11111696.0,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "B3 drift end",
+      "value": {
+        "bytes": 36948344,
+        "live": 2,
+        "heap": 500001
+      },
+      "source": "03_results/runs/20261122T012525Z_5eaeb03_phase4/memory.csv",
+      "commit": "5eaeb03718d24193864dcf7ea4f5161a3bfa6559"
+    },
+    {
+      "claim": "B3r drift end",
+      "value": {
+        "bytes": 5080,
+        "live": 2,
+        "heap": 18
+      },
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/memory.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "A 10000/orders_scanned",
+      "value": 24999375,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "A 10000/id_scan_records",
+      "value": 49995000,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "A 1000/orders_scanned",
+      "value": 249964,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "A 1000/id_scan_records",
+      "value": 499500,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "liquidation_10pct/makers_touched",
+      "value": 1003,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "liquidation_10pct/levels_visited",
+      "value": 100,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "liquidation_100pct/makers_touched",
+      "value": 10000,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "liquidation_100pct/levels_visited",
+      "value": 1000,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "liquidation_200pct/makers_touched",
+      "value": 10000,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "liquidation_200pct/levels_visited",
+      "value": 1000,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "B1 original official100k geomean",
+      "value": 0.4243545364100857,
+      "source": "03_results/runs/20261122T012525Z_5eaeb03_phase4/summary.csv",
+      "commit": "5eaeb03718d24193864dcf7ea4f5161a3bfa6559"
+    },
+    {
+      "claim": "B2 original official100k geomean",
+      "value": 0.47256587563691005,
+      "source": "03_results/runs/20261122T012525Z_5eaeb03_phase4/summary.csv",
+      "commit": "5eaeb03718d24193864dcf7ea4f5161a3bfa6559"
+    },
+    {
+      "claim": "B3 original official100k geomean",
+      "value": 0.4289266916744883,
+      "source": "03_results/runs/20261122T012525Z_5eaeb03_phase4/summary.csv",
+      "commit": "5eaeb03718d24193864dcf7ea4f5161a3bfa6559"
+    },
+    {
+      "claim": "B3r original official100k geomean",
+      "value": 0.42468442915061183,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "adversarial largest ratios",
+      "value": "{('deep_book', 'B1'): 3.0807568883028273, ('deep_book', 'B2'): 3.029009083905958, ('deep_book', 'B3'): 1.0, ('mid_queue_cancels', 'B1'): 1.014612032432862, ('mid_queue_cancels', 'B2'): 1.493444815571908, ('mid_queue_cancels', 'B3'): 1.1158392250133327, ('repeated_full_sweeps', 'B1'): 1.0612678997882683, ('repeated_full_sweeps', 'B2'): 1.143710922409151, ('repeated_full_sweeps', 'B3'): 1.0404980592925546}",
+      "source": "03_results/runs/20261122T012525Z_5eaeb03_phase4/summary.csv",
+      "commit": "5eaeb03718d24193864dcf7ea4f5161a3bfa6559"
+    },
+    {
+      "claim": "post_attack largest ratios",
+      "value": "{('dead_slot_rebuild', 'B1'): 1.0596040739910602, ('dead_slot_rebuild', 'B2'): 1.0245710381845838, ('dead_slot_rebuild', 'B3'): 1.0, ('dead_slot_rebuild', 'B3r'): 1.101260841965682, ('far_end_flicker', 'B1'): 18.393476183945236, ('far_end_flicker', 'B2'): 18.502287910781263, ('far_end_flicker', 'B3'): 1.0, ('far_end_flicker', 'B3r'): 1.0425649773573809, ('spike_purge_at_threshold', 'B1'): 1.0938518398517119, ('spike_purge_at_threshold', 'B2'): 1.0, ('spike_purge_at_threshold', 'B3'): 1854.8445120917459, ('spike_purge_at_threshold', 'B3r'): 1866.0386864283857, ('two_side_thrash', 'B1'): 17.819457547156603, ('two_side_thrash', 'B2'): 17.496039308945882, ('two_side_thrash', 'B3'): 1.0, ('two_side_thrash', 'B3r'): 1.0495579716282606}",
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "B3r spike construction+replay",
+      "value": 1.7771656999830157,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "B3r spike replay",
+      "value": 0.05766059999587014,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/summary.csv",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    },
+    {
+      "claim": "fast cross ratio/decision",
+      "value": {
+        "ratio": 0.8874636992618936,
+        "decision": "tried and rejected"
+      },
+      "source": "03_results/runs/20261122T200528Z_8a22753_phase4_b3r_fast_20261122/fast_acceptance.json",
+      "commit": "8a22753fb122ed91f2f2175802d3a1b0ab7462fa"
+    },
+    {
+      "claim": "fast rematch ratio/decision",
+      "value": {
+        "ratio": 0.8731749844948045,
+        "decision": "rejected"
+      },
+      "source": "03_results/runs/20261122T210801Z_e4fd928_phase4_b3r_fast_rematch_20261122/fast_rematch_acceptance.json",
+      "commit": "e4fd92864c6f8f7f93d40fb5d58128a307c2b907"
+    },
+    {
+      "claim": "binding faster/within bound/total",
+      "value": [
+        25,
+        26,
+        27
+      ],
+      "source": "03_results/runs/20261122T210801Z_e4fd928_phase4_b3r_fast_rematch_20261122/fast_rematch_acceptance.json",
+      "commit": "e4fd92864c6f8f7f93d40fb5d58128a307c2b907"
+    },
+    {
+      "claim": "Full reproduction estimate: historical worker hours",
+      "value": 6.621551612916664,
+      "source": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/cells.csv (candidates + baseline)",
+      "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b"
+    }
+  ],
+  "full_estimate_hours": 6.621551612916664,
+  "corrections": "05_evidence/handoff-report-corrections.json"
+}

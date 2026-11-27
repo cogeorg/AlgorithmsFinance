@@ -1,0 +1,2 @@
+# No third-party dependencies: Python standard library only.
+# Reference interpreter: CPython 3.13.12; minimum supported syntax: Python 3.10.

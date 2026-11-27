@@ -1,0 +1,13 @@
+{
+  "repeats": 5,
+  "phase_limit_seconds": 5.0,
+  "rss_limit_bytes": 536870912,
+  "results_dir": "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/results/benchmark",
+  "job_id": "liquidation_m100000_s42_p4_A",
+  "version": "A",
+  "mode": "liquidation",
+  "scenario": "liquidation",
+  "event_count": 100000,
+  "seed": 42,
+  "levels": 4
+}

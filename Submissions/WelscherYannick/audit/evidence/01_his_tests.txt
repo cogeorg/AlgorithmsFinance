@@ -1,0 +1,17 @@
+# python3 -m unittest discover -s tests -v   (in <LaviBen>, commit 4777c48, Python 3.13.15)
+test_fixed_case_matrix_is_shared_by_every_algorithm (test_benchmark_pipeline.BenchmarkPipelineTests.test_fixed_case_matrix_is_shared_by_every_algorithm) ... ok
+test_results_and_dashboard_are_reproducible_artifacts (test_benchmark_pipeline.BenchmarkPipelineTests.test_results_and_dashboard_are_reproducible_artifacts) ... ok
+test_every_implementation_satisfies_the_same_cases (test_search_algorithms.SearchAlgorithmContractTests.test_every_implementation_satisfies_the_same_cases) ... ok
+test_required_public_methods_are_distinct_callables (test_search_algorithms.SearchAlgorithmContractTests.test_required_public_methods_are_distinct_callables) ... ok
+test_sequence_inputs_do_not_require_lists (test_search_algorithms.SearchAlgorithmContractTests.test_sequence_inputs_do_not_require_lists) ... ok
+test_empty_array_forces_every_query_to_be_absent (test_synthetic_data.SyntheticDataTests.test_empty_array_forces_every_query_to_be_absent) ... ok
+test_invalid_parameters_are_rejected (test_synthetic_data.SyntheticDataTests.test_invalid_parameters_are_rejected) ... ok
+test_requested_sizes_and_hit_count_are_exact (test_synthetic_data.SyntheticDataTests.test_requested_sizes_and_hit_count_are_exact) ... ok
+test_same_seed_is_reproducible (test_synthetic_data.SyntheticDataTests.test_same_seed_is_reproducible) ... ok
+test_single_query_mixed_rate_uses_nearest_representable_hit_count (test_synthetic_data.SyntheticDataTests.test_single_query_mixed_rate_uses_nearest_representable_hit_count) ... ok
+test_zero_queries_and_extreme_hit_rates (test_synthetic_data.SyntheticDataTests.test_zero_queries_and_extreme_hit_rates) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.058s
+
+OK

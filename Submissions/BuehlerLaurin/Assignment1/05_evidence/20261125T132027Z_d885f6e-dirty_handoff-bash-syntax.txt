@@ -1,0 +1,10 @@
+label: handoff-bash-syntax
+command: C:/Program Files/Git/bin/bash.exe -n run_all.sh
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: d885f6e96da935ea4f73f24ed6da9aea012f8bbf
+dirty: True
+python: 3.13.15
+utc: 20261125T132027Z
+exit_code: 0
+duration_s: 0.11
+------------------------------------------------------------

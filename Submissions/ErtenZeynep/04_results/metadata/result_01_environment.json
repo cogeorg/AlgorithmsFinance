@@ -1,0 +1,20 @@
+{
+  "benchmark_version": "1.0.0",
+  "python_version": "3.13.17",
+  "python_full_version": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]",
+  "python_implementation": "CPython",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "processor": "AMD64 Family 26 Model 104 Stepping 0, AuthenticAMD",
+  "code_version": "d6f72e7d48031785b0a9e7b2c462a2fe74758063-dirty",
+  "warmup_runs": 1,
+  "measurement_repetitions": 5,
+  "timer": "time.perf_counter",
+  "time_unit": "seconds",
+  "query_measurement": "per complete ordered query batch",
+  "total_definition": "preparation_seconds + query_batch_seconds",
+  "data_generation_timed": false,
+  "tests_timed": false,
+  "printing_timed": false,
+  "memory_tracing_enabled": false
+}

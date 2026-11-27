@@ -1,0 +1,30 @@
+label: phase4a-inputs-red
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -m pytest 02_tests/test_bench_pipeline.py -q --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 5d8d15a410b380b2eb4f5831c7c637abdc5c3106
+dirty: True
+python: 3.13.15
+utc: 20261122T002236Z
+exit_code: 1
+duration_s: 1.41
+------------------------------------------------------------
+FF                                                                       [100%]
+================================== FAILURES ===================================
+___________________ test_own_benchmark_inputs[liquidation] ____________________
+02_tests\test_bench_pipeline.py:15: in test_own_benchmark_inputs
+    events = list(rows(kind, 100, 42))
+                  ^^^^^^^^^^^^^^^^^^^
+01_code\datagen\benchmark_own.py:13: in rows
+    raise NotImplementedError("Phase 4a own benchmark inputs")
+E   NotImplementedError: Phase 4a own benchmark inputs
+______________________ test_own_benchmark_inputs[drift] _______________________
+02_tests\test_bench_pipeline.py:15: in test_own_benchmark_inputs
+    events = list(rows(kind, 100, 42))
+                  ^^^^^^^^^^^^^^^^^^^
+01_code\datagen\benchmark_own.py:13: in rows
+    raise NotImplementedError("Phase 4a own benchmark inputs")
+E   NotImplementedError: Phase 4a own benchmark inputs
+=========================== short test summary info ===========================
+FAILED 02_tests/test_bench_pipeline.py::test_own_benchmark_inputs[liquidation]
+FAILED 02_tests/test_bench_pipeline.py::test_own_benchmark_inputs[drift] - No...
+2 failed in 0.63s

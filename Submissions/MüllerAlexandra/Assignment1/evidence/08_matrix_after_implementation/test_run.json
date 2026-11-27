@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "stage": "08_matrix_after_implementation",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_15_experiment_matrix.py",
+    "tests/test_14_memory_measurement.py",
+    "tests/test_13_latency_measurement.py",
+    "tests/test_12_benchmark_harness.py",
+    "tests/test_11_measurement_helpers.py"
+  ],
+  "working_directory": ".",
+  "started_utc": "2026-11-23T18:19:40.601547+00:00",
+  "finished_utc": "2026-11-23T18:19:45.219828+00:00",
+  "elapsed_seconds": 4.618019199930131,
+  "exit_code": 0,
+  "python_version": "3.12.10",
+  "python_implementation": "CPython",
+  "pytest_version": "9.2.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git": {
+    "branch": "assignment1-mueller-alexandra",
+    "head": "ffbbaa05287c3d0e249a91237dd54ca7863fe36a",
+    "status_before_evidence_files": "M .gitignore\n M README.md\n M docs/04_measurement_method.md\n M docs/06_ai_assistance.md\n?? evidence/08_matrix_before_implementation/\n?? experiments/\n?? scripts/06_prepare_inputs.py\n?? src/limit_order_book/experiment_matrix.py\n?? tests/test_15_experiment_matrix.py\n?? ../phase2_audit_liuhaina/",
+    "clean_before_evidence_files": false
+  }
+}

@@ -1,0 +1,70 @@
+Command (run from Assignment1 with .venv\Scripts first on PATH):
+python -m pytest -q tests/test_price_time.py
+
+Exit code: 1
+
+Output:
+FF                                                                       [100%]
+================================== FAILURES ===================================
+____ test_market_sell_fills_same_price_orders_fifo_and_preserves_residual _____
+
+    def test_market_sell_fills_same_price_orders_fifo_and_preserves_residual():
+        book = OrderBook()
+    
+>       book.process_event(
+            {
+                "seq": 1,
+                "event_id": "e1",
+                "type": "LIMIT",
+                "order_id": "z_buyer",
+                "side": "BUY",
+                "price_ticks": 6000000,
+                "qty_units": 200000000,
+            }
+        )
+
+tests\test_price_time.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <orderbook.baseline.OrderBook object at 0x00000124AED006E0>
+event = {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'z_buyer', ...}
+
+    def process_event(self, event):
+        """Process one event and return its result as specified in the README."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+orderbook\baseline.py:6: NotImplementedError
+______ test_market_sell_prioritizes_higher_bid_before_earlier_lower_bid _______
+
+    def test_market_sell_prioritizes_higher_bid_before_earlier_lower_bid():
+        book = OrderBook()
+    
+>       book.process_event(
+            {
+                "seq": 1,
+                "event_id": "e1",
+                "type": "LIMIT",
+                "order_id": "early_buyer",
+                "side": "BUY",
+                "price_ticks": 5990000,
+                "qty_units": 200000000,
+            }
+        )
+
+tests\test_price_time.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <orderbook.baseline.OrderBook object at 0x00000124AEC66850>
+event = {'seq': 1, 'event_id': 'e1', 'type': 'LIMIT', 'order_id': 'early_buyer', ...}
+
+    def process_event(self, event):
+        """Process one event and return its result as specified in the README."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+orderbook\baseline.py:6: NotImplementedError
+=========================== short test summary info ============================
+FAILED tests/test_price_time.py::test_market_sell_fills_same_price_orders_fifo_and_preserves_residual
+FAILED tests/test_price_time.py::test_market_sell_prioritizes_higher_bid_before_earlier_lower_bid
+2 failed in 0.11s

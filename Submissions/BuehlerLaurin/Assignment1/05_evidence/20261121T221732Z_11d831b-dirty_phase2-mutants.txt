@@ -1,0 +1,12 @@
+label: phase2-mutants
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -m pytest 02_tests/test_mutants.py -k not lob-B -q --tb=short --junitxml=05_evidence/phase2-mutants.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 11d831b27d5fc46a92095f0ff17e524f6ab63369
+dirty: True
+python: 3.13.15
+utc: 20261121T221732Z
+exit_code: 0
+duration_s: 102.00
+------------------------------------------------------------
+...................                                                      [100%]
+19 passed, 1 deselected in 101.17s (0:01:41)

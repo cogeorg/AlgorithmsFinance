@@ -1,0 +1,284 @@
+Generating event files (outside timing)...
+[1/282      0s] read_parse buildup 1000 1000 42: ok
+[2/282      1s] replay B buildup 1000 1000 42: ok
+[3/282      2s] replay A buildup 1000 1000 42: ok
+[4/282      2s] read_parse buildup 1000 1000 43: ok
+[5/282      2s] replay A buildup 1000 1000 43: ok
+[6/282      3s] replay B buildup 1000 1000 43: ok
+[7/282      3s] read_parse buildup 1000 1000 44: ok
+[8/282      4s] replay B buildup 1000 1000 44: ok
+[9/282      4s] replay A buildup 1000 1000 44: ok
+[10/282      5s] read_parse cancel_churn 1000 1000 42: ok
+[11/282      5s] replay B cancel_churn 1000 1000 42: ok
+[12/282      5s] replay A cancel_churn 1000 1000 42: ok
+[13/282      6s] read_parse cancel_churn 1000 1000 43: ok
+[14/282      6s] replay A cancel_churn 1000 1000 43: ok
+[15/282      7s] replay B cancel_churn 1000 1000 43: ok
+[16/282      7s] read_parse cancel_churn 1000 1000 44: ok
+[17/282      7s] replay A cancel_churn 1000 1000 44: ok
+[18/282      8s] replay B cancel_churn 1000 1000 44: ok
+[19/282      8s] read_parse crowded 1000 1000 42: ok
+[20/282      9s] replay A crowded 1000 1000 42: ok
+[21/282      9s] replay B crowded 1000 1000 42: ok
+[22/282     10s] read_parse crowded 1000 1000 43: ok
+[23/282     10s] replay B crowded 1000 1000 43: ok
+[24/282     11s] replay A crowded 1000 1000 43: ok
+[25/282     11s] read_parse crowded 1000 1000 44: ok
+[26/282     12s] replay B crowded 1000 1000 44: ok
+[27/282     12s] replay A crowded 1000 1000 44: ok
+[28/282     13s] read_parse mass_cancel 1000 1000 42: ok
+[29/282     13s] replay B mass_cancel 1000 1000 42: ok
+[30/282     13s] replay A mass_cancel 1000 1000 42: ok
+[31/282     14s] read_parse mass_cancel 1000 1000 43: ok
+[32/282     14s] replay B mass_cancel 1000 1000 43: ok
+[33/282     15s] replay A mass_cancel 1000 1000 43: ok
+[34/282     15s] read_parse mass_cancel 1000 1000 44: ok
+[35/282     16s] replay A mass_cancel 1000 1000 44: ok
+[36/282     16s] replay B mass_cancel 1000 1000 44: ok
+[37/282     17s] read_parse mixed 1000 1000 42: ok
+[38/282     17s] replay B mixed 1000 1000 42: ok
+[39/282     17s] replay A mixed 1000 1000 42: ok
+[40/282     18s] read_parse mixed 1000 1000 43: ok
+[41/282     18s] replay A mixed 1000 1000 43: ok
+[42/282     19s] replay B mixed 1000 1000 43: ok
+[43/282     19s] read_parse mixed 1000 1000 44: ok
+[44/282     20s] replay B mixed 1000 1000 44: ok
+[45/282     20s] replay A mixed 1000 1000 44: ok
+[46/282     20s] read_parse sweep 1000 1000 42: ok
+[47/282     21s] replay A sweep 1000 1000 42: ok
+[48/282     22s] replay B sweep 1000 1000 42: ok
+[49/282     22s] read_parse sweep 1000 1000 43: ok
+[50/282     23s] replay A sweep 1000 1000 43: ok
+[51/282     23s] replay B sweep 1000 1000 43: ok
+[52/282     24s] read_parse sweep 1000 1000 44: ok
+[53/282     24s] replay B sweep 1000 1000 44: ok
+[54/282     25s] replay A sweep 1000 1000 44: ok
+[55/282     26s] read_parse buildup 10000 1000 42: ok
+[56/282     45s] replay A buildup 10000 1000 42: ok
+[57/282     47s] replay B buildup 10000 1000 42: ok
+[58/282     47s] read_parse buildup 10000 1000 43: ok
+[59/282     64s] replay A buildup 10000 1000 43: ok
+[60/282     65s] replay B buildup 10000 1000 43: ok
+[61/282     66s] read_parse buildup 10000 1000 44: ok
+[62/282     84s] replay A buildup 10000 1000 44: ok
+[63/282     85s] replay B buildup 10000 1000 44: ok
+[64/282     86s] read_parse cancel_churn 10000 1000 42: ok
+[65/282     86s] replay A cancel_churn 10000 1000 42: ok
+[66/282     87s] replay B cancel_churn 10000 1000 42: ok
+[67/282     88s] read_parse cancel_churn 10000 1000 43: ok
+[68/282     89s] replay A cancel_churn 10000 1000 43: ok
+[69/282     89s] replay B cancel_churn 10000 1000 43: ok
+[70/282     90s] read_parse cancel_churn 10000 1000 44: ok
+[71/282     91s] replay B cancel_churn 10000 1000 44: ok
+[72/282     92s] replay A cancel_churn 10000 1000 44: ok
+[73/282     92s] read_parse crowded 10000 1000 42: ok
+[74/282    113s] replay A crowded 10000 1000 42: ok
+[75/282    113s] replay B crowded 10000 1000 42: ok
+[76/282    114s] read_parse crowded 10000 1000 43: ok
+[77/282    115s] replay B crowded 10000 1000 43: ok
+[78/282    131s] replay A crowded 10000 1000 43: ok
+[79/282    132s] read_parse crowded 10000 1000 44: ok
+[80/282    151s] replay A crowded 10000 1000 44: ok
+[81/282    152s] replay B crowded 10000 1000 44: ok
+[82/282    152s] read_parse mass_cancel 10000 1000 42: ok
+[83/282    158s] replay A mass_cancel 10000 1000 42: ok
+[84/282    159s] replay B mass_cancel 10000 1000 42: ok
+[85/282    160s] read_parse mass_cancel 10000 1000 43: ok
+[86/282    166s] replay A mass_cancel 10000 1000 43: ok
+[87/282    167s] replay B mass_cancel 10000 1000 43: ok
+[88/282    168s] read_parse mass_cancel 10000 1000 44: ok
+[89/282    169s] replay B mass_cancel 10000 1000 44: ok
+[90/282    176s] replay A mass_cancel 10000 1000 44: ok
+[91/282    177s] read_parse mixed 10000 1000 42: ok
+[92/282    180s] replay A mixed 10000 1000 42: ok
+[93/282    181s] replay B mixed 10000 1000 42: ok
+[94/282    181s] read_parse mixed 10000 1000 43: ok
+[95/282    183s] replay B mixed 10000 1000 43: ok
+[96/282    191s] replay A mixed 10000 1000 43: ok
+[97/282    193s] read_parse mixed 10000 1000 44: ok
+[98/282    197s] replay A mixed 10000 1000 44: ok
+[99/282    199s] replay B mixed 10000 1000 44: ok
+[100/282    201s] read_parse sweep 10000 1000 42: ok
+[101/282    223s] replay A sweep 10000 1000 42: ok
+[102/282    225s] replay B sweep 10000 1000 42: ok
+[103/282    226s] read_parse sweep 10000 1000 43: ok
+[104/282    245s] replay A sweep 10000 1000 43: ok
+[105/282    246s] replay B sweep 10000 1000 43: ok
+[106/282    247s] read_parse sweep 10000 1000 44: ok
+[107/282    266s] replay A sweep 10000 1000 44: ok
+[108/282    267s] replay B sweep 10000 1000 44: ok
+[109/282    268s] read_parse buildup 30000 1000 42: ok
+[110/282    271s] replay B buildup 30000 1000 42: ok
+[111/282    412s] replay A buildup 30000 1000 42: ok
+[112/282    413s] read_parse cancel_churn 30000 1000 42: ok
+[113/282    415s] replay A cancel_churn 30000 1000 42: ok
+[114/282    417s] replay B cancel_churn 30000 1000 42: ok
+[115/282    419s] read_parse crowded 30000 1000 42: ok
+[116/282    483s] replay A crowded 30000 1000 42: stopped
+[117/282    498s] replay B crowded 30000 1000 42: ok
+[118/282    504s] read_parse mass_cancel 30000 1000 42: ok
+[119/282    507s] replay B mass_cancel 30000 1000 42: ok
+[120/282    631s] replay A mass_cancel 30000 1000 42: ok
+[121/282    633s] read_parse mixed 30000 1000 42: ok
+[122/282    665s] replay A mixed 30000 1000 42: ok
+[123/282    670s] replay B mixed 30000 1000 42: ok
+[124/282    671s] read_parse sweep 30000 1000 42: ok
+[125/282    834s] replay A sweep 30000 1000 42: ok
+[126/282    838s] replay B sweep 30000 1000 42: ok
+[127/282    843s] read_parse buildup 100000 1000 42: ok
+[128/282    908s] replay A buildup 100000 1000 42: stopped
+[129/282    914s] replay B buildup 100000 1000 42: ok
+[130/282    918s] read_parse buildup 100000 1000 43: ok
+[131/282    982s] replay A buildup 100000 1000 43: stopped
+[132/282    990s] replay B buildup 100000 1000 43: ok
+[133/282    995s] read_parse buildup 100000 1000 44: ok
+[134/282   1059s] replay A buildup 100000 1000 44: stopped
+[135/282   1066s] replay B buildup 100000 1000 44: ok
+[136/282   1069s] read_parse cancel_churn 100000 1000 42: ok
+[137/282   1072s] replay A cancel_churn 100000 1000 42: ok
+[138/282   1076s] replay B cancel_churn 100000 1000 42: ok
+[139/282   1080s] read_parse cancel_churn 100000 1000 43: ok
+[140/282   1085s] replay B cancel_churn 100000 1000 43: ok
+[141/282   1090s] replay A cancel_churn 100000 1000 43: ok
+[142/282   1094s] read_parse cancel_churn 100000 1000 44: ok
+[143/282   1104s] replay B cancel_churn 100000 1000 44: ok
+[144/282   1107s] replay A cancel_churn 100000 1000 44: ok
+[145/282   1111s] read_parse crowded 100000 1000 42: ok
+[146/282   1116s] replay B crowded 100000 1000 42: ok
+[147/282   1186s] replay A crowded 100000 1000 42: stopped
+[148/282   1200s] read_parse crowded 100000 1000 43: ok
+[149/282   1209s] replay B crowded 100000 1000 43: ok
+[150/282   1277s] replay A crowded 100000 1000 43: stopped
+[151/282   1286s] read_parse crowded 100000 1000 44: ok
+[152/282   1298s] replay B crowded 100000 1000 44: ok
+[153/282   1361s] replay A crowded 100000 1000 44: stopped
+[154/282   1366s] read_parse mass_cancel 100000 1000 42: ok
+[155/282   1429s] replay A mass_cancel 100000 1000 42: stopped
+[156/282   1433s] replay B mass_cancel 100000 1000 42: ok
+[157/282   1436s] read_parse mass_cancel 100000 1000 43: ok
+[158/282   1499s] replay A mass_cancel 100000 1000 43: stopped
+[159/282   1504s] replay B mass_cancel 100000 1000 43: ok
+[160/282   1508s] read_parse mass_cancel 100000 1000 44: ok
+[161/282   1512s] replay B mass_cancel 100000 1000 44: ok
+[162/282   1575s] replay A mass_cancel 100000 1000 44: stopped
+[163/282   1579s] read_parse mixed 100000 1000 42: ok
+[164/282   1823s] replay A mixed 100000 1000 42: ok
+[165/282   1829s] replay B mixed 100000 1000 42: ok
+[166/282   1831s] read_parse mixed 100000 1000 43: ok
+[167/282   1838s] replay B mixed 100000 1000 43: ok
+[168/282   2066s] replay A mixed 100000 1000 43: ok
+[169/282   2068s] read_parse mixed 100000 1000 44: ok
+[170/282   2073s] replay B mixed 100000 1000 44: ok
+[171/282   2307s] replay A mixed 100000 1000 44: ok
+[172/282   2312s] read_parse sweep 100000 1000 42: ok
+[173/282   2376s] replay A sweep 100000 1000 42: stopped
+[174/282   2383s] replay B sweep 100000 1000 42: ok
+[175/282   2386s] read_parse sweep 100000 1000 43: ok
+[176/282   2449s] replay A sweep 100000 1000 43: stopped
+[177/282   2455s] replay B sweep 100000 1000 43: ok
+[178/282   2458s] read_parse sweep 100000 1000 44: ok
+[179/282   2520s] replay A sweep 100000 1000 44: stopped
+[180/282   2527s] replay B sweep 100000 1000 44: ok
+[181/282   2572s] read_parse buildup 1000000 1000 42: ok
+[182/282   2636s] replay A buildup 1000000 1000 42: stopped
+[183/282   2764s] replay B buildup 1000000 1000 42: ok
+[184/282   2788s] read_parse cancel_churn 1000000 1000 42: ok
+[185/282   2858s] replay A cancel_churn 1000000 1000 42: ok
+[186/282   2929s] replay B cancel_churn 1000000 1000 42: ok
+[187/282   2960s] read_parse crowded 1000000 1000 42: ok
+[188/282   3023s] replay A crowded 1000000 1000 42: stopped
+[189/282   3275s] replay B crowded 1000000 1000 42: ok
+[190/282   3309s] read_parse mass_cancel 1000000 1000 42: ok
+[191/282   3371s] replay A mass_cancel 1000000 1000 42: stopped
+[192/282   3462s] replay B mass_cancel 1000000 1000 42: ok
+[193/282   3490s] read_parse mixed 1000000 1000 42: ok
+[194/282   3552s] replay A mixed 1000000 1000 42: stopped
+[195/282   3702s] replay B mixed 1000000 1000 42: ok
+[196/282   3727s] read_parse sweep 1000000 1000 42: ok
+[197/282   3841s] replay B sweep 1000000 1000 42: ok
+[198/282   3904s] replay A sweep 1000000 1000 42: stopped
+[199/282   3905s] fixed_book A bid_book 1000 1000 10 42: ok
+[200/282   3905s] fixed_book B bid_book 1000 1000 10 42: ok
+[201/282   3906s] fixed_book A bid_book 1000 1000 100 42: ok
+[202/282   3906s] fixed_book B bid_book 1000 1000 100 42: ok
+[203/282   3907s] fixed_book B bid_book 1000 1000 200 42: ok
+[204/282   3907s] fixed_book A bid_book 1000 1000 200 42: ok
+[205/282   3908s] fixed_book B bid_book 1000 1000 10 43: ok
+[206/282   3908s] fixed_book A bid_book 1000 1000 10 43: ok
+[207/282   3909s] fixed_book B bid_book 1000 1000 100 43: ok
+[208/282   3910s] fixed_book A bid_book 1000 1000 100 43: ok
+[209/282   3911s] fixed_book A bid_book 1000 1000 200 43: ok
+[210/282   3911s] fixed_book B bid_book 1000 1000 200 43: ok
+[211/282   3912s] fixed_book A bid_book 1000 1000 10 44: ok
+[212/282   3912s] fixed_book B bid_book 1000 1000 10 44: ok
+[213/282   3913s] fixed_book A bid_book 1000 1000 100 44: ok
+[214/282   3914s] fixed_book B bid_book 1000 1000 100 44: ok
+[215/282   3914s] fixed_book B bid_book 1000 1000 200 44: ok
+[216/282   3915s] fixed_book A bid_book 1000 1000 200 44: ok
+[217/282   3916s] fixed_book A bid_book 3000 1000 10 42: ok
+[218/282   3917s] fixed_book B bid_book 3000 1000 10 42: ok
+[219/282   3921s] fixed_book A bid_book 3000 1000 100 42: ok
+[220/282   3921s] fixed_book B bid_book 3000 1000 100 42: ok
+[221/282   3928s] fixed_book A bid_book 3000 1000 200 42: ok
+[222/282   3931s] fixed_book B bid_book 3000 1000 200 42: ok
+[223/282   3955s] fixed_book A bid_book 10000 1 10 42: ok
+[224/282   3959s] fixed_book B bid_book 10000 1 10 42: ok
+[225/282   4001s] fixed_book A bid_book 10000 1 100 42: ok
+[226/282   4002s] fixed_book B bid_book 10000 1 100 42: ok
+[227/282   4003s] fixed_book B bid_book 10000 1 200 42: ok
+[228/282   4036s] fixed_book A bid_book 10000 1 200 42: ok
+[229/282   4043s] fixed_book A bid_book 10000 4 10 42: ok
+[230/282   4043s] fixed_book B bid_book 10000 4 10 42: ok
+[231/282   4082s] fixed_book A bid_book 10000 4 100 42: ok
+[232/282   4083s] fixed_book B bid_book 10000 4 100 42: ok
+[233/282   4126s] fixed_book A bid_book 10000 4 200 42: ok
+[234/282   4126s] fixed_book B bid_book 10000 4 200 42: ok
+[235/282   4127s] fixed_book B bid_book 10000 32 10 42: ok
+[236/282   4136s] fixed_book A bid_book 10000 32 10 42: ok
+[237/282   4176s] fixed_book A bid_book 10000 32 100 42: ok
+[238/282   4176s] fixed_book B bid_book 10000 32 100 42: ok
+[239/282   4210s] fixed_book A bid_book 10000 32 200 42: ok
+[240/282   4211s] fixed_book B bid_book 10000 32 200 42: ok
+[241/282   4218s] fixed_book A bid_book 10000 1000 10 42: ok
+[242/282   4219s] fixed_book B bid_book 10000 1000 10 42: ok
+[243/282   4219s] fixed_book B bid_book 10000 1000 100 42: ok
+[244/282   4252s] fixed_book A bid_book 10000 1000 100 42: ok
+[245/282   4281s] fixed_book A bid_book 10000 1000 200 42: ok
+[246/282   4282s] fixed_book B bid_book 10000 1000 200 42: ok
+[247/282   4289s] fixed_book A bid_book 10000 1000 10 43: ok
+[248/282   4290s] fixed_book B bid_book 10000 1000 10 43: ok
+[249/282   4291s] fixed_book B bid_book 10000 1000 100 43: ok
+[250/282   4323s] fixed_book A bid_book 10000 1000 100 43: ok
+[251/282   4354s] fixed_book A bid_book 10000 1000 200 43: ok
+[252/282   4356s] fixed_book B bid_book 10000 1000 200 43: ok
+[253/282   4362s] fixed_book A bid_book 10000 1000 10 44: ok
+[254/282   4362s] fixed_book B bid_book 10000 1000 10 44: ok
+[255/282   4395s] fixed_book A bid_book 10000 1000 100 44: ok
+[256/282   4396s] fixed_book B bid_book 10000 1000 100 44: ok
+[257/282   4397s] fixed_book B bid_book 10000 1000 200 44: ok
+[258/282   4445s] fixed_book A bid_book 10000 1000 200 44: ok
+[259/282   4449s] fixed_book B bid_book 30000 1000 10 42: ok
+[260/282   4508s] fixed_book A bid_book 30000 1000 10 42: ok
+[261/282   4544s] fixed_book A bid_book 30000 1000 100 42: stopped
+[262/282   4545s] fixed_book B bid_book 30000 1000 100 42: ok
+[263/282   4547s] fixed_book B bid_book 30000 1000 200 42: ok
+[264/282   4616s] fixed_book A bid_book 30000 1000 200 42: stopped
+[265/282   4653s] fixed_book A bid_book 100000 1000 10 42: stopped
+[266/282   4658s] fixed_book B bid_book 100000 1000 10 42: ok
+[267/282   4663s] fixed_book B bid_book 100000 1000 100 42: ok
+[268/282   4700s] fixed_book A bid_book 100000 1000 100 42: stopped
+[269/282   4710s] fixed_book B bid_book 100000 1000 200 42: ok
+[270/282   4748s] fixed_book A bid_book 100000 1000 200 42: stopped
+[271/282   4753s] fixed_book B bid_book 100000 1000 10 43: ok
+[272/282   4789s] fixed_book A bid_book 100000 1000 10 43: stopped
+[273/282   4828s] fixed_book A bid_book 100000 1000 100 43: stopped
+[274/282   4838s] fixed_book B bid_book 100000 1000 100 43: ok
+[275/282   4847s] fixed_book B bid_book 100000 1000 200 43: ok
+[276/282   4885s] fixed_book A bid_book 100000 1000 200 43: stopped
+[277/282   4897s] fixed_book B bid_book 100000 1000 10 44: ok
+[278/282   4935s] fixed_book A bid_book 100000 1000 10 44: stopped
+[279/282   4942s] fixed_book B bid_book 100000 1000 100 44: ok
+[280/282   4979s] fixed_book A bid_book 100000 1000 100 44: stopped
+[281/282   5004s] fixed_book B bid_book 100000 1000 200 44: ok
+[282/282   5048s] fixed_book A bid_book 100000 1000 200 44: stopped
+Saved 282 cells to C:\Users\Tolgahan\Downloads\Assignment1\Assignment1\Submissions\YildirimTolgahan\Assignment1\results (0 with errors)

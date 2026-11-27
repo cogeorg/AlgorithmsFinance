@@ -1,0 +1,38 @@
+{
+  "python": "3.11.0",
+  "implementation": "CPython",
+  "zlib": "1.2.11",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "macos": "27.0.1",
+  "mac_model_id": "Mac16,12",
+  "mac_hardware": [
+    "Model Name: MacBook Air",
+    "Chip: Apple M4",
+    "Total Number of Cores: 10 (4 Performance and 6 Efficiency)",
+    "Memory: 16 GB"
+  ],
+  "cpu_brand": "Apple M4",
+  "memory_bytes": "17179869184",
+  "git_commit": "69ff5dbeeb47dd18d83494b1c11e2bbe176dfff6",
+  "git_dirty": false,
+  "dependencies": [
+    "iniconfig==2.3.1",
+    "nodeenv==1.12.0",
+    "packaging==26.3",
+    "pluggy==1.7.0",
+    "Pygments==2.21.0",
+    "pyright==1.1.414",
+    "pytest==9.2.0",
+    "typing_extensions==4.16.0"
+  ],
+  "constants": {
+    "limit_seconds": 600,
+    "slow_first_seconds": 60,
+    "timed_repeats": 5,
+    "a_million_threshold": 60
+  },
+  "timing": "time.perf_counter around the replay loop; gc enabled (gc.collect() before each replay, outside the timed region)",
+  "generator_settings": "results/generated_data_checksums.json"
+}

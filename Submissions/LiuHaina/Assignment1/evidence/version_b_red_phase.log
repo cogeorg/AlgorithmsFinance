@@ -1,0 +1,135 @@
+test_mixed_streams_compare_every_event (tests.test_version_b.TestGeneratedParity.test_mixed_streams_compare_every_event) ... ERROR
+test_crossing_limit_stops_at_ineligible_depth (tests.test_version_b.TestVersionBBoundaries.test_crossing_limit_stops_at_ineligible_depth) ... ERROR
+test_current_event_fills_only_and_unknown_cancel_advances_sequence (tests.test_version_b.TestVersionBBoundaries.test_current_event_fills_only_and_unknown_cancel_advances_sequence) ... ERROR
+test_inspection_and_input_do_not_expose_live_state (tests.test_version_b.TestVersionBBoundaries.test_inspection_and_input_do_not_expose_live_state) ... ERROR
+test_malformed_events_are_rejected_atomically (tests.test_version_b.TestVersionBBoundaries.test_malformed_events_are_rejected_atomically) ... ERROR
+test_churn_with_live_anchor_bounds_heap_storage (tests.test_version_b.TestVersionBStructure.test_churn_with_live_anchor_bounds_heap_storage) ... ERROR
+test_compaction_retains_live_levels_and_fifo (tests.test_version_b.TestVersionBStructure.test_compaction_retains_live_levels_and_fifo) ... ERROR
+test_reactivated_price_uses_current_queue_once (tests.test_version_b.TestVersionBStructure.test_reactivated_price_uses_current_queue_once) ... 
+  test_reactivated_price_uses_current_queue_once (tests.test_version_b.TestVersionBStructure.test_reactivated_price_uses_current_queue_once) (side='BUY') ... ERROR
+  test_reactivated_price_uses_current_queue_once (tests.test_version_b.TestVersionBStructure.test_reactivated_price_uses_current_queue_once) (side='SELL') ... ERROR
+test_rejection_does_not_even_clean_internal_heaps (tests.test_version_b.TestVersionBStructure.test_rejection_does_not_even_clean_internal_heaps) ... ERROR
+
+======================================================================
+ERROR: test_mixed_streams_compare_every_event (tests.test_version_b.TestGeneratedParity.test_mixed_streams_compare_every_event)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/tests/test_version_b.py", line 117, in test_mixed_streams_compare_every_event
+    self.assertEqual(a.process_event(event), b.process_event(event), (seed, seq))
+                                             ~~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+======================================================================
+ERROR: test_crossing_limit_stops_at_ineligible_depth (tests.test_version_b.TestVersionBBoundaries.test_crossing_limit_stops_at_ineligible_depth)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/tests/test_version_a_validation.py", line 48, in test_crossing_limit_stops_at_ineligible_depth
+    book.AddLimitOrder(limit(1, "cheap", "SELL", 95, 2))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 12, in AddLimitOrder
+    return self.process_event(event)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+======================================================================
+ERROR: test_current_event_fills_only_and_unknown_cancel_advances_sequence (tests.test_version_b.TestVersionBBoundaries.test_current_event_fills_only_and_unknown_cancel_advances_sequence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/tests/test_version_a_validation.py", line 40, in test_current_event_fills_only_and_unknown_cancel_advances_sequence
+    book.AddLimitOrder(limit(1, "b"))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 12, in AddLimitOrder
+    return self.process_event(event)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+======================================================================
+ERROR: test_inspection_and_input_do_not_expose_live_state (tests.test_version_b.TestVersionBBoundaries.test_inspection_and_input_do_not_expose_live_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/tests/test_version_a_validation.py", line 31, in test_inspection_and_input_do_not_expose_live_state
+    book.AddLimitOrder(event)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 12, in AddLimitOrder
+    return self.process_event(event)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+======================================================================
+ERROR: test_malformed_events_are_rejected_atomically (tests.test_version_b.TestVersionBBoundaries.test_malformed_events_are_rejected_atomically)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/tests/test_version_a_validation.py", line 10, in test_malformed_events_are_rejected_atomically
+    book.process_event(limit(1, "b"))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+======================================================================
+ERROR: test_churn_with_live_anchor_bounds_heap_storage (tests.test_version_b.TestVersionBStructure.test_churn_with_live_anchor_bounds_heap_storage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/tests/test_version_b.py", line 59, in test_churn_with_live_anchor_bounds_heap_storage
+    book.process_event(limit(1, "anchor", price=10000, qty=1))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+======================================================================
+ERROR: test_compaction_retains_live_levels_and_fifo (tests.test_version_b.TestVersionBStructure.test_compaction_retains_live_levels_and_fifo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/tests/test_version_b.py", line 73, in test_compaction_retains_live_levels_and_fifo
+    book.process_event(limit(i + 1, f"p{i}", price=i + 1, qty=1))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+======================================================================
+ERROR: test_reactivated_price_uses_current_queue_once (tests.test_version_b.TestVersionBStructure.test_reactivated_price_uses_current_queue_once) (side='BUY')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/tests/test_version_b.py", line 46, in test_reactivated_price_uses_current_queue_once
+    book.process_event(limit(1, "best", side, best, 1))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+======================================================================
+ERROR: test_reactivated_price_uses_current_queue_once (tests.test_version_b.TestVersionBStructure.test_reactivated_price_uses_current_queue_once) (side='SELL')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/tests/test_version_b.py", line 46, in test_reactivated_price_uses_current_queue_once
+    book.process_event(limit(1, "best", side, best, 1))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+======================================================================
+ERROR: test_rejection_does_not_even_clean_internal_heaps (tests.test_version_b.TestVersionBStructure.test_rejection_does_not_even_clean_internal_heaps)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/tests/test_version_b.py", line 87, in test_rejection_does_not_even_clean_internal_heaps
+    book.process_event(limit(1, "best", price=200))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.002s
+
+FAILED (errors=10)

@@ -1,0 +1,42 @@
+label: phase2-final-review
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -c from pathlib import Path
+import subprocess
+import sys
+import pytest
+import hypothesis
+root=Path.cwd().parents[2]
+scope='Submissions/BuehlerLaurin/Assignment1/'
+def git(*args):
+    return subprocess.run(['git',*args],cwd=root,capture_output=True,text=True,encoding='utf-8',check=True).stdout
+tracked=git('diff','--name-only','HEAD').splitlines()
+status=git('status','--porcelain=v1','--untracked-files=all').splitlines()
+assert all(p.startswith(scope) for p in tracked), tracked
+assert all(line[3:].startswith(scope) for line in status), status
+protected=[scope+'06_data',scope+'01_code/datagen',scope+'01_code/lob/book_b.py',scope+'02_tests/test_stateful.py',scope+'02_tests/test_own_datasets.py',scope+'requirements.txt']
+assert git('diff','HEAD','--',*protected) == ''
+whitespace=subprocess.run(['git','diff','--check'],cwd=root,capture_output=True,text=True,encoding='utf-8')
+assert whitespace.returncode == 0, whitespace.stdout
+assert hypothesis.__version__ == '6.155.7'
+print('Python:',sys.version.split()[0],'; pytest:',pytest.__version__,'; hypothesis:',hypothesis.__version__)
+print('All tracked and untracked changes are inside Assignment1.')
+print('All input/expected datasets, own generators, B stub, A/B stateful test, data checks and dependency pins unchanged.')
+print('git diff --check: clean (Git may print its existing LF/CRLF normalization notices on stderr).')
+print('Generated source/test files and documentation diff reviewed by Codex for unrelated behavior, names, comments and content; no traces of the logged PDF injection found.')
+print('Only the two explicitly authorized template files deleted.')
+assert {p for p in tracked if not (root/p).exists()} == {scope+'02_tests/test_mutants.py.template',scope+'02_tests/test_stateful.py.template'}
+print('RESULT: PASS (Phase 2 change scope, protected files, pins and whitespace verified)')
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 11d831b27d5fc46a92095f0ff17e524f6ab63369
+dirty: True
+python: 3.13.15
+utc: 20261121T222630Z
+exit_code: 0
+duration_s: 1.13
+------------------------------------------------------------
+Python: 3.13.15 ; pytest: 9.2.0 ; hypothesis: 6.155.7
+All tracked and untracked changes are inside Assignment1.
+All input/expected datasets, own generators, B stub, A/B stateful test, data checks and dependency pins unchanged.
+git diff --check: clean (Git may print its existing LF/CRLF normalization notices on stderr).
+Generated source/test files and documentation diff reviewed by Codex for unrelated behavior, names, comments and content; no traces of the logged PDF injection found.
+Only the two explicitly authorized template files deleted.
+RESULT: PASS (Phase 2 change scope, protected files, pins and whitespace verified)

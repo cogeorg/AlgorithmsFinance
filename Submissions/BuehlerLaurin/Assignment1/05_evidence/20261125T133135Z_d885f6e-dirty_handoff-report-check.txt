@@ -1,0 +1,15 @@
+label: handoff-report-check
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/report_check.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: d885f6e96da935ea4f73f24ed6da9aea012f8bbf
+dirty: True
+python: 3.13.15
+utc: 20261125T133135Z
+exit_code: 1
+duration_s: 8.28
+------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\report_check.py", line 31, in <module>
+    assert abs(float(number)-ratio)<=tolerance,(w,size,label,ratio)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('sweep', 1000, '10x', np.float64(10.535659638968633))

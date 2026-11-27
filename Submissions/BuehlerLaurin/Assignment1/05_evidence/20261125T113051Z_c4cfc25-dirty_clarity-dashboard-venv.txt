@@ -1,0 +1,26 @@
+label: clarity-dashboard-venv
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py 02_tests/test_submission_robustness.py -q --tb=short --basetemp=scratch/pytest-clarity-ui-venv --junitxml=05_evidence/clarity-dashboard-tests.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: c4cfc2521f57fc3de60a35d361ff4ceb025e552f
+dirty: True
+python: 3.13.15
+utc: 20261125T113051Z
+exit_code: 1
+duration_s: 47.67
+------------------------------------------------------------
+...........F.....................................                        [100%]
+================================== FAILURES ===================================
+________________ test_all_tabs_render_and_headlines_match_csv _________________
+02_tests\test_dashboard.py:116: in test_all_tabs_render_and_headlines_match_csv
+    assert len(overview.get('arrow_vega_lite_chart')) == 1
+E   AssertionError: assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = get('arrow_vega_lite_chart')
+E    +      where get = Tab(\n    children={\n        0: Header(tag='h2'),\n        1: Markdown(),\n        2: Caption(),\n        3: Block(\n      ...d', 'sweep']),\n        10: Caption(),\n        11: UnknownElement(),\n        12: Caption()\n    },\n    label='Overview'\n).get
+---------------------------- Captured stderr call -----------------------------
+2026-11-25 12:31:02.261 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+------------------------------ Captured log call ------------------------------
+WARNING  streamlit.runtime.scriptrunner_utils.script_run_context:script_run_context.py:522 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+=========================== short test summary info ===========================
+FAILED 02_tests/test_dashboard.py::test_all_tabs_render_and_headlines_match_csv
+1 failed, 48 passed in 46.27s

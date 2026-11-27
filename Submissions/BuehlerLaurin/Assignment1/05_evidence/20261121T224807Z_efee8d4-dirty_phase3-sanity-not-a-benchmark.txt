@@ -1,0 +1,18 @@
+label: phase3-sanity-not-a-benchmark
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe run.py bench.sanity
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: efee8d4ba8d3425e51a31c5a8e361cd8986fe168
+dirty: True
+python: 3.13.15
+utc: 20261121T224807Z
+exit_code: 0
+duration_s: 26.58
+------------------------------------------------------------
+sanity, not a benchmark
+buildup: parse=0.052434s; A setup=0.000005s replay=7.937737s; B setup=0.000024s replay=0.052302s; result differences=0; final book equal
+crowded: parse=0.052900s; A setup=0.000004s replay=8.133971s; B setup=0.000010s replay=0.046093s; result differences=0; final book equal
+mixed: parse=0.039442s; A setup=0.000002s replay=1.154026s; B setup=0.000007s replay=0.077342s; result differences=0; final book equal
+sweep: parse=0.050735s; A setup=0.000003s replay=7.931050s; B setup=0.000009s replay=0.054345s; result differences=0; final book equal
+cancel_churn: parse=0.036823s; A setup=0.000002s replay=0.028029s; B setup=0.000007s replay=0.037469s; result differences=0; final book equal
+Saved 03_results\runs\20261121T224807Z_efee8d4-dirty_phase3_sanity_not_benchmark
+RESULT: PASS (sanity, not a benchmark; 50000 event results and five final books agree)

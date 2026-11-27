@@ -1,0 +1,14 @@
+# python3 audit/reproducers/repro_b2_duplicate_sizes_mix_inputs.py <LaviBen>
+Cases (id, seed, input digest):
+  n10_q1_all_present  seed=2026  sha256=95ca123357cd
+  n10_q1_all_present  seed=2027  sha256=b56182d9b8db
+
+Summary row 'n10_q1_all_present / Linear search' reports repeats=2
+Raw rows with that case id: 4, from 2 different inputs: ['95ca123357cd', 'b56182d9b8db']
+Summary rows for linear search: 2 (identical ids)
+
+Expected: one summary row per input, built from that input's own repeats.
+Actual:   one summary row mixes repeats of two different inputs.
+
+BUG PRESENT: duplicate sizes produce colliding case ids and mixed medians.
+exit 1

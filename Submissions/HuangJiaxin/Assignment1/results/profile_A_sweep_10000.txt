@@ -1,0 +1,43 @@
+cProfile, version A, sweep, 10000 events, seed 42
+Own time (tottime) excludes called functions; cumulative time includes them.
+
+         334195 function calls in 8.384 seconds
+
+   Ordered by: internal time
+   List reduced from 18 to 12 due to restriction <12>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    14061    6.133    0.000    6.133    0.000 /app/lob/book_a.py:43(_best)
+    10000    1.576    0.000    1.576    0.000 /app/lob/book_a.py:34(_find)
+     4062    0.531    0.000    0.531    0.000 {method 'remove' of 'list' objects}
+    10000    0.034    0.000    1.660    0.000 /app/lob/validation.py:21(check)
+    76000    0.018    0.000    0.018    0.000 {method 'get' of 'dict' objects}
+     8000    0.015    0.000    4.653    0.001 /app/lob/book_a.py:99(add_limit_order)
+    10000    0.013    0.000    6.680    0.001 /app/lob/book_a.py:65(_match)
+    96000    0.013    0.000    0.013    0.000 {built-in method builtins.isinstance}
+    28000    0.011    0.000    0.019    0.000 /app/lob/validation.py:12(_is_int)
+    28000    0.009    0.000    0.028    0.000 /app/lob/validation.py:17(_positive_int)
+    10000    0.009    0.000    8.379    0.001 /app/lob/book_a.py:87(process)
+    10000    0.007    0.000    1.667    0.000 /app/lob/book_a.py:59(_validate)
+
+
+         334195 function calls in 8.384 seconds
+
+   Ordered by: cumulative time
+   List reduced from 18 to 12 due to restriction <12>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.004    0.004    8.383    8.383 /app/bench/common.py:61(replay)
+    10000    0.009    0.000    8.379    0.001 /app/lob/book_a.py:87(process)
+    10000    0.013    0.000    6.680    0.001 /app/lob/book_a.py:65(_match)
+    14061    6.133    0.000    6.133    0.000 /app/lob/book_a.py:43(_best)
+     8000    0.015    0.000    4.653    0.001 /app/lob/book_a.py:99(add_limit_order)
+     2000    0.003    0.000    3.714    0.002 /app/lob/book_a.py:115(fill_market_sell)
+    10000    0.007    0.000    1.667    0.000 /app/lob/book_a.py:59(_validate)
+    10000    0.034    0.000    1.660    0.000 /app/lob/validation.py:21(check)
+    10000    0.004    0.000    1.580    0.000 /app/lob/book_a.py:40(_is_live)
+    10000    1.576    0.000    1.576    0.000 /app/lob/book_a.py:34(_find)
+     4062    0.531    0.000    0.531    0.000 {method 'remove' of 'list' objects}
+    28000    0.009    0.000    0.028    0.000 /app/lob/validation.py:17(_positive_int)
+
+

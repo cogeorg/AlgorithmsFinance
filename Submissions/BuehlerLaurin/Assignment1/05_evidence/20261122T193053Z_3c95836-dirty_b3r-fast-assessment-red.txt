@@ -1,0 +1,94 @@
+label: b3r-fast-assessment-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest -q 02_tests/test_fast_assessment.py --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3c95836e66e797025518c6d66fc9733b5807ea85
+dirty: True
+python: 3.13.15
+utc: 20261122T193053Z
+exit_code: 1
+duration_s: 1.53
+------------------------------------------------------------
+FFFFFFFFFF                                                               [100%]
+================================== FAILURES ===================================
+____________ test_ten_percent_time_reduction_is_required[0.9-True] ____________
+02_tests\test_fast_assessment.py:22: in test_ten_percent_time_reduction_is_required
+    assert performance_gate(a,b,ids)['performance_pass'] is accepted
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\bench\assess_fast.py:5: in performance_gate
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ten_percent_time_reduction_is_required[0.901-False] ___________
+02_tests\test_fast_assessment.py:22: in test_ten_percent_time_reduction_is_required
+    assert performance_gate(a,b,ids)['performance_pass'] is accepted
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\bench\assess_fast.py:5: in performance_gate
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ten_percent_time_reduction_is_required[1.0-False] ____________
+02_tests\test_fast_assessment.py:22: in test_ten_percent_time_reduction_is_required
+    assert performance_gate(a,b,ids)['performance_pass'] is accepted
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\bench\assess_fast.py:5: in performance_gate
+    raise NotImplementedError
+E   NotImplementedError
+______ test_no_five_percent_loss_anywhere_even_outside_score[1.05-True] _______
+02_tests\test_fast_assessment.py:29: in test_no_five_percent_loss_anywhere_even_outside_score
+    result = performance_gate(a,b,ids)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\bench\assess_fast.py:5: in performance_gate
+    raise NotImplementedError
+E   NotImplementedError
+____ test_no_five_percent_loss_anywhere_even_outside_score[1.05001-False] _____
+02_tests\test_fast_assessment.py:29: in test_no_five_percent_loss_anywhere_even_outside_score
+    result = performance_gate(a,b,ids)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\bench\assess_fast.py:5: in performance_gate
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_incomplete_or_unmatched_data_cannot_promote[missing] __________
+02_tests\test_fast_assessment.py:42: in test_incomplete_or_unmatched_data_cannot_promote
+    assert performance_gate(a,b,ids)['performance_pass'] is False
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\bench\assess_fast.py:5: in performance_gate
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_incomplete_or_unmatched_data_cannot_promote[stopped] __________
+02_tests\test_fast_assessment.py:42: in test_incomplete_or_unmatched_data_cannot_promote
+    assert performance_gate(a,b,ids)['performance_pass'] is False
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\bench\assess_fast.py:5: in performance_gate
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_incomplete_or_unmatched_data_cannot_promote[partial] __________
+02_tests\test_fast_assessment.py:42: in test_incomplete_or_unmatched_data_cannot_promote
+    assert performance_gate(a,b,ids)['performance_pass'] is False
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\bench\assess_fast.py:5: in performance_gate
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_incomplete_or_unmatched_data_cannot_promote[hash] ____________
+02_tests\test_fast_assessment.py:42: in test_incomplete_or_unmatched_data_cannot_promote
+    assert performance_gate(a,b,ids)['performance_pass'] is False
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\bench\assess_fast.py:5: in performance_gate
+    raise NotImplementedError
+E   NotImplementedError
+_________ test_incomplete_or_unmatched_data_cannot_promote[duplicate] _________
+02_tests\test_fast_assessment.py:42: in test_incomplete_or_unmatched_data_cannot_promote
+    assert performance_gate(a,b,ids)['performance_pass'] is False
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\bench\assess_fast.py:5: in performance_gate
+    raise NotImplementedError
+E   NotImplementedError
+=========================== short test summary info ===========================
+FAILED 02_tests/test_fast_assessment.py::test_ten_percent_time_reduction_is_required[0.9-True]
+FAILED 02_tests/test_fast_assessment.py::test_ten_percent_time_reduction_is_required[0.901-False]
+FAILED 02_tests/test_fast_assessment.py::test_ten_percent_time_reduction_is_required[1.0-False]
+FAILED 02_tests/test_fast_assessment.py::test_no_five_percent_loss_anywhere_even_outside_score[1.05-True]
+FAILED 02_tests/test_fast_assessment.py::test_no_five_percent_loss_anywhere_even_outside_score[1.05001-False]
+FAILED 02_tests/test_fast_assessment.py::test_incomplete_or_unmatched_data_cannot_promote[missing]
+FAILED 02_tests/test_fast_assessment.py::test_incomplete_or_unmatched_data_cannot_promote[stopped]
+FAILED 02_tests/test_fast_assessment.py::test_incomplete_or_unmatched_data_cannot_promote[partial]
+FAILED 02_tests/test_fast_assessment.py::test_incomplete_or_unmatched_data_cannot_promote[hash]
+FAILED 02_tests/test_fast_assessment.py::test_incomplete_or_unmatched_data_cannot_promote[duplicate]
+10 failed in 0.60s

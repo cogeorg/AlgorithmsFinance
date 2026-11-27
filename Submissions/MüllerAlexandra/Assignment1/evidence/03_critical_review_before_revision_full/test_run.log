@@ -1,0 +1,576 @@
+stage: 03_critical_review_before_revision_full
+started_utc: 2026-11-22T19:39:47.370944+00:00
+finished_utc: 2026-11-22T19:39:49.600868+00:00
+elapsed_seconds: 2.230497
+exit_code: 1
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 5bbdb8eaa456e17f5b2c91e65f406dc16ce9004f
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider --tb=short
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0
+collected 151 items
+
+tests\test_01_interface.py ...F.F.F.F                                    [  6%]
+tests\test_02_validation.py ............................FFFFFFFFFFFFFFFF [ 35%]
+FFFFFFFFFFFF.F.F..FF.F..FF.F.F                                           [ 55%]
+tests\test_03_limit_matching.py .F.F.F.F.F.F.F.F                         [ 66%]
+tests\test_04_market_sells.py ...FFF.F.F.F                               [ 74%]
+tests\test_05_cancellations.py .F.F.F.F.F.F.F                            [ 83%]
+tests\test_06_invariants.py .F.F.F.F.F                                   [ 90%]
+tests\test_07_worked_example.py .F                                       [ 91%]
+tests\test_08_differential.py F                                          [ 92%]
+tests\test_09_stream_io.py ...F                                          [ 94%]
+tests\test_10_generated_streams.py ....FFFF                              [100%]
+
+================================== FAILURES ===================================
+______________________ test_fresh_book_is_empty[revised] ______________________
+tests\test_01_interface.py:20: in test_fresh_book_is_empty
+    assert book.inspect_book() == []
+           ^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:24: in inspect_book
+    raise NotImplementedError("revised inspection is not implemented")
+E   NotImplementedError: revised inspection is not implemented
+_______________ test_limit_result_has_required_fields[revised] ________________
+tests\test_01_interface.py:24: in test_limit_result_has_required_fields
+    result = book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+____________ test_market_sell_result_has_required_fields[revised] _____________
+tests\test_01_interface.py:36: in test_market_sell_result_has_required_fields
+    result = book.process_event(market_sell_event(1, "s1", 5))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+____________ test_cancellation_result_has_required_fields[revised] ____________
+tests\test_01_interface.py:48: in test_cancellation_result_has_required_fields
+    result = book.process_event(cancel_event(1, "missing"))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-missing-sequence] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+__ test_invalid_event_is_rejected_without_state_change[revised-unknown-type] __
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+___ test_invalid_event_is_rejected_without_state_change[revised-empty-type] ___
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-nonstring-type] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-empty-event-id] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-nonstring-event-id] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+__ test_invalid_event_is_rejected_without_state_change[revised-unknown-side] __
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-missing-order-id] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-empty-order-id] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-missing-price] __
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-missing-limit-quantity] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+___ test_invalid_event_is_rejected_without_state_change[revised-zero-price] ___
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-negative-price] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-noninteger-price] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-boolean-price-is-not-integer] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-zero-quantity] __
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-negative-quantity] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-noninteger-quantity] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-boolean-is-not-integer] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-zero-market-quantity] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-negative-market-quantity] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-noninteger-market-quantity] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-boolean-market-quantity] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-missing-quantity] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-missing-cancel-target] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-empty-cancel-target] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-nonstring-cancel-target] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_invalid_event_is_rejected_without_state_change[revised-missing-limit-side] _
+tests\test_02_validation.py:78: in test_invalid_event_is_rejected_without_state_change
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+________ test_missing_event_id_is_rejected_without_adding_one[revised] ________
+tests\test_02_validation.py:99: in test_missing_event_id_is_rejected_without_adding_one
+    result = book.process_event(event)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_______________ test_sequence_must_be_positive_integer[revised] _______________
+tests\test_02_validation.py:107: in test_sequence_must_be_positive_integer
+    result = book.process_event(limit_event(0, "b0", "BUY", 100, 1))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+__________ test_sequence_must_not_accept_nonintegers[revised-float] ___________
+tests\test_02_validation.py:120: in test_sequence_must_not_accept_nonintegers
+    result = book.process_event(event)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_________ test_sequence_must_not_accept_nonintegers[revised-boolean] __________
+tests\test_02_validation.py:120: in test_sequence_must_not_accept_nonintegers
+    result = book.process_event(event)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+____ test_rejected_event_does_not_advance_last_accepted_sequence[revised] _____
+tests\test_02_validation.py:127: in test_rejected_event_does_not_advance_last_accepted_sequence
+    book.process_event(limit_event(1, "b1", "BUY", 100, 1))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_sequence_must_be_strictly_increasing_without_state_change[revised-equal] _
+tests\test_02_validation.py:142: in test_sequence_must_be_strictly_increasing_without_state_change
+    book.process_event(limit_event(2, "b1", "BUY", 100, 1))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_sequence_must_be_strictly_increasing_without_state_change[revised-decreasing] _
+tests\test_02_validation.py:142: in test_sequence_must_be_strictly_increasing_without_state_change
+    book.process_event(limit_event(2, "b1", "BUY", 100, 1))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+__________ test_duplicate_live_order_identifier_is_rejected[revised] __________
+tests\test_02_validation.py:160: in test_duplicate_live_order_identifier_is_rejected
+    book.process_event(limit_event(1, "same", "BUY", 100, 2))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+______ test_unknown_cancellation_is_valid_and_advances_sequence[revised] ______
+tests\test_02_validation.py:170: in test_unknown_cancellation_is_valid_and_advances_sequence
+    missing = book.process_event(cancel_event(1, "unknown"))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+__________ test_noncrossing_orders_rest_in_canonical_order[revised] ___________
+tests\test_03_limit_matching.py:9: in test_noncrossing_orders_rest_in_canonical_order
+    buy = book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+____ test_crossing_buy_executes_at_resting_ask_and_rests_residual[revised] ____
+tests\test_03_limit_matching.py:23: in test_crossing_buy_executes_at_resting_ask_and_rests_residual
+    book.process_event(limit_event(1, "a1", "SELL", 100, 2))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+___ test_crossing_sell_executes_at_resting_bid_and_rests_residual[revised] ____
+tests\test_03_limit_matching.py:40: in test_crossing_sell_executes_at_resting_bid_and_rests_residual
+    book.process_event(limit_event(1, "b1", "BUY", 100, 2))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+___________ test_crossing_limit_uses_best_price_then_fifo[revised] ____________
+tests\test_03_limit_matching.py:59: in test_crossing_limit_uses_best_price_then_fifo
+    book.process_event(limit_event(1, "a-low-first", "SELL", 101, 2))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+____ test_identifier_spelling_does_not_override_arrival_priority[revised] _____
+tests\test_03_limit_matching.py:82: in test_identifier_spelling_does_not_override_arrival_priority
+    book.process_event(limit_event(1, "z-first", "SELL", 100, 1))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_crossing_limit_sell_uses_best_price_then_fifo_and_stops_at_limit[revised] _
+tests\test_03_limit_matching.py:93: in test_crossing_limit_sell_uses_best_price_then_fifo_and_stops_at_limit
+    book.process_event(limit_event(1, "ineligible", "BUY", 99, 2))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_______ test_partial_ask_retains_priority_for_later_limit_buy[revised] ________
+tests\test_03_limit_matching.py:118: in test_partial_ask_retains_priority_for_later_limit_buy
+    book.process_event(limit_event(1, "first", "SELL", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+____ test_canonical_book_orders_both_sides_by_price_then_arrival[revised] _____
+tests\test_03_limit_matching.py:135: in test_canonical_book_orders_both_sides_by_price_then_arrival
+    book.process_event(limit_event(1, "z-low-bid", "BUY", 100, 1))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+__ test_market_sell_relative_to_available_depth[revised-smaller-than-depth] ___
+tests\test_04_market_sells.py:25: in test_market_sell_relative_to_available_depth
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+____ test_market_sell_relative_to_available_depth[revised-equal-to-depth] _____
+tests\test_04_market_sells.py:25: in test_market_sell_relative_to_available_depth
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+___ test_market_sell_relative_to_available_depth[revised-larger-than-depth] ___
+tests\test_04_market_sells.py:25: in test_market_sell_relative_to_available_depth
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+______________ test_market_sell_uses_best_bid_then_fifo[revised] ______________
+tests\test_04_market_sells.py:43: in test_market_sell_uses_best_bid_then_fifo
+    book.process_event(limit_event(1, "low", "BUY", 99, 4))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_________ test_partial_maker_retains_priority_for_later_sale[revised] _________
+tests\test_04_market_sells.py:60: in test_partial_maker_retains_priority_for_later_sale
+    book.process_event(limit_event(1, "first", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_________ test_long_equal_price_queue_preserves_all_arrivals[revised] _________
+tests\test_04_market_sells.py:77: in test_long_equal_price_queue_preserves_all_arrivals
+    book.process_event(limit_event(seq, f"maker-{seq:02d}", "BUY", 100, 1))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+___________ test_cancel_active_order_removes_full_residual[revised] ___________
+tests\test_05_cancellations.py:9: in test_cancel_active_order_removes_full_residual
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+___ test_cancel_after_partial_fill_removes_only_remaining_quantity[revised] ___
+tests\test_05_cancellations.py:25: in test_cancel_after_partial_fill_removes_only_remaining_quantity
+    book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+____________ test_cancel_after_complete_fill_is_not_found[revised] ____________
+tests\test_05_cancellations.py:36: in test_cancel_after_complete_fill_is_not_found
+    book.process_event(limit_event(1, "b1", "BUY", 100, 2))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+________ test_repeated_cancellation_is_not_found_second_time[revised] _________
+tests\test_05_cancellations.py:46: in test_repeated_cancellation_is_not_found_second_time
+    book.process_event(limit_event(1, "b1", "BUY", 100, 2))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_____ test_cancelling_one_order_does_not_disturb_other_priority[revised] ______
+tests\test_05_cancellations.py:57: in test_cancelling_one_order_does_not_disturb_other_priority
+    book.process_event(limit_event(1, "first", "BUY", 100, 1))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_________ test_cancelling_head_of_queue_exposes_next_arrival[revised] _________
+tests\test_05_cancellations.py:69: in test_cancelling_head_of_queue_exposes_next_arrival
+    book.process_event(limit_event(1, "first", "BUY", 101, 1))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_cancelled_empty_best_level_can_reopen_without_stale_priority[revised] __
+tests\test_05_cancellations.py:89: in test_cancelled_empty_best_level_can_reopen_without_stale_priority
+    book.process_event(limit_event(1, "old-best", "BUY", 101, 1))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_____ test_incoming_quantity_equals_fills_plus_returned_residual[revised] _____
+tests\test_06_invariants.py:11: in test_incoming_quantity_equals_fills_plus_returned_residual
+    book.process_event(limit_event(1, "b1", "BUY", 101, 2))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_____________ test_maker_loses_exactly_its_fill_quantity[revised] _____________
+tests\test_06_invariants.py:22: in test_maker_loses_exactly_its_fill_quantity
+    book.process_event(limit_event(1, "b1", "BUY", 100, 10))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_________ test_cancellation_quantity_equals_removed_residual[revised] _________
+tests\test_06_invariants.py:34: in test_cancellation_quantity_equals_removed_residual
+    book.process_event(limit_event(1, "b1", "BUY", 100, 10))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+________ test_proceeds_equal_sum_of_fill_price_times_quantity[revised] ________
+tests\test_06_invariants.py:44: in test_proceeds_equal_sum_of_fill_price_times_quantity
+    book.process_event(limit_event(1, "b1", "BUY", 101, 2))
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_________ test_resting_book_is_uncrossed_positive_and_unique[revised] _________
+tests\test_06_invariants.py:63: in test_resting_book_is_uncrossed_positive_and_unique
+    result = book.process_event(event)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+____________________ test_supplied_worked_example[revised] ____________________
+tests\test_07_worked_example.py:17: in test_supplied_worked_example
+    results = [book.process_event(event) for event in iter_events(DATA / "worked_example.jsonl")]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_________ test_versions_agree_after_every_event_on_small_mixed_stream _________
+tests\test_08_differential.py:23: in test_versions_agree_after_every_event_on_small_mixed_stream
+    assert baseline.process_event(event) == revised.process_event(event)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+______________ test_replay_returns_one_result_per_event[revised] ______________
+tests\test_09_stream_io.py:33: in test_replay_returns_one_result_per_event
+    results = replay_events(book, events)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\stream_io.py:36: in replay_events
+    return [book.process_event(event) for event in events]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_small_generated_stream_matches_independent_oracle_after_every_event[revised-3] _
+tests\test_10_generated_streams.py:80: in test_small_generated_stream_matches_independent_oracle_after_every_event
+    actual_result = book.process_event(event)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_small_generated_stream_matches_independent_oracle_after_every_event[revised-17] _
+tests\test_10_generated_streams.py:80: in test_small_generated_stream_matches_independent_oracle_after_every_event
+    actual_result = book.process_event(event)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_small_generated_stream_matches_independent_oracle_after_every_event[revised-42] _
+tests\test_10_generated_streams.py:80: in test_small_generated_stream_matches_independent_oracle_after_every_event
+    actual_result = book.process_event(event)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+_ test_small_generated_stream_matches_independent_oracle_after_every_event[revised-99] _
+tests\test_10_generated_streams.py:80: in test_small_generated_stream_matches_independent_oracle_after_every_event
+    actual_result = book.process_event(event)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+src\limit_order_book\revised.py:12: in process_event
+    raise NotImplementedError("revised dispatcher is not implemented")
+E   NotImplementedError: revised dispatcher is not implemented
+=========================== short test summary info ===========================
+FAILED tests/test_01_interface.py::test_fresh_book_is_empty[revised] - NotImp...
+FAILED tests/test_01_interface.py::test_limit_result_has_required_fields[revised]
+FAILED tests/test_01_interface.py::test_market_sell_result_has_required_fields[revised]
+FAILED tests/test_01_interface.py::test_cancellation_result_has_required_fields[revised]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-missing-sequence]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-unknown-type]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-empty-type]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-nonstring-type]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-empty-event-id]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-nonstring-event-id]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-unknown-side]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-missing-order-id]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-empty-order-id]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-missing-price]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-missing-limit-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-zero-price]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-negative-price]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-noninteger-price]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-boolean-price-is-not-integer]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-zero-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-negative-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-noninteger-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-boolean-is-not-integer]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-zero-market-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-negative-market-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-noninteger-market-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-boolean-market-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-missing-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-missing-cancel-target]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-empty-cancel-target]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-nonstring-cancel-target]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-missing-limit-side]
+FAILED tests/test_02_validation.py::test_missing_event_id_is_rejected_without_adding_one[revised]
+FAILED tests/test_02_validation.py::test_sequence_must_be_positive_integer[revised]
+FAILED tests/test_02_validation.py::test_sequence_must_not_accept_nonintegers[revised-float]
+FAILED tests/test_02_validation.py::test_sequence_must_not_accept_nonintegers[revised-boolean]
+FAILED tests/test_02_validation.py::test_rejected_event_does_not_advance_last_accepted_sequence[revised]
+FAILED tests/test_02_validation.py::test_sequence_must_be_strictly_increasing_without_state_change[revised-equal]
+FAILED tests/test_02_validation.py::test_sequence_must_be_strictly_increasing_without_state_change[revised-decreasing]
+FAILED tests/test_02_validation.py::test_duplicate_live_order_identifier_is_rejected[revised]
+FAILED tests/test_02_validation.py::test_unknown_cancellation_is_valid_and_advances_sequence[revised]
+FAILED tests/test_03_limit_matching.py::test_noncrossing_orders_rest_in_canonical_order[revised]
+FAILED tests/test_03_limit_matching.py::test_crossing_buy_executes_at_resting_ask_and_rests_residual[revised]
+FAILED tests/test_03_limit_matching.py::test_crossing_sell_executes_at_resting_bid_and_rests_residual[revised]
+FAILED tests/test_03_limit_matching.py::test_crossing_limit_uses_best_price_then_fifo[revised]
+FAILED tests/test_03_limit_matching.py::test_identifier_spelling_does_not_override_arrival_priority[revised]
+FAILED tests/test_03_limit_matching.py::test_crossing_limit_sell_uses_best_price_then_fifo_and_stops_at_limit[revised]
+FAILED tests/test_03_limit_matching.py::test_partial_ask_retains_priority_for_later_limit_buy[revised]
+FAILED tests/test_03_limit_matching.py::test_canonical_book_orders_both_sides_by_price_then_arrival[revised]
+FAILED tests/test_04_market_sells.py::test_market_sell_relative_to_available_depth[revised-smaller-than-depth]
+FAILED tests/test_04_market_sells.py::test_market_sell_relative_to_available_depth[revised-equal-to-depth]
+FAILED tests/test_04_market_sells.py::test_market_sell_relative_to_available_depth[revised-larger-than-depth]
+FAILED tests/test_04_market_sells.py::test_market_sell_uses_best_bid_then_fifo[revised]
+FAILED tests/test_04_market_sells.py::test_partial_maker_retains_priority_for_later_sale[revised]
+FAILED tests/test_04_market_sells.py::test_long_equal_price_queue_preserves_all_arrivals[revised]
+FAILED tests/test_05_cancellations.py::test_cancel_active_order_removes_full_residual[revised]
+FAILED tests/test_05_cancellations.py::test_cancel_after_partial_fill_removes_only_remaining_quantity[revised]
+FAILED tests/test_05_cancellations.py::test_cancel_after_complete_fill_is_not_found[revised]
+FAILED tests/test_05_cancellations.py::test_repeated_cancellation_is_not_found_second_time[revised]
+FAILED tests/test_05_cancellations.py::test_cancelling_one_order_does_not_disturb_other_priority[revised]
+FAILED tests/test_05_cancellations.py::test_cancelling_head_of_queue_exposes_next_arrival[revised]
+FAILED tests/test_05_cancellations.py::test_cancelled_empty_best_level_can_reopen_without_stale_priority[revised]
+FAILED tests/test_06_invariants.py::test_incoming_quantity_equals_fills_plus_returned_residual[revised]
+FAILED tests/test_06_invariants.py::test_maker_loses_exactly_its_fill_quantity[revised]
+FAILED tests/test_06_invariants.py::test_cancellation_quantity_equals_removed_residual[revised]
+FAILED tests/test_06_invariants.py::test_proceeds_equal_sum_of_fill_price_times_quantity[revised]
+FAILED tests/test_06_invariants.py::test_resting_book_is_uncrossed_positive_and_unique[revised]
+FAILED tests/test_07_worked_example.py::test_supplied_worked_example[revised]
+FAILED tests/test_08_differential.py::test_versions_agree_after_every_event_on_small_mixed_stream
+FAILED tests/test_09_stream_io.py::test_replay_returns_one_result_per_event[revised]
+FAILED tests/test_10_generated_streams.py::test_small_generated_stream_matches_independent_oracle_after_every_event[revised-3]
+FAILED tests/test_10_generated_streams.py::test_small_generated_stream_matches_independent_oracle_after_every_event[revised-17]
+FAILED tests/test_10_generated_streams.py::test_small_generated_stream_matches_independent_oracle_after_every_event[revised-42]
+FAILED tests/test_10_generated_streams.py::test_small_generated_stream_matches_independent_oracle_after_every_event[revised-99]
+======================== 74 failed, 77 passed in 1.33s ========================
+
+=== stderr ===

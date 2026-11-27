@@ -1,0 +1,24 @@
+{
+  "command": "python 04_benchmarks/export_test_results.py",
+  "finished_utc": "2026-11-24T11:55:08+00:00",
+  "commit": "ade26d17588f36e2b22d06a1eda2825aaa8df766",
+  "branch": "bonacker/phase1",
+  "code_clean": true,
+  "code_paths": [
+    "02_tests",
+    "03_code",
+    "04_benchmarks",
+    "00_instructions/generate_orders.py",
+    "pytest.ini",
+    "requirements.txt"
+  ],
+  "uncommitted_code_files": [],
+  "source_sha256": "e930821438723804a2917485d2b18042109e020779a0f44de9350fe74862a4bb",
+  "python": "3.13.15",
+  "pytest": "9.1.1",
+  "exit_code": 0,
+  "cases": 182,
+  "counts": {
+    "pass": 182
+  }
+}

@@ -1,0 +1,36 @@
+label: dashboard-reproducible-audit
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe 04_dashboard/verify_saved.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 337cc615df10892108726618b53606d59c795790
+dirty: True
+python: 3.13.15
+utc: 20261123T191421Z
+exit_code: 0
+duration_s: 9.28
+------------------------------------------------------------
+{"tab": "Overview", "description": "B3r official100k 15-cell geometric mean", "value": 0.42468442915061183, "unit": "s", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "summary.csv", "case": null}
+{"tab": "Overview", "description": "A phase replay limits", "value": 13, "unit": "cases", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "stops.csv", "case": null}
+{"tab": "Overview", "description": "cancel_churn A/B3r minimum measured ratio", "value": 0.6957023987298001, "unit": "ratio", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "summary.csv", "case": null}
+{"tab": "Scaling", "description": "A buildup measured exponent (1k to10k)", "value": 2.091096459051532, "unit": "dimensionless", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "summary.csv", "case": null}
+{"tab": "Scaling", "description": "Q7 100% sale construction", "value": 0.03861679998226464, "unit": "s", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "timing.csv", "case": "liquidation_liquidation_10000_s42_l1000_p100"}
+{"tab": "Scaling", "description": "Q7 100% sale replay", "value": 0.009336599963717163, "unit": "s", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "timing.csv", "case": "liquidation_liquidation_10000_s42_l1000_p100"}
+{"tab": "Scaling", "description": "Completed B3r 1M mixed replay", "value": 4.8669591000070795, "unit": "s", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "summary.csv", "case": "million_mixed_1000000_s43_l1000"}
+{"tab": "Original vs revised & variants", "description": "B1 deep_book / best B (cross-session)", "value": 3.1385531386499252, "unit": "ratio", "run": "20261122T012525Z_5eaeb03_phase4", "commit": "5eaeb03718d24193864dcf7ea4f5161a3bfa6559", "file": "summary.csv", "case": "adversarial_deep_book_100000_s42_l1000"}
+{"tab": "Original vs revised & variants", "description": "Same-session official fast/B3r score", "value": 0.8731749844948045, "unit": "ratio", "run": "20261122T210801Z_e4fd928_phase4_b3r_fast_rematch_20261122", "commit": "e4fd92864c6f8f7f93d40fb5d58128a307c2b907", "file": "summary.csv", "case": null}
+{"tab": "Original vs revised & variants", "description": "Binding 1k loss fast/B3r", "value": 1.068300673322064, "unit": "ratio", "run": "20261122T210801Z_e4fd928_phase4_b3r_fast_rematch_20261122", "commit": "e4fd92864c6f8f7f93d40fb5d58128a307c2b907", "file": "summary.csv", "case": null}
+{"tab": "Throughput & latency", "description": "Histogram sum equals recorded n", "value": 1000, "unit": "events", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "latency_histogram.csv", "case": "official_buildup_1000_s42_l1000"}
+{"tab": "Throughput & latency", "description": "Recorded p99", "value": 23800, "unit": "ns", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "latency.csv", "case": "official_buildup_1000_s42_l1000"}
+{"tab": "Throughput & latency", "description": "Declared spike maximum", "value": 57415300, "unit": "ns", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "latency.csv", "case": "post_attack_spike_purge_at_threshold_100000"}
+{"tab": "Memory", "description": "B3 retained after1M drift events", "value": 36948344, "unit": "bytes", "run": "20261122T012525Z_5eaeb03_phase4", "commit": "5eaeb03718d24193864dcf7ea4f5161a3bfa6559", "file": "memory.csv", "case": "churn_drift_1000000_s43_l1000"}
+{"tab": "Memory", "description": "B3 final live orders", "value": 2, "unit": "orders", "run": "20261122T012525Z_5eaeb03_phase4", "commit": "5eaeb03718d24193864dcf7ea4f5161a3bfa6559", "file": "memory.csv", "case": "churn_drift_1000000_s43_l1000"}
+{"tab": "Memory", "description": "B3r retained after1M drift events", "value": 5080, "unit": "bytes", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "memory.csv", "case": "churn_drift_1000000_s43_l1000"}
+{"tab": "Memory", "description": "B3r final live orders", "value": 2, "unit": "orders", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "memory.csv", "case": "churn_drift_1000000_s43_l1000"}
+{"tab": "Memory", "description": "Peak per sampled maximum live order", "value": 156.22688, "unit": "bytes/order", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "memory.csv", "case": "official_buildup_100000_s42_l1000"}
+Correctness: standard 983 wholly green; XML hash verified; 05_evidence/final-b-all-tests.xml
+Correctness: attack 1995 wholly green; XML hash verified; 05_evidence/final-b-attack-tests.xml
+{"tab": "Bottleneck explained", "description": "A maker selection entries scanned on100% liquidation", "value": 500500, "unit": "entries", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "counts.csv", "case": "liquidation_liquidation_1000_s42_l1000_p100"}
+{"tab": "Bottleneck explained", "description": "B1 far-end list movement", "value": 20000000000, "unit": "references shifted", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "counts.csv", "case": "post_attack_far_end_flicker_100000"}
+{"tab": "Method & data", "description": "Per replay limit", "value": 600, "unit": "s", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "env.json", "case": null}
+{"tab": "Method & data", "description": "Traced peak limit", "value": 4294967296, "unit": "bytes", "run": "20261122T130145Z_00bb1ad_phase4_b3r_20261122", "commit": "00bb1ade7111d84d5558de5c805f6bf5ed5f687b", "file": "env.json", "case": null}
+Protected engine/benchmark/data/results/dependency files unchanged; external attack work excluded.
+RESULT: PASS (all8 tabs cross-checked against saved files; no measurement, engine change or network fetch)

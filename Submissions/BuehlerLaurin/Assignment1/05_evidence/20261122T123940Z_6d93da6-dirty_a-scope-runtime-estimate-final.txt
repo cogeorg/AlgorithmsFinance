@@ -1,0 +1,416 @@
+label: a-scope-runtime-estimate-final
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/estimate_a_scope.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 6d93da61a6bbc31d63cdf60c06048969d8918df6
+dirty: True
+python: 3.13.15
+utc: 20261122T123940Z
+exit_code: 0
+duration_s: 0.23
+------------------------------------------------------------
+{
+  "decision_date": "2026-11-22",
+  "session": "phase4_b3r_20261122",
+  "label": "planning estimates only; no A measurements executed",
+  "model": "00_docs\\phase4_plan_20261122\\runtime_estimate.json",
+  "model_sha256": "1f6052ea564de7dd779a457a30447d187237182befad880c4f168bca21a86213",
+  "parts": [
+    {
+      "part": "official",
+      "max_size_A": 1000000,
+      "requested_A_workers": 180,
+      "largest_requested_size": 100000,
+      "excluded_A_workers": 0,
+      "included_cases": 45,
+      "excluded_status": "not measured (declared scope)",
+      "planning_A_low_s": 7769.821808214589,
+      "planning_A_high_s": 29803.921133353844
+    },
+    {
+      "part": "million",
+      "max_size_A": 1000000,
+      "requested_A_workers": 20,
+      "largest_requested_size": 1000000,
+      "excluded_A_workers": 0,
+      "included_cases": 5,
+      "excluded_status": "not measured (declared scope)",
+      "planning_A_low_s": 2481.745433422915,
+      "planning_A_high_s": 2599.5709333333107
+    },
+    {
+      "part": "queue",
+      "max_size_A": 10000,
+      "requested_A_workers": 48,
+      "largest_requested_size": 10000,
+      "excluded_A_workers": 24,
+      "included_cases": 12,
+      "excluded_status": "not measured (declared scope)",
+      "planning_A_low_s": 269.0432529570158,
+      "planning_A_high_s": 1535.6193098502615
+    },
+    {
+      "part": "liquidation",
+      "max_size_A": 10000,
+      "requested_A_workers": 72,
+      "largest_requested_size": 10000,
+      "excluded_A_workers": 36,
+      "included_cases": 18,
+      "excluded_status": "not measured (declared scope)",
+      "planning_A_low_s": 574.8462766376567,
+      "planning_A_high_s": 3333.9490504718224
+    },
+    {
+      "part": "adversarial",
+      "max_size_A": 10000,
+      "requested_A_workers": 72,
+      "largest_requested_size": 10000,
+      "excluded_A_workers": 36,
+      "included_cases": 18,
+      "excluded_status": "not measured (declared scope)",
+      "planning_A_low_s": 227.81874836880596,
+      "planning_A_high_s": 1246.8668334520014
+    },
+    {
+      "part": "churn",
+      "max_size_A": 10000,
+      "requested_A_workers": 12,
+      "largest_requested_size": 10000,
+      "excluded_A_workers": 8,
+      "included_cases": 12,
+      "excluded_status": "not measured (declared scope)",
+      "planning_A_low_s": 5.120384643981757,
+      "planning_A_high_s": 11.000035894270347
+    },
+    {
+      "part": "post_attack",
+      "max_size_A": 10000,
+      "requested_A_workers": 32,
+      "largest_requested_size": 10000,
+      "excluded_A_workers": 24,
+      "included_cases": 8,
+      "excluded_status": "not measured (declared scope)",
+      "planning_A_low_s": null,
+      "planning_A_high_s": null
+    }
+  ],
+  "excluded_cases": [
+    {
+      "case_id": "queue_buildup_100000_s42_l4",
+      "part": "queue",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "queue_buildup_100000_s42_l1000",
+      "part": "queue",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "queue_buildup_100000_s43_l4",
+      "part": "queue",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "queue_buildup_100000_s43_l1000",
+      "part": "queue",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "queue_buildup_100000_s44_l4",
+      "part": "queue",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "queue_buildup_100000_s44_l1000",
+      "part": "queue",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "liquidation_liquidation_100000_s42_l1000_p10",
+      "part": "liquidation",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "liquidation_liquidation_100000_s42_l1000_p100",
+      "part": "liquidation",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "liquidation_liquidation_100000_s42_l1000_p200",
+      "part": "liquidation",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "liquidation_liquidation_100000_s43_l1000_p10",
+      "part": "liquidation",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "liquidation_liquidation_100000_s43_l1000_p100",
+      "part": "liquidation",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "liquidation_liquidation_100000_s43_l1000_p200",
+      "part": "liquidation",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "liquidation_liquidation_100000_s44_l1000_p10",
+      "part": "liquidation",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "liquidation_liquidation_100000_s44_l1000_p100",
+      "part": "liquidation",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "liquidation_liquidation_100000_s44_l1000_p200",
+      "part": "liquidation",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "adversarial_deep_book_100000_s42_l1000",
+      "part": "adversarial",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "adversarial_mid_queue_cancels_100000_s42_l4",
+      "part": "adversarial",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "adversarial_repeated_full_sweeps_100000_s42_l1000",
+      "part": "adversarial",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "adversarial_deep_book_100000_s43_l1000",
+      "part": "adversarial",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "adversarial_mid_queue_cancels_100000_s43_l4",
+      "part": "adversarial",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "adversarial_repeated_full_sweeps_100000_s43_l1000",
+      "part": "adversarial",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "adversarial_deep_book_100000_s44_l1000",
+      "part": "adversarial",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "adversarial_mid_queue_cancels_100000_s44_l4",
+      "part": "adversarial",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "adversarial_repeated_full_sweeps_100000_s44_l1000",
+      "part": "adversarial",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "churn_drift_100000_s42_l1000",
+      "part": "churn",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "churn_drift_100000_s43_l1000",
+      "part": "churn",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "churn_drift_100000_s44_l1000",
+      "part": "churn",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "churn_drift_1000000_s43_l1000",
+      "part": "churn",
+      "size": 1000000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "churn_official_cancel_churn_100000_s42_l1000",
+      "part": "churn",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "churn_official_cancel_churn_100000_s43_l1000",
+      "part": "churn",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "churn_official_cancel_churn_100000_s44_l1000",
+      "part": "churn",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "churn_million_cancel_churn_1000000_s43_l1000",
+      "part": "churn",
+      "size": 1000000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "post_attack_far_end_flicker_100000",
+      "part": "post_attack",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "post_attack_dead_slot_rebuild_100000",
+      "part": "post_attack",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "post_attack_two_side_thrash_100000",
+      "part": "post_attack",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "post_attack_spike_purge_at_threshold_100000",
+      "part": "post_attack",
+      "size": 100000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "post_attack_rotating_bursts_25",
+      "part": "post_attack",
+      "size": 100025,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "post_attack_rotating_bursts_50",
+      "part": "post_attack",
+      "size": 200050,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "post_attack_rotating_bursts_100",
+      "part": "post_attack",
+      "size": 400100,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "post_attack_rotating_bursts_200",
+      "part": "post_attack",
+      "size": 800200,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "post_attack_pinned_dead_500",
+      "part": "post_attack",
+      "size": 32500,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "post_attack_pinned_dead_1000",
+      "part": "post_attack",
+      "size": 65000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "post_attack_pinned_dead_2000",
+      "part": "post_attack",
+      "size": 130000,
+      "status": "not measured (declared scope)"
+    },
+    {
+      "case_id": "post_attack_pinned_dead_4000",
+      "part": "post_attack",
+      "size": 260000,
+      "status": "not measured (declared scope)"
+    }
+  ],
+  "estimated_original_parts_A_hours": [
+    3.1467766400680457,
+    10.703035360098754
+  ],
+  "not_estimated": [
+    "post_attack A",
+    "B3r",
+    "B1/B2/B3 post_attack",
+    "entire nightly session"
+  ]
+}
+# Runtime planning after declared A scope reduction (2026-11-22)
+
+Decided BEFORE any A measurement in phase4_b3r_20261122; no long run has started.
+A is not a candidate. These are planning estimates, not observations or guaranteed bounds.
+
+| Part | A largest requested size | Requested A workers | Outside scope | A planning hours |
+|---|---:|---:|---:|---:|
+| official | 100000 | 180 | 0 | 2.158-8.279 |
+| million | 1000000 | 20 | 0 | 0.689-0.722 |
+| queue | 10000 | 48 | 24 | 0.075-0.427 |
+| liquidation | 10000 | 72 | 36 | 0.160-0.926 |
+| adversarial | 10000 | 72 | 36 | 0.063-0.346 |
+| churn | 10000 | 12 | 8 | 0.001-0.003 |
+| post_attack | 10000 | 32 | 24 | not estimated (new cases) |
+
+Original-parts A subtotal: 3.15-10.70 hours, plus unestimated post_attack A.
+B3r and the post_attack comparator timings have no new measurements; the entire session duration is not estimated.
+
+Protocol and interpretation:
+
+- Official: A through 100k; 1k/10k warm-up+5, 100k one measured trial without warm-up.
+- Official million: one A trial, or stopped at 600 s. Large-size speedups say A: single trial.
+- Queue/liquidation/adversarial/churn/post_attack: A only through 10k (--max-size 10000).
+- All larger A cells there: **not measured (declared scope)**, never filled with extrapolated measurements.
+- Any growth statement for supplementary A uses and labels its measured size range.
+- B3r and B1/B2/B3 comparator coverage/repeats remain unchanged.
+- No rows are fabricated in result CSVs for the excluded cells; this plan supplies their scope label.
+
+Coverage: B3r 564 + old comparators 168 + A 436 = 1168 requested workers (previously 1296).
+Modes: 276 timing, 276 latency, 276 counts, 340 memory; 128 former A workers / 44 cases are outside scope.
+The added memory cases all have catalog size>10000, so A does not run them. B coverage is unchanged.
+
+Estimate provenance and limits:
+
+- Filtered the unchanged prior model at `00_docs/phase4_plan_20261122/runtime_estimate.json` to exactly the included A cases.
+- Source: 1k smoke extrapolation with code-based growth assumptions, 0.5x..3x sensitivity and per-phase 600 s stops.
+- No excluded 100k supplementary A projection is presented as a measurement or used for a growth claim.
+- Historical source JSON/MD and all data/results remain unchanged.
+- Reason for the scope decision: full supplementary 100k instrumentation would dominate an estimated 8-30 h without changing conclusions.
+- The earlier 8-32 h full-plan figure is superseded for this scoped session; it was also a planning estimate.
+- Session order stays data prep; B3r all parts; old comparators post_attack; A last.
+- Actual stops/skip-after-stop may reduce completed work; no missing time is imputed.
+
+RESULT: PASS (scope-filtered planning only; 436 A workers +732 unchanged B workers =1168; no engine executed)

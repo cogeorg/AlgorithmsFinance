@@ -1,0 +1,173 @@
+{
+  "schema_version": 2,
+  "purpose": "Integrity and interpretation metadata for retained raw benchmark evidence; not an analytical summary.",
+  "evidence_priority": {
+    "main_primary_timing": "warmed_primary",
+    "supplementary_primary_timing": "cold_primary",
+    "reason": "Warmed primary applies the instructor-required warm-up; cold primary is retained as separate cold-process evidence."
+  },
+  "artifacts": {
+    "pilot": {
+      "path": "07_results/pilot/pilot_runs.jsonl",
+      "role": "resource-estimation pilot only; excluded from final statistics",
+      "bytes": 17726,
+      "sha256": "c731a54589b63e441f0451fe17eaaf93275de765865632a3e07971953ed100f1",
+      "record_count": 16,
+      "status_counts": {"completed": 14, "timed_out": 2},
+      "recorded_phase": "pilot",
+      "recorded_protocol_version": null
+    },
+    "cold_primary": {
+      "path": "07_results/raw/timing.jsonl",
+      "role": "supplementary cold-process primary timing evidence; no explicit matching-engine warm-up",
+      "bytes": 1155659,
+      "sha256": "fa6366bae35d7876cccd7abba2357d2d0d10c045d966c72f0cd2a21c2db7fa7f",
+      "record_count": 450,
+      "status_counts": {"completed": 390, "timed_out": 12, "skipped_after_timeout": 48},
+      "configuration_count": 90,
+      "workload_count": 45,
+      "recorded_phase": "final",
+      "recorded_measurement_mode": "primary_timing",
+      "recorded_protocol_version": "final-primary-v2",
+      "charged_controller_wall_seconds": 1765.189204200171,
+      "source_fingerprints": {
+        "baseline_implementation_sha256": "afa06981e3b1d79b8c10903bd6f8d0cc9d648373b7fc9b20e8e14f431a5770fc",
+        "optimized_implementation_sha256": "06e5ebb794e11852f4b6b6c49df54134a2dd3d3e2e489a4ef269afc35aef9490",
+        "benchmark_harness_sha256": "484913af7e980803308968794bc9c7b4f1d722974fff12c98b818754b5448925",
+        "environment_fingerprint": "aab6f20672ff1af72c4f79ed2c2f31827f8d522aedae4e7b6239937659236853"
+      }
+    },
+    "stage4e": {
+      "role": "separate instrumented latency, memory, liquidation, concentration, and diagnostic evidence",
+      "recorded_phase": "stage4e",
+      "recorded_protocol_version": "stage4e-v1",
+      "record_count": 212,
+      "configuration_count": 52,
+      "status_counts": {"completed": 182, "timed_out": 6, "skipped_after_timeout": 24, "failed": 0},
+      "charged_controller_wall_seconds": 1304.143308589235,
+      "environment_fingerprint": "dec8eb13ed809973943a03f07a7fc5158e155c3d8aa22b035eda345aeaf0d2f7",
+      "benchmark_harness_sha256": "99e2bdd9f1096a84c79c2572cbd51a49d144035a70d42df4554d506b410eedf3",
+      "mode_artifacts": [
+        {"path": "07_results/stage4e/latency_runs.jsonl", "measurement_mode": "latency", "bytes": 223047, "sha256": "826f28dbf294d6c46092ce1c593350a32410b33915dfbd4721a774ae939e88bd", "record_count": 50, "status_counts": {"completed": 50}},
+        {"path": "07_results/stage4e/memory.jsonl", "measurement_mode": "memory", "bytes": 18746, "sha256": "0292aedef063eb540c1635957fd1317873c247f094168644a0c4e21358b870ce", "record_count": 4, "status_counts": {"completed": 4}},
+        {"path": "07_results/stage4e/liquidation.jsonl", "measurement_mode": "liquidation", "bytes": 105845, "sha256": "f533c30b5649e9b737c2aa4c96882c61793a8e1680f6c9398d14a0dde9fb6983", "record_count": 30, "status_counts": {"completed": 30}},
+        {"path": "07_results/stage4e/concentration.jsonl", "measurement_mode": "concentration", "bytes": 375160, "sha256": "ce448548c66dce84cb98337064c32f9275e31f16fa71f1c02191181aa0f5a585", "record_count": 120, "status_counts": {"completed": 90, "timed_out": 6, "skipped_after_timeout": 24}},
+        {"path": "07_results/stage4e/diagnostics.jsonl", "measurement_mode": "diagnostics", "bytes": 30410, "sha256": "71780ec459bac00730505d797bb3fd31dc33d955e954b7622ffe624149d8a0e4", "record_count": 8, "status_counts": {"completed": 8}}
+      ],
+      "latency_raw": {
+        "protocol_version": "stage4e-v1",
+        "artifact_count": 50,
+        "total_observations": 500000,
+        "total_bytes": 2048747,
+        "file_fields": ["bytes", "sha256", "observations"],
+        "files": {
+          "07_results/stage4e/latency_raw/buildup_baseline_rep1.csv.gz": [49633, "15d37945b7d6890cff77a413febd36bc2fb472e8a300e5a6ed2d4df4cfe1b999", 10000],
+          "07_results/stage4e/latency_raw/buildup_baseline_rep2.csv.gz": [51210, "1fc6b9d59378956dfee9604354839ad7281cd10b261f670216dd2f7207e38033", 10000],
+          "07_results/stage4e/latency_raw/buildup_baseline_rep3.csv.gz": [50739, "3b3fc509dfae19e7dea5d80e513d33084864190765b9ecdebe0308afcf17ab61", 10000],
+          "07_results/stage4e/latency_raw/buildup_baseline_rep4.csv.gz": [50614, "61ce608ec0d402a87110d80b0e3fb285f3dcd4b3e2af62390e1f615c26f21e07", 10000],
+          "07_results/stage4e/latency_raw/buildup_baseline_rep5.csv.gz": [50813, "8f476631200a7e6ea99b081e8d2534033b51c6cba69018035118371e760480c1", 10000],
+          "07_results/stage4e/latency_raw/buildup_optimized_rep1.csv.gz": [35580, "4bdd67becf0f3ea0085a50e4eca5d3e2fa9a29131e5b71870457c05aa0a4b6bf", 10000],
+          "07_results/stage4e/latency_raw/buildup_optimized_rep2.csv.gz": [34980, "074ff53abb7cfec7ac67bbfe8a0d3be6a1c077f45dd336d7f479b53660d33793", 10000],
+          "07_results/stage4e/latency_raw/buildup_optimized_rep3.csv.gz": [35967, "a67a8372a5359f19d4740e11ae8affe7ef74308342a0509b972a4696a4629d81", 10000],
+          "07_results/stage4e/latency_raw/buildup_optimized_rep4.csv.gz": [35623, "a19b36682d793dec5294605bebd242d2f3a4e15e4b170108ae298db16e4c0626", 10000],
+          "07_results/stage4e/latency_raw/buildup_optimized_rep5.csv.gz": [35997, "edd986e1826cbdcbba33a8918a13428f879abe3a4e8f8eac4ce26acdf818d664", 10000],
+          "07_results/stage4e/latency_raw/crowded_baseline_rep1.csv.gz": [50242, "f3b9aedb037c32efbb78471f3e79a9c297294ab087a04c972efb202331398459", 10000],
+          "07_results/stage4e/latency_raw/crowded_baseline_rep2.csv.gz": [50550, "005f1c378e6c82399a87f732b8158a5364923b3d047728569d41a85f960395ca", 10000],
+          "07_results/stage4e/latency_raw/crowded_baseline_rep3.csv.gz": [50698, "0b8d011339dfd2d80e417478b4232262a7dd9be96a1eee1f191474ecc27c439e", 10000],
+          "07_results/stage4e/latency_raw/crowded_baseline_rep4.csv.gz": [50809, "9c9db35c7580387bd8260dff8d310a9894fcefbf7a79c758cf2ad297d41d2bf7", 10000],
+          "07_results/stage4e/latency_raw/crowded_baseline_rep5.csv.gz": [50885, "c41aa77e7c04feb26c806c95227f24f9a2b132f305fbd8c32e0035bc9f09f9f9", 10000],
+          "07_results/stage4e/latency_raw/crowded_optimized_rep1.csv.gz": [36120, "4458f73deed6c0b7ae6b0631ac130f1bb4d7fe0216dd30b7a36eaf714632716d", 10000],
+          "07_results/stage4e/latency_raw/crowded_optimized_rep2.csv.gz": [33533, "d655377c0312e01ac7ed00a83668a392fde79286281f767badfbcc56a969527a", 10000],
+          "07_results/stage4e/latency_raw/crowded_optimized_rep3.csv.gz": [35228, "a64fbd6bc513bc381a17110a54cd0d954ec380465e882fce871e901b3c692240", 10000],
+          "07_results/stage4e/latency_raw/crowded_optimized_rep4.csv.gz": [35321, "618ca7f75b7bdce1af8718e7cc3b57d45b769b80ea18bbf454a3d8bffedd2889", 10000],
+          "07_results/stage4e/latency_raw/crowded_optimized_rep5.csv.gz": [35147, "8920adb5bdad9950b0cf75f6f48fb93a003782edd627dc152fc70a2bbd99676b", 10000],
+          "07_results/stage4e/latency_raw/mixed_baseline_rep1.csv.gz": [46539, "c3b51b0be909d103cfd70dea17d9837e2e8494517fcc906b6c7ffbc51f3b7570", 10000],
+          "07_results/stage4e/latency_raw/mixed_baseline_rep2.csv.gz": [46828, "01091030406cc0da84861a0ecfe234683307b8dad2fba7e3f99baa7633110b7d", 10000],
+          "07_results/stage4e/latency_raw/mixed_baseline_rep3.csv.gz": [47361, "a1c47bc236068a37dcc89eed7b9596e0f9efc5e2dd32074a6939dc6e9b33161e", 10000],
+          "07_results/stage4e/latency_raw/mixed_baseline_rep4.csv.gz": [47508, "c62f288d8e873b341ad8f91f7a66d1e5523523ca29050de58ff88572e550a0f3", 10000],
+          "07_results/stage4e/latency_raw/mixed_baseline_rep5.csv.gz": [47147, "6dad58f8c3bb13ec69e18c7e7514cda32300dfd73fff5c2df642dfd1107db0a5", 10000],
+          "07_results/stage4e/latency_raw/mixed_optimized_rep1.csv.gz": [40197, "0f2b2279a7bd94f6e21c29eb107be5b3f5737aa224e793f955cbbf543634002b", 10000],
+          "07_results/stage4e/latency_raw/mixed_optimized_rep2.csv.gz": [40811, "31ad7ea4ced6f1c730009f9cb9e980d189a53ce58a54fb986bbdf960339d8f22", 10000],
+          "07_results/stage4e/latency_raw/mixed_optimized_rep3.csv.gz": [38896, "2d12de081f0f486952140815b24f5cec59c9fb1fd6a832c8e0f38b80909e06f1", 10000],
+          "07_results/stage4e/latency_raw/mixed_optimized_rep4.csv.gz": [38101, "fa9eeaba7f08269cb769f89e3a134007b1a81337c274fd5d62fa5b051c89df92", 10000],
+          "07_results/stage4e/latency_raw/mixed_optimized_rep5.csv.gz": [38867, "b9f951f8a103232de4faffc46350999c7d55e2e2e1f3823d19dc474b5fb1c0ab", 10000],
+          "07_results/stage4e/latency_raw/sweep_baseline_rep1.csv.gz": [50330, "a175f84f14d45102be82a5b66c19f5f30a23949e55825ddbd21128c6184080b2", 10000],
+          "07_results/stage4e/latency_raw/sweep_baseline_rep2.csv.gz": [50116, "049507775e71f6a3a46d96c5085fdacfcc5e008ecbdf16571e12117ea4c0b6f2", 10000],
+          "07_results/stage4e/latency_raw/sweep_baseline_rep3.csv.gz": [50860, "835b5c8f328ca8100f2034a21ff02ffd95707e17cd0004c6f04724a48a7b5445", 10000],
+          "07_results/stage4e/latency_raw/sweep_baseline_rep4.csv.gz": [50538, "195c3d68b87bbd8a339fbef4f71167ef0285cbbf2e614306d02b72c859e5b509", 10000],
+          "07_results/stage4e/latency_raw/sweep_baseline_rep5.csv.gz": [50206, "9599455134e3a5b2a11ca8ea8aed781bd801a846e892b2dc5551a7fb7aad2776", 10000],
+          "07_results/stage4e/latency_raw/sweep_optimized_rep1.csv.gz": [37038, "f7c39a9009c2145757e35aa5cbadc26f432dbc77650ce74f197bafdd8d357619", 10000],
+          "07_results/stage4e/latency_raw/sweep_optimized_rep2.csv.gz": [35577, "04a6eb927b309e1ed6247e503a3c7c11743607744bf68853b6a4f4766ba14714", 10000],
+          "07_results/stage4e/latency_raw/sweep_optimized_rep3.csv.gz": [35606, "f2e24cba05f1d1de8f596e60d2dab1e6f0520a79487d7a1fc6e57ef7160a29b5", 10000],
+          "07_results/stage4e/latency_raw/sweep_optimized_rep4.csv.gz": [35866, "ddef7f5957da0f4580d2b65b782a98845d4b4dc9c6227832c1d965e7d62e4f24", 10000],
+          "07_results/stage4e/latency_raw/sweep_optimized_rep5.csv.gz": [36360, "2fc2dc12e778e4082a6cffe881497ecba3f6e11f8338f506845bb745691f691a", 10000],
+          "07_results/stage4e/latency_raw/cancel_churn_baseline_rep1.csv.gz": [32128, "77ebc4c812a62cf6bc638de71b2d267868b58b93d6c4c2e5449c5c239043843a", 10000],
+          "07_results/stage4e/latency_raw/cancel_churn_baseline_rep2.csv.gz": [32469, "3f306fa546a149f64ae7092b615395a895ee4ba9403db1a4a0ea08c88757a964", 10000],
+          "07_results/stage4e/latency_raw/cancel_churn_baseline_rep3.csv.gz": [32181, "6b3069684c3c4ba0fbe63017498c8628c8c796fa94d0935fb2f78c63116a41c6", 10000],
+          "07_results/stage4e/latency_raw/cancel_churn_baseline_rep4.csv.gz": [32535, "b39cb274aebf3dad9aff6f7247ec31d5195b5f3fcb57d84ed860b1e207ce9346", 10000],
+          "07_results/stage4e/latency_raw/cancel_churn_baseline_rep5.csv.gz": [31691, "e028529a172a947f553bf59f88e76ac6af6730ec497b3944a8b1d313a76193d9", 10000],
+          "07_results/stage4e/latency_raw/cancel_churn_optimized_rep1.csv.gz": [33012, "ff12136a66e7afc857c3c1d467f11ae80808384fefdbe3b87057af8604b863d4", 10000],
+          "07_results/stage4e/latency_raw/cancel_churn_optimized_rep2.csv.gz": [32288, "6815d7365579090e18f8f182a019115f5669a592dac789deda32fe11de957765", 10000],
+          "07_results/stage4e/latency_raw/cancel_churn_optimized_rep3.csv.gz": [31554, "7a04923a28bbfd4cb2b384bede0c711572d5f0d36909b923dbbb8a5b0967ba10", 10000],
+          "07_results/stage4e/latency_raw/cancel_churn_optimized_rep4.csv.gz": [33488, "e49a8c705f6e377f191bb3320b79538cd06774c15c3392f2fbfd7c0b95965b57", 10000],
+          "07_results/stage4e/latency_raw/cancel_churn_optimized_rep5.csv.gz": [32960, "ddfa39457ea2cd0d5a6dc037b86ce80575ad97c0f35cb8ecefa935a2966ef8fc", 10000]
+        }
+      }
+    },
+    "warmed_primary": {
+      "path": "07_results/stage4e/warmed_primary.jsonl",
+      "role": "main instructor-compliant primary timing evidence with disposable-engine warm-up and fresh measured state",
+      "bytes": 1367400,
+      "sha256": "7777cdea1b4c9cb9d798fd5e8fc1e7da97b8c31fdd7ac7776463c74c4bf27660",
+      "record_count": 450,
+      "status_counts": {"completed": 392, "timed_out": 12, "skipped_after_timeout": 46, "failed": 0},
+      "configuration_count": 90,
+      "workload_count": 45,
+      "recorded_phase": "warmed_primary",
+      "recorded_measurement_mode": "warmed_primary_timing",
+      "recorded_protocol_version": "warmed-primary-v1",
+      "charged_controller_wall_seconds": 1997.3183167995885,
+      "warmup": {
+        "path": "02_data/generated/mixed_1000_seed42.jsonl.gz",
+        "event_count": 1000,
+        "sha256": "8c3455dc8370f2e006eda834f5bfeb47abdb7dc3766775cf12cdc8444f974d9d",
+        "policy": "same-process disposable same-class engine; process all warm-up events; release; gc.collect; construct fresh empty measured engine"
+      },
+      "source_fingerprints": {
+        "baseline_implementation_sha256": "afa06981e3b1d79b8c10903bd6f8d0cc9d648373b7fc9b20e8e14f431a5770fc",
+        "optimized_implementation_sha256": "06e5ebb794e11852f4b6b6c49df54134a2dd3d3e2e489a4ef269afc35aef9490",
+        "benchmark_harness_sha256": "ce1fd6b5ccf517e35e783e176dc7c2cfce333f41423d85c73d1cd0d66a6fe493",
+        "environment_fingerprint": "aab6f20672ff1af72c4f79ed2c2f31827f8d522aedae4e7b6239937659236853"
+      }
+    },
+    "parsing": {
+      "path": "07_results/parsing/parsing_runs.jsonl",
+      "role": "standalone warmed-cache filesystem/gzip-decompression and JSONL-decoding evidence; no engine import or replay",
+      "bytes": 410030,
+      "sha256": "7973ab2822f2707edbc1e7ddcb68bdcddd3529e0e5c24239be952361fb68d146",
+      "record_count": 225,
+      "status_counts": {"completed": 225},
+      "configuration_count": 45,
+      "workload_count": 45,
+      "recorded_phase": "parsing",
+      "recorded_measurement_mode": "reading_decompression_and_json_decode",
+      "recorded_protocol_version": "parsing-only-v1",
+      "actual_session_wall_seconds": 17.92946740053594,
+      "budget_seconds": 300.0,
+      "script_sha256": "8ad3130aa7f3947d3d86c4cf6d7d507c2ea0a9d6567f0c157355689cc017d384",
+      "environment_fingerprint": "dec8eb13ed809973943a03f07a7fc5158e155c3d8aa22b035eda345aeaf0d2f7",
+      "measurement_boundary": {
+        "read_decompress_seconds": "filesystem read + gzip validation/decompression + decompressed-byte allocation",
+        "json_decode_seconds": "preloaded decompressed bytes; JSONL split + json.loads + mapping check",
+        "combined_seconds": "sum of the two separately timed phases",
+        "os_file_cache_flushed": false,
+        "engine_import_or_replay": false
+      }
+    }
+  },
+  "timeout_censoring": {
+    "rule": "The first processing timeout is terminal for the same engine/workload configuration; later planned repetitions are recorded as skipped_after_timeout.",
+    "engine_seconds_for_timed_out_or_skipped_records": null,
+    "interpretation": "Censored configurations must not receive ordinary five-repeat medians, throughput, or speedup values, and timeout thresholds must not substitute for missing durations."
+  }
+}

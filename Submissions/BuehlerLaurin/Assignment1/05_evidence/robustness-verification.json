@@ -1,0 +1,55 @@
+{
+  "base_commit": "47c00484ae46eeb8077150fbb84d5ab650822c99",
+  "engine_logic_changed": false,
+  "existing_expectations_changed": false,
+  "results_changed": false,
+  "new_measurements": false,
+  "sources": {
+    "01_code/lob/replay.py": "2fa61615ba3fa45e0dfba5982c6b93f5ef3d3922fdf30dc2f3a4914ca2abe7c0",
+    "02_tests/test_submission_robustness.py": "f22540754585a2ba946f6459d4f21805c3f01724c30e1510550725b224b8257e",
+    "04_dashboard/app.py": "ee8b7537fa72d7d70b37b70bc5cba938ad00b8d61eb35d3519634b82adba804e",
+    "04_dashboard/saved_results.py": "58188348f6190a32fc81b229b8c0ace4bec5b32b82346ef9a310af4e6cee2bea",
+    "04_dashboard/views.py": "ef79b36449e0374fd500fcee16b3151c1c867dfa0f92a9d17e1242fb6d472fa1"
+  },
+  "suites": [
+    {
+      "suite": "standard",
+      "path": "05_evidence/robustness-all-tests.xml",
+      "tests": 1027,
+      "sha256": "b443901acc2344d751eb0ac364254feea10b0b34b158cba763d6dc37eec5559a",
+      "per_file": {
+        "test_b3r": 6,
+        "test_b_internal": 32,
+        "test_bench_pipeline": 30,
+        "test_contract": 448,
+        "test_dashboard": 16,
+        "test_fast_assessment": 10,
+        "test_fast_equivalence": 115,
+        "TestFastDifferential": 1,
+        "test_final_version": 60,
+        "test_mutants": 25,
+        "test_own_datasets": 4,
+        "test_post_attack_pipeline": 13,
+        "test_replay": 21,
+        "test_replay_regressions": 28,
+        "TestDifferential_B": 1,
+        "TestDifferential_B1": 1,
+        "TestDifferential_B2": 1,
+        "TestDifferential_B3": 1,
+        "TestDifferential_B3r": 1,
+        "TestDifferential_B3r_fast": 1,
+        "test_submission_robustness": 28,
+        "test_validation": 184
+      }
+    },
+    {
+      "suite": "attack",
+      "path": "05_evidence/robustness-attack-tests.xml",
+      "tests": 1995,
+      "sha256": "7403caf3dd7a7931cae43076698f730d38040357d16345c35d243def00799e12",
+      "per_file": {
+        "test_attack": 1995
+      }
+    }
+  ]
+}

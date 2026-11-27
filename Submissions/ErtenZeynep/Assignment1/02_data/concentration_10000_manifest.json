@@ -1,0 +1,162 @@
+{
+  "elapsed_seconds": 1.2880664998665452,
+  "formula": {
+    "bucket": "min(3, (depth * 4) // 1000)",
+    "changed_field": "price_ticks",
+    "depth": "BUY: 6000000-price_ticks; SELL: price_ticks-6000100",
+    "price": "BUY: 6000000-bucket; SELL: 6000100+bucket"
+  },
+  "generator_path": "02_data/generate_concentration_pairs.py",
+  "generator_sha256": "c4b1e5b8e2009c9b3a974c51af4a5f6868d5013d68e28dfc8dd15675e8a61f8c",
+  "pairs": [
+    {
+      "deterministic_second_pass_sha256": "a29c3240118951391b89092893948ba283caa9dba63626de925766e5701d9f5e",
+      "metadata_path": "02_data/generated/buildup_10000_seed42_levels4_paired.jsonl.gz.metadata.json",
+      "metadata_sha256": "46212a6998034634da75cb47f6807191867374d2875f0427db1df66a3f3c7e2a",
+      "output_bytes": 111854,
+      "output_path": "02_data/generated/buildup_10000_seed42_levels4_paired.jsonl.gz",
+      "output_sha256": "a29c3240118951391b89092893948ba283caa9dba63626de925766e5701d9f5e",
+      "pair_verification": {
+        "events": 10000,
+        "formula_mismatches": 0,
+        "monotonic": true,
+        "non_price_mismatches": 0,
+        "paired_quantities": {
+          "BUY": 255929000000,
+          "SELL": 255273000000
+        },
+        "quantity_totals_equal": true,
+        "source_quantities": {
+          "BUY": 255929000000,
+          "SELL": 255273000000
+        },
+        "uncrossed": true,
+        "unique_paired_prices": {
+          "BUY": [
+            6000000,
+            5999999,
+            5999998,
+            5999997
+          ],
+          "SELL": [
+            6000100,
+            6000101,
+            6000102,
+            6000103
+          ]
+        }
+      },
+      "seed": 42,
+      "source_path": "02_data/supplied/data/buildup_10000.jsonl.gz",
+      "source_sha256": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5",
+      "transform_summary": {
+        "changed_price_events": 9989,
+        "events": 10000
+      }
+    },
+    {
+      "deterministic_second_pass_sha256": "08dea51b872a43c8e2278c0055a2bec73192ce9696f0b6a03c06bfad86e68fd0",
+      "metadata_path": "02_data/generated/buildup_10000_seed43_levels4_paired.jsonl.gz.metadata.json",
+      "metadata_sha256": "9d136dba7fbe576b4ec5d2d8fc7ec160273e530492b19deddc72534bf72a0d71",
+      "output_bytes": 111838,
+      "output_path": "02_data/generated/buildup_10000_seed43_levels4_paired.jsonl.gz",
+      "output_sha256": "08dea51b872a43c8e2278c0055a2bec73192ce9696f0b6a03c06bfad86e68fd0",
+      "pair_verification": {
+        "events": 10000,
+        "formula_mismatches": 0,
+        "monotonic": true,
+        "non_price_mismatches": 0,
+        "paired_quantities": {
+          "BUY": 253093000000,
+          "SELL": 253851000000
+        },
+        "quantity_totals_equal": true,
+        "source_quantities": {
+          "BUY": 253093000000,
+          "SELL": 253851000000
+        },
+        "uncrossed": true,
+        "unique_paired_prices": {
+          "BUY": [
+            6000000,
+            5999999,
+            5999998,
+            5999997
+          ],
+          "SELL": [
+            6000100,
+            6000101,
+            6000102,
+            6000103
+          ]
+        }
+      },
+      "seed": 43,
+      "source_path": "02_data/generated/buildup_10000_seed43.jsonl.gz",
+      "source_sha256": "25f25e183271ebce17807d04bd426059e34573e29d657e2dccd60e5698818739",
+      "transform_summary": {
+        "changed_price_events": 9989,
+        "events": 10000
+      }
+    },
+    {
+      "deterministic_second_pass_sha256": "317724ffc8ed5fae0708d0665e22087746c3d9f5026e6884cb5363d649a1b852",
+      "metadata_path": "02_data/generated/buildup_10000_seed44_levels4_paired.jsonl.gz.metadata.json",
+      "metadata_sha256": "7eda7922af854ecd67972e4a19b9dd1ad3e8feb063cf5e104c8d19575810a9f5",
+      "output_bytes": 111724,
+      "output_path": "02_data/generated/buildup_10000_seed44_levels4_paired.jsonl.gz",
+      "output_sha256": "317724ffc8ed5fae0708d0665e22087746c3d9f5026e6884cb5363d649a1b852",
+      "pair_verification": {
+        "events": 10000,
+        "formula_mismatches": 0,
+        "monotonic": true,
+        "non_price_mismatches": 0,
+        "paired_quantities": {
+          "BUY": 256482000000,
+          "SELL": 246377000000
+        },
+        "quantity_totals_equal": true,
+        "source_quantities": {
+          "BUY": 256482000000,
+          "SELL": 246377000000
+        },
+        "uncrossed": true,
+        "unique_paired_prices": {
+          "BUY": [
+            6000000,
+            5999999,
+            5999998,
+            5999997
+          ],
+          "SELL": [
+            6000100,
+            6000101,
+            6000102,
+            6000103
+          ]
+        }
+      },
+      "seed": 44,
+      "source_path": "02_data/generated/buildup_10000_seed44.jsonl.gz",
+      "source_sha256": "a2392b86e396c33634f98a4592a7e390bf9cdb9c2d35d51dbbeb3c2286589d01",
+      "transform_summary": {
+        "changed_price_events": 9988,
+        "events": 10000
+      }
+    }
+  ],
+  "portable_commands": {
+    "execute": "{python} 02_data/generate_concentration_pairs.py --execute",
+    "verify": "{python} 02_data/generate_concentration_pairs.py --verify-only"
+  },
+  "purpose": "Stage 4E 10,000-event four-level price-only concentration pairs",
+  "python": "3.13.17",
+  "resource_limits": {
+    "maximum_finalized_bytes": 5242880,
+    "maximum_seconds": 30.0
+  },
+  "schema_version": 1,
+  "status": "complete",
+  "total_finalized_bytes": 338578,
+  "working_directory": "project_root"
+}

@@ -1,0 +1,99 @@
+{
+  "run_id": "20261120T135856.334525Z",
+  "finished_at_utc": "2026-11-20T13:59:12.594154+00:00",
+  "python": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "python_implementation": "CPython",
+  "executable": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+  "platform": "macOS-15.7.3-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "processor": "arm",
+  "logical_cpu_count": 8,
+  "git_head": "09efedda0e067b50ce3af070a3691c644eb3e9b9",
+  "code_version": "Source SHA-256 hashes identify measured files, which may be uncommitted.",
+  "source_sha256": {
+    "search.py": "a05cc804ed3073a9e57bc691b554f6acce2c50171ca8ba494bfb6cff7796293a",
+    "search_original.py": "bc5a7d920693d750e700bb88ebf7502535c674cefbd861befa91366189305d38",
+    "benchmark.py": "ae9323c339e8a95d647a9bec576549cae7be354098cf29b058d7f95efbb379b6",
+    "generate_data.py": "e1cdf6ef1d30942e0fd6170de1ce4c718b0fb4eec3642d12a8fa7bde22a980a6",
+    "validate_data.py": "66224a5371b891503502927bb92b1c4e20f599ba23204cc0cccc553f4f9c6e18",
+    "test_search.py": "b68a3fae0fa39d9ec730ccfc918a98b96c49e4c6ed69158260e406892fcdb2d0",
+    "run_tests.py": "614d845da5972bcf659abfc15a250b32cdd2c2e4003c2e9a324b02bdd372c8c1",
+    "snapshots/search.py": "1947e29e3b6844fa711cc5c0b37c76ca03cebdcd649d5e62be0a0bb63d9f6ac9",
+    "snapshots/search_original.py": "296464f9cc03e58a5857ccf42978221a278225fe7a467a699ff92cd0ff2e0488"
+  },
+  "input_file": "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/data/inputs.json",
+  "input_sha256": "bc7d87b23526ba6e81e5d5f3d92b2407b8c61ec91dc29ff8962a7e1028315592",
+  "generator": {
+    "base_seed": 42,
+    "include_empty_queries": true,
+    "python_version": "3.13.0",
+    "random_engine": "random.Random (Mersenne Twister)",
+    "array_seed_rule": "base_seed + n",
+    "query_seed_rule": "base_seed + n*1000 + q*10 + scenario_index",
+    "scenario_order": [
+      "all_present",
+      "all_absent",
+      "mixed"
+    ],
+    "duplicate_policy": "Array IDs sampled uniformly with replacement from range(n//2); queries may repeat.",
+    "hit_sampling": "Sample existing array positions uniformly with replacement.",
+    "miss_sampling": "Sample negative integers uniformly with replacement from [-n, -1].",
+    "mixed_policy": "Exactly half hits for q=100; q=1 skipped as infeasible.",
+    "empty_hit_rate": "null: no queries, so a hit rate is undefined"
+  },
+  "skipped_cases": [
+    {
+      "case_id": "n1000_q1_mixed",
+      "reason": "One query cannot contain both a hit and a miss."
+    },
+    {
+      "case_id": "n10000_q1_mixed",
+      "reason": "One query cannot contain both a hit and a miss."
+    },
+    {
+      "case_id": "n100000_q1_mixed",
+      "reason": "One query cannot contain both a hit and a miss."
+    }
+  ],
+  "timing": {
+    "timer": "time.perf_counter",
+    "clock_info": {
+      "implementation": "mach_absolute_time()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 4.166666666666666e-08
+    },
+    "unit": "seconds per complete query batch, not per query",
+    "repeats": 5,
+    "summary": "median",
+    "warmup": "One untimed call plus calibration for each metric/configuration",
+    "min_group_seconds": 0.003,
+    "max_calls": 8192,
+    "order": "Configurations shuffled with seed 2026; five consecutive repeats per metric",
+    "preparation": "prepare_*: includes sorting/set creation and revised early checks",
+    "query_batch": "query_*: fresh preparation outside each repeat, reused read-only within group",
+    "total": "Independent public-function calls; fresh preparation for every call",
+    "aggregation": "Metrics measured independently; medians need not add exactly",
+    "overhead": "Loop/call overhead and previous-result release included; final result alive after timing",
+    "short_calls": "Grouped up to max_calls; very short calls remain overhead-sensitive",
+    "excluded": "Data generation/loading/copying, validation, printing, memory tracing, profiling, dashboard",
+    "gc_enabled": true
+  },
+  "memory": {
+    "tool": "tracemalloc",
+    "unit": "bytes",
+    "runs_per_configuration": 1,
+    "scope": "Fresh separate trace around preparation/query; state and output alive at reading",
+    "input_included": false,
+    "prepared_structure_included": true,
+    "output_included": true,
+    "limits": "Python traced allocations, not RSS, all native allocations, or auxiliary space alone"
+  },
+  "counts": {
+    "cases": 18,
+    "configurations": 108,
+    "raw_timing_rows": 1620,
+    "summary_rows": 324,
+    "memory_rows": 108
+  }
+}

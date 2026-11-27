@@ -1,0 +1,141 @@
+{
+  "artifact_directory": "results\\benchmarks\\smoke_phase_protocol_v1\\artifacts\\workload_mixed_M25_seed42__revised__attempt_001\\state_peaks",
+  "attempt": 1,
+  "case": {
+    "case_id": "workload_mixed_M25_seed42",
+    "event_count": 25,
+    "experiment": "workload_replay",
+    "generator_settings": {
+      "events": 25,
+      "generator": "generate_orders.py",
+      "levels": 1000,
+      "scenario": "mixed",
+      "seed": 42,
+      "source": "generated"
+    },
+    "input_checksums": {
+      "mixed_M25_seed42_levels1000.jsonl.gz": "b4ad409f7833c2f67aa8c88ffffa81e9910989dda9c3453f3281858ce0aae934"
+    },
+    "input_paths": [
+      "results\\benchmarks\\smoke_phase_protocol_v1\\inputs\\mixed_M25_seed42_levels1000.jsonl.gz"
+    ],
+    "profile": true,
+    "scenario": "mixed",
+    "seed": 42
+  },
+  "config_id": "workload_mixed_M25_seed42__revised",
+  "duration_until_stop_seconds": 0.6473015001975,
+  "failure": null,
+  "measurement_definition_hash": "cf5f59d11f56d6e0a6d6bb808c78f3db2cb33d801544ad46d0418db632020d55",
+  "measurement_definition_id": "event-result-state-peaks-v1",
+  "memory_limit_mib": 2048,
+  "peak_working_set_bytes_observed": 25616384,
+  "phase_budget_seconds": 60.0,
+  "phase_job": "state_peaks",
+  "phase_settings": {
+    "count_source": "accepted-event-results",
+    "event_count": 25,
+    "generator_settings": {
+      "events": 25,
+      "generator": "generate_orders.py",
+      "levels": 1000,
+      "scenario": "mixed",
+      "seed": 42,
+      "source": "generated"
+    },
+    "input_checksums": {
+      "mixed_M25_seed42_levels1000.jsonl.gz": "b4ad409f7833c2f67aa8c88ffffa81e9910989dda9c3453f3281858ce0aae934"
+    }
+  },
+  "progress_file": "results\\benchmarks\\smoke_phase_protocol_v1\\records\\workload_mixed_M25_seed42__revised__attempt_001__phase_state_peaks.progress.jsonl",
+  "record_file": "results\\benchmarks\\smoke_phase_protocol_v1\\records\\workload_mixed_M25_seed42__revised__attempt_001__phase_state_peaks.json",
+  "record_type": "phase_attempt",
+  "rows": [
+    {
+      "active_order_peak": 11,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 25,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "final_active_orders": 11,
+      "final_occupied_price_levels": 11,
+      "generator_settings": {
+        "events": 25,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "mixed",
+        "seed": 42,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "mixed_M25_seed42_levels1000.jsonl.gz": "b4ad409f7833c2f67aa8c88ffffa81e9910989dda9c3453f3281858ce0aae934"
+      },
+      "measurement_definition_hash": "cf5f59d11f56d6e0a6d6bb808c78f3db2cb33d801544ad46d0418db632020d55",
+      "measurement_definition_id": "event-result-state-peaks-v1",
+      "measurement_phase": "state_peaks",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": 11,
+      "phase": "state_peaks",
+      "phase_budget_seconds": 60.0,
+      "phase_settings": {
+        "count_source": "accepted-event-results",
+        "event_count": 25,
+        "generator_settings": {
+          "events": 25,
+          "generator": "generate_orders.py",
+          "levels": 1000,
+          "scenario": "mixed",
+          "seed": 42,
+          "source": "generated"
+        },
+        "input_checksums": {
+          "mixed_M25_seed42_levels1000.jsonl.gz": "b4ad409f7833c2f67aa8c88ffffa81e9910989dda9c3453f3281858ce0aae934"
+        }
+      },
+      "repeat": 1,
+      "requested_sell_qty_units": null,
+      "scenario": "mixed",
+      "seed": 42,
+      "state_peak_counts_are": "logical event-boundary counts",
+      "state_peak_method": "event_result_shadow_bookkeeping",
+      "status": "completed",
+      "time_limit_seconds": 60.0,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    }
+  ],
+  "status": "completed",
+  "time_limit_seconds": 60.0,
+  "version": "revised"
+}

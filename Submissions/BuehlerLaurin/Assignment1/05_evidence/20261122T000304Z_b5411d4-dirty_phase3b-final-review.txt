@@ -1,0 +1,78 @@
+label: phase3b-final-review
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -c from pathlib import Path
+import ast
+import hashlib
+import json
+import subprocess
+import sys
+import pytest
+import hypothesis
+root=Path.cwd().parents[2]
+scope='Submissions/BuehlerLaurin/Assignment1/'
+def git(*args):
+    return subprocess.run(['git',*args],cwd=root,capture_output=True,text=True,encoding='utf-8',check=True).stdout
+tracked=git('diff','--name-only','HEAD').splitlines()
+status=git('status','--porcelain=v1','--untracked-files=all').splitlines()
+assert all(p.startswith(scope) for p in tracked),tracked
+assert all(line[3:].startswith(scope) for line in status),status
+assert all((root/p).exists() for p in tracked),'No deletions performed'
+protected=['01_code/lob/book_a.py','01_code/lob/book_b.py','01_code/lob/validation.py','01_code/datagen','01_code/bench/harness.py','02_tests/contract.py','02_tests/test_contract.py','02_tests/test_validation.py','02_tests/test_own_datasets.py','02_tests/test_mutants.py','06_data/own','requirements.txt','00_docs/TRACE.md']
+assert git('diff','HEAD','--',*(scope+p for p in protected))==''
+assert git('diff','HEAD','--',scope+'06_data/supplied')==''
+check=subprocess.run(['git','diff','--check'],cwd=root,capture_output=True,text=True,encoding='utf-8')
+assert check.returncode==0,check.stdout
+# Every original stateful rule/assertion helper is unchanged except constructor wiring.
+path='02_tests/test_stateful.py'
+old=ast.parse(git('show','HEAD:'+scope+path))
+new=ast.parse(Path(path).read_text(encoding='utf-8'))
+def methods(tree):
+    cls=next(n for n in tree.body if isinstance(n,ast.ClassDef) and n.name=='DifferentialMachine')
+    return {n.name:ast.dump(n,include_attributes=False) for n in cls.body if isinstance(n,ast.FunctionDef) and n.name!='__init__'}
+assert methods(old)==methods(new)
+# Replay parametrization leaves all existing assertions intact.
+path='02_tests/test_replay.py'
+def assertions(source):
+    return [ast.dump(n,include_attributes=False) for n in ast.walk(ast.parse(source)) if isinstance(n,ast.Assert)]
+assert assertions(git('show','HEAD:'+scope+path))==assertions(Path(path).read_text(encoding='utf-8'))
+sha=hashlib.sha256(Path('06_data/supplied/generate_orders.py').read_bytes()).hexdigest()
+assert sha=='ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d'
+assert Path('06_data/supplied/generate_orders.py').stat().st_size==4019
+run=Path('03_results/runs/20261121T234816Z_b5411d4-dirty_phase3b_sanity_not_benchmark')
+report=json.loads((run/'sanity.json').read_text(encoding='utf-8'))
+assert report['versions']==['A','B1','B2','B3'] and report['repeats']==1 and report['warmups']==0 and report['counters'] is False
+assert len(report['rows'])==5 and sum(r['events'] for r in report['rows'])==50000
+assert all(r['result_differences']==0 and r['final_book_equal'] for r in report['rows'])
+full=Path('05_evidence/20261121T234932Z_b5411d4-dirty_phase3b-all-tests-green.txt').read_text(encoding='utf-8')
+assert (run/'tests.txt').read_text(encoding='utf-8')==full
+assert hypothesis.__version__=='6.155.7'
+print('Python:',sys.version.split()[0],'; pytest:',pytest.__version__,'; hypothesis:',hypothesis.__version__)
+print('All writes within Assignment1; no deletions or installs; git diff --check clean (LF/CRLF notices may remain).')
+print('A/B1/shared validator, contract assertions, all original expectations/data, generators and dependency pins unchanged.')
+print('Original stateful methods/rules unchanged except factory wiring; original replay assertions unchanged (AST-checked).')
+print('Supplied generator: 4019 bytes; manifest-verified sha256',sha)
+print('Sanity contains A/B1/B2/B3, five 10k files, zero result differences and equal final books; attached tests match full green evidence.')
+print('Generated source/test/docs changes reviewed for unrelated behavior, names, comments and content; no traces of the logged injection or new embedded instructions found.')
+for path in ('01_code/lob/book_b2.py','01_code/lob/book_b3.py','02_tests/test_b_internal.py','02_tests/test_stateful.py','01_code/bench/sanity.py'):
+    print('sha256',path,hashlib.sha256(Path(path).read_bytes()).hexdigest())
+print('RESULT: PASS (Phase 3b scope, preserved assertions/oracles/data, generator, pins and reviewed artifacts)')
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: b5411d4ab22a662820bea6f55510b23381d017f8
+dirty: True
+python: 3.13.15
+utc: 20261122T000304Z
+exit_code: 0
+duration_s: 1.29
+------------------------------------------------------------
+Python: 3.13.15 ; pytest: 9.2.0 ; hypothesis: 6.155.7
+All writes within Assignment1; no deletions or installs; git diff --check clean (LF/CRLF notices may remain).
+A/B1/shared validator, contract assertions, all original expectations/data, generators and dependency pins unchanged.
+Original stateful methods/rules unchanged except factory wiring; original replay assertions unchanged (AST-checked).
+Supplied generator: 4019 bytes; manifest-verified sha256 ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d
+Sanity contains A/B1/B2/B3, five 10k files, zero result differences and equal final books; attached tests match full green evidence.
+Generated source/test/docs changes reviewed for unrelated behavior, names, comments and content; no traces of the logged injection or new embedded instructions found.
+sha256 01_code/lob/book_b2.py 9d7abdfbc5f7727fc657154696a046981fb12f0aa61d85db35de868215b523f5
+sha256 01_code/lob/book_b3.py 1e36cab1452bb4a6c5d1d4591e923a27470d73a5324580e3be3f7ea0d8d7392f
+sha256 02_tests/test_b_internal.py b888fa4d6c6a9229f27b4d30f30aff98b9ee84a09d9d03bb6abc1c8ea427374a
+sha256 02_tests/test_stateful.py c3d335514147f78f72180de1222e055f4af6f4fdcaaa55f307d406583084a401
+sha256 01_code/bench/sanity.py 7399a3f3a0674a1dfc3a7b65cbe39f43a9acc90435c11e13340f9aeb1aa07ad1
+RESULT: PASS (Phase 3b scope, preserved assertions/oracles/data, generator, pins and reviewed artifacts)

@@ -1,0 +1,4 @@
+version,scenario,seed,book_events,bid_orders,bid_price_levels,bid_qty_units,sale_pct,requested_qty_units,fills,makers_touched,price_levels_visited,sold_qty_units,unfilled_qty_units,status,build_seconds,sell_seconds
+a,sweep,42,8000,4062,981,205760000000,10,20576000000,420,420,94,20576000000,0,filled,4.832266,0.377072
+a,sweep,42,8000,4062,981,205760000000,100,205760000000,4062,4062,981,205760000000,0,filled,5.450665,2.389538
+a,sweep,42,8000,4062,981,205760000000,200,411520000000,4062,4062,981,205760000000,205760000000,partial,5.886395,2.544739

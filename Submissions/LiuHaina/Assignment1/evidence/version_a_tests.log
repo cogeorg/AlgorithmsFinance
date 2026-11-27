@@ -1,0 +1,32 @@
+test_buy_crosses_then_rests_at_own_price (tests.test_orderbook.TestVersionA.test_buy_crosses_then_rests_at_own_price) ... ok
+test_buy_limit_stops_residual_fifo (tests.test_orderbook.TestVersionA.test_buy_limit_stops_residual_fifo) ... ok
+test_cancel_active_repeated_unknown (tests.test_orderbook.TestVersionA.test_cancel_active_repeated_unknown) ... ok
+test_cancel_fully_filled (tests.test_orderbook.TestVersionA.test_cancel_fully_filled) ... ok
+test_cancel_partially_filled (tests.test_orderbook.TestVersionA.test_cancel_partially_filled) ... ok
+test_crossing_buy_best_ask_resting_price (tests.test_orderbook.TestVersionA.test_crossing_buy_best_ask_resting_price) ... ok
+test_crossing_sell_fully_filled (tests.test_orderbook.TestVersionA.test_crossing_sell_fully_filled) ... ok
+test_crossing_sell_residual (tests.test_orderbook.TestVersionA.test_crossing_sell_residual) ... ok
+test_duplicate_live_id_rejected_before_matching (tests.test_orderbook.TestVersionA.test_duplicate_live_id_rejected_before_matching) ... ok
+test_empty_book (tests.test_orderbook.TestVersionA.test_empty_book) ... ok
+test_fifo_not_identifier (tests.test_orderbook.TestVersionA.test_fifo_not_identifier) ... ok
+test_generated_fifo_independent_prefix_expectation (tests.test_orderbook.TestVersionA.test_generated_fifo_independent_prefix_expectation) ... ok
+test_invalid_inputs_leave_state_and_sequence (tests.test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) ... ok
+test_long_queue_cancel_middle (tests.test_orderbook.TestVersionA.test_long_queue_cancel_middle) ... ok
+test_multiple_prices_best_bid_first (tests.test_orderbook.TestVersionA.test_multiple_prices_best_bid_first) ... ok
+test_nonincreasing_sequence (tests.test_orderbook.TestVersionA.test_nonincreasing_sequence) ... ok
+test_official_example_and_proceeds (tests.test_orderbook.TestVersionA.test_official_example_and_proceeds) ... ok
+test_one_order (tests.test_orderbook.TestVersionA.test_one_order) ... ok
+test_partial_fill_keeps_priority (tests.test_orderbook.TestVersionA.test_partial_fill_keeps_priority) ... ok
+test_public_methods (tests.test_orderbook.TestVersionA.test_public_methods) ... ok
+test_same_price_asks_fifo (tests.test_orderbook.TestVersionA.test_same_price_asks_fifo) ... ok
+test_sell_limit_stops (tests.test_orderbook.TestVersionA.test_sell_limit_stops) ... ok
+test_smaller_equal_oversized_sale (tests.test_orderbook.TestVersionA.test_smaller_equal_oversized_sale) ... ok
+test_crossing_limit_stops_at_ineligible_depth (tests.test_version_a_validation.TestVersionAValidation.test_crossing_limit_stops_at_ineligible_depth) ... ok
+test_current_event_fills_only_and_unknown_cancel_advances_sequence (tests.test_version_a_validation.TestVersionAValidation.test_current_event_fills_only_and_unknown_cancel_advances_sequence) ... ok
+test_inspection_and_input_do_not_expose_live_state (tests.test_version_a_validation.TestVersionAValidation.test_inspection_and_input_do_not_expose_live_state) ... ok
+test_malformed_events_are_rejected_atomically (tests.test_version_a_validation.TestVersionAValidation.test_malformed_events_are_rejected_atomically) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.067s
+
+OK

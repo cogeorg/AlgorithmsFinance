@@ -1,0 +1,51 @@
+label: phase3b-internal-mutation-probes
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -c import sys
+from collections import deque
+from heapq import heappush
+sys.path[:0]=['01_code','02_tests']
+import test_b_internal as checks
+from lob import OrderBookB
+from lob.book_b3 import OrderBookB3
+class TooEarlyCompaction(OrderBookB):
+    def _compact(self, level):
+        if level.stale >= level.live and level.stale > 32:
+            level.queue=deque(r for r in level.queue if r.alive)
+            level.stale=0
+class DuplicateHeapKey(OrderBookB3):
+    def _rest(self, event, remaining):
+        side=self.bids if event['side']=='BUY' else self.asks
+        key=side.sign*event['price_ticks']
+        duplicate=event['price_ticks'] not in side.levels and key in side.in_heap
+        super()._rest(event,remaining)
+        if duplicate:
+            heappush(side.heap,key)
+checks.test_compaction_equal_live_does_not_rebuild(OrderBookB)
+try:
+    checks.test_compaction_equal_live_does_not_rebuild(TooEarlyCompaction)
+except AssertionError:
+    print('KILLED: >=live compaction fault by equality-boundary check (AssertionError)')
+else:
+    raise AssertionError('compaction fault survived')
+original=checks.METHODS[('lob','B3')]
+checks.test_b3_reactivated_price_is_not_pushed_twice('BUY')
+checks.METHODS[('lob','B3')]=DuplicateHeapKey
+try:
+    checks.test_b3_reactivated_price_is_not_pushed_twice('BUY')
+except AssertionError:
+    print('KILLED: duplicate heap price fault by reactivation check (AssertionError)')
+else:
+    raise AssertionError('heap fault survived')
+finally:
+    checks.METHODS[('lob','B3')]=original
+print('RESULT: PASS (two targeted in-memory faults detected; source implementations unchanged)')
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: b5411d4ab22a662820bea6f55510b23381d017f8
+dirty: True
+python: 3.13.15
+utc: 20261121T234742Z
+exit_code: 0
+duration_s: 0.40
+------------------------------------------------------------
+KILLED: >=live compaction fault by equality-boundary check (AssertionError)
+KILLED: duplicate heap price fault by reactivation check (AssertionError)
+RESULT: PASS (two targeted in-memory faults detected; source implementations unchanged)

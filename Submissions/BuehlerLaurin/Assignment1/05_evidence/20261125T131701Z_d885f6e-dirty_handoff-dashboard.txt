@@ -1,0 +1,12 @@
+label: handoff-dashboard
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py -q --tb=short --basetemp=scratch/pytest-handoff-dashboard --junitxml=05_evidence/handoff-dashboard-tests.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: d885f6e96da935ea4f73f24ed6da9aea012f8bbf
+dirty: True
+python: 3.13.15
+utc: 20261125T131701Z
+exit_code: 0
+duration_s: 27.64
+------------------------------------------------------------
+......................                                                   [100%]
+22 passed in 26.24s

@@ -1,0 +1,31 @@
+label: phase3-internals-red
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe run.py lob.check_b
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: efee8d4ba8d3425e51a31c5a8e361cd8986fe168
+dirty: True
+python: 3.13.15
+utc: 20261121T224231Z
+exit_code: 1
+duration_s: 0.15
+------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\run.py", line 22, in <module>
+    runpy.run_module(module, run_name="__main__", alter_sys=True)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 231, in run_module
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\01_code\lob\check_b.py", line 148, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\01_code\lob\check_b.py", line 140, in main
+    own_cases()
+    ~~~~~~~~~^^
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\01_code\lob\check_b.py", line 73, in own_cases
+    engines = books()
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\01_code\lob\check_b.py", line 42, in books
+    assert plain.snapshot() == []
+           ~~~~~~~~~~~~~~^^
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\01_code\lob\book_b.py", line 26, in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+NotImplementedError: Version B: Phase 3

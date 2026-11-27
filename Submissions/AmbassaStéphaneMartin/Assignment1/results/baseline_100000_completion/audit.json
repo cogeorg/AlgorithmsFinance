@@ -1,0 +1,1260 @@
+{
+  "status": "audited",
+  "preservation": {
+    "files": 1170,
+    "tree_sha256": "7d98fad5d66bad4bc5e070580765bd26d328c39f1856ded778e7f7966093e793",
+    "source_sha256": {
+      "benchmark.py": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4",
+      "dispatcher.py": "4c4652e95d8112fcdc574e98f41ea494326aa70b5a148b9b892e468784fffce3",
+      "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+      "order_book.py": "dcbdb2c0e7173e8116fa1c51b287a93cf422c140f74f49f2b5c49a5b025c39a6",
+      "test_benchmark.py": "400f876d52961283ce58227e6fdbfa319a406142ae20666cead47f76e821fdac",
+      "test_lazy_cancellation.py": "f9d7028adb6a4fdbb33599a398755c561f1ec7ba6b10e6a558b6feca4658b423",
+      "test_order_book.py": "6f143b1616e6c21225b7de12fb4f8853e70a0aff32b6045ca3c3ef2501110595",
+      "test_price_heaps.py": "90498d2ac8d25fb2d669bcf671b954dc42267b866bf0ee89c2ff747614974c3a"
+    }
+  },
+  "total_command_wall_seconds": 2955.8595707999193,
+  "added_commands": 15,
+  "added_phase_jobs": [
+    {
+      "seed": 42,
+      "scenario": "buildup",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 2.924071500019636,
+      "reason": null,
+      "source": "results\\replay_100000_seed42_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "buildup",
+      "phase": "timing",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.03422889998183,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "buildup",
+      "phase": "latency",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.03039670002181,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "buildup",
+      "phase": "memory",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.040039799991064,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "buildup",
+      "phase": "diagnostics",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.03661529999226,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "crowded",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 2.826139200013131,
+      "reason": null,
+      "source": "results\\replay_100000_seed42_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "crowded",
+      "phase": "timing",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.038986500003375,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "crowded",
+      "phase": "latency",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.03747439995641,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "crowded",
+      "phase": "memory",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.036362100043334,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "crowded",
+      "phase": "diagnostics",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.03987320000306,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "mixed",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 3.048904500028584,
+      "reason": null,
+      "source": "results\\replay_100000_seed42_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "mixed",
+      "phase": "timing",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.029651699995156,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "mixed",
+      "phase": "latency",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.02519899996696,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "mixed",
+      "phase": "memory",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.036123600031715,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "mixed",
+      "phase": "diagnostics",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.02831949997926,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "sweep",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 2.647060099989176,
+      "reason": null,
+      "source": "results\\replay_100000_seed42_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "sweep",
+      "phase": "timing",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.034436899994034,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "sweep",
+      "phase": "latency",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.04045089997817,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "sweep",
+      "phase": "memory",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.03611500002444,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "sweep",
+      "phase": "diagnostics",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.03632319997996,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed42_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "cancel_churn",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 2.8576480000047013,
+      "reason": null,
+      "source": "results\\replay_100000_seed42_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "cancel_churn",
+      "phase": "timing",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 1.8005667999968864,
+      "reason": null,
+      "source": "results\\replay_100000_seed42_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "cancel_churn",
+      "phase": "latency",
+      "state": "completed",
+      "completed": 1,
+      "expected": 1,
+      "elapsed_wall_seconds": 1.093640899984166,
+      "reason": null,
+      "source": "results\\replay_100000_seed42_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "cancel_churn",
+      "phase": "memory",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 4.171306700038258,
+      "reason": null,
+      "source": "results\\replay_100000_seed42_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 42,
+      "scenario": "cancel_churn",
+      "phase": "diagnostics",
+      "state": "completed",
+      "completed": 1,
+      "expected": 1,
+      "elapsed_wall_seconds": 1.3922961999778636,
+      "reason": null,
+      "source": "results\\replay_100000_seed42_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "buildup",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 3.8769425999489613,
+      "reason": null,
+      "source": "results\\replay_100000_seed43_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "buildup",
+      "phase": "timing",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.04041290003806,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "buildup",
+      "phase": "latency",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.03376159997424,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "buildup",
+      "phase": "memory",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.03307700000005,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "buildup",
+      "phase": "diagnostics",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.0430223000003,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "crowded",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 3.5136491000303067,
+      "reason": null,
+      "source": "results\\replay_100000_seed43_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "crowded",
+      "phase": "timing",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.033609099977184,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "crowded",
+      "phase": "latency",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.038521600014064,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "crowded",
+      "phase": "memory",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.030757200031076,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "crowded",
+      "phase": "diagnostics",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.02800869999919,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "mixed",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 3.271591199969407,
+      "reason": null,
+      "source": "results\\replay_100000_seed43_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "mixed",
+      "phase": "timing",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.02121380000608,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "mixed",
+      "phase": "latency",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.044004300027154,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "mixed",
+      "phase": "memory",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.039024400000926,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "mixed",
+      "phase": "diagnostics",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.024802699976135,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "sweep",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 3.211485299980268,
+      "reason": null,
+      "source": "results\\replay_100000_seed43_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "sweep",
+      "phase": "timing",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.03650480002398,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "sweep",
+      "phase": "latency",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.03656989999581,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "sweep",
+      "phase": "memory",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.07882369996514,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "sweep",
+      "phase": "diagnostics",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.03151100000832,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed43_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "cancel_churn",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 3.4679317999980412,
+      "reason": null,
+      "source": "results\\replay_100000_seed43_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "cancel_churn",
+      "phase": "timing",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 1.98914479999803,
+      "reason": null,
+      "source": "results\\replay_100000_seed43_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "cancel_churn",
+      "phase": "latency",
+      "state": "completed",
+      "completed": 1,
+      "expected": 1,
+      "elapsed_wall_seconds": 1.1058777999714948,
+      "reason": null,
+      "source": "results\\replay_100000_seed43_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "cancel_churn",
+      "phase": "memory",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 4.582346900017001,
+      "reason": null,
+      "source": "results\\replay_100000_seed43_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 43,
+      "scenario": "cancel_churn",
+      "phase": "diagnostics",
+      "state": "completed",
+      "completed": 1,
+      "expected": 1,
+      "elapsed_wall_seconds": 1.3314319999772124,
+      "reason": null,
+      "source": "results\\replay_100000_seed43_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "buildup",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 3.5213256999850273,
+      "reason": null,
+      "source": "results\\replay_100000_seed44_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "buildup",
+      "phase": "timing",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.03943459998118,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "buildup",
+      "phase": "latency",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.03759480000008,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "buildup",
+      "phase": "memory",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.0425860999967,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "buildup",
+      "phase": "diagnostics",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.037910900020506,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_buildup_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "crowded",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 3.249901300005149,
+      "reason": null,
+      "source": "results\\replay_100000_seed44_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "crowded",
+      "phase": "timing",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.03171090001706,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "crowded",
+      "phase": "latency",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.03417599998647,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "crowded",
+      "phase": "memory",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.03368599998066,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "crowded",
+      "phase": "diagnostics",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.03097479999997,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_crowded_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "mixed",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 3.208737899956759,
+      "reason": null,
+      "source": "results\\replay_100000_seed44_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "mixed",
+      "phase": "timing",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.03439530002652,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "mixed",
+      "phase": "latency",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.03833200002555,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "mixed",
+      "phase": "memory",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.03663239994785,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "mixed",
+      "phase": "diagnostics",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.028652900015004,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_mixed_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "sweep",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 3.1890245000249706,
+      "reason": null,
+      "source": "results\\replay_100000_seed44_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "sweep",
+      "phase": "timing",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.034472799976356,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "sweep",
+      "phase": "latency",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.044907700037584,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "sweep",
+      "phase": "memory",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 5,
+      "elapsed_wall_seconds": 60.034426699974574,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "sweep",
+      "phase": "diagnostics",
+      "state": "stopped",
+      "completed": 0,
+      "expected": 1,
+      "elapsed_wall_seconds": 60.038344600005075,
+      "reason": "Worker wall limit reached (60.000 seconds)",
+      "source": "results\\replay_100000_seed44_baseline_sweep_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "cancel_churn",
+      "phase": "io",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 3.105971999990288,
+      "reason": null,
+      "source": "results\\replay_100000_seed44_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "cancel_churn",
+      "phase": "timing",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 1.8516277000308037,
+      "reason": null,
+      "source": "results\\replay_100000_seed44_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "cancel_churn",
+      "phase": "latency",
+      "state": "completed",
+      "completed": 1,
+      "expected": 1,
+      "elapsed_wall_seconds": 1.066915599978529,
+      "reason": null,
+      "source": "results\\replay_100000_seed44_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "cancel_churn",
+      "phase": "memory",
+      "state": "completed",
+      "completed": 5,
+      "expected": 5,
+      "elapsed_wall_seconds": 4.137634799990337,
+      "reason": null,
+      "source": "results\\replay_100000_seed44_baseline_cancel_churn_batch1\\manifest.json"
+    },
+    {
+      "seed": 44,
+      "scenario": "cancel_churn",
+      "phase": "diagnostics",
+      "state": "completed",
+      "completed": 1,
+      "expected": 1,
+      "elapsed_wall_seconds": 1.3494034000323154,
+      "reason": null,
+      "source": "results\\replay_100000_seed44_baseline_cancel_churn_batch1\\manifest.json"
+    }
+  ],
+  "phase_job_counts": {
+    "completed": 27,
+    "stopped": 48,
+    "unattempted": 0,
+    "failed": 0
+  },
+  "coverage": [
+    {
+      "seed": 42,
+      "scenario": "buildup",
+      "version": "baseline",
+      "state": "stopped",
+      "phase_states": {
+        "io": "completed",
+        "timing": "stopped",
+        "latency": "stopped",
+        "memory": "stopped",
+        "diagnostics": "stopped"
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "buildup",
+      "version": "revised",
+      "state": "completed",
+      "phase_states": {
+        "io": "completed",
+        "timing": "completed",
+        "latency": "completed",
+        "memory": "completed",
+        "diagnostics": "completed"
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "crowded",
+      "version": "baseline",
+      "state": "stopped",
+      "phase_states": {
+        "io": "completed",
+        "timing": "stopped",
+        "latency": "stopped",
+        "memory": "stopped",
+        "diagnostics": "stopped"
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "crowded",
+      "version": "revised",
+      "state": "completed",
+      "phase_states": {
+        "io": "completed",
+        "timing": "completed",
+        "latency": "completed",
+        "memory": "completed",
+        "diagnostics": "completed"
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "mixed",
+      "version": "baseline",
+      "state": "stopped",
+      "phase_states": {
+        "io": "completed",
+        "timing": "stopped",
+        "latency": "stopped",
+        "memory": "stopped",
+        "diagnostics": "stopped"
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "mixed",
+      "version": "revised",
+      "state": "completed",
+      "phase_states": {
+        "io": "completed",
+        "timing": "completed",
+        "latency": "completed",
+        "memory": "completed",
+        "diagnostics": "completed"
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "sweep",
+      "version": "baseline",
+      "state": "stopped",
+      "phase_states": {
+        "io": "completed",
+        "timing": "stopped",
+        "latency": "stopped",
+        "memory": "stopped",
+        "diagnostics": "stopped"
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "sweep",
+      "version": "revised",
+      "state": "completed",
+      "phase_states": {
+        "io": "completed",
+        "timing": "completed",
+        "latency": "completed",
+        "memory": "completed",
+        "diagnostics": "completed"
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "cancel_churn",
+      "version": "baseline",
+      "state": "completed",
+      "phase_states": {
+        "io": "completed",
+        "timing": "completed",
+        "latency": "completed",
+        "memory": "completed",
+        "diagnostics": "completed"
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "cancel_churn",
+      "version": "revised",
+      "state": "completed",
+      "phase_states": {
+        "io": "completed",
+        "timing": "completed",
+        "latency": "completed",
+        "memory": "completed",
+        "diagnostics": "completed"
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "buildup",
+      "version": "baseline",
+      "state": "stopped",
+      "phase_states": {
+        "io": "completed",
+        "timing": "stopped",
+        "latency": "stopped",
+        "memory": "stopped",
+        "diagnostics": "stopped"
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "buildup",
+      "version": "revised",
+      "state": "missing",
+      "phase_states": {
+        "io": "missing",
+        "timing": "missing",
+        "latency": "missing",
+        "memory": "missing",
+        "diagnostics": "missing"
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "crowded",
+      "version": "baseline",
+      "state": "stopped",
+      "phase_states": {
+        "io": "completed",
+        "timing": "stopped",
+        "latency": "stopped",
+        "memory": "stopped",
+        "diagnostics": "stopped"
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "crowded",
+      "version": "revised",
+      "state": "missing",
+      "phase_states": {
+        "io": "missing",
+        "timing": "missing",
+        "latency": "missing",
+        "memory": "missing",
+        "diagnostics": "missing"
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "mixed",
+      "version": "baseline",
+      "state": "stopped",
+      "phase_states": {
+        "io": "completed",
+        "timing": "stopped",
+        "latency": "stopped",
+        "memory": "stopped",
+        "diagnostics": "stopped"
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "mixed",
+      "version": "revised",
+      "state": "missing",
+      "phase_states": {
+        "io": "missing",
+        "timing": "missing",
+        "latency": "missing",
+        "memory": "missing",
+        "diagnostics": "missing"
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "sweep",
+      "version": "baseline",
+      "state": "stopped",
+      "phase_states": {
+        "io": "completed",
+        "timing": "stopped",
+        "latency": "stopped",
+        "memory": "stopped",
+        "diagnostics": "stopped"
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "sweep",
+      "version": "revised",
+      "state": "missing",
+      "phase_states": {
+        "io": "missing",
+        "timing": "missing",
+        "latency": "missing",
+        "memory": "missing",
+        "diagnostics": "missing"
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "cancel_churn",
+      "version": "baseline",
+      "state": "completed",
+      "phase_states": {
+        "io": "completed",
+        "timing": "completed",
+        "latency": "completed",
+        "memory": "completed",
+        "diagnostics": "completed"
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "cancel_churn",
+      "version": "revised",
+      "state": "missing",
+      "phase_states": {
+        "io": "missing",
+        "timing": "missing",
+        "latency": "missing",
+        "memory": "missing",
+        "diagnostics": "missing"
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "buildup",
+      "version": "baseline",
+      "state": "stopped",
+      "phase_states": {
+        "io": "completed",
+        "timing": "stopped",
+        "latency": "stopped",
+        "memory": "stopped",
+        "diagnostics": "stopped"
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "buildup",
+      "version": "revised",
+      "state": "missing",
+      "phase_states": {
+        "io": "missing",
+        "timing": "missing",
+        "latency": "missing",
+        "memory": "missing",
+        "diagnostics": "missing"
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "crowded",
+      "version": "baseline",
+      "state": "stopped",
+      "phase_states": {
+        "io": "completed",
+        "timing": "stopped",
+        "latency": "stopped",
+        "memory": "stopped",
+        "diagnostics": "stopped"
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "crowded",
+      "version": "revised",
+      "state": "missing",
+      "phase_states": {
+        "io": "missing",
+        "timing": "missing",
+        "latency": "missing",
+        "memory": "missing",
+        "diagnostics": "missing"
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "mixed",
+      "version": "baseline",
+      "state": "stopped",
+      "phase_states": {
+        "io": "completed",
+        "timing": "stopped",
+        "latency": "stopped",
+        "memory": "stopped",
+        "diagnostics": "stopped"
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "mixed",
+      "version": "revised",
+      "state": "missing",
+      "phase_states": {
+        "io": "missing",
+        "timing": "missing",
+        "latency": "missing",
+        "memory": "missing",
+        "diagnostics": "missing"
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "sweep",
+      "version": "baseline",
+      "state": "stopped",
+      "phase_states": {
+        "io": "completed",
+        "timing": "stopped",
+        "latency": "stopped",
+        "memory": "stopped",
+        "diagnostics": "stopped"
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "sweep",
+      "version": "revised",
+      "state": "missing",
+      "phase_states": {
+        "io": "missing",
+        "timing": "missing",
+        "latency": "missing",
+        "memory": "missing",
+        "diagnostics": "missing"
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "cancel_churn",
+      "version": "baseline",
+      "state": "completed",
+      "phase_states": {
+        "io": "completed",
+        "timing": "completed",
+        "latency": "completed",
+        "memory": "completed",
+        "diagnostics": "completed"
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "cancel_churn",
+      "version": "revised",
+      "state": "missing",
+      "phase_states": {
+        "io": "missing",
+        "timing": "missing",
+        "latency": "missing",
+        "memory": "missing",
+        "diagnostics": "missing"
+      }
+    }
+  ],
+  "comparable_completed_pairs": [
+    {
+      "seed": 42,
+      "scenario": "cancel_churn",
+      "speedup": 0.9615301197362398,
+      "status": "comparable",
+      "reason": "same inputs, code, Python, machine, limits and protocol; diagnostics match"
+    }
+  ],
+  "invalid_records": [],
+  "limitations": [
+    "A worker cap covers loading, warm-up and repetitions, not one replay.",
+    "Stopped or missing records never contribute a median or speedup.",
+    "Recorded machine/Python/protocol fingerprints match for reused comparisons; background load was not controlled.",
+    "Revised seeds 43 and 44 are outside this Baseline-only scope and remain missing."
+  ]
+}

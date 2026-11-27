@@ -1,0 +1,22 @@
+label: phase3b-generator-byte-policy
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -c from pathlib import Path
+import hashlib
+attrs=Path('.gitattributes').read_text(encoding='utf-8')
+assert '06_data/supplied/generate_orders.py -text' in attrs.splitlines()
+source=Path('06_data/supplied/generate_orders.py').read_bytes()
+assert len(source)==4019
+assert hashlib.sha256(source).hexdigest()=='ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d'
+print('Exercise-local .gitattributes disables text/EOL conversion only for the supplied generator.')
+print('Manifest sha256 and byte size still match; clean-clone validation remains a later phase.')
+print('RESULT: PASS (supplied generator byte-preservation rule and current manifest hash)')
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: b5411d4ab22a662820bea6f55510b23381d017f8
+dirty: True
+python: 3.13.15
+utc: 20261122T000414Z
+exit_code: 0
+duration_s: 0.11
+------------------------------------------------------------
+Exercise-local .gitattributes disables text/EOL conversion only for the supplied generator.
+Manifest sha256 and byte size still match; clean-clone validation remains a later phase.
+RESULT: PASS (supplied generator byte-preservation rule and current manifest hash)

@@ -1,0 +1,362 @@
+stage: 07_memory_before_implementation
+started_utc: 2026-11-23T18:07:01.333523+00:00
+finished_utc: 2026-11-23T18:07:02.988487+00:00
+elapsed_seconds: 1.655087
+exit_code: 1
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: a8fc71c5a68f4557da02186cc1cdd243ccf9a4f3
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider tests/test_14_memory_measurement.py
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 8 items
+
+tests\test_14_memory_measurement.py FFFFFFFF                             [100%]
+
+================================== FAILURES ===================================
+_____ test_checkpoint_indices_include_start_end_and_ceiling_spaced_growth _____
+
+    def test_checkpoint_indices_include_start_end_and_ceiling_spaced_growth() -> None:
+>       assert measurement_checkpoint_indices(11, checkpoint_count=5) == (1, 3, 6, 9, 11)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_14_memory_measurement.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+event_count = 11, checkpoint_count = 5
+
+    def measurement_checkpoint_indices(
+        event_count: int, *, checkpoint_count: int = 10
+    ) -> tuple[int, ...]:
+        """Return deterministic replay positions for memory-growth samples."""
+    
+>       raise NotImplementedError("memory measurement is not implemented")
+E       NotImplementedError: memory measurement is not implemented
+
+src\limit_order_book\memory_measurement.py:22: NotImplementedError
+__ test_memory_replay_records_growth_and_explicit_boundaries[memory_state-0] __
+
+mode = 'memory_state', retained_output_count = 0
+
+    @pytest.mark.parametrize(
+        ("mode", "retained_output_count"),
+        [("memory_state", 0), ("memory_retained_output", 5)],
+    )
+    def test_memory_replay_records_growth_and_explicit_boundaries(
+        mode: str, retained_output_count: int
+    ) -> None:
+        tracer = FakeTracer([(10, 20), (30, 40), (50, 60)])
+    
+>       result = measure_memory_replay(
+            FakeBook,
+            tuple({"seq": sequence} for sequence in range(1, 6)),
+            mode=mode,
+            checkpoint_count=3,
+            trace_start=tracer.start,
+            trace_get=tracer.get_traced_memory,
+            trace_stop=tracer.stop,
+        )
+
+tests\test_14_memory_measurement.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+book_factory = <class 'test_14_memory_measurement.FakeBook'>
+events = ({'seq': 1}, {'seq': 2}, {'seq': 3}, {'seq': 4}, {'seq': 5})
+mode = 'memory_state', checkpoint_count = 3
+trace_start = <bound method FakeTracer.start of <test_14_memory_measurement.FakeTracer object at 0x000001E66F5AD6A0>>
+trace_get = <bound method FakeTracer.get_traced_memory of <test_14_memory_measurement.FakeTracer object at 0x000001E66F5AD6A0>>
+trace_stop = <bound method FakeTracer.stop of <test_14_memory_measurement.FakeTracer object at 0x000001E66F5AD6A0>>
+
+    def measure_memory_replay(
+        book_factory: BookFactory,
+        events: Sequence[Event],
+        *,
+        mode: str,
+        checkpoint_count: int = 10,
+        trace_start: TraceStart | None = None,
+        trace_get: TraceGet | None = None,
+        trace_stop: TraceStop | None = None,
+    ) -> dict[str, Any]:
+        """Measure one replay under an explicit memory inclusion mode."""
+    
+>       raise NotImplementedError("memory measurement is not implemented")
+E       NotImplementedError: memory measurement is not implemented
+
+src\limit_order_book\memory_measurement.py:37: NotImplementedError
+_ test_memory_replay_records_growth_and_explicit_boundaries[memory_retained_output-5] _
+
+mode = 'memory_retained_output', retained_output_count = 5
+
+    @pytest.mark.parametrize(
+        ("mode", "retained_output_count"),
+        [("memory_state", 0), ("memory_retained_output", 5)],
+    )
+    def test_memory_replay_records_growth_and_explicit_boundaries(
+        mode: str, retained_output_count: int
+    ) -> None:
+        tracer = FakeTracer([(10, 20), (30, 40), (50, 60)])
+    
+>       result = measure_memory_replay(
+            FakeBook,
+            tuple({"seq": sequence} for sequence in range(1, 6)),
+            mode=mode,
+            checkpoint_count=3,
+            trace_start=tracer.start,
+            trace_get=tracer.get_traced_memory,
+            trace_stop=tracer.stop,
+        )
+
+tests\test_14_memory_measurement.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+book_factory = <class 'test_14_memory_measurement.FakeBook'>
+events = ({'seq': 1}, {'seq': 2}, {'seq': 3}, {'seq': 4}, {'seq': 5})
+mode = 'memory_retained_output', checkpoint_count = 3
+trace_start = <bound method FakeTracer.start of <test_14_memory_measurement.FakeTracer object at 0x000001E66F5D6540>>
+trace_get = <bound method FakeTracer.get_traced_memory of <test_14_memory_measurement.FakeTracer object at 0x000001E66F5D6540>>
+trace_stop = <bound method FakeTracer.stop of <test_14_memory_measurement.FakeTracer object at 0x000001E66F5D6540>>
+
+    def measure_memory_replay(
+        book_factory: BookFactory,
+        events: Sequence[Event],
+        *,
+        mode: str,
+        checkpoint_count: int = 10,
+        trace_start: TraceStart | None = None,
+        trace_get: TraceGet | None = None,
+        trace_stop: TraceStop | None = None,
+    ) -> dict[str, Any]:
+        """Measure one replay under an explicit memory inclusion mode."""
+    
+>       raise NotImplementedError("memory measurement is not implemented")
+E       NotImplementedError: memory measurement is not implemented
+
+src\limit_order_book\memory_measurement.py:37: NotImplementedError
+__ test_memory_replay_rejects_invalid_configuration[events0-memory_state-1] ___
+
+events = [], mode = 'memory_state', checkpoint_count = 1
+
+    @pytest.mark.parametrize(
+        ("events", "mode", "checkpoint_count"),
+        [([], "memory_state", 1), ([{"seq": 1}], "unknown", 1), ([{"seq": 1}], "memory_state", 0)],
+    )
+    def test_memory_replay_rejects_invalid_configuration(
+        events: list[dict[str, object]], mode: str, checkpoint_count: int
+    ) -> None:
+        with pytest.raises(ValueError):
+>           measure_memory_replay(
+                FakeBook,
+                events,
+                mode=mode,
+                checkpoint_count=checkpoint_count,
+            )
+
+tests\test_14_memory_measurement.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+book_factory = <class 'test_14_memory_measurement.FakeBook'>, events = []
+mode = 'memory_state', checkpoint_count = 1, trace_start = None
+trace_get = None, trace_stop = None
+
+    def measure_memory_replay(
+        book_factory: BookFactory,
+        events: Sequence[Event],
+        *,
+        mode: str,
+        checkpoint_count: int = 10,
+        trace_start: TraceStart | None = None,
+        trace_get: TraceGet | None = None,
+        trace_stop: TraceStop | None = None,
+    ) -> dict[str, Any]:
+        """Measure one replay under an explicit memory inclusion mode."""
+    
+>       raise NotImplementedError("memory measurement is not implemented")
+E       NotImplementedError: memory measurement is not implemented
+
+src\limit_order_book\memory_measurement.py:37: NotImplementedError
+_____ test_memory_replay_rejects_invalid_configuration[events1-unknown-1] _____
+
+events = [{'seq': 1}], mode = 'unknown', checkpoint_count = 1
+
+    @pytest.mark.parametrize(
+        ("events", "mode", "checkpoint_count"),
+        [([], "memory_state", 1), ([{"seq": 1}], "unknown", 1), ([{"seq": 1}], "memory_state", 0)],
+    )
+    def test_memory_replay_rejects_invalid_configuration(
+        events: list[dict[str, object]], mode: str, checkpoint_count: int
+    ) -> None:
+        with pytest.raises(ValueError):
+>           measure_memory_replay(
+                FakeBook,
+                events,
+                mode=mode,
+                checkpoint_count=checkpoint_count,
+            )
+
+tests\test_14_memory_measurement.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+book_factory = <class 'test_14_memory_measurement.FakeBook'>
+events = [{'seq': 1}], mode = 'unknown', checkpoint_count = 1
+trace_start = None, trace_get = None, trace_stop = None
+
+    def measure_memory_replay(
+        book_factory: BookFactory,
+        events: Sequence[Event],
+        *,
+        mode: str,
+        checkpoint_count: int = 10,
+        trace_start: TraceStart | None = None,
+        trace_get: TraceGet | None = None,
+        trace_stop: TraceStop | None = None,
+    ) -> dict[str, Any]:
+        """Measure one replay under an explicit memory inclusion mode."""
+    
+>       raise NotImplementedError("memory measurement is not implemented")
+E       NotImplementedError: memory measurement is not implemented
+
+src\limit_order_book\memory_measurement.py:37: NotImplementedError
+__ test_memory_replay_rejects_invalid_configuration[events2-memory_state-0] ___
+
+events = [{'seq': 1}], mode = 'memory_state', checkpoint_count = 0
+
+    @pytest.mark.parametrize(
+        ("events", "mode", "checkpoint_count"),
+        [([], "memory_state", 1), ([{"seq": 1}], "unknown", 1), ([{"seq": 1}], "memory_state", 0)],
+    )
+    def test_memory_replay_rejects_invalid_configuration(
+        events: list[dict[str, object]], mode: str, checkpoint_count: int
+    ) -> None:
+        with pytest.raises(ValueError):
+>           measure_memory_replay(
+                FakeBook,
+                events,
+                mode=mode,
+                checkpoint_count=checkpoint_count,
+            )
+
+tests\test_14_memory_measurement.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+book_factory = <class 'test_14_memory_measurement.FakeBook'>
+events = [{'seq': 1}], mode = 'memory_state', checkpoint_count = 0
+trace_start = None, trace_get = None, trace_stop = None
+
+    def measure_memory_replay(
+        book_factory: BookFactory,
+        events: Sequence[Event],
+        *,
+        mode: str,
+        checkpoint_count: int = 10,
+        trace_start: TraceStart | None = None,
+        trace_get: TraceGet | None = None,
+        trace_stop: TraceStop | None = None,
+    ) -> dict[str, Any]:
+        """Measure one replay under an explicit memory inclusion mode."""
+    
+>       raise NotImplementedError("memory measurement is not implemented")
+E       NotImplementedError: memory measurement is not implemented
+
+src\limit_order_book\memory_measurement.py:37: NotImplementedError
+___________ test_memory_replay_stops_tracing_when_processing_fails ____________
+
+    def test_memory_replay_stops_tracing_when_processing_fails() -> None:
+        tracer = FakeTracer([])
+    
+        class FailingBook(FakeBook):
+            def process_event(self, event: dict[str, object]) -> dict[str, object]:
+                raise RuntimeError("deliberate failure")
+    
+>       with pytest.raises(RuntimeError, match="deliberate failure"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'deliberate failure'
+E         Actual message: 'memory measurement is not implemented'
+
+tests\test_14_memory_measurement.py:142: AssertionError
+_______ test_memory_cli_saves_state_mode_without_tracing_input_parsing ________
+
+tmp_path = WindowsPath('C:/Users/Acer/AppData/Local/Temp/pytest-of-Acer/pytest-17/test_memory_cli_saves_state_mo0')
+
+    def test_memory_cli_saves_state_mode_without_tracing_input_parsing(
+        tmp_path: Path,
+    ) -> None:
+        source = tmp_path / "events.jsonl"
+        source.write_text(
+            "\n".join(
+                [
+                    json.dumps(
+                        {
+                            "seq": 1,
+                            "event_id": "e1",
+                            "type": "CANCEL",
+                            "target_order_id": "x",
+                        }
+                    ),
+                    json.dumps(
+                        {
+                            "seq": 2,
+                            "event_id": "e2",
+                            "type": "CANCEL",
+                            "target_order_id": "y",
+                        }
+                    ),
+                ]
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        output = tmp_path / "memory.json"
+    
+        completed = subprocess.run(
+            [
+                sys.executable,
+                str(MEMORY_SCRIPT),
+                "--version",
+                "baseline",
+                "--mode",
+                "memory_state",
+                "--input",
+                str(source),
+                "--max-events",
+                "2",
+                "--checkpoints",
+                "2",
+                "--out",
+                str(output),
+            ],
+            cwd=PROJECT_ROOT,
+            env=benchmark_environment(),
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+    
+>       assert completed.returncode == 0, completed.stderr
+E       AssertionError: Traceback (most recent call last):
+E           File "C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1\scripts\05_measure_memory.py", line 4, in <module>
+E             from limit_order_book.memory_measurement import main
+E         ImportError: cannot import name 'main' from 'limit_order_book.memory_measurement' (C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1\src\limit_order_book\memory_measurement.py)
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\MüllerAlexandra\\.venv...rithms\\AlgorithmsFinance\\Submissions\\MüllerAlexandra\\Assignment1\\src\\limit_order_book\\memory_measurement.py)\n').returncode
+
+tests\test_14_memory_measurement.py:216: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_14_memory_measurement.py::test_checkpoint_indices_include_start_end_and_ceiling_spaced_growth
+FAILED tests/test_14_memory_measurement.py::test_memory_replay_records_growth_and_explicit_boundaries[memory_state-0]
+FAILED tests/test_14_memory_measurement.py::test_memory_replay_records_growth_and_explicit_boundaries[memory_retained_output-5]
+FAILED tests/test_14_memory_measurement.py::test_memory_replay_rejects_invalid_configuration[events0-memory_state-1]
+FAILED tests/test_14_memory_measurement.py::test_memory_replay_rejects_invalid_configuration[events1-unknown-1]
+FAILED tests/test_14_memory_measurement.py::test_memory_replay_rejects_invalid_configuration[events2-memory_state-0]
+FAILED tests/test_14_memory_measurement.py::test_memory_replay_stops_tracing_when_processing_fails
+FAILED tests/test_14_memory_measurement.py::test_memory_cli_saves_state_mode_without_tracing_input_parsing
+============================== 8 failed in 0.50s ==============================
+
+=== stderr ===

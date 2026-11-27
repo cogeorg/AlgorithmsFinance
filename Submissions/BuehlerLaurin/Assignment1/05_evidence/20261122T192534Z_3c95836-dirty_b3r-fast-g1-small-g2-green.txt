@@ -1,0 +1,77 @@
+label: b3r-fast-g1-small-g2-green
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest -q -s 02_tests/test_fast_equivalence.py -k exhaustive or hypothesis_arbitrary or all_attack_stream_families --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3c95836e66e797025518c6d66fc9733b5807ea85
+dirty: True
+python: 3.13.15
+utc: 20261122T192534Z
+exit_code: 0
+duration_s: 38.22
+------------------------------------------------------------
+G1 exhaustive validator comparisons: 1797952; callback traces identical
+..G2 amortized_rebuild, counted=False: 480 every-event comparisons
+.G2 amortized_rebuild, counted=True: 480 every-event comparisons
+.G2 compaction_thrash, counted=False: 225 every-event comparisons
+.G2 compaction_thrash, counted=True: 225 every-event comparisons
+.G2 dead_slot_rebuild, counted=False: 287 every-event comparisons
+.G2 dead_slot_rebuild, counted=True: 287 every-event comparisons
+.G2 dense_control, counted=False: 96 every-event comparisons
+.G2 dense_control, counted=True: 96 every-event comparisons
+.G2 drift_churn, counted=False: 193 every-event comparisons
+.G2 drift_churn, counted=True: 193 every-event comparisons
+.G2 far_end_cancel, counted=False: 192 every-event comparisons
+.G2 far_end_cancel, counted=True: 192 every-event comparisons
+.G2 far_end_flicker, counted=False: 288 every-event comparisons
+.G2 far_end_flicker, counted=True: 288 every-event comparisons
+.G2 far_end_insert, counted=False: 96 every-event comparisons
+.G2 far_end_insert, counted=True: 96 every-event comparisons
+.G2 flicker_set, counted=False: 193 every-event comparisons
+.G2 flicker_set, counted=True: 193 every-event comparisons
+.G2 hash_control, counted=False: 96 every-event comparisons
+.G2 hash_control, counted=True: 96 every-event comparisons
+.G2 hash_full, counted=False: 96 every-event comparisons
+.G2 hash_full, counted=True: 96 every-event comparisons
+.G2 hash_lowbits, counted=False: 96 every-event comparisons
+.G2 hash_lowbits, counted=True: 96 every-event comparisons
+.G2 hash_match, counted=False: 144 every-event comparisons
+.G2 hash_match, counted=True: 144 every-event comparisons
+.G2 improve_cancel_purge, counted=False: 194 every-event comparisons
+.G2 improve_cancel_purge, counted=True: 194 every-event comparisons
+.G2 lat_growing, counted=False: 192 every-event comparisons
+.G2 lat_growing, counted=True: 192 every-event comparisons
+.G2 lat_normal, counted=False: 192 every-event comparisons
+.G2 lat_normal, counted=True: 192 every-event comparisons
+.G2 lat_rolling, counted=False: 192 every-event comparisons
+.G2 lat_rolling, counted=True: 192 every-event comparisons
+.G2 mem_crowded, counted=False: 192 every-event comparisons
+.G2 mem_crowded, counted=True: 192 every-event comparisons
+.G2 mem_deep, counted=False: 192 every-event comparisons
+.G2 mem_deep, counted=True: 192 every-event comparisons
+.G2 mem_drift, counted=False: 385 every-event comparisons
+.G2 mem_drift, counted=True: 385 every-event comparisons
+.G2 mem_peak_then_empty, counted=False: 383 every-event comparisons
+.G2 mem_peak_then_empty, counted=True: 383 every-event comparisons
+.G2 mem_pinned_dead, counted=False: 12480 every-event comparisons
+.G2 mem_pinned_dead, counted=True: 12480 every-event comparisons
+.G2 mem_rotating_bursts, counted=False: 3372 every-event comparisons
+.G2 mem_rotating_bursts, counted=True: 3372 every-event comparisons
+.G2 root_recreate, counted=False: 288 every-event comparisons
+.G2 root_recreate, counted=True: 288 every-event comparisons
+.G2 spike_compaction, counted=False: 289 every-event comparisons
+.G2 spike_compaction, counted=True: 289 every-event comparisons
+.G2 spike_head_skip, counted=False: 289 every-event comparisons
+.G2 spike_head_skip, counted=True: 289 every-event comparisons
+.G2 spike_purge, counted=False: 194 every-event comparisons
+.G2 spike_purge, counted=True: 194 every-event comparisons
+.G2 spike_purge_at_threshold, counted=False: 289 every-event comparisons
+.G2 spike_purge_at_threshold, counted=True: 289 every-event comparisons
+.G2 spike_rebuild, counted=False: 290 every-event comparisons
+.G2 spike_rebuild, counted=True: 290 every-event comparisons
+.G2 spike_sweep, counted=False: 97 every-event comparisons
+.G2 spike_sweep, counted=True: 97 every-event comparisons
+.G2 touch_churn, counted=False: 288 every-event comparisons
+.G2 touch_churn, counted=True: 288 every-event comparisons
+.G2 two_side_thrash, counted=False: 483 every-event comparisons
+.G2 two_side_thrash, counted=True: 483 every-event comparisons
+.
+66 passed, 59 deselected in 36.84s

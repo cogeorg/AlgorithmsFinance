@@ -1,0 +1,23 @@
+unmutated copy: OK
+detected  A: LIFO instead of FIFO at equal price  (FAILED (failures=168))
+detected  B: partially filled maker loses its queue position  (FAILED (failures=283))
+detected  B: limit order trades at the taker's limit instead of the resting price  (FAILED (failures=164))
+detected  shared: JSON true accepted as an integer  (FAILED (failures=40))
+detected  B (generic cancel): empty price level kept  (FAILED (failures=1))
+detected  shared: rejected event advances the last accepted seq  (FAILED (failures=6))
+detected  A: market-sell residual rests in the book  (FAILED (failures=166))
+detected  B: an equal price does not cross  (FAILED (failures=134))
+detected  fast path: LIMIT accepts bool price/qty  (FAILED (failures=97))
+detected  fast path: LIMIT skips the duplicate-live-id check  (FAILED (failures=64))
+detected  fast path: BUY at the best ask does not cross  (FAILED (failures=183))
+detected  fast path: SELL at the best bid does not cross  (FAILED (failures=177))
+detected  fast path: cancel keeps an empty price level  (FAILED (failures=35))
+detected  fast path: cancel does not advance seq  (FAILED (failures=108))
+detected  fast path: market-sell status partial/unfilled swapped  (FAILED (failures=249))
+detected  fast path: MARKET_SELL skips the duplicate-live-id check  (FAILED (failures=27))
+detected  fast path: accepts an equal (nonincreasing) seq  (FAILED (failures=124))
+detected  fast path: wrong arrival seq stored for a resting BUY  (FAILED (failures=280))
+detected  fast path: cancel accepts a non-string target  (FAILED (failures=35))
+detected  fast path: resting SELL stored on the bid side  (FAILED (failures=290, errors=16))
+20 of 20 mutations detected
+mutations exit 0

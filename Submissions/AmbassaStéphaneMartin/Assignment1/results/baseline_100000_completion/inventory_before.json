@@ -1,0 +1,381 @@
+{
+  "captured_before_new_baseline_execution": true,
+  "inventory": {
+    "large_runs": [
+      {
+        "path": "results\\replay_100000_seed42_revised_batch1\\manifest.json",
+        "status": "complete",
+        "versions": [
+          "revised"
+        ],
+        "limits": {
+          "worker_wall_seconds": 60,
+          "measurement_campaign_wall_seconds": 900,
+          "payload_bytes": 134217728,
+          "traced_allocation_bytes": 536870912,
+          "os_rss_hard_limit": null,
+          "preparation": "Generation precedes measurement deadline; no preparation timeout"
+        },
+        "environment": {
+          "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+          "python_executable": "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "implementation": "CPython",
+          "dependencies": {
+            "third_party_required": [],
+            "stdlib": "3.14.5",
+            "zlib_build": "1.3.1.zlib-ng",
+            "zlib_runtime": "1.3.1.zlib-ng"
+          },
+          "machine": {
+            "os": "Windows-11-10.0.26300-SP0",
+            "system": "Windows",
+            "release": "11",
+            "machine": "AMD64",
+            "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+            "logical_cpus": 22
+          },
+          "clock": {
+            "name": "perf_counter",
+            "resolution_seconds": 1e-7
+          },
+          "git_head": "8a7a3523ddebae3d941bca92706386a7fc0227ba",
+          "git_dirty": true,
+          "git_status": "?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/buildup_d3c00fcc1bd440e5.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/buildup_d3c00fcc1bd440e5.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/cancel_churn_fedac0baa4656a6c.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/cancel_churn_fedac0baa4656a6c.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/crowded_68dd246cda754042.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/crowded_68dd246cda754042.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/mixed_6827cbf3ba9dfe88.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/mixed_6827cbf3ba9dfe88.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/sweep_6e708efc96356675.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/sweep_6e708efc96356675.jsonl.gz.metadata.json\"",
+          "source_sha256": {
+            "benchmark.py": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4",
+            "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+            "order_book.py": "dcbdb2c0e7173e8116fa1c51b287a93cf422c140f74f49f2b5c49a5b025c39a6",
+            "dispatcher.py": "4c4652e95d8112fcdc574e98f41ea494326aa70b5a148b9b892e468784fffce3",
+            "test_order_book.py": "6f143b1616e6c21225b7de12fb4f8853e70a0aff32b6045ca3c3ef2501110595",
+            "test_price_heaps.py": "90498d2ac8d25fb2d669bcf671b954dc42267b866bf0ee89c2ff747614974c3a",
+            "test_lazy_cancellation.py": "f9d7028adb6a4fdbb33599a398755c561f1ec7ba6b10e6a558b6feca4658b423",
+            "test_benchmark.py": "400f876d52961283ce58227e6fdbfa319a406142ae20666cead47f76e821fdac"
+          },
+          "worker_environment": {
+            "PYTHONHASHSEED": "0",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          },
+          "garbage_collection": "enabled; explicit collection before each fresh-book repetition"
+        },
+        "rows": [
+          {
+            "scenario": "buildup",
+            "version": null,
+            "phase": "io",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "buildup",
+            "version": "revised",
+            "phase": "timing",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "buildup",
+            "version": "revised",
+            "phase": "latency",
+            "status": "complete",
+            "completed_repetitions": 1,
+            "expected_repetitions": 1
+          },
+          {
+            "scenario": "buildup",
+            "version": "revised",
+            "phase": "memory",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "buildup",
+            "version": "revised",
+            "phase": "diagnostics",
+            "status": "complete",
+            "completed_repetitions": 1,
+            "expected_repetitions": 1
+          },
+          {
+            "scenario": "crowded",
+            "version": null,
+            "phase": "io",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "crowded",
+            "version": "revised",
+            "phase": "timing",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "crowded",
+            "version": "revised",
+            "phase": "latency",
+            "status": "complete",
+            "completed_repetitions": 1,
+            "expected_repetitions": 1
+          },
+          {
+            "scenario": "crowded",
+            "version": "revised",
+            "phase": "memory",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "crowded",
+            "version": "revised",
+            "phase": "diagnostics",
+            "status": "complete",
+            "completed_repetitions": 1,
+            "expected_repetitions": 1
+          },
+          {
+            "scenario": "mixed",
+            "version": null,
+            "phase": "io",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "mixed",
+            "version": "revised",
+            "phase": "timing",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "mixed",
+            "version": "revised",
+            "phase": "latency",
+            "status": "complete",
+            "completed_repetitions": 1,
+            "expected_repetitions": 1
+          },
+          {
+            "scenario": "mixed",
+            "version": "revised",
+            "phase": "memory",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "mixed",
+            "version": "revised",
+            "phase": "diagnostics",
+            "status": "complete",
+            "completed_repetitions": 1,
+            "expected_repetitions": 1
+          },
+          {
+            "scenario": "sweep",
+            "version": null,
+            "phase": "io",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "sweep",
+            "version": "revised",
+            "phase": "timing",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "sweep",
+            "version": "revised",
+            "phase": "latency",
+            "status": "complete",
+            "completed_repetitions": 1,
+            "expected_repetitions": 1
+          },
+          {
+            "scenario": "sweep",
+            "version": "revised",
+            "phase": "memory",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "sweep",
+            "version": "revised",
+            "phase": "diagnostics",
+            "status": "complete",
+            "completed_repetitions": 1,
+            "expected_repetitions": 1
+          },
+          {
+            "scenario": "cancel_churn",
+            "version": null,
+            "phase": "io",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "cancel_churn",
+            "version": "revised",
+            "phase": "timing",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "cancel_churn",
+            "version": "revised",
+            "phase": "latency",
+            "status": "complete",
+            "completed_repetitions": 1,
+            "expected_repetitions": 1
+          },
+          {
+            "scenario": "cancel_churn",
+            "version": "revised",
+            "phase": "memory",
+            "status": "complete",
+            "completed_repetitions": 5,
+            "expected_repetitions": 5
+          },
+          {
+            "scenario": "cancel_churn",
+            "version": "revised",
+            "phase": "diagnostics",
+            "status": "complete",
+            "completed_repetitions": 1,
+            "expected_repetitions": 1
+          }
+        ]
+      }
+    ],
+    "replay_groups": 295,
+    "stopped": [
+      {
+        "key": "10000/42/sweep/baseline/memory",
+        "records": [
+          {
+            "path": "results\\replay_10000_seed42_batch1\\summaries.jsonl",
+            "status": "incomplete",
+            "completed": 3,
+            "expected": 5,
+            "error": "Worker wall limit reached (60.000 seconds)"
+          }
+        ]
+      },
+      {
+        "key": "10000/43/sweep/baseline/memory",
+        "records": [
+          {
+            "path": "results\\replay_10000_seed43_batch1\\summaries.jsonl",
+            "status": "incomplete",
+            "completed": 3,
+            "expected": 5,
+            "error": "Worker wall limit reached (60.000 seconds)"
+          }
+        ]
+      },
+      {
+        "key": "10000/44/sweep/baseline/memory",
+        "records": [
+          {
+            "path": "results\\replay_10000_seed44_batch1\\summaries.jsonl",
+            "status": "incomplete",
+            "completed": 3,
+            "expected": 5,
+            "error": "Worker wall limit reached (60.000 seconds)"
+          }
+        ]
+      }
+    ]
+  },
+  "planned_missing_baseline": [
+    {
+      "seed": 42,
+      "scenario": "buildup",
+      "name": "replay_100000_seed42_baseline_buildup_batch1"
+    },
+    {
+      "seed": 42,
+      "scenario": "crowded",
+      "name": "replay_100000_seed42_baseline_crowded_batch1"
+    },
+    {
+      "seed": 42,
+      "scenario": "mixed",
+      "name": "replay_100000_seed42_baseline_mixed_batch1"
+    },
+    {
+      "seed": 42,
+      "scenario": "sweep",
+      "name": "replay_100000_seed42_baseline_sweep_batch1"
+    },
+    {
+      "seed": 42,
+      "scenario": "cancel_churn",
+      "name": "replay_100000_seed42_baseline_cancel_churn_batch1"
+    },
+    {
+      "seed": 43,
+      "scenario": "buildup",
+      "name": "replay_100000_seed43_baseline_buildup_batch1"
+    },
+    {
+      "seed": 43,
+      "scenario": "crowded",
+      "name": "replay_100000_seed43_baseline_crowded_batch1"
+    },
+    {
+      "seed": 43,
+      "scenario": "mixed",
+      "name": "replay_100000_seed43_baseline_mixed_batch1"
+    },
+    {
+      "seed": 43,
+      "scenario": "sweep",
+      "name": "replay_100000_seed43_baseline_sweep_batch1"
+    },
+    {
+      "seed": 43,
+      "scenario": "cancel_churn",
+      "name": "replay_100000_seed43_baseline_cancel_churn_batch1"
+    },
+    {
+      "seed": 44,
+      "scenario": "buildup",
+      "name": "replay_100000_seed44_baseline_buildup_batch1"
+    },
+    {
+      "seed": 44,
+      "scenario": "crowded",
+      "name": "replay_100000_seed44_baseline_crowded_batch1"
+    },
+    {
+      "seed": 44,
+      "scenario": "mixed",
+      "name": "replay_100000_seed44_baseline_mixed_batch1"
+    },
+    {
+      "seed": 44,
+      "scenario": "sweep",
+      "name": "replay_100000_seed44_baseline_sweep_batch1"
+    },
+    {
+      "seed": 44,
+      "scenario": "cancel_churn",
+      "name": "replay_100000_seed44_baseline_cancel_churn_batch1"
+    }
+  ]
+}

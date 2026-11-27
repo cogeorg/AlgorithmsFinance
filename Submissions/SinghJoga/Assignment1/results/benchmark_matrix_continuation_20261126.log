@@ -1,0 +1,1 @@
+Command: .\.venv\Scripts\python.exe benchmarks\run_benchmarks.py --resume full_20261125 --primary-time-limit-seconds 60 --latency-time-limit-seconds 30 --memory-time-limit-seconds 60 --state-peaks-time-limit-seconds 30 --counter-time-limit-seconds 30 --profile-time-limit-seconds 30 --memory-limit-mib 4096

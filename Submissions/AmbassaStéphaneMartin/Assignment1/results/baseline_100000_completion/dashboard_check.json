@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "rendered_rows": 15,
+  "cards": {
+    "complete": "8",
+    "stopped": "12",
+    "missing": "10",
+    "pairs": "1"
+  },
+  "screenshot": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\baseline_100000_completion\\dashboard.png",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "scope": "Local default 100000-event view; no measurement run or network service"
+}

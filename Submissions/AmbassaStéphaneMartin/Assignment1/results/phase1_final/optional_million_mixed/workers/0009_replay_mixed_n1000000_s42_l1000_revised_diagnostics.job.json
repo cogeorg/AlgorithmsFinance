@@ -1,0 +1,41 @@
+{
+  "case": {
+    "case_id": "replay_mixed_n1000000_s42_l1000",
+    "experiment": "replay",
+    "scenario": "mixed",
+    "seed": 42,
+    "requested_count": 1000000,
+    "levels": 1000,
+    "sale_percent": null,
+    "construction_event_count": 0,
+    "source_event_count": 1000000,
+    "event_count": 1000000,
+    "actual_controlled_price_levels": null,
+    "source": {
+      "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\.cache\\optional_million\\benchmark\\mixed_4496840633691cbd.jsonl.gz",
+      "sha256": "7522129470525229eaa8fb9b886f7548994e761e7616b76fd663327a347b25ac",
+      "metadata": {
+        "synthetic": true,
+        "calibrated_to_exchange_data": false,
+        "scenario": "mixed",
+        "events": 1000000,
+        "seed": 42,
+        "levels": 1000,
+        "generator": "generate_orders.events / random.Random",
+        "python": "3.14.5",
+        "price_tick_usd": "0.01",
+        "quantity_unit_btc": "0.00000001",
+        "compressed_bytes": 12787333,
+        "sha256": "7522129470525229eaa8fb9b886f7548994e761e7616b76fd663327a347b25ac",
+        "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "benchmark_source_sha256": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4"
+      },
+      "reused": false
+    }
+  },
+  "version": "revised",
+  "phase": "diagnostics",
+  "checkpoint": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\phase1_final\\optional_million_mixed\\workers\\0009_replay_mixed_n1000000_s42_l1000_revised_diagnostics.json",
+  "payload_limit": 134217728,
+  "allocation_limit": 536870912
+}

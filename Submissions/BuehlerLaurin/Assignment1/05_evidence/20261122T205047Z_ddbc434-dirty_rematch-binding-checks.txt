@@ -1,0 +1,17 @@
+label: rematch-binding-checks
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/check_rematch_binding.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: ddbc4341da6cd2152897dcbca654c690b880480b
+dirty: True
+python: 3.13.15
+utc: 20261122T205047Z
+exit_code: 0
+duration_s: 0.63
+------------------------------------------------------------
+Atomic second claim rejected; first claim unchanged.
+Synthetic binding case PASS: accept accepted
+Synthetic binding case PASS: reject rejected
+Synthetic binding case PASS: partial rejected
+Synthetic binding case PASS: order rejected
+Synthetic binding case PASS: source rejected
+RESULT: PASS (atomic guard,accept/reject/incomplete/order/source checks and immutable outcome; real attempt unused)

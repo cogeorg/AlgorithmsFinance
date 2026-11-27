@@ -1,0 +1,96 @@
+{
+  "label": "sanity, not a benchmark",
+  "warmups": 0,
+  "repeats": 1,
+  "counters": false,
+  "gc": "enabled (unchanged)",
+  "comparison": "every result and final canonical book, outside timing",
+  "boundary": "pre-parsed replay incl. returned result-list construction; no parsing/setup/checking/printing",
+  "rows": [
+    {
+      "scenario": "buildup",
+      "events": 10000,
+      "parse_s": 0.05243350000819191,
+      "A": {
+        "setup_s": 4.999979864805937e-06,
+        "replay_s": 7.9377367999986745,
+        "parse_setup_replay_s": 7.990175299986731
+      },
+      "B": {
+        "setup_s": 2.440001117065549e-05,
+        "replay_s": 0.05230169999413192,
+        "parse_setup_replay_s": 0.10475960001349449
+      },
+      "result_differences": 0,
+      "final_book_equal": true
+    },
+    {
+      "scenario": "crowded",
+      "events": 10000,
+      "parse_s": 0.052899900008924305,
+      "A": {
+        "setup_s": 3.8000289350748062e-06,
+        "replay_s": 8.133970999973826,
+        "parse_setup_replay_s": 8.186874700011685
+      },
+      "B": {
+        "setup_s": 1.0300020221620798e-05,
+        "replay_s": 0.04609309998340905,
+        "parse_setup_replay_s": 0.09900330001255497
+      },
+      "result_differences": 0,
+      "final_book_equal": true
+    },
+    {
+      "scenario": "mixed",
+      "events": 10000,
+      "parse_s": 0.039442399982362986,
+      "A": {
+        "setup_s": 2.300017513334751e-06,
+        "replay_s": 1.154026000003796,
+        "parse_setup_replay_s": 1.1934707000036724
+      },
+      "B": {
+        "setup_s": 6.699992809444666e-06,
+        "replay_s": 0.07734169997274876,
+        "parse_setup_replay_s": 0.11679079994792119
+      },
+      "result_differences": 0,
+      "final_book_equal": true
+    },
+    {
+      "scenario": "sweep",
+      "events": 10000,
+      "parse_s": 0.050735400000121444,
+      "A": {
+        "setup_s": 3.00002284348011e-06,
+        "replay_s": 7.9310502000153065,
+        "parse_setup_replay_s": 7.981788600038271
+      },
+      "B": {
+        "setup_s": 8.600007276982069e-06,
+        "replay_s": 0.054344700009096414,
+        "parse_setup_replay_s": 0.10508870001649484
+      },
+      "result_differences": 0,
+      "final_book_equal": true
+    },
+    {
+      "scenario": "cancel_churn",
+      "events": 10000,
+      "parse_s": 0.03682340000523254,
+      "A": {
+        "setup_s": 2.2999593056738377e-06,
+        "replay_s": 0.02802910003811121,
+        "parse_setup_replay_s": 0.06485480000264943
+      },
+      "B": {
+        "setup_s": 6.500049494206905e-06,
+        "replay_s": 0.037469099974259734,
+        "parse_setup_replay_s": 0.07429900002898648
+      },
+      "result_differences": 0,
+      "final_book_equal": true
+    }
+  ]
+}

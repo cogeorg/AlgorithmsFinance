@@ -1,0 +1,291 @@
+{
+  "script": "bench_time.py",
+  "started_utc": "2026-11-20T14:07:46.045382+00:00",
+  "finished_utc": "2026-11-20T14:08:26.244300+00:00",
+  "seed": 20260,
+  "generator": {
+    "module": "datagen.generate",
+    "duplicates": "none",
+    "sizes_n": [
+      1000,
+      10000,
+      100000
+    ],
+    "query_counts_q": [
+      1,
+      100
+    ],
+    "hit_rates": [
+      "all-present",
+      "all-absent",
+      "mixed"
+    ],
+    "note": "same seed for every configuration; the identical dataset object is given to every method and version"
+  },
+  "datasets": [
+    {
+      "n": 1000,
+      "q": 1,
+      "hit_rate": "all-present",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 10010,
+      "hits": 1
+    },
+    {
+      "n": 1000,
+      "q": 1,
+      "hit_rate": "all-absent",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 10010,
+      "hits": 0
+    },
+    {
+      "n": 1000,
+      "q": 1,
+      "hit_rate": "mixed",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 10010,
+      "hits": 1
+    },
+    {
+      "n": 1000,
+      "q": 100,
+      "hit_rate": "all-present",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 10010,
+      "hits": 100
+    },
+    {
+      "n": 1000,
+      "q": 100,
+      "hit_rate": "all-absent",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 10010,
+      "hits": 0
+    },
+    {
+      "n": 1000,
+      "q": 100,
+      "hit_rate": "mixed",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 10010,
+      "hits": 50
+    },
+    {
+      "n": 10000,
+      "q": 1,
+      "hit_rate": "all-present",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 100010,
+      "hits": 1
+    },
+    {
+      "n": 10000,
+      "q": 1,
+      "hit_rate": "all-absent",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 100010,
+      "hits": 0
+    },
+    {
+      "n": 10000,
+      "q": 1,
+      "hit_rate": "mixed",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 100010,
+      "hits": 1
+    },
+    {
+      "n": 10000,
+      "q": 100,
+      "hit_rate": "all-present",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 100010,
+      "hits": 100
+    },
+    {
+      "n": 10000,
+      "q": 100,
+      "hit_rate": "all-absent",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 100010,
+      "hits": 0
+    },
+    {
+      "n": 10000,
+      "q": 100,
+      "hit_rate": "mixed",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 100010,
+      "hits": 50
+    },
+    {
+      "n": 100000,
+      "q": 1,
+      "hit_rate": "all-present",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 1000010,
+      "hits": 1
+    },
+    {
+      "n": 100000,
+      "q": 1,
+      "hit_rate": "all-absent",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 1000010,
+      "hits": 0
+    },
+    {
+      "n": 100000,
+      "q": 1,
+      "hit_rate": "mixed",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 1000010,
+      "hits": 1
+    },
+    {
+      "n": 100000,
+      "q": 100,
+      "hit_rate": "all-present",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 1000010,
+      "hits": 100
+    },
+    {
+      "n": 100000,
+      "q": 100,
+      "hit_rate": "all-absent",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 1000010,
+      "hits": 0
+    },
+    {
+      "n": 100000,
+      "q": 100,
+      "hit_rate": "mixed",
+      "duplicates": "none",
+      "seed": 20260,
+      "id_universe": 1000010,
+      "hits": 50
+    }
+  ],
+  "methods": [
+    "linear_v1",
+    "binary_v1",
+    "binary_v2",
+    "hash_v1"
+  ],
+  "phases": {
+    "prepare": "prepare(ids): sorting / set construction (linear: none)",
+    "query": "answer(state, queries): whole query batch, state already built",
+    "total": "method(ids, queries) timed on its own (not the sum of the two)"
+  },
+  "units": {
+    "seconds_per_batch": "seconds for ONE execution of the phase (prepare, all q queries, or prepare+all q queries); = repeat time / calls_per_repeat",
+    "seconds_per_query": "seconds_per_batch / q; only for phases 'query' and 'total' (preparation does not belong to one query, so it is left empty)"
+  },
+  "protocol": {
+    "timer": "time.perf_counter",
+    "repeats": 5,
+    "statistic": "median over repeats",
+    "warmup": "one untimed repeat after calibration",
+    "calibration": "k calls per repeat so a repeat lasts >= 20.0 ms (k <= 100000); min of 3 single calls",
+    "fresh_state": "new prepared state before every repeat",
+    "gc": "gc.collect() before, gc disabled during each repeat",
+    "excluded": [
+      "data generation",
+      "correctness checks",
+      "printing",
+      "creating the fresh state for phase 'query'",
+      "saving"
+    ],
+    "order": "n, q, hit rate, method (listed order), phase (prepare, query, total)"
+  },
+  "environment": {
+    "python_version": "3.11.0 (v3.11.0:deaf509e8f, Oct 24 2022, 14:43:23) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "python_implementation": "CPython",
+    "python_executable": "/Users/bastian/Developer/AlgorithmsFinance/Submissions/BundschuhBastian/.venv/bin/python",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "cpu_count_logical": 10,
+    "perf_counter": {
+      "implementation": "mach_absolute_time()",
+      "resolution_seconds": 4.166666666666667e-08,
+      "monotonic": true
+    },
+    "git_commit": "dfc2968f53634778b3e7b8297a31da6173fada7d",
+    "git_branch": "lab1-BundschuhBastian",
+    "git_uncommitted_changes_outside_results": false,
+    "cpu_model": "Apple M4",
+    "memory_bytes": 17179869184
+  },
+  "total_vs_prepare_plus_query": {
+    "added_by": "check_total.py after the measurement run; the protocol was not changed",
+    "explanation": "'total' is measured on its own (method(ids, queries) called k times per repeat), not as the sum of 'prepare' and 'query'. The three phases run as separate blocks of repeats at different moments, so total and prepare + query can differ. Measured causes: (1) timing noise inside a block: repeats of one phase differ (spread = max/min of the repeats); (2) variation BETWEEN blocks: prepare(ids) does exactly the same work for every q and hit rate (same seed, same ids), yet its median differs between these blocks (see prepare_variation_between_blocks); this is slower or faster machine state at that moment, and it is larger than the spread of the repeats inside one block. (3) Calibration picks its own number of calls k per phase. Possible but NOT tested: cache state of the sorted list or set differs between 'query' (state built before the repeat) and 'total' (queries run right after preparation). Tested and not supported: that building a set while the previous one is still alive (as in the 'prepare' phase) is slower than discarding it at once (6.8 vs 6.8 ms at n = 100000). Check: if the [min, max] range of 'total' overlaps the range of the summed phases, the difference is inside the repeat-to-repeat variation; in some configurations it does not (counted in ranges_do_not_overlap), so within-block spread alone does not explain every difference. A ratio far from 1 is a measure of how large the noise of this measurement is, not an error in the algorithms.",
+    "check_file": "total_consistency.csv",
+    "configurations": 72,
+    "ratio_min": 0.7332077785270301,
+    "ratio_max": 1.2453449066964093,
+    "below_0.97": 22,
+    "above_1.03": 8,
+    "within_3_percent": 42,
+    "ranges_overlap": 60,
+    "ranges_do_not_overlap": 12,
+    "prepare_variation_between_blocks": {
+      "binary_v1 n=1000": {
+        "blocks": 6,
+        "max_over_min": 1.0237653123506854
+      },
+      "binary_v1 n=10000": {
+        "blocks": 6,
+        "max_over_min": 1.1330918339209892
+      },
+      "binary_v1 n=100000": {
+        "blocks": 6,
+        "max_over_min": 1.130247556628376
+      },
+      "binary_v2 n=1000": {
+        "blocks": 6,
+        "max_over_min": 1.019755294321592
+      },
+      "binary_v2 n=10000": {
+        "blocks": 6,
+        "max_over_min": 1.1123142835560687
+      },
+      "binary_v2 n=100000": {
+        "blocks": 6,
+        "max_over_min": 1.3200215903627532
+      },
+      "hash_v1 n=1000": {
+        "blocks": 6,
+        "max_over_min": 1.0379613255446887
+      },
+      "hash_v1 n=10000": {
+        "blocks": 6,
+        "max_over_min": 1.0918476474129393
+      },
+      "hash_v1 n=100000": {
+        "blocks": 6,
+        "max_over_min": 1.3344452391551378
+      }
+    }
+  }
+}

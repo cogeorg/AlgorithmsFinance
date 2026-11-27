@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "stage": "09_runner_before_implementation",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_16_experiment_runner.py"
+  ],
+  "working_directory": ".",
+  "started_utc": "2026-11-23T18:24:14.059123+00:00",
+  "finished_utc": "2026-11-23T18:24:14.947205+00:00",
+  "elapsed_seconds": 0.8879648000001907,
+  "exit_code": 1,
+  "python_version": "3.12.10",
+  "python_implementation": "CPython",
+  "pytest_version": "9.2.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git": {
+    "branch": "assignment1-mueller-alexandra",
+    "head": "79fe4d28d82d90297a9b83884425ab9d2c77023d",
+    "status_before_evidence_files": "?? src/limit_order_book/experiment_runner.py\n?? tests/test_16_experiment_runner.py\n?? ../phase2_audit_liuhaina/",
+    "clean_before_evidence_files": false
+  }
+}

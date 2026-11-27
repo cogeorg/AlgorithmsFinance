@@ -1,0 +1,15 @@
+label: a-scope-final-review
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/check_a_scope.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 6d93da61a6bbc31d63cdf60c06048969d8918df6
+dirty: True
+python: 3.13.15
+utc: 20261122T124514Z
+exit_code: 0
+duration_s: 0.40
+------------------------------------------------------------
+Preview: B3r564 + comparators168 unchanged; A436; total1168. All supplementary A sizes<=10000.
+Preview: original job order and official/million A coverage preserved; no engines executed.
+Only executable source change is tonight_b3r.ps1. Engines/tests/expectations/data/results/model/pins unchanged.
+Fresh standard suite: {"TestDifferential_B": 1, "TestDifferential_B2": 1, "TestDifferential_B3": 1, "TestDifferential_B3r": 1, "test_b3r": 6, "test_b_internal": 22, "test_bench_pipeline": 30, "test_contract": 320, "test_mutants": 23, "test_own_datasets": 4, "test_post_attack_pipeline": 13, "test_replay": 18, "test_replay_regressions": 20, "test_validation": 184}
+RESULT: PASS (declared scope, exact preview,644 fresh tests and protected-file checks; no long run)

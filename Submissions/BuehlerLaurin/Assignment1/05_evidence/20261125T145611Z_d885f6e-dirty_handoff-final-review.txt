@@ -1,0 +1,18 @@
+label: handoff-final-review
+command: ./.venv/Scripts/python.exe scratch/handoff_final_review.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: d885f6e96da935ea4f73f24ed6da9aea012f8bbf
+dirty: True
+python: 3.13.15
+utc: 20261125T145611Z
+exit_code: 0
+duration_s: 8.88
+------------------------------------------------------------
+REPORT: 39 exact factual replacements; no other edits
+README detail retained; all old test functions/assertions unchanged
+pytest 9.2.0
+hypothesis 6.155.7
+pandas 3.1.1
+streamlit 1.67.0
+PER_FILE={"test_b3r": 6, "test_b_internal": 32, "test_bench_pipeline": 30, "test_contract": 448, "test_dashboard": 22, "test_fast_assessment": 10, "test_fast_equivalence": 116, "test_final_version": 60, "test_mutants": 25, "test_own_datasets": 4, "test_post_attack_pipeline": 13, "test_replay": 21, "test_replay_regressions": 28, "test_stateful": 6, "test_submission_robustness": 28, "test_validation": 184}
+PASS: 1033 tests; 108 scratch-only smoke workers/checks; 91 report arithmetic records; factual-only edits; protected sources/results unchanged

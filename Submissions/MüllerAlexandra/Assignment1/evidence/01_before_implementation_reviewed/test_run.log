@@ -1,0 +1,2973 @@
+stage: 01_before_implementation_reviewed
+started_utc: 2026-11-21T14:33:08.762250+00:00
+finished_utc: 2026-11-21T14:33:09.445216+00:00
+elapsed_seconds: 0.683145
+exit_code: 1
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 43ff26c35cb9a27439b86ed5054e188639609903
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0
+collected 97 items
+
+tests\test_01_interface.py ..FFFFFFFF                                    [ 10%]
+tests\test_02_validation.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF       [ 49%]
+tests\test_03_limit_matching.py FFFFFFFFFF                               [ 59%]
+tests\test_04_market_sells.py FFFFFFFFFFFF                               [ 72%]
+tests\test_05_cancellations.py FFFFFFFFFF                                [ 82%]
+tests\test_06_invariants.py FFFFFFFFFF                                   [ 92%]
+tests\test_07_worked_example.py FF                                       [ 94%]
+tests\test_08_differential.py F                                          [ 95%]
+tests\test_09_stream_io.py FFFF                                          [100%]
+
+================================== FAILURES ===================================
+_____________________ test_fresh_book_is_empty[baseline] ______________________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93B74A0>
+
+    def test_fresh_book_is_empty(book: OrderBook) -> None:
+>       assert book.inspect_book() == []
+               ^^^^^^^^^^^^^^^^^^^
+
+tests\test_01_interface.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93B74A0>
+
+    def inspect_book(self) -> BookSnapshot:
+>       raise NotImplementedError("baseline inspection is not implemented")
+E       NotImplementedError: baseline inspection is not implemented
+
+src\limit_order_book\baseline.py:24: NotImplementedError
+______________________ test_fresh_book_is_empty[revised] ______________________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FEB40>
+
+    def test_fresh_book_is_empty(book: OrderBook) -> None:
+>       assert book.inspect_book() == []
+               ^^^^^^^^^^^^^^^^^^^
+
+tests\test_01_interface.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FEB40>
+
+    def inspect_book(self) -> BookSnapshot:
+>       raise NotImplementedError("revised inspection is not implemented")
+E       NotImplementedError: revised inspection is not implemented
+
+src\limit_order_book\revised.py:24: NotImplementedError
+_______________ test_limit_result_has_required_fields[baseline] _______________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FEA20>
+
+    def test_limit_result_has_required_fields(book: OrderBook) -> None:
+>       result = book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_01_interface.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FEA20>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_______________ test_limit_result_has_required_fields[revised] ________________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FF860>
+
+    def test_limit_result_has_required_fields(book: OrderBook) -> None:
+>       result = book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_01_interface.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FF860>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+____________ test_market_sell_result_has_required_fields[baseline] ____________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FE810>
+
+    def test_market_sell_result_has_required_fields(book: OrderBook) -> None:
+>       result = book.process_event(market_sell_event(1, "s1", 5))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_01_interface.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FE810>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'MARKET_SELL', 'order_id': 's1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+____________ test_market_sell_result_has_required_fields[revised] _____________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FFD10>
+
+    def test_market_sell_result_has_required_fields(book: OrderBook) -> None:
+>       result = book.process_event(market_sell_event(1, "s1", 5))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_01_interface.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FFD10>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'MARKET_SELL', 'order_id': 's1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+___________ test_cancellation_result_has_required_fields[baseline] ____________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FEC00>
+
+    def test_cancellation_result_has_required_fields(book: OrderBook) -> None:
+>       result = book.process_event(cancel_event(1, "missing"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_01_interface.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FEC00>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'CANCEL', 'target_order_id': 'missing'}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+____________ test_cancellation_result_has_required_fields[revised] ____________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FDBB0>
+
+    def test_cancellation_result_has_required_fields(book: OrderBook) -> None:
+>       result = book.process_event(cancel_event(1, "missing"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_01_interface.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FDBB0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'CANCEL', 'target_order_id': 'missing'}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[baseline-unknown-type] __
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944D730>
+invalid_event = {'seq': 2, 'event_id': 'bad-type', 'type': 'UNKNOWN'}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944D730>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[baseline-unknown-side] __
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944C620>
+invalid_event = {'seq': 2, 'event_id': 'bad-side-event', 'type': 'LIMIT', 'order_id': 'bad-side', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944C620>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+__ test_invalid_event_is_rejected_without_state_change[baseline-zero-price] ___
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FF800>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-price-zero', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FF800>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[baseline-negative-price] _
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FEB40>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-price-negative', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FEB40>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[baseline-noninteger-price] _
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD934AC60>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-price-float', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD934AC60>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[baseline-zero-quantity] _
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944EA20>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-qty-zero', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944EA20>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[baseline-negative-quantity] _
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944D910>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-qty-negative', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944D910>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[baseline-noninteger-quantity] _
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944D490>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-qty-float', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944D490>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[baseline-boolean-is-not-integer] _
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944CE60>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-qty-bool', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944CE60>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[baseline-zero-market-quantity] _
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944F050>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'MARKET_SELL', 'order_id': 'bad-market-zero', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944F050>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[baseline-missing-quantity] _
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944D430>
+invalid_event = {'seq': 2, 'event_id': 'missing-quantity', 'type': 'MARKET_SELL', 'order_id': 's'}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944D430>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[baseline-missing-cancel-target] _
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9484F80>
+invalid_event = {'seq': 2, 'event_id': 'missing-target', 'type': 'CANCEL'}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9484F80>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[baseline-missing-limit-side] _
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9485280>
+invalid_event = {'seq': 2, 'event_id': 'missing-side', 'type': 'LIMIT', 'order_id': 'x', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9485280>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+__ test_invalid_event_is_rejected_without_state_change[revised-unknown-type] __
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9485760>
+invalid_event = {'seq': 2, 'event_id': 'bad-type', 'type': 'UNKNOWN'}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9485760>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+__ test_invalid_event_is_rejected_without_state_change[revised-unknown-side] __
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944F980>
+invalid_event = {'seq': 2, 'event_id': 'bad-side-event', 'type': 'LIMIT', 'order_id': 'bad-side', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944F980>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+___ test_invalid_event_is_rejected_without_state_change[revised-zero-price] ___
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944F9B0>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-price-zero', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944F9B0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[revised-negative-price] _
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944F6E0>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-price-negative', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944F6E0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[revised-noninteger-price] _
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944C260>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-price-float', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944C260>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[revised-zero-quantity] __
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944EBA0>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-qty-zero', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944EBA0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[revised-negative-quantity] _
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FCAA0>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-qty-negative', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FCAA0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[revised-noninteger-quantity] _
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FC8F0>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-qty-float', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FC8F0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[revised-boolean-is-not-integer] _
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94866F0>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'LIMIT', 'order_id': 'bad-qty-bool', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94866F0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[revised-zero-market-quantity] _
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9484B90>
+invalid_event = {'seq': 2, 'event_id': 'event2', 'type': 'MARKET_SELL', 'order_id': 'bad-market-zero', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9484B90>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[revised-missing-quantity] _
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9485DC0>
+invalid_event = {'seq': 2, 'event_id': 'missing-quantity', 'type': 'MARKET_SELL', 'order_id': 's'}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9485DC0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[revised-missing-cancel-target] _
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9486900>
+invalid_event = {'seq': 2, 'event_id': 'missing-target', 'type': 'CANCEL'}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9486900>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_ test_invalid_event_is_rejected_without_state_change[revised-missing-limit-side] _
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94865A0>
+invalid_event = {'seq': 2, 'event_id': 'missing-side', 'type': 'LIMIT', 'order_id': 'x', ...}
+
+    @pytest.mark.parametrize(
+        "invalid_event",
+        [
+            {"seq": 2, "event_id": "bad-type", "type": "UNKNOWN"},
+            limit_event(2, "bad-side", "HOLD", 99, 1, event_id="bad-side-event"),
+            limit_event(2, "bad-price-zero", "BUY", 0, 1),
+            limit_event(2, "bad-price-negative", "BUY", -1, 1),
+            limit_event(2, "bad-price-float", "BUY", 99.5, 1),
+            limit_event(2, "bad-qty-zero", "BUY", 99, 0),
+            limit_event(2, "bad-qty-negative", "BUY", 99, -1),
+            limit_event(2, "bad-qty-float", "BUY", 99, 1.5),
+            limit_event(2, "bad-qty-bool", "BUY", 99, True),
+            market_sell_event(2, "bad-market-zero", 0),
+            {"seq": 2, "event_id": "missing-quantity", "type": "MARKET_SELL", "order_id": "s"},
+            {"seq": 2, "event_id": "missing-target", "type": "CANCEL"},
+            {"seq": 2, "event_id": "missing-side", "type": "LIMIT", "order_id": "x", "price_ticks": 99, "qty_units": 1},
+        ],
+        ids=[
+            "unknown-type",
+            "unknown-side",
+            "zero-price",
+            "negative-price",
+            "noninteger-price",
+            "zero-quantity",
+            "negative-quantity",
+            "noninteger-quantity",
+            "boolean-is-not-integer",
+            "zero-market-quantity",
+            "missing-quantity",
+            "missing-cancel-target",
+            "missing-limit-side",
+        ],
+    )
+    def test_invalid_event_is_rejected_without_state_change(
+        book: OrderBook, invalid_event: dict[str, object]
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_02_validation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94865A0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+______________ test_sequence_must_be_positive_integer[baseline] _______________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9484D70>
+
+    def test_sequence_must_be_positive_integer(book: OrderBook) -> None:
+>       result = book.process_event(limit_event(0, "b0", "BUY", 100, 1))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_02_validation.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9484D70>
+event = {'seq': 0, 'event_id': 'event0', 'type': 'LIMIT', 'order_id': 'b0', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_______________ test_sequence_must_be_positive_integer[revised] _______________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9485190>
+
+    def test_sequence_must_be_positive_integer(book: OrderBook) -> None:
+>       result = book.process_event(limit_event(0, "b0", "BUY", 100, 1))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_02_validation.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9485190>
+event = {'seq': 0, 'event_id': 'event0', 'type': 'LIMIT', 'order_id': 'b0', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+__________ test_sequence_must_not_accept_nonintegers[baseline-float] __________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9487410>
+invalid_seq = 1.5
+
+    @pytest.mark.parametrize("invalid_seq", [1.5, True], ids=["float", "boolean"])
+    def test_sequence_must_not_accept_nonintegers(
+        book: OrderBook, invalid_seq: object
+    ) -> None:
+        event = limit_event(1, "b1", "BUY", 100, 1)
+        event["seq"] = invalid_seq
+    
+>       result = book.process_event(event)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_02_validation.py:73: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9487410>
+event = {'seq': 1.5, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_________ test_sequence_must_not_accept_nonintegers[baseline-boolean] _________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94840E0>
+invalid_seq = True
+
+    @pytest.mark.parametrize("invalid_seq", [1.5, True], ids=["float", "boolean"])
+    def test_sequence_must_not_accept_nonintegers(
+        book: OrderBook, invalid_seq: object
+    ) -> None:
+        event = limit_event(1, "b1", "BUY", 100, 1)
+        event["seq"] = invalid_seq
+    
+>       result = book.process_event(event)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_02_validation.py:73: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94840E0>
+event = {'seq': True, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+__________ test_sequence_must_not_accept_nonintegers[revised-float] ___________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FF9B0>
+invalid_seq = 1.5
+
+    @pytest.mark.parametrize("invalid_seq", [1.5, True], ids=["float", "boolean"])
+    def test_sequence_must_not_accept_nonintegers(
+        book: OrderBook, invalid_seq: object
+    ) -> None:
+        event = limit_event(1, "b1", "BUY", 100, 1)
+        event["seq"] = invalid_seq
+    
+>       result = book.process_event(event)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_02_validation.py:73: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93FF9B0>
+event = {'seq': 1.5, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_________ test_sequence_must_not_accept_nonintegers[revised-boolean] __________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944D9A0>
+invalid_seq = True
+
+    @pytest.mark.parametrize("invalid_seq", [1.5, True], ids=["float", "boolean"])
+    def test_sequence_must_not_accept_nonintegers(
+        book: OrderBook, invalid_seq: object
+    ) -> None:
+        event = limit_event(1, "b1", "BUY", 100, 1)
+        event["seq"] = invalid_seq
+    
+>       result = book.process_event(event)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_02_validation.py:73: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944D9A0>
+event = {'seq': True, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+____ test_rejected_event_does_not_advance_last_accepted_sequence[baseline] ____
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944E3F0>
+
+    def test_rejected_event_does_not_advance_last_accepted_sequence(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 1))
+
+tests\test_02_validation.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD944E3F0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+____ test_rejected_event_does_not_advance_last_accepted_sequence[revised] _____
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944DCA0>
+
+    def test_rejected_event_does_not_advance_last_accepted_sequence(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 1))
+
+tests\test_02_validation.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944DCA0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_________ test_duplicate_live_order_identifier_is_rejected[baseline] __________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD938B2C0>
+
+    def test_duplicate_live_order_identifier_is_rejected(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "same", "BUY", 100, 2))
+
+tests\test_02_validation.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD938B2C0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'same', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+__________ test_duplicate_live_order_identifier_is_rejected[revised] __________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9495220>
+
+    def test_duplicate_live_order_identifier_is_rejected(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "same", "BUY", 100, 2))
+
+tests\test_02_validation.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9495220>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'same', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_____ test_unknown_cancellation_is_valid_and_advances_sequence[baseline] ______
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9495700>
+
+    def test_unknown_cancellation_is_valid_and_advances_sequence(book: OrderBook) -> None:
+>       missing = book.process_event(cancel_event(1, "unknown"))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_02_validation.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9495700>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'CANCEL', 'target_order_id': 'unknown'}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+______ test_unknown_cancellation_is_valid_and_advances_sequence[revised] ______
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9495BB0>
+
+    def test_unknown_cancellation_is_valid_and_advances_sequence(book: OrderBook) -> None:
+>       missing = book.process_event(cancel_event(1, "unknown"))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_02_validation.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9495BB0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'CANCEL', 'target_order_id': 'unknown'}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+__________ test_noncrossing_orders_rest_in_canonical_order[baseline] __________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94967E0>
+
+    def test_noncrossing_orders_rest_in_canonical_order(book: OrderBook) -> None:
+>       buy = book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_03_limit_matching.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94967E0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+__________ test_noncrossing_orders_rest_in_canonical_order[revised] ___________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944D880>
+
+    def test_noncrossing_orders_rest_in_canonical_order(book: OrderBook) -> None:
+>       buy = book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_03_limit_matching.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944D880>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+___ test_crossing_buy_executes_at_resting_ask_and_rests_residual[baseline] ____
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FC710>
+
+    def test_crossing_buy_executes_at_resting_ask_and_rests_residual(
+        book: OrderBook,
+    ) -> None:
+>       book.process_event(limit_event(1, "a1", "SELL", 100, 2))
+
+tests\test_03_limit_matching.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FC710>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'a1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+____ test_crossing_buy_executes_at_resting_ask_and_rests_residual[revised] ____
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD938BF80>
+
+    def test_crossing_buy_executes_at_resting_ask_and_rests_residual(
+        book: OrderBook,
+    ) -> None:
+>       book.process_event(limit_event(1, "a1", "SELL", 100, 2))
+
+tests\test_03_limit_matching.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD938BF80>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'a1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+___ test_crossing_sell_executes_at_resting_bid_and_rests_residual[baseline] ___
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94849E0>
+
+    def test_crossing_sell_executes_at_resting_bid_and_rests_residual(
+        book: OrderBook,
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 2))
+
+tests\test_03_limit_matching.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94849E0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+___ test_crossing_sell_executes_at_resting_bid_and_rests_residual[revised] ____
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9487170>
+
+    def test_crossing_sell_executes_at_resting_bid_and_rests_residual(
+        book: OrderBook,
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 2))
+
+tests\test_03_limit_matching.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9487170>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+___________ test_crossing_limit_uses_best_price_then_fifo[baseline] ___________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9496660>
+
+    def test_crossing_limit_uses_best_price_then_fifo(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "a-low-first", "SELL", 101, 2))
+
+tests\test_03_limit_matching.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9496660>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'a-low-first', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+___________ test_crossing_limit_uses_best_price_then_fifo[revised] ____________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94950D0>
+
+    def test_crossing_limit_uses_best_price_then_fifo(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "a-low-first", "SELL", 101, 2))
+
+tests\test_03_limit_matching.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94950D0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'a-low-first', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+____ test_identifier_spelling_does_not_override_arrival_priority[baseline] ____
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9496A20>
+
+    def test_identifier_spelling_does_not_override_arrival_priority(
+        book: OrderBook,
+    ) -> None:
+>       book.process_event(limit_event(1, "z-first", "SELL", 100, 1))
+
+tests\test_03_limit_matching.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9496A20>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'z-first', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+____ test_identifier_spelling_does_not_override_arrival_priority[revised] _____
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9496750>
+
+    def test_identifier_spelling_does_not_override_arrival_priority(
+        book: OrderBook,
+    ) -> None:
+>       book.process_event(limit_event(1, "z-first", "SELL", 100, 1))
+
+tests\test_03_limit_matching.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9496750>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'z-first', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+__ test_market_sell_relative_to_available_depth[baseline-smaller-than-depth] __
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9496990>
+requested = 2, expected_status = 'filled', expected_unfilled = 0
+
+    @pytest.mark.parametrize(
+        ("requested", "expected_status", "expected_unfilled"),
+        [
+            (2, "filled", 0),
+            (5, "filled", 0),
+            (7, "partial", 2),
+        ],
+        ids=["smaller-than-depth", "equal-to-depth", "larger-than-depth"],
+    )
+    def test_market_sell_relative_to_available_depth(
+        book: OrderBook,
+        requested: int,
+        expected_status: str,
+        expected_unfilled: int,
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_04_market_sells.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9496990>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+____ test_market_sell_relative_to_available_depth[baseline-equal-to-depth] ____
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C26F0>
+requested = 5, expected_status = 'filled', expected_unfilled = 0
+
+    @pytest.mark.parametrize(
+        ("requested", "expected_status", "expected_unfilled"),
+        [
+            (2, "filled", 0),
+            (5, "filled", 0),
+            (7, "partial", 2),
+        ],
+        ids=["smaller-than-depth", "equal-to-depth", "larger-than-depth"],
+    )
+    def test_market_sell_relative_to_available_depth(
+        book: OrderBook,
+        requested: int,
+        expected_status: str,
+        expected_unfilled: int,
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_04_market_sells.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C26F0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+__ test_market_sell_relative_to_available_depth[baseline-larger-than-depth] ___
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C0140>
+requested = 7, expected_status = 'partial', expected_unfilled = 2
+
+    @pytest.mark.parametrize(
+        ("requested", "expected_status", "expected_unfilled"),
+        [
+            (2, "filled", 0),
+            (5, "filled", 0),
+            (7, "partial", 2),
+        ],
+        ids=["smaller-than-depth", "equal-to-depth", "larger-than-depth"],
+    )
+    def test_market_sell_relative_to_available_depth(
+        book: OrderBook,
+        requested: int,
+        expected_status: str,
+        expected_unfilled: int,
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_04_market_sells.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C0140>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+__ test_market_sell_relative_to_available_depth[revised-smaller-than-depth] ___
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9497110>
+requested = 2, expected_status = 'filled', expected_unfilled = 0
+
+    @pytest.mark.parametrize(
+        ("requested", "expected_status", "expected_unfilled"),
+        [
+            (2, "filled", 0),
+            (5, "filled", 0),
+            (7, "partial", 2),
+        ],
+        ids=["smaller-than-depth", "equal-to-depth", "larger-than-depth"],
+    )
+    def test_market_sell_relative_to_available_depth(
+        book: OrderBook,
+        requested: int,
+        expected_status: str,
+        expected_unfilled: int,
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_04_market_sells.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9497110>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+____ test_market_sell_relative_to_available_depth[revised-equal-to-depth] _____
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9497950>
+requested = 5, expected_status = 'filled', expected_unfilled = 0
+
+    @pytest.mark.parametrize(
+        ("requested", "expected_status", "expected_unfilled"),
+        [
+            (2, "filled", 0),
+            (5, "filled", 0),
+            (7, "partial", 2),
+        ],
+        ids=["smaller-than-depth", "equal-to-depth", "larger-than-depth"],
+    )
+    def test_market_sell_relative_to_available_depth(
+        book: OrderBook,
+        requested: int,
+        expected_status: str,
+        expected_unfilled: int,
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_04_market_sells.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9497950>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+___ test_market_sell_relative_to_available_depth[revised-larger-than-depth] ___
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9497440>
+requested = 7, expected_status = 'partial', expected_unfilled = 2
+
+    @pytest.mark.parametrize(
+        ("requested", "expected_status", "expected_unfilled"),
+        [
+            (2, "filled", 0),
+            (5, "filled", 0),
+            (7, "partial", 2),
+        ],
+        ids=["smaller-than-depth", "equal-to-depth", "larger-than-depth"],
+    )
+    def test_market_sell_relative_to_available_depth(
+        book: OrderBook,
+        requested: int,
+        expected_status: str,
+        expected_unfilled: int,
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_04_market_sells.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9497440>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_____________ test_market_sell_uses_best_bid_then_fifo[baseline] ______________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9484E00>
+
+    def test_market_sell_uses_best_bid_then_fifo(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "low", "BUY", 99, 4))
+
+tests\test_04_market_sells.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9484E00>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'low', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+______________ test_market_sell_uses_best_bid_then_fifo[revised] ______________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD938B440>
+
+    def test_market_sell_uses_best_bid_then_fifo(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "low", "BUY", 99, 4))
+
+tests\test_04_market_sells.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD938B440>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'low', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+________ test_partial_maker_retains_priority_for_later_sale[baseline] _________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93B6CC0>
+
+    def test_partial_maker_retains_priority_for_later_sale(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "first", "BUY", 100, 5))
+
+tests\test_04_market_sells.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93B6CC0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'first', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_________ test_partial_maker_retains_priority_for_later_sale[revised] _________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944C800>
+
+    def test_partial_maker_retains_priority_for_later_sale(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "first", "BUY", 100, 5))
+
+tests\test_04_market_sells.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD944C800>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'first', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+________ test_long_equal_price_queue_preserves_all_arrivals[baseline] _________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C1730>
+
+    def test_long_equal_price_queue_preserves_all_arrivals(book: OrderBook) -> None:
+        queue_length = 50
+        for seq in range(1, queue_length + 1):
+>           book.process_event(limit_event(seq, f"maker-{seq:02d}", "BUY", 100, 1))
+
+tests\test_04_market_sells.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C1730>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'maker-01', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_________ test_long_equal_price_queue_preserves_all_arrivals[revised] _________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94C37A0>
+
+    def test_long_equal_price_queue_preserves_all_arrivals(book: OrderBook) -> None:
+        queue_length = 50
+        for seq in range(1, queue_length + 1):
+>           book.process_event(limit_event(seq, f"maker-{seq:02d}", "BUY", 100, 1))
+
+tests\test_04_market_sells.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94C37A0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'maker-01', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+__________ test_cancel_active_order_removes_full_residual[baseline] ___________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C1280>
+
+    def test_cancel_active_order_removes_full_residual(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_05_cancellations.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C1280>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+___________ test_cancel_active_order_removes_full_residual[revised] ___________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94C2720>
+
+    def test_cancel_active_order_removes_full_residual(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_05_cancellations.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94C2720>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+__ test_cancel_after_partial_fill_removes_only_remaining_quantity[baseline] ___
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C1F70>
+
+    def test_cancel_after_partial_fill_removes_only_remaining_quantity(
+        book: OrderBook,
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_05_cancellations.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C1F70>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+___ test_cancel_after_partial_fill_removes_only_remaining_quantity[revised] ___
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94C26C0>
+
+    def test_cancel_after_partial_fill_removes_only_remaining_quantity(
+        book: OrderBook,
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 5))
+
+tests\test_05_cancellations.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94C26C0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+___________ test_cancel_after_complete_fill_is_not_found[baseline] ____________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C1A30>
+
+    def test_cancel_after_complete_fill_is_not_found(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 2))
+
+tests\test_05_cancellations.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C1A30>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+____________ test_cancel_after_complete_fill_is_not_found[revised] ____________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94C3170>
+
+    def test_cancel_after_complete_fill_is_not_found(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 2))
+
+tests\test_05_cancellations.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94C3170>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+________ test_repeated_cancellation_is_not_found_second_time[baseline] ________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FE990>
+
+    def test_repeated_cancellation_is_not_found_second_time(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 2))
+
+tests\test_05_cancellations.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FE990>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+________ test_repeated_cancellation_is_not_found_second_time[revised] _________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94869C0>
+
+    def test_repeated_cancellation_is_not_found_second_time(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 2))
+
+tests\test_05_cancellations.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94869C0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_____ test_cancelling_one_order_does_not_disturb_other_priority[baseline] _____
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93B7170>
+
+    def test_cancelling_one_order_does_not_disturb_other_priority(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "first", "BUY", 100, 1))
+
+tests\test_05_cancellations.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93B7170>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'first', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_____ test_cancelling_one_order_does_not_disturb_other_priority[revised] ______
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9495A90>
+
+    def test_cancelling_one_order_does_not_disturb_other_priority(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "first", "BUY", 100, 1))
+
+tests\test_05_cancellations.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9495A90>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'first', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+____ test_incoming_quantity_equals_fills_plus_returned_residual[baseline] _____
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9496B70>
+
+    def test_incoming_quantity_equals_fills_plus_returned_residual(
+        book: OrderBook,
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 101, 2))
+
+tests\test_06_invariants.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD9496B70>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_____ test_incoming_quantity_equals_fills_plus_returned_residual[revised] _____
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94E2840>
+
+    def test_incoming_quantity_equals_fills_plus_returned_residual(
+        book: OrderBook,
+    ) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 101, 2))
+
+tests\test_06_invariants.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94E2840>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+____________ test_maker_loses_exactly_its_fill_quantity[baseline] _____________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94E1640>
+
+    def test_maker_loses_exactly_its_fill_quantity(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 10))
+
+tests\test_06_invariants.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94E1640>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_____________ test_maker_loses_exactly_its_fill_quantity[revised] _____________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94E26F0>
+
+    def test_maker_loses_exactly_its_fill_quantity(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 10))
+
+tests\test_06_invariants.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94E26F0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+________ test_cancellation_quantity_equals_removed_residual[baseline] _________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94E34A0>
+
+    def test_cancellation_quantity_equals_removed_residual(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 10))
+
+tests\test_06_invariants.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94E34A0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_________ test_cancellation_quantity_equals_removed_residual[revised] _________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9497A10>
+
+    def test_cancellation_quantity_equals_removed_residual(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 100, 10))
+
+tests\test_06_invariants.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD9497A10>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+_______ test_proceeds_equal_sum_of_fill_price_times_quantity[baseline] ________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FDFA0>
+
+    def test_proceeds_equal_sum_of_fill_price_times_quantity(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 101, 2))
+
+tests\test_06_invariants.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD93FDFA0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+________ test_proceeds_equal_sum_of_fill_price_times_quantity[revised] ________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93B6D20>
+
+    def test_proceeds_equal_sum_of_fill_price_times_quantity(book: OrderBook) -> None:
+>       book.process_event(limit_event(1, "b1", "BUY", 101, 2))
+
+tests\test_06_invariants.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD93B6D20>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+________ test_resting_book_is_uncrossed_positive_and_unique[baseline] _________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C0EF0>
+
+    def test_resting_book_is_uncrossed_positive_and_unique(book: OrderBook) -> None:
+        events = [
+            limit_event(1, "b1", "BUY", 100, 3),
+            limit_event(2, "a1", "SELL", 105, 2),
+            limit_event(3, "b2", "BUY", 106, 1),
+            limit_event(4, "a2", "SELL", 99, 1),
+        ]
+        for event in events:
+>           book.process_event(event)
+
+tests\test_06_invariants.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94C0EF0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_________ test_resting_book_is_uncrossed_positive_and_unique[revised] _________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94C07D0>
+
+    def test_resting_book_is_uncrossed_positive_and_unique(book: OrderBook) -> None:
+        events = [
+            limit_event(1, "b1", "BUY", 100, 3),
+            limit_event(2, "a1", "SELL", 105, 2),
+            limit_event(3, "b2", "BUY", 106, 1),
+            limit_event(4, "a2", "SELL", 99, 1),
+        ]
+        for event in events:
+>           book.process_event(event)
+
+tests\test_06_invariants.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94C07D0>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("revised dispatcher is not implemented")
+E       NotImplementedError: revised dispatcher is not implemented
+
+src\limit_order_book\revised.py:12: NotImplementedError
+___________________ test_supplied_worked_example[baseline] ____________________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94E2090>
+
+    def test_supplied_worked_example(book: OrderBook) -> None:
+        expected = json.loads((DATA / "worked_expected.json").read_text(encoding="utf-8"))
+    
+>       results = [book.process_event(event) for event in iter_events(DATA / "worked_example.jsonl")]
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_07_worked_example.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/Acer/Documents/Algorithms/AlgorithmsFinance/Submissions/MüllerAlexandra/Assignment1/data/supplied/worked_example.jsonl')
+
+    def iter_events(path: Path) -> Iterator[dict[str, object]]:
+        """Yield JSON events from a plain or gzip-compressed JSON Lines file."""
+    
+>       raise NotImplementedError("event stream reading is not implemented")
+E       NotImplementedError: event stream reading is not implemented
+
+src\limit_order_book\stream_io.py:14: NotImplementedError
+____________________ test_supplied_worked_example[revised] ____________________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD94E3AD0>
+
+    def test_supplied_worked_example(book: OrderBook) -> None:
+        expected = json.loads((DATA / "worked_expected.json").read_text(encoding="utf-8"))
+    
+>       results = [book.process_event(event) for event in iter_events(DATA / "worked_example.jsonl")]
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_07_worked_example.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/Acer/Documents/Algorithms/AlgorithmsFinance/Submissions/MüllerAlexandra/Assignment1/data/supplied/worked_example.jsonl')
+
+    def iter_events(path: Path) -> Iterator[dict[str, object]]:
+        """Yield JSON events from a plain or gzip-compressed JSON Lines file."""
+    
+>       raise NotImplementedError("event stream reading is not implemented")
+E       NotImplementedError: event stream reading is not implemented
+
+src\limit_order_book\stream_io.py:14: NotImplementedError
+_________ test_versions_agree_after_every_event_on_small_mixed_stream _________
+
+    def test_versions_agree_after_every_event_on_small_mixed_stream() -> None:
+        events = [
+            limit_event(1, "b1", "BUY", 100, 4),
+            limit_event(2, "b2", "BUY", 100, 2),
+            limit_event(3, "a1", "SELL", 105, 3),
+            market_sell_event(4, "s1", 5),
+            cancel_event(5, "b2"),
+            limit_event(6, "b3", "BUY", 106, 4),
+            limit_event(7, "a2", "SELL", 104, 6),
+            cancel_event(8, "unknown"),
+        ]
+        baseline = BaselineOrderBook()
+        revised = RevisedOrderBook()
+    
+        for event in events:
+>           assert baseline.process_event(event) == revised.process_event(event)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_08_differential.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94E3230>
+event = {'seq': 1, 'event_id': 'event1', 'type': 'LIMIT', 'order_id': 'b1', ...}
+
+    def process_event(self, event: Event) -> EventResult:
+>       raise NotImplementedError("baseline dispatcher is not implemented")
+E       NotImplementedError: baseline dispatcher is not implemented
+
+src\limit_order_book\baseline.py:12: NotImplementedError
+_________________ test_plain_worked_stream_is_loaded_in_order _________________
+
+    def test_plain_worked_stream_is_loaded_in_order() -> None:
+>       events = list(iter_events(DATA / "worked_example.jsonl"))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_09_stream_io.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/Acer/Documents/Algorithms/AlgorithmsFinance/Submissions/MüllerAlexandra/Assignment1/data/supplied/worked_example.jsonl')
+
+    def iter_events(path: Path) -> Iterator[dict[str, object]]:
+        """Yield JSON events from a plain or gzip-compressed JSON Lines file."""
+    
+>       raise NotImplementedError("event stream reading is not implemented")
+E       NotImplementedError: event stream reading is not implemented
+
+src\limit_order_book\stream_io.py:14: NotImplementedError
+_____________________ test_gzip_stream_is_loaded_in_order _____________________
+
+    def test_gzip_stream_is_loaded_in_order() -> None:
+>       events = list(iter_events(DATA / "cancel_churn_10000.jsonl.gz"))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_09_stream_io.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/Acer/Documents/Algorithms/AlgorithmsFinance/Submissions/MüllerAlexandra/Assignment1/data/supplied/cancel_churn_10000.jsonl.gz')
+
+    def iter_events(path: Path) -> Iterator[dict[str, object]]:
+        """Yield JSON events from a plain or gzip-compressed JSON Lines file."""
+    
+>       raise NotImplementedError("event stream reading is not implemented")
+E       NotImplementedError: event stream reading is not implemented
+
+src\limit_order_book\stream_io.py:14: NotImplementedError
+_____________ test_replay_returns_one_result_per_event[baseline] ______________
+
+book = <limit_order_book.baseline.BaselineOrderBook object at 0x0000026AD94E0650>
+
+    def test_replay_returns_one_result_per_event(book: OrderBook) -> None:
+>       events = list(iter_events(DATA / "worked_example.jsonl"))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_09_stream_io.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/Acer/Documents/Algorithms/AlgorithmsFinance/Submissions/MüllerAlexandra/Assignment1/data/supplied/worked_example.jsonl')
+
+    def iter_events(path: Path) -> Iterator[dict[str, object]]:
+        """Yield JSON events from a plain or gzip-compressed JSON Lines file."""
+    
+>       raise NotImplementedError("event stream reading is not implemented")
+E       NotImplementedError: event stream reading is not implemented
+
+src\limit_order_book\stream_io.py:14: NotImplementedError
+______________ test_replay_returns_one_result_per_event[revised] ______________
+
+book = <limit_order_book.revised.RevisedOrderBook object at 0x0000026AD95084D0>
+
+    def test_replay_returns_one_result_per_event(book: OrderBook) -> None:
+>       events = list(iter_events(DATA / "worked_example.jsonl"))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_09_stream_io.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/Acer/Documents/Algorithms/AlgorithmsFinance/Submissions/MüllerAlexandra/Assignment1/data/supplied/worked_example.jsonl')
+
+    def iter_events(path: Path) -> Iterator[dict[str, object]]:
+        """Yield JSON events from a plain or gzip-compressed JSON Lines file."""
+    
+>       raise NotImplementedError("event stream reading is not implemented")
+E       NotImplementedError: event stream reading is not implemented
+
+src\limit_order_book\stream_io.py:14: NotImplementedError
+=========================== short test summary info ===========================
+FAILED tests/test_01_interface.py::test_fresh_book_is_empty[baseline] - NotIm...
+FAILED tests/test_01_interface.py::test_fresh_book_is_empty[revised] - NotImp...
+FAILED tests/test_01_interface.py::test_limit_result_has_required_fields[baseline]
+FAILED tests/test_01_interface.py::test_limit_result_has_required_fields[revised]
+FAILED tests/test_01_interface.py::test_market_sell_result_has_required_fields[baseline]
+FAILED tests/test_01_interface.py::test_market_sell_result_has_required_fields[revised]
+FAILED tests/test_01_interface.py::test_cancellation_result_has_required_fields[baseline]
+FAILED tests/test_01_interface.py::test_cancellation_result_has_required_fields[revised]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-unknown-type]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-unknown-side]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-zero-price]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-negative-price]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-noninteger-price]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-zero-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-negative-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-noninteger-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-boolean-is-not-integer]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-zero-market-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-missing-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-missing-cancel-target]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[baseline-missing-limit-side]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-unknown-type]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-unknown-side]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-zero-price]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-negative-price]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-noninteger-price]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-zero-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-negative-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-noninteger-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-boolean-is-not-integer]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-zero-market-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-missing-quantity]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-missing-cancel-target]
+FAILED tests/test_02_validation.py::test_invalid_event_is_rejected_without_state_change[revised-missing-limit-side]
+FAILED tests/test_02_validation.py::test_sequence_must_be_positive_integer[baseline]
+FAILED tests/test_02_validation.py::test_sequence_must_be_positive_integer[revised]
+FAILED tests/test_02_validation.py::test_sequence_must_not_accept_nonintegers[baseline-float]
+FAILED tests/test_02_validation.py::test_sequence_must_not_accept_nonintegers[baseline-boolean]
+FAILED tests/test_02_validation.py::test_sequence_must_not_accept_nonintegers[revised-float]
+FAILED tests/test_02_validation.py::test_sequence_must_not_accept_nonintegers[revised-boolean]
+FAILED tests/test_02_validation.py::test_rejected_event_does_not_advance_last_accepted_sequence[baseline]
+FAILED tests/test_02_validation.py::test_rejected_event_does_not_advance_last_accepted_sequence[revised]
+FAILED tests/test_02_validation.py::test_duplicate_live_order_identifier_is_rejected[baseline]
+FAILED tests/test_02_validation.py::test_duplicate_live_order_identifier_is_rejected[revised]
+FAILED tests/test_02_validation.py::test_unknown_cancellation_is_valid_and_advances_sequence[baseline]
+FAILED tests/test_02_validation.py::test_unknown_cancellation_is_valid_and_advances_sequence[revised]
+FAILED tests/test_03_limit_matching.py::test_noncrossing_orders_rest_in_canonical_order[baseline]
+FAILED tests/test_03_limit_matching.py::test_noncrossing_orders_rest_in_canonical_order[revised]
+FAILED tests/test_03_limit_matching.py::test_crossing_buy_executes_at_resting_ask_and_rests_residual[baseline]
+FAILED tests/test_03_limit_matching.py::test_crossing_buy_executes_at_resting_ask_and_rests_residual[revised]
+FAILED tests/test_03_limit_matching.py::test_crossing_sell_executes_at_resting_bid_and_rests_residual[baseline]
+FAILED tests/test_03_limit_matching.py::test_crossing_sell_executes_at_resting_bid_and_rests_residual[revised]
+FAILED tests/test_03_limit_matching.py::test_crossing_limit_uses_best_price_then_fifo[baseline]
+FAILED tests/test_03_limit_matching.py::test_crossing_limit_uses_best_price_then_fifo[revised]
+FAILED tests/test_03_limit_matching.py::test_identifier_spelling_does_not_override_arrival_priority[baseline]
+FAILED tests/test_03_limit_matching.py::test_identifier_spelling_does_not_override_arrival_priority[revised]
+FAILED tests/test_04_market_sells.py::test_market_sell_relative_to_available_depth[baseline-smaller-than-depth]
+FAILED tests/test_04_market_sells.py::test_market_sell_relative_to_available_depth[baseline-equal-to-depth]
+FAILED tests/test_04_market_sells.py::test_market_sell_relative_to_available_depth[baseline-larger-than-depth]
+FAILED tests/test_04_market_sells.py::test_market_sell_relative_to_available_depth[revised-smaller-than-depth]
+FAILED tests/test_04_market_sells.py::test_market_sell_relative_to_available_depth[revised-equal-to-depth]
+FAILED tests/test_04_market_sells.py::test_market_sell_relative_to_available_depth[revised-larger-than-depth]
+FAILED tests/test_04_market_sells.py::test_market_sell_uses_best_bid_then_fifo[baseline]
+FAILED tests/test_04_market_sells.py::test_market_sell_uses_best_bid_then_fifo[revised]
+FAILED tests/test_04_market_sells.py::test_partial_maker_retains_priority_for_later_sale[baseline]
+FAILED tests/test_04_market_sells.py::test_partial_maker_retains_priority_for_later_sale[revised]
+FAILED tests/test_04_market_sells.py::test_long_equal_price_queue_preserves_all_arrivals[baseline]
+FAILED tests/test_04_market_sells.py::test_long_equal_price_queue_preserves_all_arrivals[revised]
+FAILED tests/test_05_cancellations.py::test_cancel_active_order_removes_full_residual[baseline]
+FAILED tests/test_05_cancellations.py::test_cancel_active_order_removes_full_residual[revised]
+FAILED tests/test_05_cancellations.py::test_cancel_after_partial_fill_removes_only_remaining_quantity[baseline]
+FAILED tests/test_05_cancellations.py::test_cancel_after_partial_fill_removes_only_remaining_quantity[revised]
+FAILED tests/test_05_cancellations.py::test_cancel_after_complete_fill_is_not_found[baseline]
+FAILED tests/test_05_cancellations.py::test_cancel_after_complete_fill_is_not_found[revised]
+FAILED tests/test_05_cancellations.py::test_repeated_cancellation_is_not_found_second_time[baseline]
+FAILED tests/test_05_cancellations.py::test_repeated_cancellation_is_not_found_second_time[revised]
+FAILED tests/test_05_cancellations.py::test_cancelling_one_order_does_not_disturb_other_priority[baseline]
+FAILED tests/test_05_cancellations.py::test_cancelling_one_order_does_not_disturb_other_priority[revised]
+FAILED tests/test_06_invariants.py::test_incoming_quantity_equals_fills_plus_returned_residual[baseline]
+FAILED tests/test_06_invariants.py::test_incoming_quantity_equals_fills_plus_returned_residual[revised]
+FAILED tests/test_06_invariants.py::test_maker_loses_exactly_its_fill_quantity[baseline]
+FAILED tests/test_06_invariants.py::test_maker_loses_exactly_its_fill_quantity[revised]
+FAILED tests/test_06_invariants.py::test_cancellation_quantity_equals_removed_residual[baseline]
+FAILED tests/test_06_invariants.py::test_cancellation_quantity_equals_removed_residual[revised]
+FAILED tests/test_06_invariants.py::test_proceeds_equal_sum_of_fill_price_times_quantity[baseline]
+FAILED tests/test_06_invariants.py::test_proceeds_equal_sum_of_fill_price_times_quantity[revised]
+FAILED tests/test_06_invariants.py::test_resting_book_is_uncrossed_positive_and_unique[baseline]
+FAILED tests/test_06_invariants.py::test_resting_book_is_uncrossed_positive_and_unique[revised]
+FAILED tests/test_07_worked_example.py::test_supplied_worked_example[baseline]
+FAILED tests/test_07_worked_example.py::test_supplied_worked_example[revised]
+FAILED tests/test_08_differential.py::test_versions_agree_after_every_event_on_small_mixed_stream
+FAILED tests/test_09_stream_io.py::test_plain_worked_stream_is_loaded_in_order
+FAILED tests/test_09_stream_io.py::test_gzip_stream_is_loaded_in_order - NotI...
+FAILED tests/test_09_stream_io.py::test_replay_returns_one_result_per_event[baseline]
+FAILED tests/test_09_stream_io.py::test_replay_returns_one_result_per_event[revised]
+======================== 95 failed, 2 passed in 0.35s =========================
+
+=== stderr ===

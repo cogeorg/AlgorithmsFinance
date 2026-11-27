@@ -1,0 +1,32 @@
+n=  1000 q=    1 done
+n=  1000 q=    3 done
+n=  1000 q=   10 done
+n=  1000 q=   30 done
+n=  1000 q=  100 done
+n=  1000 q=  300 done
+n=  1000 q= 1000 done
+n=  1000 binary_v2 break-even q* =     5.71
+n=  1000 hash      break-even q* =     0.93
+n= 10000 q=    1 done
+n= 10000 q=    3 done
+n= 10000 q=   10 done
+n= 10000 q=   30 done
+n= 10000 q=  100 done
+n= 10000 q=  300 done
+n= 10000 q= 1000 done
+n= 10000 binary_v2 break-even q* =     9.70
+n= 10000 hash      break-even q* =     3.02
+n=100000 q=    1 done
+n=100000 q=    3 done
+n=100000 q=   10 done
+n=100000 q=   30 done
+n=100000 q=  100 done
+n=100000 q=  300 done
+n=100000 q= 1000 done
+n=100000 binary_v2 break-even q* =    13.21
+n=100000 hash      break-even q* =     3.57
+saved /tmp/hj/Submissions/HuangJiaxin/results/breakeven_curve.csv, /tmp/hj/Submissions/HuangJiaxin/results/breakeven_points.csv
+
+real	0m19.014s
+user	0m18.898s
+sys	0m0.025s

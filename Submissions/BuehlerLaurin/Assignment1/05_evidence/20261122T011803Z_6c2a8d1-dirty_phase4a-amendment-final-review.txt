@@ -1,0 +1,18 @@
+label: phase4a-amendment-final-review
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/review_amendment.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 6c2a8d19a914e61ba1ff1d9b5904a18fdf6f19ca
+dirty: True
+python: 3.13.15
+utc: 20261122T011803Z
+exit_code: 0
+duration_s: 1.06
+------------------------------------------------------------
+Engine sources, original expectations/contracts and committed smoke results unchanged.
+All existing pipeline test bodies/decorators preserved; new assertions only.
+Fresh suite case counts: {"TestDifferential_B": 1, "TestDifferential_B2": 1, "TestDifferential_B3": 1, "test_b_internal": 17, "test_bench_pipeline": 30, "test_contract": 256, "test_mutants": 22, "test_own_datasets": 4, "test_replay": 15, "test_validation": 184}
+Archived smoke count/bytes intact; hash-preserving move proved in archive evidence.
+B runtime projections unchanged; A projections reduced; storage arithmetic/policy verified.
+PowerShell syntax PASS (wrapper not executed)
+Scoped whitespace and changed-path review PASS.
+RESULT: PASS (declared protocol, protected sources, archive and artifact estimates; no long measurement executed)

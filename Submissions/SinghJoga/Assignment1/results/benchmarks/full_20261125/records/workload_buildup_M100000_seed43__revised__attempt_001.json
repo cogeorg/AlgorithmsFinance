@@ -1,0 +1,1599 @@
+{
+  "artifact_directory": "results\\benchmarks\\full_20261125\\artifacts\\workload_buildup_M100000_seed43__revised__attempt_001",
+  "attempt": 1,
+  "case": {
+    "case_id": "workload_buildup_M100000_seed43",
+    "event_count": 100000,
+    "experiment": "workload_replay",
+    "generator_settings": {
+      "events": 100000,
+      "generator": "generate_orders.py",
+      "levels": 1000,
+      "scenario": "buildup",
+      "seed": 43,
+      "source": "generated"
+    },
+    "input_checksums": {
+      "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+    },
+    "input_paths": [
+      "results\\benchmarks\\full_20261125\\inputs\\buildup_M100000_seed43_levels1000.jsonl.gz"
+    ],
+    "profile": false,
+    "scenario": "buildup",
+    "seed": 43
+  },
+  "config_id": "workload_buildup_M100000_seed43__revised",
+  "duration_until_stop_seconds": 300.0281860998366,
+  "failure": {
+    "duration_until_stop_seconds": 300.0281860998366,
+    "message": "worker stopped at its enforced wall-time limit",
+    "peak_working_set_bytes_observed": 260280320
+  },
+  "memory_limit_mib": 4096,
+  "peak_working_set_bytes_observed": 260280320,
+  "progress_file": "results\\benchmarks\\full_20261125\\records\\workload_buildup_M100000_seed43__revised__attempt_001.progress.jsonl",
+  "rows": [
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 0.8291038000024855,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "parsed_event_count": 100000,
+      "phase": "input_read_parse",
+      "repeat": 1,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 0.5550434000324458,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "parsed_event_count": 100000,
+      "phase": "input_read_parse",
+      "repeat": 2,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 0.7528987999539822,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "parsed_event_count": 100000,
+      "phase": "input_read_parse",
+      "repeat": 3,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 0.9109507999382913,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "parsed_event_count": 100000,
+      "phase": "input_read_parse",
+      "repeat": 4,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 0.6943441999610513,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "parsed_event_count": 100000,
+      "phase": "input_read_parse",
+      "repeat": 5,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 0.7528987999539822,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "median_seconds": 0.7528987999539822,
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "input_read_parse_summary",
+      "raw_repeats_seconds": [
+        0.8291038000024855,
+        0.5550434000324458,
+        0.7528987999539822,
+        0.9109507999382913,
+        0.6943441999610513
+      ],
+      "repeat": null,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 132819.97528235146,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 2.7997884899377823e-06,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "empty_engine_construction",
+      "repeat": 1,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 2.200016751885414e-06,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "empty_engine_construction",
+      "repeat": 2,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 1.600012183189392e-06,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "empty_engine_construction",
+      "repeat": 3,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 1.200009137392044e-06,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "empty_engine_construction",
+      "repeat": 4,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 1.100124791264534e-06,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "empty_engine_construction",
+      "repeat": 5,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 1.600012183189392e-06,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "median_seconds": 1.600012183189392e-06,
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "empty_engine_construction_summary",
+      "raw_repeats_seconds": [
+        2.7997884899377823e-06,
+        2.200016751885414e-06,
+        1.600012183189392e-06,
+        1.200009137392044e-06,
+        1.100124791264534e-06
+      ],
+      "repeat": null,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": null,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 0.96374769997783,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "engine_replay",
+      "repeat": 1,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 103761.59652811663,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 0.8285945998504758,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "engine_replay",
+      "repeat": 2,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 120686.28013994482,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 0.9331232002004981,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "engine_replay",
+      "repeat": 3,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 107166.98500103012,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 0.7905462000053376,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "engine_replay",
+      "repeat": 4,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 126494.82092169291,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 0.8062613001093268,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "engine_replay",
+      "repeat": 5,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 124029.26940241367,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 0.8285945998504758,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "median_seconds": 0.8285945998504758,
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "engine_replay_summary",
+      "raw_repeats_seconds": [
+        0.96374769997783,
+        0.8285945998504758,
+        0.9331232002004981,
+        0.7905462000053376,
+        0.8062613001093268
+      ],
+      "repeat": null,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 120686.28013994482,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 1.5282382001169026,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "parsed_event_count": 100000,
+      "phase": "total_application",
+      "repeat": 1,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 65434.82553462575,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 1.5793211001437157,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "parsed_event_count": 100000,
+      "phase": "total_application",
+      "repeat": 2,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 63318.34608611267,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 1.5563910000491887,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "parsed_event_count": 100000,
+      "phase": "total_application",
+      "repeat": 3,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 64251.206796261074,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 1.5111694000661373,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "parsed_event_count": 100000,
+      "phase": "total_application",
+      "repeat": 4,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 66173.91802376586,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 1.5040319000836462,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "parsed_event_count": 100000,
+      "phase": "total_application",
+      "repeat": 5,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 66487.95148190577,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 1.5282382001169026,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "median_seconds": 1.5282382001169026,
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "phase": "total_application_summary",
+      "raw_repeats_seconds": [
+        1.5282382001169026,
+        1.5793211001437157,
+        1.5563910000491887,
+        1.5111694000661373,
+        1.5040319000836462
+      ],
+      "repeat": null,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "completed",
+      "throughput_events_per_second": 65434.82553462575,
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "3fdb7a3d356544d76894c7778ea0f7be8295c2bdc8185dc17e2513c490fdb4eb",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "aa88c4cd76d8f3b0d26bdb47c68e290ea184e8aa352ee939f7999f03243ff09b",
+        "test_benchmark_tools.py": "27838d6bb4e4ba24620a8545cf2147dc21ee284e6ceb5b68411dfc8ebae8690a",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "duration_until_stop_seconds": 300.0281860998366,
+      "elapsed_seconds": null,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 100000,
+      "experiment": "workload_replay",
+      "fill_count": null,
+      "generator_settings": {
+        "events": 100000,
+        "generator": "generate_orders.py",
+        "levels": 1000,
+        "scenario": "buildup",
+        "seed": 43,
+        "source": "generated"
+      },
+      "input_checksums": {
+        "buildup_M100000_seed43_levels1000.jsonl.gz": "d5d9390d506c3a8c08a8538fd338790cfde0bc3c143f120569f083f8f2e371d5"
+      },
+      "memory_limit_mib": 4096,
+      "occupied_price_level_peak": null,
+      "peak_working_set_bytes_observed": 260280320,
+      "phase": "worker_stop",
+      "repeat": null,
+      "requested_sell_qty_units": null,
+      "scenario": "buildup",
+      "seed": 43,
+      "status": "stopped_timeout",
+      "time_limit_seconds": 300,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    }
+  ],
+  "status": "stopped_timeout",
+  "time_limit_seconds": 300,
+  "version": "revised"
+}

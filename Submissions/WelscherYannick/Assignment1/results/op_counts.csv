@@ -1,0 +1,31 @@
+run_kind,version,scenario,seed,events,levels,phase,repeat,elapsed_s,status,active_orders_peak,price_levels_peak,fills,requested_qty_units,unfilled_qty_units,makers_touched,levels_visited,work_steps,traced_peak_bytes,traced_current_bytes,note
+counts,B,buildup,42,1000,1000,replay,,,,,,0,,,,,81551,,,"events 1000 (O(1) dict ops each) + fills 0 + keys shifted 80551; levels created 805, removed by cancel 0"
+counts,A,buildup,42,1000,1000,replay,,,,,,0,,,,,749464,,,list entries visited by linear scans; per event 749.5
+counts,B,crowded,42,1000,1000,replay,,,,,,0,,,,,1009,,,"events 1000 (O(1) dict ops each) + fills 0 + keys shifted 9; levels created 8, removed by cancel 0"
+counts,A,crowded,42,1000,1000,replay,,,,,,0,,,,,749100,,,list entries visited by linear scans; per event 749.1
+counts,B,mixed,42,1000,1000,replay,,,,,,374,,,,,9824,,,"events 1000 (O(1) dict ops each) + fills 374 + keys shifted 8450; levels created 463, removed by cancel 66"
+counts,A,mixed,42,1000,1000,replay,,,,,,374,,,,,100014,,,list entries visited by linear scans; per event 100.0
+counts,B,sweep,42,1000,1000,replay,,,,,,496,,,,,57327,,,"events 1000 (O(1) dict ops each) + fills 496 + keys shifted 55831; levels created 661, removed by cancel 0"
+counts,A,sweep,42,1000,1000,replay,,,,,,496,,,,,679327,,,list entries visited by linear scans; per event 679.3
+counts,B,cancel_churn,42,1000,1000,replay,,,,,,0,,,,,1000,,,"events 1000 (O(1) dict ops each) + fills 0 + keys shifted 0; levels created 500, removed by cancel 500"
+counts,A,cancel_churn,42,1000,1000,replay,,,,,,0,,,,,500,,,list entries visited by linear scans; per event 0.5
+counts,B,buildup,42,10000,1000,replay,,,,,,0,,,,,502152,,,"events 10000 (O(1) dict ops each) + fills 0 + keys shifted 492152; levels created 1977, removed by cancel 0"
+counts,A,buildup,42,10000,1000,replay,,,,,,0,,,,,74994375,,,list entries visited by linear scans; per event 7499.4
+counts,B,crowded,42,10000,1000,replay,,,,,,0,,,,,10009,,,"events 10000 (O(1) dict ops each) + fills 0 + keys shifted 9; levels created 8, removed by cancel 0"
+counts,A,crowded,42,10000,1000,replay,,,,,,0,,,,,74993064,,,list entries visited by linear scans; per event 7499.3
+counts,B,mixed,42,10000,1000,replay,,,,,,3926,,,,,240114,,,"events 10000 (O(1) dict ops each) + fills 3926 + keys shifted 226188; levels created 4082, removed by cancel 290"
+counts,A,mixed,42,10000,1000,replay,,,,,,3926,,,,,10204537,,,list entries visited by linear scans; per event 1020.5
+counts,B,sweep,42,10000,1000,replay,,,,,,5035,,,,,500641,,,"events 10000 (O(1) dict ops each) + fills 5035 + keys shifted 485606; levels created 1959, removed by cancel 0"
+counts,A,sweep,42,10000,1000,replay,,,,,,5035,,,,,68079381,,,list entries visited by linear scans; per event 6807.9
+counts,B,cancel_churn,42,10000,1000,replay,,,,,,0,,,,,10000,,,"events 10000 (O(1) dict ops each) + fills 0 + keys shifted 0; levels created 5000, removed by cancel 5000"
+counts,A,cancel_churn,42,10000,1000,replay,,,,,,0,,,,,5000,,,list entries visited by linear scans; per event 0.5
+counts,B,buildup,42,100000,1000,replay,,,,,,0,,,,,605052,,,"events 100000 (O(1) dict ops each) + fills 0 + keys shifted 505052; levels created 2000, removed by cancel 0"
+counts,A,buildup,42,100000,1000,replay,,,not_attempted,,,0,,,,,,,,counting run skipped: replay is O(M^2) for this scenario
+counts,B,crowded,42,100000,1000,replay,,,,,,0,,,,,100009,,,"events 100000 (O(1) dict ops each) + fills 0 + keys shifted 9; levels created 8, removed by cancel 0"
+counts,A,crowded,42,100000,1000,replay,,,not_attempted,,,0,,,,,,,,counting run skipped: replay is O(M^2) for this scenario
+counts,B,mixed,42,100000,1000,replay,,,,,,38988,,,,,487135,,,"events 100000 (O(1) dict ops each) + fills 38988 + keys shifted 348147; levels created 30804, removed by cancel 358"
+counts,A,mixed,42,100000,1000,replay,,,,,,38988,,,,,1010497919,,,list entries visited by linear scans; per event 10105.0
+counts,B,sweep,42,100000,1000,replay,,,,,,50035,,,,,655087,,,"events 100000 (O(1) dict ops each) + fills 50035 + keys shifted 505052; levels created 2000, removed by cancel 0"
+counts,A,sweep,42,100000,1000,replay,,,not_attempted,,,50035,,,,,,,,counting run skipped: replay is O(M^2) for this scenario
+counts,B,cancel_churn,42,100000,1000,replay,,,,,,0,,,,,100000,,,"events 100000 (O(1) dict ops each) + fills 0 + keys shifted 0; levels created 50000, removed by cancel 50000"
+counts,A,cancel_churn,42,100000,1000,replay,,,,,,0,,,,,50000,,,list entries visited by linear scans; per event 0.5

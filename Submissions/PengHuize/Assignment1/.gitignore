@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+data/*_100000.jsonl.gz
+data/*_100000.jsonl.gz.metadata.json
+data/*_1000000.jsonl.gz
+data/*_1000000.jsonl.gz.metadata.json

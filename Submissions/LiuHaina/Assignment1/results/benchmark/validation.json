@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "primary_cases": 90,
+  "primary_repeat_rows": 450,
+  "primary_statuses": {
+    "completed": 360,
+    "stopped_time_limit": 90
+  },
+  "liquidation_attempts": 180,
+  "latency_files": 90,
+  "latency_samples": 2292107,
+  "all_recorded_source_hashes_match": true,
+  "all_generated_input_hashes_match": true,
+  "same_resource_limits": true,
+  "all_saved_medians_and_quantiles_match_raw": true
+}

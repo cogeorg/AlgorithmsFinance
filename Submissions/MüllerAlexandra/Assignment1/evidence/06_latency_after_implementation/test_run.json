@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "stage": "06_latency_after_implementation",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_13_latency_measurement.py"
+  ],
+  "working_directory": ".",
+  "started_utc": "2026-11-23T12:27:13.317794+00:00",
+  "finished_utc": "2026-11-23T12:27:14.301560+00:00",
+  "elapsed_seconds": 0.9831741999369115,
+  "exit_code": 0,
+  "python_version": "3.12.10",
+  "python_implementation": "CPython",
+  "pytest_version": "9.2.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git": {
+    "branch": "assignment1-mueller-alexandra",
+    "head": "7cfef398ed786225d4f18e9519ea1ca139e612ba",
+    "status_before_evidence_files": "M src/limit_order_book/benchmarking.py\n M src/limit_order_book/measurement.py\n?? ../phase2_audit_liuhaina/",
+    "clean_before_evidence_files": false
+  }
+}

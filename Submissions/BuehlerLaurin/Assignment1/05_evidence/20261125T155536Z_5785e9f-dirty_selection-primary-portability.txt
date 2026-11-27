@@ -1,0 +1,12 @@
+label: selection-primary-portability
+command: ./.venv/Scripts/python.exe -m pytest 02_tests/test_submission_robustness.py::test_every_tab_in_temporary_submission_copy_without_git -q --tb=short --basetemp=scratch/pytest-selection-primary-portability --junitxml=05_evidence/selection-primary-portability-tests.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 5785e9fa99fce4cfebd6c386e8d8d8b1670754d1
+dirty: True
+python: 3.13.15
+utc: 20261125T155536Z
+exit_code: 0
+duration_s: 21.39
+------------------------------------------------------------
+..                                                                       [100%]
+2 passed in 20.36s

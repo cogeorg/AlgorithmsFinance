@@ -1,0 +1,77 @@
+# commit 87ed911f839877c197cd9458b2cd231537955a17; 2026-11-23T16:46:11Z; python -B 07_attack/cli_probe_final.py
+OK    B        | control | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B3r      | control | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B3r_fast | control | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B == B3r byte-identical stdout | control
+OK    B        | control gz | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B3r      | control gz | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B3r_fast | control gz | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B == B3r byte-identical stdout | control gz
+OK    B        | UTF-8 BOM plain | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B3r      | UTF-8 BOM plain | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B3r_fast | UTF-8 BOM plain | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B == B3r byte-identical stdout | UTF-8 BOM plain
+OK    B        | UTF-8 BOM gz | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B3r      | UTF-8 BOM gz | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B3r_fast | UTF-8 BOM gz | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B == B3r byte-identical stdout | UTF-8 BOM gz
+OK    B        | BOM + CRLF | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B3r      | BOM + CRLF | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B3r_fast | BOM + CRLF | exit 0 | 5 expected, 5 printed, statuses ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | 
+OK    B == B3r byte-identical stdout | BOM + CRLF
+OK    B        | qty 4301 digits | exit 0 | 3 expected, 3 printed, statuses ['resting', 'resting', 'resting'] | 
+OK    B3r      | qty 4301 digits | exit 0 | 3 expected, 3 printed, statuses ['resting', 'resting', 'resting'] | 
+OK    B3r_fast | qty 4301 digits | exit 0 | 3 expected, 3 printed, statuses ['resting', 'resting', 'resting'] | 
+OK    B == B3r byte-identical stdout | qty 4301 digits
+OK    B        | qty 100k digits, crossed and partly filled | exit 0 | 4 expected, 4 printed, statuses ['resting', 'filled', 'filled', 'cancelled'] | 
+OK    B3r      | qty 100k digits, crossed and partly filled | exit 0 | 4 expected, 4 printed, statuses ['resting', 'filled', 'filled', 'cancelled'] | 
+OK    B3r_fast | qty 100k digits, crossed and partly filled | exit 0 | 4 expected, 4 printed, statuses ['resting', 'filled', 'filled', 'cancelled'] | 
+OK    B == B3r byte-identical stdout | qty 100k digits, crossed and partly filled
+OK    B        | qty 1M digits | exit 0 | 2 expected, 2 printed, statuses ['resting', 'filled'] | 
+OK    B3r      | qty 1M digits | exit 0 | 2 expected, 2 printed, statuses ['resting', 'filled'] | 
+OK    B3r_fast | qty 1M digits | exit 0 | 2 expected, 2 printed, statuses ['resting', 'filled'] | 
+OK    B == B3r byte-identical stdout | qty 1M digits
+OK    B        | price 100k digits both sides | exit 0 | 3 expected, 3 printed, statuses ['resting', 'filled', 'filled'] | 
+OK    B3r      | price 100k digits both sides | exit 0 | 3 expected, 3 printed, statuses ['resting', 'filled', 'filled'] | 
+OK    B3r_fast | price 100k digits both sides | exit 0 | 3 expected, 3 printed, statuses ['resting', 'filled', 'filled'] | 
+OK    B == B3r byte-identical stdout | price 100k digits both sides
+OK    B        | seq 100k digits then smaller (nonincreasing) | exit 0 | 3 expected, 3 printed, statuses ['resting', 'rejected', 'resting'] | 
+OK    B3r      | seq 100k digits then smaller (nonincreasing) | exit 0 | 3 expected, 3 printed, statuses ['resting', 'rejected', 'resting'] | 
+OK    B3r_fast | seq 100k digits then smaller (nonincreasing) | exit 0 | 3 expected, 3 printed, statuses ['resting', 'rejected', 'resting'] | 
+OK    B == B3r byte-identical stdout | seq 100k digits then smaller (nonincreasing)
+OK    B        | negative 5000-digit qty (bad_qty) | exit 0 | 2 expected, 2 printed, statuses ['rejected', 'resting'] | 
+OK    B3r      | negative 5000-digit qty (bad_qty) | exit 0 | 2 expected, 2 printed, statuses ['rejected', 'resting'] | 
+OK    B3r_fast | negative 5000-digit qty (bad_qty) | exit 0 | 2 expected, 2 printed, statuses ['rejected', 'resting'] | 
+OK    B == B3r byte-identical stdout | negative 5000-digit qty (bad_qty)
+OK    B        | BOM + huge ints gz | exit 0 | 2 expected, 2 printed, statuses ['resting', 'partial'] | 
+OK    B3r      | BOM + huge ints gz | exit 0 | 2 expected, 2 printed, statuses ['resting', 'partial'] | 
+OK    B3r_fast | BOM + huge ints gz | exit 0 | 2 expected, 2 printed, statuses ['resting', 'partial'] | 
+OK    B == B3r byte-identical stdout | BOM + huge ints gz
+INFO  B        | UTF-16 file | exit 1 | results [] | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+INFO  B3r_fast | UTF-16 file | exit 1 | results [] | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+INFO  B        | double BOM | exit 1 | results [] | json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+INFO  B3r_fast | double BOM | exit 1 | results [] | json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+INFO  B        | BOM in the middle of the file | exit 1 | results ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+INFO  B3r_fast | BOM in the middle of the file | exit 1 | results ['resting', 'filled', 'filled', 'cancelled', 'not_found'] | json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+INFO  B        | malformed JSON line in the middle | exit 1 | results ['resting'] | json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+INFO  B3r_fast | malformed JSON line in the middle | exit 1 | results ['resting'] | json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+INFO  B        | invalid UTF-8 byte | exit 1 | results [] | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 137: invalid start byte
+INFO  B3r_fast | invalid UTF-8 byte | exit 1 | results [] | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 137: invalid start byte
+INFO  B        | empty file | exit 0 | results [] | 
+INFO  B3r_fast | empty file | exit 0 | results [] | 
+INFO  B        | BOM only | exit 0 | results [] | 
+INFO  B3r_fast | BOM only | exit 0 | results [] | 
+INFO  args ['--version', 'b'] | exit 2 | 0 lines | replay.py: error: argument --version: invalid choice: 'b' (choose from 'A', 'B', 'B1', 'B2', 'B3', 'B3r', 'B3r_fast')
+INFO  args ['--version', 'B4'] | exit 2 | 0 lines | replay.py: error: argument --version: invalid choice: 'B4' (choose from 'A', 'B', 'B1', 'B2', 'B3', 'B3r', 'B3r_fast')
+INFO  args [] | exit 0 | 5 lines | 
+total spec-case breaks 0
+exit 0
+sorting: seq order is validated by the engine, and rejections stay in place.
+
+positional arguments:
+  path
+
+options:
+  -h, --help            show this help message and exit
+  --version {A,B,B1,B2,B3,B3r,B3r_fast}
+INFO  replay without --version uses the default 'A' (01_code/lob/replay.py:35 default="A"), not the final B

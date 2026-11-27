@@ -1,0 +1,5 @@
+version,scenario,events,reason
+A,buildup,100000,exceeded 30 s limit
+A,crowded,100000,exceeded 30 s limit
+A,mixed,100000,exceeded 30 s limit
+A,sweep,100000,exceeded 30 s limit

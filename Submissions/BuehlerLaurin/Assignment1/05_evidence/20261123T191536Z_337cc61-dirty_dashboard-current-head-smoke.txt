@@ -1,0 +1,12 @@
+label: dashboard-current-head-smoke
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py -q --tb=short --basetemp=scratch/pytest-dashboard-current-head --junitxml=05_evidence/dashboard-tests.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 337cc615df10892108726618b53606d59c795790
+dirty: True
+python: 3.13.15
+utc: 20261123T191536Z
+exit_code: 0
+duration_s: 19.44
+------------------------------------------------------------
+................                                                         [100%]
+16 passed in 17.79s

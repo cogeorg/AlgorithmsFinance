@@ -1,0 +1,12 @@
+label: phase3b-b2-green
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -m pytest 02_tests/test_contract.py 02_tests/test_stateful.py 02_tests/test_b_internal.py -k B2 or b2 -q --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: b5411d4ab22a662820bea6f55510b23381d017f8
+dirty: True
+python: 3.13.15
+utc: 20261121T234259Z
+exit_code: 0
+duration_s: 15.88
+------------------------------------------------------------
+....................................................................     [100%]
+68 passed, 208 deselected in 15.04s

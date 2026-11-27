@@ -1,0 +1,83 @@
+{
+  "python": {
+    "version": "3.13.15",
+    "implementation": "CPython",
+    "compiler": "MSC v.1944 64 bit (AMD64)",
+    "build": [
+      "tags/v3.13.15:4061bc4",
+      "Aug  5 2026 13:05:39"
+    ]
+  },
+  "packages": {
+    "pytest": "9.1.1",
+    "matplotlib": "3.11.2"
+  },
+  "engine_dependencies": "standard library only",
+  "os": {
+    "system": "Windows",
+    "release": "11",
+    "version": "10.0.26200",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "machine": {
+    "architecture": "AMD64",
+    "cpu": "Intel(R) Core(TM) Ultra 5 228V",
+    "logical_cpus": 8,
+    "ram_bytes": 33847832576,
+    "on_ac_power": true
+  },
+  "perf_counter": {
+    "implementation": "QueryPerformanceCounter()",
+    "resolution_s": 1e-07,
+    "monotonic": true
+  },
+  "git": {
+    "commit": "ade26d17588f36e2b22d06a1eda2825aaa8df766",
+    "branch": "bonacker/phase1",
+    "code_paths": [
+      "02_tests",
+      "03_code",
+      "04_benchmarks",
+      "00_instructions/generate_orders.py",
+      "pytest.ini",
+      "requirements.txt"
+    ],
+    "code_clean": true,
+    "dirty_code_files": [],
+    "tree_clean": true,
+    "dirty_files_in_assignment1": []
+  },
+  "source_fingerprint": "e930821438723804a2917485d2b18042109e020779a0f44de9350fe74862a4bb",
+  "generator": {
+    "script": "00_instructions/generate_orders.py",
+    "sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+    "rng": "random.Random(seed)",
+    "scenarios": [
+      "buildup",
+      "crowded",
+      "mixed",
+      "sweep",
+      "cancel_churn"
+    ],
+    "sizes": [
+      1000,
+      10000,
+      100000
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "levels": 1000,
+    "concentrated_levels": 4,
+    "million": {
+      "scenario": "mixed",
+      "events": 1000000,
+      "seed": 43,
+      "levels": 1000
+    },
+    "command": "python 00_instructions/generate_orders.py --scenario <s> --events <M> --levels <L> --seed <seed> --out <file>",
+    "checksums": "05_results/benchmark_datasets.csv"
+  }
+}

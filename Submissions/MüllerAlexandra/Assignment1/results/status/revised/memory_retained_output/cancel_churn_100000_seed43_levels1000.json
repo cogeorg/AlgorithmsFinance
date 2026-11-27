@@ -1,0 +1,59 @@
+{
+  "task": {
+    "task_id": "revised_memory_retained_output_cancel_churn_100000_seed43_levels1000",
+    "version": "revised",
+    "phase": "memory_retained_output",
+    "scenario": "cancel_churn",
+    "event_count": 100000,
+    "seed": 43,
+    "levels": 1000,
+    "input_path": "data/generated/cancel_churn_100000_seed43_levels1000.jsonl.gz",
+    "sha256": "332836860cd12dd36893a0c2af5c20246af6242d3abcc5e05dd3115d8368d0e5",
+    "result_path": "results/raw/revised/memory_retained_output/cancel_churn_100000_seed43_levels1000.json.gz",
+    "status_path": "results/status/revised/memory_retained_output/cancel_churn_100000_seed43_levels1000.json"
+  },
+  "task_id": "revised_memory_retained_output_cancel_churn_100000_seed43_levels1000",
+  "timeout_seconds": 60,
+  "elapsed_seconds": 4.38301460002549,
+  "started_utc": "2026-11-24T17:40:32.690657+00:00",
+  "finished_utc": "2026-11-24T17:40:37.073829+00:00",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\scripts\\05_measure_memory.py",
+    "--version",
+    "revised",
+    "--mode",
+    "memory_retained_output",
+    "--input",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\data\\generated\\cancel_churn_100000_seed43_levels1000.jsonl.gz",
+    "--checkpoints",
+    "10",
+    "--out",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\results\\raw\\revised\\memory_retained_output\\cancel_churn_100000_seed43_levels1000.json.pending.gz"
+  ],
+  "environment": {
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "python_executable": "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "dependencies": {
+      "pytest": "9.2.0",
+      "pandas": "3.1.1",
+      "streamlit": "1.67.0"
+    },
+    "git": {
+      "commit": "f75495677a42e75855ee2f8d0f3d7ad7c517689a",
+      "branch": "assignment1-mueller-alexandra",
+      "dirty": true,
+      "assignment_dirty": true,
+      "code_dirty": false
+    }
+  },
+  "returncode": 0,
+  "stdout": "{\"output\": \"C:\\\\Users\\\\Acer\\\\Documents\\\\Algorithms\\\\AlgorithmsFinance\\\\Submissions\\\\M\\u00fcllerAlexandra\\\\Assignment1\\\\results\\\\raw\\\\revised\\\\memory_retained_output\\\\cancel_churn_100000_seed43_levels1000.json.pending.gz\", \"final\": {\"current_bytes\": 22003876, \"peak_bytes\": 22004172, \"active_orders\": 0, \"occupied_price_levels\": 0, \"retained_output_count\": 100000}}\n",
+  "stderr": "",
+  "outcome": "completed",
+  "result_path": "results/raw/revised/memory_retained_output/cancel_churn_100000_seed43_levels1000.json.gz"
+}

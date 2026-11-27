@@ -1,0 +1,367 @@
+{
+ "break_even_depth": {
+  "run_at": "2026-11-25 18:44:59",
+  "python": "3.13.12",
+  "parameters": {
+   "BOOK_DEPTHS": [
+    0,
+    2,
+    5,
+    10,
+    15,
+    18,
+    20,
+    22,
+    25,
+    28,
+    30,
+    33,
+    35,
+    38,
+    40,
+    45,
+    50,
+    75,
+    100,
+    200,
+    500,
+    1000,
+    2000
+   ],
+   "REPEATS": 5,
+   "CHURN_CYCLES": 5000,
+   "CANCELS_TIMED": 100,
+   "STREAM_EVENTS": 50000
+  },
+  "rows": [
+   {
+    "resting_orders": 0,
+    "a_us_per_event": 1.266829999804031,
+    "b_us_per_event": 1.8195299999206327,
+    "b_over_a": 1.4362858475107947
+   },
+   {
+    "resting_orders": 2,
+    "a_us_per_event": 2.368499999283813,
+    "b_us_per_event": 1.913990000321064,
+    "b_over_a": 0.8081021747518752
+   },
+   {
+    "resting_orders": 5,
+    "a_us_per_event": 2.9071400000248104,
+    "b_us_per_event": 1.8768500012811273,
+    "b_over_a": 0.645600143531137
+   },
+   {
+    "resting_orders": 10,
+    "a_us_per_event": 1.7104600003222004,
+    "b_us_per_event": 1.6037499997764826,
+    "b_over_a": 0.9376132733150049
+   },
+   {
+    "resting_orders": 15,
+    "a_us_per_event": 2.0450500000151806,
+    "b_us_per_event": 2.7868899996974505,
+    "b_over_a": 1.362749076881623
+   },
+   {
+    "resting_orders": 18,
+    "a_us_per_event": 1.772220000566449,
+    "b_us_per_event": 1.3119600000209175,
+    "b_over_a": 0.7402918371317218
+   },
+   {
+    "resting_orders": 20,
+    "a_us_per_event": 1.8501300000934862,
+    "b_us_per_event": 1.189949999388773,
+    "b_over_a": 0.6431710200519127
+   },
+   {
+    "resting_orders": 22,
+    "a_us_per_event": 1.7240299988770857,
+    "b_us_per_event": 2.2374099993612617,
+    "b_over_a": 1.297779041442757
+   },
+   {
+    "resting_orders": 25,
+    "a_us_per_event": 2.5308399999630637,
+    "b_us_per_event": 2.0731099997647107,
+    "b_over_a": 0.8191390999806256
+   },
+   {
+    "resting_orders": 28,
+    "a_us_per_event": 2.285319998918567,
+    "b_us_per_event": 1.5257799997925758,
+    "b_over_a": 0.6676439188011255
+   },
+   {
+    "resting_orders": 30,
+    "a_us_per_event": 1.9224499992560595,
+    "b_us_per_event": 1.7187699995702133,
+    "b_over_a": 0.8940518610290695
+   },
+   {
+    "resting_orders": 33,
+    "a_us_per_event": 3.2968600004096515,
+    "b_us_per_event": 2.3053800003253855,
+    "b_over_a": 0.6992653615982876
+   },
+   {
+    "resting_orders": 35,
+    "a_us_per_event": 2.8946199992788024,
+    "b_us_per_event": 2.790469999308698,
+    "b_over_a": 0.96401945678671
+   },
+   {
+    "resting_orders": 38,
+    "a_us_per_event": 3.484940000635106,
+    "b_us_per_event": 2.2969799989368767,
+    "b_over_a": 0.6591160819176995
+   },
+   {
+    "resting_orders": 40,
+    "a_us_per_event": 3.925170000002254,
+    "b_us_per_event": 2.018369999132119,
+    "b_over_a": 0.5142121230751687
+   },
+   {
+    "resting_orders": 45,
+    "a_us_per_event": 3.131720000237692,
+    "b_us_per_event": 2.3377100005745888,
+    "b_over_a": 0.7464620082246052
+   },
+   {
+    "resting_orders": 50,
+    "a_us_per_event": 3.522880001401063,
+    "b_us_per_event": 2.8511600001365878,
+    "b_over_a": 0.8093264598858521
+   },
+   {
+    "resting_orders": 75,
+    "a_us_per_event": 5.077070000697859,
+    "b_us_per_event": 1.8773599993437529,
+    "b_over_a": 0.36977232913584096
+   },
+   {
+    "resting_orders": 100,
+    "a_us_per_event": 3.3585800003493205,
+    "b_us_per_event": 1.5342800004873425,
+    "b_over_a": 0.4568240150086538
+   },
+   {
+    "resting_orders": 200,
+    "a_us_per_event": 7.286269999167416,
+    "b_us_per_event": 2.905080000346061,
+    "b_over_a": 0.39870605957204674
+   },
+   {
+    "resting_orders": 500,
+    "a_us_per_event": 18.210730000282638,
+    "b_us_per_event": 1.9902700005332008,
+    "b_over_a": 0.1092910608472209
+   },
+   {
+    "resting_orders": 1000,
+    "a_us_per_event": 32.074870000360534,
+    "b_us_per_event": 1.6092799996840768,
+    "b_over_a": 0.05017261175699193
+   },
+   {
+    "resting_orders": 2000,
+    "a_us_per_event": 53.858670000045095,
+    "b_us_per_event": 2.1822399998200126,
+    "b_over_a": 0.040517896186782656
+   }
+  ]
+ },
+ "cancel_position": {
+  "run_at": "2026-11-25 18:45:15",
+  "python": "3.13.12",
+  "parameters": {
+   "QUEUE_LENGTHS": [
+    50,
+    100,
+    1000,
+    5000,
+    10000,
+    30000
+   ],
+   "REPEATS": 5,
+   "CHURN_CYCLES": 5000,
+   "CANCELS_TIMED": 100,
+   "STREAM_EVENTS": 50000
+  },
+  "rows": [
+   {
+    "queue_length": 50,
+    "position": "front",
+    "a_us_per_cancel": 2.300000051036477,
+    "b_us_per_cancel": 2.2620000527240336
+   },
+   {
+    "queue_length": 50,
+    "position": "middle",
+    "a_us_per_cancel": 1.5219999477267265,
+    "b_us_per_cancel": 1.2660000356845558
+   },
+   {
+    "queue_length": 50,
+    "position": "back",
+    "a_us_per_cancel": 2.5740001001395285,
+    "b_us_per_cancel": 2.3659999715164304
+   },
+   {
+    "queue_length": 100,
+    "position": "front",
+    "a_us_per_cancel": 0.8119999256450683,
+    "b_us_per_cancel": 0.8610000077169389
+   },
+   {
+    "queue_length": 100,
+    "position": "middle",
+    "a_us_per_cancel": 1.2579999747686088,
+    "b_us_per_cancel": 1.4139999984763563
+   },
+   {
+    "queue_length": 100,
+    "position": "back",
+    "a_us_per_cancel": 2.6870000874623656,
+    "b_us_per_cancel": 1.12900001113303
+   },
+   {
+    "queue_length": 1000,
+    "position": "front",
+    "a_us_per_cancel": 1.1750000703614205,
+    "b_us_per_cancel": 1.1169999197591096
+   },
+   {
+    "queue_length": 1000,
+    "position": "middle",
+    "a_us_per_cancel": 19.859000021824613,
+    "b_us_per_cancel": 2.021000109380111
+   },
+   {
+    "queue_length": 1000,
+    "position": "back",
+    "a_us_per_cancel": 42.81199988326989,
+    "b_us_per_cancel": 1.1800001084338874
+   },
+   {
+    "queue_length": 5000,
+    "position": "front",
+    "a_us_per_cancel": 21.450000058393925,
+    "b_us_per_cancel": 1.6399999731220305
+   },
+   {
+    "queue_length": 5000,
+    "position": "middle",
+    "a_us_per_cancel": 112.6250000379514,
+    "b_us_per_cancel": 1.8570000247564167
+   },
+   {
+    "queue_length": 5000,
+    "position": "back",
+    "a_us_per_cancel": 220.9289999154862,
+    "b_us_per_cancel": 2.6030000299215317
+   },
+   {
+    "queue_length": 10000,
+    "position": "front",
+    "a_us_per_cancel": 34.336999960942194,
+    "b_us_per_cancel": 2.0429999858606607
+   },
+   {
+    "queue_length": 10000,
+    "position": "middle",
+    "a_us_per_cancel": 237.12599999271333,
+    "b_us_per_cancel": 3.24500011629425
+   },
+   {
+    "queue_length": 10000,
+    "position": "back",
+    "a_us_per_cancel": 465.20899995812215,
+    "b_us_per_cancel": 1.7550001211930066
+   },
+   {
+    "queue_length": 30000,
+    "position": "front",
+    "a_us_per_cancel": 89.91499998955987,
+    "b_us_per_cancel": 1.6110000433400273
+   },
+   {
+    "queue_length": 30000,
+    "position": "middle",
+    "a_us_per_cancel": 821.0499999404419,
+    "b_us_per_cancel": 1.7520000983495265
+   },
+   {
+    "queue_length": 30000,
+    "position": "back",
+    "a_us_per_cancel": 1819.5280000509229,
+    "b_us_per_cancel": 1.410000113537535
+   }
+  ]
+ },
+ "rejected_events": {
+  "run_at": "2026-11-25 18:45:22",
+  "python": "3.13.12",
+  "parameters": {
+   "REJECT_SHARES": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9
+   ],
+   "REPEATS": 5,
+   "CHURN_CYCLES": 5000,
+   "CANCELS_TIMED": 100,
+   "STREAM_EVENTS": 50000
+  },
+  "rows": [
+   {
+    "share_requested": 0.0,
+    "events": 50000,
+    "rejected": 0,
+    "a_us_per_event": 2.027818000060506,
+    "b_us_per_event": 1.652433999988716
+   },
+   {
+    "share_requested": 0.1,
+    "events": 50000,
+    "rejected": 4999,
+    "a_us_per_event": 2.7509499998996034,
+    "b_us_per_event": 1.4935540000442415
+   },
+   {
+    "share_requested": 0.25,
+    "events": 50000,
+    "rejected": 12500,
+    "a_us_per_event": 2.514120000123512,
+    "b_us_per_event": 1.7070720001356676
+   },
+   {
+    "share_requested": 0.5,
+    "events": 50000,
+    "rejected": 25000,
+    "a_us_per_event": 2.0973299999604933,
+    "b_us_per_event": 1.9255619999603368
+   },
+   {
+    "share_requested": 0.75,
+    "events": 50000,
+    "rejected": 37500,
+    "a_us_per_event": 1.7871320000267588,
+    "b_us_per_event": 1.3156579999485984
+   },
+   {
+    "share_requested": 0.9,
+    "events": 50000,
+    "rejected": 44999,
+    "a_us_per_event": 2.039963999995962,
+    "b_us_per_event": 1.6963899999973364
+   }
+  ]
+ }
+}

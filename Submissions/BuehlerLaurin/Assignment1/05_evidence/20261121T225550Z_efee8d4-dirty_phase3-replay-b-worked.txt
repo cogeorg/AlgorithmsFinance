@@ -1,0 +1,16 @@
+label: phase3-replay-b-worked
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe run.py lob.replay 06_data/supplied/worked_example.jsonl --version B
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: efee8d4ba8d3425e51a31c5a8e361cd8986fe168
+dirty: True
+python: 3.13.15
+utc: 20261121T225550Z
+exit_code: 0
+duration_s: 0.13
+------------------------------------------------------------
+{"event_id": "event1", "order_id": "b1", "status": "resting", "unfilled_qty_units": 100000000, "fills": []}
+{"event_id": "event2", "order_id": "b2", "status": "resting", "unfilled_qty_units": 100000000, "fills": []}
+{"event_id": "event3", "order_id": "b3", "status": "resting", "unfilled_qty_units": 300000000, "fills": []}
+{"event_id": "event4", "order_id": "b4", "status": "resting", "unfilled_qty_units": 500000000, "fills": []}
+{"event_id": "event5", "order_id": "a1", "status": "resting", "unfilled_qty_units": 200000000, "fills": []}
+{"event_id": "event6", "order_id": "s1", "status": "filled", "unfilled_qty_units": 0, "fills": [{"maker_id": "b1", "taker_id": "s1", "price_ticks": 6000000, "qty_units": 100000000}, {"maker_id": "b2", "taker_id": "s1", "price_ticks": 6000000, "qty_units": 100000000}, {"maker_id": "b3", "taker_id": "s1", "price_ticks": 5990000, "qty_units": 300000000}, {"maker_id": "b4", "taker_id": "s1", "price_ticks": 5970000, "qty_units": 100000000}]}

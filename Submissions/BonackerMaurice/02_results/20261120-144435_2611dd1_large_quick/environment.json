@@ -1,0 +1,40 @@
+{
+  "timestamp_utc": "2026-11-20T14:44:35+00:00",
+  "python_version": "3.13.15",
+  "python_implementation": "CPython",
+  "python_build": "tags/v3.13.15:4061bc4 Aug  5 2026 13:05:39",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "cpu": "Intel(R) Core(TM) Ultra 5 228V",
+  "cpu_count_logical": 8,
+  "ram_bytes": 33847832576,
+  "timer": {
+    "function": "time.perf_counter",
+    "implementation": "QueryPerformanceCounter()",
+    "resolution_s": 1e-07,
+    "monotonic": true
+  },
+  "packages": {
+    "pytest": "9.1.1",
+    "streamlit": "1.67.0",
+    "altair": "6.3.0",
+    "pandas": "3.0.6",
+    "psutil": "7.2.2"
+  },
+  "git": {
+    "commit": "2611dd18d197fdb0c4f9366c77da4e821163840f",
+    "short": "2611dd1",
+    "branch": "bonacker/phase1",
+    "dirty": false,
+    "dirty_files": []
+  },
+  "source": {
+    "sha256": "2621865bef6ca875ef1de5ee45e314e03f25b3cc8d852d2aeedd676d8d8a6967",
+    "files": 14,
+    "dirs": [
+      "search_algos",
+      "datagen",
+      "benchmarks"
+    ]
+  }
+}

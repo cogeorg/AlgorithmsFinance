@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "tests": 20,
+  "raw_records": 1838,
+  "statuses": {
+    "ok": 1725,
+    "stopped": 56,
+    "over_limit": 57
+  },
+  "all_90_primary_stream_configurations_have_five_replays": true,
+  "sale_diagnostic_failures": 0,
+  "source_sha256": "89cab8112991dc47868a1d47ae7cf13c7b6f4687d3deb18c8e1b773106848882",
+  "worked_example_both_versions": "pass",
+  "dashboard_headless_edge": "rendered 7 SVG charts and data tables; screenshot inspected",
+  "zlib_compile_version": "1.3.1.zlib-ng",
+  "zlib_runtime_version": "1.3.1.zlib-ng",
+  "scope": "Only Submissions/SharmaGarv/Assignment1",
+  "million_event_files_committed": false
+}

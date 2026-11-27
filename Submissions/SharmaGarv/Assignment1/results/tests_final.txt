@@ -1,0 +1,25 @@
+test_cancel_before_fill (test_orderbook.TestBaseline.test_cancel_before_fill) ... ok
+test_crossing_both_directions_and_residual (test_orderbook.TestBaseline.test_crossing_both_directions_and_residual) ... ok
+test_empty (test_orderbook.TestBaseline.test_empty) ... ok
+test_fifo_levels_partial_and_cancel (test_orderbook.TestBaseline.test_fifo_levels_partial_and_cancel) ... ok
+test_invalid_is_atomic_and_does_not_advance_sequence (test_orderbook.TestBaseline.test_invalid_is_atomic_and_does_not_advance_sequence) ... ok
+test_long_queue (test_orderbook.TestBaseline.test_long_queue) ... ok
+test_noncrossing_and_snapshot_isolation (test_orderbook.TestBaseline.test_noncrossing_and_snapshot_isolation) ... ok
+test_single_smaller_equal_larger (test_orderbook.TestBaseline.test_single_smaller_equal_larger) ... ok
+test_worked_example (test_orderbook.TestBaseline.test_worked_example) ... ok
+test_generated_every_event_and_conservation (test_orderbook.TestDifferential.test_generated_every_event_and_conservation) ... ok
+test_heap_churn_with_persistent_best (test_orderbook.TestDifferential.test_heap_churn_with_persistent_best) ... ok
+test_cancel_before_fill (test_orderbook.TestRevised.test_cancel_before_fill) ... ok
+test_crossing_both_directions_and_residual (test_orderbook.TestRevised.test_crossing_both_directions_and_residual) ... ok
+test_empty (test_orderbook.TestRevised.test_empty) ... ok
+test_fifo_levels_partial_and_cancel (test_orderbook.TestRevised.test_fifo_levels_partial_and_cancel) ... ok
+test_invalid_is_atomic_and_does_not_advance_sequence (test_orderbook.TestRevised.test_invalid_is_atomic_and_does_not_advance_sequence) ... ok
+test_long_queue (test_orderbook.TestRevised.test_long_queue) ... ok
+test_noncrossing_and_snapshot_isolation (test_orderbook.TestRevised.test_noncrossing_and_snapshot_isolation) ... ok
+test_single_smaller_equal_larger (test_orderbook.TestRevised.test_single_smaller_equal_larger) ... ok
+test_worked_example (test_orderbook.TestRevised.test_worked_example) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.612s
+
+OK

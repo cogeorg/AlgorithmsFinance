@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="66" skipped="0" tests="340" time="112.311" timestamp="2026-11-21T23:20:31.498191+01:00" hostname="Lauros-acer"><properties><property name="hypothesis-statistics-02_tests/test_stateful.py::TestDifferential::runTest" value="MDJfdGVzdHMvdGVzdF9zdGF0ZWZ1bC5weTo6VGVzdERpZmZlcmVudGlhbDo6cnVuVGVzdDoKCiAgLSBkdXJpbmcgcmV1c2UgcGhhc2UgKDAuMDQgc2Vjb25kcyk6CiAgICAtIFR5cGljYWwgcnVudGltZXM6IH4gMzNtcywgb2Ygd2hpY2ggPCAxbXMgaW4gZGF0YSBnZW5lcmF0aW9uCiAgICAtIDAgcGFzc2luZyBleGFtcGxlcywgMSBmYWlsaW5nIGV4YW1wbGVzLCAwIGludmFsaWQgZXhhbXBsZXMKICAgIC0gRm91bmQgMSBkaXN0aW5jdCBlcnJvciBpbiB0aGlzIHBoYXNlCgogIC0gU3RvcHBlZCBiZWNhdXNlIG5vdGhpbmcgbGVmdCB0byBkbw==" /></properties><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_accepted_cancel_and_market_advance_seq]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_best_price_first]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_cancel_before_fill_removes_full_qty]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_cancel_keeps_queue_order_of_others]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_cancel_not_found_cases]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_cancel_removes_exact_residual]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_crossing_sell_at_maker_price]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_direct_methods_match_process]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_direct_methods_reject_wrong_type]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_direct_methods_validate]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_empty_book_inspection]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_fifo_within_price]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_fill_at_maker_price]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_fresh_instances_independent]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_input_event_not_mutated]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_invariants_on_supplied_stream_prefixes]" time="5.809" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_limit_at_touch_crosses]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_long_queue_fifo]" time="1.578" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_market_residual_discarded]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_market_sell_equal_to_depth_is_filled]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_market_sell_ignores_asks]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_market_sell_larger_than_depth_is_partial]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_market_sell_on_empty_book_is_unfilled]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_one_limit_rests]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_cancel_cases]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_crossing_limit_buy]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_crossing_limit_sell]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_empty_book]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_fifo_one_price]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_huge_values]" time="0.003" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_id_reuse]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_interleaved_cancel_fill]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_invalid_fields]" time="0.003" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_limit_at_touch]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_long_queue]" time="0.162" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_market_larger_than_book]" time="0.003" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_market_sell_empty_bid_side]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_noncrossing_residuals]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_one_order]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_partial_then_another_sale]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_sell_sizes]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_own_sweep_levels]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_partial_maker_keeps_priority]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejected_event_does_not_advance_seq]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejects_bad_ids]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejects_bad_price]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejects_bad_qty]" time="0.003" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejects_bad_seq]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejects_bool_quantity]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejects_duplicate_live_id]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejects_integral_float_quantity]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejects_missing_fields]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejects_nonincreasing_seq]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejects_not_an_object]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejects_unknown_side]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_rejects_unknown_type]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_result_types_are_exact_ints]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_reuse_of_inactive_ids_is_accepted]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_snapshot_canonical_order]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_snapshot_is_a_copy]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_unknown_extra_fields_ignored]" time="0.001" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_validation_check_order]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_worked_example_book_and_proceeds]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-A-check_worked_example_market_sell]" time="0.002" /><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_accepted_cancel_and_market_advance_seq]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:507: in check_accepted_cancel_and_market_advance_seq
+    res = run(impl(), [C(1, "ghost"), L(1, "b1", "BUY", 100, 1, eid="r1"), M(2, "s", 1),
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_best_price_first]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:294: in check_best_price_first
+    r = run(book, [L(1, "b1", "BUY", 100, 1), L(2, "b2", "BUY", 102, 1), L(3, "b3", "BUY", 101, 1), M(4, "s", 3)])[3]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_cancel_before_fill_removes_full_qty]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:392: in check_cancel_before_fill_removes_full_qty
+    r = run(book, [L(1, "a1", "SELL", 100, 7), C(2, "a1")])[1]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_cancel_keeps_queue_order_of_others]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:410: in check_cancel_keeps_queue_order_of_others
+    run(book, [L(1, "b1", "BUY", 100, 1), L(2, "b2", "BUY", 100, 1), L(3, "b3", "BUY", 100, 1), C(4, "b2")])
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_cancel_not_found_cases]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:400: in check_cancel_not_found_cases
+    res = run(book, [L(1, "b1", "BUY", 100, 1), L(2, "b2", "BUY", 100, 1), M(3, "s1", 1),
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_cancel_removes_exact_residual]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:384: in check_cancel_removes_exact_residual
+    res = run(book, [L(1, "b1", "BUY", 100, 5), L(2, "b2", "BUY", 100, 3), M(3, "s1", 2), C(4, "b1"), M(5, "s2", 3)])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_crossing_sell_at_maker_price]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:310: in check_crossing_sell_at_maker_price
+    r = run(book, [L(1, "b1", "BUY", 100, 1), L(2, "t", "SELL", 90, 3)])[1]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_direct_methods_match_process]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:536: in check_direct_methods_match_process
+    a = via_process.process(copy.deepcopy(ev))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:13: in process
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_direct_methods_reject_wrong_type]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:559: in check_direct_methods_reject_wrong_type
+    run(book, [L(1, "b1", "BUY", 100, 5)])
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_direct_methods_validate]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:545: in check_direct_methods_validate
+    assert book.AddLimitOrder(L(1, "b", "BUY", 100, 0)) == {"event_id": "e1", "status": "rejected", "reason": "bad_qty"}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:16: in AddLimitOrder
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_empty_book_inspection]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:272: in check_empty_book_inspection
+    assert book.snapshot() == [] and book.best_bid() is None and book.best_ask() is None
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_fifo_within_price]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:286: in check_fifo_within_price
+    r = run(book, [L(1, "x", "BUY", 100, 2), L(2, "a", "BUY", 100, 2), L(3, "m", "BUY", 100, 2), M(4, "s", 3)])[3]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_fill_at_maker_price]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:302: in check_fill_at_maker_price
+    r = run(book, [L(1, "a1", "SELL", 100, 1), L(2, "t", "BUY", 105, 1)])[1]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_fresh_instances_independent]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:600: in check_fresh_instances_independent
+    run(first, [L(1, "b1", "BUY", 100, 1)])
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_input_event_not_mutated]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:595: in check_input_event_not_mutated
+    run(impl(), _API_STREAM)          # run() asserts each event is unchanged after process()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_invariants_on_supplied_stream_prefixes]" time="0.006"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:629: in check_invariants_on_supplied_stream_prefixes
+    res = run(impl(), events)
+          ^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_limit_at_touch_crosses]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:319: in check_limit_at_touch_crosses
+    res = run(book, [L(1, "a1", "SELL", 101, 2), L(2, "b1", "BUY", 100, 1), L(3, "b2", "BUY", 101, 1)])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_long_queue_fifo]" time="0.003"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:373: in check_long_queue_fifo
+    res = run(book, [L(i + 1, ids[i], "BUY", 100, 1) for i in range(1000)] + [M(1001, "s", 999)])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_market_residual_discarded]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:355: in check_market_residual_discarded
+    res = run(book, [L(1, "b1", "BUY", 100, 2), M(2, "s", 5), L(3, "b2", "BUY", 10**9, 1)])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_market_sell_equal_to_depth_is_filled]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:341: in check_market_sell_equal_to_depth_is_filled
+    r = run(book, [L(1, "b1", "BUY", 100, 2), L(2, "b2", "BUY", 99, 3), M(3, "s", 5)])[2]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_market_sell_ignores_asks]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:363: in check_market_sell_ignores_asks
+    r = run(book, [L(1, "a1", "SELL", 50, 4), L(2, "b1", "BUY", 40, 1), M(3, "s", 3)])[2]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_market_sell_larger_than_depth_is_partial]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:347: in check_market_sell_larger_than_depth_is_partial
+    r = run(impl(), [L(1, "b1", "BUY", 100, 2), M(2, "s", 5)])[1]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_market_sell_on_empty_book_is_unfilled]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:335: in check_market_sell_on_empty_book_is_unfilled
+    r = run(impl(), [M(1, "s", 5)])[0]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_one_limit_rests]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:277: in check_one_limit_rests
+    r = run(book, [L(1, "b1", "BUY", 100, 10)])[0]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_cancel_cases]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_crossing_limit_buy]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_crossing_limit_sell]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_empty_book]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_fifo_one_price]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_huge_values]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_id_reuse]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_interleaved_cancel_fill]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_invalid_fields]" time="0.003"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_limit_at_touch]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_long_queue]" time="0.003"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_market_larger_than_book]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_market_sell_empty_bid_side]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_noncrossing_residuals]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_one_order]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_partial_then_another_sale]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_sell_sizes]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_own_sweep_levels]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_partial_maker_keeps_priority]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:327: in check_partial_maker_keeps_priority
+    res = run(book, [L(1, "b1", "BUY", 100, 5), L(2, "b2", "BUY", 100, 5), M(3, "s1", 2),
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejected_event_does_not_advance_seq]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:496: in check_rejected_event_does_not_advance_seq
+    res = run(book, [L(1, "b1", "BUY", 100, 1),
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejects_bad_ids]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:463: in check_rejects_bad_ids
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"].startswith("bad_id:")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejects_bad_price]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:471: in check_rejects_bad_price
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] == "bad_price"))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejects_bad_qty]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:475: in check_rejects_bad_qty
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] == "bad_qty"))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejects_bad_seq]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:447: in check_rejects_bad_seq
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] in ("bad_seq", "missing_field:seq")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejects_bool_quantity]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:479: in check_rejects_bool_quantity
+    _check_invalid_rows(impl, _rows(lambda r: r["label"] in ("qty-true", "qty-false", "market-qty-true")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejects_duplicate_live_id]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:487: in check_rejects_duplicate_live_id
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] == "duplicate_live_order_id"))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejects_integral_float_quantity]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:483: in check_rejects_integral_float_quantity
+    _check_invalid_rows(impl, _rows(lambda r: r["label"] in ("qty-integral-float", "market-qty-integral-float")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejects_missing_fields]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:459: in check_rejects_missing_fields
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"].startswith("missing_field:")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejects_nonincreasing_seq]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:451: in check_rejects_nonincreasing_seq
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] == "nonincreasing_seq"))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejects_not_an_object]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:443: in check_rejects_not_an_object
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] == "not_an_object"))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejects_unknown_side]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:467: in check_rejects_unknown_side
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] == "unknown_side"))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_rejects_unknown_type]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:455: in check_rejects_unknown_type
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] in ("unknown_type", "missing_field:type")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_result_types_are_exact_ints]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:586: in check_result_types_are_exact_ints
+    for r in run(impl(), _API_STREAM):
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_reuse_of_inactive_ids_is_accepted]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:517: in check_reuse_of_inactive_ids_is_accepted
+    res = run(book, [L(1, "b1", "BUY", 100, 1), M(2, "s", 1), L(3, "b1", "BUY", 90, 2), C(4, "b1"),
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_snapshot_canonical_order]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:617: in check_snapshot_canonical_order
+    run(book, [L(1, "a1", "SELL", 105, 1), L(2, "b1", "BUY", 100, 1), L(3, "a2", "SELL", 103, 1),
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_snapshot_is_a_copy]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:608: in check_snapshot_is_a_copy
+    run(book, [L(1, "b1", "BUY", 100, 5)])
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_unknown_extra_fields_ignored]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:580: in check_unknown_extra_fields_ignored
+    want = run(plain, [event])[0]
+           ^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_validation_check_order]" time="0.001"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:491: in check_validation_check_order
+    _check_invalid_rows(impl, _rows(lambda r: r["label"].startswith("order-")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_worked_example_book_and_proceeds]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:230: in check_worked_example_book_and_proceeds
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_contract" name="test_contract[lob-B-check_worked_example_market_sell]" time="0.002"><failure message="NotImplementedError: Version B: Phase 3">02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:219: in check_worked_example_market_sell
+    res = run(impl(), events)
+          ^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantTakerPrice]" time="13.708" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantMarketResidualRests]" time="5.620" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantCancelKeepsOrder]" time="5.522" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantAcceptsBoolQty]" time="7.624" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantAcceptsIntegralFloatQty]" time="7.571" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantSeqAdvancesOnReject]" time="7.770" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantNoDuplicateCheck]" time="9.368" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantFillsReversed]" time="5.668" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantPartialReportedAsFilled]" time="5.711" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantMutatesInput]" time="0.020" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantAsksDescending]" time="2.087" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantBestBidIsBestAsk]" time="0.039" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantLifo]" time="6.215" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantRequeuesPartialMaker]" time="5.807" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantPriorityById]" time="7.937" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantWrongPriceEnd]" time="2.195" /><testcase classname="02_tests.test_mutants" name="test_mutant_killed_for_the_intended_reason[MutantDropsLimitResidual]" time="0.025" /><testcase classname="02_tests.test_mutants" name="test_every_mutant_names_an_existing_check" time="0.001" /><testcase classname="02_tests.test_mutants" name="test_real_versions_pass_all_checks[lob-A]" time="8.044" /><testcase classname="02_tests.test_mutants" name="test_real_versions_pass_all_checks[lob-B]" time="0.001"><failure message="AssertionError: (('lob', 'B'), 'check_accepted_cancel_and_market_advance_seq', 'error: NotImplementedError: Version B: Phase 3')&#10;assert 'error: NotIm...on B: Phase 3' == 'pass'&#10;  &#10;  - pass&#10;  + error: NotImplementedError: Version B: Phase 3">02_tests\test_mutants.py:290: in test_real_versions_pass_all_checks
+    assert _run(check, impl) == "pass", (key, check.__name__, _run(check, impl))
+E   AssertionError: (('lob', 'B'), 'check_accepted_cancel_and_market_advance_seq', 'error: NotImplementedError: Version B: Phase 3')
+E   assert 'error: NotIm...on B: Phase 3' == 'pass'
+E     
+E     - pass
+E     + error: NotImplementedError: Version B: Phase 3</failure></testcase><testcase classname="02_tests.test_own_datasets" name="test_every_case_has_a_contract_check" time="0.001" /><testcase classname="02_tests.test_own_datasets" name="test_files_on_disk_match_the_generator" time="0.015" /><testcase classname="02_tests.test_own_datasets" name="test_expected_files_are_labelled_own_and_consistent" time="0.012" /><testcase classname="02_tests.test_own_datasets" name="test_invalid_table_reasons_use_the_spec_codes" time="0.001" /><testcase classname="02_tests.test_replay" name="test_replay_command_a[jsonl]" time="0.150" /><testcase classname="02_tests.test_replay" name="test_replay_command_a[jsonl-gzip]" time="0.133" /><testcase classname="02_tests.test_replay" name="test_replay_keeps_rejections_in_input_order" time="0.136" /><testcase classname="02_tests.test_stateful.TestDifferential" name="runTest" time="0.083"><failure message="NotImplementedError: Version B: Phase 3&#10;Falsifying example:&#10;state = DifferentialMachine()&#10;state.books_valid()&#10;state.teardown()">C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\hypothesis\stateful.py:504: in runTest
+    run_state_machine_as_test(cls, settings=self.settings)
+C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\hypothesis\stateful.py:268: in run_state_machine_as_test
+    state_machine_test()
+C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\hypothesis\stateful.py:119: in run_state_machine
+    @given(st.data())
+               ^^^
+02_tests\test_stateful.py:146: in books_valid
+    assert contract.assert_book(self.a) == contract.assert_book(self.b)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+E   Falsifying example:
+E   state = DifferentialMachine()
+E   state.books_valid()
+E   state.teardown()</failure></testcase><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[list]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[string]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[number]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[seq-missing]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[seq-zero]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[seq-negative]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[seq-bool]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[seq-float]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[seq-string]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[seq-null]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[seq-equal-limit]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[seq-lower-limit]" time="0.002" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[seq-equal-market]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[seq-lower-cancel]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[type-missing]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[type-market-buy]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[type-lowercase]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[type-empty]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[type-null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[type-number]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[limit-no-event-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[limit-no-order-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[limit-no-side]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[limit-no-price]" time="0.002" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[limit-no-qty]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[market-no-event-id]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[market-no-order-id]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[market-no-qty]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[cancel-no-event-id]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[cancel-no-target]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[event-id-empty]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[event-id-number]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[event-id-null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[order-id-empty]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[order-id-number]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[order-id-null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[market-order-id-number]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[target-empty]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[target-number]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[target-null]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[side-lowercase]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[side-hold]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[side-empty]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[side-null]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[side-number]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[price-zero]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[price-negative]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[price-integral-float]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[price-float]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[price-true]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[price-false]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[price-string]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[price-null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[price-nan]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[price-inf]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[qty-zero]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[qty-negative]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[qty-integral-float]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[qty-float]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[qty-true]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[qty-false]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[qty-string]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[qty-null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[qty-nan]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[qty-inf]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[market-qty-zero]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[market-qty-true]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[market-qty-integral-float]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[dup-live-bid-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[dup-live-ask-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[dup-market-bid-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[dup-market-ask-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[order-seq-before-type]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[order-seq-before-fields]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[order-type-before-fields]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[order-missing-before-side]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[order-event-id-before-order-id]" time="0.002" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[order-side-before-price]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[order-price-before-qty]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_returns_first_failing_rule[order-qty-before-duplicate]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[list]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[string]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[number]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[seq-missing]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[seq-zero]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[seq-negative]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[seq-bool]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[seq-float]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[seq-string]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[seq-null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[seq-equal-limit]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[seq-lower-limit]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[seq-equal-market]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[seq-lower-cancel]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[type-missing]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[type-market-buy]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[type-lowercase]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[type-empty]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[type-null]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[type-number]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[limit-no-event-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[limit-no-order-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[limit-no-side]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[limit-no-price]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[limit-no-qty]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[market-no-event-id]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[market-no-order-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[market-no-qty]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[cancel-no-event-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[cancel-no-target]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[event-id-empty]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[event-id-number]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[event-id-null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[order-id-empty]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[order-id-number]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[order-id-null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[market-order-id-number]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[target-empty]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[target-number]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[target-null]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[side-lowercase]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[side-hold]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[side-empty]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[side-null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[side-number]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[price-zero]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[price-negative]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[price-integral-float]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[price-float]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[price-true]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[price-false]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[price-string]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[price-null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[price-nan]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[price-inf]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[qty-zero]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[qty-negative]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[qty-integral-float]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[qty-float]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[qty-true]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[qty-false]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[qty-string]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[qty-null]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[qty-nan]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[qty-inf]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[market-qty-zero]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[market-qty-true]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[market-qty-integral-float]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[dup-live-bid-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[dup-live-ask-id]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[dup-market-bid-id]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[dup-market-ask-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[order-seq-before-type]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[order-seq-before-fields]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[order-type-before-fields]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[order-missing-before-side]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[order-event-id-before-order-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[order-side-before-price]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[order-price-before-qty]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_rejection_result_shape[order-qty-before-duplicate]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_accepts_valid_events[limit-buy]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_accepts_valid_events[limit-sell-price-1]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_accepts_valid_events[limit-seq-gap]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_accepts_valid_events[limit-huge]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_accepts_valid_events[limit-reuses-inactive-id]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_accepts_valid_events[market-sell]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_accepts_valid_events[market-reuses-inactive-id]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_validate_accepts_valid_events[cancel-live]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_accepts_valid_events[cancel-live-ask]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_validate_accepts_valid_events[cancel-unknown-target-is-valid]" time="0.000" /><testcase classname="02_tests.test_validation" name="test_first_event_after_empty_start" time="0.000" /><testcase classname="02_tests.test_validation" name="test_is_live_not_consulted_for_cancel_target" time="0.000" /><testcase classname="02_tests.test_validation" name="test_direct_method_type_check_order[LIMIT-LIMIT]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_direct_method_type_check_order[LIMIT-MARKET_SELL]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_direct_method_type_check_order[LIMIT-CANCEL]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_direct_method_type_check_order[MARKET_SELL-LIMIT]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_direct_method_type_check_order[MARKET_SELL-MARKET_SELL]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_direct_method_type_check_order[MARKET_SELL-CANCEL]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_direct_method_type_check_order[CANCEL-LIMIT]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_direct_method_type_check_order[CANCEL-MARKET_SELL]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_direct_method_type_check_order[CANCEL-CANCEL]" time="0.001" /><testcase classname="02_tests.test_validation" name="test_extra_market_fields_are_not_validated" time="0.000" /></testsuite></testsuites>

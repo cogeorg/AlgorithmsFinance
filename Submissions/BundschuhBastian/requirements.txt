@@ -1,0 +1,6 @@
+# Python 3.11 or newer (altair 6.3.0 needs >= 3.11); results were made with 3.11.0
+# venv: Submissions/BundschuhBastian/.venv
+pytest==9.2.0
+altair==6.3.0
+streamlit==1.67.0
+pandas==3.1.1

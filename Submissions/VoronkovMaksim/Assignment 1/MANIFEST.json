@@ -1,0 +1,94 @@
+{
+    "assignment":  "Assignment1",
+    "synthetic_data_only":  true,
+    "files":  {
+                  "10_Data/buildup_10000.jsonl":  {
+                                                      "bytes":  1323103,
+                                                      "sha256":  "b567082aa6de1878ef788bd6092738fb7427ceeac371e3673bfcb31b733a7c67"
+                                                  },
+                  "10_Data/buildup_10000.jsonl.gz":  {
+                                                         "bytes":  132767,
+                                                         "sha256":  "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5"
+                                                     },
+                  "10_Data/buildup_10000.jsonl.gz.metadata.json":  {
+                                                                       "bytes":  369,
+                                                                       "sha256":  "3d83dae444458ff819d1bcfe99256aa110c0506b9422850572793f75a469d2d9"
+                                                                   },
+                  "10_Data/cancel_churn_10000.jsonl":  {
+                                                           "bytes":  1078527,
+                                                           "sha256":  "3a01070cf86e22cc24767fa9f8cfdca523a4d11bbbf348971e364edb573ff9cc"
+                                                       },
+                  "10_Data/cancel_churn_10000.jsonl.gz":  {
+                                                              "bytes":  110782,
+                                                              "sha256":  "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933"
+                                                          },
+                  "10_Data/cancel_churn_10000.jsonl.gz.metadata.json":  {
+                                                                            "bytes":  374,
+                                                                            "sha256":  "887692b24a542efea667e595d45a9a46ac296285602e5191a3cecfca1ccacb03"
+                                                                        },
+                  "10_Data/crowded_10000.jsonl":  {
+                                                      "bytes":  1323093,
+                                                      "sha256":  "be6670a85788f95478e6bdf0051a4fd77ded726e144430f5eee98089810d548a"
+                                                  },
+                  "10_Data/crowded_10000.jsonl.gz":  {
+                                                         "bytes":  111714,
+                                                         "sha256":  "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6"
+                                                     },
+                  "10_Data/crowded_10000.jsonl.gz.metadata.json":  {
+                                                                       "bytes":  369,
+                                                                       "sha256":  "822894454f646dc3479b1cd93a7ce45a2b162bbddb466413cba63f5be6453695"
+                                                                   },
+                  "10_Data/mixed_10000.jsonl":  {
+                                                    "bytes":  1163426,
+                                                    "sha256":  "09136667f41a2996178e2625f349592a4ce470d47a5bb6f8542652d1b56442d4"
+                                                },
+                  "10_Data/mixed_10000.jsonl.gz":  {
+                                                       "bytes":  125334,
+                                                       "sha256":  "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16"
+                                                   },
+                  "10_Data/mixed_10000.jsonl.gz.metadata.json":  {
+                                                                     "bytes":  367,
+                                                                     "sha256":  "458136d915369ed51d13ea1c5535c1ca22a9576545763a12c3b84e2f5d199fc4"
+                                                                 },
+                  "10_Data/sweep_10000.jsonl":  {
+                                                    "bytes":  1266227,
+                                                    "sha256":  "b232f56e2cd5301e47b851492fdf72ffe9aec968948a459a548eb74c5e6279e1"
+                                                },
+                  "10_Data/sweep_10000.jsonl.gz":  {
+                                                       "bytes":  123692,
+                                                       "sha256":  "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f"
+                                                   },
+                  "10_Data/sweep_10000.jsonl.gz.metadata.json":  {
+                                                                     "bytes":  367,
+                                                                     "sha256":  "0f9038f6a913cbab8911968fd643623b3a17d9da768db2babd175a0e93785589"
+                                                                 },
+                  "10_Data/worked_example.jsonl":  {
+                                                       "bytes":  754,
+                                                       "sha256":  "831015ac71d56ada0898b0bf8f59f125900b4dc32134d6ef37bd3cec304798ec"
+                                                   },
+                  "10_Data/worked_expected.json":  {
+                                                       "bytes":  1101,
+                                                       "sha256":  "c715f52724df6bbfcedcad0e203ddb5a7752d38c809f4cf12b513ba809554d2c"
+                                                   },
+                  "20_Code/generate_orders.py":  {
+                                                     "bytes":  4035,
+                                                     "sha256":  "6ea1f91ef8ad82fd23a12c5fe4004b473f0dcf5f60a18bb1410c1c4e5fb310a9"
+                                                 },
+                  "30_Tests/README.md":  {
+                                             "bytes":  150,
+                                             "sha256":  "093e546188bf2c7e2c8d58b9d48d703efbda0974fad0ce715824bfaec2e9a546"
+                                         },
+                  "40_Results/README.md":  {
+                                               "bytes":  150,
+                                               "sha256":  "eaf566863eee39a575f1f4ad9f87c35ad23ec68fc3fc1f3430238b0d4f38b903"
+                                           },
+                  "50_Docs/AlgorithmsFinance_Exercise1.pdf":  {
+                                                                  "bytes":  172965,
+                                                                  "sha256":  "c25a0e79f061f82124631bb120edb7d28ce99dd6d5fc3dadfdbbe0f537463c93"
+                                                              },
+                  "README.md":  {
+                                    "bytes":  17514,
+                                    "sha256":  "1b5f65ec38c788f07715016bfe2a9a5abcbdd4586a40df4f1a87b7a3e8328df0"
+                                }
+              }
+}

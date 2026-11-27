@@ -1,0 +1,61 @@
+{
+  "script": "bench/experiments.py",
+  "timestamp_utc": "2026-11-21T21:55:42+00:00",
+  "python": "3.12.16 (main, Nov  5 2026, 08:06:14) [GCC 14.2.0]",
+  "implementation": "CPython",
+  "platform": "Linux-7.0.12-linuxkit-aarch64-with-glibc2.41",
+  "machine": "aarch64",
+  "processor": "",
+  "cpu_count": 8,
+  "dependencies": {
+    "pandas": "3.0.5",
+    "streamlit": "1.67.0",
+    "pytest": "9.1.1"
+  },
+  "code_commit": "6ad19199103821b977f6c08bce3d566e8876b41a",
+  "uncommitted_changes_outside_results": null,
+  "time_limit_s_per_run": 30.0,
+  "repeats": 5,
+  "warm_up": "one untimed run per configuration",
+  "clock": "time.perf_counter",
+  "gc": "collected before and disabled during each timed block",
+  "sizes": [
+    1000,
+    10000,
+    100000
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "scenarios": [
+    "buildup",
+    "crowded",
+    "mixed",
+    "sweep",
+    "cancel_churn"
+  ],
+  "million": false,
+  "quick": false,
+  "levels": 1000,
+  "concentration_levels": [
+    4,
+    1000
+  ],
+  "liquidation": {
+    "scenario": "buildup",
+    "seed": 42,
+    "fractions": [
+      0.1,
+      1.0,
+      2.0
+    ]
+  },
+  "units": {
+    "elapsed_s": "seconds per complete replay or sale",
+    "events_per_s": "throughput",
+    "qty": "1e-8 BTC units",
+    "price": "0.01 USD ticks"
+  }
+}

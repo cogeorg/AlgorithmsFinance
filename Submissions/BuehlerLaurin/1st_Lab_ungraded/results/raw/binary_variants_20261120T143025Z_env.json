@@ -1,0 +1,37 @@
+{
+  "env": {
+    "timestamp_utc": "2026-11-20T14:30:25+00:00",
+    "python_version": "3.13.15",
+    "python_implementation": "CPython",
+    "python_executable": "C:\\Users\\laubu\\.venvs\\aif-lab\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 26 Model 96 Stepping 0, AuthenticAMD",
+    "cpu_count": 16,
+    "git_commit": "b0fc1999fd6b3d4044125c8842d45c3c57f5b43a",
+    "git_dirty": true,
+    "git_dirty_files": 5
+  },
+  "settings": {
+    "seed": 20261120,
+    "n_values": [
+      1000,
+      10000,
+      100000
+    ],
+    "q": 100,
+    "hit_rates": [
+      1.0,
+      0.0,
+      0.5
+    ],
+    "duplicate_policy": "allow",
+    "repeats": 5,
+    "min_timed_seconds": 0.02,
+    "variants": [
+      "v1-recursive-slicing",
+      "v2-classic",
+      "v2-lower_bound"
+    ]
+  }
+}

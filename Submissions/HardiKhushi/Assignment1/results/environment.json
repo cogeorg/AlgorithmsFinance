@@ -1,0 +1,57 @@
+{
+  "created_utc": "2026-11-26T14:04:17.535759+00:00",
+  "python": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "executable": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "processor": "arm",
+  "cpu_count": 10,
+  "code_commit": "3276644148289ec8656417c5547699701da865c5",
+  "source_sha256": {
+    "benchmark.py": "18e0113794600ece6a8f50fcd76521f1793fbb996ec44209e46e9417d47b1e5a",
+    "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+    "replay.py": "4e6f7a245bfda078ca757491201182d24747093ccadee3eb1bbcfcfac30cfa5f",
+    "orderbook/__init__.py": "8d4242ad068f49401332feca8723821fccde7ae90125d5d3513e38b420859fd3",
+    "orderbook/baseline.py": "e67acc882a9c1804b5cbe840d05f475ed976ee4a2e6924ad2bfcc997676009c9",
+    "orderbook/common.py": "0bdec2d8315cc5f7f916b0a122e405edb62cb19c6a26dce82d023673fc568190",
+    "orderbook/io.py": "3f3654b7a50b3466be8eddd8ce82e784333c86e1775413ed20bbf23600aeb7de",
+    "orderbook/revised.py": "21b2005911b3c4a1130cd35fa78dce87ff56913f9c0491f73d99d806747631d9",
+    "tests/test_contract.py": "0192af636d1237e892ae686f0033e268b6ba48b527d168125e185588fe639114",
+    "tests/test_generator.py": "e74b7af86c630dcd897765ef11c9adddc363cd7d4acf79fe44bbaf26474fe594",
+    "tests/test_measurement.py": "6a10266d6844d39605137352eaf0084346a5507277587a0bd94e4774ab8fd07b",
+    "tests/test_revision_storage.py": "5aadd44ddaeaeeac1b3236d94c807b79a36a1a055d42266b74d595630b5f6f04"
+  },
+  "settings": {
+    "sizes": [
+      1000,
+      10000,
+      100000
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "scenarios": [
+      "buildup",
+      "crowded",
+      "mixed",
+      "sweep",
+      "cancel_churn"
+    ],
+    "limit_seconds": 4.0,
+    "memory_limit_bytes": 268435456,
+    "out": "results",
+    "skip_million": false
+  },
+  "percentile": "nearest rank ceil(p*n)-1; no interpolation",
+  "timing": "perf_counter; one full warmup (repeat 0), five repeats; fresh empty book; replay excludes parsing; application includes streamed parsing (first seed); destruction of returned book after call excluded",
+  "memory": "one separate tracemalloc run; preloaded events excluded; book, transient Python allocations and latest returned result included; no trade history; not RSS",
+  "limits": "wall deadline per individual warmup/repeat/diagnostic; traced allocation budget checked every 1000 events in memory runs only; preload cap 200000 events; no process RSS cap",
+  "latency": "separate minimal per-event timers, engine instrumentation off; values buffered until replay ends; all <=10000 configurations plus 100000 buildup/churn seed42; stopped prefixes labelled",
+  "diagnostic": "active/price peaks and result fingerprints from separate revised replay; baseline compared when its diagnostic completed; operation counts only at M=1000",
+  "million": "cancel_churn seed42, streaming end-to-end including parsing, to honor preload cap; both versions same input/limit; other million scenarios not attempted",
+  "dependencies": "Python standard library only; POSIX signal timers required for benchmark",
+  "measurements_sha256": "50899196812344728bdf413f356c2a8aabb103617db9151a8859675a88cda06f",
+  "latency_sha256": "7fa84ea7ce96adf739719b3a8a6a6a6227c4a1b08f01defcd93cf2f8d7c89629"
+}

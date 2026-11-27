@@ -1,0 +1,21 @@
+Earlier complete runs of tuning.py on 24 Nov 2026 (same machine, mains power), kept to show how much
+the comparison varies from run to run. results/tuning.json holds the last run (9 repeats); these two
+used 7 repeats and still kept the three comparison books alive while timing.
+
+Run 1 (directly after the main benchmark; the laptop was in use)
+buildup                      B1 original    779.9 ms  B1    836.3 ms  B    596.7 ms   B/original 0.77
+crowded                      B1 original    995.0 ms  B1    947.5 ms  B    678.9 ms   B/original 0.68
+mixed                        B1 original   1000.9 ms  B1    849.5 ms  B    778.3 ms   B/original 0.78
+sweep                        B1 original    694.9 ms  B1    686.8 ms  B    551.4 ms   B/original 0.79
+cancel_churn                 B1 original    420.6 ms  B1    408.9 ms  B    401.3 ms   B/original 0.95
+mass_cancel                  B1 original    493.3 ms  B1    558.1 ms  B    432.7 ms   B/original 0.88
+bid book + 100% market sell  B1 original    660.1 ms  B1    665.2 ms  B    558.4 ms   B/original 0.85
+
+Run 2 (after re-measuring six benchmark cells)
+buildup                      B1 original    938.9 ms  B1    806.4 ms  B    605.3 ms   B/original 0.64
+crowded                      B1 original    648.8 ms  B1    747.5 ms  B    561.7 ms   B/original 0.87
+mixed                        B1 original    571.6 ms  B1    477.9 ms  B    395.2 ms   B/original 0.69
+sweep                        B1 original    791.0 ms  B1    900.1 ms  B    672.2 ms   B/original 0.85
+cancel_churn                 B1 original    329.0 ms  B1    326.2 ms  B    307.4 ms   B/original 0.93
+mass_cancel                  B1 original    544.7 ms  B1    547.7 ms  B    468.1 ms   B/original 0.86
+bid book + 100% market sell  B1 original    612.8 ms  B1    641.8 ms  B    669.2 ms   B/original 1.09

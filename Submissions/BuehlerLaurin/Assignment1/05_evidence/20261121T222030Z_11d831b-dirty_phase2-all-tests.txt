@@ -1,0 +1,1133 @@
+label: phase2-all-tests
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -m pytest -q --tb=short --basetemp=scratch/pytest-final --junitxml=05_evidence/phase2-all-tests.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 11d831b27d5fc46a92095f0ff17e524f6ab63369
+dirty: True
+python: 3.13.15
+utc: 20261121T222030Z
+exit_code: 1
+duration_s: 113.14
+------------------------------------------------------------
+................................................................FFFFFFFF [ 21%]
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF................ [ 42%]
+...F.......F............................................................ [ 63%]
+........................................................................ [ 84%]
+....................................................                     [100%]
+================================== FAILURES ===================================
+______ test_contract[lob-B-check_accepted_cancel_and_market_advance_seq] ______
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:507: in check_accepted_cancel_and_market_advance_seq
+    res = run(impl(), [C(1, "ghost"), L(1, "b1", "BUY", 100, 1, eid="r1"), M(2, "s", 1),
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_________________ test_contract[lob-B-check_best_price_first] _________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:294: in check_best_price_first
+    r = run(book, [L(1, "b1", "BUY", 100, 1), L(2, "b2", "BUY", 102, 1), L(3, "b3", "BUY", 101, 1), M(4, "s", 3)])[3]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_______ test_contract[lob-B-check_cancel_before_fill_removes_full_qty] ________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:392: in check_cancel_before_fill_removes_full_qty
+    r = run(book, [L(1, "a1", "SELL", 100, 7), C(2, "a1")])[1]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+________ test_contract[lob-B-check_cancel_keeps_queue_order_of_others] ________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:410: in check_cancel_keeps_queue_order_of_others
+    run(book, [L(1, "b1", "BUY", 100, 1), L(2, "b2", "BUY", 100, 1), L(3, "b3", "BUY", 100, 1), C(4, "b2")])
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+______________ test_contract[lob-B-check_cancel_not_found_cases] ______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:400: in check_cancel_not_found_cases
+    res = run(book, [L(1, "b1", "BUY", 100, 1), L(2, "b2", "BUY", 100, 1), M(3, "s1", 1),
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+__________ test_contract[lob-B-check_cancel_removes_exact_residual] ___________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:384: in check_cancel_removes_exact_residual
+    res = run(book, [L(1, "b1", "BUY", 100, 5), L(2, "b2", "BUY", 100, 3), M(3, "s1", 2), C(4, "b1"), M(5, "s2", 3)])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+___________ test_contract[lob-B-check_crossing_sell_at_maker_price] ___________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:310: in check_crossing_sell_at_maker_price
+    r = run(book, [L(1, "b1", "BUY", 100, 1), L(2, "t", "SELL", 90, 3)])[1]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+___________ test_contract[lob-B-check_direct_methods_match_process] ___________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:536: in check_direct_methods_match_process
+    a = via_process.process(copy.deepcopy(ev))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:13: in process
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_________ test_contract[lob-B-check_direct_methods_reject_wrong_type] _________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:559: in check_direct_methods_reject_wrong_type
+    run(book, [L(1, "b1", "BUY", 100, 5)])
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_____________ test_contract[lob-B-check_direct_methods_validate] ______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:545: in check_direct_methods_validate
+    assert book.AddLimitOrder(L(1, "b", "BUY", 100, 0)) == {"event_id": "e1", "status": "rejected", "reason": "bad_qty"}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:16: in AddLimitOrder
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+______________ test_contract[lob-B-check_empty_book_inspection] _______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:272: in check_empty_book_inspection
+    assert book.snapshot() == [] and book.best_bid() is None and book.best_ask() is None
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+________________ test_contract[lob-B-check_fifo_within_price] _________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:286: in check_fifo_within_price
+    r = run(book, [L(1, "x", "BUY", 100, 2), L(2, "a", "BUY", 100, 2), L(3, "m", "BUY", 100, 2), M(4, "s", 3)])[3]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_______________ test_contract[lob-B-check_fill_at_maker_price] ________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:302: in check_fill_at_maker_price
+    r = run(book, [L(1, "a1", "SELL", 100, 1), L(2, "t", "BUY", 105, 1)])[1]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+___________ test_contract[lob-B-check_fresh_instances_independent] ____________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:600: in check_fresh_instances_independent
+    run(first, [L(1, "b1", "BUY", 100, 1)])
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_____________ test_contract[lob-B-check_input_event_not_mutated] ______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:595: in check_input_event_not_mutated
+    run(impl(), _API_STREAM)          # run() asserts each event is unchanged after process()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+______ test_contract[lob-B-check_invariants_on_supplied_stream_prefixes] ______
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:629: in check_invariants_on_supplied_stream_prefixes
+    res = run(impl(), events)
+          ^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+______________ test_contract[lob-B-check_limit_at_touch_crosses] ______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:319: in check_limit_at_touch_crosses
+    res = run(book, [L(1, "a1", "SELL", 101, 2), L(2, "b1", "BUY", 100, 1), L(3, "b2", "BUY", 101, 1)])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_________________ test_contract[lob-B-check_long_queue_fifo] __________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:373: in check_long_queue_fifo
+    res = run(book, [L(i + 1, ids[i], "BUY", 100, 1) for i in range(1000)] + [M(1001, "s", 999)])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+____________ test_contract[lob-B-check_market_residual_discarded] _____________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:355: in check_market_residual_discarded
+    res = run(book, [L(1, "b1", "BUY", 100, 2), M(2, "s", 5), L(3, "b2", "BUY", 10**9, 1)])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_______ test_contract[lob-B-check_market_sell_equal_to_depth_is_filled] _______
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:341: in check_market_sell_equal_to_depth_is_filled
+    r = run(book, [L(1, "b1", "BUY", 100, 2), L(2, "b2", "BUY", 99, 3), M(3, "s", 5)])[2]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_____________ test_contract[lob-B-check_market_sell_ignores_asks] _____________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:363: in check_market_sell_ignores_asks
+    r = run(book, [L(1, "a1", "SELL", 50, 4), L(2, "b1", "BUY", 40, 1), M(3, "s", 3)])[2]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_____ test_contract[lob-B-check_market_sell_larger_than_depth_is_partial] _____
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:347: in check_market_sell_larger_than_depth_is_partial
+    r = run(impl(), [L(1, "b1", "BUY", 100, 2), M(2, "s", 5)])[1]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+______ test_contract[lob-B-check_market_sell_on_empty_book_is_unfilled] _______
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:335: in check_market_sell_on_empty_book_is_unfilled
+    r = run(impl(), [M(1, "s", 5)])[0]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_________________ test_contract[lob-B-check_one_limit_rests] __________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:277: in check_one_limit_rests
+    r = run(book, [L(1, "b1", "BUY", 100, 10)])[0]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_________________ test_contract[lob-B-check_own_cancel_cases] _________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+______________ test_contract[lob-B-check_own_crossing_limit_buy] ______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_____________ test_contract[lob-B-check_own_crossing_limit_sell] ______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+__________________ test_contract[lob-B-check_own_empty_book] __________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+________________ test_contract[lob-B-check_own_fifo_one_price] ________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_________________ test_contract[lob-B-check_own_huge_values] __________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+___________________ test_contract[lob-B-check_own_id_reuse] ___________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+___________ test_contract[lob-B-check_own_interleaved_cancel_fill] ____________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+________________ test_contract[lob-B-check_own_invalid_fields] ________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+________________ test_contract[lob-B-check_own_limit_at_touch] ________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+__________________ test_contract[lob-B-check_own_long_queue] __________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+___________ test_contract[lob-B-check_own_market_larger_than_book] ____________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+__________ test_contract[lob-B-check_own_market_sell_empty_bid_side] __________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+____________ test_contract[lob-B-check_own_noncrossing_residuals] _____________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+__________________ test_contract[lob-B-check_own_one_order] ___________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+__________ test_contract[lob-B-check_own_partial_then_another_sale] ___________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+__________________ test_contract[lob-B-check_own_sell_sizes] __________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_________________ test_contract[lob-B-check_own_sweep_levels] _________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:256: in check
+    _replay_own_dataset(impl, name)
+02_tests\contract.py:247: in _replay_own_dataset
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+___________ test_contract[lob-B-check_partial_maker_keeps_priority] ___________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:327: in check_partial_maker_keeps_priority
+    res = run(book, [L(1, "b1", "BUY", 100, 5), L(2, "b2", "BUY", 100, 5), M(3, "s1", 2),
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_______ test_contract[lob-B-check_rejected_event_does_not_advance_seq] ________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:496: in check_rejected_event_does_not_advance_seq
+    res = run(book, [L(1, "b1", "BUY", 100, 1),
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_________________ test_contract[lob-B-check_rejects_bad_ids] __________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:463: in check_rejects_bad_ids
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"].startswith("bad_id:")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+________________ test_contract[lob-B-check_rejects_bad_price] _________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:471: in check_rejects_bad_price
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] == "bad_price"))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_________________ test_contract[lob-B-check_rejects_bad_qty] __________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:475: in check_rejects_bad_qty
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] == "bad_qty"))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_________________ test_contract[lob-B-check_rejects_bad_seq] __________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:447: in check_rejects_bad_seq
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] in ("bad_seq", "missing_field:seq")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+______________ test_contract[lob-B-check_rejects_bool_quantity] _______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:479: in check_rejects_bool_quantity
+    _check_invalid_rows(impl, _rows(lambda r: r["label"] in ("qty-true", "qty-false", "market-qty-true")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+____________ test_contract[lob-B-check_rejects_duplicate_live_id] _____________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:487: in check_rejects_duplicate_live_id
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] == "duplicate_live_order_id"))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_________ test_contract[lob-B-check_rejects_integral_float_quantity] __________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:483: in check_rejects_integral_float_quantity
+    _check_invalid_rows(impl, _rows(lambda r: r["label"] in ("qty-integral-float", "market-qty-integral-float")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+______________ test_contract[lob-B-check_rejects_missing_fields] ______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:459: in check_rejects_missing_fields
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"].startswith("missing_field:")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+____________ test_contract[lob-B-check_rejects_nonincreasing_seq] _____________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:451: in check_rejects_nonincreasing_seq
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] == "nonincreasing_seq"))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+______________ test_contract[lob-B-check_rejects_not_an_object] _______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:443: in check_rejects_not_an_object
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] == "not_an_object"))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_______________ test_contract[lob-B-check_rejects_unknown_side] _______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:467: in check_rejects_unknown_side
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] == "unknown_side"))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_______________ test_contract[lob-B-check_rejects_unknown_type] _______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:455: in check_rejects_unknown_type
+    _check_invalid_rows(impl, _rows(lambda r: r["reason"] in ("unknown_type", "missing_field:type")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+___________ test_contract[lob-B-check_result_types_are_exact_ints] ____________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:586: in check_result_types_are_exact_ints
+    for r in run(impl(), _API_STREAM):
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+________ test_contract[lob-B-check_reuse_of_inactive_ids_is_accepted] _________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:517: in check_reuse_of_inactive_ids_is_accepted
+    res = run(book, [L(1, "b1", "BUY", 100, 1), M(2, "s", 1), L(3, "b1", "BUY", 90, 2), C(4, "b1"),
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_____________ test_contract[lob-B-check_snapshot_canonical_order] _____________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:617: in check_snapshot_canonical_order
+    run(book, [L(1, "a1", "SELL", 105, 1), L(2, "b1", "BUY", 100, 1), L(3, "a2", "SELL", 103, 1),
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+________________ test_contract[lob-B-check_snapshot_is_a_copy] ________________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:608: in check_snapshot_is_a_copy
+    run(book, [L(1, "b1", "BUY", 100, 5)])
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+___________ test_contract[lob-B-check_unknown_extra_fields_ignored] ___________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:580: in check_unknown_extra_fields_ignored
+    want = run(plain, [event])[0]
+           ^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+______________ test_contract[lob-B-check_validation_check_order] ______________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:491: in check_validation_check_order
+    _check_invalid_rows(impl, _rows(lambda r: r["label"].startswith("order-")))
+02_tests\contract.py:426: in _check_invalid_rows
+    book = _setup_invalid_base(impl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:419: in _setup_invalid_base
+    run(book, INVALID_SETUP)
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+_________ test_contract[lob-B-check_worked_example_book_and_proceeds] _________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:230: in check_worked_example_book_and_proceeds
+    res = run(book, events)
+          ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+____________ test_contract[lob-B-check_worked_example_market_sell] ____________
+02_tests\test_contract.py:13: in test_contract
+    check(impl)
+02_tests\contract.py:219: in check_worked_example_market_sell
+    res = run(impl(), events)
+          ^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:186: in run
+    before = assert_book(book)
+             ^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+__________________ test_real_versions_pass_all_checks[lob-B] __________________
+02_tests\test_mutants.py:290: in test_real_versions_pass_all_checks
+    assert _run(check, impl) == "pass", (key, check.__name__, _run(check, impl))
+E   AssertionError: (('lob', 'B'), 'check_accepted_cancel_and_market_advance_seq', 'error: NotImplementedError: Version B: Phase 3')
+E   assert 'error: NotIm...on B: Phase 3' == 'pass'
+E     
+E     - pass
+E     + error: NotImplementedError: Version B: Phase 3
+__________________________ TestDifferential.runTest ___________________________
+C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\hypothesis\stateful.py:504: in runTest
+    run_state_machine_as_test(cls, settings=self.settings)
+C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\hypothesis\stateful.py:268: in run_state_machine_as_test
+    state_machine_test()
+C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\hypothesis\stateful.py:119: in run_state_machine
+    @given(st.data())
+               ^^^
+02_tests\test_stateful.py:146: in books_valid
+    assert contract.assert_book(self.a) == contract.assert_book(self.b)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\contract.py:78: in assert_book
+    snap = book.snapshot()
+           ^^^^^^^^^^^^^^^
+01_code\lob\book_b.py:26: in snapshot
+    raise NotImplementedError("Version B: Phase 3")
+E   NotImplementedError: Version B: Phase 3
+E   Falsifying example:
+E   state = DifferentialMachine()
+E   state.books_valid()
+E   state.teardown()
+=========================== short test summary info ===========================
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_accepted_cancel_and_market_advance_seq]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_best_price_first]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_cancel_before_fill_removes_full_qty]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_cancel_keeps_queue_order_of_others]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_cancel_not_found_cases]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_cancel_removes_exact_residual]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_crossing_sell_at_maker_price]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_direct_methods_match_process]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_direct_methods_reject_wrong_type]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_direct_methods_validate]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_empty_book_inspection]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_fifo_within_price]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_fill_at_maker_price]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_fresh_instances_independent]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_input_event_not_mutated]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_invariants_on_supplied_stream_prefixes]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_limit_at_touch_crosses]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_long_queue_fifo]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_market_residual_discarded]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_market_sell_equal_to_depth_is_filled]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_market_sell_ignores_asks]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_market_sell_larger_than_depth_is_partial]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_market_sell_on_empty_book_is_unfilled]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_one_limit_rests]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_cancel_cases]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_crossing_limit_buy]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_crossing_limit_sell]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_empty_book]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_fifo_one_price]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_huge_values]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_id_reuse] - N...
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_interleaved_cancel_fill]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_invalid_fields]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_limit_at_touch]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_long_queue]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_market_larger_than_book]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_market_sell_empty_bid_side]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_noncrossing_residuals]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_one_order] - ...
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_partial_then_another_sale]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_sell_sizes]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_own_sweep_levels]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_partial_maker_keeps_priority]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejected_event_does_not_advance_seq]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejects_bad_ids]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejects_bad_price]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejects_bad_qty]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejects_bad_seq]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejects_bool_quantity]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejects_duplicate_live_id]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejects_integral_float_quantity]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejects_missing_fields]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejects_nonincreasing_seq]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejects_not_an_object]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejects_unknown_side]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_rejects_unknown_type]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_result_types_are_exact_ints]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_reuse_of_inactive_ids_is_accepted]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_snapshot_canonical_order]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_snapshot_is_a_copy]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_unknown_extra_fields_ignored]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_validation_check_order]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_worked_example_book_and_proceeds]
+FAILED 02_tests/test_contract.py::test_contract[lob-B-check_worked_example_market_sell]
+FAILED 02_tests/test_mutants.py::test_real_versions_pass_all_checks[lob-B] - ...
+FAILED 02_tests/test_stateful.py::TestDifferential::runTest - NotImplementedE...
+66 failed, 274 passed in 112.33s (0:01:52)

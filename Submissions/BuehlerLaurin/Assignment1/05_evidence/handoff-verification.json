@@ -1,0 +1,57 @@
+{
+  "commit": "d885f6e96da935ea4f73f24ed6da9aea012f8bbf",
+  "dirty": true,
+  "source_sha256": {
+    ".gitattributes": "2e7d093a2f85b79d10e9ecfa2ff0b35362305544a69c5f71b8b281a295947443",
+    "run_all.ps1": "2e67959eecb451aa6bf703853ec17676342175113339d691e1f7834194dead61",
+    "run_all.sh": "9b5ff42fc536a6ce9c79707640629276ef644a887af9034157ff12d378c02376",
+    "submission_tools.py": "d4bd77d42554e14a16c06c96efdbbab07c145aa1a983bf9d0963ed9ac3d30cc4",
+    "04_dashboard/views.py": "d2a8a92bdd6ac5e3df2737c8ab170499a50494034f7d644a4bad50dacd3544c2",
+    "04_dashboard/saved_results.py": "166bed8a885fdd3dabe9495bbe4762bbd9def41d1a091dd03b82cb446b25870d",
+    "02_tests/test_dashboard.py": "47615462b9ef04dcc2021ab72e20228a6c748f8e85027d028b5f934fedf0484a",
+    "00_docs/REPORT.md": "e2bf813bf353e7499cdd1176ff64018f20f908d10f2d8ce38665a7fcd8396714",
+    "00_docs/REPORT_FACT_CHECK.md": "8c76daf1c00798c9598330db03a6aad1aaaa09a90277f299aa4c009030982163"
+  },
+  "standard_tests": 1033,
+  "per_file": {
+    "test_b3r": 6,
+    "test_b_internal": 32,
+    "test_bench_pipeline": 30,
+    "test_contract": 448,
+    "test_dashboard": 22,
+    "test_fast_assessment": 10,
+    "test_fast_equivalence": 116,
+    "test_final_version": 60,
+    "test_mutants": 25,
+    "test_own_datasets": 4,
+    "test_post_attack_pipeline": 13,
+    "test_replay": 21,
+    "test_replay_regressions": 28,
+    "test_stateful": 6,
+    "test_submission_robustness": 28,
+    "test_validation": 184
+  },
+  "suite_sha256": "76d43ea9e36b1bf51470bd3bb409984c102a7ddc9851d5808ffa874dad92337a",
+  "numeric_checks": 91,
+  "report_exact_replacements": 40,
+  "protected_unchanged": [
+    "01_code",
+    "03_results",
+    "06_data",
+    "07_attack",
+    "requirements.txt",
+    "pytest.ini",
+    "00_docs/FINAL_SELECTION.md",
+    "05_evidence/clarity-audit.json"
+  ],
+  "smoke": {
+    "path": "scratch\\submission_smoke_3f4lqucn\\03_results\\runs\\20261125T144434Z_d885f6e-dirty_smoke",
+    "workers": 108,
+    "checks": 108,
+    "sizes": [
+      1000
+    ]
+  },
+  "long_runs_executed": false,
+  "bash_verification": "syntax only; no macOS/Linux execution"
+}

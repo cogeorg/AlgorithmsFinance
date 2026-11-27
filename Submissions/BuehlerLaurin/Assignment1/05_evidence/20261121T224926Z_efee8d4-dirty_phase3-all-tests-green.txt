@@ -1,0 +1,16 @@
+label: phase3-all-tests-green
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -m pytest -q --tb=short --basetemp=scratch/pytest-phase3 --junitxml=05_evidence/phase3-all-tests.xml
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: efee8d4ba8d3425e51a31c5a8e361cd8986fe168
+dirty: True
+python: 3.13.15
+utc: 20261121T224926Z
+exit_code: 0
+duration_s: 135.85
+------------------------------------------------------------
+........................................................................ [ 21%]
+........................................................................ [ 42%]
+........................................................................ [ 63%]
+........................................................................ [ 84%]
+....................................................                     [100%]
+340 passed in 134.87s (0:02:14)

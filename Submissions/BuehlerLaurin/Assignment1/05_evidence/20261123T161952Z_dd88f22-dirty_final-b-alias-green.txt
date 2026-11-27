@@ -1,0 +1,13 @@
+label: final-b-alias-green
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_final_version.py 02_tests/test_replay.py 02_tests/test_b_internal.py 07_attack/test_attack.py -q -k final or factory or sanity or replay or atkp --runxfail --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: dd88f2253fcc659b1b294f371555c59c08867ce5
+dirty: True
+python: 3.13.15
+utc: 20261123T161952Z
+exit_code: 0
+duration_s: 11.80
+------------------------------------------------------------
+........................................................................ [ 55%]
+.........................................................                [100%]
+129 passed, 1979 deselected in 10.82s

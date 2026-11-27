@@ -1,0 +1,21 @@
+{
+  "kind": "correctness, not performance",
+  "code_sha256": {
+    "lob/version_a.py": "a025f08f485d596dedb61e7521b77e3397a88872000e58c95c087412b4751bc5",
+    "lob/version_b.py": "43f8433e19037690838950e35ed021718c2c03f2fa00ad29159bca0ef12f27d2",
+    "tests/test_orderbook.py": "ccc49b7c25688eb6480af5db0a93de4fe04c55127817a4176a5ab8904cddd696"
+  },
+  "files": [
+    {
+      "file": "worked_example.jsonl",
+      "input_sha256": "831015ac71d56ada0898b0bf8f59f125900b4dc32134d6ef37bd3cec304798ec",
+      "events": 6,
+      "rejected_events": 0,
+      "fills": 4,
+      "peak_active_orders": 5,
+      "remaining_orders": 2,
+      "last_seq": 6,
+      "every_event_equal": true
+    }
+  ]
+}

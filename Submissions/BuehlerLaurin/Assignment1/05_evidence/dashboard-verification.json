@@ -1,0 +1,54 @@
+{
+  "snapshot_commit": "337cc615df10892108726618b53606d59c795790",
+  "review_base_commit": "337cc615df10892108726618b53606d59c795790",
+  "no_engine_or_result_changes": true,
+  "no_new_measurements": true,
+  "source_sha256": {
+    "04_dashboard/app.py": "ed4fe926383fe0d02e9c2c0c65d49a3c6d2b922cac05b01b5c5c41b87f480805",
+    "04_dashboard/saved_results.py": "1722e68da8736b493863a6aa8979e78f3d26a99b17f0261cd0a74c9490338495",
+    "04_dashboard/verify_saved.py": "ed9cf7f092f6583f3410bd58970a81ac079b4ca4ad88390c395b5a49148d9487",
+    "04_dashboard/views.py": "958fb8afd006f2e1c9486cabb3e4b3c4604d46f7b1b282eaac6a6ed13f33128b",
+    "02_tests/test_dashboard.py": "b5a9941a3a6f258ff984883bef908634ec7a422d2dce02ccc3f3456ab87ef6de",
+    ".streamlit/config.toml": "30971d9857ec3579ae6dcd3154e7dac912af24e6f8a5ca6077ef51df03aab723"
+  },
+  "suites": [
+    {
+      "suite": "dashboard",
+      "tests": 16,
+      "path": "05_evidence/dashboard-tests.xml",
+      "sha256": "87005881d4f81cd9305e8b837c1bc63cfe02d4a98e837000325ebc82c1d84a5d",
+      "per_file": {
+        "test_dashboard": 16
+      }
+    },
+    {
+      "suite": "standard",
+      "tests": 999,
+      "path": "05_evidence/dashboard-all-tests.xml",
+      "sha256": "07604c5a0afdb6ac16ca8253654a78e339890073244ccd095c22b58c64b6acdd",
+      "per_file": {
+        "test_b3r": 6,
+        "test_b_internal": 32,
+        "test_bench_pipeline": 30,
+        "test_contract": 448,
+        "test_dashboard": 16,
+        "test_fast_assessment": 10,
+        "test_fast_equivalence": 115,
+        "TestFastDifferential": 1,
+        "test_final_version": 60,
+        "test_mutants": 25,
+        "test_own_datasets": 4,
+        "test_post_attack_pipeline": 13,
+        "test_replay": 21,
+        "test_replay_regressions": 28,
+        "TestDifferential_B": 1,
+        "TestDifferential_B1": 1,
+        "TestDifferential_B2": 1,
+        "TestDifferential_B3": 1,
+        "TestDifferential_B3r": 1,
+        "TestDifferential_B3r_fast": 1,
+        "test_validation": 184
+      }
+    }
+  ]
+}

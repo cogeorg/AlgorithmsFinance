@@ -1,0 +1,12 @@
+label: atk01-original-reproducer-fixed
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest -q 07_attack/test_attack.py -k test_atk01_replay_cli_accepts_unbounded_positive_int --runxfail --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 958c8b477bc297858893ed74f0a93cd70dc7f665
+dirty: True
+python: 3.13.15
+utc: 20261122T120050Z
+exit_code: 0
+duration_s: 1.99
+------------------------------------------------------------
+....                                                                     [100%]
+4 passed, 1415 deselected in 1.26s

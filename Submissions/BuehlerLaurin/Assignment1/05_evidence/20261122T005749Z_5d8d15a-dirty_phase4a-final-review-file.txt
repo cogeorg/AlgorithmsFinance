@@ -1,0 +1,17 @@
+label: phase4a-final-review-file
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/phase4a_review.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 5d8d15a410b380b2eb4f5831c7c637abdc5c3106
+dirty: True
+python: 3.13.15
+utc: 20261122T005749Z
+exit_code: 0
+duration_s: 1.17
+------------------------------------------------------------
+Protected engines/tests/expected/generator sources unchanged; generated data ignored; whitespace clean.
+Final smoke measured Python/test source hash: 1279568c77a50da82bb976800ec9427e04ad38e531c7f106b19089455a9bc6eb
+Fresh suite per file: {"TestDifferential_B": 1, "TestDifferential_B2": 1, "TestDifferential_B3": 1, "test_b_internal": 17, "test_bench_pipeline": 16, "test_contract": 256, "test_mutants": 22, "test_own_datasets": 4, "test_replay": 15, "test_validation": 184}
+Both smoke folders contain exact fresh test evidence.
+Long plan only (no replay): {"official": 45, "million": 5, "queue": 18, "liquidation": 27, "adversarial": 27, "churn": 20}
+PowerShell wrapper syntax PASS (not executed)
+RESULT: PASS (Phase 4a scope/source/evidence/limits-plan review; no long replay executed)

@@ -1,0 +1,27 @@
+label: post-attack-manifest-idempotence-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest -q 02_tests/test_post_attack_pipeline.py -k idempotent --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 958c8b477bc297858893ed74f0a93cd70dc7f665
+dirty: True
+python: 3.13.15
+utc: 20261122T115525Z
+exit_code: 1
+duration_s: 1.41
+------------------------------------------------------------
+F                                                                        [100%]
+================================== FAILURES ===================================
+______ test_manifest_verification_is_idempotent_for_clean_session_start _______
+02_tests\test_post_attack_pipeline.py:104: in test_manifest_verification_is_idempotent_for_clean_session_start
+    assert (tmp_path/"00_docs/POST_ATTACK_MANIFEST.json").read_bytes() == before
+E   assert b'{\r\n  "ent...: 23\r\n}\r\n' == b'{\r\n  "ent...: 23\r\n}\r\n'
+E     
+E     At index 591 diff: b'9' != b'3'
+E     Use -v to get more diff
+---------------------------- Captured stdout call -----------------------------
+fixture 041ee9f7a2389b8df9b45f479354efc8eb0655babd844661d21c5af87a267b02
+RESULT: PASS (20 added cases generated/hash-verified outside timing; original manifest unchanged)
+fixture 041ee9f7a2389b8df9b45f479354efc8eb0655babd844661d21c5af87a267b02
+RESULT: PASS (20 added cases generated/hash-verified outside timing; original manifest unchanged)
+=========================== short test summary info ===========================
+FAILED 02_tests/test_post_attack_pipeline.py::test_manifest_verification_is_idempotent_for_clean_session_start
+1 failed, 12 deselected in 0.65s

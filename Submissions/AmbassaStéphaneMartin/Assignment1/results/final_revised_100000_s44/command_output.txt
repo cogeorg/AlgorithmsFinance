@@ -1,0 +1,26 @@
+[1/25] replay_buildup_n100000_s44_l1000 shared io: complete
+[2/25] replay_buildup_n100000_s44_l1000 revised timing: complete
+[3/25] replay_buildup_n100000_s44_l1000 revised latency: complete
+[4/25] replay_buildup_n100000_s44_l1000 revised memory: complete
+[5/25] replay_buildup_n100000_s44_l1000 revised diagnostics: complete
+[6/25] replay_crowded_n100000_s44_l1000 shared io: complete
+[7/25] replay_crowded_n100000_s44_l1000 revised timing: complete
+[8/25] replay_crowded_n100000_s44_l1000 revised latency: complete
+[9/25] replay_crowded_n100000_s44_l1000 revised memory: complete
+[10/25] replay_crowded_n100000_s44_l1000 revised diagnostics: complete
+[11/25] replay_mixed_n100000_s44_l1000 shared io: complete
+[12/25] replay_mixed_n100000_s44_l1000 revised timing: complete
+[13/25] replay_mixed_n100000_s44_l1000 revised latency: complete
+[14/25] replay_mixed_n100000_s44_l1000 revised memory: complete
+[15/25] replay_mixed_n100000_s44_l1000 revised diagnostics: complete
+[16/25] replay_sweep_n100000_s44_l1000 shared io: complete
+[17/25] replay_sweep_n100000_s44_l1000 revised timing: complete
+[18/25] replay_sweep_n100000_s44_l1000 revised latency: complete
+[19/25] replay_sweep_n100000_s44_l1000 revised memory: complete
+[20/25] replay_sweep_n100000_s44_l1000 revised diagnostics: complete
+[21/25] replay_cancel_churn_n100000_s44_l1000 shared io: complete
+[22/25] replay_cancel_churn_n100000_s44_l1000 revised timing: complete
+[23/25] replay_cancel_churn_n100000_s44_l1000 revised latency: complete
+[24/25] replay_cancel_churn_n100000_s44_l1000 revised memory: complete
+[25/25] replay_cancel_churn_n100000_s44_l1000 revised diagnostics: complete
+{"results": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_revised_100000_s44", "status": "complete", "raw_rows": 85, "summary_rows": 25}

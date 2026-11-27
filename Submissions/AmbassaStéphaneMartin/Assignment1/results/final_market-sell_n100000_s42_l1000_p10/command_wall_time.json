@@ -1,0 +1,71 @@
+{
+  "command": [
+    "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "-B",
+    "phase1_campaign.py",
+    "--count",
+    "100000",
+    "--seed",
+    "42",
+    "--experiment",
+    "market-sell",
+    "--levels",
+    "1000",
+    "--sale-percent",
+    "10",
+    "--out",
+    "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\final_market-sell_n100000_s42_l1000_p10"
+  ],
+  "started_utc": "2026-11-26T01:06:00.773724+00:00",
+  "finished_utc": "2026-11-26T01:10:15.731248+00:00",
+  "exit_code": 2,
+  "total_command_wall_seconds": 254.95751650002785,
+  "progress": [
+    {
+      "line": "[1/9] market-sell_controlled_bids_n100000_s42_l1000_p10 shared io: complete",
+      "elapsed_seconds": 3.1038770000450313,
+      "interval_seconds": 3.1038770000450313
+    },
+    {
+      "line": "[2/9] market-sell_controlled_bids_n100000_s42_l1000_p10 baseline timing: incomplete",
+      "elapsed_seconds": 63.131818400055636,
+      "interval_seconds": 60.027941400010604
+    },
+    {
+      "line": "[3/9] market-sell_controlled_bids_n100000_s42_l1000_p10 revised timing: complete",
+      "elapsed_seconds": 65.37682070001028,
+      "interval_seconds": 2.245002299954649
+    },
+    {
+      "line": "[4/9] market-sell_controlled_bids_n100000_s42_l1000_p10 baseline latency: incomplete",
+      "elapsed_seconds": 125.41083390003769,
+      "interval_seconds": 60.0340132000274
+    },
+    {
+      "line": "[5/9] market-sell_controlled_bids_n100000_s42_l1000_p10 revised latency: complete",
+      "elapsed_seconds": 127.72336350003025,
+      "interval_seconds": 2.3125295999925584
+    },
+    {
+      "line": "[6/9] market-sell_controlled_bids_n100000_s42_l1000_p10 baseline memory: incomplete",
+      "elapsed_seconds": 187.7462557000108,
+      "interval_seconds": 60.02289219998056
+    },
+    {
+      "line": "[7/9] market-sell_controlled_bids_n100000_s42_l1000_p10 revised memory: complete",
+      "elapsed_seconds": 192.1095243000309,
+      "interval_seconds": 4.363268600020092
+    },
+    {
+      "line": "[8/9] market-sell_controlled_bids_n100000_s42_l1000_p10 baseline diagnostics: incomplete",
+      "elapsed_seconds": 252.12854420003714,
+      "interval_seconds": 60.01901990000624
+    },
+    {
+      "line": "[9/9] market-sell_controlled_bids_n100000_s42_l1000_p10 revised diagnostics: complete",
+      "elapsed_seconds": 254.9424621000071,
+      "interval_seconds": 2.813917899969965
+    }
+  ],
+  "boundary": "Process creation through exit, including preparation/all phases; excludes tests and audit."
+}

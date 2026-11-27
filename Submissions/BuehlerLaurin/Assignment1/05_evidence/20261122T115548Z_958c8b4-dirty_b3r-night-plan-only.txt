@@ -1,0 +1,25 @@
+label: b3r-night-plan-only
+command: powershell -NoProfile -File 01_code/bench/tonight_b3r.ps1 -PlanOnly
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 958c8b477bc297858893ed74f0a93cd70dc7f665
+dirty: True
+python: 3.13.15
+utc: 20261122T115548Z
+exit_code: 0
+duration_s: 4.12
+------------------------------------------------------------
+{"part": "official", "cases": 45, "versions": ["B3r"], "modes": ["timing", "latency", "memory", "counts"], "cells": 180, "sizes": [1000, 10000, 100000], "engine_executed": false}
+{"part": "million", "cases": 5, "versions": ["B3r"], "modes": ["timing", "latency", "memory", "counts"], "cells": 20, "sizes": [1000000], "engine_executed": false}
+{"part": "queue", "cases": 18, "versions": ["B3r"], "modes": ["timing", "latency", "memory", "counts"], "cells": 72, "sizes": [1000, 10000, 100000], "engine_executed": false}
+{"part": "liquidation", "cases": 27, "versions": ["B3r"], "modes": ["timing", "latency", "memory", "counts"], "cells": 108, "sizes": [1000, 10000, 100000], "engine_executed": false}
+{"part": "adversarial", "cases": 27, "versions": ["B3r"], "modes": ["timing", "latency", "memory", "counts"], "cells": 108, "sizes": [1000, 10000, 100000], "engine_executed": false}
+{"part": "churn", "cases": 20, "versions": ["B3r"], "modes": ["timing", "latency", "memory", "counts"], "cells": 20, "sizes": [1000, 10000, 100000, 1000000], "engine_executed": false}
+{"part": "post_attack", "cases": 20, "versions": ["B3r"], "modes": ["timing", "latency", "memory", "counts"], "cells": 56, "sizes": [1000, 10000, 32500, 65000, 100000, 100025, 130000, 200050, 260000, 400100, 800200], "engine_executed": false}
+{"part": "post_attack", "cases": 20, "versions": ["B1", "B2", "B3"], "modes": ["timing", "latency", "memory", "counts"], "cells": 168, "sizes": [1000, 10000, 32500, 65000, 100000, 100025, 130000, 200050, 260000, 400100, 800200], "engine_executed": false}
+{"part": "official", "cases": 45, "versions": ["A"], "modes": ["timing", "latency", "memory", "counts"], "cells": 180, "sizes": [1000, 10000, 100000], "engine_executed": false}
+{"part": "million", "cases": 5, "versions": ["A"], "modes": ["timing", "latency", "memory", "counts"], "cells": 20, "sizes": [1000000], "engine_executed": false}
+{"part": "queue", "cases": 18, "versions": ["A"], "modes": ["timing", "latency", "memory", "counts"], "cells": 72, "sizes": [1000, 10000, 100000], "engine_executed": false}
+{"part": "liquidation", "cases": 27, "versions": ["A"], "modes": ["timing", "latency", "memory", "counts"], "cells": 108, "sizes": [1000, 10000, 100000], "engine_executed": false}
+{"part": "adversarial", "cases": 27, "versions": ["A"], "modes": ["timing", "latency", "memory", "counts"], "cells": 108, "sizes": [1000, 10000, 100000], "engine_executed": false}
+{"part": "churn", "cases": 20, "versions": ["A"], "modes": ["timing", "latency", "memory", "counts"], "cells": 20, "sizes": [1000, 10000, 100000, 1000000], "engine_executed": false}
+{"part": "post_attack", "cases": 20, "versions": ["A"], "modes": ["timing", "latency", "memory", "counts"], "cells": 56, "sizes": [1000, 10000, 32500, 65000, 100000, 100025, 130000, 200050, 260000, 400100, 800200], "engine_executed": false}

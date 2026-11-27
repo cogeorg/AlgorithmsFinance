@@ -1,0 +1,76 @@
+=== original staged ===
+test_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) ... ok
+test_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) ... ok
+test_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) ... ok
+test_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) ... ok
+test_empty_array (test_search.MembershipContractTests.test_empty_array) ... ok
+test_empty_queries (test_search.MembershipContractTests.test_empty_queries) ... ok
+test_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) ... ok
+test_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) ... ok
+test_single_entry (test_search.MembershipContractTests.test_single_entry) ... ok
+test_slide_example (test_search.MembershipContractTests.test_slide_example) ... ok
+test_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) ... ok
+test_two_entries (test_search.MembershipContractTests.test_two_entries) ... ok
+test_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.000s
+
+OK
+=== original snapshot ===
+test_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) ... ok
+test_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) ... ok
+test_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) ... ok
+test_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) ... ok
+test_empty_array (test_search.MembershipContractTests.test_empty_array) ... ok
+test_empty_queries (test_search.MembershipContractTests.test_empty_queries) ... ok
+test_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) ... ok
+test_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) ... ok
+test_single_entry (test_search.MembershipContractTests.test_single_entry) ... ok
+test_slide_example (test_search.MembershipContractTests.test_slide_example) ... ok
+test_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) ... ok
+test_two_entries (test_search.MembershipContractTests.test_two_entries) ... ok
+test_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.000s
+
+OK
+=== revised staged ===
+test_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) ... ok
+test_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) ... ok
+test_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) ... ok
+test_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) ... ok
+test_empty_array (test_search.MembershipContractTests.test_empty_array) ... ok
+test_empty_queries (test_search.MembershipContractTests.test_empty_queries) ... ok
+test_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) ... ok
+test_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) ... ok
+test_single_entry (test_search.MembershipContractTests.test_single_entry) ... ok
+test_slide_example (test_search.MembershipContractTests.test_slide_example) ... ok
+test_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) ... ok
+test_two_entries (test_search.MembershipContractTests.test_two_entries) ... ok
+test_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.000s
+
+OK
+=== revised snapshot ===
+test_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) ... ok
+test_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) ... ok
+test_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) ... ok
+test_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) ... ok
+test_empty_array (test_search.MembershipContractTests.test_empty_array) ... ok
+test_empty_queries (test_search.MembershipContractTests.test_empty_queries) ... ok
+test_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) ... ok
+test_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) ... ok
+test_single_entry (test_search.MembershipContractTests.test_single_entry) ... ok
+test_slide_example (test_search.MembershipContractTests.test_slide_example) ... ok
+test_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) ... ok
+test_two_entries (test_search.MembershipContractTests.test_two_entries) ... ok
+test_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.000s
+
+OK

@@ -1,0 +1,112 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "cancel_cases",
+ "description": "Cancel before any fill, after a full fill, after a partial fill, twice, unknown, a market-sell id, and an ask.",
+ "covers": [
+  "cancel before fill",
+  "cancel after full fill -> not_found",
+  "cancel after partial fill",
+  "repeated cancel -> not_found",
+  "unknown cancel -> not_found",
+  "cancel of a market-sell id",
+  "cancel removes exactly the residual"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "order_id": "b2",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e3",
+   "order_id": "b3",
+   "status": "resting",
+   "unfilled_qty_units": 4,
+   "fills": []
+  },
+  {
+   "event_id": "e4",
+   "target_order_id": "b3",
+   "status": "cancelled",
+   "cancelled_qty_units": 4
+  },
+  {
+   "event_id": "e5",
+   "order_id": "s1",
+   "status": "filled",
+   "unfilled_qty_units": 0,
+   "fills": [
+    {
+     "maker_id": "b1",
+     "taker_id": "s1",
+     "price_ticks": 100,
+     "qty_units": 5
+    },
+    {
+     "maker_id": "b2",
+     "taker_id": "s1",
+     "price_ticks": 100,
+     "qty_units": 2
+    }
+   ]
+  },
+  {
+   "event_id": "e6",
+   "target_order_id": "b1",
+   "status": "not_found",
+   "cancelled_qty_units": 0
+  },
+  {
+   "event_id": "e7",
+   "target_order_id": "b2",
+   "status": "cancelled",
+   "cancelled_qty_units": 3
+  },
+  {
+   "event_id": "e8",
+   "target_order_id": "b2",
+   "status": "not_found",
+   "cancelled_qty_units": 0
+  },
+  {
+   "event_id": "e9",
+   "target_order_id": "zz",
+   "status": "not_found",
+   "cancelled_qty_units": 0
+  },
+  {
+   "event_id": "e10",
+   "target_order_id": "s1",
+   "status": "not_found",
+   "cancelled_qty_units": 0
+  },
+  {
+   "event_id": "e11",
+   "order_id": "a1",
+   "status": "resting",
+   "unfilled_qty_units": 2,
+   "fills": []
+  },
+  {
+   "event_id": "e12",
+   "target_order_id": "a1",
+   "status": "cancelled",
+   "cancelled_qty_units": 2
+  }
+ ],
+ "final_book": [],
+ "best_bid": null,
+ "best_ask": null
+}

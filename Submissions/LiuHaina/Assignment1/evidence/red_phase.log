@@ -1,0 +1,1397 @@
+test_compare_after_every_event (test_orderbook.TestDifferential.test_compare_after_every_event) ... ERROR
+test_buy_crosses_then_rests_at_own_price (test_orderbook.TestVersionA.test_buy_crosses_then_rests_at_own_price) ... ERROR
+test_buy_limit_stops_residual_fifo (test_orderbook.TestVersionA.test_buy_limit_stops_residual_fifo) ... ERROR
+test_cancel_active_repeated_unknown (test_orderbook.TestVersionA.test_cancel_active_repeated_unknown) ... ERROR
+test_cancel_fully_filled (test_orderbook.TestVersionA.test_cancel_fully_filled) ... ERROR
+test_cancel_partially_filled (test_orderbook.TestVersionA.test_cancel_partially_filled) ... ERROR
+test_crossing_buy_best_ask_resting_price (test_orderbook.TestVersionA.test_crossing_buy_best_ask_resting_price) ... ERROR
+test_crossing_sell_fully_filled (test_orderbook.TestVersionA.test_crossing_sell_fully_filled) ... ERROR
+test_crossing_sell_residual (test_orderbook.TestVersionA.test_crossing_sell_residual) ... ERROR
+test_duplicate_live_id_rejected_before_matching (test_orderbook.TestVersionA.test_duplicate_live_id_rejected_before_matching) ... ERROR
+test_empty_book (test_orderbook.TestVersionA.test_empty_book) ... ERROR
+test_fifo_not_identifier (test_orderbook.TestVersionA.test_fifo_not_identifier) ... ERROR
+test_generated_fifo_independent_prefix_expectation (test_orderbook.TestVersionA.test_generated_fifo_independent_prefix_expectation) ... ERROR
+test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) ... 
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 0, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': -1, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 1.5, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': '5', 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': None, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': True, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': 0}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': -1}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': 1.5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': '5'}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': None}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': True}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': 0}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': -1}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': 1.5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': '5'}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': None}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': True}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'HOLD', 'price_ticks': 100, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'buy', 'price_ticks': 100, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': '', 'price_ticks': 100, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'bad', 'type': 'UNKNOWN'}) ... ERROR
+test_long_queue_cancel_middle (test_orderbook.TestVersionA.test_long_queue_cancel_middle) ... ERROR
+test_multiple_prices_best_bid_first (test_orderbook.TestVersionA.test_multiple_prices_best_bid_first) ... ERROR
+test_nonincreasing_sequence (test_orderbook.TestVersionA.test_nonincreasing_sequence) ... ERROR
+test_official_example_and_proceeds (test_orderbook.TestVersionA.test_official_example_and_proceeds) ... ERROR
+test_one_order (test_orderbook.TestVersionA.test_one_order) ... ERROR
+test_partial_fill_keeps_priority (test_orderbook.TestVersionA.test_partial_fill_keeps_priority) ... ERROR
+test_public_methods (test_orderbook.TestVersionA.test_public_methods) ... ERROR
+test_same_price_asks_fifo (test_orderbook.TestVersionA.test_same_price_asks_fifo) ... ERROR
+test_sell_limit_stops (test_orderbook.TestVersionA.test_sell_limit_stops) ... ERROR
+test_smaller_equal_oversized_sale (test_orderbook.TestVersionA.test_smaller_equal_oversized_sale) ... 
+  test_smaller_equal_oversized_sale (test_orderbook.TestVersionA.test_smaller_equal_oversized_sale) (qty=2) ... ERROR
+  test_smaller_equal_oversized_sale (test_orderbook.TestVersionA.test_smaller_equal_oversized_sale) (qty=5) ... ERROR
+  test_smaller_equal_oversized_sale (test_orderbook.TestVersionA.test_smaller_equal_oversized_sale) (qty=8) ... ERROR
+test_buy_crosses_then_rests_at_own_price (test_orderbook.TestVersionB.test_buy_crosses_then_rests_at_own_price) ... ERROR
+test_buy_limit_stops_residual_fifo (test_orderbook.TestVersionB.test_buy_limit_stops_residual_fifo) ... ERROR
+test_cancel_active_repeated_unknown (test_orderbook.TestVersionB.test_cancel_active_repeated_unknown) ... ERROR
+test_cancel_fully_filled (test_orderbook.TestVersionB.test_cancel_fully_filled) ... ERROR
+test_cancel_partially_filled (test_orderbook.TestVersionB.test_cancel_partially_filled) ... ERROR
+test_crossing_buy_best_ask_resting_price (test_orderbook.TestVersionB.test_crossing_buy_best_ask_resting_price) ... ERROR
+test_crossing_sell_fully_filled (test_orderbook.TestVersionB.test_crossing_sell_fully_filled) ... ERROR
+test_crossing_sell_residual (test_orderbook.TestVersionB.test_crossing_sell_residual) ... ERROR
+test_duplicate_live_id_rejected_before_matching (test_orderbook.TestVersionB.test_duplicate_live_id_rejected_before_matching) ... ERROR
+test_empty_book (test_orderbook.TestVersionB.test_empty_book) ... ERROR
+test_fifo_not_identifier (test_orderbook.TestVersionB.test_fifo_not_identifier) ... ERROR
+test_generated_fifo_independent_prefix_expectation (test_orderbook.TestVersionB.test_generated_fifo_independent_prefix_expectation) ... ERROR
+test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) ... 
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 0, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': -1, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 1.5, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': '5', 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': None, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': True, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': 0}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': -1}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': 1.5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': '5'}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': None}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': True}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': 0}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': -1}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': 1.5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': '5'}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': None}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': True}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'HOLD', 'price_ticks': 100, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'buy', 'price_ticks': 100, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': '', 'price_ticks': 100, 'qty_units': 5}) ... ERROR
+  test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'bad', 'type': 'UNKNOWN'}) ... ERROR
+test_long_queue_cancel_middle (test_orderbook.TestVersionB.test_long_queue_cancel_middle) ... ERROR
+test_multiple_prices_best_bid_first (test_orderbook.TestVersionB.test_multiple_prices_best_bid_first) ... ERROR
+test_nonincreasing_sequence (test_orderbook.TestVersionB.test_nonincreasing_sequence) ... ERROR
+test_official_example_and_proceeds (test_orderbook.TestVersionB.test_official_example_and_proceeds) ... ERROR
+test_one_order (test_orderbook.TestVersionB.test_one_order) ... ERROR
+test_partial_fill_keeps_priority (test_orderbook.TestVersionB.test_partial_fill_keeps_priority) ... ERROR
+test_public_methods (test_orderbook.TestVersionB.test_public_methods) ... ERROR
+test_same_price_asks_fifo (test_orderbook.TestVersionB.test_same_price_asks_fifo) ... ERROR
+test_sell_limit_stops (test_orderbook.TestVersionB.test_sell_limit_stops) ... ERROR
+test_smaller_equal_oversized_sale (test_orderbook.TestVersionB.test_smaller_equal_oversized_sale) ... 
+  test_smaller_equal_oversized_sale (test_orderbook.TestVersionB.test_smaller_equal_oversized_sale) (qty=2) ... ERROR
+  test_smaller_equal_oversized_sale (test_orderbook.TestVersionB.test_smaller_equal_oversized_sale) (qty=5) ... ERROR
+  test_smaller_equal_oversized_sale (test_orderbook.TestVersionB.test_smaller_equal_oversized_sale) (qty=8) ... ERROR
+
+======================================================================
+ERROR: test_compare_after_every_event (test_orderbook.TestDifferential.test_compare_after_every_event)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 271, in test_compare_after_every_event
+    self.assertEqual(a.process_event(copy.deepcopy(e)),b.process_event(copy.deepcopy(e)))
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+======================================================================
+ERROR: test_buy_crosses_then_rests_at_own_price (test_orderbook.TestVersionA.test_buy_crosses_then_rests_at_own_price)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 177, in test_buy_crosses_then_rests_at_own_price
+    self.apply(limit(1,"ask","SELL",95,2))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_buy_limit_stops_residual_fifo (test_orderbook.TestVersionA.test_buy_limit_stops_residual_fifo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 170, in test_buy_limit_stops_residual_fifo
+    self.apply(limit(1,"existing",qty=2))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_cancel_active_repeated_unknown (test_orderbook.TestVersionA.test_cancel_active_repeated_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 137, in test_cancel_active_repeated_unknown
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_cancel_fully_filled (test_orderbook.TestVersionA.test_cancel_fully_filled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 149, in test_cancel_fully_filled
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_cancel_partially_filled (test_orderbook.TestVersionA.test_cancel_partially_filled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 144, in test_cancel_partially_filled
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_crossing_buy_best_ask_resting_price (test_orderbook.TestVersionA.test_crossing_buy_best_ask_resting_price)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 154, in test_crossing_buy_best_ask_resting_price
+    self.apply(limit(1,"expensive","SELL",110,4))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_crossing_sell_fully_filled (test_orderbook.TestVersionA.test_crossing_sell_fully_filled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 166, in test_crossing_sell_fully_filled
+    self.apply(limit(1,"b",price=110,qty=5))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_crossing_sell_residual (test_orderbook.TestVersionA.test_crossing_sell_residual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 161, in test_crossing_sell_residual
+    self.apply(limit(1,"b",qty=2))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_duplicate_live_id_rejected_before_matching (test_orderbook.TestVersionA.test_duplicate_live_id_rejected_before_matching)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 208, in test_duplicate_live_id_rejected_before_matching
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_empty_book (test_orderbook.TestVersionA.test_empty_book)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 103, in test_empty_book
+    self.assertEqual(self.book.inspect_book(), [])
+                     ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_fifo_not_identifier (test_orderbook.TestVersionA.test_fifo_not_identifier)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 119, in test_fifo_not_identifier
+    self.apply(limit(1,"z",qty=2))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_generated_fifo_independent_prefix_expectation (test_orderbook.TestVersionA.test_generated_fifo_independent_prefix_expectation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 231, in test_generated_fifo_independent_prefix_expectation
+    self.apply(limit(i,f"g{i}",qty=q))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 0, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': -1, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 1.5, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': '5', 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': None, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': True, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': 0})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': -1})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': 1.5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': '5'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': None})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': 0})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': -1})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': 1.5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': '5'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': None})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'HOLD', 'price_ticks': 100, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'buy', 'price_ticks': 100, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': '', 'price_ticks': 100, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionA.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'bad', 'type': 'UNKNOWN'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_long_queue_cancel_middle (test_orderbook.TestVersionA.test_long_queue_cancel_middle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 221, in test_long_queue_cancel_middle
+    self.apply(limit(i+1,f"q{200-i}",qty=1))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_multiple_prices_best_bid_first (test_orderbook.TestVersionA.test_multiple_prices_best_bid_first)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 125, in test_multiple_prices_best_bid_first
+    self.apply(limit(1,"low",price=90,qty=4))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_nonincreasing_sequence (test_orderbook.TestVersionA.test_nonincreasing_sequence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 214, in test_nonincreasing_sequence
+    self.apply(limit(3,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_official_example_and_proceeds (test_orderbook.TestVersionA.test_official_example_and_proceeds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 246, in test_official_example_and_proceeds
+    r = self.apply(e)
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_one_order (test_orderbook.TestVersionA.test_one_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 107, in test_one_order
+    self.check(limit(1, "b"), "resting", 5, [])
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 96, in check
+    result = self.apply(event)
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_partial_fill_keeps_priority (test_orderbook.TestVersionA.test_partial_fill_keeps_priority)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 130, in test_partial_fill_keeps_priority
+    self.apply(limit(1,"first"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_public_methods (test_orderbook.TestVersionA.test_public_methods)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 236, in test_public_methods
+    self.book.AddLimitOrder(limit(1,"b"))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 12, in AddLimitOrder
+    return self.process_event(event)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+======================================================================
+ERROR: test_same_price_asks_fifo (test_orderbook.TestVersionA.test_same_price_asks_fifo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 186, in test_same_price_asks_fifo
+    self.apply(limit(1,"z","SELL",100,2))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_sell_limit_stops (test_orderbook.TestVersionA.test_sell_limit_stops)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 182, in test_sell_limit_stops
+    self.apply(limit(1,"bid",price=90))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_smaller_equal_oversized_sale (test_orderbook.TestVersionA.test_smaller_equal_oversized_sale) (qty=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 114, in test_smaller_equal_oversized_sale
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_smaller_equal_oversized_sale (test_orderbook.TestVersionA.test_smaller_equal_oversized_sale) (qty=5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 114, in test_smaller_equal_oversized_sale
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_smaller_equal_oversized_sale (test_orderbook.TestVersionA.test_smaller_equal_oversized_sale) (qty=8)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 114, in test_smaller_equal_oversized_sale
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_buy_crosses_then_rests_at_own_price (test_orderbook.TestVersionB.test_buy_crosses_then_rests_at_own_price)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 177, in test_buy_crosses_then_rests_at_own_price
+    self.apply(limit(1,"ask","SELL",95,2))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_buy_limit_stops_residual_fifo (test_orderbook.TestVersionB.test_buy_limit_stops_residual_fifo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 170, in test_buy_limit_stops_residual_fifo
+    self.apply(limit(1,"existing",qty=2))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_cancel_active_repeated_unknown (test_orderbook.TestVersionB.test_cancel_active_repeated_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 137, in test_cancel_active_repeated_unknown
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_cancel_fully_filled (test_orderbook.TestVersionB.test_cancel_fully_filled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 149, in test_cancel_fully_filled
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_cancel_partially_filled (test_orderbook.TestVersionB.test_cancel_partially_filled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 144, in test_cancel_partially_filled
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_crossing_buy_best_ask_resting_price (test_orderbook.TestVersionB.test_crossing_buy_best_ask_resting_price)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 154, in test_crossing_buy_best_ask_resting_price
+    self.apply(limit(1,"expensive","SELL",110,4))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_crossing_sell_fully_filled (test_orderbook.TestVersionB.test_crossing_sell_fully_filled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 166, in test_crossing_sell_fully_filled
+    self.apply(limit(1,"b",price=110,qty=5))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_crossing_sell_residual (test_orderbook.TestVersionB.test_crossing_sell_residual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 161, in test_crossing_sell_residual
+    self.apply(limit(1,"b",qty=2))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_duplicate_live_id_rejected_before_matching (test_orderbook.TestVersionB.test_duplicate_live_id_rejected_before_matching)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 208, in test_duplicate_live_id_rejected_before_matching
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_empty_book (test_orderbook.TestVersionB.test_empty_book)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 103, in test_empty_book
+    self.assertEqual(self.book.inspect_book(), [])
+                     ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_fifo_not_identifier (test_orderbook.TestVersionB.test_fifo_not_identifier)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 119, in test_fifo_not_identifier
+    self.apply(limit(1,"z",qty=2))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_generated_fifo_independent_prefix_expectation (test_orderbook.TestVersionB.test_generated_fifo_independent_prefix_expectation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 231, in test_generated_fifo_independent_prefix_expectation
+    self.apply(limit(i,f"g{i}",qty=q))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 0, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': -1, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 1.5, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': '5', 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': None, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': True, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': 0})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': -1})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': 1.5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': '5'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': None})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'BUY', 'price_ticks': 100, 'qty_units': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': 0})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': -1})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': 1.5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': '5'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': None})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'MARKET_SELL', 'order_id': 'bad', 'qty_units': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'HOLD', 'price_ticks': 100, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': 'buy', 'price_ticks': 100, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'e2', 'type': 'LIMIT', 'order_id': 'bad', 'side': '', 'price_ticks': 100, 'qty_units': 5})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_invalid_inputs_leave_state_and_sequence (test_orderbook.TestVersionB.test_invalid_inputs_leave_state_and_sequence) (event={'seq': 2, 'event_id': 'bad', 'type': 'UNKNOWN'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 203, in test_invalid_inputs_leave_state_and_sequence
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_long_queue_cancel_middle (test_orderbook.TestVersionB.test_long_queue_cancel_middle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 221, in test_long_queue_cancel_middle
+    self.apply(limit(i+1,f"q{200-i}",qty=1))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_multiple_prices_best_bid_first (test_orderbook.TestVersionB.test_multiple_prices_best_bid_first)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 125, in test_multiple_prices_best_bid_first
+    self.apply(limit(1,"low",price=90,qty=4))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_nonincreasing_sequence (test_orderbook.TestVersionB.test_nonincreasing_sequence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 214, in test_nonincreasing_sequence
+    self.apply(limit(3,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_official_example_and_proceeds (test_orderbook.TestVersionB.test_official_example_and_proceeds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 246, in test_official_example_and_proceeds
+    r = self.apply(e)
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_one_order (test_orderbook.TestVersionB.test_one_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 107, in test_one_order
+    self.check(limit(1, "b"), "resting", 5, [])
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 96, in check
+    result = self.apply(event)
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_partial_fill_keeps_priority (test_orderbook.TestVersionB.test_partial_fill_keeps_priority)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 130, in test_partial_fill_keeps_priority
+    self.apply(limit(1,"first"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_public_methods (test_orderbook.TestVersionB.test_public_methods)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 236, in test_public_methods
+    self.book.AddLimitOrder(limit(1,"b"))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 12, in AddLimitOrder
+    return self.process_event(event)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 9, in process_event
+    raise NotImplementedError("Step 1: matching engine not implemented")
+NotImplementedError: Step 1: matching engine not implemented
+
+======================================================================
+ERROR: test_same_price_asks_fifo (test_orderbook.TestVersionB.test_same_price_asks_fifo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 186, in test_same_price_asks_fifo
+    self.apply(limit(1,"z","SELL",100,2))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_sell_limit_stops (test_orderbook.TestVersionB.test_sell_limit_stops)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 182, in test_sell_limit_stops
+    self.apply(limit(1,"bid",price=90))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_smaller_equal_oversized_sale (test_orderbook.TestVersionB.test_smaller_equal_oversized_sale) (qty=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 114, in test_smaller_equal_oversized_sale
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_smaller_equal_oversized_sale (test_orderbook.TestVersionB.test_smaller_equal_oversized_sale) (qty=5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 114, in test_smaller_equal_oversized_sale
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+======================================================================
+ERROR: test_smaller_equal_oversized_sale (test_orderbook.TestVersionB.test_smaller_equal_oversized_sale) (qty=8)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 114, in test_smaller_equal_oversized_sale
+    self.apply(limit(1,"b"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/tests/test_orderbook.py", line 39, in apply
+    before = copy.deepcopy(self.book.inspect_book())
+                           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/fanqiechao/Documents/Codex/2026-11-23/files-mentioned-by-the-user-assignment1/outputs/assignment1_step1/lob/contract.py", line 22, in inspect_book
+    raise NotImplementedError("Step 1: inspection not implemented")
+NotImplementedError: Step 1: inspection not implemented
+
+----------------------------------------------------------------------
+Ran 47 tests in 0.014s
+
+FAILED (errors=93)

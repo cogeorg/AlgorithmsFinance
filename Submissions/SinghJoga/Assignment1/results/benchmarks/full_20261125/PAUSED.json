@@ -1,0 +1,22 @@
+{
+    "completed_configurations":  18,
+    "not_started_configurations":  65,
+    "failed_configurations":  0,
+    "paused_recorded_at_utc":  "2026-11-25T23:01:11.1519458Z",
+    "interrupted_configuration":  {
+                                      "config_id":  "workload_crowded_M100000_seed43__baseline__attempt_001",
+                                      "progress_last_write_local":  "2026-11-25T23:59:19.6448019+01:00",
+                                      "last_persisted_repeat":  null,
+                                      "status":  "interrupted_by_requested_pause",
+                                      "last_persisted_phase":  "empty_engine_construction_summary",
+                                      "note":  "No completion summary or full-run median was written. Preserve these rows as a partial attempt; do not merge them with a later attempt unless exact compatibility is verified.",
+                                      "saved_progress_rows":  12,
+                                      "progress_file":  "records/workload_crowded_M100000_seed43__baseline__attempt_001.progress.jsonl"
+                                  },
+    "note":  "The 14th timeout completed at 300 seconds; the runner began the next configuration before it was stopped. The next configuration has the partial progress listed above.",
+    "stopped_timeout_configurations":  14,
+    "run_id":  "full_20261125",
+    "status":  "paused_by_user_request",
+    "runner_processes_remaining":  0,
+    "run_total_configurations":  98
+}

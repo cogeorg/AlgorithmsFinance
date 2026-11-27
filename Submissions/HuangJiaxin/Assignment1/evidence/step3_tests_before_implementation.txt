@@ -1,0 +1,2836 @@
+...................................FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 38%]
+FFF..FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 76%]
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF                            [100%]
+=================================== FAILURES ===================================
+________________ test_invariants_on_random_streams[version_A-0] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235384f0f10>, seed = 0
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 2, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o278009742', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_A-1] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235388e7dc0>, seed = 1
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o126614242', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_A-2] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235387cbbb0>, seed = 2
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'MARKET_SELL', 'order_id': 'm0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_A-3] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235386f6d10>, seed = 3
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o983488253', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_A-4] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235387cb8b0>, seed = 4
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'MARKET_SELL', 'order_id': 'm0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_A-5] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235386f7c40>, seed = 5
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o499958518', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_A-6] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235387c9f60>, seed = 6
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o485026', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_A-7] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235384f2680>, seed = 7
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o51847156', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_A-8] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235388e7b80>, seed = 8
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'MARKET_SELL', 'order_id': 'm0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_A-9] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235384f2590>, seed = 9
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 2, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o199871617', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_A-10] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe2353897eda0>, seed = 10
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o496692033', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_A-11] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235387baec0>, seed = 11
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 2, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o545290415', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_A-12] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235388e7bb0>, seed = 12
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 2, 'event_id': 'x0', 'type': 'MARKET_SELL', 'order_id': 'm0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_A-13] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235384f04c0>, seed = 13
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'MARKET_SELL', 'order_id': 'm0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_A-14] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235389a8a90>, seed = 14
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o789341797', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_A-15] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235387cabc0>, seed = 15
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'bad0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_A-16] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235387afe50>, seed = 16
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o243357877', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_A-17] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235387cb610>, seed = 17
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 2, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o187570127', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_A-18] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235387cb8b0>, seed = 18
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'MARKET_SELL', 'order_id': 'm0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_A-19] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235387ba7d0>, seed = 19
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o214208618', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_B-0] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387aedd0>, seed = 0
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 2, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o278009742', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_B-1] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387bb370>, seed = 1
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o126614242', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_B-2] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387af7c0>, seed = 2
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'MARKET_SELL', 'order_id': 'm0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_B-3] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387bb670>, seed = 3
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o983488253', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_B-4] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387cbc10>, seed = 4
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'MARKET_SELL', 'order_id': 'm0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_B-5] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235384f3340>, seed = 5
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o499958518', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_B-6] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235386f5690>, seed = 6
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o485026', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_B-7] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235384f1f30>, seed = 7
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o51847156', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_B-8] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe2353897f6a0>, seed = 8
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'MARKET_SELL', 'order_id': 'm0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+________________ test_invariants_on_random_streams[version_B-9] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387aece0>, seed = 9
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 2, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o199871617', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_B-10] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387cbca0>, seed = 10
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o496692033', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_B-11] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235385c8250>, seed = 11
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 2, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o545290415', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_B-12] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe2353897f370>, seed = 12
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 2, 'event_id': 'x0', 'type': 'MARKET_SELL', 'order_id': 'm0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_B-13] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387ba2f0>, seed = 13
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'MARKET_SELL', 'order_id': 'm0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_B-14] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe2353897dea0>, seed = 14
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o789341797', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_B-15] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387b85e0>, seed = 15
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'bad0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_B-16] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387cbe50>, seed = 16
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o243357877', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_B-17] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235389aad10>, seed = 17
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 2, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o187570127', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_B-18] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235386f6ad0>, seed = 18
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'MARKET_SELL', 'order_id': 'm0', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+_______________ test_invariants_on_random_streams[version_B-19] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387af040>, seed = 19
+
+    @pytest.mark.parametrize("seed", range(20))
+    def test_invariants_on_random_streams(book, seed):
+        before = book.snapshot()
+        check_book_invariants(before)
+        for event in random_stream(seed):
+            result = book.process(event)
+            after = book.snapshot()
+            check_book_invariants(after)
+>           check_event(event, result, before, after)
+
+tests/test_invariants.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+event = {'seq': 1, 'event_id': 'x0', 'type': 'LIMIT', 'order_id': 'o214208618', ...}
+result = {}, before = {'bids': [], 'asks': []}, after = {'bids': [], 'asks': []}
+
+    def check_event(event, result, before, after):
+        b, a = _orders(before), _orders(after)
+>       status = result["status"]
+E       KeyError: 'status'
+
+tests/test_invariants.py:27: KeyError
+__________________ test_market_sell_on_empty_book[version_A] ___________________
+
+book = <lob.book_a.OrderBookA object at 0xe235386f5450>
+stream = <conftest.Stream object at 0xe235386f67d0>
+
+    def test_market_sell_on_empty_book(book, stream):
+        r = book.process(stream.market_sell("s1", 1))
+>       assert r == {"event_id": "ev1", "order_id": "s1", "status": "unfilled",
+                     "unfilled_qty_units": BTC, "fills": []}
+E       AssertionError: assert {} == {'event_id': ...00000000, ...}
+E         
+E         Right contains 5 more items:
+E         {'event_id': 'ev1',
+E          'fills': [],
+E          'order_id': 's1',
+E          'status': 'unfilled',
+E          'unfilled_qty_units': 100000000}
+E         Use -v to get more diff
+
+tests/test_matching.py:13: AssertionError
+__________________ test_market_sell_on_empty_book[version_B] ___________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387ac580>
+stream = <conftest.Stream object at 0xe235387ad7e0>
+
+    def test_market_sell_on_empty_book(book, stream):
+        r = book.process(stream.market_sell("s1", 1))
+>       assert r == {"event_id": "ev1", "order_id": "s1", "status": "unfilled",
+                     "unfilled_qty_units": BTC, "fills": []}
+E       AssertionError: assert {} == {'event_id': ...00000000, ...}
+E         
+E         Right contains 5 more items:
+E         {'event_id': 'ev1',
+E          'fills': [],
+E          'order_id': 's1',
+E          'status': 'unfilled',
+E          'unfilled_qty_units': 100000000}
+E         Use -v to get more diff
+
+tests/test_matching.py:13: AssertionError
+____________________ test_one_limit_order_rests[version_A] _____________________
+
+book = <lob.book_a.OrderBookA object at 0xe235383e7f40>
+stream = <conftest.Stream object at 0xe235383e7d30>
+
+    def test_one_limit_order_rests(book, stream):
+        r = book.process(stream.buy("b1", 60000, 1))
+>       assert r == {"event_id": "ev1", "order_id": "b1", "status": "resting",
+                     "unfilled_qty_units": BTC, "fills": []}
+E       AssertionError: assert {} == {'event_id': ...00000000, ...}
+E         
+E         Right contains 5 more items:
+E         {'event_id': 'ev1',
+E          'fills': [],
+E          'order_id': 'b1',
+E          'status': 'resting',
+E          'unfilled_qty_units': 100000000}
+E         Use -v to get more diff
+
+tests/test_matching.py:20: AssertionError
+____________________ test_one_limit_order_rests[version_B] _____________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387ad2d0>
+stream = <conftest.Stream object at 0xe235387ac2e0>
+
+    def test_one_limit_order_rests(book, stream):
+        r = book.process(stream.buy("b1", 60000, 1))
+>       assert r == {"event_id": "ev1", "order_id": "b1", "status": "resting",
+                     "unfilled_qty_units": BTC, "fills": []}
+E       AssertionError: assert {} == {'event_id': ...00000000, ...}
+E         
+E         Right contains 5 more items:
+E         {'event_id': 'ev1',
+E          'fills': [],
+E          'order_id': 'b1',
+E          'status': 'resting',
+E          'unfilled_qty_units': 100000000}
+E         Use -v to get more diff
+
+tests/test_matching.py:20: AssertionError
+___________________ test_sell_smaller_than_depth[version_A] ____________________
+
+book = <lob.book_a.OrderBookA object at 0xe2353877f370>
+stream = <conftest.Stream object at 0xe2353877dcf0>
+
+    def test_sell_smaller_than_depth(book, stream):
+        _two_bids_one_ask(book, stream)
+        r = book.process(stream.market_sell("s1", 0.5))
+>       assert r["fills"] == [fill("b1", "s1", 60000, 0.5)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:35: KeyError
+___________________ test_sell_smaller_than_depth[version_B] ____________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387ca710>
+stream = <conftest.Stream object at 0xe235387ca2f0>
+
+    def test_sell_smaller_than_depth(book, stream):
+        _two_bids_one_ask(book, stream)
+        r = book.process(stream.market_sell("s1", 0.5))
+>       assert r["fills"] == [fill("b1", "s1", 60000, 0.5)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:35: KeyError
+_____________________ test_sell_equal_to_depth[version_A] ______________________
+
+book = <lob.book_a.OrderBookA object at 0xe2353877f940>
+stream = <conftest.Stream object at 0xe2353877c6d0>
+
+    def test_sell_equal_to_depth(book, stream):
+        _two_bids_one_ask(book, stream)
+        r = book.process(stream.market_sell("s1", 2))
+>       assert r["fills"] == [fill("b1", "s1", 60000, 1), fill("b2", "s1", 60000, 1)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:44: KeyError
+_____________________ test_sell_equal_to_depth[version_B] ______________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387cbeb0>
+stream = <conftest.Stream object at 0xe235387cb970>
+
+    def test_sell_equal_to_depth(book, stream):
+        _two_bids_one_ask(book, stream)
+        r = book.process(stream.market_sell("s1", 2))
+>       assert r["fills"] == [fill("b1", "s1", 60000, 1), fill("b2", "s1", 60000, 1)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:44: KeyError
+___________ test_sell_larger_than_depth_discards_residual[version_A] ___________
+
+book = <lob.book_a.OrderBookA object at 0xe235384f1a20>
+stream = <conftest.Stream object at 0xe235384f3df0>
+
+    def test_sell_larger_than_depth_discards_residual(book, stream):
+        _two_bids_one_ask(book, stream)
+        r = book.process(stream.market_sell("s1", 3))
+>       assert r["fills"] == [fill("b1", "s1", 60000, 1), fill("b2", "s1", 60000, 1)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:52: KeyError
+___________ test_sell_larger_than_depth_discards_residual[version_B] ___________
+
+book = <lob.book_b.OrderBookB object at 0xe235387cbbe0>
+stream = <conftest.Stream object at 0xe235387cbeb0>
+
+    def test_sell_larger_than_depth_discards_residual(book, stream):
+        _two_bids_one_ask(book, stream)
+        r = book.process(stream.market_sell("s1", 3))
+>       assert r["fills"] == [fill("b1", "s1", 60000, 1), fill("b2", "s1", 60000, 1)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:52: KeyError
+____________ test_market_sell_with_only_asks_is_unfilled[version_A] ____________
+
+book = <lob.book_a.OrderBookA object at 0xe235389a9690>
+stream = <conftest.Stream object at 0xe235389aaa40>
+
+    def test_market_sell_with_only_asks_is_unfilled(book, stream):
+        book.process(stream.sell("a1", 60100, 1))
+        r = book.process(stream.market_sell("s1", 1))
+>       assert r["status"] == "unfilled" and r["fills"] == [] and r["unfilled_qty_units"] == BTC
+E       KeyError: 'status'
+
+tests/test_matching.py:62: KeyError
+____________ test_market_sell_with_only_asks_is_unfilled[version_B] ____________
+
+book = <lob.book_b.OrderBookB object at 0xe2353877f100>
+stream = <conftest.Stream object at 0xe2353877f970>
+
+    def test_market_sell_with_only_asks_is_unfilled(book, stream):
+        book.process(stream.sell("a1", 60100, 1))
+        r = book.process(stream.market_sell("s1", 1))
+>       assert r["status"] == "unfilled" and r["fills"] == [] and r["unfilled_qty_units"] == BTC
+E       KeyError: 'status'
+
+tests/test_matching.py:62: KeyError
+____________ test_fifo_at_one_price_ignores_id_spelling[version_A] _____________
+
+book = <lob.book_a.OrderBookA object at 0xe235387bab00>
+stream = <conftest.Stream object at 0xe235387ba530>
+
+    def test_fifo_at_one_price_ignores_id_spelling(book, stream):
+        # "z" arrives before "a": arrival decides, not the identifier
+        run(book, [stream.buy("z", 60000, 1), stream.buy("a", 60000, 1)])
+        r = book.process(stream.market_sell("s1", 1.5))
+>       assert r["fills"] == [fill("z", "s1", 60000, 1), fill("a", "s1", 60000, 0.5)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:71: KeyError
+____________ test_fifo_at_one_price_ignores_id_spelling[version_B] _____________
+
+book = <lob.book_b.OrderBookB object at 0xe2353897ca60>
+stream = <conftest.Stream object at 0xe2353897c490>
+
+    def test_fifo_at_one_price_ignores_id_spelling(book, stream):
+        # "z" arrives before "a": arrival decides, not the identifier
+        run(book, [stream.buy("z", 60000, 1), stream.buy("a", 60000, 1)])
+        r = book.process(stream.market_sell("s1", 1.5))
+>       assert r["fills"] == [fill("z", "s1", 60000, 1), fill("a", "s1", 60000, 0.5)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:71: KeyError
+______________ test_numeric_looking_ids_are_not_sorted[version_A] ______________
+
+book = <lob.book_a.OrderBookA object at 0xe2353877c520>
+stream = <conftest.Stream object at 0xe2353877e6b0>
+
+    def test_numeric_looking_ids_are_not_sorted(book, stream):
+        run(book, [stream.buy("b10", 60000, 1), stream.buy("b2", 60000, 1),
+                   stream.buy("b1", 60000, 1)])
+        r = book.process(stream.market_sell("s1", 3))
+>       assert [f["maker_id"] for f in r["fills"]] == ["b10", "b2", "b1"]
+E       KeyError: 'fills'
+
+tests/test_matching.py:79: KeyError
+______________ test_numeric_looking_ids_are_not_sorted[version_B] ______________
+
+book = <lob.book_b.OrderBookB object at 0xe235386f4820>
+stream = <conftest.Stream object at 0xe235386f4ac0>
+
+    def test_numeric_looking_ids_are_not_sorted(book, stream):
+        run(book, [stream.buy("b10", 60000, 1), stream.buy("b2", 60000, 1),
+                   stream.buy("b1", 60000, 1)])
+        r = book.process(stream.market_sell("s1", 3))
+>       assert [f["maker_id"] for f in r["fills"]] == ["b10", "b2", "b1"]
+E       KeyError: 'fills'
+
+tests/test_matching.py:79: KeyError
+________________ test_best_price_first_across_levels[version_A] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235384f33d0>
+stream = <conftest.Stream object at 0xe235384f1810>
+
+    def test_best_price_first_across_levels(book, stream):
+        run(book, [stream.buy("low", 59900, 1), stream.buy("high", 60000, 1),
+                   stream.buy("mid", 59950, 1)])
+        r = book.process(stream.market_sell("s1", 2.5))
+>       assert r["fills"] == [fill("high", "s1", 60000, 1), fill("mid", "s1", 59950, 1),
+                              fill("low", "s1", 59900, 0.5)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:86: KeyError
+________________ test_best_price_first_across_levels[version_B] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe2353877d750>
+stream = <conftest.Stream object at 0xe2353877f970>
+
+    def test_best_price_first_across_levels(book, stream):
+        run(book, [stream.buy("low", 59900, 1), stream.buy("high", 60000, 1),
+                   stream.buy("mid", 59950, 1)])
+        r = book.process(stream.market_sell("s1", 2.5))
+>       assert r["fills"] == [fill("high", "s1", 60000, 1), fill("mid", "s1", 59950, 1),
+                              fill("low", "s1", 59900, 0.5)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:86: KeyError
+__________ test_partial_fill_keeps_priority_for_next_sale[version_A] ___________
+
+book = <lob.book_a.OrderBookA object at 0xe235386f6cb0>
+stream = <conftest.Stream object at 0xe235386f5f30>
+
+    def test_partial_fill_keeps_priority_for_next_sale(book, stream):
+        run(book, [stream.buy("b1", 60000, 1), stream.buy("b2", 60000, 1)])
+        r1 = book.process(stream.market_sell("s1", 0.5))
+        r2 = book.process(stream.market_sell("s2", 1))
+>       assert r1["fills"] == [fill("b1", "s1", 60000, 0.5)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:95: KeyError
+__________ test_partial_fill_keeps_priority_for_next_sale[version_B] ___________
+
+book = <lob.book_b.OrderBookB object at 0xe235389a9bd0>
+stream = <conftest.Stream object at 0xe235389abe50>
+
+    def test_partial_fill_keeps_priority_for_next_sale(book, stream):
+        run(book, [stream.buy("b1", 60000, 1), stream.buy("b2", 60000, 1)])
+        r1 = book.process(stream.market_sell("s1", 0.5))
+        r2 = book.process(stream.market_sell("s2", 1))
+>       assert r1["fills"] == [fill("b1", "s1", 60000, 0.5)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:95: KeyError
+___________________ test_long_queue_at_one_price[version_A] ____________________
+
+book = <lob.book_a.OrderBookA object at 0xe235387ae470>
+stream = <conftest.Stream object at 0xe235387ad9c0>
+
+    def test_long_queue_at_one_price(book, stream):
+        unit = 1_000_000                      # 0.01 BTC each
+        ids = [f"q{999 - i:03d}" for i in range(1000)]     # spelling runs backwards
+        run(book, [stream.limit(oid, "BUY", 60000, 0.01) for oid in ids])
+        r = book.process(stream.market_sell("s1", units=500 * unit))
+>       assert [f["maker_id"] for f in r["fills"]] == ids[:500]
+E       KeyError: 'fills'
+
+tests/test_matching.py:105: KeyError
+___________________ test_long_queue_at_one_price[version_B] ____________________
+
+book = <lob.book_b.OrderBookB object at 0xe235384f0640>
+stream = <conftest.Stream object at 0xe235384f1750>
+
+    def test_long_queue_at_one_price(book, stream):
+        unit = 1_000_000                      # 0.01 BTC each
+        ids = [f"q{999 - i:03d}" for i in range(1000)]     # spelling runs backwards
+        run(book, [stream.limit(oid, "BUY", 60000, 0.01) for oid in ids])
+        r = book.process(stream.market_sell("s1", units=500 * unit))
+>       assert [f["maker_id"] for f in r["fills"]] == ids[:500]
+E       KeyError: 'fills'
+
+tests/test_matching.py:105: KeyError
+____________________ test_cancel_before_any_fill[version_A] ____________________
+
+book = <lob.book_a.OrderBookA object at 0xe235383e6500>
+stream = <conftest.Stream object at 0xe235383e6710>
+
+    def test_cancel_before_any_fill(book, stream):
+        book.process(stream.buy("b1", 60000, 1))
+        r = book.process(stream.cancel("b1"))
+>       assert r == {"event_id": "ev2", "target_order_id": "b1", "status": "cancelled",
+                     "cancelled_qty_units": BTC}
+E       AssertionError: assert {} == {'event_id': ...s': 100000000}
+E         
+E         Right contains 4 more items:
+E         {'cancelled_qty_units': 100000000,
+E          'event_id': 'ev2',
+E          'status': 'cancelled',
+E          'target_order_id': 'b1'}
+E         Use -v to get more diff
+
+tests/test_matching.py:116: AssertionError
+____________________ test_cancel_before_any_fill[version_B] ____________________
+
+book = <lob.book_b.OrderBookB object at 0xe2353897c520>
+stream = <conftest.Stream object at 0xe2353897ec80>
+
+    def test_cancel_before_any_fill(book, stream):
+        book.process(stream.buy("b1", 60000, 1))
+        r = book.process(stream.cancel("b1"))
+>       assert r == {"event_id": "ev2", "target_order_id": "b1", "status": "cancelled",
+                     "cancelled_qty_units": BTC}
+E       AssertionError: assert {} == {'event_id': ...s': 100000000}
+E         
+E         Right contains 4 more items:
+E         {'cancelled_qty_units': 100000000,
+E          'event_id': 'ev2',
+E          'status': 'cancelled',
+E          'target_order_id': 'b1'}
+E         Use -v to get more diff
+
+tests/test_matching.py:116: AssertionError
+_______ test_cancel_after_partial_fill_removes_only_residual[version_A] ________
+
+book = <lob.book_a.OrderBookA object at 0xe2353877efe0>
+stream = <conftest.Stream object at 0xe2353877d600>
+
+    def test_cancel_after_partial_fill_removes_only_residual(book, stream):
+        book.process(stream.buy("b1", 60000, 1))
+        book.process(stream.market_sell("s1", 0.4))
+        r = book.process(stream.cancel("b1"))
+>       assert r["status"] == "cancelled" and r["cancelled_qty_units"] == int(round(0.6 * BTC))
+E       KeyError: 'status'
+
+tests/test_matching.py:125: KeyError
+_______ test_cancel_after_partial_fill_removes_only_residual[version_B] ________
+
+book = <lob.book_b.OrderBookB object at 0xe235389aad40>
+stream = <conftest.Stream object at 0xe235389a89d0>
+
+    def test_cancel_after_partial_fill_removes_only_residual(book, stream):
+        book.process(stream.buy("b1", 60000, 1))
+        book.process(stream.market_sell("s1", 0.4))
+        r = book.process(stream.cancel("b1"))
+>       assert r["status"] == "cancelled" and r["cancelled_qty_units"] == int(round(0.6 * BTC))
+E       KeyError: 'status'
+
+tests/test_matching.py:125: KeyError
+_____________ test_cancel_after_full_fill_is_not_found[version_A] ______________
+
+book = <lob.book_a.OrderBookA object at 0xe235383e5f00>
+stream = <conftest.Stream object at 0xe235383e5660>
+
+    def test_cancel_after_full_fill_is_not_found(book, stream):
+        book.process(stream.buy("b1", 60000, 1))
+        book.process(stream.market_sell("s1", 1))
+        r = book.process(stream.cancel("b1"))
+>       assert r == {"event_id": "ev3", "target_order_id": "b1", "status": "not_found",
+                     "cancelled_qty_units": 0}
+E       AssertionError: assert {} == {'event_id': ...qty_units': 0}
+E         
+E         Right contains 4 more items:
+E         {'cancelled_qty_units': 0,
+E          'event_id': 'ev3',
+E          'status': 'not_found',
+E          'target_order_id': 'b1'}
+E         Use -v to get more diff
+
+tests/test_matching.py:133: AssertionError
+_____________ test_cancel_after_full_fill_is_not_found[version_B] ______________
+
+book = <lob.book_b.OrderBookB object at 0xe235387ac2e0>
+stream = <conftest.Stream object at 0xe235387ac220>
+
+    def test_cancel_after_full_fill_is_not_found(book, stream):
+        book.process(stream.buy("b1", 60000, 1))
+        book.process(stream.market_sell("s1", 1))
+        r = book.process(stream.cancel("b1"))
+>       assert r == {"event_id": "ev3", "target_order_id": "b1", "status": "not_found",
+                     "cancelled_qty_units": 0}
+E       AssertionError: assert {} == {'event_id': ...qty_units': 0}
+E         
+E         Right contains 4 more items:
+E         {'cancelled_qty_units': 0,
+E          'event_id': 'ev3',
+E          'status': 'not_found',
+E          'target_order_id': 'b1'}
+E         Use -v to get more diff
+
+tests/test_matching.py:133: AssertionError
+_________________ test_repeated_and_unknown_cancel[version_A] __________________
+
+book = <lob.book_a.OrderBookA object at 0xe235385cba60>
+stream = <conftest.Stream object at 0xe235385cb0a0>
+
+    def test_repeated_and_unknown_cancel(book, stream):
+        book.process(stream.buy("b1", 60000, 1))
+>       assert book.process(stream.cancel("b1"))["status"] == "cancelled"
+E       KeyError: 'status'
+
+tests/test_matching.py:139: KeyError
+_________________ test_repeated_and_unknown_cancel[version_B] __________________
+
+book = <lob.book_b.OrderBookB object at 0xe2353877e620>
+stream = <conftest.Stream object at 0xe2353877e080>
+
+    def test_repeated_and_unknown_cancel(book, stream):
+        book.process(stream.buy("b1", 60000, 1))
+>       assert book.process(stream.cancel("b1"))["status"] == "cancelled"
+E       KeyError: 'status'
+
+tests/test_matching.py:139: KeyError
+______________ test_cancel_removes_order_from_priority[version_A] ______________
+
+book = <lob.book_a.OrderBookA object at 0xe235386f7c70>
+stream = <conftest.Stream object at 0xe235386f6e30>
+
+    def test_cancel_removes_order_from_priority(book, stream):
+        run(book, [stream.buy("b1", 60000, 1), stream.buy("b2", 60000, 1), stream.cancel("b1")])
+        r = book.process(stream.market_sell("s1", 0.5))
+>       assert r["fills"] == [fill("b2", "s1", 60000, 0.5)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:150: KeyError
+______________ test_cancel_removes_order_from_priority[version_B] ______________
+
+book = <lob.book_b.OrderBookB object at 0xe235387b9930>
+stream = <conftest.Stream object at 0xe235387b8520>
+
+    def test_cancel_removes_order_from_priority(book, stream):
+        run(book, [stream.buy("b1", 60000, 1), stream.buy("b2", 60000, 1), stream.cancel("b1")])
+        r = book.process(stream.market_sell("s1", 0.5))
+>       assert r["fills"] == [fill("b2", "s1", 60000, 0.5)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:150: KeyError
+__________________________ test_cancel_ask[version_A] __________________________
+
+book = <lob.book_a.OrderBookA object at 0xe2353877ddb0>
+stream = <conftest.Stream object at 0xe2353877e740>
+
+    def test_cancel_ask(book, stream):
+        run(book, [stream.sell("a1", 60100, 1), stream.sell("a2", 60100, 2)])
+        r = book.process(stream.cancel("a1"))
+>       assert r["status"] == "cancelled" and r["cancelled_qty_units"] == BTC
+E       KeyError: 'status'
+
+tests/test_matching.py:156: KeyError
+__________________________ test_cancel_ask[version_B] __________________________
+
+book = <lob.book_b.OrderBookB object at 0xe235384f1300>
+stream = <conftest.Stream object at 0xe235384f1f30>
+
+    def test_cancel_ask(book, stream):
+        run(book, [stream.sell("a1", 60100, 1), stream.sell("a2", 60100, 2)])
+        r = book.process(stream.cancel("a1"))
+>       assert r["status"] == "cancelled" and r["cancelled_qty_units"] == BTC
+E       KeyError: 'status'
+
+tests/test_matching.py:156: KeyError
+____________ test_crossing_buy_trades_at_resting_prices[version_A] _____________
+
+book = <lob.book_a.OrderBookA object at 0xe235389abc70>
+stream = <conftest.Stream object at 0xe235389ab580>
+
+    def test_crossing_buy_trades_at_resting_prices(book, stream):
+        run(book, [stream.sell("a1", 60100, 1), stream.sell("a2", 60200, 2)])
+        r = book.process(stream.buy("t", 60200, 2))
+>       assert r["fills"] == [fill("a1", "t", 60100, 1), fill("a2", "t", 60200, 1)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:164: KeyError
+____________ test_crossing_buy_trades_at_resting_prices[version_B] _____________
+
+book = <lob.book_b.OrderBookB object at 0xe2353877ef80>
+stream = <conftest.Stream object at 0xe2353877e4d0>
+
+    def test_crossing_buy_trades_at_resting_prices(book, stream):
+        run(book, [stream.sell("a1", 60100, 1), stream.sell("a2", 60200, 2)])
+        r = book.process(stream.buy("t", 60200, 2))
+>       assert r["fills"] == [fill("a1", "t", 60100, 1), fill("a2", "t", 60200, 1)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:164: KeyError
+___________ test_crossing_buy_rests_residual_at_its_limit[version_A] ___________
+
+book = <lob.book_a.OrderBookA object at 0xe2353897cc10>
+stream = <conftest.Stream object at 0xe2353897d840>
+
+    def test_crossing_buy_rests_residual_at_its_limit(book, stream):
+        run(book, [stream.sell("a1", 60100, 1), stream.sell("a2", 60200, 2)])
+        r = book.process(stream.buy("t", 60150, 4))
+>       assert r["fills"] == [fill("a1", "t", 60100, 1)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:172: KeyError
+___________ test_crossing_buy_rests_residual_at_its_limit[version_B] ___________
+
+book = <lob.book_b.OrderBookB object at 0xe235383e4160>
+stream = <conftest.Stream object at 0xe235383e6470>
+
+    def test_crossing_buy_rests_residual_at_its_limit(book, stream):
+        run(book, [stream.sell("a1", 60100, 1), stream.sell("a2", 60200, 2)])
+        r = book.process(stream.buy("t", 60150, 4))
+>       assert r["fills"] == [fill("a1", "t", 60100, 1)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:172: KeyError
+____________ test_crossing_sell_trades_at_resting_prices[version_A] ____________
+
+book = <lob.book_a.OrderBookA object at 0xe2353877d2d0>
+stream = <conftest.Stream object at 0xe2353877ce50>
+
+    def test_crossing_sell_trades_at_resting_prices(book, stream):
+        run(book, [stream.buy("b1", 60000, 1), stream.buy("b2", 59900, 1)])
+        r = book.process(stream.sell("t", 59950, 1.5))
+>       assert r["fills"] == [fill("b1", "t", 60000, 1)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:182: KeyError
+____________ test_crossing_sell_trades_at_resting_prices[version_B] ____________
+
+book = <lob.book_b.OrderBookB object at 0xe235386f78e0>
+stream = <conftest.Stream object at 0xe235386f6020>
+
+    def test_crossing_sell_trades_at_resting_prices(book, stream):
+        run(book, [stream.buy("b1", 60000, 1), stream.buy("b2", 59900, 1)])
+        r = book.process(stream.sell("t", 59950, 1.5))
+>       assert r["fills"] == [fill("b1", "t", 60000, 1)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:182: KeyError
+_____________ test_crossing_sell_sweeps_several_levels[version_A] ______________
+
+book = <lob.book_a.OrderBookA object at 0xe235383e6080>
+stream = <conftest.Stream object at 0xe235383e5390>
+
+    def test_crossing_sell_sweeps_several_levels(book, stream):
+        run(book, [stream.buy("b1", 60000, 1), stream.buy("b2", 59900, 1)])
+        r = book.process(stream.sell("t", 59000, 3))
+>       assert r["fills"] == [fill("b1", "t", 60000, 1), fill("b2", "t", 59900, 1)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:191: KeyError
+_____________ test_crossing_sell_sweeps_several_levels[version_B] ______________
+
+book = <lob.book_b.OrderBookB object at 0xe2353877dd20>
+stream = <conftest.Stream object at 0xe2353877f7c0>
+
+    def test_crossing_sell_sweeps_several_levels(book, stream):
+        run(book, [stream.buy("b1", 60000, 1), stream.buy("b2", 59900, 1)])
+        r = book.process(stream.sell("t", 59000, 3))
+>       assert r["fills"] == [fill("b1", "t", 60000, 1), fill("b2", "t", 59900, 1)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:191: KeyError
+_________________ test_limit_at_equal_price_crosses[version_A] _________________
+
+book = <lob.book_a.OrderBookA object at 0xe235386f5540>
+stream = <conftest.Stream object at 0xe235386f6080>
+
+    def test_limit_at_equal_price_crosses(book, stream):
+        book.process(stream.sell("a1", 60100, 1))
+        r = book.process(stream.buy("t", 60100, 1))
+>       assert r["fills"] == [fill("a1", "t", 60100, 1)] and r["status"] == "filled"
+E       KeyError: 'fills'
+
+tests/test_matching.py:199: KeyError
+_________________ test_limit_at_equal_price_crosses[version_B] _________________
+
+book = <lob.book_b.OrderBookB object at 0xe235384f2a70>
+stream = <conftest.Stream object at 0xe235384f2f20>
+
+    def test_limit_at_equal_price_crosses(book, stream):
+        book.process(stream.sell("a1", 60100, 1))
+        r = book.process(stream.buy("t", 60100, 1))
+>       assert r["fills"] == [fill("a1", "t", 60100, 1)] and r["status"] == "filled"
+E       KeyError: 'fills'
+
+tests/test_matching.py:199: KeyError
+___________________ test_noncrossing_limits_rest[version_A] ____________________
+
+book = <lob.book_a.OrderBookA object at 0xe235387bae90>
+stream = <conftest.Stream object at 0xe235387b86d0>
+
+    def test_noncrossing_limits_rest(book, stream):
+        run(book, [stream.sell("a1", 60100, 1)])
+        r = book.process(stream.buy("b1", 60000, 1))
+>       assert r["fills"] == [] and r["status"] == "resting"
+E       KeyError: 'fills'
+
+tests/test_matching.py:206: KeyError
+___________________ test_noncrossing_limits_rest[version_B] ____________________
+
+book = <lob.book_b.OrderBookB object at 0xe2353897ec80>
+stream = <conftest.Stream object at 0xe2353897cb50>
+
+    def test_noncrossing_limits_rest(book, stream):
+        run(book, [stream.sell("a1", 60100, 1)])
+        r = book.process(stream.buy("b1", 60000, 1))
+>       assert r["fills"] == [] and r["status"] == "resting"
+E       KeyError: 'fills'
+
+tests/test_matching.py:206: KeyError
+_____________ test_residual_keeps_its_own_arrival_rank[version_A] ______________
+
+book = <lob.book_a.OrderBookA object at 0xe235389abdc0>
+stream = <conftest.Stream object at 0xe235389aba90>
+
+    def test_residual_keeps_its_own_arrival_rank(book, stream):
+        run(book, [stream.sell("a1", 60100, 1), stream.buy("y", 60100, 2),
+                   stream.buy("z", 60100, 1)])
+        r = book.process(stream.market_sell("s1", 1.5))
+>       assert r["fills"] == [fill("y", "s1", 60100, 1), fill("z", "s1", 60100, 0.5)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:214: KeyError
+_____________ test_residual_keeps_its_own_arrival_rank[version_B] ______________
+
+book = <lob.book_b.OrderBookB object at 0xe235386f7fd0>
+stream = <conftest.Stream object at 0xe235386f5f30>
+
+    def test_residual_keeps_its_own_arrival_rank(book, stream):
+        run(book, [stream.sell("a1", 60100, 1), stream.buy("y", 60100, 2),
+                   stream.buy("z", 60100, 1)])
+        r = book.process(stream.market_sell("s1", 1.5))
+>       assert r["fills"] == [fill("y", "s1", 60100, 1), fill("z", "s1", 60100, 0.5)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:214: KeyError
+________________ test_named_functions_exist_and_work[version_A] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe2353897f9d0>
+stream = <conftest.Stream object at 0xe2353897d840>
+
+    def test_named_functions_exist_and_work(book, stream):
+        book.AddLimitOrder(stream.buy("b1", 60000, 1))
+        r = book.FillMarketSell(stream.market_sell("s1", 0.25))
+>       assert r["fills"] == [fill("b1", "s1", 60000, 0.25)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:222: KeyError
+________________ test_named_functions_exist_and_work[version_B] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235389a8a00>
+stream = <conftest.Stream object at 0xe235389a9ed0>
+
+    def test_named_functions_exist_and_work(book, stream):
+        book.AddLimitOrder(stream.buy("b1", 60000, 1))
+        r = book.FillMarketSell(stream.market_sell("s1", 0.25))
+>       assert r["fills"] == [fill("b1", "s1", 60000, 0.25)]
+E       KeyError: 'fills'
+
+tests/test_matching.py:222: KeyError
+____ test_invalid_event_is_rejected_without_change[version_A-unknown type] _____
+
+book = <lob.book_a.OrderBookA object at 0xe235387b9930>
+stream = <conftest.Stream object at 0xe235387bb430>, name = 'unknown type'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_A-unknown side] _____
+
+book = <lob.book_a.OrderBookA object at 0xe235385baef0>
+stream = <conftest.Stream object at 0xe235385b8d00>, name = 'unknown side'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_____ test_invalid_event_is_rejected_without_change[version_A-zero price] ______
+
+book = <lob.book_a.OrderBookA object at 0xe235387ade10>
+stream = <conftest.Stream object at 0xe235387ae7a0>, name = 'zero price'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+___ test_invalid_event_is_rejected_without_change[version_A-negative price] ____
+
+book = <lob.book_a.OrderBookA object at 0xe2353852e4d0>
+stream = <conftest.Stream object at 0xe2353852d8a0>, name = 'negative price'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_____ test_invalid_event_is_rejected_without_change[version_A-float price] _____
+
+book = <lob.book_a.OrderBookA object at 0xe235384f1930>
+stream = <conftest.Stream object at 0xe235384f1630>, name = 'float price'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_A-string price] _____
+
+book = <lob.book_a.OrderBookA object at 0xe2353852cac0>
+stream = <conftest.Stream object at 0xe2353852cb50>, name = 'string price'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_____ test_invalid_event_is_rejected_without_change[version_A-bool price] ______
+
+book = <lob.book_a.OrderBookA object at 0xe235386f4940>
+stream = <conftest.Stream object at 0xe235386f5fc0>, name = 'bool price'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_A-zero quantity] ____
+
+book = <lob.book_a.OrderBookA object at 0xe235385cb850>
+stream = <conftest.Stream object at 0xe235385cbca0>, name = 'zero quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+__ test_invalid_event_is_rejected_without_change[version_A-negative quantity] __
+
+book = <lob.book_a.OrderBookA object at 0xe235384f3a90>
+stream = <conftest.Stream object at 0xe235384f0d00>, name = 'negative quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+___ test_invalid_event_is_rejected_without_change[version_A-float quantity] ____
+
+book = <lob.book_a.OrderBookA object at 0xe235385cb100>
+stream = <conftest.Stream object at 0xe235385c86a0>, name = 'float quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+___ test_invalid_event_is_rejected_without_change[version_A-string quantity] ___
+
+book = <lob.book_a.OrderBookA object at 0xe235384f07f0>
+stream = <conftest.Stream object at 0xe235384f2290>, name = 'string quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_A-bool quantity] ____
+
+book = <lob.book_a.OrderBookA object at 0xe2353897f310>
+stream = <conftest.Stream object at 0xe2353897e3e0>, name = 'bool quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_A-missing price] ____
+
+book = <lob.book_a.OrderBookA object at 0xe235389a89a0>
+stream = <conftest.Stream object at 0xe235389a8c10>, name = 'missing price'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+__ test_invalid_event_is_rejected_without_change[version_A-missing order_id] ___
+
+book = <lob.book_a.OrderBookA object at 0xe2353897e860>
+stream = <conftest.Stream object at 0xe2353897e320>, name = 'missing order_id'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_A-missing side] _____
+
+book = <lob.book_a.OrderBookA object at 0xe235389a9000>
+stream = <conftest.Stream object at 0xe235389a9780>, name = 'missing side'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_A-missing type] _____
+
+book = <lob.book_a.OrderBookA object at 0xe2353852fa00>
+stream = <conftest.Stream object at 0xe2353852d390>, name = 'missing type'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_____ test_invalid_event_is_rejected_without_change[version_A-missing seq] _____
+
+book = <lob.book_a.OrderBookA object at 0xe235383e5480>
+stream = <conftest.Stream object at 0xe235383e62c0>, name = 'missing seq'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+______ test_invalid_event_is_rejected_without_change[version_A-float seq] ______
+
+book = <lob.book_a.OrderBookA object at 0xe2353852fa60>
+stream = <conftest.Stream object at 0xe2353852f310>, name = 'float seq'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_A-duplicate live limit id] _
+
+book = <lob.book_a.OrderBookA object at 0xe235385baa70>
+stream = <conftest.Stream object at 0xe235385b9480>
+name = 'duplicate live limit id'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_A-duplicate live id on market sell] _
+
+book = <lob.book_a.OrderBookA object at 0xe2353852cdc0>
+stream = <conftest.Stream object at 0xe2353852c6d0>
+name = 'duplicate live id on market sell'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_A-market sell zero quantity] _
+
+book = <lob.book_a.OrderBookA object at 0xe235387b8970>
+stream = <conftest.Stream object at 0xe235387bac50>
+name = 'market sell zero quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_A-market sell negative quantity] _
+
+book = <lob.book_a.OrderBookA object at 0xe235386f6650>
+stream = <conftest.Stream object at 0xe235386f7520>
+name = 'market sell negative quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_A-seq equal to last accepted] _
+
+book = <lob.book_a.OrderBookA object at 0xe235383e6b60>
+stream = <conftest.Stream object at 0xe235383e61d0>
+name = 'seq equal to last accepted'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_A-seq smaller than last accepted] _
+
+book = <lob.book_a.OrderBookA object at 0xe235386f7be0>
+stream = <conftest.Stream object at 0xe235386f6740>
+name = 'seq smaller than last accepted'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_A-cancel without target] _
+
+book = <lob.book_a.OrderBookA object at 0xe235386f4ca0>
+stream = <conftest.Stream object at 0xe235386f7af0>
+name = 'cancel without target'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_B-unknown type] _____
+
+book = <lob.book_b.OrderBookB object at 0xe235384f1780>
+stream = <conftest.Stream object at 0xe235384f18a0>, name = 'unknown type'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_B-unknown side] _____
+
+book = <lob.book_b.OrderBookB object at 0xe235383e40a0>
+stream = <conftest.Stream object at 0xe235383e79d0>, name = 'unknown side'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_____ test_invalid_event_is_rejected_without_change[version_B-zero price] ______
+
+book = <lob.book_b.OrderBookB object at 0xe235385cb850>
+stream = <conftest.Stream object at 0xe235385cae60>, name = 'zero price'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+___ test_invalid_event_is_rejected_without_change[version_B-negative price] ____
+
+book = <lob.book_b.OrderBookB object at 0xe235387bb8b0>
+stream = <conftest.Stream object at 0xe235387b9ae0>, name = 'negative price'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_____ test_invalid_event_is_rejected_without_change[version_B-float price] _____
+
+book = <lob.book_b.OrderBookB object at 0xe2353897df00>
+stream = <conftest.Stream object at 0xe2353897c130>, name = 'float price'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_B-string price] _____
+
+book = <lob.book_b.OrderBookB object at 0xe235387b87f0>
+stream = <conftest.Stream object at 0xe235387bb0d0>, name = 'string price'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_____ test_invalid_event_is_rejected_without_change[version_B-bool price] ______
+
+book = <lob.book_b.OrderBookB object at 0xe2353852f5b0>
+stream = <conftest.Stream object at 0xe2353852fb20>, name = 'bool price'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_B-zero quantity] ____
+
+book = <lob.book_b.OrderBookB object at 0xe235385ba9e0>
+stream = <conftest.Stream object at 0xe235385bbd30>, name = 'zero quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+__ test_invalid_event_is_rejected_without_change[version_B-negative quantity] __
+
+book = <lob.book_b.OrderBookB object at 0xe2353852dc60>
+stream = <conftest.Stream object at 0xe2353852eda0>, name = 'negative quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+___ test_invalid_event_is_rejected_without_change[version_B-float quantity] ____
+
+book = <lob.book_b.OrderBookB object at 0xe235384f18a0>
+stream = <conftest.Stream object at 0xe235384f0820>, name = 'float quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+___ test_invalid_event_is_rejected_without_change[version_B-string quantity] ___
+
+book = <lob.book_b.OrderBookB object at 0xe235387b81c0>
+stream = <conftest.Stream object at 0xe235387ba1a0>, name = 'string quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_B-bool quantity] ____
+
+book = <lob.book_b.OrderBookB object at 0xe23538550d30>
+stream = <conftest.Stream object at 0xe235385539a0>, name = 'bool quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_B-missing price] ____
+
+book = <lob.book_b.OrderBookB object at 0xe235386f7bb0>
+stream = <conftest.Stream object at 0xe235386f7a90>, name = 'missing price'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+__ test_invalid_event_is_rejected_without_change[version_B-missing order_id] ___
+
+book = <lob.book_b.OrderBookB object at 0xe235384f2bf0>
+stream = <conftest.Stream object at 0xe235384f0250>, name = 'missing order_id'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_B-missing side] _____
+
+book = <lob.book_b.OrderBookB object at 0xe23538574760>
+stream = <conftest.Stream object at 0xe23538574c70>, name = 'missing side'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+____ test_invalid_event_is_rejected_without_change[version_B-missing type] _____
+
+book = <lob.book_b.OrderBookB object at 0xe235385c82e0>
+stream = <conftest.Stream object at 0xe235385c8400>, name = 'missing type'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_____ test_invalid_event_is_rejected_without_change[version_B-missing seq] _____
+
+book = <lob.book_b.OrderBookB object at 0xe23538576bc0>
+stream = <conftest.Stream object at 0xe23538576290>, name = 'missing seq'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+______ test_invalid_event_is_rejected_without_change[version_B-float seq] ______
+
+book = <lob.book_b.OrderBookB object at 0xe235383e5fc0>
+stream = <conftest.Stream object at 0xe235383e7c10>, name = 'float seq'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_B-duplicate live limit id] _
+
+book = <lob.book_b.OrderBookB object at 0xe235385bbfa0>
+stream = <conftest.Stream object at 0xe235385b8460>
+name = 'duplicate live limit id'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_B-duplicate live id on market sell] _
+
+book = <lob.book_b.OrderBookB object at 0xe235385c80d0>
+stream = <conftest.Stream object at 0xe235385c8d60>
+name = 'duplicate live id on market sell'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_B-market sell zero quantity] _
+
+book = <lob.book_b.OrderBookB object at 0xe2353877c6a0>
+stream = <conftest.Stream object at 0xe2353877faf0>
+name = 'market sell zero quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_B-market sell negative quantity] _
+
+book = <lob.book_b.OrderBookB object at 0xe235384f3be0>
+stream = <conftest.Stream object at 0xe235386f7010>
+name = 'market sell negative quantity'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_B-seq equal to last accepted] _
+
+book = <lob.book_b.OrderBookB object at 0xe2353877e560>
+stream = <conftest.Stream object at 0xe2353877c700>
+name = 'seq equal to last accepted'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_B-seq smaller than last accepted] _
+
+book = <lob.book_b.OrderBookB object at 0xe235387bb2b0>
+stream = <conftest.Stream object at 0xe235387ba3e0>
+name = 'seq smaller than last accepted'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_ test_invalid_event_is_rejected_without_change[version_B-cancel without target] _
+
+book = <lob.book_b.OrderBookB object at 0xe2353852ec50>
+stream = <conftest.Stream object at 0xe2353852fe20>
+name = 'cancel without target'
+
+    @pytest.mark.parametrize("name", list(INVALID))
+    def test_invalid_event_is_rejected_without_change(book, stream, name):
+        _base(book, stream)
+        before = copy.deepcopy(book.snapshot())
+        event = _clean(INVALID[name])
+        r = book.process(event)
+>       assert r["status"] == "rejected", name
+E       KeyError: 'status'
+
+tests/test_validation.py:67: KeyError
+_____________ test_rejected_large_seq_does_not_advance[version_A] ______________
+
+book = <lob.book_a.OrderBookA object at 0xe235385bbfa0>
+stream = <conftest.Stream object at 0xe235385bbb50>
+
+    def test_rejected_large_seq_does_not_advance(book, stream):
+        _base(book, stream)
+>       assert book.process(_limit(seq=10, qty_units=0))["status"] == "rejected"
+E       KeyError: 'status'
+
+tests/test_validation.py:78: KeyError
+_____________ test_rejected_large_seq_does_not_advance[version_B] ______________
+
+book = <lob.book_b.OrderBookB object at 0xe23538577010>
+stream = <conftest.Stream object at 0xe23538577160>
+
+    def test_rejected_large_seq_does_not_advance(book, stream):
+        _base(book, stream)
+>       assert book.process(_limit(seq=10, qty_units=0))["status"] == "rejected"
+E       KeyError: 'status'
+
+tests/test_validation.py:78: KeyError
+_____________________ test_seq_may_skip_numbers[version_A] _____________________
+
+book = <lob.book_a.OrderBookA object at 0xe2353854fa90>
+stream = <conftest.Stream object at 0xe2353854fdc0>
+
+    def test_seq_may_skip_numbers(book, stream):
+        _base(book, stream)
+>       assert book.process(_limit(seq=100))["status"] == "resting"
+E       KeyError: 'status'
+
+tests/test_validation.py:84: KeyError
+_____________________ test_seq_may_skip_numbers[version_B] _____________________
+
+book = <lob.book_b.OrderBookB object at 0xe235385763e0>
+stream = <conftest.Stream object at 0xe23538574850>
+
+    def test_seq_may_skip_numbers(book, stream):
+        _base(book, stream)
+>       assert book.process(_limit(seq=100))["status"] == "resting"
+E       KeyError: 'status'
+
+tests/test_validation.py:84: KeyError
+______ test_cancel_of_unknown_target_is_valid_and_advances_seq[version_A] ______
+
+book = <lob.book_a.OrderBookA object at 0xe2353854d5a0>
+stream = <conftest.Stream object at 0xe2353854d690>
+
+    def test_cancel_of_unknown_target_is_valid_and_advances_seq(book, stream):
+        _base(book, stream)
+        r = book.process({"seq": 3, "event_id": "ev3", "type": "CANCEL", "target_order_id": "zzz"})
+>       assert r["status"] == "not_found"
+E       KeyError: 'status'
+
+tests/test_validation.py:91: KeyError
+______ test_cancel_of_unknown_target_is_valid_and_advances_seq[version_B] ______
+
+book = <lob.book_b.OrderBookB object at 0xe23538577310>
+stream = <conftest.Stream object at 0xe23538574dc0>
+
+    def test_cancel_of_unknown_target_is_valid_and_advances_seq(book, stream):
+        _base(book, stream)
+        r = book.process({"seq": 3, "event_id": "ev3", "type": "CANCEL", "target_order_id": "zzz"})
+>       assert r["status"] == "not_found"
+E       KeyError: 'status'
+
+tests/test_validation.py:91: KeyError
+____________ test_rejected_crossing_order_does_not_trade[version_A] ____________
+
+book = <lob.book_a.OrderBookA object at 0xe2353854c160>
+stream = <conftest.Stream object at 0xe2353854e950>
+
+    def test_rejected_crossing_order_does_not_trade(book, stream):
+        _base(book, stream)
+        r = book.process(_limit(side="BUY", price_ticks=usd(60100), qty_units=-1))
+>       assert r["status"] == "rejected"
+E       KeyError: 'status'
+
+tests/test_validation.py:98: KeyError
+____________ test_rejected_crossing_order_does_not_trade[version_B] ____________
+
+book = <lob.book_b.OrderBookB object at 0xe23538577a00>
+stream = <conftest.Stream object at 0xe235385754b0>
+
+    def test_rejected_crossing_order_does_not_trade(book, stream):
+        _base(book, stream)
+        r = book.process(_limit(side="BUY", price_ticks=usd(60100), qty_units=-1))
+>       assert r["status"] == "rejected"
+E       KeyError: 'status'
+
+tests/test_validation.py:98: KeyError
+_______________ test_worked_example_matches_expected[version_A] ________________
+
+book = <lob.book_a.OrderBookA object at 0xe235385c8310>
+
+    def test_worked_example_matches_expected(book):
+        events = read_events(DATA / "worked_example.jsonl")
+        expected = json.loads((DATA / "worked_expected.json").read_text())
+        results = [book.process(e) for e in events]
+    
+>       assert [r["status"] for r in results[:5]] == ["resting"] * 5
+
+tests/test_worked_example.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0xe235385cb970>
+
+>   assert [r["status"] for r in results[:5]] == ["resting"] * 5
+E   KeyError: 'status'
+
+tests/test_worked_example.py:15: KeyError
+_______________ test_worked_example_matches_expected[version_B] ________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387ca8c0>
+
+    def test_worked_example_matches_expected(book):
+        events = read_events(DATA / "worked_example.jsonl")
+        expected = json.loads((DATA / "worked_expected.json").read_text())
+        results = [book.process(e) for e in events]
+    
+>       assert [r["status"] for r in results[:5]] == ["resting"] * 5
+
+tests/test_worked_example.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0xe235387ca8f0>
+
+>   assert [r["status"] for r in results[:5]] == ["resting"] * 5
+E   KeyError: 'status'
+
+tests/test_worked_example.py:15: KeyError
+___________________ test_worked_example_proceeds[version_A] ____________________
+
+book = <lob.book_a.OrderBookA object at 0xe2353856b520>
+
+    def test_worked_example_proceeds(book):
+        events = read_events(DATA / "worked_example.jsonl")
+        sell = [book.process(e) for e in events][-1]
+>       gross = sum(f["price_ticks"] * f["qty_units"] for f in sell["fills"])
+E       KeyError: 'fills'
+
+tests/test_worked_example.py:28: KeyError
+___________________ test_worked_example_proceeds[version_B] ____________________
+
+book = <lob.book_b.OrderBookB object at 0xe235387ca440>
+
+    def test_worked_example_proceeds(book):
+        events = read_events(DATA / "worked_example.jsonl")
+        sell = [book.process(e) for e in events][-1]
+>       gross = sum(f["price_ticks"] * f["qty_units"] for f in sell["fills"])
+E       KeyError: 'fills'
+
+tests/test_worked_example.py:28: KeyError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[0]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[1]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[2]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[3]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[4]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[5]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[6]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[7]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[8]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[9]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[10]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[11]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[12]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[13]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[14]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[15]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[16]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[17]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[18]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[19]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[20]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[21]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[22]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[23]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[24]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[25]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[26]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[27]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[28]
+PASSED tests/test_equivalence.py::test_versions_agree_on_random_streams[29]
+PASSED tests/test_equivalence.py::test_versions_agree_on_supplied_samples[buildup]
+PASSED tests/test_equivalence.py::test_versions_agree_on_supplied_samples[crowded]
+PASSED tests/test_equivalence.py::test_versions_agree_on_supplied_samples[mixed]
+PASSED tests/test_equivalence.py::test_versions_agree_on_supplied_samples[sweep]
+PASSED tests/test_equivalence.py::test_versions_agree_on_supplied_samples[cancel_churn]
+PASSED tests/test_matching.py::test_empty_book[version_A]
+PASSED tests/test_matching.py::test_empty_book[version_B]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-0]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-1]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-2]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-3]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-4]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-5]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-6]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-7]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-8]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-9]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-10]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-11]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-12]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-13]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-14]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-15]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-16]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-17]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-18]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_A-19]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-0]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-1]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-2]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-3]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-4]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-5]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-6]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-7]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-8]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-9]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-10]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-11]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-12]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-13]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-14]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-15]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-16]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-17]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-18]
+FAILED tests/test_invariants.py::test_invariants_on_random_streams[version_B-19]
+FAILED tests/test_matching.py::test_market_sell_on_empty_book[version_A] - As...
+FAILED tests/test_matching.py::test_market_sell_on_empty_book[version_B] - As...
+FAILED tests/test_matching.py::test_one_limit_order_rests[version_A] - Assert...
+FAILED tests/test_matching.py::test_one_limit_order_rests[version_B] - Assert...
+FAILED tests/test_matching.py::test_sell_smaller_than_depth[version_A] - KeyE...
+FAILED tests/test_matching.py::test_sell_smaller_than_depth[version_B] - KeyE...
+FAILED tests/test_matching.py::test_sell_equal_to_depth[version_A] - KeyError...
+FAILED tests/test_matching.py::test_sell_equal_to_depth[version_B] - KeyError...
+FAILED tests/test_matching.py::test_sell_larger_than_depth_discards_residual[version_A]
+FAILED tests/test_matching.py::test_sell_larger_than_depth_discards_residual[version_B]
+FAILED tests/test_matching.py::test_market_sell_with_only_asks_is_unfilled[version_A]
+FAILED tests/test_matching.py::test_market_sell_with_only_asks_is_unfilled[version_B]
+FAILED tests/test_matching.py::test_fifo_at_one_price_ignores_id_spelling[version_A]
+FAILED tests/test_matching.py::test_fifo_at_one_price_ignores_id_spelling[version_B]
+FAILED tests/test_matching.py::test_numeric_looking_ids_are_not_sorted[version_A]
+FAILED tests/test_matching.py::test_numeric_looking_ids_are_not_sorted[version_B]
+FAILED tests/test_matching.py::test_best_price_first_across_levels[version_A]
+FAILED tests/test_matching.py::test_best_price_first_across_levels[version_B]
+FAILED tests/test_matching.py::test_partial_fill_keeps_priority_for_next_sale[version_A]
+FAILED tests/test_matching.py::test_partial_fill_keeps_priority_for_next_sale[version_B]
+FAILED tests/test_matching.py::test_long_queue_at_one_price[version_A] - KeyE...
+FAILED tests/test_matching.py::test_long_queue_at_one_price[version_B] - KeyE...
+FAILED tests/test_matching.py::test_cancel_before_any_fill[version_A] - Asser...
+FAILED tests/test_matching.py::test_cancel_before_any_fill[version_B] - Asser...
+FAILED tests/test_matching.py::test_cancel_after_partial_fill_removes_only_residual[version_A]
+FAILED tests/test_matching.py::test_cancel_after_partial_fill_removes_only_residual[version_B]
+FAILED tests/test_matching.py::test_cancel_after_full_fill_is_not_found[version_A]
+FAILED tests/test_matching.py::test_cancel_after_full_fill_is_not_found[version_B]
+FAILED tests/test_matching.py::test_repeated_and_unknown_cancel[version_A] - ...
+FAILED tests/test_matching.py::test_repeated_and_unknown_cancel[version_B] - ...
+FAILED tests/test_matching.py::test_cancel_removes_order_from_priority[version_A]
+FAILED tests/test_matching.py::test_cancel_removes_order_from_priority[version_B]
+FAILED tests/test_matching.py::test_cancel_ask[version_A] - KeyError: 'status'
+FAILED tests/test_matching.py::test_cancel_ask[version_B] - KeyError: 'status'
+FAILED tests/test_matching.py::test_crossing_buy_trades_at_resting_prices[version_A]
+FAILED tests/test_matching.py::test_crossing_buy_trades_at_resting_prices[version_B]
+FAILED tests/test_matching.py::test_crossing_buy_rests_residual_at_its_limit[version_A]
+FAILED tests/test_matching.py::test_crossing_buy_rests_residual_at_its_limit[version_B]
+FAILED tests/test_matching.py::test_crossing_sell_trades_at_resting_prices[version_A]
+FAILED tests/test_matching.py::test_crossing_sell_trades_at_resting_prices[version_B]
+FAILED tests/test_matching.py::test_crossing_sell_sweeps_several_levels[version_A]
+FAILED tests/test_matching.py::test_crossing_sell_sweeps_several_levels[version_B]
+FAILED tests/test_matching.py::test_limit_at_equal_price_crosses[version_A]
+FAILED tests/test_matching.py::test_limit_at_equal_price_crosses[version_B]
+FAILED tests/test_matching.py::test_noncrossing_limits_rest[version_A] - KeyE...
+FAILED tests/test_matching.py::test_noncrossing_limits_rest[version_B] - KeyE...
+FAILED tests/test_matching.py::test_residual_keeps_its_own_arrival_rank[version_A]
+FAILED tests/test_matching.py::test_residual_keeps_its_own_arrival_rank[version_B]
+FAILED tests/test_matching.py::test_named_functions_exist_and_work[version_A]
+FAILED tests/test_matching.py::test_named_functions_exist_and_work[version_B]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-unknown type]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-unknown side]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-zero price]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-negative price]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-float price]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-string price]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-bool price]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-zero quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-negative quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-float quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-string quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-bool quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-missing price]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-missing order_id]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-missing side]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-missing type]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-missing seq]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-float seq]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-duplicate live limit id]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-duplicate live id on market sell]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-market sell zero quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-market sell negative quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-seq equal to last accepted]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-seq smaller than last accepted]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_A-cancel without target]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-unknown type]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-unknown side]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-zero price]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-negative price]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-float price]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-string price]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-bool price]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-zero quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-negative quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-float quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-string quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-bool quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-missing price]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-missing order_id]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-missing side]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-missing type]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-missing seq]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-float seq]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-duplicate live limit id]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-duplicate live id on market sell]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-market sell zero quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-market sell negative quantity]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-seq equal to last accepted]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-seq smaller than last accepted]
+FAILED tests/test_validation.py::test_invalid_event_is_rejected_without_change[version_B-cancel without target]
+FAILED tests/test_validation.py::test_rejected_large_seq_does_not_advance[version_A]
+FAILED tests/test_validation.py::test_rejected_large_seq_does_not_advance[version_B]
+FAILED tests/test_validation.py::test_seq_may_skip_numbers[version_A] - KeyEr...
+FAILED tests/test_validation.py::test_seq_may_skip_numbers[version_B] - KeyEr...
+FAILED tests/test_validation.py::test_cancel_of_unknown_target_is_valid_and_advances_seq[version_A]
+FAILED tests/test_validation.py::test_cancel_of_unknown_target_is_valid_and_advances_seq[version_B]
+FAILED tests/test_validation.py::test_rejected_crossing_order_does_not_trade[version_A]
+FAILED tests/test_validation.py::test_rejected_crossing_order_does_not_trade[version_B]
+FAILED tests/test_worked_example.py::test_worked_example_matches_expected[version_A]
+FAILED tests/test_worked_example.py::test_worked_example_matches_expected[version_B]
+FAILED tests/test_worked_example.py::test_worked_example_proceeds[version_A]
+FAILED tests/test_worked_example.py::test_worked_example_proceeds[version_B]
+152 failed, 37 passed in 1.25s

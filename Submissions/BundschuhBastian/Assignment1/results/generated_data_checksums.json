@@ -1,0 +1,560 @@
+{
+  "note": "decompressed_sha256 proves identical events; gz_sha256 also depends on the zlib version used to compress",
+  "environment": {
+    "python": "3.11.0",
+    "zlib": "1.2.11",
+    "platform": "macOS-27.0.1-arm64-arm-64bit"
+  },
+  "files": {
+    "buildup_1000000_s42.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 1000000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 13148050,
+      "gz_sha256": "00c6667cd39145e79449d3c84b1b7411cf8c1cf7fa91b9b0c9397850e2f122e6",
+      "decompressed_sha256": "3213dbb38d1dbf8c39eab90df885504fc1c903b5fdd74394986878a50f4002c6",
+      "command": "python generate_orders.py --scenario buildup --events 1000000 --levels 1000 --seed 42 --out data/generated/buildup_1000000_s42.jsonl.gz"
+    },
+    "buildup_100000_s42.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 100000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 1318514,
+      "gz_sha256": "3d6ffabf40ead705eccaf54c8d14aea9667f95f8bfdfe404ada38c4c18ef08ac",
+      "decompressed_sha256": "d896bbf9c330c37ff9e0a8cc396c37ff39ea26729266506a767ae412990fbf49",
+      "command": "python generate_orders.py --scenario buildup --events 100000 --levels 1000 --seed 42 --out data/generated/buildup_100000_s42.jsonl.gz"
+    },
+    "buildup_100000_s42_L16.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 100000,
+      "seed": 42,
+      "levels": 16,
+      "gz_bytes": 1174583,
+      "gz_sha256": "91fb709029b86cb6db0106cbf141bd3be7bbd642320c9c2fdf773f009b714a28",
+      "decompressed_sha256": "277588afea40f669a935c2e3147cea6ca5f3e38e725b2358b3d59c27bfa49b1b",
+      "command": "python generate_orders.py --scenario buildup --events 100000 --levels 16 --seed 42 --out data/generated/buildup_100000_s42_L16.jsonl.gz"
+    },
+    "buildup_100000_s42_L256.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 100000,
+      "seed": 42,
+      "levels": 256,
+      "gz_bytes": 1281301,
+      "gz_sha256": "d14c8f5ceb6a6ff3f29ee6c9de33f00c51f7f6bf73b346d369d5953df056b705",
+      "decompressed_sha256": "31206ac2f2f823171267fbb4668970fbf5740d72c55e1f72d57179756ba5f6bf",
+      "command": "python generate_orders.py --scenario buildup --events 100000 --levels 256 --seed 42 --out data/generated/buildup_100000_s42_L256.jsonl.gz"
+    },
+    "buildup_100000_s42_L4.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 100000,
+      "seed": 42,
+      "levels": 4,
+      "gz_bytes": 1104154,
+      "gz_sha256": "e96395f4d3db4ecce0cc52c5ba388db6eaefe6fdadce5d3325fa3c34da00a179",
+      "decompressed_sha256": "2d829e7afc1892333b8ac186946de87254ce42591908dbe49dc3809e99b2a89f",
+      "command": "python generate_orders.py --scenario buildup --events 100000 --levels 4 --seed 42 --out data/generated/buildup_100000_s42_L4.jsonl.gz"
+    },
+    "buildup_100000_s42_L4000.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 100000,
+      "seed": 42,
+      "levels": 4000,
+      "gz_bytes": 1367933,
+      "gz_sha256": "7dd5565a0db6cb138d4ea8860b36414bd0a5d105df2dd68841f1a9cb13dd04c1",
+      "decompressed_sha256": "803de539cb91c640d0457dfebbeb91450b7a9b061c5e0772868b7f3b81d70452",
+      "command": "python generate_orders.py --scenario buildup --events 100000 --levels 4000 --seed 42 --out data/generated/buildup_100000_s42_L4000.jsonl.gz"
+    },
+    "buildup_100000_s42_L64.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 100000,
+      "seed": 42,
+      "levels": 64,
+      "gz_bytes": 1232994,
+      "gz_sha256": "adfed1c1c90266396d08c57a03b65795354522a754e068f6688b09d7419c62e4",
+      "decompressed_sha256": "f0bff0f591faf249e81a2d7e8eef6c99f63af9caab375a8d98febfb75fd742c1",
+      "command": "python generate_orders.py --scenario buildup --events 100000 --levels 64 --seed 42 --out data/generated/buildup_100000_s42_L64.jsonl.gz"
+    },
+    "buildup_100000_s43.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 100000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 1318265,
+      "gz_sha256": "e949f2e93500a22660e5f169645a76f98341464d923dc1ba417ff7904cc6141e",
+      "decompressed_sha256": "e2f68193c450c56ffc8bd75c3aa43bbfc3fbe38a56ed523b2ab87b75dba0207b",
+      "command": "python generate_orders.py --scenario buildup --events 100000 --levels 1000 --seed 43 --out data/generated/buildup_100000_s43.jsonl.gz"
+    },
+    "buildup_100000_s44.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 100000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 1318121,
+      "gz_sha256": "16ddbfcc4155748214f8875be81b3b0ace7d5d80b4a165ecadfacff6dcb77fce",
+      "decompressed_sha256": "dd3c29e2ca91aca717a2289801704248a5cce29d2311727f7fadd09a6f923b46",
+      "command": "python generate_orders.py --scenario buildup --events 100000 --levels 1000 --seed 44 --out data/generated/buildup_100000_s44.jsonl.gz"
+    },
+    "buildup_10000_s42.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 10000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 132767,
+      "gz_sha256": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5",
+      "decompressed_sha256": "b567082aa6de1878ef788bd6092738fb7427ceeac371e3673bfcb31b733a7c67",
+      "command": "python generate_orders.py --scenario buildup --events 10000 --levels 1000 --seed 42 --out data/generated/buildup_10000_s42.jsonl.gz"
+    },
+    "buildup_10000_s43.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 10000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 132923,
+      "gz_sha256": "25f25e183271ebce17807d04bd426059e34573e29d657e2dccd60e5698818739",
+      "decompressed_sha256": "ebf0c9e3cbda059f41268aa0800ba42c86503694755a84893e84b30f185dced3",
+      "command": "python generate_orders.py --scenario buildup --events 10000 --levels 1000 --seed 43 --out data/generated/buildup_10000_s43.jsonl.gz"
+    },
+    "buildup_10000_s44.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 10000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 132925,
+      "gz_sha256": "a2392b86e396c33634f98a4592a7e390bf9cdb9c2d35d51dbbeb3c2286589d01",
+      "decompressed_sha256": "07d326ce04e7737f868cd14a79f600351a8008b23d315f8844d23c7989cc866c",
+      "command": "python generate_orders.py --scenario buildup --events 10000 --levels 1000 --seed 44 --out data/generated/buildup_10000_s44.jsonl.gz"
+    },
+    "buildup_1000_s42.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 1000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 13493,
+      "gz_sha256": "9b3054be934ed3df5aad49b61622e9af79309646518fcc9de11d590eb77618db",
+      "decompressed_sha256": "1e8c78477140e4d1e92937d5297a24d9c15a7a3639e5f8fc0c556331ddc4efd5",
+      "command": "python generate_orders.py --scenario buildup --events 1000 --levels 1000 --seed 42 --out data/generated/buildup_1000_s42.jsonl.gz"
+    },
+    "buildup_1000_s43.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 1000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 13515,
+      "gz_sha256": "037e723135ac3bb6cbee903f66b9c9e4074ba372dbed7b9fc0306da176e525c6",
+      "decompressed_sha256": "1fa8ff99a78711079fa6652a054ec55bab13e131992b027d4c11147b8907698f",
+      "command": "python generate_orders.py --scenario buildup --events 1000 --levels 1000 --seed 43 --out data/generated/buildup_1000_s43.jsonl.gz"
+    },
+    "buildup_1000_s44.jsonl.gz": {
+      "scenario": "buildup",
+      "events": 1000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 13562,
+      "gz_sha256": "6bc6459b09796ef555707cff9daebd865b5f67758cf6d2d4e604591ab6f485d8",
+      "decompressed_sha256": "eb8232d21c200cab81c7d95bd7329999de53ff937c299aa6d9b8eb545c7120fa",
+      "command": "python generate_orders.py --scenario buildup --events 1000 --levels 1000 --seed 44 --out data/generated/buildup_1000_s44.jsonl.gz"
+    },
+    "cancel_churn_1000000_s42.jsonl.gz": {
+      "scenario": "cancel_churn",
+      "events": 1000000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 10884276,
+      "gz_sha256": "3a72dd7c1d35d71d393ed4c8da0124c191bcabde67850e3d51519ea5f0f3d749",
+      "decompressed_sha256": "66d0ca8fcc7c7ccbafc7cbfdd429c4cad378ffe4c9ac253379f62c7b3e30ba8c",
+      "command": "python generate_orders.py --scenario cancel_churn --events 1000000 --levels 1000 --seed 42 --out data/generated/cancel_churn_1000000_s42.jsonl.gz"
+    },
+    "cancel_churn_100000_s42.jsonl.gz": {
+      "scenario": "cancel_churn",
+      "events": 100000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 1097574,
+      "gz_sha256": "d633254ec2c5e73284c58f123978dcada972bf3e80f3e4e4e2ea952458c1f5aa",
+      "decompressed_sha256": "28e3c0e5aa57493584ed111a417b36b8f8e41d4304a17d79b2e2dfcb84b1bcc6",
+      "command": "python generate_orders.py --scenario cancel_churn --events 100000 --levels 1000 --seed 42 --out data/generated/cancel_churn_100000_s42.jsonl.gz"
+    },
+    "cancel_churn_100000_s43.jsonl.gz": {
+      "scenario": "cancel_churn",
+      "events": 100000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 1096900,
+      "gz_sha256": "332836860cd12dd36893a0c2af5c20246af6242d3abcc5e05dd3115d8368d0e5",
+      "decompressed_sha256": "e7b12f913546b9068f0aab8ed8151503117ff55a0ab184c4739c09da47128615",
+      "command": "python generate_orders.py --scenario cancel_churn --events 100000 --levels 1000 --seed 43 --out data/generated/cancel_churn_100000_s43.jsonl.gz"
+    },
+    "cancel_churn_100000_s44.jsonl.gz": {
+      "scenario": "cancel_churn",
+      "events": 100000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 1097459,
+      "gz_sha256": "b7509b134016db7c0db8372bc22cc9a59d623026a8842cfe2c8ee153a5d44cdc",
+      "decompressed_sha256": "dc863df6a53e4b2e4537b6f6b6cc9162c3ade56c290ce6d27e3036923ce6ca60",
+      "command": "python generate_orders.py --scenario cancel_churn --events 100000 --levels 1000 --seed 44 --out data/generated/cancel_churn_100000_s44.jsonl.gz"
+    },
+    "cancel_churn_10000_s42.jsonl.gz": {
+      "scenario": "cancel_churn",
+      "events": 10000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 110782,
+      "gz_sha256": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933",
+      "decompressed_sha256": "3a01070cf86e22cc24767fa9f8cfdca523a4d11bbbf348971e364edb573ff9cc",
+      "command": "python generate_orders.py --scenario cancel_churn --events 10000 --levels 1000 --seed 42 --out data/generated/cancel_churn_10000_s42.jsonl.gz"
+    },
+    "cancel_churn_10000_s43.jsonl.gz": {
+      "scenario": "cancel_churn",
+      "events": 10000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 110729,
+      "gz_sha256": "02e85c19c30f2b61c7b3fc1336c4a48576434a328779cdc2c76b49c189d55982",
+      "decompressed_sha256": "d8c9d05c167483236601abc5f134b7d2f9051e0da47bb6a7f8040d0cf8cc09b9",
+      "command": "python generate_orders.py --scenario cancel_churn --events 10000 --levels 1000 --seed 43 --out data/generated/cancel_churn_10000_s43.jsonl.gz"
+    },
+    "cancel_churn_10000_s44.jsonl.gz": {
+      "scenario": "cancel_churn",
+      "events": 10000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 110661,
+      "gz_sha256": "533fbc3a190e00d91af1b6c538405848e0539132a084e69f9931d18a01c1df61",
+      "decompressed_sha256": "989567bfca3756006c6c9ce1c202ea434006d7f6f4e5dd2e3f405b50ef94543c",
+      "command": "python generate_orders.py --scenario cancel_churn --events 10000 --levels 1000 --seed 44 --out data/generated/cancel_churn_10000_s44.jsonl.gz"
+    },
+    "cancel_churn_1000_s42.jsonl.gz": {
+      "scenario": "cancel_churn",
+      "events": 1000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 11336,
+      "gz_sha256": "2994e992735f3a2a324c6832d8883570e486cbf1a6761b3174d2a5014bf5b2d6",
+      "decompressed_sha256": "3cb7081165cf70657f2bb61284b4a364285696fae48f7562db334b9a6c00580d",
+      "command": "python generate_orders.py --scenario cancel_churn --events 1000 --levels 1000 --seed 42 --out data/generated/cancel_churn_1000_s42.jsonl.gz"
+    },
+    "cancel_churn_1000_s43.jsonl.gz": {
+      "scenario": "cancel_churn",
+      "events": 1000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 11322,
+      "gz_sha256": "1a3972c9c249f09d53cd5fe5ad71f53e93147b7162c6cb0a89e8007d106731e2",
+      "decompressed_sha256": "48791ac58f4941800e0ecf7528700259d1ffd6447dba181f1e6f87b5e980c486",
+      "command": "python generate_orders.py --scenario cancel_churn --events 1000 --levels 1000 --seed 43 --out data/generated/cancel_churn_1000_s43.jsonl.gz"
+    },
+    "cancel_churn_1000_s44.jsonl.gz": {
+      "scenario": "cancel_churn",
+      "events": 1000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 11269,
+      "gz_sha256": "3418127dc6ba01bdfe2b522e75fe11b5be42407980332dbec51bc76384e9f594",
+      "decompressed_sha256": "576d5837295a1f12818ad5e7e44fd3aadad41594e43fad7611c1226cdb239a07",
+      "command": "python generate_orders.py --scenario cancel_churn --events 1000 --levels 1000 --seed 44 --out data/generated/cancel_churn_1000_s44.jsonl.gz"
+    },
+    "crowded_1000000_s42.jsonl.gz": {
+      "scenario": "crowded",
+      "events": 1000000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 11018769,
+      "gz_sha256": "fe7b7dafefbaec8051f2bccae864099262557b9bc583882e75bd8d5d8a6ee7d7",
+      "decompressed_sha256": "5469822c3a187647f1e4603015480078fd85d6d05b8f7bc9e185a27b2a8ea515",
+      "command": "python generate_orders.py --scenario crowded --events 1000000 --levels 1000 --seed 42 --out data/generated/crowded_1000000_s42.jsonl.gz"
+    },
+    "crowded_100000_s42.jsonl.gz": {
+      "scenario": "crowded",
+      "events": 100000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 1104154,
+      "gz_sha256": "e96395f4d3db4ecce0cc52c5ba388db6eaefe6fdadce5d3325fa3c34da00a179",
+      "decompressed_sha256": "2d829e7afc1892333b8ac186946de87254ce42591908dbe49dc3809e99b2a89f",
+      "command": "python generate_orders.py --scenario crowded --events 100000 --levels 1000 --seed 42 --out data/generated/crowded_100000_s42.jsonl.gz"
+    },
+    "crowded_100000_s43.jsonl.gz": {
+      "scenario": "crowded",
+      "events": 100000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 1104001,
+      "gz_sha256": "d0fc59f1a3636aee0d1651a2192c0c1e72887834c246aac5c0c199ee7dcf0c8e",
+      "decompressed_sha256": "05cccfed0804928be89b7586a8cdb6b792cc6262695c5cf7bbf977cb67035d54",
+      "command": "python generate_orders.py --scenario crowded --events 100000 --levels 1000 --seed 43 --out data/generated/crowded_100000_s43.jsonl.gz"
+    },
+    "crowded_100000_s44.jsonl.gz": {
+      "scenario": "crowded",
+      "events": 100000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 1104343,
+      "gz_sha256": "832a37991a5816f273b64445f274fce59122b0cb27efcf211ebd3346c21ab8d8",
+      "decompressed_sha256": "cc67cbe2043ed6f9ab0bd8e43c1bddb6e0c80248dbc18d24f3da313c28937b3d",
+      "command": "python generate_orders.py --scenario crowded --events 100000 --levels 1000 --seed 44 --out data/generated/crowded_100000_s44.jsonl.gz"
+    },
+    "crowded_10000_s42.jsonl.gz": {
+      "scenario": "crowded",
+      "events": 10000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 111714,
+      "gz_sha256": "112bc3ad120eb436e45608ef11ff804aed35aef24e43d4c10e5adda3b26577b6",
+      "decompressed_sha256": "be6670a85788f95478e6bdf0051a4fd77ded726e144430f5eee98089810d548a",
+      "command": "python generate_orders.py --scenario crowded --events 10000 --levels 1000 --seed 42 --out data/generated/crowded_10000_s42.jsonl.gz"
+    },
+    "crowded_10000_s43.jsonl.gz": {
+      "scenario": "crowded",
+      "events": 10000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 111824,
+      "gz_sha256": "0d482988b03a4ca3dcf425acacf1d003d00f262c86b1df65cd484847e520d490",
+      "decompressed_sha256": "7d4b90c22da9d478303338ffe55d6b5399db48f9d9617ac1a7d3d406c62e7155",
+      "command": "python generate_orders.py --scenario crowded --events 10000 --levels 1000 --seed 43 --out data/generated/crowded_10000_s43.jsonl.gz"
+    },
+    "crowded_10000_s44.jsonl.gz": {
+      "scenario": "crowded",
+      "events": 10000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 111762,
+      "gz_sha256": "d4c3778717962bf4a09c944c7d48df531c729fcead2aab0454251ff3b439a9ea",
+      "decompressed_sha256": "8a1ea895630de91fbbea41773d501b2214ca3fd5384cd96c683098cde0d0907e",
+      "command": "python generate_orders.py --scenario crowded --events 10000 --levels 1000 --seed 44 --out data/generated/crowded_10000_s44.jsonl.gz"
+    },
+    "crowded_1000_s42.jsonl.gz": {
+      "scenario": "crowded",
+      "events": 1000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 11450,
+      "gz_sha256": "30053d0b678d452ff32b6e08fab431ef6d6676829f227686bbb1159fedfa306e",
+      "decompressed_sha256": "02e0755bfdc1377bd44284034cba41b6d152a254bf994978f2c9f5d7fef110a6",
+      "command": "python generate_orders.py --scenario crowded --events 1000 --levels 1000 --seed 42 --out data/generated/crowded_1000_s42.jsonl.gz"
+    },
+    "crowded_1000_s43.jsonl.gz": {
+      "scenario": "crowded",
+      "events": 1000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 11407,
+      "gz_sha256": "5ea0ceea89148c356116d8471f28abd16a52c550f918eb24d48db064fc8295a5",
+      "decompressed_sha256": "eeefb43161364a124cabb14d3c3559adf4aaf712096cfd81d5a877322217f1d9",
+      "command": "python generate_orders.py --scenario crowded --events 1000 --levels 1000 --seed 43 --out data/generated/crowded_1000_s43.jsonl.gz"
+    },
+    "crowded_1000_s44.jsonl.gz": {
+      "scenario": "crowded",
+      "events": 1000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 11426,
+      "gz_sha256": "1ee8aace9734c93cbc2cb1fff2dd6ecc257260623da4fc5478a1e26df2f51b25",
+      "decompressed_sha256": "21a702e730e398f9058605226284a88edb00220427d79c6c3e05e8e488f28c2b",
+      "command": "python generate_orders.py --scenario crowded --events 1000 --levels 1000 --seed 44 --out data/generated/crowded_1000_s44.jsonl.gz"
+    },
+    "mixed_1000000_s42.jsonl.gz": {
+      "scenario": "mixed",
+      "events": 1000000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 12666112,
+      "gz_sha256": "f607056fe5724e550a18b44b4ebe5025e96d7a188f0ef80a5830a47305ad540e",
+      "decompressed_sha256": "080a20c0b4c564a4fae3c5df090537a49252f921e06ee63ad06c9d5721bc7c54",
+      "command": "python generate_orders.py --scenario mixed --events 1000000 --levels 1000 --seed 42 --out data/generated/mixed_1000000_s42.jsonl.gz"
+    },
+    "mixed_100000_s42.jsonl.gz": {
+      "scenario": "mixed",
+      "events": 100000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 1255375,
+      "gz_sha256": "83aa4dfb3468228dd9cfad3419d54f21186df9a140aaafe42164dd08dac55424",
+      "decompressed_sha256": "615f25f55d587d7f5ab89bc3f8bb3f6d409c7cd26fa7475b6d1af5f508b6cfc0",
+      "command": "python generate_orders.py --scenario mixed --events 100000 --levels 1000 --seed 42 --out data/generated/mixed_100000_s42.jsonl.gz"
+    },
+    "mixed_100000_s43.jsonl.gz": {
+      "scenario": "mixed",
+      "events": 100000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 1256281,
+      "gz_sha256": "1ef72b12ab563ce63ed5dec88a43b59fc70149ece4d0d9263fc1072e6aee0a64",
+      "decompressed_sha256": "173f20ecd069d17015cb1c83c31e3fef3156ff321b3222909d4f6293ab2d8386",
+      "command": "python generate_orders.py --scenario mixed --events 100000 --levels 1000 --seed 43 --out data/generated/mixed_100000_s43.jsonl.gz"
+    },
+    "mixed_100000_s44.jsonl.gz": {
+      "scenario": "mixed",
+      "events": 100000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 1255703,
+      "gz_sha256": "d015100d548d4d1bf3f910e099553f67541bb226bced623c6d09964feb1b8eb8",
+      "decompressed_sha256": "0107d645755d8be5dac5c0c6a445d3126e72d7d5a2b2b00995f9aab34d2d2f7a",
+      "command": "python generate_orders.py --scenario mixed --events 100000 --levels 1000 --seed 44 --out data/generated/mixed_100000_s44.jsonl.gz"
+    },
+    "mixed_10000_s42.jsonl.gz": {
+      "scenario": "mixed",
+      "events": 10000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 125334,
+      "gz_sha256": "f5a027da6b31209d5e83c56bfbf8626604bb5f91e4176b784ff8a1dac1974a16",
+      "decompressed_sha256": "09136667f41a2996178e2625f349592a4ce470d47a5bb6f8542652d1b56442d4",
+      "command": "python generate_orders.py --scenario mixed --events 10000 --levels 1000 --seed 42 --out data/generated/mixed_10000_s42.jsonl.gz"
+    },
+    "mixed_10000_s43.jsonl.gz": {
+      "scenario": "mixed",
+      "events": 10000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 125238,
+      "gz_sha256": "2e6f1d4dfc78d46a8cd0cefd48e8417da4f448d6cf2c5d4e28af3842aa5f60a6",
+      "decompressed_sha256": "131f27fc22847e0f4c867a7126476a5f65ba3f847ebf611fe5f6fac22cd7b18e",
+      "command": "python generate_orders.py --scenario mixed --events 10000 --levels 1000 --seed 43 --out data/generated/mixed_10000_s43.jsonl.gz"
+    },
+    "mixed_10000_s44.jsonl.gz": {
+      "scenario": "mixed",
+      "events": 10000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 125173,
+      "gz_sha256": "b9a68b87f1922d1d137ef391a5f7bbe4eaf6efe6c843aa599c0b7a2646b4dea8",
+      "decompressed_sha256": "d0149661d22380986b18b223598eabd000a1d47aaf6c5c585e81165b90a6e037",
+      "command": "python generate_orders.py --scenario mixed --events 10000 --levels 1000 --seed 44 --out data/generated/mixed_10000_s44.jsonl.gz"
+    },
+    "mixed_1000_s42.jsonl.gz": {
+      "scenario": "mixed",
+      "events": 1000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 12595,
+      "gz_sha256": "8c3455dc8370f2e006eda834f5bfeb47abdb7dc3766775cf12cdc8444f974d9d",
+      "decompressed_sha256": "ffe8f234b39a09d0971856670d37689431af6f8cfe4f7944726f36684d6bf8c5",
+      "command": "python generate_orders.py --scenario mixed --events 1000 --levels 1000 --seed 42 --out data/generated/mixed_1000_s42.jsonl.gz"
+    },
+    "mixed_1000_s43.jsonl.gz": {
+      "scenario": "mixed",
+      "events": 1000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 12534,
+      "gz_sha256": "002a4bb66fdd24f97d72a086b89d3f19b62c0f47713daaf5260773b95f44b4da",
+      "decompressed_sha256": "b75c9f664d8c78a399a3c30571330bddf46a8cc7636f56970f3c2d576b00ac9e",
+      "command": "python generate_orders.py --scenario mixed --events 1000 --levels 1000 --seed 43 --out data/generated/mixed_1000_s43.jsonl.gz"
+    },
+    "mixed_1000_s44.jsonl.gz": {
+      "scenario": "mixed",
+      "events": 1000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 12620,
+      "gz_sha256": "051284b7198e345b741e175b9f426613638efca10e13f580215ea704f6c5bc37",
+      "decompressed_sha256": "2fd17e2a941a9d21a06f110f23a39aabf5a15602cdd7ad36cd3e78060a8a175e",
+      "command": "python generate_orders.py --scenario mixed --events 1000 --levels 1000 --seed 44 --out data/generated/mixed_1000_s44.jsonl.gz"
+    },
+    "sweep_1000000_s42.jsonl.gz": {
+      "scenario": "sweep",
+      "events": 1000000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 12245375,
+      "gz_sha256": "24712ef1dfde6d81f536da24dd1d1016a67d727f4908598db8f0c4f0023550ec",
+      "decompressed_sha256": "70387f36932b020439ebc2fe1c8ee320dd2fc0b69f423e0d61995260169f215a",
+      "command": "python generate_orders.py --scenario sweep --events 1000000 --levels 1000 --seed 42 --out data/generated/sweep_1000000_s42.jsonl.gz"
+    },
+    "sweep_100000_s42.jsonl.gz": {
+      "scenario": "sweep",
+      "events": 100000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 1228090,
+      "gz_sha256": "cb15a30b8541947f8ccc45d2b6e59104cb69b18d2b617bd874f691271cc39c53",
+      "decompressed_sha256": "57e3846776029ec5d72ce98478b59f36027872cc070f5ab4deeec14552021dc2",
+      "command": "python generate_orders.py --scenario sweep --events 100000 --levels 1000 --seed 42 --out data/generated/sweep_100000_s42.jsonl.gz"
+    },
+    "sweep_100000_s43.jsonl.gz": {
+      "scenario": "sweep",
+      "events": 100000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 1228145,
+      "gz_sha256": "fccad62402602a0f3c9fcb727703147c598ee5228956395ecace9631234cef4b",
+      "decompressed_sha256": "b07679f4d1d62e9dab14e6e3e5012018fe9f7a2b0da3eb82ea6da5b953d93204",
+      "command": "python generate_orders.py --scenario sweep --events 100000 --levels 1000 --seed 43 --out data/generated/sweep_100000_s43.jsonl.gz"
+    },
+    "sweep_100000_s44.jsonl.gz": {
+      "scenario": "sweep",
+      "events": 100000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 1227897,
+      "gz_sha256": "8896f6c5b343ed34186f1eb8fb39bfc29087ff512e9a15bf58f42a7896cb1d2d",
+      "decompressed_sha256": "216044002be3a7faf48885437f2ef4f1e97f31af51a3afd9fdf209ef716ba13e",
+      "command": "python generate_orders.py --scenario sweep --events 100000 --levels 1000 --seed 44 --out data/generated/sweep_100000_s44.jsonl.gz"
+    },
+    "sweep_10000_s42.jsonl.gz": {
+      "scenario": "sweep",
+      "events": 10000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 123692,
+      "gz_sha256": "c50755964212445574359b0fe4011f908ad2833edc900d49ecfa25948cca334f",
+      "decompressed_sha256": "b232f56e2cd5301e47b851492fdf72ffe9aec968948a459a548eb74c5e6279e1",
+      "command": "python generate_orders.py --scenario sweep --events 10000 --levels 1000 --seed 42 --out data/generated/sweep_10000_s42.jsonl.gz"
+    },
+    "sweep_10000_s43.jsonl.gz": {
+      "scenario": "sweep",
+      "events": 10000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 123816,
+      "gz_sha256": "c855424b4a836ad16b9a60c2aa5be78f690d26aba2512ac2950bb3723ff06a8e",
+      "decompressed_sha256": "095b6d08a9b8cba8ae380fdd3a143b89e131b3270630fe29796f4cf2eed5baaa",
+      "command": "python generate_orders.py --scenario sweep --events 10000 --levels 1000 --seed 43 --out data/generated/sweep_10000_s43.jsonl.gz"
+    },
+    "sweep_10000_s44.jsonl.gz": {
+      "scenario": "sweep",
+      "events": 10000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 123956,
+      "gz_sha256": "ff72b1d7292b6dba3589d761a3d4e4951916dd4def8bdb2b10bf99635361970c",
+      "decompressed_sha256": "5f64f1d1fbace8c0c213daa6afbd45bca2f803848a22661613755f5e41be19e3",
+      "command": "python generate_orders.py --scenario sweep --events 10000 --levels 1000 --seed 44 --out data/generated/sweep_10000_s44.jsonl.gz"
+    },
+    "sweep_1000_s42.jsonl.gz": {
+      "scenario": "sweep",
+      "events": 1000,
+      "seed": 42,
+      "levels": 1000,
+      "gz_bytes": 12837,
+      "gz_sha256": "e4ec73a1792d215d2f56a5ba4dc92fcb012886a741603dc939827d567f11c2fe",
+      "decompressed_sha256": "0fb4bd89b584aaf0055a1610f1673cad68abf2b12ba8e3316caf69d2fc934bbd",
+      "command": "python generate_orders.py --scenario sweep --events 1000 --levels 1000 --seed 42 --out data/generated/sweep_1000_s42.jsonl.gz"
+    },
+    "sweep_1000_s43.jsonl.gz": {
+      "scenario": "sweep",
+      "events": 1000,
+      "seed": 43,
+      "levels": 1000,
+      "gz_bytes": 12874,
+      "gz_sha256": "11619704e2b389d1832c7cdafb86854cd5fda300a05d9c7e0655083502cccad0",
+      "decompressed_sha256": "91002481d7da75ee5eed6782500287f48f5088470da43791a63643a9ca574752",
+      "command": "python generate_orders.py --scenario sweep --events 1000 --levels 1000 --seed 43 --out data/generated/sweep_1000_s43.jsonl.gz"
+    },
+    "sweep_1000_s44.jsonl.gz": {
+      "scenario": "sweep",
+      "events": 1000,
+      "seed": 44,
+      "levels": 1000,
+      "gz_bytes": 12913,
+      "gz_sha256": "ea3de66deeef120f55c310cbe9db82f0c76073c0029404560ff696153753b9cf",
+      "decompressed_sha256": "31e40a0803d182de3d19ce01bd9c862bbf3b5f136571ce7ed526266e73e8dcd4",
+      "command": "python generate_orders.py --scenario sweep --events 1000 --levels 1000 --seed 44 --out data/generated/sweep_1000_s44.jsonl.gz"
+    }
+  }
+}

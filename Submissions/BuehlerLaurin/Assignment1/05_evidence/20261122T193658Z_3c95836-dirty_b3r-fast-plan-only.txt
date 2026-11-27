@@ -1,0 +1,14 @@
+label: b3r-fast-plan-only
+command: powershell -NoProfile -File 01_code/bench/try_b3r_fast.ps1 -PlanOnly
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3c95836e66e797025518c6d66fc9733b5807ea85
+dirty: True
+python: 3.13.15
+utc: 20261122T193658Z
+exit_code: 0
+duration_s: 1.32
+------------------------------------------------------------
+Reference B3r: 03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122; new session: phase4_b3r_fast_20261122
+Rule: all correctness gates; fast/B3r geometric mean <=0.90 at official100k; every matched replay ratio <=1.05.
+{"part": "official", "cases": 45, "versions": ["B3r_fast"], "modes": ["timing", "latency", "memory", "counts"], "cells": 180, "sizes": [1000, 10000, 100000], "engine_executed": false}
+{"part": "post_attack", "cases": 20, "versions": ["B3r_fast"], "modes": ["timing", "latency", "memory", "counts"], "cells": 56, "sizes": [1000, 10000, 32500, 65000, 100000, 100025, 130000, 200050, 260000, 400100, 800200], "engine_executed": false}

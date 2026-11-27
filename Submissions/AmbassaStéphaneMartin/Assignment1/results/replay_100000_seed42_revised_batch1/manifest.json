@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-25T22:28:57.449937+00:00",
+  "status": "complete",
+  "environment": {
+    "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "implementation": "CPython",
+    "dependencies": {
+      "third_party_required": [],
+      "stdlib": "3.14.5",
+      "zlib_build": "1.3.1.zlib-ng",
+      "zlib_runtime": "1.3.1.zlib-ng"
+    },
+    "machine": {
+      "os": "Windows-11-10.0.26300-SP0",
+      "system": "Windows",
+      "release": "11",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+      "logical_cpus": 22
+    },
+    "clock": {
+      "name": "perf_counter",
+      "resolution_seconds": 1e-07
+    },
+    "git_head": "8a7a3523ddebae3d941bca92706386a7fc0227ba",
+    "git_dirty": true,
+    "git_status": "?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/buildup_d3c00fcc1bd440e5.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/buildup_d3c00fcc1bd440e5.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/cancel_churn_fedac0baa4656a6c.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/cancel_churn_fedac0baa4656a6c.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/crowded_68dd246cda754042.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/crowded_68dd246cda754042.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/mixed_6827cbf3ba9dfe88.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/mixed_6827cbf3ba9dfe88.jsonl.gz.metadata.json\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/sweep_6e708efc96356675.jsonl.gz\"\n?? \"Submissions/AmbassaSt\\303\\251phaneMartin/Assignment1/data/benchmark/sweep_6e708efc96356675.jsonl.gz.metadata.json\"",
+    "source_sha256": {
+      "benchmark.py": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4",
+      "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+      "order_book.py": "dcbdb2c0e7173e8116fa1c51b287a93cf422c140f74f49f2b5c49a5b025c39a6",
+      "dispatcher.py": "4c4652e95d8112fcdc574e98f41ea494326aa70b5a148b9b892e468784fffce3",
+      "test_order_book.py": "6f143b1616e6c21225b7de12fb4f8853e70a0aff32b6045ca3c3ef2501110595",
+      "test_price_heaps.py": "90498d2ac8d25fb2d669bcf671b954dc42267b866bf0ee89c2ff747614974c3a",
+      "test_lazy_cancellation.py": "f9d7028adb6a4fdbb33599a398755c561f1ec7ba6b10e6a558b6feca4658b423",
+      "test_benchmark.py": "400f876d52961283ce58227e6fdbfa319a406142ae20666cead47f76e821fdac"
+    },
+    "worker_environment": {
+      "PYTHONHASHSEED": "0",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "garbage_collection": "enabled; explicit collection before each fresh-book repetition"
+  },
+  "boundaries": {
+    "clock": "time.perf_counter; GC enabled, collect before each repetition",
+    "io": "Warm-cache reads, gzip decompression and UTF-8/JSON parsing timed separately; validation and SHA-256 checks outside clocks. Five reads plus an untimed warm-up.",
+    "timing": "Preloaded events; direct engine classes; five fresh books and an untimed fresh-book warm-up. No inspection, counters, deepcopy or comparison. Replay discards each returned result; single-sale retains its result until the clock stops. Result creation is included.",
+    "total_compute": "Initialization + construction + replay, summed within each repetition. I/O excluded. Summary is median of these sums, not sum of medians.",
+    "latency": "Separate instrumented pass; clocks surround each process_event call and result disposal for replay. Sample-list append excluded. No overhead subtraction. Single-sale experiments use five fresh books/samples.",
+    "percentiles": "Median uses statistics.median (average middle pair for even n); P95/P99 use nearest rank, sorted[ceil(p*n)-1], without interpolation.",
+    "memory": "Separate worker process and separate tracemalloc run per fresh book. Input, imports and warm-up excluded; book construction, setup, engine allocations and transient results included. No saved event-result history. Current bytes measured after GC; peak includes temporary cleanup and instrumentation allocations. Tracemalloc is Python allocation memory, not process RSS. Five repetitions; construction checkpoint included.",
+    "diagnostics": "Separate untimed pass; counters after every setup/replay event. Final canonical snapshot and ordered-result digests compare versions. Diagnostic costs are never part of primary timing.",
+    "limits": "Per-worker wall timeout and global campaign deadline are enforced by the parent. Compressed/decompressed payload limits checked before parse. Traced-allocation cap checked between memory-run events; an individual event can exceed it before the check. No OS RSS/CPU hard cap.",
+    "sale": "Setup uses a fresh identical passive bid book per sale. Construction timed separately. Integer ceil(depth * percent / 100); 10%, 100%, 200%. Throughput counts one sale, not its setup events. price_levels_visited counts distinct executed fill prices after the primary timer stops; it is reported for single-sale timing and diagnostics only.",
+    "queue_concentration": "Same order count, requested 4 versus 1000 levels. Actual occupied levels are min(order_count, requested_levels).",
+    "churn": "An old active head remains while same-price orders are added/cancelled; capture retained storage and memory before final head cancellation and after it. Stream size is 2 * requested_count + 2."
+  },
+  "command": [
+    "benchmark.py",
+    "run",
+    "--counts",
+    "100000",
+    "--seeds",
+    "42",
+    "--scenarios",
+    "buildup",
+    "crowded",
+    "mixed",
+    "sweep",
+    "cancel_churn",
+    "--experiments",
+    "replay",
+    "--versions",
+    "revised",
+    "--levels",
+    "1000",
+    "--out",
+    "results\\replay_100000_seed42_revised_batch1",
+    "--worker-seconds",
+    "60",
+    "--campaign-seconds",
+    "900",
+    "--label",
+    "first-100000-revised"
+  ],
+  "versions": [
+    "revised"
+  ],
+  "phases": [
+    "io",
+    "timing",
+    "latency",
+    "memory",
+    "diagnostics"
+  ],
+  "repetitions": 5,
+  "workloads": [
+    {
+      "case_id": "replay_buildup_n100000_s42_l1000",
+      "experiment": "replay",
+      "scenario": "buildup",
+      "seed": 42,
+      "requested_count": 100000,
+      "levels": 1000,
+      "sale_percent": null,
+      "construction_event_count": 0,
+      "source_event_count": 100000,
+      "event_count": 100000,
+      "actual_controlled_price_levels": null,
+      "source": {
+        "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\buildup_d3c00fcc1bd440e5.jsonl.gz",
+        "sha256": "ba943204ac03cdf580f5ef32687119cd7531468216343fbb94c476180a1142fa",
+        "metadata": {
+          "synthetic": true,
+          "calibrated_to_exchange_data": false,
+          "scenario": "buildup",
+          "events": 100000,
+          "seed": 42,
+          "levels": 1000,
+          "generator": "generate_orders.events / random.Random",
+          "python": "3.14.5",
+          "price_tick_usd": "0.01",
+          "quantity_unit_btc": "0.00000001",
+          "compressed_bytes": 1319072,
+          "sha256": "ba943204ac03cdf580f5ef32687119cd7531468216343fbb94c476180a1142fa",
+          "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+          "benchmark_source_sha256": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4"
+        },
+        "reused": false
+      }
+    },
+    {
+      "case_id": "replay_crowded_n100000_s42_l1000",
+      "experiment": "replay",
+      "scenario": "crowded",
+      "seed": 42,
+      "requested_count": 100000,
+      "levels": 1000,
+      "sale_percent": null,
+      "construction_event_count": 0,
+      "source_event_count": 100000,
+      "event_count": 100000,
+      "actual_controlled_price_levels": null,
+      "source": {
+        "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\crowded_68dd246cda754042.jsonl.gz",
+        "sha256": "b85cdba7d06adf8aa55ecce737c5d99ff62cb9416cea97ae5c7f6767af2e058d",
+        "metadata": {
+          "synthetic": true,
+          "calibrated_to_exchange_data": false,
+          "scenario": "crowded",
+          "events": 100000,
+          "seed": 42,
+          "levels": 1000,
+          "generator": "generate_orders.events / random.Random",
+          "python": "3.14.5",
+          "price_tick_usd": "0.01",
+          "quantity_unit_btc": "0.00000001",
+          "compressed_bytes": 1104200,
+          "sha256": "b85cdba7d06adf8aa55ecce737c5d99ff62cb9416cea97ae5c7f6767af2e058d",
+          "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+          "benchmark_source_sha256": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4"
+        },
+        "reused": false
+      }
+    },
+    {
+      "case_id": "replay_mixed_n100000_s42_l1000",
+      "experiment": "replay",
+      "scenario": "mixed",
+      "seed": 42,
+      "requested_count": 100000,
+      "levels": 1000,
+      "sale_percent": null,
+      "construction_event_count": 0,
+      "source_event_count": 100000,
+      "event_count": 100000,
+      "actual_controlled_price_levels": null,
+      "source": {
+        "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\mixed_6827cbf3ba9dfe88.jsonl.gz",
+        "sha256": "885ccee40e0feb281ce8eec48caf7a571efa49331a032c6244c6b93f9b265a99",
+        "metadata": {
+          "synthetic": true,
+          "calibrated_to_exchange_data": false,
+          "scenario": "mixed",
+          "events": 100000,
+          "seed": 42,
+          "levels": 1000,
+          "generator": "generate_orders.events / random.Random",
+          "python": "3.14.5",
+          "price_tick_usd": "0.01",
+          "quantity_unit_btc": "0.00000001",
+          "compressed_bytes": 1263675,
+          "sha256": "885ccee40e0feb281ce8eec48caf7a571efa49331a032c6244c6b93f9b265a99",
+          "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+          "benchmark_source_sha256": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4"
+        },
+        "reused": false
+      }
+    },
+    {
+      "case_id": "replay_sweep_n100000_s42_l1000",
+      "experiment": "replay",
+      "scenario": "sweep",
+      "seed": 42,
+      "requested_count": 100000,
+      "levels": 1000,
+      "sale_percent": null,
+      "construction_event_count": 0,
+      "source_event_count": 100000,
+      "event_count": 100000,
+      "actual_controlled_price_levels": null,
+      "source": {
+        "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\sweep_6e708efc96356675.jsonl.gz",
+        "sha256": "ae1617715a5380247c7b3c7a9f622a08f5f8d197b9fcaecebd230ab5b6ffacb9",
+        "metadata": {
+          "synthetic": true,
+          "calibrated_to_exchange_data": false,
+          "scenario": "sweep",
+          "events": 100000,
+          "seed": 42,
+          "levels": 1000,
+          "generator": "generate_orders.events / random.Random",
+          "python": "3.14.5",
+          "price_tick_usd": "0.01",
+          "quantity_unit_btc": "0.00000001",
+          "compressed_bytes": 1228461,
+          "sha256": "ae1617715a5380247c7b3c7a9f622a08f5f8d197b9fcaecebd230ab5b6ffacb9",
+          "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+          "benchmark_source_sha256": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4"
+        },
+        "reused": false
+      }
+    },
+    {
+      "case_id": "replay_cancel_churn_n100000_s42_l1000",
+      "experiment": "replay",
+      "scenario": "cancel_churn",
+      "seed": 42,
+      "requested_count": 100000,
+      "levels": 1000,
+      "sale_percent": null,
+      "construction_event_count": 0,
+      "source_event_count": 100000,
+      "event_count": 100000,
+      "actual_controlled_price_levels": null,
+      "source": {
+        "path": "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\data\\benchmark\\cancel_churn_fedac0baa4656a6c.jsonl.gz",
+        "sha256": "5b805477bb4d2dae335d5cb8f024e9f4227526e17614b036ff7a44d10ee9650b",
+        "metadata": {
+          "synthetic": true,
+          "calibrated_to_exchange_data": false,
+          "scenario": "cancel_churn",
+          "events": 100000,
+          "seed": 42,
+          "levels": 1000,
+          "generator": "generate_orders.events / random.Random",
+          "python": "3.14.5",
+          "price_tick_usd": "0.01",
+          "quantity_unit_btc": "0.00000001",
+          "compressed_bytes": 1097696,
+          "sha256": "5b805477bb4d2dae335d5cb8f024e9f4227526e17614b036ff7a44d10ee9650b",
+          "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+          "benchmark_source_sha256": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4"
+        },
+        "reused": false
+      }
+    }
+  ],
+  "limits": {
+    "worker_wall_seconds": 60.0,
+    "measurement_campaign_wall_seconds": 900.0,
+    "payload_bytes": 134217728,
+    "traced_allocation_bytes": 536870912,
+    "os_rss_hard_limit": null,
+    "preparation": "Generation precedes measurement deadline; no preparation timeout"
+  },
+  "run_kind": "first-100000-revised",
+  "finished_utc": "2026-11-25T22:30:06.591777+00:00",
+  "raw_rows": 85,
+  "summary_rows": 25,
+  "diagnostic_comparisons": [],
+  "completed_jobs": 25
+}

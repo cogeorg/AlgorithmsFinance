@@ -1,0 +1,61 @@
+{
+  "task": {
+    "task_id": "baseline_latency_cancel_churn_10000_seed42_levels1000",
+    "version": "baseline",
+    "phase": "latency",
+    "scenario": "cancel_churn",
+    "event_count": 10000,
+    "seed": 42,
+    "levels": 1000,
+    "input_path": "data/supplied/cancel_churn_10000.jsonl.gz",
+    "sha256": "7aef5f014e6d1e5d01cb37c7ff7b02cfcc5a30f185de8a4b33db2d32b3d9d933",
+    "result_path": "results/raw/baseline/latency/cancel_churn_10000_seed42_levels1000.json.gz",
+    "status_path": "results/status/baseline/latency/cancel_churn_10000_seed42_levels1000.json"
+  },
+  "task_id": "baseline_latency_cancel_churn_10000_seed42_levels1000",
+  "timeout_seconds": 60,
+  "elapsed_seconds": 2.741228000028059,
+  "started_utc": "2026-11-23T19:53:16.300375+00:00",
+  "finished_utc": "2026-11-23T19:53:19.041662+00:00",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\scripts\\04_benchmark.py",
+    "--phase",
+    "latency",
+    "--version",
+    "baseline",
+    "--input",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\data\\supplied\\cancel_churn_10000.jsonl.gz",
+    "--warmups",
+    "1",
+    "--repeats",
+    "5",
+    "--out",
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\results\\raw\\baseline\\latency\\cancel_churn_10000_seed42_levels1000.json.pending.gz"
+  ],
+  "environment": {
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "python_executable": "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "dependencies": {
+      "pytest": "9.2.0",
+      "pandas": "3.1.1",
+      "streamlit": "1.67.0"
+    },
+    "git": {
+      "commit": "1efbc9506181256881948fac9c6f6bb2aa9d6469",
+      "branch": "assignment1-mueller-alexandra",
+      "dirty": true,
+      "assignment_dirty": true,
+      "code_dirty": false
+    }
+  },
+  "returncode": 0,
+  "stdout": "{\"output\": \"C:\\\\Users\\\\Acer\\\\Documents\\\\Algorithms\\\\AlgorithmsFinance\\\\Submissions\\\\M\\u00fcllerAlexandra\\\\Assignment1\\\\results\\\\raw\\\\baseline\\\\latency\\\\cancel_churn_10000_seed42_levels1000.json.pending.gz\", \"summary\": {\"overall\": {\"sample_count\": 50000, \"median_ns\": 2100.0, \"p95_ns\": 4400, \"p99_ns\": 7700}, \"by_event_type\": {\"CANCEL\": {\"sample_count\": 25000, \"median_ns\": 1200.0, \"p95_ns\": 2700, \"p99_ns\": 5400}, \"LIMIT\": {\"sample_count\": 25000, \"median_ns\": 2300.0, \"p95_ns\": 4800, \"p99_ns\": 9800}}, \"early_10_percent\": {\"sample_count\": 5000, \"median_ns\": 2100.0, \"p95_ns\": 4700, \"p99_ns\": 9700}, \"late_10_percent\": {\"sample_count\": 5000, \"median_ns\": 2100.0, \"p95_ns\": 3500, \"p99_ns\": 5100}, \"repeat_count\": 5, \"window_size_per_repeat\": 1000}}\n",
+  "stderr": "",
+  "outcome": "completed",
+  "result_path": "results/raw/baseline/latency/cancel_churn_10000_seed42_levels1000.json.gz"
+}

@@ -1,0 +1,44 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "empty_book",
+ "description": "Market sell and cancels on a completely empty book; the accepted cancel advances seq.",
+ "covers": [
+  "empty book",
+  "market sell on empty book",
+  "cancel unknown target is valid",
+  "nonincreasing seq after accepted cancel"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "s1",
+   "status": "unfilled",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "target_order_id": "x1",
+   "status": "not_found",
+   "cancelled_qty_units": 0
+  },
+  {
+   "event_id": "e3",
+   "order_id": "s2",
+   "status": "unfilled",
+   "unfilled_qty_units": 1,
+   "fills": []
+  },
+  {
+   "event_id": "r4",
+   "status": "rejected",
+   "reason": "nonincreasing_seq"
+  }
+ ],
+ "final_book": [],
+ "best_bid": null,
+ "best_ask": null
+}

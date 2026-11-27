@@ -1,0 +1,16 @@
+Command (run from Submissions/SinghJoga using the existing .venv):
+python -m pytest -q
+
+Exact pytest summary:
+39 failed in 0.40s
+
+Verification:
+- 39 specification cases were collected.
+- All 39 failure tracebacks terminate at NotImplementedError in algorithms/search.py.
+- No import errors occurred; pytest 9.2.0 was available in the existing environment.
+- Pytest exited with status 1 because the specification tests intentionally fail before implementation.
+
+Explanation:
+linear_search, binary_search, and hash_membership are deliberately unimplemented
+stubs. The failures are the expected preimplementation baseline, not test or
+environment infrastructure failures.

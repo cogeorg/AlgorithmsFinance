@@ -1,0 +1,16 @@
+label: dashboard-final-review
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/review_dashboard_checkpoint.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 337cc615df10892108726618b53606d59c795790
+dirty: True
+python: 3.13.15
+utc: 20261123T191653Z
+exit_code: 0
+duration_s: 0.66
+------------------------------------------------------------
+All dashboard modules reviewed: no engine/benchmark/generator imports.
+dashboard 16 passed; per file/class {"test_dashboard": 16}
+standard 999 passed; per file/class {"TestDifferential_B": 1, "TestDifferential_B1": 1, "TestDifferential_B2": 1, "TestDifferential_B3": 1, "TestDifferential_B3r": 1, "TestDifferential_B3r_fast": 1, "TestFastDifferential": 1, "test_b3r": 6, "test_b_internal": 32, "test_bench_pipeline": 30, "test_contract": 448, "test_dashboard": 16, "test_fast_assessment": 10, "test_fast_equivalence": 115, "test_final_version": 60, "test_mutants": 25, "test_own_datasets": 4, "test_post_attack_pipeline": 13, "test_replay": 21, "test_replay_regressions": 28, "test_validation": 184}
+Eight tab audits present; numerical values, saved evidence hashes and status/bound checks recorded.
+Protected source, results, data and dependencies unchanged; unrelated attack work excluded.
+RESULT: PASS (eight-tab dashboard, fresh complete suites, saved numerical audit and source scope verified)

@@ -1,0 +1,10 @@
+Command: .\.venv\Scripts\python.exe results\coverage_recovery_execution.py
+Outcome: failed before run-directory creation or worker launch.
+
+Traceback:
+  File "results\coverage_recovery_execution.py", line 13, in <module>
+    import benchmarks.run_benchmarks as runner
+ModuleNotFoundError: No module named 'benchmarks.run_benchmarks'
+
+Correction: add the assignment project root to sys.path before importing
+benchmarks.run_benchmarks. The failed launch did not create measurements.

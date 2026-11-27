@@ -1,0 +1,566 @@
+﻿Command: python -m pytest -q --tb=short
+Environment: Assignment1\.venv\Scripts\python.exe (Python 3.14.7)
+
+...FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF       [100%]
+================================== FAILURES ===================================
+___________ test_generated_stream_is_observed_after_each_event[13] ____________
+tests\test_generated_streams.py:51: in test_generated_stream_is_observed_after_each_event
+    result = book.process_event(event)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_generated_stream_is_observed_after_each_event[37] ____________
+tests\test_generated_streams.py:51: in test_generated_stream_is_observed_after_each_event
+    result = book.process_event(event)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_generated_stream_is_observed_after_each_event[91] ____________
+tests\test_generated_streams.py:51: in test_generated_stream_is_observed_after_each_event
+    result = book.process_event(event)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+____ test_market_sell_fills_same_price_orders_fifo_and_preserves_residual _____
+tests\test_price_time.py:7: in test_market_sell_fills_same_price_orders_fifo_and_preserves_residual
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+______ test_market_sell_prioritizes_higher_bid_before_earlier_lower_bid _______
+tests\test_price_time.py:76: in test_market_sell_prioritizes_higher_bid_before_earlier_lower_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_______________ test_empty_book_inspection_and_initial_sequence _______________
+tests\test_specification.py:122: in test_empty_book_inspection_and_initial_sequence
+    assert book.inspect_book() == {"bids": [], "asks": []}
+           ^^^^^^^^^^^^^^^^^^^
+orderbook\baseline.py:10: in inspect_book
+    raise NotImplementedError
+E   NotImplementedError
+______ test_market_sell_against_empty_book_is_unfilled_and_does_not_rest ______
+tests\test_specification.py:128: in test_market_sell_against_empty_book_is_unfilled_and_does_not_rest
+    result = book.process_event(_market_sell(1, "e1", "sell_1", 75000000))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_one_bid_market_sell_depth_cases[smaller-than-depth] ___________
+tests\test_specification.py:219: in test_one_bid_market_sell_depth_cases
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_one_bid_market_sell_depth_cases[equal-to-depth] _____________
+tests\test_specification.py:219: in test_one_bid_market_sell_depth_cases
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_one_bid_market_sell_depth_cases[larger-than-depth-market-residual-does-not-rest] _
+tests\test_specification.py:219: in test_one_bid_market_sell_depth_cases
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_________ test_partial_fill_then_next_sell_keeps_maker_fifo_priority __________
+tests\test_specification.py:234: in test_partial_fill_then_next_sell_keeps_maker_fifo_priority
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+________ test_long_same_price_queue_uses_arrival_not_identifier_order _________
+tests\test_specification.py:318: in test_long_same_price_queue_uses_arrival_not_identifier_order
+    book.process_event(_limit(1, "e1", "z_first", "BUY", 6000000, 10000000))
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_cancel_before_execution_removes_remaining_order _____________
+tests\test_specification.py:357: in test_cancel_before_execution_removes_remaining_order
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+________ test_cancel_after_partial_execution_removes_only_the_residual ________
+tests\test_specification.py:384: in test_cancel_after_partial_execution_removes_only_the_residual
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_____________ test_cancel_after_full_execution_returns_not_found ______________
+tests\test_specification.py:417: in test_cancel_after_full_execution_returns_not_found
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_________ test_repeated_cancellation_is_not_found_after_first_cancel __________
+tests\test_specification.py:443: in test_repeated_cancellation_is_not_found_after_first_cancel
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_valid_unknown_cancel_advances_accepted_sequence _____________
+tests\test_specification.py:467: in test_valid_unknown_cancel_advances_accepted_sequence
+    result = book.process_event(_cancel(1, "e1", "never-seen"))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+______ test_crossing_limit_buy_uses_best_asks_then_fifo_and_maker_prices ______
+tests\test_specification.py:481: in test_crossing_limit_buy_uses_best_asks_then_fifo_and_maker_prices
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+______________ test_crossing_limit_sell_uses_best_bids_then_fifo ______________
+tests\test_specification.py:542: in test_crossing_limit_sell_uses_best_bids_then_fifo
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+__________________ test_limit_buy_crosses_at_price_equality ___________________
+tests\test_specification.py:600: in test_limit_buy_crosses_at_price_equality
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+__________________ test_limit_sell_crosses_at_price_equality __________________
+tests\test_specification.py:628: in test_limit_sell_crosses_at_price_equality
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_worse_limit_buy_does_not_cross_and_rests ________________
+tests\test_specification.py:656: in test_worse_limit_buy_does_not_cross_and_rests
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_______________ test_worse_limit_sell_does_not_cross_and_rests ________________
+tests\test_specification.py:697: in test_worse_limit_sell_does_not_cross_and_rests
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_____________ test_partially_filled_limit_buy_rests_its_residual ______________
+tests\test_specification.py:738: in test_partially_filled_limit_buy_rests_its_residual
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_____________ test_partially_filled_limit_sell_rests_its_residual _____________
+tests\test_specification.py:778: in test_partially_filled_limit_sell_rests_its_residual
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+________ test_supplied_worked_example_matches_supplied_expected_result ________
+tests\test_specification.py:831: in test_supplied_worked_example_matches_supplied_expected_result
+    result = book.process_event(event)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+__ test_missing_required_fields_are_rejected_without_state_change[LIMIT-seq] __
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[LIMIT-event_id] _
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[LIMIT-type] __
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[LIMIT-order_id] _
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[LIMIT-side] __
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[LIMIT-price_ticks] _
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[LIMIT-qty_units] _
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[MARKET_SELL-seq] _
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[MARKET_SELL-event_id] _
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[MARKET_SELL-type] _
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[MARKET_SELL-order_id] _
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[MARKET_SELL-qty_units] _
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[CANCEL-seq] __
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[CANCEL-event_id] _
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[CANCEL-type] _
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_missing_required_fields_are_rejected_without_state_change[CANCEL-target_order_id] _
+tests\test_specification.py:886: in test_missing_required_fields_are_rejected_without_state_change
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[unknown-event-type] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[unknown-side] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[zero-price] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[negative-price] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[fractional-price] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[string-price] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[boolean-price] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[zero-quantity] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[negative-quantity] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[fractional-quantity] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[string-quantity] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[boolean-quantity] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[zero-sequence] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[negative-sequence] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[fractional-sequence] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[string-sequence] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_ test_invalid_values_are_rejected_without_mutating_book_or_sequence[boolean-sequence] _
+tests\test_specification.py:918: in test_invalid_values_are_rejected_without_mutating_book_or_sequence
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_______ test_duplicate_live_submission_id_is_rejected_without_mutation ________
+tests\test_specification.py:926: in test_duplicate_live_submission_id_is_rejected_without_mutation
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_______ test_nonincreasing_sequence_is_rejected_without_mutation[equal] _______
+tests\test_specification.py:934: in test_nonincreasing_sequence_is_rejected_without_mutation
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_______ test_nonincreasing_sequence_is_rejected_without_mutation[lower] _______
+tests\test_specification.py:934: in test_nonincreasing_sequence_is_rejected_without_mutation
+    book, expected_book = _book_with_seed_bid()
+                          ^^^^^^^^^^^^^^^^^^^^^
+tests\test_specification.py:66: in _book_with_seed_bid
+    book.process_event(
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_rejected_sequence_can_be_used_by_a_later_valid_event __________
+tests\test_specification.py:943: in test_rejected_sequence_can_be_used_by_a_later_valid_event
+    rejected = book.process_event(invalid_event)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+orderbook\baseline.py:6: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+=========================== short test summary info ===========================
+FAILED tests/test_generated_streams.py::test_generated_stream_is_observed_after_each_event[13]
+FAILED tests/test_generated_streams.py::test_generated_stream_is_observed_after_each_event[37]
+FAILED tests/test_generated_streams.py::test_generated_stream_is_observed_after_each_event[91]
+FAILED tests/test_price_time.py::test_market_sell_fills_same_price_orders_fifo_and_preserves_residual
+FAILED tests/test_price_time.py::test_market_sell_prioritizes_higher_bid_before_earlier_lower_bid
+FAILED tests/test_specification.py::test_empty_book_inspection_and_initial_sequence
+FAILED tests/test_specification.py::test_market_sell_against_empty_book_is_unfilled_and_does_not_rest
+FAILED tests/test_specification.py::test_one_bid_market_sell_depth_cases[smaller-than-depth]
+FAILED tests/test_specification.py::test_one_bid_market_sell_depth_cases[equal-to-depth]
+FAILED tests/test_specification.py::test_one_bid_market_sell_depth_cases[larger-than-depth-market-residual-does-not-rest]
+FAILED tests/test_specification.py::test_partial_fill_then_next_sell_keeps_maker_fifo_priority
+FAILED tests/test_specification.py::test_long_same_price_queue_uses_arrival_not_identifier_order
+FAILED tests/test_specification.py::test_cancel_before_execution_removes_remaining_order
+FAILED tests/test_specification.py::test_cancel_after_partial_execution_removes_only_the_residual
+FAILED tests/test_specification.py::test_cancel_after_full_execution_returns_not_found
+FAILED tests/test_specification.py::test_repeated_cancellation_is_not_found_after_first_cancel
+FAILED tests/test_specification.py::test_valid_unknown_cancel_advances_accepted_sequence
+FAILED tests/test_specification.py::test_crossing_limit_buy_uses_best_asks_then_fifo_and_maker_prices
+FAILED tests/test_specification.py::test_crossing_limit_sell_uses_best_bids_then_fifo
+FAILED tests/test_specification.py::test_limit_buy_crosses_at_price_equality
+FAILED tests/test_specification.py::test_limit_sell_crosses_at_price_equality
+FAILED tests/test_specification.py::test_worse_limit_buy_does_not_cross_and_rests
+FAILED tests/test_specification.py::test_worse_limit_sell_does_not_cross_and_rests
+FAILED tests/test_specification.py::test_partially_filled_limit_buy_rests_its_residual
+FAILED tests/test_specification.py::test_partially_filled_limit_sell_rests_its_residual
+FAILED tests/test_specification.py::test_supplied_worked_example_matches_supplied_expected_result
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[LIMIT-seq]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[LIMIT-event_id]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[LIMIT-type]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[LIMIT-order_id]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[LIMIT-side]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[LIMIT-price_ticks]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[LIMIT-qty_units]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[MARKET_SELL-seq]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[MARKET_SELL-event_id]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[MARKET_SELL-type]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[MARKET_SELL-order_id]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[MARKET_SELL-qty_units]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[CANCEL-seq]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[CANCEL-event_id]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[CANCEL-type]
+FAILED tests/test_specification.py::test_missing_required_fields_are_rejected_without_state_change[CANCEL-target_order_id]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[unknown-event-type]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[unknown-side]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[zero-price]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[negative-price]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[fractional-price]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[string-price]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[boolean-price]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[zero-quantity]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[negative-quantity]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[fractional-quantity]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[string-quantity]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[boolean-quantity]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[zero-sequence]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[negative-sequence]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[fractional-sequence]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[string-sequence]
+FAILED tests/test_specification.py::test_invalid_values_are_rejected_without_mutating_book_or_sequence[boolean-sequence]
+FAILED tests/test_specification.py::test_duplicate_live_submission_id_is_rejected_without_mutation
+FAILED tests/test_specification.py::test_nonincreasing_sequence_is_rejected_without_mutation[equal]
+FAILED tests/test_specification.py::test_nonincreasing_sequence_is_rejected_without_mutation[lower]
+FAILED tests/test_specification.py::test_rejected_sequence_can_be_used_by_a_later_valid_event
+63 failed, 3 passed in 1.29s
+
+Exit code: 1

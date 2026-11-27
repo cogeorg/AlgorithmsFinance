@@ -1,0 +1,31 @@
+label: b3r-fast-correctness-proof
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe run.py bench.assess_fast record-gates 05_evidence/b3r-fast-all-tests.xml 05_evidence/b3r-fast-attack-tests.xml --out 05_evidence/b3r_fast_correctness.json
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3c95836e66e797025518c6d66fc9733b5807ea85
+dirty: True
+python: 3.13.15
+utc: 20261122T194837Z
+exit_code: 0
+duration_s: 0.29
+------------------------------------------------------------
+{
+  "source_sha256": "f82455f1ced229fd6d5cffb29727b67b4cce1a53e6c6d7b649ce66d7f03dcbd2",
+  "G1": true,
+  "G2": true,
+  "G3": true,
+  "evidence": [
+    {
+      "suite": "standard",
+      "path": "05_evidence\\b3r-fast-all-tests.xml",
+      "cases": 848,
+      "sha256": "862da0ad7067ae8ec79344b43161d918a22ecab521eceeafce950d5f137e0770"
+    },
+    {
+      "suite": "attack",
+      "path": "05_evidence\\b3r-fast-attack-tests.xml",
+      "cases": 1697,
+      "sha256": "ea36880687ed0a56613d8fb03679422ec5ce1ef9960cd87b14fac4b6f06f7a76"
+    }
+  ]
+}
+RESULT: PASS (saved evidence analysis only; no engine or timing run executed)

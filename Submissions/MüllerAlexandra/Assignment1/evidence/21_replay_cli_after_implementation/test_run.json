@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "stage": "21_replay_cli_after_implementation",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "working_directory": ".",
+  "started_utc": "2026-11-25T12:50:24.025848+00:00",
+  "finished_utc": "2026-11-25T12:50:34.421214+00:00",
+  "elapsed_seconds": 10.395376200089231,
+  "exit_code": 0,
+  "python_version": "3.12.10",
+  "python_implementation": "CPython",
+  "pytest_version": "9.2.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git": {
+    "branch": "assignment1-mueller-alexandra",
+    "head": "11abd4af502da99861be9b04f62ab12fa50ebb34",
+    "status_before_evidence_files": "M README.md\n M dashboard/12_app.py\n M docs/01_specification_and_model.md\n M docs/03_implementation_and_complexity.md\n M docs/05_revision_log.md\n M docs/06_ai_assistance.md\n M docs/07_results_report.md\n M docs/08_submission_checklist.md\n M requirements.txt\n?? evidence/16_dashboard_review/\n?? evidence/17_dashboard_audit/\n?? evidence/18_final_dashboard_audit/\n?? evidence/19_dashboard_pair_order/\n?? evidence/20_replay_cli_before_implementation/\n?? scripts/01_replay.py\n?? src/limit_order_book/replay_cli.py\n?? tests/test_20_dashboard.py\n?? tests/test_21_replay_cli.py\n?? ../phase2_audit_liuhaina/",
+    "clean_before_evidence_files": false
+  }
+}

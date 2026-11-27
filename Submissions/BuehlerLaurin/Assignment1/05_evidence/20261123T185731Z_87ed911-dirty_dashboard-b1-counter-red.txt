@@ -1,0 +1,21 @@
+label: dashboard-b1-counter-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py -q -k b1_counter --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 87ed911f839877c197cd9458b2cd231537955a17
+dirty: True
+python: 3.13.15
+utc: 20261123T185731Z
+exit_code: 1
+duration_s: 10.21
+------------------------------------------------------------
+F                                                                        [100%]
+================================== FAILURES ===================================
+_____________________ test_b1_counter_example_is_measured _____________________
+02_tests\test_dashboard.py:90: in test_b1_counter_example_is_measured
+    assert len(shown) == len(raw) > 0
+E   assert 0 == 6
+E    +  where 0 = len(Empty DataFrame\nColumns: [case_id, experiment, workload, size, events, replayed_events, seed, levels, own, percent, ve...tus, timing_protocol, registration, prefill_events, driver_n, phase, counter, value, applicable, run, commit]\nIndex: [])
+E    +  and   6 = len(                                 case_id  ...                                    commit\n4878    post_attack_far_end_fl...ed5f687b\n5126  post_attack_far_end_flicker_100000  ...  00bb1ade7111d84d5558de5c805f6bf5ed5f687b\n\n[6 rows x 25 columns])
+=========================== short test summary info ===========================
+FAILED 02_tests/test_dashboard.py::test_b1_counter_example_is_measured - asse...
+1 failed, 11 deselected in 9.01s

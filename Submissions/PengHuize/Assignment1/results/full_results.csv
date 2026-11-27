@@ -1,0 +1,616 @@
+version,scenario,seed,event_count,phase,repeat,status,completed_events,elapsed_seconds,throughput_events_per_second,latency_median_us,latency_p95_us,latency_p99_us,active_order_peak,price_level_peak,final_active_orders,final_price_levels,fill_count,makers_touched,price_levels_visited,maker_scans,traced_peak_bytes,notes
+A-list,buildup,42,1000,replay,1,completed,1000,0.088889417,11249.933,,,,,,1000,805,,,,,,
+A-list,buildup,42,1000,replay,2,completed,1000,0.088654708,11279.717,,,,,,1000,805,,,,,,
+A-list,buildup,42,1000,replay,3,completed,1000,0.089403292,11185.270,,,,,,1000,805,,,,,,
+A-list,buildup,42,1000,replay,4,completed,1000,0.088694500,11274.656,,,,,,1000,805,,,,,,
+A-list,buildup,42,1000,replay,5,completed,1000,0.088775875,11264.322,,,,,,1000,805,,,,,,
+A-list,buildup,42,1000,replay_median,median,completed,1000,0.088775875,11264.322,,,,,,,,,,,,,
+A-list,buildup,42,1000,latency_instrumented,1,completed,1000,0.176151833,,176.438,332.709,351.208,1000,805,1000,805,0,0,0,249964,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,buildup,42,1000,memory,1,completed,1000,,,,,,,,1000,805,,,,,171936,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=155740
+B-indexed,buildup,42,1000,replay,1,completed,1000,0.004095667,244160.475,,,,,,1000,805,,,,,,
+B-indexed,buildup,42,1000,replay,2,completed,1000,0.004045000,247218.789,,,,,,1000,805,,,,,,
+B-indexed,buildup,42,1000,replay,3,completed,1000,0.004070666,245660.047,,,,,,1000,805,,,,,,
+B-indexed,buildup,42,1000,replay,4,completed,1000,0.004471792,223623.997,,,,,,1000,805,,,,,,
+B-indexed,buildup,42,1000,replay,5,completed,1000,0.003786750,264078.695,,,,,,1000,805,,,,,,
+B-indexed,buildup,42,1000,replay_median,median,completed,1000,0.004070666,245660.047,,,,,,,,,,,,,
+B-indexed,buildup,42,1000,latency_instrumented,1,completed,1000,0.004725084,,4.459,4.792,5.292,1000,805,1000,805,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,buildup,42,1000,memory,1,completed,1000,,,,,,,,1000,805,,,,,537824,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=537596
+A-list,buildup,43,1000,replay,1,completed,1000,0.090585167,11039.335,,,,,,1000,801,,,,,,
+A-list,buildup,43,1000,replay,2,completed,1000,0.087719625,11399.958,,,,,,1000,801,,,,,,
+A-list,buildup,43,1000,replay,3,completed,1000,0.090429083,11058.389,,,,,,1000,801,,,,,,
+A-list,buildup,43,1000,replay,4,completed,1000,0.090361125,11066.706,,,,,,1000,801,,,,,,
+A-list,buildup,43,1000,replay,5,completed,1000,0.091263875,10957.238,,,,,,1000,801,,,,,,
+A-list,buildup,43,1000,replay_median,median,completed,1000,0.090429083,11058.389,,,,,,,,,,,,,
+A-list,buildup,43,1000,latency_instrumented,1,completed,1000,0.179408125,,179.146,336.875,349.416,1000,801,1000,801,0,0,0,249975,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,buildup,43,1000,memory,1,completed,1000,,,,,,,,1000,801,,,,,171936,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=155740
+B-indexed,buildup,43,1000,replay,1,completed,1000,0.003857750,259218.456,,,,,,1000,801,,,,,,
+B-indexed,buildup,43,1000,replay,2,completed,1000,0.003806250,262725.780,,,,,,1000,801,,,,,,
+B-indexed,buildup,43,1000,replay,3,completed,1000,0.003788875,263930.586,,,,,,1000,801,,,,,,
+B-indexed,buildup,43,1000,replay,4,completed,1000,0.003871458,258300.620,,,,,,1000,801,,,,,,
+B-indexed,buildup,43,1000,replay,5,completed,1000,0.004218833,237032.374,,,,,,1000,801,,,,,,
+B-indexed,buildup,43,1000,replay_median,median,completed,1000,0.003857750,259218.456,,,,,,,,,,,,,
+B-indexed,buildup,43,1000,latency_instrumented,1,completed,1000,0.004670208,,4.416,4.625,5.583,1000,801,1000,801,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,buildup,43,1000,memory,1,completed,1000,,,,,,,,1000,801,,,,,536296,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=536156
+A-list,buildup,44,1000,replay,1,completed,1000,0.091994167,10870.254,,,,,,1000,775,,,,,,
+A-list,buildup,44,1000,replay,2,completed,1000,0.089239916,11205.748,,,,,,1000,775,,,,,,
+A-list,buildup,44,1000,replay,3,completed,1000,0.090011416,11109.702,,,,,,1000,775,,,,,,
+A-list,buildup,44,1000,replay,4,completed,1000,0.089418458,11183.373,,,,,,1000,775,,,,,,
+A-list,buildup,44,1000,replay,5,completed,1000,0.090384083,11063.895,,,,,,1000,775,,,,,,
+A-list,buildup,44,1000,replay_median,median,completed,1000,0.090011416,11109.702,,,,,,,,,,,,,
+A-list,buildup,44,1000,latency_instrumented,1,completed,1000,0.234148333,,178.709,436.708,2179.750,1000,775,1000,775,0,0,0,249639,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,buildup,44,1000,memory,1,completed,1000,,,,,,,,1000,775,,,,,172216,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=156020
+B-indexed,buildup,44,1000,replay,1,completed,1000,0.004115458,242986.321,,,,,,1000,775,,,,,,
+B-indexed,buildup,44,1000,replay,2,completed,1000,0.004378334,228397.377,,,,,,1000,775,,,,,,
+B-indexed,buildup,44,1000,replay,3,completed,1000,0.004340542,230385.975,,,,,,1000,775,,,,,,
+B-indexed,buildup,44,1000,replay,4,completed,1000,0.003865458,258701.556,,,,,,1000,775,,,,,,
+B-indexed,buildup,44,1000,replay,5,completed,1000,0.004145250,241239.973,,,,,,1000,775,,,,,,
+B-indexed,buildup,44,1000,replay_median,median,completed,1000,0.004145250,241239.973,,,,,,,,,,,,,
+B-indexed,buildup,44,1000,latency_instrumented,1,completed,1000,0.004705583,,4.417,4.750,6.125,1000,775,1000,775,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,buildup,44,1000,memory,1,completed,1000,,,,,,,,1000,775,,,,,526488,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=526348
+A-list,buildup,42,10000,replay,1,stopped_time_limit,6000,3.129293208,1917.366,,,,,,6000,1904,,,,,,time limit 3.0s
+A-list,buildup,42,10000,latency_instrumented,1,stopped_time_limit,5000,4.274365333,,859.375,1615.750,1687.666,5000,1840,5000,1840,0,0,0,6248911,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,buildup,42,10000,memory,1,stopped_time_limit,6000,,,,,,,,6000,1904,,,,,1055584,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959388
+B-indexed,buildup,42,10000,replay,1,completed,10000,0.039941708,250364.857,,,,,,10000,1977,,,,,,
+B-indexed,buildup,42,10000,replay,2,completed,10000,0.037856834,264153.098,,,,,,10000,1977,,,,,,
+B-indexed,buildup,42,10000,replay,3,completed,10000,0.036694209,272522.566,,,,,,10000,1977,,,,,,
+B-indexed,buildup,42,10000,replay,4,completed,10000,0.037368333,267606.264,,,,,,10000,1977,,,,,,
+B-indexed,buildup,42,10000,replay,5,completed,10000,0.038981083,256534.689,,,,,,10000,1977,,,,,,
+B-indexed,buildup,42,10000,replay_median,median,completed,10000,0.037856834,264153.098,,,,,,,,,,,,,
+B-indexed,buildup,42,10000,latency_instrumented,1,completed,10000,0.045195792,,4.125,4.708,5.083,10000,1977,10000,1977,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,buildup,42,10000,memory,1,completed,10000,,,,,,,,10000,1977,,,,,3097712,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=3097484
+A-list,buildup,43,10000,replay,1,stopped_time_limit,6000,3.175285084,1889.594,,,,,,6000,1896,,,,,,time limit 3.0s
+A-list,buildup,43,10000,latency_instrumented,1,stopped_time_limit,5000,4.431131417,,882.084,1644.916,1777.250,5000,1845,5000,1845,0,0,0,6249375,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,buildup,43,10000,memory,1,stopped_time_limit,6000,,,,,,,,6000,1896,,,,,1056000,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959804
+B-indexed,buildup,43,10000,replay,1,completed,10000,0.037329791,267882.561,,,,,,10000,1989,,,,,,
+B-indexed,buildup,43,10000,replay,2,completed,10000,0.037186000,268918.410,,,,,,10000,1989,,,,,,
+B-indexed,buildup,43,10000,replay,3,completed,10000,0.036932917,270761.175,,,,,,10000,1989,,,,,,
+B-indexed,buildup,43,10000,replay,4,completed,10000,0.038806958,257685.748,,,,,,10000,1989,,,,,,
+B-indexed,buildup,43,10000,replay,5,completed,10000,0.036349667,275105.684,,,,,,10000,1989,,,,,,
+B-indexed,buildup,43,10000,replay_median,median,completed,10000,0.037186000,268918.410,,,,,,,,,,,,,
+B-indexed,buildup,43,10000,latency_instrumented,1,completed,10000,0.045071500,,4.166,4.667,4.917,10000,1989,10000,1989,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,buildup,43,10000,memory,1,completed,10000,,,,,,,,10000,1989,,,,,3100976,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=3100748
+A-list,buildup,44,10000,replay,1,stopped_time_limit,6000,3.147754125,1906.121,,,,,,6000,1897,,,,,,time limit 3.0s
+A-list,buildup,44,10000,latency_instrumented,1,stopped_time_limit,5000,4.372841125,,880.708,1649.208,1763.167,5000,1829,5000,1829,0,0,0,6249804,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,buildup,44,10000,memory,1,stopped_time_limit,6000,,,,,,,,6000,1897,,,,,1055864,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959668
+B-indexed,buildup,44,10000,replay,1,completed,10000,0.038213125,261690.192,,,,,,10000,1987,,,,,,
+B-indexed,buildup,44,10000,replay,2,completed,10000,0.036844459,271411.232,,,,,,10000,1987,,,,,,
+B-indexed,buildup,44,10000,replay,3,completed,10000,0.039055375,256046.703,,,,,,10000,1987,,,,,,
+B-indexed,buildup,44,10000,replay,4,completed,10000,0.036624708,273039.720,,,,,,10000,1987,,,,,,
+B-indexed,buildup,44,10000,replay,5,completed,10000,0.036651083,272843.234,,,,,,10000,1987,,,,,,
+B-indexed,buildup,44,10000,replay_median,median,completed,10000,0.036844459,271411.232,,,,,,,,,,,,,
+B-indexed,buildup,44,10000,latency_instrumented,1,completed,10000,0.045878292,,4.209,4.791,5.042,10000,1987,10000,1987,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,buildup,44,10000,memory,1,completed,10000,,,,,,,,10000,1987,,,,,3098176,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=3097948
+A-list,buildup,42,100000,replay,1,stopped_time_limit,6000,3.080651458,1947.640,,,,,,6000,1904,,,,,,time limit 3.0s
+A-list,buildup,42,100000,latency_instrumented,1,stopped_time_limit,5000,4.314514458,,856.770,1647.500,1703.583,5000,1840,5000,1840,0,0,0,6248911,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,buildup,42,100000,memory,1,stopped_time_limit,6000,,,,,,,,6000,1904,,,,,1055864,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959668
+B-indexed,buildup,42,100000,replay,1,completed,100000,0.400176500,249889.736,,,,,,100000,2000,,,,,,
+B-indexed,buildup,42,100000,replay,2,completed,100000,0.441247625,226630.115,,,,,,100000,2000,,,,,,
+B-indexed,buildup,42,100000,replay,3,completed,100000,0.430022625,232545.904,,,,,,100000,2000,,,,,,
+B-indexed,buildup,42,100000,replay,4,completed,100000,0.460461209,217173.560,,,,,,100000,2000,,,,,,
+B-indexed,buildup,42,100000,replay,5,completed,100000,0.450650292,221901.554,,,,,,100000,2000,,,,,,
+B-indexed,buildup,42,100000,replay_median,median,completed,100000,0.441247625,226630.115,,,,,,,,,,,,,
+B-indexed,buildup,42,100000,latency_instrumented,1,completed,100000,0.540144584,,4.209,4.958,8.417,100000,2000,100000,2000,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,buildup,42,100000,memory,1,completed,100000,,,,,,,,100000,2000,,,,,29997616,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=29997388
+A-list,buildup,43,100000,replay,1,stopped_time_limit,6000,3.093927208,1939.283,,,,,,6000,1896,,,,,,time limit 3.0s
+A-list,buildup,43,100000,latency_instrumented,1,stopped_time_limit,5000,4.318345459,,858.792,1657.208,1713.334,5000,1845,5000,1845,0,0,0,6249375,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,buildup,43,100000,memory,1,stopped_time_limit,6000,,,,,,,,6000,1896,,,,,1055584,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959388
+B-indexed,buildup,43,100000,replay,1,completed,100000,0.403753667,247675.769,,,,,,100000,2000,,,,,,
+B-indexed,buildup,43,100000,replay,2,completed,100000,0.444085584,225181.820,,,,,,100000,2000,,,,,,
+B-indexed,buildup,43,100000,replay,3,completed,100000,0.435419459,229663.599,,,,,,100000,2000,,,,,,
+B-indexed,buildup,43,100000,replay,4,completed,100000,0.433611000,230621.456,,,,,,100000,2000,,,,,,
+B-indexed,buildup,43,100000,replay,5,completed,100000,0.437803916,228412.758,,,,,,100000,2000,,,,,,
+B-indexed,buildup,43,100000,replay_median,median,completed,100000,0.435419459,229663.599,,,,,,,,,,,,,
+B-indexed,buildup,43,100000,latency_instrumented,1,completed,100000,0.525653084,,4.292,5.083,8.458,100000,2000,100000,2000,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,buildup,43,100000,memory,1,completed,100000,,,,,,,,100000,2000,,,,,29978320,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=29978092
+A-list,buildup,44,100000,replay,1,stopped_time_limit,6000,3.113739375,1926.944,,,,,,6000,1897,,,,,,time limit 3.0s
+A-list,buildup,44,100000,latency_instrumented,1,stopped_time_limit,5000,4.349966166,,872.646,1666.875,1723.000,5000,1829,5000,1829,0,0,0,6249804,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,buildup,44,100000,memory,1,stopped_time_limit,6000,,,,,,,,6000,1897,,,,,1055584,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959388
+B-indexed,buildup,44,100000,replay,1,completed,100000,0.401717083,248931.410,,,,,,100000,2000,,,,,,
+B-indexed,buildup,44,100000,replay,2,completed,100000,0.442755834,225858.119,,,,,,100000,2000,,,,,,
+B-indexed,buildup,44,100000,replay,3,completed,100000,0.436675292,229003.110,,,,,,100000,2000,,,,,,
+B-indexed,buildup,44,100000,replay,4,completed,100000,0.432169250,231390.827,,,,,,100000,2000,,,,,,
+B-indexed,buildup,44,100000,replay,5,completed,100000,0.427006542,234188.450,,,,,,100000,2000,,,,,,
+B-indexed,buildup,44,100000,replay_median,median,completed,100000,0.432169250,231390.827,,,,,,,,,,,,,
+B-indexed,buildup,44,100000,latency_instrumented,1,completed,100000,0.561015209,,4.250,4.917,8.417,100000,2000,100000,2000,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,buildup,44,100000,memory,1,completed,100000,,,,,,,,100000,2000,,,,,29962192,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=29961964
+A-list,crowded,42,1000,replay,1,completed,1000,0.095545833,10466.181,,,,,,1000,8,,,,,,
+A-list,crowded,42,1000,replay,2,completed,1000,0.095297041,10493.505,,,,,,1000,8,,,,,,
+A-list,crowded,42,1000,replay,3,completed,1000,0.095036333,10522.292,,,,,,1000,8,,,,,,
+A-list,crowded,42,1000,replay,4,completed,1000,0.095070750,10518.482,,,,,,1000,8,,,,,,
+A-list,crowded,42,1000,replay,5,completed,1000,0.096122083,10403.437,,,,,,1000,8,,,,,,
+A-list,crowded,42,1000,replay_median,median,completed,1000,0.095297041,10493.505,,,,,,,,,,,,,
+A-list,crowded,42,1000,latency_instrumented,1,completed,1000,0.185193125,,181.854,345.083,367.250,1000,8,1000,8,0,0,0,249600,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,crowded,42,1000,memory,1,completed,1000,,,,,,,,1000,8,,,,,171936,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=155740
+B-indexed,crowded,42,1000,replay,1,completed,1000,0.003591958,278399.692,,,,,,1000,8,,,,,,
+B-indexed,crowded,42,1000,replay,2,completed,1000,0.003524459,283731.489,,,,,,1000,8,,,,,,
+B-indexed,crowded,42,1000,replay,3,completed,1000,0.003583709,279040.514,,,,,,1000,8,,,,,,
+B-indexed,crowded,42,1000,replay,4,completed,1000,0.003540583,282439.361,,,,,,1000,8,,,,,,
+B-indexed,crowded,42,1000,replay,5,completed,1000,0.003601291,277678.199,,,,,,1000,8,,,,,,
+B-indexed,crowded,42,1000,replay_median,median,completed,1000,0.003583709,279040.514,,,,,,,,,,,,,
+B-indexed,crowded,42,1000,latency_instrumented,1,completed,1000,0.004858541,,4.166,4.750,11.417,1000,8,1000,8,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,crowded,42,1000,memory,1,completed,1000,,,,,,,,1000,8,,,,,271560,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=271332
+A-list,crowded,43,1000,replay,1,completed,1000,0.097478625,10258.659,,,,,,1000,8,,,,,,
+A-list,crowded,43,1000,replay,2,completed,1000,0.095496500,10471.588,,,,,,1000,8,,,,,,
+A-list,crowded,43,1000,replay,3,completed,1000,0.095532750,10467.615,,,,,,1000,8,,,,,,
+A-list,crowded,43,1000,replay,4,completed,1000,0.095905709,10426.908,,,,,,1000,8,,,,,,
+A-list,crowded,43,1000,replay,5,completed,1000,0.096720542,10339.065,,,,,,1000,8,,,,,,
+A-list,crowded,43,1000,replay_median,median,completed,1000,0.095905709,10426.908,,,,,,,,,,,,,
+A-list,crowded,43,1000,latency_instrumented,1,completed,1000,0.185684542,,184.021,351.333,376.084,1000,8,1000,8,0,0,0,248319,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,crowded,43,1000,memory,1,completed,1000,,,,,,,,1000,8,,,,,172512,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=156316
+B-indexed,crowded,43,1000,replay,1,completed,1000,0.003519625,284121.178,,,,,,1000,8,,,,,,
+B-indexed,crowded,43,1000,replay,2,completed,1000,0.003479459,287401.001,,,,,,1000,8,,,,,,
+B-indexed,crowded,43,1000,replay,3,completed,1000,0.003480542,287311.574,,,,,,1000,8,,,,,,
+B-indexed,crowded,43,1000,replay,4,completed,1000,0.003740292,267358.805,,,,,,1000,8,,,,,,
+B-indexed,crowded,43,1000,replay,5,completed,1000,0.003611125,276922.012,,,,,,1000,8,,,,,,
+B-indexed,crowded,43,1000,replay_median,median,completed,1000,0.003519625,284121.178,,,,,,,,,,,,,
+B-indexed,crowded,43,1000,latency_instrumented,1,completed,1000,0.004347542,,4.062,4.291,5.417,1000,8,1000,8,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,crowded,43,1000,memory,1,completed,1000,,,,,,,,1000,8,,,,,271392,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=271164
+A-list,crowded,44,1000,replay,1,completed,1000,0.096099792,10405.850,,,,,,1000,8,,,,,,
+A-list,crowded,44,1000,replay,2,completed,1000,0.096551709,10357.144,,,,,,1000,8,,,,,,
+A-list,crowded,44,1000,replay,3,completed,1000,0.095460958,10475.487,,,,,,1000,8,,,,,,
+A-list,crowded,44,1000,replay,4,completed,1000,0.096364125,10377.306,,,,,,1000,8,,,,,,
+A-list,crowded,44,1000,replay,5,completed,1000,0.096782041,10332.495,,,,,,1000,8,,,,,,
+A-list,crowded,44,1000,replay_median,median,completed,1000,0.096364125,10377.306,,,,,,,,,,,,,
+A-list,crowded,44,1000,latency_instrumented,1,completed,1000,0.186290834,,185.458,349.500,364.500,1000,8,1000,8,0,0,0,249879,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,crowded,44,1000,memory,1,completed,1000,,,,,,,,1000,8,,,,,171936,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=155740
+B-indexed,crowded,44,1000,replay,1,completed,1000,0.003528042,283443.338,,,,,,1000,8,,,,,,
+B-indexed,crowded,44,1000,replay,2,completed,1000,0.003537375,282695.502,,,,,,1000,8,,,,,,
+B-indexed,crowded,44,1000,replay,3,completed,1000,0.004026000,248385.494,,,,,,1000,8,,,,,,
+B-indexed,crowded,44,1000,replay,4,completed,1000,0.003543917,282173.651,,,,,,1000,8,,,,,,
+B-indexed,crowded,44,1000,replay,5,completed,1000,0.003494375,286174.209,,,,,,1000,8,,,,,,
+B-indexed,crowded,44,1000,replay_median,median,completed,1000,0.003537375,282695.502,,,,,,,,,,,,,
+B-indexed,crowded,44,1000,latency_instrumented,1,completed,1000,0.004325208,,4.083,4.291,5.334,1000,8,1000,8,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,crowded,44,1000,memory,1,completed,1000,,,,,,,,1000,8,,,,,271392,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=271164
+A-list,crowded,42,10000,replay,1,stopped_time_limit,6000,3.301277583,1817.478,,,,,,6000,8,,,,,,time limit 3.0s
+A-list,crowded,42,10000,latency_instrumented,1,stopped_time_limit,5000,4.464370708,,878.875,1696.125,1778.833,5000,8,5000,8,0,0,0,6249999,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,crowded,42,10000,memory,1,stopped_time_limit,6000,,,,,,,,6000,8,,,,,1055584,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959388
+B-indexed,crowded,42,10000,replay,1,completed,10000,0.035969917,278010.094,,,,,,10000,8,,,,,,
+B-indexed,crowded,42,10000,replay,2,completed,10000,0.035784709,279448.968,,,,,,10000,8,,,,,,
+B-indexed,crowded,42,10000,replay,3,completed,10000,0.037697209,265271.628,,,,,,10000,8,,,,,,
+B-indexed,crowded,42,10000,replay,4,completed,10000,0.035442834,282144.481,,,,,,10000,8,,,,,,
+B-indexed,crowded,42,10000,replay,5,completed,10000,0.035488834,281778.770,,,,,,10000,8,,,,,,
+B-indexed,crowded,42,10000,replay_median,median,completed,10000,0.035784709,279448.968,,,,,,,,,,,,,
+B-indexed,crowded,42,10000,latency_instrumented,1,completed,10000,0.044028083,,4.125,4.291,4.667,10000,8,10000,8,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,crowded,42,10000,memory,1,completed,10000,,,,,,,,10000,8,,,,,2558512,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=2558284
+A-list,crowded,43,10000,replay,1,stopped_time_limit,6000,3.319832250,1807.320,,,,,,6000,8,,,,,,time limit 3.0s
+A-list,crowded,43,10000,latency_instrumented,1,stopped_time_limit,5000,4.482765458,,899.021,1692.167,1774.000,5000,8,5000,8,0,0,0,6249775,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,crowded,43,10000,memory,1,stopped_time_limit,6000,,,,,,,,6000,8,,,,,1055864,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959668
+B-indexed,crowded,43,10000,replay,1,completed,10000,0.035849084,278947.155,,,,,,10000,8,,,,,,
+B-indexed,crowded,43,10000,replay,2,completed,10000,0.035909209,278480.097,,,,,,10000,8,,,,,,
+B-indexed,crowded,43,10000,replay,3,completed,10000,0.037998167,263170.589,,,,,,10000,8,,,,,,
+B-indexed,crowded,43,10000,replay,4,completed,10000,0.035716792,279980.352,,,,,,10000,8,,,,,,
+B-indexed,crowded,43,10000,replay,5,completed,10000,0.035347667,282904.102,,,,,,10000,8,,,,,,
+B-indexed,crowded,43,10000,replay_median,median,completed,10000,0.035849084,278947.155,,,,,,,,,,,,,
+B-indexed,crowded,43,10000,latency_instrumented,1,completed,10000,0.043844625,,4.084,4.250,4.666,10000,8,10000,8,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,crowded,43,10000,memory,1,completed,10000,,,,,,,,10000,8,,,,,2558512,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=2558284
+A-list,crowded,44,10000,replay,1,stopped_time_limit,6000,3.318225917,1808.195,,,,,,6000,8,,,,,,time limit 3.0s
+A-list,crowded,44,10000,latency_instrumented,1,stopped_time_limit,5000,4.485484542,,899.834,1701.084,1771.000,5000,8,5000,8,0,0,0,6249775,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,crowded,44,10000,memory,1,stopped_time_limit,6000,,,,,,,,6000,8,,,,,1055864,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959668
+B-indexed,crowded,44,10000,replay,1,completed,10000,0.036154625,276589.786,,,,,,10000,8,,,,,,
+B-indexed,crowded,44,10000,replay,2,completed,10000,0.038548500,259413.466,,,,,,10000,8,,,,,,
+B-indexed,crowded,44,10000,replay,3,completed,10000,0.035621958,280725.725,,,,,,10000,8,,,,,,
+B-indexed,crowded,44,10000,replay,4,completed,10000,0.035513292,281584.709,,,,,,10000,8,,,,,,
+B-indexed,crowded,44,10000,replay,5,completed,10000,0.035259292,283613.182,,,,,,10000,8,,,,,,
+B-indexed,crowded,44,10000,replay_median,median,completed,10000,0.035621958,280725.725,,,,,,,,,,,,,
+B-indexed,crowded,44,10000,latency_instrumented,1,completed,10000,0.044107583,,4.084,4.291,4.625,10000,8,10000,8,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,crowded,44,10000,memory,1,completed,10000,,,,,,,,10000,8,,,,,2558976,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=2558748
+A-list,crowded,42,100000,replay,1,stopped_time_limit,6000,3.256758000,1842.323,,,,,,6000,8,,,,,,time limit 3.0s
+A-list,crowded,42,100000,latency_instrumented,1,stopped_time_limit,5000,4.448775709,,888.771,1689.959,1754.917,5000,8,5000,8,0,0,0,6249999,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,crowded,42,100000,memory,1,stopped_time_limit,6000,,,,,,,,6000,8,,,,,1058008,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=961812
+B-indexed,crowded,42,100000,replay,1,completed,100000,0.396299167,252334.621,,,,,,100000,8,,,,,,
+B-indexed,crowded,42,100000,replay,2,completed,100000,0.416401542,240152.809,,,,,,100000,8,,,,,,
+B-indexed,crowded,42,100000,replay,3,completed,100000,0.417284917,239644.415,,,,,,100000,8,,,,,,
+B-indexed,crowded,42,100000,replay,4,completed,100000,0.413537416,241816.088,,,,,,100000,8,,,,,,
+B-indexed,crowded,42,100000,replay,5,completed,100000,0.415197542,240849.210,,,,,,100000,8,,,,,,
+B-indexed,crowded,42,100000,replay_median,median,completed,100000,0.415197542,240849.210,,,,,,,,,,,,,
+B-indexed,crowded,42,100000,latency_instrumented,1,completed,100000,0.509386041,,4.208,4.500,5.667,100000,8,100000,8,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,crowded,42,100000,memory,1,completed,100000,,,,,,,,100000,8,,,,,30456936,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=30456708
+A-list,crowded,43,100000,replay,1,stopped_time_limit,6000,3.396311458,1766.622,,,,,,6000,8,,,,,,time limit 3.0s
+A-list,crowded,43,100000,latency_instrumented,1,stopped_time_limit,5000,4.465571667,,891.916,1700.125,1759.833,5000,8,5000,8,0,0,0,6249775,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,crowded,43,100000,memory,1,stopped_time_limit,6000,,,,,,,,6000,8,,,,,1055584,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959388
+B-indexed,crowded,43,100000,replay,1,completed,100000,0.388924792,257119.119,,,,,,100000,8,,,,,,
+B-indexed,crowded,43,100000,replay,2,completed,100000,0.412648375,242337.075,,,,,,100000,8,,,,,,
+B-indexed,crowded,43,100000,replay,3,completed,100000,0.413760625,241685.636,,,,,,100000,8,,,,,,
+B-indexed,crowded,43,100000,replay,4,completed,100000,0.411099500,243250.113,,,,,,100000,8,,,,,,
+B-indexed,crowded,43,100000,replay,5,completed,100000,0.410105583,243839.646,,,,,,100000,8,,,,,,
+B-indexed,crowded,43,100000,replay_median,median,completed,100000,0.411099500,243250.113,,,,,,,,,,,,,
+B-indexed,crowded,43,100000,latency_instrumented,1,completed,100000,0.504311667,,4.208,4.500,5.666,100000,8,100000,8,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,crowded,43,100000,memory,1,completed,100000,,,,,,,,100000,8,,,,,30456936,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=30456708
+A-list,crowded,44,100000,replay,1,stopped_time_limit,6000,3.275561583,1831.747,,,,,,6000,8,,,,,,time limit 3.0s
+A-list,crowded,44,100000,latency_instrumented,1,stopped_time_limit,5000,4.449098042,,887.541,1692.458,1769.708,5000,8,5000,8,0,0,0,6249775,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,crowded,44,100000,memory,1,stopped_time_limit,6000,,,,,,,,6000,8,,,,,1055864,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959668
+B-indexed,crowded,44,100000,replay,1,completed,100000,0.386526041,258714.781,,,,,,100000,8,,,,,,
+B-indexed,crowded,44,100000,replay,2,completed,100000,0.409861750,243984.709,,,,,,100000,8,,,,,,
+B-indexed,crowded,44,100000,replay,3,completed,100000,0.407644584,245311.735,,,,,,100000,8,,,,,,
+B-indexed,crowded,44,100000,replay,4,completed,100000,0.429720458,232709.423,,,,,,100000,8,,,,,,
+B-indexed,crowded,44,100000,replay,5,completed,100000,0.388038000,257706.719,,,,,,100000,8,,,,,,
+B-indexed,crowded,44,100000,replay_median,median,completed,100000,0.407644584,245311.735,,,,,,,,,,,,,
+B-indexed,crowded,44,100000,latency_instrumented,1,completed,100000,0.523028542,,4.167,4.500,5.583,100000,8,100000,8,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,crowded,44,100000,memory,1,completed,100000,,,,,,,,100000,8,,,,,30456936,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=30456708
+A-list,mixed,42,1000,replay,1,completed,1000,0.014210250,70371.739,,,,,,138,124,,,,,,
+A-list,mixed,42,1000,replay,2,completed,1000,0.014283708,70009.832,,,,,,138,124,,,,,,
+A-list,mixed,42,1000,replay,3,completed,1000,0.014105833,70892.658,,,,,,138,124,,,,,,
+A-list,mixed,42,1000,replay,4,completed,1000,0.013897750,71954.093,,,,,,138,124,,,,,,
+A-list,mixed,42,1000,replay,5,completed,1000,0.014391292,69486.464,,,,,,138,124,,,,,,
+A-list,mixed,42,1000,replay_median,median,completed,1000,0.014210250,70371.739,,,,,,,,,,,,,
+A-list,mixed,42,1000,latency_instrumented,1,completed,1000,0.028245917,,21.834,69.875,116.667,140,126,138,124,374,374,359,26485,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,mixed,42,1000,memory,1,completed,1000,,,,,,,,138,124,,,,,20888,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=18148
+B-indexed,mixed,42,1000,replay,1,completed,1000,0.003729750,268114.485,,,,,,138,124,,,,,,
+B-indexed,mixed,42,1000,replay,2,completed,1000,0.004059166,246356.025,,,,,,138,124,,,,,,
+B-indexed,mixed,42,1000,replay,3,completed,1000,0.003551542,281567.837,,,,,,138,124,,,,,,
+B-indexed,mixed,42,1000,replay,4,completed,1000,0.003706666,269784.221,,,,,,138,124,,,,,,
+B-indexed,mixed,42,1000,replay,5,completed,1000,0.003555792,281231.298,,,,,,138,124,,,,,,
+B-indexed,mixed,42,1000,replay_median,median,completed,1000,0.003706666,269784.221,,,,,,,,,,,,,
+B-indexed,mixed,42,1000,latency_instrumented,1,completed,1000,0.004845292,,4.416,9.542,18.167,140,126,138,124,374,374,359,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,mixed,42,1000,memory,1,completed,1000,,,,,,,,138,124,,,,,75108,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=73932
+A-list,mixed,43,1000,replay,1,completed,1000,0.013484083,74161.513,,,,,,179,159,,,,,,
+A-list,mixed,43,1000,replay,2,completed,1000,0.013632250,73355.462,,,,,,179,159,,,,,,
+A-list,mixed,43,1000,replay,3,completed,1000,0.013466625,74257.656,,,,,,179,159,,,,,,
+A-list,mixed,43,1000,replay,4,completed,1000,0.013435042,74432.220,,,,,,179,159,,,,,,
+A-list,mixed,43,1000,replay,5,completed,1000,0.013390125,74681.902,,,,,,179,159,,,,,,
+A-list,mixed,43,1000,replay_median,median,completed,1000,0.013466625,74257.656,,,,,,,,,,,,,
+A-list,mixed,43,1000,latency_instrumented,1,completed,1000,0.026779750,,21.770,73.375,130.500,181,161,179,159,354,354,341,25152,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,mixed,43,1000,memory,1,completed,1000,,,,,,,,179,159,,,,,28052,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=24760
+B-indexed,mixed,43,1000,replay,1,completed,1000,0.003771084,265175.743,,,,,,179,159,,,,,,
+B-indexed,mixed,43,1000,replay,2,completed,1000,0.003731875,267961.815,,,,,,179,159,,,,,,
+B-indexed,mixed,43,1000,replay,3,completed,1000,0.003516208,284397.283,,,,,,179,159,,,,,,
+B-indexed,mixed,43,1000,replay,4,completed,1000,0.003508250,285042.400,,,,,,179,159,,,,,,
+B-indexed,mixed,43,1000,replay,5,completed,1000,0.003499291,285772.175,,,,,,179,159,,,,,,
+B-indexed,mixed,43,1000,replay_median,median,completed,1000,0.003516208,284397.283,,,,,,,,,,,,,
+B-indexed,mixed,43,1000,latency_instrumented,1,completed,1000,0.004532458,,4.375,7.625,13.625,181,161,179,159,354,354,341,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,mixed,43,1000,memory,1,completed,1000,,,,,,,,179,159,,,,,95172,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=94056
+A-list,mixed,44,1000,replay,1,completed,1000,0.014950416,66887.771,,,,,,162,152,,,,,,
+A-list,mixed,44,1000,replay,2,completed,1000,0.014948500,66896.344,,,,,,162,152,,,,,,
+A-list,mixed,44,1000,replay,3,completed,1000,0.014632167,68342.577,,,,,,162,152,,,,,,
+A-list,mixed,44,1000,replay,4,completed,1000,0.014694750,68051.515,,,,,,162,152,,,,,,
+A-list,mixed,44,1000,replay,5,completed,1000,0.014715250,67956.712,,,,,,162,152,,,,,,
+A-list,mixed,44,1000,replay_median,median,completed,1000,0.014715250,67956.712,,,,,,,,,,,,,
+A-list,mixed,44,1000,latency_instrumented,1,completed,1000,0.028990583,,23.375,74.417,124.042,162,152,162,152,390,390,381,30630,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,mixed,44,1000,memory,1,completed,1000,,,,,,,,162,152,,,,,24596,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=21792
+B-indexed,mixed,44,1000,replay,1,completed,1000,0.003661625,273102.789,,,,,,162,152,,,,,,
+B-indexed,mixed,44,1000,replay,2,completed,1000,0.003668541,272587.931,,,,,,162,152,,,,,,
+B-indexed,mixed,44,1000,replay,3,completed,1000,0.003627041,275706.837,,,,,,162,152,,,,,,
+B-indexed,mixed,44,1000,replay,4,completed,1000,0.003632084,275324.029,,,,,,162,152,,,,,,
+B-indexed,mixed,44,1000,replay,5,completed,1000,0.003850708,259692.503,,,,,,162,152,,,,,,
+B-indexed,mixed,44,1000,replay_median,median,completed,1000,0.003661625,273102.789,,,,,,,,,,,,,
+B-indexed,mixed,44,1000,latency_instrumented,1,completed,1000,0.004631000,,4.416,9.292,13.875,162,152,162,152,390,390,381,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,mixed,44,1000,memory,1,completed,1000,,,,,,,,162,152,,,,,88076,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=87848
+A-list,mixed,42,10000,replay,1,completed,10000,1.125371000,8885.958,,,,,,1587,747,,,,,,
+A-list,mixed,42,10000,replay,2,completed,10000,1.124276667,8894.608,,,,,,1587,747,,,,,,
+A-list,mixed,42,10000,replay,3,completed,10000,1.135959500,8803.131,,,,,,1587,747,,,,,,
+A-list,mixed,42,10000,replay,4,completed,10000,1.135067042,8810.052,,,,,,1587,747,,,,,,
+A-list,mixed,42,10000,replay,5,completed,10000,1.142461375,8753.031,,,,,,1587,747,,,,,,
+A-list,mixed,42,10000,replay_median,median,completed,10000,1.135067042,8810.052,,,,,,,,,,,,,
+A-list,mixed,42,10000,latency_instrumented,1,completed,10000,2.407350917,,187.125,699.333,1037.833,1588,752,1587,747,3926,3926,3853,2794748,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,mixed,42,10000,memory,1,completed,10000,,,,,,,,1587,747,,,,,275636,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=249816
+B-indexed,mixed,42,10000,replay,1,completed,10000,0.037394625,267418.112,,,,,,1587,747,,,,,,
+B-indexed,mixed,42,10000,replay,2,completed,10000,0.037372000,267580.006,,,,,,1587,747,,,,,,
+B-indexed,mixed,42,10000,replay,3,completed,10000,0.037121875,269382.945,,,,,,1587,747,,,,,,
+B-indexed,mixed,42,10000,replay,4,completed,10000,0.036844417,271411.541,,,,,,1587,747,,,,,,
+B-indexed,mixed,42,10000,replay,5,completed,10000,0.037068250,269772.649,,,,,,1587,747,,,,,,
+B-indexed,mixed,42,10000,replay_median,median,completed,10000,0.037121875,269382.945,,,,,,,,,,,,,
+B-indexed,mixed,42,10000,latency_instrumented,1,completed,10000,0.046622500,,4.375,8.500,14.250,1588,752,1587,747,3926,3926,3853,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,mixed,42,10000,memory,1,completed,10000,,,,,,,,1587,747,,,,,770780,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=740728
+A-list,mixed,43,10000,replay,1,completed,10000,1.207613875,8280.793,,,,,,1622,740,,,,,,
+A-list,mixed,43,10000,replay,2,completed,10000,1.203464042,8309.347,,,,,,1622,740,,,,,,
+A-list,mixed,43,10000,replay,3,completed,10000,1.216926583,8217.423,,,,,,1622,740,,,,,,
+A-list,mixed,43,10000,replay,4,completed,10000,1.211385500,8255.010,,,,,,1622,740,,,,,,
+A-list,mixed,43,10000,replay,5,completed,10000,1.217642042,8212.594,,,,,,1622,740,,,,,,
+A-list,mixed,43,10000,replay_median,median,completed,10000,1.211385500,8255.010,,,,,,,,,,,,,
+A-list,mixed,43,10000,latency_instrumented,1,completed,10000,2.570000042,,203.000,740.834,1163.875,1634,753,1622,740,3905,3905,3811,2966206,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,mixed,43,10000,memory,1,completed,10000,,,,,,,,1622,740,,,,,284892,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=257324
+B-indexed,mixed,43,10000,replay,1,completed,10000,0.037223041,268650.807,,,,,,1622,740,,,,,,
+B-indexed,mixed,43,10000,replay,2,completed,10000,0.037169250,269039.596,,,,,,1622,740,,,,,,
+B-indexed,mixed,43,10000,replay,3,completed,10000,0.037421041,267229.338,,,,,,1622,740,,,,,,
+B-indexed,mixed,43,10000,replay,4,completed,10000,0.036993083,270320.806,,,,,,1622,740,,,,,,
+B-indexed,mixed,43,10000,replay,5,completed,10000,0.036904083,270972.727,,,,,,1622,740,,,,,,
+B-indexed,mixed,43,10000,replay_median,median,completed,10000,0.037169250,269039.596,,,,,,,,,,,,,
+B-indexed,mixed,43,10000,latency_instrumented,1,completed,10000,0.046854792,,4.375,9.125,16.292,1634,753,1622,740,3905,3905,3811,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,mixed,43,10000,memory,1,completed,10000,,,,,,,,1622,740,,,,,677284,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=673692
+A-list,mixed,44,10000,replay,1,completed,10000,1.157712166,8637.726,,,,,,1491,697,,,,,,
+A-list,mixed,44,10000,replay,2,completed,10000,1.158074792,8635.021,,,,,,1491,697,,,,,,
+A-list,mixed,44,10000,replay,3,completed,10000,1.160532209,8616.736,,,,,,1491,697,,,,,,
+A-list,mixed,44,10000,replay,4,completed,10000,1.157553584,8638.909,,,,,,1491,697,,,,,,
+A-list,mixed,44,10000,replay,5,completed,10000,1.161109750,8612.450,,,,,,1491,697,,,,,,
+A-list,mixed,44,10000,replay_median,median,completed,10000,1.158074792,8635.021,,,,,,,,,,,,,
+A-list,mixed,44,10000,latency_instrumented,1,completed,10000,2.439302084,,192.146,697.750,1072.500,1495,717,1491,697,4002,4002,3908,2859726,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,mixed,44,10000,memory,1,completed,10000,,,,,,,,1491,697,,,,,260612,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=235952
+B-indexed,mixed,44,10000,replay,1,completed,10000,0.037283250,268216.961,,,,,,1491,697,,,,,,
+B-indexed,mixed,44,10000,replay,2,completed,10000,0.037135292,269285.616,,,,,,1491,697,,,,,,
+B-indexed,mixed,44,10000,replay,3,completed,10000,0.037059875,269833.614,,,,,,1491,697,,,,,,
+B-indexed,mixed,44,10000,replay,4,completed,10000,0.037000833,270264.186,,,,,,1491,697,,,,,,
+B-indexed,mixed,44,10000,replay,5,completed,10000,0.036695333,272514.219,,,,,,1491,697,,,,,,
+B-indexed,mixed,44,10000,replay_median,median,completed,10000,0.037059875,269833.614,,,,,,,,,,,,,
+B-indexed,mixed,44,10000,latency_instrumented,1,completed,10000,0.046680333,,4.334,9.125,15.750,1495,717,1491,697,4002,4002,3908,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,mixed,44,10000,memory,1,completed,10000,,,,,,,,1491,697,,,,,754048,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=706768
+A-list,mixed,42,100000,replay,1,stopped_time_limit,17000,3.275370292,5190.253,,,,,,2666,834,,,,,,time limit 3.0s
+A-list,mixed,42,100000,latency_instrumented,1,stopped_time_limit,12000,3.500437500,,228.105,846.708,1322.917,1938,800,1927,788,4655,4655,4562,3995662,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,mixed,42,100000,memory,1,stopped_time_limit,14000,,,,,,,,2234,822,,,,,392724,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=356140
+B-indexed,mixed,42,100000,replay,1,completed,100000,0.367487584,272118.037,,,,,,15113,846,,,,,,
+B-indexed,mixed,42,100000,replay,2,completed,100000,0.369260917,270811.222,,,,,,15113,846,,,,,,
+B-indexed,mixed,42,100000,replay,3,completed,100000,0.376030666,265935.757,,,,,,15113,846,,,,,,
+B-indexed,mixed,42,100000,replay,4,completed,100000,0.367159625,272361.102,,,,,,15113,846,,,,,,
+B-indexed,mixed,42,100000,replay,5,completed,100000,0.366969208,272502.428,,,,,,15113,846,,,,,,
+B-indexed,mixed,42,100000,replay_median,median,completed,100000,0.367487584,272118.037,,,,,,,,,,,,,
+B-indexed,mixed,42,100000,latency_instrumented,1,completed,100000,0.475231500,,4.375,9.208,14.292,15118,894,15113,846,38988,38988,37945,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,mixed,42,100000,memory,1,completed,100000,,,,,,,,15113,846,,,,,5531448,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=5336784
+A-list,mixed,43,100000,replay,1,stopped_time_limit,16000,3.020982792,5296.290,,,,,,2569,829,,,,,,time limit 3.0s
+A-list,mixed,43,100000,latency_instrumented,1,stopped_time_limit,11000,3.073744125,,220.895,810.208,1320.500,1788,762,1788,753,4304,4304,4193,3602976,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,mixed,43,100000,memory,1,stopped_time_limit,14000,,,,,,,,2238,809,,,,,390376,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=354292
+B-indexed,mixed,43,100000,replay,1,completed,100000,0.368833292,271125.200,,,,,,15357,867,,,,,,
+B-indexed,mixed,43,100000,replay,2,completed,100000,0.367643666,272002.510,,,,,,15357,867,,,,,,
+B-indexed,mixed,43,100000,replay,3,completed,100000,0.369674875,270507.970,,,,,,15357,867,,,,,,
+B-indexed,mixed,43,100000,replay,4,completed,100000,0.368425917,271424.988,,,,,,15357,867,,,,,,
+B-indexed,mixed,43,100000,replay,5,completed,100000,0.365520792,273582.248,,,,,,15357,867,,,,,,
+B-indexed,mixed,43,100000,replay_median,median,completed,100000,0.368425917,271424.988,,,,,,,,,,,,,
+B-indexed,mixed,43,100000,latency_instrumented,1,completed,100000,0.475401125,,4.375,8.584,14.375,15358,908,15357,867,38797,38797,37739,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,mixed,43,100000,memory,1,completed,100000,,,,,,,,15357,867,,,,,5402496,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=5400764
+A-list,mixed,44,100000,replay,1,stopped_time_limit,17000,3.157553875,5383.914,,,,,,2478,796,,,,,,time limit 3.0s
+A-list,mixed,44,100000,latency_instrumented,1,stopped_time_limit,12000,3.422743708,,224.520,799.917,1318.042,1736,725,1731,718,4807,4807,4681,4086953,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,mixed,44,100000,memory,1,stopped_time_limit,15000,,,,,,,,2184,766,,,,,382744,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=346896
+B-indexed,mixed,44,100000,replay,1,completed,100000,0.368734541,271197.810,,,,,,15155,850,,,,,,
+B-indexed,mixed,44,100000,replay,2,completed,100000,0.374783833,266820.474,,,,,,15155,850,,,,,,
+B-indexed,mixed,44,100000,replay,3,completed,100000,0.371583542,269118.485,,,,,,15155,850,,,,,,
+B-indexed,mixed,44,100000,replay,4,completed,100000,0.367669583,271983.337,,,,,,15155,850,,,,,,
+B-indexed,mixed,44,100000,replay,5,completed,100000,0.371245709,269363.383,,,,,,15155,850,,,,,,
+B-indexed,mixed,44,100000,replay_median,median,completed,100000,0.371245709,269363.383,,,,,,,,,,,,,
+B-indexed,mixed,44,100000,latency_instrumented,1,completed,100000,0.471212875,,4.375,9.333,14.333,15158,884,15155,850,39216,39216,38243,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,mixed,44,100000,memory,1,completed,100000,,,,,,,,15155,850,,,,,5546376,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=5338764
+A-list,sweep,42,1000,replay,1,completed,1000,0.090089542,11100.068,,,,,,411,341,,,,,,
+A-list,sweep,42,1000,replay,2,completed,1000,0.089392625,11186.605,,,,,,411,341,,,,,,
+A-list,sweep,42,1000,replay,3,completed,1000,0.089930000,11119.760,,,,,,411,341,,,,,,
+A-list,sweep,42,1000,replay,4,completed,1000,0.089543250,11167.788,,,,,,411,341,,,,,,
+A-list,sweep,42,1000,replay,5,completed,1000,0.090320125,11071.730,,,,,,411,341,,,,,,
+A-list,sweep,42,1000,replay_median,median,completed,1000,0.089930000,11119.760,,,,,,,,,,,,,
+A-list,sweep,42,1000,latency_instrumented,1,completed,1000,0.170911708,,145.270,389.000,715.666,800,661,411,341,496,496,427,256436,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,sweep,42,1000,memory,1,completed,1000,,,,,,,,411,341,,,,,137136,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=69764
+B-indexed,sweep,42,1000,replay,1,completed,1000,0.004353458,229702.457,,,,,,411,341,,,,,,
+B-indexed,sweep,42,1000,replay,2,completed,1000,0.004290084,233095.669,,,,,,411,341,,,,,,
+B-indexed,sweep,42,1000,replay,3,completed,1000,0.004758625,210144.737,,,,,,411,341,,,,,,
+B-indexed,sweep,42,1000,replay,4,completed,1000,0.004322959,231323.036,,,,,,411,341,,,,,,
+B-indexed,sweep,42,1000,replay,5,completed,1000,0.004310000,232018.561,,,,,,411,341,,,,,,
+B-indexed,sweep,42,1000,replay_median,median,completed,1000,0.004322959,231323.036,,,,,,,,,,,,,
+B-indexed,sweep,42,1000,latency_instrumented,1,completed,1000,0.005515458,,4.542,12.500,19.584,800,661,411,341,496,496,427,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,sweep,42,1000,memory,1,completed,1000,,,,,,,,411,341,,,,,429656,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=265188
+A-list,sweep,43,1000,replay,1,completed,1000,0.091610500,10915.779,,,,,,389,323,,,,,,
+A-list,sweep,43,1000,replay,2,completed,1000,0.091296625,10953.307,,,,,,389,323,,,,,,
+A-list,sweep,43,1000,replay,3,completed,1000,0.091601417,10916.862,,,,,,389,323,,,,,,
+A-list,sweep,43,1000,replay,4,completed,1000,0.092012084,10868.138,,,,,,389,323,,,,,,
+A-list,sweep,43,1000,replay,5,completed,1000,0.092191167,10847.026,,,,,,389,323,,,,,,
+A-list,sweep,43,1000,replay_median,median,completed,1000,0.091610500,10915.779,,,,,,,,,,,,,
+A-list,sweep,43,1000,latency_instrumented,1,completed,1000,0.172456666,,143.937,424.584,837.625,800,666,389,323,510,510,442,265072,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,sweep,43,1000,memory,1,completed,1000,,,,,,,,389,323,,,,,137024,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=66196
+B-indexed,sweep,43,1000,replay,1,completed,1000,0.025203125,39677.619,,,,,,389,323,,,,,,
+B-indexed,sweep,43,1000,replay,2,completed,1000,0.008919250,112117.050,,,,,,389,323,,,,,,
+B-indexed,sweep,43,1000,replay,3,completed,1000,0.004405875,226969.671,,,,,,389,323,,,,,,
+B-indexed,sweep,43,1000,replay,4,completed,1000,0.004397292,227412.689,,,,,,389,323,,,,,,
+B-indexed,sweep,43,1000,replay,5,completed,1000,0.004404834,227023.311,,,,,,389,323,,,,,,
+B-indexed,sweep,43,1000,replay_median,median,completed,1000,0.004405875,226969.671,,,,,,,,,,,,,
+B-indexed,sweep,43,1000,latency_instrumented,1,completed,1000,0.005463417,,4.541,12.667,21.041,800,666,389,323,510,510,442,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,sweep,43,1000,memory,1,completed,1000,,,,,,,,389,323,,,,,447824,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=263828
+A-list,sweep,44,1000,replay,1,completed,1000,0.088681291,11276.336,,,,,,418,329,,,,,,
+A-list,sweep,44,1000,replay,2,completed,1000,0.088722333,11271.119,,,,,,418,329,,,,,,
+A-list,sweep,44,1000,replay,3,completed,1000,0.089500959,11173.065,,,,,,418,329,,,,,,
+A-list,sweep,44,1000,replay,4,completed,1000,0.089296083,11198.699,,,,,,418,329,,,,,,
+A-list,sweep,44,1000,replay,5,completed,1000,0.089751084,11141.927,,,,,,418,329,,,,,,
+A-list,sweep,44,1000,replay_median,median,completed,1000,0.089296083,11198.699,,,,,,,,,,,,,
+A-list,sweep,44,1000,latency_instrumented,1,completed,1000,0.170375125,,146.813,390.792,666.458,800,647,418,329,483,483,419,252371,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,sweep,44,1000,memory,1,completed,1000,,,,,,,,418,329,,,,,137024,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=70900
+B-indexed,sweep,44,1000,replay,1,completed,1000,0.004437209,225366.892,,,,,,418,329,,,,,,
+B-indexed,sweep,44,1000,replay,2,completed,1000,0.004565291,219044.087,,,,,,418,329,,,,,,
+B-indexed,sweep,44,1000,replay,3,completed,1000,0.004386875,227952.700,,,,,,418,329,,,,,,
+B-indexed,sweep,44,1000,replay,4,completed,1000,0.004302792,232407.237,,,,,,418,329,,,,,,
+B-indexed,sweep,44,1000,replay,5,completed,1000,0.004454375,224498.386,,,,,,418,329,,,,,,
+B-indexed,sweep,44,1000,replay_median,median,completed,1000,0.004437209,225366.892,,,,,,,,,,,,,
+B-indexed,sweep,44,1000,latency_instrumented,1,completed,1000,0.005343667,,4.500,12.417,19.083,800,647,418,329,483,483,419,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,sweep,44,1000,memory,1,completed,1000,,,,,,,,418,329,,,,,424616,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=260388
+A-list,sweep,42,10000,replay,1,stopped_time_limit,6000,3.276999417,1830.943,,,,,,6000,1904,,,,,,time limit 3.0s
+A-list,sweep,42,10000,latency_instrumented,1,stopped_time_limit,5000,4.426157166,,882.458,1693.542,1783.417,5000,1840,5000,1840,0,0,0,6248911,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,sweep,42,10000,memory,1,stopped_time_limit,6000,,,,,,,,6000,1904,,,,,1055864,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959668
+B-indexed,sweep,42,10000,replay,1,completed,10000,0.041956709,238340.905,,,,,,3938,978,,,,,,
+B-indexed,sweep,42,10000,replay,2,completed,10000,0.041739041,239583.847,,,,,,3938,978,,,,,,
+B-indexed,sweep,42,10000,replay,3,completed,10000,0.043694167,228863.500,,,,,,3938,978,,,,,,
+B-indexed,sweep,42,10000,replay,4,completed,10000,0.041705125,239778.684,,,,,,3938,978,,,,,,
+B-indexed,sweep,42,10000,replay,5,completed,10000,0.041248875,242430.854,,,,,,3938,978,,,,,,
+B-indexed,sweep,42,10000,replay_median,median,completed,10000,0.041739041,239583.847,,,,,,,,,,,,,
+B-indexed,sweep,42,10000,latency_instrumented,1,completed,10000,0.051471542,,4.208,11.792,17.458,8000,1959,3938,978,5035,5035,1954,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,sweep,42,10000,memory,1,completed,10000,,,,,,,,3938,978,,,,,2647456,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=1505132
+A-list,sweep,43,10000,replay,1,stopped_time_limit,6000,3.289294584,1824.099,,,,,,6000,1896,,,,,,time limit 3.0s
+A-list,sweep,43,10000,latency_instrumented,1,stopped_time_limit,5000,4.508970833,,900.105,1727.666,1815.125,5000,1845,5000,1845,0,0,0,6249375,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,sweep,43,10000,memory,1,stopped_time_limit,6000,,,,,,,,6000,1896,,,,,1055864,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959668
+B-indexed,sweep,43,10000,replay,1,completed,10000,0.041782541,239334.415,,,,,,3998,984,,,,,,
+B-indexed,sweep,43,10000,replay,2,completed,10000,0.041969750,238266.847,,,,,,3998,984,,,,,,
+B-indexed,sweep,43,10000,replay,3,completed,10000,0.043478875,229996.751,,,,,,3998,984,,,,,,
+B-indexed,sweep,43,10000,replay,4,completed,10000,0.041439792,241313.953,,,,,,3998,984,,,,,,
+B-indexed,sweep,43,10000,replay,5,completed,10000,0.041116167,243213.333,,,,,,3998,984,,,,,,
+B-indexed,sweep,43,10000,replay_median,median,completed,10000,0.041782541,239334.415,,,,,,,,,,,,,
+B-indexed,sweep,43,10000,latency_instrumented,1,completed,10000,0.051743792,,4.209,11.709,17.458,8000,1966,3998,984,4997,4997,1977,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,sweep,43,10000,memory,1,completed,10000,,,,,,,,3998,984,,,,,2652392,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=1520364
+A-list,sweep,44,10000,replay,1,stopped_time_limit,6000,3.275789250,1831.620,,,,,,6000,1897,,,,,,time limit 3.0s
+A-list,sweep,44,10000,latency_instrumented,1,stopped_time_limit,5000,4.541502875,,909.792,1734.083,1836.041,5000,1829,5000,1829,0,0,0,6249804,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,sweep,44,10000,memory,1,stopped_time_limit,6000,,,,,,,,6000,1897,,,,,1055864,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959668
+B-indexed,sweep,44,10000,replay,1,completed,10000,0.041618000,240280.648,,,,,,3967,983,,,,,,
+B-indexed,sweep,44,10000,replay,2,completed,10000,0.041947583,238392.758,,,,,,3967,983,,,,,,
+B-indexed,sweep,44,10000,replay,3,completed,10000,0.043761458,228511.582,,,,,,3967,983,,,,,,
+B-indexed,sweep,44,10000,replay,4,completed,10000,0.041235625,242508.753,,,,,,3967,983,,,,,,
+B-indexed,sweep,44,10000,replay,5,completed,10000,0.041161958,242942.768,,,,,,3967,983,,,,,,
+B-indexed,sweep,44,10000,replay_median,median,completed,10000,0.041618000,240280.648,,,,,,,,,,,,,
+B-indexed,sweep,44,10000,latency_instrumented,1,completed,10000,0.051510292,,4.208,11.625,17.625,8000,1967,3967,983,5055,5055,2006,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,sweep,44,10000,memory,1,completed,10000,,,,,,,,3967,983,,,,,2649632,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=1513076
+A-list,sweep,42,100000,replay,1,stopped_time_limit,6000,3.175736208,1889.326,,,,,,6000,1904,,,,,,time limit 3.0s
+A-list,sweep,42,100000,latency_instrumented,1,stopped_time_limit,5000,4.423008625,,880.271,1699.166,1752.292,5000,1840,5000,1840,0,0,0,6248911,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,sweep,42,100000,memory,1,stopped_time_limit,6000,,,,,,,,6000,1904,,,,,1055864,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959668
+B-indexed,sweep,42,100000,replay,1,completed,100000,0.441557125,226471.263,,,,,,39936,1000,,,,,,
+B-indexed,sweep,42,100000,replay,2,completed,100000,0.456891042,218870.564,,,,,,39936,1000,,,,,,
+B-indexed,sweep,42,100000,replay,3,completed,100000,0.476312959,209945.999,,,,,,39936,1000,,,,,,
+B-indexed,sweep,42,100000,replay,4,completed,100000,0.475794666,210174.698,,,,,,39936,1000,,,,,,
+B-indexed,sweep,42,100000,replay,5,completed,100000,0.489830583,204152.218,,,,,,39936,1000,,,,,,
+B-indexed,sweep,42,100000,replay_median,median,completed,100000,0.475794666,210174.698,,,,,,,,,,,,,
+B-indexed,sweep,42,100000,latency_instrumented,1,completed,100000,0.561067917,,4.292,12.583,19.042,80000,2000,39936,1000,50035,50035,10971,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,sweep,42,100000,memory,1,completed,100000,,,,,,,,39936,1000,,,,,22035620,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=12348364
+A-list,sweep,43,100000,replay,1,stopped_time_limit,6000,3.187377625,1882.425,,,,,,6000,1896,,,,,,time limit 3.0s
+A-list,sweep,43,100000,latency_instrumented,1,stopped_time_limit,5000,4.431488125,,880.167,1678.750,1787.500,5000,1845,5000,1845,0,0,0,6249375,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,sweep,43,100000,memory,1,stopped_time_limit,6000,,,,,,,,6000,1896,,,,,1058008,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=961812
+B-indexed,sweep,43,100000,replay,1,completed,100000,0.442193334,226145.426,,,,,,40076,1000,,,,,,
+B-indexed,sweep,43,100000,replay,2,completed,100000,0.455263458,219653.034,,,,,,40076,1000,,,,,,
+B-indexed,sweep,43,100000,replay,3,completed,100000,0.471555084,212064.303,,,,,,40076,1000,,,,,,
+B-indexed,sweep,43,100000,replay,4,completed,100000,0.477452167,209445.065,,,,,,40076,1000,,,,,,
+B-indexed,sweep,43,100000,replay,5,completed,100000,0.448474500,222978.118,,,,,,40076,1000,,,,,,
+B-indexed,sweep,43,100000,replay_median,median,completed,100000,0.455263458,219653.034,,,,,,,,,,,,,
+B-indexed,sweep,43,100000,latency_instrumented,1,completed,100000,0.572834666,,4.292,12.500,18.916,80000,2000,40076,1000,49934,49934,11010,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,sweep,43,100000,memory,1,completed,100000,,,,,,,,40076,1000,,,,,22045060,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=12409268
+A-list,sweep,44,100000,replay,1,stopped_time_limit,6000,3.176690583,1888.758,,,,,,6000,1897,,,,,,time limit 3.0s
+A-list,sweep,44,100000,latency_instrumented,1,stopped_time_limit,5000,4.428755958,,881.292,1683.792,1792.916,5000,1829,5000,1829,0,0,0,6249804,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,sweep,44,100000,memory,1,stopped_time_limit,6000,,,,,,,,6000,1897,,,,,1056168,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=959972
+B-indexed,sweep,44,100000,replay,1,completed,100000,0.432323083,231308.491,,,,,,40001,1000,,,,,,
+B-indexed,sweep,44,100000,replay,2,completed,100000,0.474435917,210776.622,,,,,,40001,1000,,,,,,
+B-indexed,sweep,44,100000,replay,3,completed,100000,0.480221167,208237.385,,,,,,40001,1000,,,,,,
+B-indexed,sweep,44,100000,replay,4,completed,100000,0.446731042,223848.335,,,,,,40001,1000,,,,,,
+B-indexed,sweep,44,100000,replay,5,completed,100000,0.470859792,212377.446,,,,,,40001,1000,,,,,,
+B-indexed,sweep,44,100000,replay_median,median,completed,100000,0.470859792,212377.446,,,,,,,,,,,,,
+B-indexed,sweep,44,100000,latency_instrumented,1,completed,100000,0.582465708,,4.292,12.584,19.083,80000,2000,40001,1000,50037,50037,11038,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,sweep,44,100000,memory,1,completed,100000,,,,,,,,40001,1000,,,,,22011308,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=12362900
+A-list,cancel_churn,42,1000,replay,1,completed,1000,0.002626250,380771.061,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,1000,replay,2,completed,1000,0.002910084,343632.692,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,1000,replay,3,completed,1000,0.002593625,385560.750,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,1000,replay,4,completed,1000,0.002669834,374555.122,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,1000,replay,5,completed,1000,0.002538375,393952.824,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,1000,replay_median,median,completed,1000,0.002626250,380771.061,,,,,,,,,,,,,
+A-list,cancel_churn,42,1000,latency_instrumented,1,completed,1000,0.003704958,,3.604,4.375,4.417,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,cancel_churn,42,1000,memory,1,completed,1000,,,,,,,,0,0,,,,,992,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+B-indexed,cancel_churn,42,1000,replay,1,completed,1000,0.002891500,345841.259,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,1000,replay,2,completed,1000,0.002882334,346941.055,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,1000,replay,3,completed,1000,0.002887584,346310.272,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,1000,replay,4,completed,1000,0.002889792,346045.667,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,1000,replay,5,completed,1000,0.002906250,344086.022,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,1000,replay_median,median,completed,1000,0.002889792,346045.667,,,,,,,,,,,,,
+B-indexed,cancel_churn,42,1000,latency_instrumented,1,completed,1000,0.003973708,,3.875,4.209,5.500,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,cancel_churn,42,1000,memory,1,completed,1000,,,,,,,,0,0,,,,,1192,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+A-list,cancel_churn,43,1000,replay,1,completed,1000,0.002539042,393849.334,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,1000,replay,2,completed,1000,0.002818458,354803.939,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,1000,replay,3,completed,1000,0.002536125,394302.331,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,1000,replay,4,completed,1000,0.002539875,393720.163,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,1000,replay,5,completed,1000,0.002535833,394347.735,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,1000,replay_median,median,completed,1000,0.002539042,393849.334,,,,,,,,,,,,,
+A-list,cancel_churn,43,1000,latency_instrumented,1,completed,1000,0.003765625,,4.270,4.417,4.500,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,cancel_churn,43,1000,memory,1,completed,1000,,,,,,,,0,0,,,,,992,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+B-indexed,cancel_churn,43,1000,replay,1,completed,1000,0.002886792,346405.283,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,1000,replay,2,completed,1000,0.002917708,342734.777,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,1000,replay,3,completed,1000,0.002864375,349116.299,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,1000,replay,4,completed,1000,0.002928167,341510.576,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,1000,replay,5,completed,1000,0.003087000,323939.099,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,1000,replay_median,median,completed,1000,0.002917708,342734.777,,,,,,,,,,,,,
+B-indexed,cancel_churn,43,1000,latency_instrumented,1,completed,1000,0.003712916,,3.855,4.083,4.125,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,cancel_churn,43,1000,memory,1,completed,1000,,,,,,,,0,0,,,,,1192,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+A-list,cancel_churn,44,1000,replay,1,completed,1000,0.002517958,397147.212,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,1000,replay,2,completed,1000,0.002580459,387527.955,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,1000,replay,3,completed,1000,0.002534959,394483.698,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,1000,replay,4,completed,1000,0.002547542,392535.236,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,1000,replay,5,completed,1000,0.002532000,394944.708,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,1000,replay_median,median,completed,1000,0.002534959,394483.698,,,,,,,,,,,,,
+A-list,cancel_churn,44,1000,latency_instrumented,1,completed,1000,0.003883958,,4.250,4.625,5.000,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,cancel_churn,44,1000,memory,1,completed,1000,,,,,,,,0,0,,,,,992,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+B-indexed,cancel_churn,44,1000,replay,1,completed,1000,0.002957208,338156.802,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,1000,replay,2,completed,1000,0.002947792,339236.961,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,1000,replay,3,completed,1000,0.003085709,324074.629,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,1000,replay,4,completed,1000,0.002851709,350666.916,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,1000,replay,5,completed,1000,0.002835833,352630.074,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,1000,replay_median,median,completed,1000,0.002947792,339236.961,,,,,,,,,,,,,
+B-indexed,cancel_churn,44,1000,latency_instrumented,1,completed,1000,0.003834208,,3.875,4.084,4.958,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,cancel_churn,44,1000,memory,1,completed,1000,,,,,,,,0,0,,,,,1192,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+A-list,cancel_churn,42,10000,replay,1,completed,10000,0.025728792,388669.627,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,10000,replay,2,completed,10000,0.025504708,392084.473,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,10000,replay,3,completed,10000,0.025228583,396375.809,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,10000,replay,4,completed,10000,0.025399667,393705.949,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,10000,replay,5,completed,10000,0.025247584,396077.502,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,10000,replay_median,median,completed,10000,0.025399667,393705.949,,,,,,,,,,,,,
+A-list,cancel_churn,42,10000,latency_instrumented,1,completed,10000,0.037471000,,4.250,4.459,4.666,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,cancel_churn,42,10000,memory,1,completed,10000,,,,,,,,0,0,,,,,992,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+B-indexed,cancel_churn,42,10000,replay,1,completed,10000,0.029220166,342229.404,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,10000,replay,2,completed,10000,0.028648459,349058.914,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,10000,replay,3,completed,10000,0.028672625,348764.719,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,10000,replay,4,completed,10000,0.028694709,348496.303,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,10000,replay,5,completed,10000,0.028616750,349445.692,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,10000,replay_median,median,completed,10000,0.028672625,348764.719,,,,,,,,,,,,,
+B-indexed,cancel_churn,42,10000,latency_instrumented,1,completed,10000,0.037001000,,3.875,4.084,4.167,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,cancel_churn,42,10000,memory,1,completed,10000,,,,,,,,0,0,,,,,1192,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+A-list,cancel_churn,43,10000,replay,1,completed,10000,0.025388750,393875.240,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,10000,replay,2,completed,10000,0.025465208,392692.650,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,10000,replay,3,completed,10000,0.025242666,396154.669,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,10000,replay,4,completed,10000,0.025333000,394742.036,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,10000,replay,5,completed,10000,0.025337209,394676.462,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,10000,replay_median,median,completed,10000,0.025337209,394676.462,,,,,,,,,,,,,
+A-list,cancel_churn,43,10000,latency_instrumented,1,completed,10000,0.036998375,,4.208,4.375,4.541,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,cancel_churn,43,10000,memory,1,completed,10000,,,,,,,,0,0,,,,,992,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+B-indexed,cancel_churn,43,10000,replay,1,completed,10000,0.029282542,341500.407,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,10000,replay,2,completed,10000,0.028715625,348242.464,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,10000,replay,3,completed,10000,0.028697333,348464.437,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,10000,replay,4,completed,10000,0.028654792,348981.769,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,10000,replay,5,completed,10000,0.028554167,350211.582,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,10000,replay_median,median,completed,10000,0.028697333,348464.437,,,,,,,,,,,,,
+B-indexed,cancel_churn,43,10000,latency_instrumented,1,completed,10000,0.037125209,,3.875,4.084,4.208,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,cancel_churn,43,10000,memory,1,completed,10000,,,,,,,,0,0,,,,,1192,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+A-list,cancel_churn,44,10000,replay,1,completed,10000,0.025745167,388422.417,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,10000,replay,2,completed,10000,0.025259875,395884.778,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,10000,replay,3,completed,10000,0.025267833,395760.095,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,10000,replay,4,completed,10000,0.025192417,396944.843,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,10000,replay,5,completed,10000,0.025122667,398046.911,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,10000,replay_median,median,completed,10000,0.025259875,395884.778,,,,,,,,,,,,,
+A-list,cancel_churn,44,10000,latency_instrumented,1,completed,10000,0.037012000,,4.208,4.375,4.500,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,cancel_churn,44,10000,memory,1,completed,10000,,,,,,,,0,0,,,,,992,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+B-indexed,cancel_churn,44,10000,replay,1,completed,10000,0.029112833,343491.133,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,10000,replay,2,completed,10000,0.029157458,342965.426,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,10000,replay,3,completed,10000,0.028605958,349577.525,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,10000,replay,4,completed,10000,0.028626500,349326.673,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,10000,replay,5,completed,10000,0.028548750,350278.033,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,10000,replay_median,median,completed,10000,0.028626500,349326.673,,,,,,,,,,,,,
+B-indexed,cancel_churn,44,10000,latency_instrumented,1,completed,10000,0.037120875,,3.875,4.084,4.208,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,cancel_churn,44,10000,memory,1,completed,10000,,,,,,,,0,0,,,,,1192,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+A-list,cancel_churn,42,100000,replay,1,completed,100000,0.254928667,392266.594,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,100000,replay,2,completed,100000,0.257113708,388932.977,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,100000,replay,3,completed,100000,0.255025500,392117.651,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,100000,replay,4,completed,100000,0.254826209,392424.313,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,100000,replay,5,completed,100000,0.255393458,391552.708,,,,,,0,0,,,,,,
+A-list,cancel_churn,42,100000,replay_median,median,completed,100000,0.255025500,392117.651,,,,,,,,,,,,,
+A-list,cancel_churn,42,100000,latency_instrumented,1,completed,100000,0.371685333,,4.208,4.417,4.542,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,cancel_churn,42,100000,memory,1,completed,100000,,,,,,,,0,0,,,,,992,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+B-indexed,cancel_churn,42,100000,replay,1,completed,100000,0.289021041,345995.571,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,100000,replay,2,completed,100000,0.288483042,346640.826,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,100000,replay,3,completed,100000,0.289532083,345384.867,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,100000,replay,4,completed,100000,0.288681375,346402.673,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,100000,replay,5,completed,100000,0.289683083,345204.832,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,42,100000,replay_median,median,completed,100000,0.289021041,345995.571,,,,,,,,,,,,,
+B-indexed,cancel_churn,42,100000,latency_instrumented,1,completed,100000,0.371032584,,3.833,4.084,4.209,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,cancel_churn,42,100000,memory,1,completed,100000,,,,,,,,0,0,,,,,1192,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+A-list,cancel_churn,43,100000,replay,1,completed,100000,0.255191250,391862.966,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,100000,replay,2,completed,100000,0.256011125,390608.025,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,100000,replay,3,completed,100000,0.254591250,392786.476,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,100000,replay,4,completed,100000,0.255466542,391440.692,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,100000,replay,5,completed,100000,0.255055375,392071.722,,,,,,0,0,,,,,,
+A-list,cancel_churn,43,100000,replay_median,median,completed,100000,0.255191250,391862.966,,,,,,,,,,,,,
+A-list,cancel_churn,43,100000,latency_instrumented,1,completed,100000,0.373073500,,4.208,4.458,4.583,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,cancel_churn,43,100000,memory,1,completed,100000,,,,,,,,0,0,,,,,992,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+B-indexed,cancel_churn,43,100000,replay,1,completed,100000,0.290440083,344305.094,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,100000,replay,2,completed,100000,0.289169916,345817.440,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,100000,replay,3,completed,100000,0.288823625,346232.065,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,100000,replay,4,completed,100000,0.288570209,346536.118,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,100000,replay,5,completed,100000,0.288666666,346420.324,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,43,100000,replay_median,median,completed,100000,0.288823625,346232.065,,,,,,,,,,,,,
+B-indexed,cancel_churn,43,100000,latency_instrumented,1,completed,100000,0.373078459,,3.875,4.084,4.250,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,cancel_churn,43,100000,memory,1,completed,100000,,,,,,,,0,0,,,,,1192,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+A-list,cancel_churn,44,100000,replay,1,completed,100000,0.253834833,393956.963,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,100000,replay,2,completed,100000,0.254247166,393318.052,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,100000,replay,3,completed,100000,0.253704333,394159.606,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,100000,replay,4,completed,100000,0.254187042,393411.085,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,100000,replay,5,completed,100000,0.253513459,394456.375,,,,,,0,0,,,,,,
+A-list,cancel_churn,44,100000,replay_median,median,completed,100000,0.253834833,393956.963,,,,,,,,,,,,,
+A-list,cancel_churn,44,100000,latency_instrumented,1,completed,100000,0.372421292,,4.208,4.417,4.583,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+A-list,cancel_churn,44,100000,memory,1,completed,100000,,,,,,,,0,0,,,,,992,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516
+B-indexed,cancel_churn,44,100000,replay,1,completed,100000,0.289819000,345042.941,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,100000,replay,2,completed,100000,0.289393958,345549.716,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,100000,replay,3,completed,100000,0.289546209,345368.017,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,100000,replay,4,completed,100000,0.288367666,346779.517,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,100000,replay,5,completed,100000,0.287522250,347799.170,,,,,,0,0,,,,,,
+B-indexed,cancel_churn,44,100000,replay_median,median,completed,100000,0.289393958,345549.716,,,,,,,,,,,,,
+B-indexed,cancel_churn,44,100000,latency_instrumented,1,completed,100000,0.370020916,,3.833,4.083,4.208,1,1,0,0,0,0,0,0,,nearest-rank percentiles; instrumentation excluded from primary timing
+B-indexed,cancel_churn,44,100000,memory,1,completed,100000,,,,,,,,0,0,,,,,1192,tracemalloc; pre-generated input excluded; live book and current event result included; ending traced bytes=516

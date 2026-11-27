@@ -1,0 +1,10 @@
+# Exact versions from `python -m pip freeze` in the venv aif-a1 (Python 3.13.15), 2026-11-21.
+# The engine, the data reader and the generator use the standard library only.
+# Tests
+pytest==9.2.0
+# Pinned below 6.156 on purpose: newer versions ship a native module that
+# Windows Smart App Control blocks on the author's machine (see README, Environment).
+hypothesis==6.155.7
+# Dashboard (reads saved results only)
+pandas==3.1.1
+streamlit==1.67.0

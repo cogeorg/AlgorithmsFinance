@@ -1,0 +1,74 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "huge_values",
+ "description": "Prices and quantities far beyond 64-bit-safe float precision; integers must stay exact.",
+ "covers": [
+  "huge integers",
+  "exact integer arithmetic"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 1000000000000000000,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "order_id": "a1",
+   "status": "resting",
+   "unfilled_qty_units": 1000000000000000000,
+   "fills": []
+  },
+  {
+   "event_id": "e3",
+   "order_id": "s1",
+   "status": "filled",
+   "unfilled_qty_units": 0,
+   "fills": [
+    {
+     "maker_id": "b1",
+     "taker_id": "s1",
+     "price_ticks": 1000000000000000,
+     "qty_units": 999999999999999999
+    }
+   ]
+  },
+  {
+   "event_id": "e4",
+   "order_id": "t1",
+   "status": "resting",
+   "unfilled_qty_units": 1000000000000000000,
+   "fills": [
+    {
+     "maker_id": "a1",
+     "taker_id": "t1",
+     "price_ticks": 1000000000000001,
+     "qty_units": 1000000000000000000
+    }
+   ]
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "t1",
+   "side": "BUY",
+   "price_ticks": 1000000000000001,
+   "qty_units": 1000000000000000000,
+   "arrival_seq": 4
+  },
+  {
+   "order_id": "b1",
+   "side": "BUY",
+   "price_ticks": 1000000000000000,
+   "qty_units": 1,
+   "arrival_seq": 1
+  }
+ ],
+ "best_bid": 1000000000000001,
+ "best_ask": null
+}

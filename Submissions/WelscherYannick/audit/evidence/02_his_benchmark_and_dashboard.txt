@@ -1,0 +1,6 @@
+# python3 benchmark.py --output <tmp>/run_default ; python3 dashboard.py --input ... --output ...
+Wrote <tmp>/run_default/benchmark_results.json, <tmp>/run_default/benchmark_results.csv, <tmp>/run_default/raw_timings.csv, <tmp>/run_default/input_manifest.json
+python3 benchmark.py --output $S/run_default  1.47s user 0.04s system 98% cpu 1.523 total
+Wrote <tmp>/run_default/runtime_dashboard.html
+
+# git status --short in the audited checkout afterwards: (empty = unchanged)

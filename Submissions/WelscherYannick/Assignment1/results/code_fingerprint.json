@@ -1,0 +1,212 @@
+{
+ "measured_commit": "48076ba3886a8c33fd463184f92723317b2f7227",
+ "fingerprinted_at_commit": "46eb924b51aa2a405465d611dba7cb328fdbfe73",
+ "engine_files_identical": false,
+ "lob_diff_vs_measured_commit": "diff --git a/lob/book_b.py b/lob/book_b.py\nindex e184bcf..b50752d 100644\n--- a/lob/book_b.py\n+++ b/lob/book_b.py\n@@ -20,7 +20,8 @@ Revision steps (all measured, see bench/run_revision_steps.py and bench/variants\n   1. price levels + index (this data organisation) with the shared generic validation;\n   2. a fused fast-path process(): profiling showed ~60% of step 1's time in generic\n      validation/dispatch, so well-formed events are checked and applied inline, and\n-     anything doubtful falls back to the shared validating code;\n+     anything doubtful falls back to the shared validating code; in the same step the\n+     matching loop _take was tightened (early return, bound append);\n   3. orders stored as 4-item lists instead of objects (cheaper to create).\n Steps 2 and 3 change constant factors only; the complexity below is unchanged.\n \n",
+ "files": [
+  {
+   "file": "bench/_util.py",
+   "sha256_submitted": "6b04ece006604dbb9d6943f0979568909ea23340edc9981a309779697b030d1e",
+   "sha256_measured_commit": "6b04ece006604dbb9d6943f0979568909ea23340edc9981a309779697b030d1e",
+   "identical": true
+  },
+  {
+   "file": "bench/make_data.py",
+   "sha256_submitted": "723df1cf92c7b62d1b11899834c8e00aca26d38074352ca57712853711087f65",
+   "sha256_measured_commit": "723df1cf92c7b62d1b11899834c8e00aca26d38074352ca57712853711087f65",
+   "identical": true
+  },
+  {
+   "file": "bench/provenance.py",
+   "sha256_submitted": "8bc97375ba82de5d6938eb75a7d360165363552204979ff7c5e3d3a3011a3384",
+   "sha256_measured_commit": null,
+   "identical": false
+  },
+  {
+   "file": "bench/run_all.sh",
+   "sha256_submitted": "6d0c83f2cae0f8ca8bbbd46a648f048d90dedd7737074295ea751ea89997fb24",
+   "sha256_measured_commit": "04042e17e7af04968cab05375980f1c66239522d8691ca07889efe67b61a3584",
+   "identical": false
+  },
+  {
+   "file": "bench/run_counts.py",
+   "sha256_submitted": "279e117e67daf629649af5fef6ea25b6896da9c8e0694198d385a05705201aa8",
+   "sha256_measured_commit": "279e117e67daf629649af5fef6ea25b6896da9c8e0694198d385a05705201aa8",
+   "identical": true
+  },
+  {
+   "file": "bench/run_gc_check.py",
+   "sha256_submitted": "44d7f8a7bc36c0d1239fa25002a27cef626673a39aee41fa8b8e34a12e6127e1",
+   "sha256_measured_commit": null,
+   "identical": false
+  },
+  {
+   "file": "bench/run_latency.py",
+   "sha256_submitted": "744c9885aa4cde06d80e805958dbe3700a0eba1290f1a6a3f9802d75633e1c67",
+   "sha256_measured_commit": "33cdbe235ec91c005f8072965decae38173fc4f5dfe0692fa3a39b79b3e946ec",
+   "identical": false
+  },
+  {
+   "file": "bench/run_liquidation.py",
+   "sha256_submitted": "92632570bffc54f75d973eb3a35b4ff883a1c836e23e083dd6e005543cab96e8",
+   "sha256_measured_commit": "6aa762422a8808e5e185ad8040216f9ba28ee5bafd500acb37adfa328f8d1b5e",
+   "identical": false
+  },
+  {
+   "file": "bench/run_memory.py",
+   "sha256_submitted": "203e1f2f3cb8f8d61884266982de04f765732f08aa810c098cbdbb33d80713d9",
+   "sha256_measured_commit": "31214e04d646c6016a3c393a7c75e317d7108346575d45499133d05105d24c07",
+   "identical": false
+  },
+  {
+   "file": "bench/run_mutations.py",
+   "sha256_submitted": "a2d8931b8667b33fe1e143e75ccfc1bc216ef6997c9af8f3a4e738a26f7d0a82",
+   "sha256_measured_commit": null,
+   "identical": false
+  },
+  {
+   "file": "bench/run_parse.py",
+   "sha256_submitted": "20c62f86302f6e499d23095f2000657867eafde85f0736a76c1a0a06733deeb7",
+   "sha256_measured_commit": null,
+   "identical": false
+  },
+  {
+   "file": "bench/run_profile.py",
+   "sha256_submitted": "57b8d343165c4a00a33538e808ef4b2ee480a1bbc12253c866e162144af27734",
+   "sha256_measured_commit": "57b8d343165c4a00a33538e808ef4b2ee480a1bbc12253c866e162144af27734",
+   "identical": true
+  },
+  {
+   "file": "bench/run_revision_steps.py",
+   "sha256_submitted": "8762188d43b9d11aac172135775e32525cfd4c228e7f7b9d2d716c516ea1dc07",
+   "sha256_measured_commit": "8762188d43b9d11aac172135775e32525cfd4c228e7f7b9d2d716c516ea1dc07",
+   "identical": true
+  },
+  {
+   "file": "bench/run_timing.py",
+   "sha256_submitted": "163a463822565a7b24b000e4a9fcf6dd5ca3bb7970bf9a4774fdcfcef40b767d",
+   "sha256_measured_commit": "ac436ce92ed74ecd2bdde3024906dc2881bd52c9988e3eb85dc1afa5ec935cb5",
+   "identical": false
+  },
+  {
+   "file": "bench/run_version_c.py",
+   "sha256_submitted": "a27a81353381364bf7930b793933cc983e86fe13607a89d6c886fd338ee6dfc0",
+   "sha256_measured_commit": null,
+   "identical": false
+  },
+  {
+   "file": "bench/summarize.py",
+   "sha256_submitted": "19b09dbeb7e3317fbca7b2664dabce4ed3173bbe8e1f7473eb36cfb5fd1e9dd1",
+   "sha256_measured_commit": "183a841117a76f7632594b5f21891861b30608e0bc5f3088129475c7d1cf33df",
+   "identical": false
+  },
+  {
+   "file": "bench/variants/__init__.py",
+   "sha256_submitted": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "sha256_measured_commit": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "identical": true
+  },
+  {
+   "file": "bench/variants/book_b_step1_levels.py",
+   "sha256_submitted": "fc47cc0866e4b5389928e499dccba443fdeb765938728af84f5f85b1b4a19303",
+   "sha256_measured_commit": "fc47cc0866e4b5389928e499dccba443fdeb765938728af84f5f85b1b4a19303",
+   "identical": true
+  },
+  {
+   "file": "bench/variants/book_b_step2_fastpath.py",
+   "sha256_submitted": "27171130956655600382aaaa22701abbc3997c2850a1bd65dfdb39667f63abba",
+   "sha256_measured_commit": "27171130956655600382aaaa22701abbc3997c2850a1bd65dfdb39667f63abba",
+   "identical": true
+  },
+  {
+   "file": "bench/variants/book_c_deque.py",
+   "sha256_submitted": "88754855eadbf19155c32321925b350ef2995ab351b4adef6d70eadc7ae20d06",
+   "sha256_measured_commit": null,
+   "identical": false
+  },
+  {
+   "file": "bench/verify_correctness.py",
+   "sha256_submitted": "3b224b3943d21dd4132d12f85cc2cdc6dc7e5d4069a74debad6b16f30e4a9a20",
+   "sha256_measured_commit": "3b224b3943d21dd4132d12f85cc2cdc6dc7e5d4069a74debad6b16f30e4a9a20",
+   "identical": true
+  },
+  {
+   "file": "dashboard/build.py",
+   "sha256_submitted": "13c1dc3e901aa97ae69af7447ab5407bf5537e300dfe7a4c573819b6f4f4b8d0",
+   "sha256_measured_commit": "2dcdea1fac69fbe14eefb10a6c5c61d339ef935c67514d325fb97ff65617b394",
+   "identical": false
+  },
+  {
+   "file": "lob/__init__.py",
+   "sha256_submitted": "57be969c014b78ac3294c5c9ce8066af9486f4daa32ad01f543c069ec853e01f",
+   "sha256_measured_commit": "57be969c014b78ac3294c5c9ce8066af9486f4daa32ad01f543c069ec853e01f",
+   "identical": true
+  },
+  {
+   "file": "lob/book_a.py",
+   "sha256_submitted": "e041aeee2900aa05c57229b4bb57c08c56112367dd378ab774069e25a840aabc",
+   "sha256_measured_commit": "e041aeee2900aa05c57229b4bb57c08c56112367dd378ab774069e25a840aabc",
+   "identical": true
+  },
+  {
+   "file": "lob/book_b.py",
+   "sha256_submitted": "b3826673b79445146719d63b892c893ef99e6fef9a8efd5a563071eec284b50b",
+   "sha256_measured_commit": "4ee7b72c12ec0dc36ee26ecf09950879ada082c2cd40b4215caaadd8f58da6eb",
+   "identical": false
+  },
+  {
+   "file": "lob/common.py",
+   "sha256_submitted": "9efc130fa849c93525c359faf482c354b269838dd8ad6d17dfd2fbdd777120e2",
+   "sha256_measured_commit": "9efc130fa849c93525c359faf482c354b269838dd8ad6d17dfd2fbdd777120e2",
+   "identical": true
+  },
+  {
+   "file": "replay.py",
+   "sha256_submitted": "e91229d1c76905cdcebb79b0c0686ac28ed378b13e85125b089d657d20692dd1",
+   "sha256_measured_commit": "e91229d1c76905cdcebb79b0c0686ac28ed378b13e85125b089d657d20692dd1",
+   "identical": true
+  },
+  {
+   "file": "tests/__init__.py",
+   "sha256_submitted": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "sha256_measured_commit": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "identical": true
+  },
+  {
+   "file": "tests/oracle.py",
+   "sha256_submitted": "92a30b4c3ed14cb388e70f6a91812a2122a6b5e71384238a73f9425b8a50ebb2",
+   "sha256_measured_commit": "92a30b4c3ed14cb388e70f6a91812a2122a6b5e71384238a73f9425b8a50ebb2",
+   "identical": true
+  },
+  {
+   "file": "tests/streams.py",
+   "sha256_submitted": "971a5fc1367893382ce1c84acf3d33e9fb499afc66d476350fd1fd57005013b7",
+   "sha256_measured_commit": "971a5fc1367893382ce1c84acf3d33e9fb499afc66d476350fd1fd57005013b7",
+   "identical": true
+  },
+  {
+   "file": "tests/test_added_checks.py",
+   "sha256_submitted": "16e079e146fc00c7225061b4b09f01de1f5fcb9d4933da5a8576546e3441df40",
+   "sha256_measured_commit": null,
+   "identical": false
+  },
+  {
+   "file": "tests/test_equivalence.py",
+   "sha256_submitted": "7e6e00a26518e673a67981d61ef5c37002a342f6b4079aef37c602e4b202a8ea",
+   "sha256_measured_commit": "7e6e00a26518e673a67981d61ef5c37002a342f6b4079aef37c602e4b202a8ea",
+   "identical": true
+  },
+  {
+   "file": "tests/test_spec.py",
+   "sha256_submitted": "d42d3f37c3d37bb92a5a1219c161ec04c8bb062f036a853bdc7ff56d97692c1f",
+   "sha256_measured_commit": "d42d3f37c3d37bb92a5a1219c161ec04c8bb062f036a853bdc7ff56d97692c1f",
+   "identical": true
+  },
+  {
+   "file": "tests/test_version_c.py",
+   "sha256_submitted": "cba37946fb3143bb0be3188e8196ff865a3e89eaf499322438b4192e0c4b8018",
+   "sha256_measured_commit": null,
+   "identical": false
+  }
+ ]
+}

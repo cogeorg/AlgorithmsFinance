@@ -1,0 +1,5 @@
+version,scenario,seed,event_count,phase,repeat,status,completed_events,elapsed_seconds,throughput_events_per_second,latency_median_us,latency_p95_us,latency_p99_us,active_order_peak,price_level_peak,final_active_orders,final_price_levels,fill_count,makers_touched,price_levels_visited,maker_scans,traced_peak_bytes,notes
+A-list,mixed,42,1000,replay,1,completed,1000,0.013825083,72332.296,,,,,,138,124,,,,,,
+A-list,mixed,42,1000,replay_median,median,completed,1000,0.013825083,72332.296,,,,,,,,,,,,,
+B-indexed,mixed,42,1000,replay,1,completed,1000,0.003698458,270382.954,,,,,,138,124,,,,,,
+B-indexed,mixed,42,1000,replay_median,median,completed,1000,0.003698458,270382.954,,,,,,,,,,,,,

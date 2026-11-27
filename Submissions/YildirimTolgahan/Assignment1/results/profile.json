@@ -1,0 +1,225 @@
+{
+ "tool": "cProfile",
+ "runs": [
+  {
+   "version": "A",
+   "workload": "buildup_10000.jsonl.gz",
+   "total_seconds": 1.4560538,
+   "top": [
+    {
+     "function": "<built-in method builtins.min>",
+     "calls": 9995,
+     "own_seconds": 1.3586731,
+     "cumulative_seconds": 1.3586731
+    },
+    {
+     "function": "events.py:104 ProcessEvent",
+     "calls": 10000,
+     "own_seconds": 0.027548200000000002,
+     "cumulative_seconds": 1.4560273000000001
+    },
+    {
+     "function": "events.py:129 AddLimitOrder",
+     "calls": 10000,
+     "own_seconds": 0.023144400000000002,
+     "cumulative_seconds": 1.4118810000000002
+    },
+    {
+     "function": "book_a.py:56 _add_limit",
+     "calls": 10000,
+     "own_seconds": 0.0163453,
+     "cumulative_seconds": 1.3887366
+    },
+    {
+     "function": "<method 'get' of 'dict' objects>",
+     "calls": 70000,
+     "own_seconds": 0.014597700000000002,
+     "cumulative_seconds": 0.014597700000000002
+    },
+    {
+     "function": "book_a.py:39 _match",
+     "calls": 10000,
+     "own_seconds": 0.006519100000000001,
+     "cumulative_seconds": 1.3694674
+    },
+    {
+     "function": "book_a.py:32 _best",
+     "calls": 9995,
+     "own_seconds": 0.0042752,
+     "cumulative_seconds": 1.3629483
+    },
+    {
+     "function": "<method 'append' of 'list' objects>",
+     "calls": 10000,
+     "own_seconds": 0.0029239,
+     "cumulative_seconds": 0.0029239
+    }
+   ]
+  },
+  {
+   "version": "B",
+   "workload": "buildup_10000.jsonl.gz",
+   "total_seconds": 0.0692687,
+   "top": [
+    {
+     "function": "events.py:104 ProcessEvent",
+     "calls": 10000,
+     "own_seconds": 0.0212333,
+     "cumulative_seconds": 0.0692387
+    },
+    {
+     "function": "events.py:129 AddLimitOrder",
+     "calls": 10000,
+     "own_seconds": 0.0171513,
+     "cumulative_seconds": 0.0355689
+    },
+    {
+     "function": "book_b.py:127 _add_limit",
+     "calls": 10000,
+     "own_seconds": 0.0144171,
+     "cumulative_seconds": 0.018417600000000003
+    },
+    {
+     "function": "<method 'get' of 'dict' objects>",
+     "calls": 80000,
+     "own_seconds": 0.013806200000000001,
+     "cumulative_seconds": 0.013806200000000001
+    },
+    {
+     "function": "<built-in method builtins.isinstance>",
+     "calls": 10000,
+     "own_seconds": 0.0013948,
+     "cumulative_seconds": 0.0013948
+    },
+    {
+     "function": "<built-in method _heapq.heappush>",
+     "calls": 1977,
+     "own_seconds": 0.0006377,
+     "cumulative_seconds": 0.0006377
+    },
+    {
+     "function": "<method 'add' of 'set' objects>",
+     "calls": 1977,
+     "own_seconds": 0.0005983000000000001,
+     "cumulative_seconds": 0.0005983000000000001
+    },
+    {
+     "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+     "calls": 1,
+     "own_seconds": 3e-05,
+     "cumulative_seconds": 3e-05
+    }
+   ]
+  },
+  {
+   "version": "A",
+   "workload": "mixed_10000.jsonl.gz",
+   "total_seconds": 0.2295066,
+   "top": [
+    {
+     "function": "<built-in method builtins.min>",
+     "calls": 8025,
+     "own_seconds": 0.1350298,
+     "cumulative_seconds": 0.1350298
+    },
+    {
+     "function": "<method 'remove' of 'list' objects>",
+     "calls": 3738,
+     "own_seconds": 0.021654200000000002,
+     "cumulative_seconds": 0.021654200000000002
+    },
+    {
+     "function": "events.py:104 ProcessEvent",
+     "calls": 10000,
+     "own_seconds": 0.0209469,
+     "cumulative_seconds": 0.2294814
+    },
+    {
+     "function": "events.py:129 AddLimitOrder",
+     "calls": 6075,
+     "own_seconds": 0.010512200000000001,
+     "cumulative_seconds": 0.1731027
+    },
+    {
+     "function": "<method 'get' of 'dict' objects>",
+     "calls": 59712,
+     "own_seconds": 0.010444400000000001,
+     "cumulative_seconds": 0.010444400000000001
+    },
+    {
+     "function": "book_a.py:39 _match",
+     "calls": 7562,
+     "own_seconds": 0.009352000000000001,
+     "cumulative_seconds": 0.1633843
+    },
+    {
+     "function": "book_a.py:56 _add_limit",
+     "calls": 6075,
+     "own_seconds": 0.0062179,
+     "cumulative_seconds": 0.1625905
+    },
+    {
+     "function": "book_a.py:32 _best",
+     "calls": 8025,
+     "own_seconds": 0.0025935000000000003,
+     "cumulative_seconds": 0.1376233
+    }
+   ]
+  },
+  {
+   "version": "B",
+   "workload": "mixed_10000.jsonl.gz",
+   "total_seconds": 0.08345500000000002,
+   "top": [
+    {
+     "function": "events.py:104 ProcessEvent",
+     "calls": 10000,
+     "own_seconds": 0.0200992,
+     "cumulative_seconds": 0.0834295
+    },
+    {
+     "function": "book_b.py:74 _match",
+     "calls": 2473,
+     "own_seconds": 0.0136857,
+     "cumulative_seconds": 0.0210622
+    },
+    {
+     "function": "<method 'get' of 'dict' objects>",
+     "calls": 69074,
+     "own_seconds": 0.012366100000000001,
+     "cumulative_seconds": 0.012366100000000001
+    },
+    {
+     "function": "events.py:129 AddLimitOrder",
+     "calls": 6075,
+     "own_seconds": 0.0095218,
+     "cumulative_seconds": 0.0305078
+    },
+    {
+     "function": "book_b.py:127 _add_limit",
+     "calls": 6075,
+     "own_seconds": 0.0095156,
+     "cumulative_seconds": 0.020986
+    },
+    {
+     "function": "<built-in method builtins.len>",
+     "calls": 15752,
+     "own_seconds": 0.0029026,
+     "cumulative_seconds": 0.0029026
+    },
+    {
+     "function": "events.py:182 CancelOrder",
+     "calls": 2438,
+     "own_seconds": 0.0022990000000000003,
+     "cumulative_seconds": 0.0053365
+    },
+    {
+     "function": "events.py:154 FillMarketSell",
+     "calls": 1487,
+     "own_seconds": 0.00191,
+     "cumulative_seconds": 0.0158491
+    }
+   ]
+  }
+ ]
+}

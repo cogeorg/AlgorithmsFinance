@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "stage": "07_memory_combined_baseline",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "-k",
+    "not revised and not versions_agree"
+  ],
+  "working_directory": ".",
+  "started_utc": "2026-11-23T18:11:18.179839+00:00",
+  "finished_utc": "2026-11-23T18:11:21.713238+00:00",
+  "elapsed_seconds": 3.5332609999459237,
+  "exit_code": 0,
+  "python_version": "3.12.10",
+  "python_implementation": "CPython",
+  "pytest_version": "9.2.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git": {
+    "branch": "assignment1-mueller-alexandra",
+    "head": "a8fc71c5a68f4557da02186cc1cdd243ccf9a4f3",
+    "status_before_evidence_files": "M README.md\n M docs/04_measurement_method.md\n M docs/05_revision_log.md\n M docs/06_ai_assistance.md\n?? evidence/07_memory_after_implementation/\n?? evidence/07_memory_before_implementation/\n?? evidence/07_memory_smoke/\n?? scripts/05_measure_memory.py\n?? src/limit_order_book/memory_measurement.py\n?? tests/test_14_memory_measurement.py\n?? ../phase2_audit_liuhaina/",
+    "clean_before_evidence_files": false
+  }
+}

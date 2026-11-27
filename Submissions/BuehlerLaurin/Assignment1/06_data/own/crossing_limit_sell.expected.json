@@ -1,0 +1,102 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "crossing_limit_sell",
+ "description": "A sell at 99 for 4 is filled at 100 (b1, then b3 partly); a sell at 97 for 5 takes b3's rest and b2 at 98, then rests 2 at 97.",
+ "covers": [
+  "crossing limit sell",
+  "limit sell fully filled -> status filled",
+  "residual limit sell rests",
+  "partially filled maker keeps priority"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 3,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "order_id": "b2",
+   "status": "resting",
+   "unfilled_qty_units": 2,
+   "fills": []
+  },
+  {
+   "event_id": "e3",
+   "order_id": "b3",
+   "status": "resting",
+   "unfilled_qty_units": 2,
+   "fills": []
+  },
+  {
+   "event_id": "e4",
+   "order_id": "a1",
+   "status": "resting",
+   "unfilled_qty_units": 1,
+   "fills": []
+  },
+  {
+   "event_id": "e5",
+   "order_id": "t1",
+   "status": "filled",
+   "unfilled_qty_units": 0,
+   "fills": [
+    {
+     "maker_id": "b1",
+     "taker_id": "t1",
+     "price_ticks": 100,
+     "qty_units": 3
+    },
+    {
+     "maker_id": "b3",
+     "taker_id": "t1",
+     "price_ticks": 100,
+     "qty_units": 1
+    }
+   ]
+  },
+  {
+   "event_id": "e6",
+   "order_id": "t2",
+   "status": "resting",
+   "unfilled_qty_units": 2,
+   "fills": [
+    {
+     "maker_id": "b3",
+     "taker_id": "t2",
+     "price_ticks": 100,
+     "qty_units": 1
+    },
+    {
+     "maker_id": "b2",
+     "taker_id": "t2",
+     "price_ticks": 98,
+     "qty_units": 2
+    }
+   ]
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "t2",
+   "side": "SELL",
+   "price_ticks": 97,
+   "qty_units": 2,
+   "arrival_seq": 6
+  },
+  {
+   "order_id": "a1",
+   "side": "SELL",
+   "price_ticks": 105,
+   "qty_units": 1,
+   "arrival_seq": 4
+  }
+ ],
+ "best_bid": null,
+ "best_ask": 97
+}

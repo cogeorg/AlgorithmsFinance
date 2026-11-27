@@ -1,0 +1,160 @@
+{
+  "attempts": [
+    {
+      "completed_repeats": 0,
+      "config_id": "workload_sweep_M100000_seed42__baseline",
+      "duration_seconds": 30.030831299955025,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_sweep_M100000_seed42__baseline__attempt_001__phase_engine_replay.json",
+      "status": "stopped_timeout"
+    },
+    {
+      "completed_repeats": 5,
+      "config_id": "workload_sweep_M100000_seed42__revised",
+      "duration_seconds": 7.562165399780497,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_sweep_M100000_seed42__revised__attempt_001__phase_engine_replay.json",
+      "status": "completed"
+    },
+    {
+      "completed_repeats": 0,
+      "config_id": "workload_sweep_M100000_seed43__baseline",
+      "duration_seconds": 30.020692500052974,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_sweep_M100000_seed43__baseline__attempt_001__phase_engine_replay.json",
+      "status": "stopped_timeout"
+    },
+    {
+      "completed_repeats": 5,
+      "config_id": "workload_sweep_M100000_seed43__revised",
+      "duration_seconds": 5.2121692998334765,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_sweep_M100000_seed43__revised__attempt_001__phase_engine_replay.json",
+      "status": "completed"
+    },
+    {
+      "completed_repeats": 0,
+      "config_id": "workload_sweep_M100000_seed44__baseline",
+      "duration_seconds": 30.028251899871975,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_sweep_M100000_seed44__baseline__attempt_001__phase_engine_replay.json",
+      "status": "stopped_timeout"
+    },
+    {
+      "completed_repeats": 5,
+      "config_id": "workload_sweep_M100000_seed44__revised",
+      "duration_seconds": 7.631606899900362,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_sweep_M100000_seed44__revised__attempt_001__phase_engine_replay.json",
+      "status": "completed"
+    },
+    {
+      "completed_repeats": 5,
+      "config_id": "workload_cancel_churn_M100000_seed42__baseline",
+      "duration_seconds": 3.2569510999601334,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_cancel_churn_M100000_seed42__baseline__attempt_001__phase_engine_replay.json",
+      "status": "completed"
+    },
+    {
+      "completed_repeats": 5,
+      "config_id": "workload_cancel_churn_M100000_seed42__revised",
+      "duration_seconds": 3.3389867001678795,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_cancel_churn_M100000_seed42__revised__attempt_001__phase_engine_replay.json",
+      "status": "completed"
+    },
+    {
+      "completed_repeats": 5,
+      "config_id": "workload_cancel_churn_M100000_seed43__baseline",
+      "duration_seconds": 3.1419020001776516,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_cancel_churn_M100000_seed43__baseline__attempt_001__phase_engine_replay.json",
+      "status": "completed"
+    },
+    {
+      "completed_repeats": 5,
+      "config_id": "workload_cancel_churn_M100000_seed43__revised",
+      "duration_seconds": 3.335957899922505,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_cancel_churn_M100000_seed43__revised__attempt_001__phase_engine_replay.json",
+      "status": "completed"
+    },
+    {
+      "completed_repeats": 5,
+      "config_id": "workload_cancel_churn_M100000_seed44__baseline",
+      "duration_seconds": 3.1656494000926614,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_cancel_churn_M100000_seed44__baseline__attempt_001__phase_engine_replay.json",
+      "status": "completed"
+    },
+    {
+      "completed_repeats": 5,
+      "config_id": "workload_cancel_churn_M100000_seed44__revised",
+      "duration_seconds": 3.144406799925491,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_cancel_churn_M100000_seed44__revised__attempt_001__phase_engine_replay.json",
+      "status": "completed"
+    },
+    {
+      "completed_repeats": 5,
+      "config_id": "workload_mixed_M100000_seed44__revised",
+      "duration_seconds": 4.315651100128889,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_mixed_M100000_seed44__revised__attempt_001__phase_engine_replay.json",
+      "status": "completed"
+    },
+    {
+      "completed_repeats": 2,
+      "config_id": "queue_prices4_M10000__baseline",
+      "duration_seconds": 30.010572799947113,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\queue_prices4_M10000__baseline__attempt_001__phase_engine_replay.json",
+      "status": "stopped_timeout"
+    },
+    {
+      "completed_repeats": 5,
+      "config_id": "queue_prices4_M10000__revised",
+      "duration_seconds": 0.6444560999516398,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\queue_prices4_M10000__revised__attempt_001__phase_engine_replay.json",
+      "status": "completed"
+    },
+    {
+      "completed_repeats": 1,
+      "config_id": "queue_prices1000_M10000__baseline",
+      "duration_seconds": 30.048554399982095,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\queue_prices1000_M10000__baseline__attempt_001__phase_engine_replay.json",
+      "status": "stopped_timeout"
+    },
+    {
+      "completed_repeats": 5,
+      "config_id": "queue_prices1000_M10000__revised",
+      "duration_seconds": 1.2918232001829892,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\queue_prices1000_M10000__revised__attempt_001__phase_engine_replay.json",
+      "status": "completed"
+    },
+    {
+      "completed_repeats": 0,
+      "config_id": "workload_buildup_M1000000_seed42__baseline",
+      "duration_seconds": 30.20023880014196,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_buildup_M1000000_seed42__baseline__attempt_001__phase_engine_replay.json",
+      "status": "stopped_timeout"
+    },
+    {
+      "completed_repeats": 1,
+      "config_id": "workload_buildup_M1000000_seed42__revised",
+      "duration_seconds": 30.134993700077757,
+      "phase": "engine_replay",
+      "record_file": "results\\benchmarks\\coverage_recovery_short_20261126_1232\\records\\workload_buildup_M1000000_seed42__revised__attempt_001__phase_engine_replay.json",
+      "status": "stopped_timeout"
+    }
+  ],
+  "elapsed_seconds": 278.7858350998722,
+  "run_id": "coverage_recovery_short_20261126_1232",
+  "started_at_utc": "2026-11-26T11:34:24.019268+00:00",
+  "wall_budget_seconds": 480
+}

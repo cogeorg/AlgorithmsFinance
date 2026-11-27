@@ -1,0 +1,92 @@
+{
+  "implementation": "compare",
+  "results": [
+    {
+      "event_id": "event1",
+      "order_id": "b1",
+      "status": "resting",
+      "unfilled_qty_units": 100000000,
+      "fills": []
+    },
+    {
+      "event_id": "event2",
+      "order_id": "b2",
+      "status": "resting",
+      "unfilled_qty_units": 100000000,
+      "fills": []
+    },
+    {
+      "event_id": "event3",
+      "order_id": "b3",
+      "status": "resting",
+      "unfilled_qty_units": 300000000,
+      "fills": []
+    },
+    {
+      "event_id": "event4",
+      "order_id": "b4",
+      "status": "resting",
+      "unfilled_qty_units": 500000000,
+      "fills": []
+    },
+    {
+      "event_id": "event5",
+      "order_id": "a1",
+      "status": "resting",
+      "unfilled_qty_units": 200000000,
+      "fills": []
+    },
+    {
+      "event_id": "event6",
+      "order_id": "s1",
+      "status": "filled",
+      "unfilled_qty_units": 0,
+      "fills": [
+        {
+          "maker_id": "b1",
+          "taker_id": "s1",
+          "price_ticks": 6000000,
+          "qty_units": 100000000
+        },
+        {
+          "maker_id": "b2",
+          "taker_id": "s1",
+          "price_ticks": 6000000,
+          "qty_units": 100000000
+        },
+        {
+          "maker_id": "b3",
+          "taker_id": "s1",
+          "price_ticks": 5990000,
+          "qty_units": 300000000
+        },
+        {
+          "maker_id": "b4",
+          "taker_id": "s1",
+          "price_ticks": 5970000,
+          "qty_units": 100000000
+        }
+      ]
+    }
+  ],
+  "book": {
+    "bids": [
+      {
+        "order_id": "b4",
+        "side": "BUY",
+        "price_ticks": 5970000,
+        "qty_units": 400000000,
+        "arrival_seq": 4
+      }
+    ],
+    "asks": [
+      {
+        "order_id": "a1",
+        "side": "SELL",
+        "price_ticks": 6010000,
+        "qty_units": 200000000,
+        "arrival_seq": 5
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+﻿Command: python -m pytest -q --tb=short tests/test_revised_storage.py tests/test_generated_streams.py
+
+FFFFFFF...FFF                                                            [100%]
+================================== FAILURES ===================================
+____________ test_cancelling_middle_of_price_queue_preserves_fifo _____________
+tests\test_revised_storage.py:48: in test_cancelling_middle_of_price_queue_preserves_fifo
+    assert book.process_event(_limit(seq, order_id, "BUY", 6000))[
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+orderbook\revised.py:5: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_partial_maker_keeps_fifo_priority_across_events _____________
+tests\test_revised_storage.py:80: in test_partial_maker_keeps_fifo_priority_across_events
+    book.process_event(_limit(1, "first", "BUY", 6000, 10))
+orderbook\revised.py:5: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_____________ test_reactivated_price_reuses_its_stale_heap_entry ______________
+tests\test_revised_storage.py:121: in test_reactivated_price_reuses_its_stale_heap_entry
+    book.process_event(_limit(1, "old-low", "BUY", 5000))
+orderbook\revised.py:5: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_______ test_worse_price_cancellations_leave_bounded_stale_heap_entries _______
+tests\test_revised_storage.py:144: in test_worse_price_cancellations_leave_bounded_stale_heap_entries
+    book.process_event(_limit(seq, f"bid-{price}", "BUY", price))
+orderbook\revised.py:5: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+_______ test_repeated_churn_stays_bounded_while_another_price_is_active _______
+tests\test_revised_storage.py:158: in test_repeated_churn_stays_bounded_while_another_price_is_active
+    book.process_event(_limit(1, "anchor", "BUY", 100))
+orderbook\revised.py:5: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+______________ test_each_side_clears_heap_when_it_becomes_empty _______________
+tests\test_revised_storage.py:180: in test_each_side_clears_heap_when_it_becomes_empty
+    book.process_event(_limit(1, "bid-a", "BUY", 6000))
+orderbook\revised.py:5: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_cleanup_preserves_best_price_and_fifo_matching_order __________
+tests\test_revised_storage.py:201: in test_cleanup_preserves_best_price_and_fifo_matching_order
+    book.process_event(_limit(1, "first-best", "BUY", 7000, 10))
+orderbook\revised.py:5: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_generated_stream_versions_match_after_each_event[13] __________
+tests\test_generated_streams.py:54: in test_generated_stream_versions_match_after_each_event
+    revised_result = revised.process_event(event)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+orderbook\revised.py:5: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_generated_stream_versions_match_after_each_event[37] __________
+tests\test_generated_streams.py:54: in test_generated_stream_versions_match_after_each_event
+    revised_result = revised.process_event(event)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+orderbook\revised.py:5: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_generated_stream_versions_match_after_each_event[91] __________
+tests\test_generated_streams.py:54: in test_generated_stream_versions_match_after_each_event
+    revised_result = revised.process_event(event)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+orderbook\revised.py:5: in process_event
+    raise NotImplementedError
+E   NotImplementedError
+=========================== short test summary info ===========================
+FAILED tests/test_revised_storage.py::test_cancelling_middle_of_price_queue_preserves_fifo
+FAILED tests/test_revised_storage.py::test_partial_maker_keeps_fifo_priority_across_events
+FAILED tests/test_revised_storage.py::test_reactivated_price_reuses_its_stale_heap_entry
+FAILED tests/test_revised_storage.py::test_worse_price_cancellations_leave_bounded_stale_heap_entries
+FAILED tests/test_revised_storage.py::test_repeated_churn_stays_bounded_while_another_price_is_active
+FAILED tests/test_revised_storage.py::test_each_side_clears_heap_when_it_becomes_empty
+FAILED tests/test_revised_storage.py::test_cleanup_preserves_best_price_and_fifo_matching_order
+FAILED tests/test_generated_streams.py::test_generated_stream_versions_match_after_each_event[13]
+FAILED tests/test_generated_streams.py::test_generated_stream_versions_match_after_each_event[37]
+FAILED tests/test_generated_streams.py::test_generated_stream_versions_match_after_each_event[91]
+10 failed, 3 passed in 0.26s

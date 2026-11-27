@@ -1,0 +1,14 @@
+label: b3r-fast-gate-mutants
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/fast_gate_mutants.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3c95836e66e797025518c6d66fc9733b5807ea85
+dirty: True
+python: 3.13.15
+utc: 20261122T194115Z
+exit_code: 0
+duration_s: 1.08
+------------------------------------------------------------
+KILLED by AssertionError: unsafe bool validator
+KILLED by AssertionError: same values but reversed result key order
+KILLED by AssertionError: counter-only behavior drift
+RESULT: PASS (G1/G2 gates detect unsafe validation, output ordering and counter drift; no benchmark)

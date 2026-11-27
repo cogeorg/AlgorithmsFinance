@@ -1,0 +1,55 @@
+{
+  "operation_counts": [
+    {
+      "version": "BaselineOrderBook",
+      "events": 1000,
+      "active_final": 1000,
+      "id_lookup_probes": 499500,
+      "scope": "Baseline counts list identifier comparisons for unique misses; Revised counts dictionary get calls, not internal hash-slot probes. Matching scans are additional. Counter/profile overhead included; not primary timing."
+    },
+    {
+      "version": "RevisedOrderBook",
+      "events": 1000,
+      "active_final": 1000,
+      "id_lookup_probes": 1000,
+      "scope": "Baseline counts list identifier comparisons for unique misses; Revised counts dictionary get calls, not internal hash-slot probes. Matching scans are additional. Counter/profile overhead included; not primary timing."
+    },
+    {
+      "version": "BaselineOrderBook",
+      "events": 2000,
+      "active_final": 2000,
+      "id_lookup_probes": 1999000,
+      "scope": "Baseline counts list identifier comparisons for unique misses; Revised counts dictionary get calls, not internal hash-slot probes. Matching scans are additional. Counter/profile overhead included; not primary timing."
+    },
+    {
+      "version": "RevisedOrderBook",
+      "events": 2000,
+      "active_final": 2000,
+      "id_lookup_probes": 2000,
+      "scope": "Baseline counts list identifier comparisons for unique misses; Revised counts dictionary get calls, not internal hash-slot probes. Matching scans are additional. Counter/profile overhead included; not primary timing."
+    }
+  ],
+  "container_capacity": {
+    "before": {
+      "live": 1000,
+      "id_index_shallow_bytes": 26032
+    },
+    "after": {
+      "live": 0,
+      "id_index_shallow_bytes": 26032
+    },
+    "scope": "Separate small getsizeof diagnostic of the ID dictionary only; excludes referents and is not primary traced-memory evidence."
+  },
+  "worked_example": {
+    "status": "passed",
+    "ordered_makers": [
+      "b1",
+      "b2",
+      "b3",
+      "b4"
+    ],
+    "proceeds_usd": 359400,
+    "remaining_b4_units": 400000000,
+    "ask_unchanged": true
+  }
+}

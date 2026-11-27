@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "available_matching_pairs": [
+    {
+      "seed": 42,
+      "scenario": "cancel_churn"
+    },
+    {
+      "seed": 43,
+      "scenario": "cancel_churn"
+    },
+    {
+      "seed": 44,
+      "scenario": "cancel_churn"
+    }
+  ],
+  "invalid": []
+}

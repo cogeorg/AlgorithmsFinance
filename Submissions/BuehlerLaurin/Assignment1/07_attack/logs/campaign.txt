@@ -1,0 +1,22 @@
+planted bug Lifo found at ('narrow', 0)
+planted bug SeqOnReject found at ('narrow', 0)
+planted bug RestMarket found at ('narrow', 0)
+planted bug StrictCross found at ('narrow', 0)
+planted bug OneEntryCancelZero found at ('wide', 0)
+A   narrow  seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+A   wide    seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+A   churn   seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+A   drift   seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+B   narrow  seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+B   wide    seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+B   churn   seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+B   drift   seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+B2  narrow  seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+B2  wide    seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+B2  churn   seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+B2  drift   seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+B3  narrow  seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+B3  wide    seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+B3  churn   seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+B3  drift   seeds 10000..10099 x 400 events = 40000 events, 2 passes: breaks so far 0
+total breaks 0 seconds 143

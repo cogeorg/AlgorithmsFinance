@@ -1,0 +1,206 @@
+.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF..FF                                       [100%]
+================================== FAILURES ===================================
+__________________________ test_Test1[lob_b_sorted] ___________________________
+02_tests\test_excel_tabs.py:98: in test_Test1
+    assert status_rows(results) == [
+           ^^^^^^^^^^^^^^^^^^^^
+02_tests\test_excel_tabs.py:42: in status_rows
+    return [(r["event_id"], r["order_id"], r["status"],
+             ^^^^^^^^^^^^^
+E   KeyError: 'event_id'
+___________________________ test_Test1[lob_b_heap] ____________________________
+02_tests\test_excel_tabs.py:98: in test_Test1
+    assert status_rows(results) == [
+           ^^^^^^^^^^^^^^^^^^^^
+02_tests\test_excel_tabs.py:42: in status_rows
+    return [(r["event_id"], r["order_id"], r["status"],
+             ^^^^^^^^^^^^^
+E   KeyError: 'event_id'
+__________________________ test_Test2[lob_b_sorted] ___________________________
+02_tests\test_excel_tabs.py:163: in test_Test2
+    assert status_rows(results) == [
+           ^^^^^^^^^^^^^^^^^^^^
+02_tests\test_excel_tabs.py:42: in status_rows
+    return [(r["event_id"], r["order_id"], r["status"],
+             ^^^^^^^^^^^^^
+E   KeyError: 'event_id'
+___________________________ test_Test2[lob_b_heap] ____________________________
+02_tests\test_excel_tabs.py:163: in test_Test2
+    assert status_rows(results) == [
+           ^^^^^^^^^^^^^^^^^^^^
+02_tests\test_excel_tabs.py:42: in status_rows
+    return [(r["event_id"], r["order_id"], r["status"],
+             ^^^^^^^^^^^^^
+E   KeyError: 'event_id'
+__________________________ test_Test3[lob_b_sorted] ___________________________
+02_tests\test_excel_tabs.py:219: in test_Test3
+    assert status_rows(results) == [
+           ^^^^^^^^^^^^^^^^^^^^
+02_tests\test_excel_tabs.py:42: in status_rows
+    return [(r["event_id"], r["order_id"], r["status"],
+             ^^^^^^^^^^^^^
+E   KeyError: 'event_id'
+___________________________ test_Test3[lob_b_heap] ____________________________
+02_tests\test_excel_tabs.py:219: in test_Test3
+    assert status_rows(results) == [
+           ^^^^^^^^^^^^^^^^^^^^
+02_tests\test_excel_tabs.py:42: in status_rows
+    return [(r["event_id"], r["order_id"], r["status"],
+             ^^^^^^^^^^^^^
+E   KeyError: 'event_id'
+__________________________ test_Test4[lob_b_sorted] ___________________________
+02_tests\test_excel_tabs.py:250: in test_Test4
+    assert status_rows(results[:2]) == [
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\test_excel_tabs.py:42: in status_rows
+    return [(r["event_id"], r["order_id"], r["status"],
+             ^^^^^^^^^^^^^
+E   KeyError: 'event_id'
+___________________________ test_Test4[lob_b_heap] ____________________________
+02_tests\test_excel_tabs.py:250: in test_Test4
+    assert status_rows(results[:2]) == [
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\test_excel_tabs.py:42: in status_rows
+    return [(r["event_id"], r["order_id"], r["status"],
+             ^^^^^^^^^^^^^
+E   KeyError: 'event_id'
+__________________________ test_Test5[lob_b_sorted] ___________________________
+02_tests\test_excel_tabs.py:309: in test_Test5
+    assert_rejected(results[0], "event1", "qty")      # qty_units = 0
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\test_excel_tabs.py:304: in assert_rejected
+    assert result["event_id"] == event_id
+           ^^^^^^^^^^^^^^^^^^
+E   KeyError: 'event_id'
+___________________________ test_Test5[lob_b_heap] ____________________________
+02_tests\test_excel_tabs.py:309: in test_Test5
+    assert_rejected(results[0], "event1", "qty")      # qty_units = 0
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+02_tests\test_excel_tabs.py:304: in assert_rejected
+    assert result["event_id"] == event_id
+           ^^^^^^^^^^^^^^^^^^
+E   KeyError: 'event_id'
+_______________ test_limits_rest_without_trading[lob_b_sorted] ________________
+02_tests\test_worked_example.py:113: in test_limits_rest_without_trading
+    assert results[:5] == EXPECTED_LIMIT_RESULTS
+E   AssertionError: assert [{}, {}, {}, {}, {}] == [{'event_id':...0000000, ...}]
+E     
+E     At index 0 diff: {} != {'event_id': 'event1', 'order_id': 'b1', 'status': 'resting', 'unfilled_qty_units': 100000000, 'fills': []}
+E     Use -v to get more diff
+________________ test_limits_rest_without_trading[lob_b_heap] _________________
+02_tests\test_worked_example.py:113: in test_limits_rest_without_trading
+    assert results[:5] == EXPECTED_LIMIT_RESULTS
+E   AssertionError: assert [{}, {}, {}, {}, {}] == [{'event_id':...0000000, ...}]
+E     
+E     At index 0 diff: {} != {'event_id': 'event1', 'order_id': 'b1', 'status': 'resting', 'unfilled_qty_units': 100000000, 'fills': []}
+E     Use -v to get more diff
+____________________ test_market_sell_result[lob_b_sorted] ____________________
+02_tests\test_worked_example.py:118: in test_market_sell_result
+    assert results[5] == EXPECTED_SELL_RESULT
+E   AssertionError: assert {} == {'event_id': ...nits': 0, ...}
+E     
+E     Right contains 5 more items:
+E     {'event_id': 'event6',
+E      'fills': [{'maker_id': 'b1',
+E                 'price_ticks': 6000000,
+E                 'qty_units': 100000000,
+E                 'taker_id': 's1'},...
+E     
+E     ...Full output truncated (16 lines hidden), use '-vv' to show
+_____________________ test_market_sell_result[lob_b_heap] _____________________
+02_tests\test_worked_example.py:118: in test_market_sell_result
+    assert results[5] == EXPECTED_SELL_RESULT
+E   AssertionError: assert {} == {'event_id': ...nits': 0, ...}
+E     
+E     Right contains 5 more items:
+E     {'event_id': 'event6',
+E      'fills': [{'maker_id': 'b1',
+E                 'price_ticks': 6000000,
+E                 'qty_units': 100000000,
+E                 'taker_id': 's1'},...
+E     
+E     ...Full output truncated (16 lines hidden), use '-vv' to show
+______________________ test_remaining_book[lob_b_sorted] ______________________
+02_tests\test_worked_example.py:123: in test_remaining_book
+    assert book.inspect_book() == EXPECTED_BOOK
+E   AssertionError: assert [] == [{'order_id':...0000000, ...}]
+E     
+E     Right contains 2 more items, first extra item: {'order_id': 'b4', 'side': 'BUY', 'price_ticks': 5970000, 'qty_units': 400000000, ...}
+E     Use -v to get more diff
+_______________________ test_remaining_book[lob_b_heap] _______________________
+02_tests\test_worked_example.py:123: in test_remaining_book
+    assert book.inspect_book() == EXPECTED_BOOK
+E   AssertionError: assert [] == [{'order_id':...0000000, ...}]
+E     
+E     Right contains 2 more items, first extra item: {'order_id': 'b4', 'side': 'BUY', 'price_ticks': 5970000, 'qty_units': 400000000, ...}
+E     Use -v to get more diff
+________________ test_proceeds_and_average_price[lob_b_sorted] ________________
+02_tests\test_worked_example.py:128: in test_proceeds_and_average_price
+    fills = results[5]["fills"]
+            ^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'fills'
+_________________ test_proceeds_and_average_price[lob_b_heap] _________________
+02_tests\test_worked_example.py:128: in test_proceeds_and_average_price
+    fills = results[5]["fills"]
+            ^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'fills'
+_________________ test_book_level_conservation[lob_b_sorted] __________________
+02_tests\test_worked_example.py:142: in test_book_level_conservation
+    fills = sell["fills"]
+            ^^^^^^^^^^^^^
+E   KeyError: 'fills'
+__________________ test_book_level_conservation[lob_b_heap] ___________________
+02_tests\test_worked_example.py:142: in test_book_level_conservation
+    fills = sell["fills"]
+            ^^^^^^^^^^^^^
+E   KeyError: 'fills'
+__________________ test_matches_supplied_json[lob_b_sorted] ___________________
+02_tests\test_worked_example.py:186: in test_matches_supplied_json
+    assert results[5] == supplied["market_sell_result"]
+E   AssertionError: assert {} == {'event_id': ...nits': 0, ...}
+E     
+E     Right contains 5 more items:
+E     {'event_id': 'event6',
+E      'fills': [{'maker_id': 'b1',
+E                 'price_ticks': 6000000,
+E                 'qty_units': 100000000,
+E                 'taker_id': 's1'},...
+E     
+E     ...Full output truncated (16 lines hidden), use '-vv' to show
+___________________ test_matches_supplied_json[lob_b_heap] ____________________
+02_tests\test_worked_example.py:186: in test_matches_supplied_json
+    assert results[5] == supplied["market_sell_result"]
+E   AssertionError: assert {} == {'event_id': ...nits': 0, ...}
+E     
+E     Right contains 5 more items:
+E     {'event_id': 'event6',
+E      'fills': [{'maker_id': 'b1',
+E                 'price_ticks': 6000000,
+E                 'qty_units': 100000000,
+E                 'taker_id': 's1'},...
+E     
+E     ...Full output truncated (16 lines hidden), use '-vv' to show
+=========================== short test summary info ===========================
+FAILED 02_tests/test_excel_tabs.py::test_Test1[lob_b_sorted] - KeyError: 'eve...
+FAILED 02_tests/test_excel_tabs.py::test_Test1[lob_b_heap] - KeyError: 'event...
+FAILED 02_tests/test_excel_tabs.py::test_Test2[lob_b_sorted] - KeyError: 'eve...
+FAILED 02_tests/test_excel_tabs.py::test_Test2[lob_b_heap] - KeyError: 'event...
+FAILED 02_tests/test_excel_tabs.py::test_Test3[lob_b_sorted] - KeyError: 'eve...
+FAILED 02_tests/test_excel_tabs.py::test_Test3[lob_b_heap] - KeyError: 'event...
+FAILED 02_tests/test_excel_tabs.py::test_Test4[lob_b_sorted] - KeyError: 'eve...
+FAILED 02_tests/test_excel_tabs.py::test_Test4[lob_b_heap] - KeyError: 'event...
+FAILED 02_tests/test_excel_tabs.py::test_Test5[lob_b_sorted] - KeyError: 'eve...
+FAILED 02_tests/test_excel_tabs.py::test_Test5[lob_b_heap] - KeyError: 'event...
+FAILED 02_tests/test_worked_example.py::test_limits_rest_without_trading[lob_b_sorted]
+FAILED 02_tests/test_worked_example.py::test_limits_rest_without_trading[lob_b_heap]
+FAILED 02_tests/test_worked_example.py::test_market_sell_result[lob_b_sorted]
+FAILED 02_tests/test_worked_example.py::test_market_sell_result[lob_b_heap]
+FAILED 02_tests/test_worked_example.py::test_remaining_book[lob_b_sorted] - A...
+FAILED 02_tests/test_worked_example.py::test_remaining_book[lob_b_heap] - Ass...
+FAILED 02_tests/test_worked_example.py::test_proceeds_and_average_price[lob_b_sorted]
+FAILED 02_tests/test_worked_example.py::test_proceeds_and_average_price[lob_b_heap]
+FAILED 02_tests/test_worked_example.py::test_book_level_conservation[lob_b_sorted]
+FAILED 02_tests/test_worked_example.py::test_book_level_conservation[lob_b_heap]
+FAILED 02_tests/test_worked_example.py::test_matches_supplied_json[lob_b_sorted]
+FAILED 02_tests/test_worked_example.py::test_matches_supplied_json[lob_b_heap]
+22 failed, 12 passed in 0.51s

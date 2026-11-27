@@ -1,0 +1,4 @@
+prepare_s max abs diff raw-median vs summary: 0.0
+query_s max abs diff raw-median vs summary: 0.0
+total_s max abs diff raw-median vs summary: 0.0
+rows raw: 540 expected 540  summary: 108

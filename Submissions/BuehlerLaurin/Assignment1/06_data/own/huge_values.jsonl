@@ -1,0 +1,4 @@
+{"seq":1,"event_id":"e1","type":"LIMIT","order_id":"b1","side":"BUY","price_ticks":1000000000000000,"qty_units":1000000000000000000}
+{"seq":2,"event_id":"e2","type":"LIMIT","order_id":"a1","side":"SELL","price_ticks":1000000000000001,"qty_units":1000000000000000000}
+{"seq":3,"event_id":"e3","type":"MARKET_SELL","order_id":"s1","qty_units":999999999999999999}
+{"seq":4,"event_id":"e4","type":"LIMIT","order_id":"t1","side":"BUY","price_ticks":1000000000000001,"qty_units":2000000000000000000}

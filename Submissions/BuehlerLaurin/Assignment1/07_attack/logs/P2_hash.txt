@@ -1,0 +1,180 @@
+growth: hash_full A
+  n=      1000  0.025484 s  (ok, repeats=3)
+  n=      2000  0.094361 s  (ok, repeats=3)
+  n=      4000  0.390235 s  (ok, repeats=3)
+  n=      8000  1.600038 s  (ok, repeats=3)
+  n=     16000  5.752125 s  (ok, repeats=3)
+  measured exponent: 1.97
+  predicted: 2.00 -> consistent (tol 0.3)
+  raw: {"1000": [0.024603, 0.025497, 0.025484], "2000": [0.091873, 0.107539, 0.094361], "4000": [0.390235, 0.396424, 0.381163], "8000": [1.600038, 1.524227, 1.63531], "16000": [5.818414, 5.752125, 5.737742]}
+  last cell: {"events": 16000, "live": 16000, "rebuilds": null, "heap": null}
+growth: hash_full B1
+  n=      1000  0.018932 s  (ok, repeats=3)
+  n=      2000  0.067870 s  (ok, repeats=3)
+  n=      4000  0.264796 s  (ok, repeats=3)
+  n=      8000  1.045399 s  (ok, repeats=3)
+  n=     16000  4.298552 s  (ok, repeats=3)
+  measured exponent: 1.96
+  predicted: 2.00 -> consistent (tol 0.3)
+  raw: {"1000": [0.018847, 0.021426, 0.018932], "2000": [0.067923, 0.067354, 0.06787], "4000": [0.264796, 0.276112, 0.261704], "8000": [1.044365, 1.046485, 1.045399], "16000": [4.298552, 4.362846, 4.24212]}
+  last cell: {"events": 16000, "live": 16000, "rebuilds": null, "heap": null}
+growth: hash_full B2
+  n=      1000  0.018986 s  (ok, repeats=3)
+  n=      2000  0.066948 s  (ok, repeats=3)
+  n=      4000  0.260893 s  (ok, repeats=3)
+  n=      8000  1.048865 s  (ok, repeats=3)
+  n=     16000  4.311980 s  (ok, repeats=3)
+  measured exponent: 1.96
+  predicted: 2.00 -> consistent (tol 0.3)
+  raw: {"1000": [0.018988, 0.018986, 0.018884], "2000": [0.066948, 0.068851, 0.065669], "4000": [0.26292, 0.2571, 0.260893], "8000": [1.032284, 1.048865, 1.071633], "16000": [4.438258, 4.31198, 4.293128]}
+  last cell: {"events": 16000, "live": 16000, "rebuilds": null, "heap": null}
+growth: hash_full B3
+  n=      1000  0.035102 s  (ok, repeats=3)
+  n=      2000  0.135545 s  (ok, repeats=3)
+  n=      4000  0.532641 s  (ok, repeats=3)
+  n=      8000  2.173691 s  (ok, repeats=3)
+  n=     16000  9.102328 s  (ok, repeats=3)
+  measured exponent: 2.00
+  predicted: 2.00 -> consistent (tol 0.3)
+  raw: {"1000": [0.035102, 0.035088, 0.046584], "2000": [0.13555, 0.131617, 0.135545], "4000": [0.527182, 0.534235, 0.532641], "8000": [2.225213, 2.173691, 2.122784], "16000": [9.102328, 8.966426, 9.174013]}
+  last cell: {"events": 16000, "live": 16000, "rebuilds": null, "heap": 16000}
+growth: hash_control A
+  n=      1000  0.026409 s  (ok, repeats=3)
+  n=      2000  0.096434 s  (ok, repeats=3)
+  n=      4000  0.377262 s  (ok, repeats=3)
+  n=      8000  1.522517 s  (ok, repeats=3)
+  n=     16000  5.817949 s  (ok, repeats=3)
+  measured exponent: 1.95
+  predicted: 2.00 -> consistent (tol 0.3)
+  raw: {"1000": [0.026329, 0.026409, 0.026582], "2000": [0.103057, 0.096434, 0.092414], "4000": [0.374436, 0.377262, 0.390087], "8000": [1.522517, 1.51252, 1.547804], "16000": [5.7729, 5.8573, 5.817949]}
+  last cell: {"events": 16000, "live": 16000, "rebuilds": null, "heap": null}
+growth: hash_control B1
+  n=      1000  0.004828 s  (ok, repeats=3)
+  n=      2000  0.009902 s  (ok, repeats=3)
+  n=      4000  0.019055 s  (ok, repeats=3)
+  n=      8000  0.038627 s  (ok, repeats=3)
+  n=     16000  0.079104 s  (ok, repeats=3)
+  measured exponent: 1.00
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"1000": [0.005347, 0.004828, 0.00459], "2000": [0.009902, 0.00926, 0.011249], "4000": [0.019078, 0.019055, 0.018711], "8000": [0.039135, 0.036515, 0.038627], "16000": [0.077903, 0.081283, 0.079104]}
+  last cell: {"events": 16000, "live": 16000, "rebuilds": null, "heap": null}
+growth: hash_control B2
+  n=      1000  0.004908 s  (ok, repeats=3)
+  n=      2000  0.008954 s  (ok, repeats=3)
+  n=      4000  0.017221 s  (ok, repeats=3)
+  n=      8000  0.034687 s  (ok, repeats=3)
+  n=     16000  0.074753 s  (ok, repeats=3)
+  measured exponent: 0.98
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"1000": [0.004295, 0.004908, 0.004917], "2000": [0.008707, 0.010493, 0.008954], "4000": [0.018329, 0.017006, 0.017221], "8000": [0.034687, 0.037185, 0.034288], "16000": [0.074753, 0.07493, 0.074349]}
+  last cell: {"events": 16000, "live": 16000, "rebuilds": null, "heap": null}
+growth: hash_control B3
+  n=      1000  0.004843 s  (ok, repeats=3)
+  n=      2000  0.010402 s  (ok, repeats=3)
+  n=      4000  0.019977 s  (ok, repeats=3)
+  n=      8000  0.038475 s  (ok, repeats=3)
+  n=     16000  0.084696 s  (ok, repeats=3)
+  measured exponent: 1.01
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"1000": [0.004675, 0.00513, 0.004843], "2000": [0.010402, 0.009755, 0.011527], "4000": [0.019977, 0.019739, 0.020207], "8000": [0.041463, 0.038475, 0.038341], "16000": [0.085774, 0.084696, 0.083773]}
+  last cell: {"events": 16000, "live": 16000, "rebuilds": null, "heap": 16000}
+growth: hash_match B1
+  n=      1000  0.017040 s  (ok, repeats=3)
+  n=      2000  0.065659 s  (ok, repeats=3)
+  n=      4000  0.267455 s  (ok, repeats=3)
+  n=      8000  1.088608 s  (ok, repeats=3)
+  n=     16000  4.570931 s  (ok, repeats=3)
+  measured exponent: 2.02
+  predicted: 2.00 -> consistent (tol 0.3)
+  raw: {"1000": [0.01709, 0.01704, 0.01688], "2000": [0.063687, 0.066634, 0.065659], "4000": [0.255658, 0.267455, 0.272792], "8000": [1.088608, 1.057204, 1.089527], "16000": [4.610584, 4.546284, 4.570931]}
+  last cell: {"events": 8000, "live": 16000, "rebuilds": null, "heap": null}
+growth: hash_match B2
+  n=      1000  0.016103 s  (ok, repeats=3)
+  n=      2000  0.063078 s  (ok, repeats=3)
+  n=      4000  0.264843 s  (ok, repeats=3)
+  n=      8000  1.097535 s  (ok, repeats=3)
+  n=     16000  4.481612 s  (ok, repeats=3)
+  measured exponent: 2.04
+  predicted: 2.00 -> consistent (tol 0.3)
+  raw: {"1000": [0.016098, 0.016103, 0.016272], "2000": [0.066118, 0.062494, 0.063078], "4000": [0.264843, 0.260364, 0.265732], "8000": [1.108315, 1.097535, 1.067319], "16000": [4.451492, 4.549241, 4.481612]}
+  last cell: {"events": 8000, "live": 16000, "rebuilds": null, "heap": null}
+growth: hash_match B3
+  n=      1000  0.025122 s  (ok, repeats=3)
+  n=      2000  0.095618 s  (ok, repeats=3)
+  n=      4000  0.396494 s  (ok, repeats=3)
+  n=      8000  1.638907 s  (ok, repeats=3)
+  n=     16000  7.164639 s  (ok, repeats=3)
+  measured exponent: 2.04
+  predicted: 2.00 -> consistent (tol 0.3)
+  raw: {"1000": [0.025122, 0.02589, 0.024264], "2000": [0.095618, 0.090822, 0.098097], "4000": [0.396494, 0.394184, 0.409899], "8000": [1.638907, 1.62723, 1.695423], "16000": [7.167892, 6.920138, 7.164639]}
+  last cell: {"events": 8000, "live": 16000, "rebuilds": null, "heap": 16001}
+growth: hash_match B3rF
+  n=      1000  0.025850 s  (ok, repeats=3)
+  n=      2000  0.098287 s  (ok, repeats=3)
+  n=      4000  0.406232 s  (ok, repeats=3)
+  n=      8000  1.639962 s  (ok, repeats=3)
+  n=     16000  7.077846 s  (ok, repeats=3)
+  measured exponent: 2.03
+  predicted: 2.00 -> consistent (tol 0.3)
+  raw: {"1000": [0.02585, 0.024678, 0.026114], "2000": [0.10011, 0.097587, 0.098287], "4000": [0.406232, 0.411779, 0.39376], "8000": [1.651465, 1.639962, 1.624344], "16000": [6.978053, 7.880399, 7.077846]}
+  last cell: {"events": 8000, "live": 16000, "rebuilds": 0, "heap": 16001}
+growth: hash_lowbits B1
+  n=      2000  0.009372 s  (ok, repeats=3)
+  n=      4000  0.019538 s  (ok, repeats=3)
+  n=      8000  0.037499 s  (ok, repeats=3)
+  n=     16000  0.085312 s  (ok, repeats=3)
+  n=     32000  0.168151 s  (ok, repeats=3)
+  measured exponent: 1.05
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"2000": [0.009372, 0.009906, 0.00926], "4000": [0.019651, 0.019538, 0.018459], "8000": [0.037499, 0.036118, 0.03776], "16000": [0.088658, 0.079787, 0.085312], "32000": [0.163089, 0.168151, 0.168747]}
+  last cell: {"events": 32000, "live": 32000, "rebuilds": null, "heap": null}
+growth: hash_lowbits B2
+  n=      2000  0.008602 s  (ok, repeats=3)
+  n=      4000  0.018014 s  (ok, repeats=3)
+  n=      8000  0.034930 s  (ok, repeats=3)
+  n=     16000  0.074933 s  (ok, repeats=3)
+  n=     32000  0.155612 s  (ok, repeats=3)
+  measured exponent: 1.04
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"2000": [0.008373, 0.008639, 0.008602], "4000": [0.018294, 0.018014, 0.017778], "8000": [0.037624, 0.03493, 0.034145], "16000": [0.074933, 0.073786, 0.078198], "32000": [0.155389, 0.157323, 0.155612]}
+  last cell: {"events": 32000, "live": 32000, "rebuilds": null, "heap": null}
+growth: hash_lowbits B3
+  n=      2000  0.010207 s  (ok, repeats=3)
+  n=      4000  0.020494 s  (ok, repeats=3)
+  n=      8000  0.041405 s  (ok, repeats=3)
+  n=     16000  0.086510 s  (ok, repeats=3)
+  n=     32000  0.179848 s  (ok, repeats=3)
+  measured exponent: 1.04
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"2000": [0.010207, 0.010082, 0.010234], "4000": [0.020494, 0.021253, 0.019763], "8000": [0.04083, 0.041405, 0.041696], "16000": [0.085687, 0.093481, 0.08651], "32000": [0.177972, 0.184981, 0.179848]}
+  last cell: {"events": 32000, "live": 32000, "rebuilds": null, "heap": 32000}
+growth: dense_control B1
+  n=      2000  0.009182 s  (ok, repeats=3)
+  n=      4000  0.017872 s  (ok, repeats=3)
+  n=      8000  0.035832 s  (ok, repeats=3)
+  n=     16000  0.073842 s  (ok, repeats=3)
+  n=     32000  0.155500 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"2000": [0.00864, 0.009182, 0.009831], "4000": [0.017236, 0.017872, 0.018894], "8000": [0.034758, 0.036486, 0.035832], "16000": [0.07159, 0.073842, 0.076808], "32000": [0.1555, 0.160317, 0.151669]}
+  last cell: {"events": 32000, "live": 32000, "rebuilds": null, "heap": null}
+growth: dense_control B2
+  n=      2000  0.008328 s  (ok, repeats=3)
+  n=      4000  0.016756 s  (ok, repeats=3)
+  n=      8000  0.033548 s  (ok, repeats=3)
+  n=     16000  0.073409 s  (ok, repeats=3)
+  n=     32000  0.145686 s  (ok, repeats=3)
+  measured exponent: 1.04
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"2000": [0.008328, 0.008152, 0.008388], "4000": [0.016756, 0.016326, 0.017725], "8000": [0.033201, 0.033548, 0.034416], "16000": [0.079903, 0.069449, 0.073409], "32000": [0.145686, 0.145558, 0.146887]}
+  last cell: {"events": 32000, "live": 32000, "rebuilds": null, "heap": null}
+growth: dense_control B3
+  n=      2000  0.009487 s  (ok, repeats=3)
+  n=      4000  0.018939 s  (ok, repeats=3)
+  n=      8000  0.036547 s  (ok, repeats=3)
+  n=     16000  0.077306 s  (ok, repeats=3)
+  n=     32000  0.161571 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"2000": [0.008809, 0.009487, 0.009994], "4000": [0.018836, 0.018939, 0.01902], "8000": [0.036547, 0.03651, 0.036613], "16000": [0.079601, 0.077306, 0.076102], "32000": [0.161731, 0.161571, 0.160089]}
+  last cell: {"events": 32000, "live": 32000, "rebuilds": null, "heap": 32000}

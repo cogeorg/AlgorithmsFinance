@@ -1,0 +1,24 @@
+         40929 function calls in 0.016 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.016    0.016 C:\Users\Samsung\Downloads\Assignment1\Assignment1\Submissions\SharmaGarv\Assignment1\orderbook.py:109(FillMarketSell)
+        1    0.000    0.000    0.016    0.016 C:\Users\Samsung\Downloads\Assignment1\Assignment1\Submissions\SharmaGarv\Assignment1\orderbook.py:112(_public)
+        1    0.004    0.004    0.016    0.016 C:\Users\Samsung\Downloads\Assignment1\Assignment1\Submissions\SharmaGarv\Assignment1\orderbook.py:59(_execute)
+     3000    0.002    0.000    0.006    0.000 C:\Users\Samsung\Downloads\Assignment1\Assignment1\Submissions\SharmaGarv\Assignment1\orderbook.py:210(_remove)
+     3000    0.002    0.000    0.004    0.000 C:\Users\Samsung\Downloads\Assignment1\Assignment1\Submissions\SharmaGarv\Assignment1\orderbook.py:206(_maker)
+     3000    0.002    0.000    0.003    0.000 C:\Users\Samsung\Downloads\Assignment1\Assignment1\Submissions\SharmaGarv\Assignment1\orderbook.py:217(_clean)
+     3000    0.001    0.000    0.001    0.000 C:\Users\Samsung\Downloads\Assignment1\Assignment1\Submissions\SharmaGarv\Assignment1\orderbook.py:132(_unregister)
+     6957    0.001    0.000    0.001    0.000 C:\Users\Samsung\Downloads\Assignment1\Assignment1\Submissions\SharmaGarv\Assignment1\orderbook.py:21(count)
+     6000    0.001    0.000    0.001    0.000 {built-in method builtins.len}
+     3000    0.000    0.000    0.000    0.000 {method 'values' of 'collections.OrderedDict' objects}
+     3000    0.000    0.000    0.000    0.000 {built-in method builtins.next}
+      957    0.000    0.000    0.000    0.000 {built-in method _heapq.heappop}
+     3000    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+     3000    0.000    0.000    0.000    0.000 {built-in method builtins.iter}
+     3000    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 C:\Users\Samsung\Downloads\Assignment1\Assignment1\Submissions\SharmaGarv\Assignment1\orderbook.py:25(validate)
+        6    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        4    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}

@@ -1,0 +1,190 @@
+{
+  "status": "complete",
+  "command": "python 04_benchmarks/run_benchmark.py --latency-memory",
+  "started_utc": "2026-11-24T11:42:37+00:00",
+  "finished_utc": "2026-11-24T11:54:48+00:00",
+  "git": {
+    "commit": "ade26d17588f36e2b22d06a1eda2825aaa8df766",
+    "branch": "bonacker/phase1",
+    "code_paths": [
+      "02_tests",
+      "03_code",
+      "04_benchmarks",
+      "00_instructions/generate_orders.py",
+      "pytest.ini",
+      "requirements.txt"
+    ],
+    "code_clean": true,
+    "dirty_code_files": [],
+    "tree_clean": true,
+    "dirty_files_in_assignment1": []
+  },
+  "measures_committed_code": true,
+  "source_sha256_start": "e930821438723804a2917485d2b18042109e020779a0f44de9350fe74862a4bb",
+  "source_files": {
+    "00_instructions/generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+    "02_tests/conftest.py": "5d14bd42c6e6f41b6ae303e48c4eca4b4a5d64247f3789e92d8074e1a32b3d95",
+    "02_tests/differential.py": "9b450a83fa221f2ac39b24ddfdc59748f6c381ae42da0d031ffbe1defa918bbd",
+    "02_tests/test_b_compaction.py": "5a44ee86dd6aaf62484ce4feac8840af2bb2adb065a68fb3dbf6aeb0a31a387a",
+    "02_tests/test_differential.py": "a375e35bc46d6c073a7efc4bfcb7505608d5ca49ed1d4bd373bdb19d664f61a5",
+    "02_tests/test_excel_tabs.py": "22d1494319e892e3c6a9d7145415f458b56ef069c86e5ae27cf232787855c553",
+    "02_tests/test_robustness.py": "c3eee2a86bea006d23e1be2732580e5e72c9639c6ffbff7d80079a6370a707a4",
+    "02_tests/test_worked_example.py": "72ee4a3a780ec863d6fc20e1a0956f217904834461824994ba3972855fc1c354",
+    "03_code/invariants.py": "13aef1d0526d8bcb47a46f8f07f19c8d55b86b8aea1c1b316902c96f11dc4071",
+    "03_code/lob_a.py": "5c1a2286a0bacfc1d0771262664d8547fd125846d1ef8c810271305f476c3f25",
+    "03_code/lob_b_common.py": "cac36ca6bfefa5a21c032318dd019ae63da8155c3cd6fd036e2497c7c9ce22ae",
+    "03_code/lob_b_heap.py": "a04301eb74b464a3e62de08ce7639891044693ee5642af8b60cf8085fc9284c3",
+    "03_code/lob_b_sorted.py": "05309d7f5386574c6c67b97b31fb83a3e2cc06afb0d73b34f12de5e2af405473",
+    "03_code/replay.py": "a9b17bd74d5567320dbfc80d1e63d2f415ec1093253656839ee0b804cfde3d57",
+    "03_code/validation.py": "1c920b91e18c43f05a8e2bbab22eb1c4d40e5d90410238278f2868100f3d2e78",
+    "04_benchmarks/bench_common.py": "fd0504667d4c88d11ca1560955a41f1dcc84f119bc3b47529892d29dc1641f0d",
+    "04_benchmarks/bench_concentration.py": "1f6a6808dcf0abe5747ac85050001a977be5a5320545e0fe0d7e14a54909789f",
+    "04_benchmarks/bench_data.py": "8c2a95b5040bdec504998aa1c7297b9e767c2911234569ff7a83bd828c45c363",
+    "04_benchmarks/bench_latency.py": "cdbec8423d11a20455b4dd2a7e363180f0e1bab57d97185c30bcf97f28c788c0",
+    "04_benchmarks/bench_memory.py": "754ec307b6c7688cb929eabd2bdc6c3a65d892c7cddec519009a2602b55f73be",
+    "04_benchmarks/bench_opcounts.py": "73dad5c99f681b332568723310d2039b9de8e95bc6cd4aea1afd23873b86b800",
+    "04_benchmarks/bench_timing.py": "b1c910b5742454d4d05bde7135f2ba5673bf9fefaab1f72711b815b61b558d3e",
+    "04_benchmarks/export_test_results.py": "18ad5f4295a314bf80ee870982dda9bc106edc9822628658a0376db1ec008ad0",
+    "04_benchmarks/generate_data.py": "33ab0a4ba2e189aad85912edafe1b0feac744a7278b679b0a8b64ef7f3bd4eba",
+    "04_benchmarks/liquidation.py": "68c7f694752cd4b2bfd0b3a702ee23d895be1c7ec223067bf96e758eda2ff739",
+    "04_benchmarks/profile_version_a.py": "ee012bdcca1aa6805bdd4440157beb548d97d243165e5c350585936f64502239",
+    "04_benchmarks/run_benchmark.py": "22e87f4cb86811abcf0adea55f1e3cc0fe512c7f7aa119158fbf32cacbacde83",
+    "04_benchmarks/scaling.py": "c58e0cb23a0a49cf888c4733d7cee7fac6ee2351e5330e6e7757fc3861a7669e",
+    "pytest.ini": "4a0bce1cf8e7ed79343d60072cefb51e37a83ec948d87015447b15cf81fd42a4",
+    "requirements.txt": "64606ec0de78d3c11571a72c996036ccfeb2a5c1ce7a39bdbcf34edbc314630f"
+  },
+  "selected_phases": [
+    "latency",
+    "memory"
+  ],
+  "settings": {
+    "mode": "full",
+    "output_dir": "05_results",
+    "data_dir": "05_results/data/bench",
+    "versions": [
+      "a",
+      "b_sorted",
+      "b_heap"
+    ],
+    "scenarios": [
+      "buildup",
+      "crowded",
+      "mixed",
+      "sweep",
+      "cancel_churn"
+    ],
+    "sizes": [
+      1000,
+      10000,
+      100000
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "levels": 1000,
+    "concentrated_levels": 4,
+    "million": {
+      "scenario": "mixed",
+      "events": 1000000,
+      "seed": 43,
+      "levels": 1000
+    },
+    "sale_pcts": [
+      10,
+      100,
+      200
+    ],
+    "concentration_sale_pct": 100,
+    "time_limit_s_per_replay": 120.0,
+    "setup_limit_s": 900.0,
+    "grace_s": 2.0,
+    "warmups": 1,
+    "repeats": 5,
+    "gc_policy": "Same for every version: gc.collect() right before each timed step, gc.disable() while it runs, gc.enable() right after. Applies to parse, replay, build, sell, latency and memory steps.",
+    "percentile_convention": "nearest-rank: sort the n values x_1 <= ... <= x_n; the p-th percentile is x_k with k = ceil(p/100 * n), k >= 1 (so p0 = min, p100 = max; no interpolation)",
+    "latency_cells": [
+      {
+        "scenario": "buildup",
+        "events": 10000,
+        "seed": 42
+      },
+      {
+        "scenario": "crowded",
+        "events": 10000,
+        "seed": 42
+      },
+      {
+        "scenario": "mixed",
+        "events": 10000,
+        "seed": 42
+      },
+      {
+        "scenario": "sweep",
+        "events": 10000,
+        "seed": 42
+      },
+      {
+        "scenario": "cancel_churn",
+        "events": 10000,
+        "seed": 42
+      },
+      {
+        "scenario": "buildup",
+        "events": 100000,
+        "seed": 42
+      }
+    ],
+    "memory_sizes": [
+      10000,
+      100000
+    ],
+    "opcount_sizes": [
+      1000,
+      10000
+    ],
+    "diagnostic_seed": 42
+  },
+  "time_limit_is_default": true,
+  "definitions": {
+    "elapsed_seconds": "time.perf_counter() difference around the measured step only, in seconds",
+    "phase parse": "gzip decompression + JSON parsing of the whole file into a list of dicts (03_code/replay.py load_events); one measurement per child process",
+    "phase replay": "a fresh empty book, then process_event for every preloaded event in file order; fills are counted on the fly (len of each result's fill list); results are not stored (no history). Creating the empty book and freeing the previous one are outside the timer",
+    "phase build": "a fresh empty book, then process_event for the build prefix: sweep = first 80% of the file (LIMIT events only, they never cross), buildup = the whole file",
+    "phase sell": "one process_event(MARKET_SELL) on the book just built: validation, matching, state updates and fill-list construction. Every repeat builds a new book, so no sale reuses a depleted book",
+    "requested_qty_units": "max(1, ceil(bid_qty * pct / 100)), integer arithmetic",
+    "warm-up": "repeat 0 (1 warm-up) is recorded with warmup=True and excluded from medians; repeats 1..5 are timed",
+    "summary": "median, min and max over the 5 timed repeats; spread_pct = (max - min) / median",
+    "throughput_events_per_s": "events / median replay (or build) seconds",
+    "time_limit": "120 s per single replay, build or sell (warm-up included). A step that runs longer is stopped (child killed) and recorded as 'stopped'; the cell's remaining repeats are skipped and recorded as 'stopped' too. Missing values are never estimated. A stopped build stops every sale size of that book, because the builds are identical",
+    "gc_policy": "Same for every version: gc.collect() right before each timed step, gc.disable() while it runs, gc.enable() right after. Applies to parse, replay, build, sell, latency and memory steps.",
+    "peaks": "peak_active_orders / peak_price_levels are properties of the dataset, from a separate counting pass on B-sorted outside timing (all versions agree: differential tests). Build rows and sell rows show the built book's active orders and occupied levels",
+    "correctness per replay": "after every timed replay (outside the timer) the fill count and the final book size are compared with the dataset manifest; a difference gives status 'mismatch'",
+    "latency": "separate instrumentation run: perf_counter_ns() around each process_event call (the discarded result is freed inside the window), after one untimed warm-up replay. Algorithm processing latency only: no queueing or network latency, and no real-time capacity claim. Never derived from 1/throughput. Includes one timer call (timer_overhead_ns)",
+    "latency event types": "every timed event has exactly one type, from the event and its result: LIMIT resting (no fill, the whole order rests), LIMIT traded (at least one fill, also if a residual rests), MARKET_SELL, CANCEL found (cancelled), CANCEL not_found, rejected. The types are recorded in the warm-up replay of the same events, so the timed loop is unchanged; the final books of both replays and the counts per type (against the dataset manifest) are checked. Count 0 = the type does not occur in that file. With fewer than 100 events of a type, p99 (nearest rank) equals the max",
+    "percentile": "nearest-rank: sort the n values x_1 <= ... <= x_n; the p-th percentile is x_k with k = ceil(p/100 * n), k >= 1 (so p0 = min, p100 = max; no interpolation)",
+    "memory": "separate tracemalloc run in its own child process. Events are preloaded BEFORE tracemalloc.start(), so the input is excluded. Included: the book (orders, levels, FIFO queues, price index) and the returned output (result dict and fill list) of the current event, which stays referenced while the sample is read and is released before the next event. Every sample in memory_samples.csv therefore holds the book plus one event's output. Validation temporaries are in the peak only. No history is saved. traced_peak_bytes = maximum during the replay, with the current event's output; traced_with_output_bytes = after the last event, its output still referenced; traced_current_bytes = after that output is released: the book, still alive. Released dicts and lists can stay in CPython's free lists, which tracemalloc still counts, so after an event with few or no fills the two end values can be equal",
+    "traced vs auxiliary vs process memory": "Traced bytes are the Python allocations seen by tracemalloc while tracing (object sizes incl. headers and container over-allocation). Auxiliary space is the algorithm's extra space as a count (O(B) orders + O(P) levels + index entries, incl. stale entries), independent of byte sizes. Process memory (peak working set / max RSS) also holds the interpreter, modules, the preloaded events, allocator caches and memory not returned to the OS; recorded once per memory child as process_peak_bytes, for context only",
+    "operation counts": "separate diagnostic run with counting subclasses (not timed): orders scanned per event in A; best-price calls, stale heap pops, levels created/removed, queue pops, compactions in B"
+  },
+  "tests": null,
+  "phases": [
+    {
+      "name": "latency",
+      "status": "complete",
+      "seconds": 159.5
+    },
+    {
+      "name": "memory",
+      "status": "complete",
+      "seconds": 571.0
+    }
+  ],
+  "source_sha256_end": "e930821438723804a2917485d2b18042109e020779a0f44de9350fe74862a4bb",
+  "source_unchanged": true,
+  "result_rows": {
+    "memory_ok": 26,
+    "memory_stopped": 4
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "course_base": "43ff26c35cb9a27439b86ed5054e188639609903",
+  "original_local_head": "c7bee5d50e64702f2a470dd1edd7743f99dc69d6",
+  "branch": "submission/assignment1-hardi-khushi",
+  "remote": "https://github.com/khushihardi/AlgorithmsFinance.git",
+  "submission_path": "Submissions/HardiKhushi/Assignment1",
+  "checkpoint_map": {
+    "8270fac": "0189db614d3d86f64ace777fa417ba843284f26b",
+    "35125e8": "207d25e47c1ace73a7236cb0515ff1ae5e46eb70",
+    "52a6c5e": "b72aa667c92e58bcd50f9f6c23d163765e99fc5b",
+    "3276644": "940303eb1f9272a596eec5cffd142ca12e0879e5",
+    "383b0aa": "51cf5297e19a71fd40223a77a7c490e300405d26",
+    "c7bee5d": "493a6ca900132a5f2308a2e129026024b25eff1a"
+  },
+  "note": "Original local checkpoints are mapped to equivalent Assignment1-only publication commits; measured source hashes and original evidence remain unchanged.",
+  "content_checkpoint": "493a6ca900132a5f2308a2e129026024b25eff1a"
+}

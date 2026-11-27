@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-23T18:09:57.221140+00:00",
+  "phase": "memory_state",
+  "version": "baseline",
+  "command": [
+    "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "scripts\\05_measure_memory.py",
+    "--version",
+    "baseline",
+    "--mode",
+    "memory_state",
+    "--input",
+    "data\\supplied\\buildup_10000.jsonl.gz",
+    "--max-events",
+    "100",
+    "--checkpoints",
+    "10",
+    "--out",
+    "evidence\\07_memory_smoke\\07_baseline_buildup_100_state.json"
+  ],
+  "environment": {
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "python_executable": "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "dependencies": {
+      "pytest": "9.2.0",
+      "pandas": "3.1.1",
+      "streamlit": "1.67.0"
+    },
+    "git": {
+      "commit": "a8fc71c5a68f4557da02186cc1cdd243ccf9a4f3",
+      "branch": "assignment1-mueller-alexandra",
+      "dirty": true
+    }
+  },
+  "input": {
+    "path": "C:\\Users\\Acer\\Documents\\Algorithms\\AlgorithmsFinance\\Submissions\\M\u00fcllerAlexandra\\Assignment1\\data\\supplied\\buildup_10000.jsonl.gz",
+    "sha256": "441db8ecf37103113abfed079fbe4bdbe212bb7acbc31be0d344bab67c9b95b5",
+    "compressed_bytes": 132767,
+    "event_count": 100,
+    "max_events": 100,
+    "parse_seconds": 0.003478200058452785
+  },
+  "settings": {
+    "checkpoint_count": 10
+  },
+  "measurement": {
+    "mode": "memory_state",
+    "event_count": 100,
+    "checkpoints": [
+      {
+        "event_index": 1,
+        "current_bytes": 776,
+        "peak_bytes": 1112
+      },
+      {
+        "event_index": 12,
+        "current_bytes": 3824,
+        "peak_bytes": 4384
+      },
+      {
+        "event_index": 23,
+        "current_bytes": 5728,
+        "peak_bytes": 8432
+      },
+      {
+        "event_index": 34,
+        "current_bytes": 7056,
+        "peak_bytes": 9776
+      },
+      {
+        "event_index": 45,
+        "current_bytes": 8352,
+        "peak_bytes": 11072
+      },
+      {
+        "event_index": 56,
+        "current_bytes": 9680,
+        "peak_bytes": 12400
+      },
+      {
+        "event_index": 67,
+        "current_bytes": 11040,
+        "peak_bytes": 13760
+      },
+      {
+        "event_index": 78,
+        "current_bytes": 12432,
+        "peak_bytes": 22832
+      },
+      {
+        "event_index": 89,
+        "current_bytes": 13696,
+        "peak_bytes": 24096
+      },
+      {
+        "event_index": 100,
+        "current_bytes": 15152,
+        "peak_bytes": 25552
+      }
+    ],
+    "final": {
+      "current_bytes": 15152,
+      "peak_bytes": 25552,
+      "active_orders": 100,
+      "occupied_price_levels": 97,
+      "retained_output_count": 0
+    },
+    "inclusions": {
+      "preloaded_input": false,
+      "book_construction": true,
+      "live_book_state": true,
+      "temporary_matching_allocations": true,
+      "current_event_result": true,
+      "complete_result_history": false,
+      "checkpoint_bookkeeping": true,
+      "final_book_inspection": false,
+      "python_tracemalloc_only": true
+    }
+  }
+}

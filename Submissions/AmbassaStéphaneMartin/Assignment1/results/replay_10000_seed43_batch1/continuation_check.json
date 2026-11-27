@@ -1,0 +1,24 @@
+{
+  "count": 10000,
+  "seed": 43,
+  "exit_code": 2,
+  "actual_errors": [],
+  "diagnostic_mismatches": [],
+  "stopped_repetitions": [
+    {
+      "case_id": "replay_sweep_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "memory",
+      "repetition": 4,
+      "error": "Worker wall limit reached (60.000 seconds)"
+    },
+    {
+      "case_id": "replay_sweep_n10000_s43_l1000",
+      "version": "baseline",
+      "phase": "memory",
+      "repetition": 5,
+      "error": "Worker wall limit reached (60.000 seconds)"
+    }
+  ],
+  "continuation_allowed": true
+}

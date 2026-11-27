@@ -1,0 +1,101 @@
+{
+ "note": "Diagnostic: is Version B's super-linear growth from 100,000 to 1,000,000 buildup events caused by\nPython's cyclic garbage collector? Same input, fresh book and fresh process per variant; 1 warmup +\n3 timed replays each; GC enabled (default, as in all benchmarks) vs gc.disable() during the replay.\nDiagnostic only: the official benchmarks keep the default GC. Results: results/gc_check.json.",
+ "runs": [
+  {
+   "scenario": "buildup",
+   "events": 100000,
+   "gc": "enabled",
+   "median_s": 0.06248579203383997,
+   "raw_s": [
+    0.06248579203383997,
+    0.0628167919931002,
+    0.058736167033202946
+   ],
+   "gc_collections": [
+    50,
+    50,
+    50
+   ]
+  },
+  {
+   "scenario": "buildup",
+   "events": 100000,
+   "gc": "disabled",
+   "median_s": 0.055927875044289976,
+   "raw_s": [
+    0.055927875044289976,
+    0.05584066599840298,
+    0.056641792005393654
+   ],
+   "gc_collections": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "scenario": "buildup",
+   "events": 1000000,
+   "gc": "enabled",
+   "median_s": 1.331602957972791,
+   "raw_s": [
+    1.3418035000213422,
+    1.331602957972791,
+    1.31557612499455
+   ],
+   "gc_collections": [
+    500,
+    500,
+    500
+   ]
+  },
+  {
+   "scenario": "buildup",
+   "events": 1000000,
+   "gc": "disabled",
+   "median_s": 0.8421544579905458,
+   "raw_s": [
+    0.8434812920168042,
+    0.8399708750075661,
+    0.8421544579905458
+   ],
+   "gc_collections": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "scenario": "sweep",
+   "events": 100000,
+   "gc": "enabled",
+   "median_s": 0.0709147909656167,
+   "raw_s": [
+    0.0709147909656167,
+    0.07077137503074482,
+    0.07122441701358184
+   ],
+   "gc_collections": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "scenario": "sweep",
+   "events": 100000,
+   "gc": "disabled",
+   "median_s": 0.06839304103050381,
+   "raw_s": [
+    0.06809308397350833,
+    0.06839304103050381,
+    0.06898545898729935
+   ],
+   "gc_collections": [
+    0,
+    0,
+    0
+   ]
+  }
+ ]
+}

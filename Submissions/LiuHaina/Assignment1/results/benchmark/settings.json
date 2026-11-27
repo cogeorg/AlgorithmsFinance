@@ -1,0 +1,64 @@
+{
+  "python": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "executable": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+  "operating_system": "macOS-15.7.3-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "processor": "arm",
+  "logical_cpus": 8,
+  "dependencies": "Python standard library only",
+  "code_sha256": {
+    "benchmark.py": "50815aaa20ba0db70b3edd057db4a5ecc80b7fd124e972dc3275ffefaf86ebcc",
+    "benchmark_worker.py": "c54b36f2a50603354c06d082385080798e379bf8ec66857aaec281b664d74964",
+    "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+    "verify_versions.py": "5b5541c9f6d1ac81c054831e1cceabb1135b91730ff6b3b4d6b7ea150f37a54d",
+    "lob/__init__.py": "73aee100f4d52afaa6639e4b35c3fcf8db05f613aac79f991cb32e13e4521b8b",
+    "lob/contract.py": "7701e4d15b434d3d514ca4361dfb97faae53273f931b97d67e1e1b9950e8f144",
+    "lob/replay.py": "f190c1d7c52c0acc39cd73f733a46bd79798d1a28db2bf5c7c38a3bdfd096f8a",
+    "lob/version_a.py": "a025f08f485d596dedb61e7521b77e3397a88872000e58c95c087412b4751bc5",
+    "lob/version_b.py": "43f8433e19037690838950e35ed021718c2c03f2fa00ad29159bca0ef12f27d2"
+  },
+  "phase_limit_seconds": 5.0,
+  "rss_limit_bytes": 536870912,
+  "repeats": 5,
+  "sizes": [
+    1000,
+    10000,
+    100000
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "scenarios": [
+    "buildup",
+    "crowded",
+    "mixed",
+    "sweep",
+    "cancel_churn"
+  ],
+  "levels": 1000,
+  "warmup": "up to first 1000 events on separate discarded book",
+  "primary_scope": "empty book creation + replay + minimal loop/fill counters; excludes parsing/inspection/reporting",
+  "total_scope": "same-repeat parse_seconds + replay_seconds, not measured CLI wall time",
+  "memory_scope": "tracemalloc after preload; includes engine, latest output, small probes; excludes input allocations",
+  "rss_scope": "whole child ru_maxrss, polled by daemon every ~100ms; process exits at first observed excess; small symmetric sampler overhead",
+  "percentile": "nearest rank ceil(p*n) for p95/p99; arithmetic middle median",
+  "serial_execution": true,
+  "smoke": false,
+  "million_attempt": true,
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+    "-B",
+    "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/benchmark.py",
+    "--out",
+    "results/benchmark",
+    "--phase-limit",
+    "5",
+    "--rss-mib",
+    "512"
+  ],
+  "git_base_commit": "43ff26c35cb9a27439b86ed5054e188639609903",
+  "code_version_note": "uncommitted work identified by exact SHA-256 source map; no commit created",
+  "hardware_details": ""
+}

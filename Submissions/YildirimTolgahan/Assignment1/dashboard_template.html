@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Limit order book benchmark</title>
+<style>
+:root{color-scheme:light;--page:#f9f9f7;--surface:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;--grid:#e1e0d9;--axis:#c3c2b7;--border:rgba(11,11,11,.10);--a:#2a78d6;--b:#eb6834;--good:#006300;--warn:#8a5a00;--wash:rgba(11,11,11,.04)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--muted:#898781;--grid:#2c2c2a;--axis:#383835;--border:rgba(255,255,255,.10);--a:#3987e5;--b:#d95926;--good:#0ca30c;--warn:#fab219;--wash:rgba(255,255,255,.05)}}
+:root[data-theme="dark"]{color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--muted:#898781;--grid:#2c2c2a;--axis:#383835;--border:rgba(255,255,255,.10);--a:#3987e5;--b:#d95926;--good:#0ca30c;--warn:#fab219;--wash:rgba(255,255,255,.05)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1180px;margin:auto;padding:36px 16px 64px}
+h1{font-size:clamp(24px,4vw,32px);line-height:1.2;margin:4px 0 8px;letter-spacing:-.5px}
+h2{font-size:21px;line-height:1.25;margin:2px 0 6px;letter-spacing:-.2px}
+h3{font-size:14px;margin:18px 0 6px}
+p{margin:6px 0}
+.eyebrow{color:var(--ink2);font-size:12px;letter-spacing:1.4px;text-transform:uppercase}
+.note{color:var(--ink2);font-size:13px;max-width:78ch}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:26px 28px;margin-top:26px;box-shadow:0 1px 2px rgba(0,0,0,.04);scroll-margin-top:92px}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 18px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.tile .label{font-size:12px;color:var(--ink2)}
+.tile .value{font-size:28px;font-weight:650;line-height:1.2;margin:2px 0;letter-spacing:-.4px}
+.tile .sub{font-size:12px;color:var(--ink2)}
+.filters{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:12px;align-items:end;background:var(--page);padding:12px 0;margin-top:22px;border-bottom:1px solid var(--border)}
+.filters .toc{margin-left:auto;align-self:center}
+label{font-size:12px;font-weight:600;color:var(--ink2);display:block}
+select{display:block;margin-top:4px;padding:7px 9px;border:1px solid var(--axis);border-radius:6px;background:var(--surface);color:var(--ink);font:inherit;font-size:14px;min-width:132px}
+select:focus-visible,summary:focus-visible,svg:focus-visible{outline:2px solid var(--a);outline-offset:2px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--ink2);margin:8px 0 2px}
+.key{display:inline-block;width:14px;height:0;border-top:2px solid;vertical-align:middle;margin-right:6px}
+.key.box{height:10px;border:0;border-radius:2px}
+.key.open{width:9px;height:9px;border:2px solid;border-radius:50%;background:var(--surface)}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font:11px system-ui,sans-serif;fill:var(--muted);font-variant-numeric:tabular-nums}
+svg .lab{fill:var(--ink2);font-size:12px}
+svg .title{fill:var(--ink2)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--grid)}
+tbody tr:hover{background:var(--wash)}
+.tall{max-height:400px;overflow:auto;border:1px solid var(--grid);border-radius:8px}
+.tall thead th{position:sticky;top:0;background:var(--surface);box-shadow:0 1px 0 var(--grid)}
+.tall caption{padding:8px 10px 4px}
+th{font-weight:600;color:var(--ink2);vertical-align:bottom}
+th:first-child,td:first-child{text-align:left}
+td.text,th.text{text-align:left;white-space:normal}
+#tb-correct td,#tb-correct th{text-align:left;white-space:normal;vertical-align:top}
+caption{caption-side:top;text-align:left;color:var(--ink2);font-size:12px;padding-bottom:4px}
+.status{display:inline-block;font-size:12px;font-weight:600;padding:0 6px;border-radius:9px;border:1px solid var(--border)}
+.status.ok{color:var(--good)}.status.stopped,.status.missing{color:var(--warn)}
+details{margin-top:10px}
+summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink2)}
+details[open]>summary{margin-bottom:8px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;color:var(--ink2)}
+code{font-size:12.5px}
+a{color:var(--a)}
+#tip{position:fixed;pointer-events:none;z-index:20;background:var(--surface);border:1px solid var(--axis);border-radius:8px;padding:8px 10px;font-size:12px;box-shadow:0 4px 14px rgba(0,0,0,.14);max-width:280px;display:none}
+#tip .head{color:var(--ink2);margin-bottom:3px}
+#tip .rowt{display:flex;justify-content:space-between;gap:14px}
+#tip b{font-variant-numeric:tabular-nums}
+footer{color:var(--ink2);font-size:12px;margin-top:22px}
+.headrow{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.theme{flex:none;border:1px solid var(--axis);background:var(--surface);color:var(--ink2);border-radius:8px;padding:6px 10px;font:inherit;font-size:13px;cursor:pointer}
+.theme:hover{color:var(--ink)}
+.toc{display:flex;flex-wrap:wrap;gap:6px}
+.toc a{font-size:13px;color:var(--ink2);text-decoration:none;padding:4px 10px;border:1px solid var(--border);border-radius:999px;background:var(--surface)}
+.toc a:hover{color:var(--ink);border-color:var(--axis)}
+.kicker{font-size:12px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted)}
+.takeaway{margin:10px 0 14px;padding:10px 14px;border-left:3px solid var(--b);background:var(--wash);border-radius:0 8px 8px 0;font-size:15px;max-width:92ch}
+.takeaway:empty{display:none}
+.findings{margin:10px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 28px}
+.findings li{padding-left:16px;position:relative;font-size:14.5px}
+.findings li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--b)}
+.findings b{font-weight:650}
+.card>.grid2{margin-top:6px}
+.card>.scroll{margin-top:14px}
+@media(max-width:820px){.findings{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:16px}}
+</style>
+</head>
+<body><main>
+<header>
+<div class="headrow"><div>
+<div class="eyebrow">Algorithms in Finance · Assignment 1 · Tolgahan Yildirim</div>
+<h1>Limit order book: baseline versus revision</h1></div>
+<button class="theme" id="theme" type="button" aria-label="Switch between light and dark colours">Light / dark</button></div>
+<p class="note">Saved measurements of two Python implementations of a sequential, single-venue BTC limit order book on synthetic teaching data. <strong>Version A</strong> keeps each side as an unsorted list and scans it. <strong>Version B</strong> keeps a FIFO queue per price, a heap of prices per side and an order index. Changing a view filters the saved data; nothing is measured again. This is a teaching model, not a production trading system.</p>
+</header>
+
+<section class="tiles" id="tiles" aria-label="Summary"></section>
+
+<section class="card" id="s-findings" style="margin-top:16px">
+<div class="kicker">In short</div>
+<h2>What the saved run shows</h2>
+<ul class="findings" id="findings"></ul>
+</section>
+
+<section class="filters" aria-label="Choose what the charts show">
+<label>Workload<select id="f-scenario"></select></label>
+<label>Seed<select id="f-seed"></select></label>
+<label>Events in stream (M)<select id="f-events"></select></label>
+<label>Sale size (fixed-book tests)<select id="f-pct"></select></label>
+<p class="note" id="f-note" style="margin:0 0 6px"></p>
+<nav class="toc" aria-label="Sections"><a href="#s-replay">Replay</a><a href="#s-build">Construction</a><a href="#s-sale">Market sell</a><a href="#s-latency">Latency</a><a href="#s-memory">Memory</a><a href="#s-bottleneck">Bottleneck</a><a href="#tuning-card">Tuning</a><a href="#s-correct">Correctness</a><a href="#s-raw">Raw data</a></nav>
+</section>
+
+<section class="card" id="s-replay">
+<div class="kicker">1 · Submission flood and full streams</div>
+<h2>Replay time as the stream grows</h2>
+<p class="takeaway" id="tk-replay"></p>
+<p class="note">Median of five replays of the selected workload family, each on a fresh empty book. Engine time only: reading and parsing the file are measured separately and listed in the table. Both axes are logarithmic.</p>
+<div class="legend" id="lg-replay"></div>
+<div class="grid2"><div><svg id="ch-replay" tabindex="0" role="img" aria-label="Replay seconds against number of events, versions A and B"></svg></div>
+<div><svg id="ch-throughput" tabindex="0" role="img" aria-label="Throughput in events per second against number of events, versions A and B"></svg></div></div>
+<div class="scroll"><table id="tb-replay"></table></div>
+<p class="note">B = active orders, P = occupied price levels (both at their peak during the stream), F = maker fills. A stream with more events does not need a larger book: compare <code>cancel_churn</code> with <code>buildup</code>. "Application" adds the separately measured read-and-parse median to the replay median.</p>
+</section>
+
+<section class="card" id="s-build">
+<div class="kicker">2 · Book construction</div>
+<h2>Construction: time inside one stream</h2>
+<p class="takeaway" id="tk-build"></p>
+<p class="note">Cumulative engine time at every 5% of the selected stream (median of five replays). A straight line means constant cost per event; a curve that bends upward means later events cost more because the book has grown.</p>
+<div class="legend" id="lg-progress"></div>
+<div class="grid2"><div><svg id="ch-progress" tabindex="0" role="img" aria-label="Cumulative seconds against events processed"></svg></div>
+<div><div class="scroll"><table id="tb-build"></table></div></div></div>
+</section>
+
+<section class="card" id="s-sale">
+<div class="kicker">3 · Large liquidation and queue concentration</div>
+<h2>One large market sell against a fresh bid book</h2>
+<p class="takeaway" id="tk-sale"></p>
+<p class="note">Each trial builds a new one-sided book of N bids over the stated number of prices and then sells the selected share of its total quantity once. The clock covers matching, state updates and building the fill list; construction is timed separately. Median of five trials; no trial reuses a depleted book.</p>
+<div class="legend" id="lg-sale"></div>
+<div class="grid2"><div><svg id="ch-sale" tabindex="0" role="img" aria-label="Seconds for one market sell against book size"></svg></div>
+<div><svg id="ch-construct" tabindex="0" role="img" aria-label="Seconds to construct the bid book against book size"></svg></div></div>
+<div class="scroll"><table id="tb-sale"></table></div>
+<h3>Queue concentration: same order count, different number of prices</h3>
+<div class="scroll"><table id="tb-conc"></table></div>
+<p class="note">With one price every maker waits in a single queue; with 1,000 prices queues are short and many levels are visited. Every completed sale is compared with a fill plan computed independently by sorting the bids by price and arrival.</p>
+</section>
+
+<section class="card" id="s-latency">
+<div class="kicker">4 · Latency</div>
+<h2>Processing latency per event</h2>
+<p class="takeaway" id="tk-latency"></p>
+<p class="note">Separate instrumented pass: <code>perf_counter_ns</code> around every dispatcher call for the selected stream. Percentiles use the nearest-rank convention. This is engine processing time only; it contains no network or queueing delay and says nothing about the load at which a live venue would fall behind. It is not the reciprocal of throughput.</p>
+<div class="legend" id="lg-lat"></div>
+<div class="grid2"><div><svg id="ch-hist" tabindex="0" role="img" aria-label="Distribution of per-event latency for versions A and B"></svg></div>
+<div><svg id="ch-decile" tabindex="0" role="img" aria-label="Median latency in each tenth of the stream"></svg></div></div>
+<div class="scroll"><table id="tb-lat"></table></div>
+</section>
+
+<section class="card" id="s-memory">
+<div class="kicker">5 · Memory and cancellation churn</div>
+<h2>Memory</h2>
+<p class="takeaway" id="tk-memory"></p>
+<p class="note">Separate pass under <code>tracemalloc</code>: bytes of Python allocations made by the book, its indexes and the most recent returned result. Preloaded input is excluded (streams above 100,000 events are parsed in blocks of 1,000 inside the trace). Neither version stores a trade history. Traced bytes are neither auxiliary space in the textbook sense nor the memory of the whole process.</p>
+<div class="legend" id="lg-mem"></div>
+<div class="grid2"><div><svg id="ch-mem" tabindex="0" role="img" aria-label="Peak traced bytes against number of events"></svg></div>
+<div><svg id="ch-growth" tabindex="0" role="img" aria-label="Traced bytes during the selected stream"></svg></div></div>
+<h3>After cancellation: does anything keep growing?</h3>
+<div class="scroll tall"><table id="tb-churn"></table></div>
+<p class="note"><code>cancel_churn</code> alternates one submission and its cancellation; <code>mass_cancel</code> builds a book and then cancels all but about 1% of it. "Stored entries" counts every slot the engine still holds (list or queue entries, index entries, price levels, heap entries).</p>
+</section>
+
+<section class="card" id="s-bottleneck">
+<div class="kicker">6 · Explanation</div>
+<h2>Why version A slows down: one measured bottleneck</h2>
+<div id="bottleneck" class="note"></div>
+<div class="scroll tall"><table id="tb-counters"></table></div>
+<div id="profile"></div>
+</section>
+
+<section class="card" id="tuning-card">
+<div class="kicker">7 · Revision</div>
+<h2>Second revision step: tuning version B</h2>
+<p class="takeaway" id="tk-tuning"></p>
+<p class="note">Version B was first written with two side objects, one object per order and a chain of small validation calls (preserved as <code>book_b1.py</code>, "B1"). The submitted version B keeps the same data organization (FIFO queue per price, price heaps, order index) and removes constant-factor overhead; the shared event envelope was streamlined at the same time, which also benefits version A. <code>tuning.py</code> replays the same streams through all three engines in one process, interleaved repeat by repeat, after checking that every result is identical. "B1 original" is B1 behind the envelope as first written.</p>
+<div class="scroll"><table id="tb-tuning"></table></div>
+</section>
+
+<section class="card" id="s-correct">
+<div class="kicker">8 · Correctness</div>
+<h2>Correctness outcomes</h2>
+<div class="scroll"><table id="tb-correct"></table></div>
+<details><summary>Every compared workload</summary><div class="scroll tall"><table id="tb-equal"></table></div></details>
+</section>
+
+<section class="card" id="s-raw">
+<div class="kicker">9 · Evidence</div>
+<h2>Raw repeats, workload settings and environment</h2>
+<div class="scroll tall"><table id="tb-raw"></table></div>
+<details><summary>Raw trials of the selected fixed-book test</summary><div class="scroll tall"><table id="tb-rawsale"></table></div></details>
+<details><summary>Event files and checksums</summary><div class="scroll tall"><table id="tb-data"></table></div></details>
+<details><summary>Environment, limits and measurement protocol</summary><pre id="environment"></pre></details>
+<p class="note"><a download href="__JSON_LINK__">measurements.json</a> · <a download href="summary.csv">summary.csv</a> · <a download href="raw_repeats.csv">raw_repeats.csv</a></p>
+</section>
+<footer>Synthetic, uncalibrated teaching workloads on one machine. Medians of five repeats describe this run; they are not a guarantee for other hardware, inputs or Python versions.</footer>
+<div id="tip" role="status"></div>
+<script type="application/json" id="dataset">__DATA__</script>
+<script>
+'use strict';
+const D=JSON.parse(document.getElementById('dataset').textContent);
+const $=id=>document.getElementById(id);
+const NS='http://www.w3.org/2000/svg';
+const VERS=['A','B'], VNAME={A:'Version A (lists, scans)',B:'Version B (levels, heaps)'}, VCOL={A:'var(--a)',B:'var(--b)'};
+const nf=new Intl.NumberFormat('en-US');
+const int=v=>v==null?'–':nf.format(v);
+const num=(v,d=3)=>v==null?'–':Number(v).toLocaleString('en-US',{maximumSignificantDigits:d});
+function secs(v){if(v==null)return '–';if(v===0)return '0 s';const a=Math.abs(v);return a>=1?num(v)+' s':a>=1e-3?num(v*1e3)+' ms':a>=1e-6?num(v*1e6)+' µs':num(v*1e9)+' ns'}
+const nano=v=>v==null?'–':secs(v/1e9);
+function bytes(v){if(v==null)return '–';return v>=1048576?num(v/1048576)+' MiB':v>=1024?num(v/1024)+' KiB':int(v)+' B'}
+const compact=v=>v>=1e6?num(v/1e6)+'M':v>=1e3?num(v/1e3)+'K':String(v);
+const btc=u=>u==null?'–':num(u/1e8,6)+' BTC';
+const uniq=a=>[...new Set(a)];
+function el(tag,attrs={},text){const n=document.createElement(tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,v);if(text!==undefined)n.textContent=text;return n}
+function sv(parent,tag,attrs={},text){const n=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,v);if(text!==undefined)n.textContent=text;parent.append(n);return n}
+function statusChip(s){return {chip:s||'missing'}}
+function table(id,caption,head,rows){const t=$(id);t.replaceChildren();if(caption)t.createCaption().textContent=caption;const hr=t.createTHead().insertRow();for(const h of head){const th=el('th',{scope:'col'},h);hr.append(th)}const b=t.createTBody();if(!rows.length){const c=b.insertRow().insertCell();c.colSpan=head.length;c.className='text';c.textContent='No saved measurement for this selection.'}for(const r of rows){const tr=b.insertRow();for(const v of r){const td=tr.insertCell();if(v&&typeof v==='object'&&v.chip){td.append(el('span',{class:'status '+v.chip},v.chip==='ok'?'✓ ok':v.chip==='stopped'?'■ stopped':'– '+v.chip))}else td.textContent=v==null?'–':v}}}
+function legend(id,items){const n=$(id);n.replaceChildren();for(const it of items){const s=el('span');const k=el('i',{class:'key '+(it.cls||'')});k.style.borderColor=it.color;if(it.cls==='box')k.style.background=it.color;s.append(k,document.createTextNode(it.label));n.append(s)}}
+const tip=$('tip');
+function showTip(evt,head,rows){tip.replaceChildren(el('div',{class:'head'},head));for(const r of rows){const d=el('div',{class:'rowt'});const l=el('span');if(r.color){const k=el('i',{class:'key'});k.style.borderColor=r.color;l.append(k)}l.append(document.createTextNode(r.label));d.append(l,el('b',{},r.value));tip.append(d)}tip.style.display='block';const w=tip.offsetWidth,h=tip.offsetHeight;let x=evt.clientX+14,y=evt.clientY+14;if(x+w>innerWidth-8)x=evt.clientX-w-14;if(y+h>innerHeight-8)y=evt.clientY-h-14;tip.style.left=Math.max(4,x)+'px';tip.style.top=Math.max(4,y)+'px'}
+function hideTip(){tip.style.display='none'}
+function logTicks(lo,hi){const t=[];for(let e=Math.floor(Math.log10(lo));e<=Math.ceil(Math.log10(hi));e++)t.push(10**e);return t}
+function niceTicks(lo,hi,n=5){const span=hi-lo||1,step0=span/n,mag=10**Math.floor(Math.log10(step0)),f=step0/mag,step=(f>=5?10:f>=2?5:f>=1?2:1)*mag,t=[];for(let v=Math.ceil(lo/step)*step;v<=hi+step*1e-9;v+=step)t.push(Math.abs(v)<step*1e-9?0:v);return t}
+/* Line chart. series: [{name,color,points:[{x,y,stopped,note}]}]. One y axis; log or linear per axis. */
+function lineChart(id,cfg){const svg=$(id);svg.replaceChildren();const W=540,H=300,m={l:62,r:64,t:26,b:42};svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+const pts=cfg.series.flatMap(s=>s.points.filter(p=>p.y!=null&&(!cfg.yLog||p.y>0)));
+sv(svg,'text',{x:m.l,y:14,class:'title'},cfg.yLabel);
+if(!pts.length){sv(svg,'text',{x:W/2,y:H/2,'text-anchor':'middle',class:'lab'},'No saved measurement for this selection');svg.onpointermove=svg.onpointerleave=null;return}
+let x0=Math.min(...pts.map(p=>p.x)),x1=Math.max(...pts.map(p=>p.x)),y0=Math.min(...pts.map(p=>p.y)),y1=Math.max(...pts.map(p=>p.y));
+if(cfg.yLog){y0=10**Math.floor(Math.log10(y0));y1=10**Math.ceil(Math.log10(y1));if(y0===y1)y1=y0*10}else{y0=0;y1=y1*1.08||1}
+if(x0===x1){x0=cfg.xLog?x0/2:x0-1;x1=cfg.xLog?x1*2:x1+1}
+const fx=v=>cfg.xLog?Math.log10(v):v,fy=v=>cfg.yLog?Math.log10(v):v;
+const X=v=>m.l+(fx(v)-fx(x0))/(fx(x1)-fx(x0))*(W-m.l-m.r),Y=v=>H-m.b-(fy(v)-fy(y0))/(fy(y1)-fy(y0))*(H-m.t-m.b);
+for(const t of(cfg.yLog?logTicks(y0,y1):niceTicks(y0,y1))){if(t<y0||t>y1*1.0001)continue;sv(svg,'line',{x1:m.l,x2:W-m.r,y1:Y(t),y2:Y(t),stroke:'var(--grid)'});sv(svg,'text',{x:m.l-7,y:Y(t)+4,'text-anchor':'end'},cfg.yFmt(t))}
+sv(svg,'line',{x1:m.l,x2:W-m.r,y1:H-m.b,y2:H-m.b,stroke:'var(--axis)'});
+const xs=cfg.xTicks||uniq(pts.map(p=>p.x)).sort((a,b)=>a-b);let lastX=-99;for(const t of xs){const px=X(t);if(px-lastX<44)continue;lastX=px;sv(svg,'text',{x:px,y:H-m.b+16,'text-anchor':'middle'},cfg.xFmt(t))}
+sv(svg,'text',{x:(m.l+W-m.r)/2,y:H-6,'text-anchor':'middle',class:'title'},cfg.xLabel);
+const cross=sv(svg,'line',{y1:m.t,y2:H-m.b,stroke:'var(--axis)',visibility:'hidden'});
+const ends=[];
+for(const s of cfg.series){const ok=s.points.filter(p=>p.y!=null&&!p.stopped&&(!cfg.yLog||p.y>0)).sort((a,b)=>a.x-b.x);
+if(ok.length>1)sv(svg,'polyline',{points:ok.map(p=>`${X(p.x)},${Y(p.y)}`).join(' '),fill:'none',stroke:s.color,'stroke-width':2,'stroke-linejoin':'round','stroke-linecap':'round'});
+if(!cfg.noMarkers)for(const p of ok)sv(svg,'circle',{cx:X(p.x),cy:Y(p.y),r:4,fill:s.color,stroke:'var(--surface)','stroke-width':2});
+for(const p of s.points.filter(p=>p.stopped&&p.y>0))sv(svg,'circle',{cx:X(p.x),cy:Y(p.y),r:4.5,fill:'var(--surface)',stroke:s.color,'stroke-width':2});
+if(ok.length)ends.push({s,p:ok[ok.length-1]})}
+ends.sort((a,b)=>Y(a.p.y)-Y(b.p.y));let prev=-99;for(const e of ends){let y=Y(e.p.y)+4;if(y-prev<13)y=prev+13;prev=y;sv(svg,'text',{x:X(e.p.x)+9,y,class:'lab'},e.s.short||e.s.name)}
+const allX=uniq(cfg.series.flatMap(s=>s.points.map(p=>p.x))).sort((a,b)=>a-b);
+svg.onpointermove=evt=>{const r=svg.getBoundingClientRect(),px=(evt.clientX-r.left)/r.width*W;let best=allX[0];for(const x of allX)if(Math.abs(X(x)-px)<Math.abs(X(best)-px))best=x;cross.setAttribute('x1',X(best));cross.setAttribute('x2',X(best));cross.setAttribute('visibility','visible');
+showTip(evt,cfg.xTip(best),cfg.series.map(s=>{const p=s.points.find(q=>q.x===best);return{color:s.color,label:s.short||s.name,value:!p||p.y==null?'no run':(p.stopped?'stopped after ':'')+cfg.yFmt(p.y)+(p.note?' · '+p.note:'')}}))};
+svg.onpointerleave=()=>{cross.setAttribute('visibility','hidden');hideTip()}}
+/* Two stacked histograms on one shared logarithmic latency axis. */
+function histChart(id,hists){const svg=$(id);svg.replaceChildren();const W=540,H=300,m={l:62,r:24,t:26,b:42};svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+sv(svg,'text',{x:m.l,y:14,class:'title'},'Share of events in each latency bin');
+const per=D.metadata_hist.per_decade,lo=D.metadata_hist.min_log10;const present=VERS.filter(v=>hists[v]);
+if(!present.length){sv(svg,'text',{x:W/2,y:H/2,'text-anchor':'middle',class:'lab'},'No saved latency pass for this selection');return}
+let first=1e9,last=-1;for(const v of present)hists[v].forEach((c,i)=>{if(c){first=Math.min(first,i);last=Math.max(last,i)}});first=Math.floor(first/per)*per;last=Math.ceil((last+1)/per)*per;
+const n=last-first,bw=(W-m.l-m.r)/n,ph=(H-m.t-m.b-16)/2;
+VERS.forEach((v,k)=>{const base=m.t+ph+(ph+16)*k;sv(svg,'line',{x1:m.l,x2:W-m.r,y1:base,y2:base,stroke:'var(--axis)'});sv(svg,'text',{x:W-m.r,y:base-ph+10,'text-anchor':'end',class:'lab'},'Version '+v+(hists[v]?'':' — no run'));
+if(!hists[v])return;const total=hists[v].reduce((a,b)=>a+b,0),peak=Math.max(...hists[v])/total;
+sv(svg,'text',{x:m.l-7,y:base-ph+10,'text-anchor':'end'},num(peak*100,2)+'%');sv(svg,'text',{x:m.l-7,y:base+4,'text-anchor':'end'},'0%');
+for(let i=first;i<last;i++){const c=hists[v][i]||0;const h=c/total/peak*(ph-6);const x=m.l+(i-first)*bw;
+if(c)sv(svg,'path',{d:`M${x+1},${base}V${base-h+Math.min(3,h)}q0,-${Math.min(3,h)} ${Math.min(3,bw/2-1)},-${Math.min(3,h)}H${x+bw-1-Math.min(3,bw/2-1)}q${Math.min(3,bw/2-1)},0 ${Math.min(3,bw/2-1)},${Math.min(3,h)}V${base}Z`,fill:VCOL[v]});
+const hit=sv(svg,'rect',{x,y:base-ph,width:bw,height:ph,fill:'transparent'});const a=10**(lo+i/per),b=10**(lo+(i+1)/per);
+hit.onpointermove=evt=>showTip(evt,`${nano(a)} to ${nano(b)}`,[{color:VCOL[v],label:'Version '+v,value:num(c/total*100,3)+'% ('+int(c)+' events)'}]);hit.onpointerleave=hideTip}});
+for(let i=first;i<=last;i+=per)sv(svg,'text',{x:m.l+(i-first)*bw,y:H-m.b+16,'text-anchor':'middle'},nano(10**(lo+i/per)));
+sv(svg,'text',{x:(m.l+W-m.r)/2,y:H-6,'text-anchor':'middle',class:'title'},'Latency per event (logarithmic bins)')}
+
+/* ---------- selection ---------- */
+const scenarios=uniq(D.replay.map(r=>r.scenario));
+function fill(id,values,label,keep){const s=$(id),old=s.value;s.replaceChildren();for(const v of values)s.append(el('option',{value:v},label(v)));if(keep&&values.map(String).includes(old))s.value=old}
+fill('f-scenario',scenarios,v=>v);fill('f-pct',uniq(D.fixed_book.map(r=>r.sale_pct)).sort((a,b)=>a-b),v=>v+'% of bid quantity');
+if(scenarios.includes('buildup'))$('f-scenario').value='buildup';if([...$('f-pct').options].some(o=>o.value==='100'))$('f-pct').value='100';
+function refill(){const sc=$('f-scenario').value;const seeds=uniq(D.replay.filter(r=>r.scenario===sc).map(r=>r.seed)).sort((a,b)=>a-b);fill('f-seed',seeds,v=>String(v),true);
+const sizes=uniq(D.replay.filter(r=>r.scenario===sc&&r.seed===+$('f-seed').value).map(r=>r.events)).sort((a,b)=>a-b);const had=$('f-events').value;fill('f-events',sizes,v=>nf.format(v),true);if(!had){const pick=sizes.filter(s=>s<=10000).pop()||sizes[0];$('f-events').value=String(pick)}}
+const rep=(sc,seed,ev,v)=>D.replay.find(r=>r.scenario===sc&&r.seed===seed&&r.events===ev&&r.version===v);
+const fix=(n,levels,seed,pct,v)=>D.fixed_book.find(r=>r.book_orders===n&&r.levels===levels&&r.seed===seed&&r.sale_pct===pct&&r.version===v);
+const parse=(sc,seed,ev)=>(D.read_parse.find(r=>r.scenario===sc&&r.seed===seed&&r.events===ev)||{}).read_parse_seconds_median;
+const med=a=>{const s=[...a].sort((x,y)=>x-y);return s.length?s.length%2?s[(s.length-1)/2]:(s[s.length/2-1]+s[s.length/2])/2:null};
+const S=D.metadata.settings,LEVELS=S.levels;
+
+function tiles(){const t=$('tiles');t.replaceChildren();const add=(label,value,sub)=>{const d=el('div',{class:'tile'});d.append(el('div',{class:'label'},label),el('div',{class:'value'},value),el('div',{class:'sub'},sub));t.append(d)};
+const tests=D.tests||{};add('Tests passing',tests.after?`${tests.after.passed} of ${tests.after.ran}`:'not recorded',tests.before?`${tests.before.problems} failures before implementation`:'see results/test_after.txt');
+const we=D.worked_example||[];add('Worked example',we.length&&we.every(r=>r.matches_expected)?'$'+Number(we[0].gross_proceeds_usd).toLocaleString('en-US',{minimumFractionDigits:2}):'mismatch','gross proceeds, both versions');
+const pairs=pairList();const eq=pairs.filter(p=>p.equal===true).length,cmp=pairs.filter(p=>p.equal!=null).length;add('Identical result streams',`${eq} of ${cmp}`,`workloads where both versions finished (${pairs.length-cmp} not comparable)`);
+const stopped=[...D.replay,...D.fixed_book].filter(r=>r.status==='stopped');add('Runs stopped at a limit',String(stopped.length),`all version ${uniq(stopped.map(r=>r.version)).join(', ')||'–'}; limits ${S.replay_limit_seconds} s per replay, ${S.sale_limit_seconds} s per sale`)}
+function pairList(){const out=[];for(const b of D.replay.filter(r=>r.version==='B')){const a=rep(b.scenario,b.seed,b.events,'A');const both=a&&a.outcome&&b.outcome;out.push({kind:'stream replay',name:`${b.scenario} · M=${nf.format(b.events)} · seed ${b.seed}`,a:a?a.status:'missing',b:b.status,equal:both?a.outcome.results_sha256===b.outcome.results_sha256&&a.outcome.book_sha256===b.outcome.book_sha256:null,plan:null})}
+for(const b of D.fixed_book.filter(r=>r.version==='B')){const a=fix(b.book_orders,b.levels,b.seed,b.sale_pct,'A');const both=a&&a.outcome&&b.outcome;out.push({kind:'fixed-book sale',name:`N=${nf.format(b.book_orders)} · ${nf.format(b.levels)} prices · ${b.sale_pct}% · seed ${b.seed}`,a:a?a.status:'missing',b:b.status,equal:both?a.outcome.fills_sha256===b.outcome.fills_sha256&&a.outcome.book_sha256===b.outcome.book_sha256:null,plan:[a,b].filter(r=>r&&r.outcome).map(r=>r.outcome.matches_sorted_fill_plan)})}
+return out}
+
+function update(){const sc=$('f-scenario').value,seed=+$('f-seed').value,ev=+$('f-events').value,pct=+$('f-pct').value;
+const sizes=uniq(D.replay.filter(r=>r.scenario===sc&&r.seed===seed).map(r=>r.events)).sort((a,b)=>a-b);
+$('f-note').textContent=seed===S.seeds[0]?'':'Intermediate and one-million-event sizes were run with seed '+S.seeds[0]+' only.';
+const key=[{color:VCOL.A,label:VNAME.A},{color:VCOL.B,label:VNAME.B}],open={color:'var(--ink2)',label:'stopped at the time limit (lower bound, not a result)',cls:'open'};
+/* replay */
+const series=f=>VERS.map(v=>({name:VNAME[v],short:v,color:VCOL[v],points:sizes.map(n=>f(rep(sc,seed,n,v),n)).filter(Boolean)}));
+legend('lg-replay',[...key,open]);
+lineChart('ch-replay',{series:series((r,n)=>r&&(r.status==='ok'?{x:n,y:r.replay_seconds_median}:r.status==='stopped'?{x:n,y:r.stopped_after_seconds,stopped:true,note:int(r.events_completed)+' events done'}:null)),xLog:true,yLog:true,xLabel:'Events in stream (M)',yLabel:'Replay time, median of 5',xFmt:compact,yFmt:secs,xTip:x=>nf.format(x)+' events'});
+lineChart('ch-throughput',{series:series((r,n)=>r&&r.status==='ok'?{x:n,y:r.throughput_events_per_second}:null),xLog:true,yLog:true,xLabel:'Events in stream (M)',yLabel:'Throughput, events per second',xFmt:compact,yFmt:compact,xTip:x=>nf.format(x)+' events'});
+table('tb-replay',`${sc}, seed ${seed}: engine replay (median of five), book size and input cost`,['M events','Peak B','Peak P','F fills','A status','A replay','A events/s','B status','B replay','B events/s','A ÷ B time','Read + parse','Application (B)'],
+sizes.map(n=>{const a=rep(sc,seed,n,'A'),b=rep(sc,seed,n,'B'),o=(b&&b.outcome)||(a&&a.outcome)||{},p=parse(sc,seed,n);const at=a&&a.replay_seconds_median,bt=b&&b.replay_seconds_median;
+return[nf.format(n),int(o.peak_active_orders),int(o.peak_price_levels),int(o.fill_count),statusChip(a&&a.status),a&&a.status==='stopped'?`> ${secs(a.stopped_after_seconds)} (${int(a.events_completed)} done)`:secs(at),a&&a.throughput_events_per_second?int(Math.round(a.throughput_events_per_second)):'–',statusChip(b&&b.status),secs(bt),b&&b.throughput_events_per_second?int(Math.round(b.throughput_events_per_second)):'–',at&&bt?num(at/bt)+'×':'–',secs(p),p&&bt?secs(p+bt):'–']}));
+/* progress within a stream */
+legend('lg-progress',key);
+const prog=v=>{const r=rep(sc,seed,ev,v);if(!r)return[];if(r.checkpoint_seconds_median)return r.checkpoint_seconds_median.map((y,i)=>({x:Math.floor(ev*(i+1)/20),y}));const s=(r.repeats||[]).find(q=>q.status==='stopped');return s?s.checkpoint_seconds.map((y,i)=>({x:Math.floor(ev*(i+1)/20),y,note:'run later stopped'})):[]};
+lineChart('ch-progress',{series:VERS.map(v=>({name:VNAME[v],short:v,color:VCOL[v],points:prog(v)})),xLog:false,yLog:true,noMarkers:true,xLabel:'Events processed',yLabel:'Cumulative engine time',xTicks:[0.25,0.5,0.75,1].map(f=>Math.floor(ev*f)),xFmt:compact,yFmt:secs,xTip:x=>nf.format(x)+' events processed'});
+const phased=D.replay.filter(r=>r.seed===seed&&r.build_seconds_median!=null&&r.events===ev);
+table('tb-build',`Build phase and the phase after it, M=${nf.format(ev)}, seed ${seed}`,['Workload','Version','Build events','Build','After build','After-build phase'],phased.map(r=>[r.scenario,r.version,int(r.build_events),secs(r.build_seconds_median),secs(r.tail_seconds_median),r.scenario==='sweep'?'market sells':'cancellations']));
+/* sale */
+const fseeds=uniq(D.fixed_book.map(r=>r.seed)),fs=fseeds.includes(seed)?seed:fseeds[0];
+const books=uniq(D.fixed_book.filter(r=>r.levels===LEVELS&&r.seed===fs).map(r=>r.book_orders)).sort((a,b)=>a-b);
+legend('lg-sale',[...key,open]);
+lineChart('ch-sale',{series:VERS.map(v=>({name:VNAME[v],short:v,color:VCOL[v],points:books.map(n=>{const r=fix(n,LEVELS,fs,pct,v);return r&&(r.status==='ok'?{x:n,y:r.sell_seconds_median}:r.status==='stopped'?{x:n,y:r.sale_limit_seconds,stopped:true}:null)}).filter(Boolean)})),xLog:true,yLog:true,xLabel:'Bids in the book (N)',yLabel:`One market sell of ${pct}%`,xFmt:compact,yFmt:secs,xTip:x=>nf.format(x)+' resting bids'});
+lineChart('ch-construct',{series:VERS.map(v=>({name:VNAME[v],short:v,color:VCOL[v],points:books.map(n=>{const r=fix(n,LEVELS,fs,pct,v);return r&&r.construction_seconds_median!=null?{x:n,y:r.construction_seconds_median}:null}).filter(Boolean)})),xLog:true,yLog:true,xLabel:'Bids in the book (N)',yLabel:'Constructing the fresh bid book',xFmt:compact,yFmt:secs,xTip:x=>nf.format(x)+' passive bids inserted'});
+const saleRow=(n,lv)=>{const a=fix(n,lv,fs,pct,'A'),b=fix(n,lv,fs,pct,'B'),o=(b&&b.outcome)||(a&&a.outcome)||{},any=b||a||{};const ca=a&&a.counters,cb=b&&b.counters;
+return[nf.format(n),nf.format(lv),int(o.peak_price_levels),btc(any.requested_qty_units),int(o.fill_count),int(o.makers_touched),int(o.price_levels_visited),btc(o.unfilled_qty_units),statusChip(a&&a.status),a&&a.status==='stopped'?`> ${a.sale_limit_seconds} s`:secs(a&&a.sell_seconds_median),secs(b&&b.sell_seconds_median),secs(a&&a.construction_seconds_median),secs(b&&b.construction_seconds_median),ca?int((ca.records_examined_best||0)+(ca.records_examined_remove||0)):'–',cb?int(cb.heap_pops||0):'–']};
+const saleHead=['N bids','Prices offered','P occupied','Requested','Fills','Makers touched','Levels visited','Unfilled','A status','A sell','B sell','A construct','B construct','A records examined','B heap pops'];
+table('tb-sale',`Sale of ${pct}% of the available bid quantity, ${nf.format(LEVELS)} prices offered, seed ${fs}`,saleHead,books.map(n=>saleRow(n,LEVELS)));
+const cs=S.concentration_seeds.includes(fs)?fs:S.concentration_seeds[0];const conc=uniq(D.fixed_book.filter(r=>r.book_orders===S.concentration_orders&&r.seed===cs).map(r=>r.levels)).sort((a,b)=>a-b);
+const keepFs=fs;table('tb-conc',`N=${nf.format(S.concentration_orders)} bids, sale of ${pct}%, seed ${cs}`,saleHead,conc.map(lv=>{const a=fix(S.concentration_orders,lv,cs,pct,'A'),b=fix(S.concentration_orders,lv,cs,pct,'B');if(cs===keepFs)return saleRow(S.concentration_orders,lv);const o=(b&&b.outcome)||{},any=b||a||{},ca=a&&a.counters,cb=b&&b.counters;return[nf.format(S.concentration_orders),nf.format(lv),int(o.peak_price_levels),btc(any.requested_qty_units),int(o.fill_count),int(o.makers_touched),int(o.price_levels_visited),btc(o.unfilled_qty_units),statusChip(a&&a.status),secs(a&&a.sell_seconds_median),secs(b&&b.sell_seconds_median),secs(a&&a.construction_seconds_median),secs(b&&b.construction_seconds_median),ca?int((ca.records_examined_best||0)+(ca.records_examined_remove||0)):'–',cb?int(cb.heap_pops||0):'–']}));
+/* latency */
+const lat=v=>{const r=rep(sc,seed,ev,v);return r&&r.latency};const sumH=l=>l?Object.values(l.histogram_by_type).reduce((acc,h)=>acc.map((c,i)=>c+h[i])):null;
+legend('lg-lat',[{color:VCOL.A,label:VNAME.A,cls:'box'},{color:VCOL.B,label:VNAME.B,cls:'box'}]);
+histChart('ch-hist',{A:sumH(lat('A')),B:sumH(lat('B'))});
+lineChart('ch-decile',{series:VERS.map(v=>({name:VNAME[v],short:v,color:VCOL[v],points:lat(v)?lat(v).deciles.map((d,i)=>({x:i+1,y:d.p50_ns/1e9,note:'p99 '+nano(d.p99_ns)})):[]})),xLog:false,yLog:true,xLabel:'Tenth of the stream (1 = first 10% of events)',yLabel:'Median latency within each tenth',xFmt:x=>String(x),yFmt:secs,xTip:x=>`Events in tenth ${x} of 10`});
+const latRows=[];for(const v of VERS){const l=lat(v);if(!l){const r=rep(sc,seed,ev,v);latRows.push(['Version '+v,r&&r.status==='stopped'?'not run: timing stopped at the limit':'no saved pass','–','–','–','–','–','–']);continue}
+for(const[name,s]of[['all events',l.overall],...Object.entries(l.by_type),['first 10% of events',l.first_10pct],['last 10% of events',l.last_10pct]])if(s.count)latRows.push(['Version '+v,name,int(s.count),nano(s.p50_ns),nano(s.p95_ns),nano(s.p99_ns),nano(s.max_ns),nano(s.mean_ns)])}
+table('tb-lat',`${sc}, M=${nf.format(ev)}, seed ${seed}: latency by event type and position (clock resolution ${nano(D.metadata.perf_counter.resolution_seconds*1e9)})`,['Version','Events','Count','Median','95th percentile','99th percentile','Maximum','Mean'],latRows);
+/* memory */
+legend('lg-mem',key);
+lineChart('ch-mem',{series:series((r,n)=>r&&r.memory?{x:n,y:r.memory.peak_bytes}:null),xLog:true,yLog:true,xLabel:'Events in stream (M)',yLabel:'Peak traced bytes during replay',xFmt:compact,yFmt:bytes,xTip:x=>nf.format(x)+' events'});
+lineChart('ch-growth',{series:VERS.map(v=>{const r=rep(sc,seed,ev,v);return{name:VNAME[v],short:v,color:VCOL[v],points:r&&r.memory?r.memory.checkpoints.map(c=>({x:c.events,y:c.current_bytes,note:int(c.active_orders)+' active orders'})):[]}}),xLog:false,yLog:false,noMarkers:true,xLabel:'Events processed',yLabel:`Traced bytes held, M=${nf.format(ev)}`,xTicks:[0.25,0.5,0.75,1].map(f=>Math.floor(ev*f)),xFmt:compact,yFmt:bytes,xTip:x=>nf.format(x)+' events processed'});
+const churn=[];for(const s2 of['cancel_churn','mass_cancel'])for(const n of uniq(D.replay.filter(r=>r.scenario===s2&&r.seed===seed).map(r=>r.events)).sort((a,b)=>a-b))for(const v of VERS){const r=rep(s2,seed,n,v);if(!r)continue;const o=r.outcome||{},mm=r.memory||{},st=o.final_storage||{};churn.push([s2,nf.format(n),v,statusChip(r.status),int(o.peak_active_orders),int(o.final_active_orders),bytes(mm.peak_bytes),bytes(mm.final_current_bytes),int(st.stored_entries),v==='B'?int(st.stale_heap_entries):'n/a'])}
+table('tb-churn',`Seed ${seed}: memory and stored entries at the end of cancellation-heavy streams`,['Workload','M events','Version','Status','Peak active orders','Active at end','Peak traced','Traced at end','Stored entries at end','Stale heap entries'],churn);
+/* bottleneck */
+bottleneck(fs,pct);
+/* raw */
+const raw=[];for(const v of VERS){const r=rep(sc,seed,ev,v);if(!r)continue;for(const q of r.repeats)raw.push(['Version '+v,q.repeat,statusChip(q.status),secs(q.elapsed_seconds),q.elapsed_seconds.toFixed(6),int(q.events_completed),r.version_position===1?'first':'second'])}
+table('tb-raw',`${sc}, M=${nf.format(ev)}, seed ${seed}: every timed replay, unaggregated`,['Version','Repeat','Status','Replay time','Seconds','Events completed','Ran in this cell'],raw);
+const big=books.filter(n=>n<=ev).pop()||books[0];const rs=[];for(const v of VERS){const r=fix(big,LEVELS,fs,pct,v);if(!r)continue;for(const q of r.repeats)rs.push(['Version '+v,q.repeat,q.construction_seconds.toFixed(6),q.sell_seconds==null?'stopped':q.sell_seconds.toFixed(6)])}
+table('tb-rawsale',`N=${nf.format(big)} bids, ${pct}% sale, seed ${fs}`,['Version','Trial','Construction seconds','Sell seconds'],rs)}
+
+function bottleneck(fs,pct){const box=$('bottleneck');box.replaceChildren();const ns=uniq(D.fixed_book.filter(r=>r.levels===LEVELS&&r.seed===fs&&r.sale_pct===100&&r.version==='A'&&r.counters).map(r=>r.book_orders)).sort((a,b)=>a-b);
+const add=t=>box.append(el('p',{},t));
+add('In version A the best resting order is found by min() over the whole side, and an exhausted maker is removed with list.remove(). Both walk the list, so one maker fill costs time proportional to the number of bids still resting. Selling through F makers of a book with N bids therefore examines on the order of F × N records; when the whole book is sold that is about N²/2 for the scans alone. Version B reads the head of a FIFO queue in constant time and pops its price heap once per emptied level, so the same sale costs on the order of F + (levels emptied) × log P.');
+if(ns.length){const n=ns[ns.length-1],a=fix(n,LEVELS,fs,100,'A'),b=fix(n,LEVELS,fs,100,'B'),ca=a.counters,cb=(b&&b.counters)||{};const exam=(ca.records_examined_best||0)+(ca.records_examined_remove||0);
+add(`Measured operation counts for selling 100% of a ${nf.format(n)}-bid book (seed ${fs}, separate counting pass): version A examined ${nf.format(exam)} list records for ${nf.format(a.outcome.fill_count)} fills, about ${nf.format(Math.round(exam/a.outcome.fill_count))} per fill; N²/2 would be ${nf.format(n*n/2)} for the best-order scans, and the counted ${nf.format(ca.records_examined_best)} matches N(N+1)/2. Version B emptied ${nf.format(cb.heap_pops||0)} price levels, one heap pop each, and discarded ${nf.format(cb.stale_heap_discards||0)} stale heap entries for the same fills. Timed medians: ${secs(a.sell_seconds_median)} for A and ${secs(b&&b.sell_seconds_median)} for B.`)}
+add('The same scan is why inserting a passive order into version A gets slower as the opposite side grows (one min() per insertion to test for crossing), which is what bends the construction curve above. Where the book stays tiny (cancel_churn) the scans are free and version A is the faster of the two, because version B still pays for its dictionaries, queue objects and heap on every event.');
+const rows=[];for(const n of uniq(D.fixed_book.filter(r=>r.levels===LEVELS&&r.seed===fs).map(r=>r.book_orders)).sort((a,b)=>a-b))for(const p of uniq(D.fixed_book.map(r=>r.sale_pct)).sort((a,b)=>a-b)){const a=fix(n,LEVELS,fs,p,'A'),b=fix(n,LEVELS,fs,p,'B');if(!a&&!b)continue;const ca=(a&&a.counters)||null,cb=(b&&b.counters)||null,o=(b&&b.outcome)||(a&&a.outcome)||{};
+rows.push([nf.format(n),p+'%',int(o.fill_count),ca?int(ca.best_scans):'–',ca?int(ca.records_examined_best):'–',ca?int(ca.records_examined_remove):'–',ca&&o.fill_count?int(Math.round((ca.records_examined_best+ca.records_examined_remove)/o.fill_count)):'–',cb?int(cb.heap_pops||0):'–',cb?int(cb.stale_heap_discards||0):'–',secs(a&&a.sell_seconds_median),secs(b&&b.sell_seconds_median)])}
+table('tb-counters',`Operation counts of the sale alone, counted in a separate pass (seed ${fs}, ${nf.format(LEVELS)} prices offered)`,['N bids','Sale','F fills','A min() scans','A records read by min()','A records read by remove()','A records per fill','B heap pops (levels emptied)','B stale heap entries discarded','A sell time','B sell time'],rows);
+const pr=$('profile');pr.replaceChildren();if(D.profile){for(const run of D.profile.runs){const d=el('details');d.append(el('summary',{},`cProfile, version ${run.version}: ${run.workload} (${secs(run.total_seconds)} under the profiler)`));const t=el('table');d.append(el('div',{class:'scroll'}));d.lastChild.append(t);pr.append(d);t.id='prof-'+run.version+run.workload.replace(/\W/g,'');table(t.id,'Functions by own time; profiler overhead inflates Python-level calls',['Function','Calls','Own time','Share of own time','Cumulative'],run.top.map(f=>[f.function,int(f.calls),secs(f.own_seconds),num(f.own_seconds/run.total_seconds*100,3)+'%',secs(f.cumulative_seconds)]))}}}
+
+function tuning(){const T=D.tuning;if(!T){$('tuning-card').hidden=true;return}
+table('tb-tuning',`Median of ${T.repeats} interleaved replays, seed ${T.seed}; diagnostic comparison, separate from the benchmark above`,['Workload','Events','B1 original','B1','B (submitted)','B per event','B time ÷ B1 original','B time ÷ B1'],T.rows.map(r=>[r.workload,int(r.events),secs(r.median_seconds['B1 original']),secs(r.median_seconds['B1']),secs(r.median_seconds['B']),secs(r.ns_per_event['B']/1e9),num(r.b_time_as_share_of_original,3),num(r.b_time_as_share_of_b1,3)]))}
+
+function correctness(){const pairs=pairList(),tests=D.tests||{},rows=[];
+rows.push(['Tests before implementation',tests.before?`${tests.before.ran} tests ran against placeholders: ${tests.before.problems} failures and errors`:'not recorded','results/test_before.txt']);
+rows.push(['Tests after implementation and revision',tests.after?`${tests.after.passed} of ${tests.after.ran} tests pass (${tests.after.files.join(', ')})`:'not recorded','results/test_after.txt']);
+for(const w of D.worked_example||[])rows.push([`Worked example, version ${w.version}`,w.matches_expected?`matches worked_expected.json; gross proceeds ${w.gross_proceeds_usd} dollars`:'DOES NOT MATCH','data/worked_expected.json']);
+const st=pairs.filter(p=>p.kind==='stream replay'),fb=pairs.filter(p=>p.kind==='fixed-book sale');
+const line=l=>`${l.filter(p=>p.equal===true).length} identical, ${l.filter(p=>p.equal===false).length} different, ${l.filter(p=>p.equal==null).length} not comparable (a run was stopped)`;
+rows.push(['A and B: every result of every event, and the final book, by SHA-256 digest',line(st),`${st.length} stream workloads`]);
+rows.push(['A and B: ordered fills and remaining book of a single sale',line(fb),`${fb.length} fixed-book tests`]);
+const plans=fb.flatMap(p=>p.plan||[]);rows.push(['Completed sales equal to the independently sorted fill plan',`${plans.filter(Boolean).length} of ${plans.length}`,'both versions, price then arrival']);
+table('tb-correct','',['Check','Outcome','Scope or evidence'],rows);
+table('tb-equal','Not comparable means at least one version has no completed run to compare',['Kind','Workload','A','B','Identical results and book','Matches sorted plan'],pairs.map(p=>[p.kind,p.name,statusChip(p.a),statusChip(p.b),p.equal==null?'not comparable':p.equal?'yes':'NO',p.plan==null?'n/a':p.plan.length?(p.plan.every(Boolean)?'yes':'NO'):'no completed sale']))}
+
+table('tb-data','Generated outside timing; large files are not part of the submission and are reproduced by the listed command',['File','Events','Seed','Supplied','Compressed bytes','SHA-256 of uncompressed content','Command'],D.datasets.map(d=>[d.file,int(d.events),d.seed,d.supplied_with_assignment?'yes':'no',int(d.compressed_bytes),d.sha256_uncompressed,d.command]));
+$('environment').textContent=JSON.stringify(D.metadata,null,2);
+/* ---------- plain-language summaries, all computed from the saved rows ---------- */
+const faster=(a,b)=>a>=b?`version B is ${num(a/b,3)}× faster`:`version A is ${num(b/a,3)}× faster`;
+function findings(){const list=$('findings');list.replaceChildren();const add=(head,text)=>{const li=el('li');li.append(el('b',{},head+' '),document.createTextNode(text));list.append(li)};
+const seed=S.seeds[0],done=D.replay.filter(r=>r.version==='B'&&r.seed===seed).map(b=>({b,a:rep(b.scenario,seed,b.events,'A')})).filter(p=>p.a&&p.a.status==='ok'&&p.b.status==='ok');
+if(done.length){const top=done.reduce((x,y)=>y.a.replay_seconds_median/y.b.replay_seconds_median>x.a.replay_seconds_median/x.b.replay_seconds_median?y:x);
+add('Largest measured gap.',`${top.b.scenario} with ${nf.format(top.b.events)} events: ${secs(top.a.replay_seconds_median)} for version A, ${secs(top.b.replay_seconds_median)} for version B (${num(top.a.replay_seconds_median/top.b.replay_seconds_median,3)}×). The gap widens with the number of resting orders, not with the number of events.`);
+const awins=uniq(done.filter(p=>p.a.replay_seconds_median<p.b.replay_seconds_median&&p.b.events>=10000).map(p=>p.b.scenario));
+add('Where the baseline wins.',awins.length?`On ${awins.join(', ')} version A is the faster one at 10,000 events or more: with almost no resting orders its scans are free, while version B still maintains queues, heaps and an index.`:'In this run version A is not faster on any stream of 10,000 events or more.')}
+const stops=[...D.replay,...D.fixed_book].filter(r=>r.status==='stopped'),bstops=stops.filter(r=>r.version==='B').length;
+add('Runs that did not finish.',`${stops.length} of ${D.replay.length+D.fixed_book.length} cells reached a declared limit (${S.replay_limit_seconds} s per replay, ${S.sale_limit_seconds} s per sale): ${stops.length-bstops} of version A, ${bstops} of version B. They are shown as open markers and nothing is estimated for them.`);
+const big=Math.max(...D.replay.map(r=>r.events)),bigB=D.replay.filter(r=>r.version==='B'&&r.events===big&&r.status==='ok');
+if(bigB.length){const tp=bigB.map(r=>r.throughput_events_per_second);add(`${compact(big)} events.`,`Version B finished ${bigB.length} of ${D.replay.filter(r=>r.version==='B'&&r.events===big).length} workloads at this size, at ${int(Math.round(Math.min(...tp)))} to ${int(Math.round(Math.max(...tp)))} events per second of engine time.`)}
+const sales=D.fixed_book.filter(r=>r.version==='A'&&r.status==='ok'&&r.levels===LEVELS).map(a=>({a,b:fix(a.book_orders,a.levels,a.seed,a.sale_pct,'B')})).filter(p=>p.b&&p.b.status==='ok');
+if(sales.length){const top=sales.reduce((x,y)=>y.a.sell_seconds_median/y.b.sell_seconds_median>x.a.sell_seconds_median/x.b.sell_seconds_median?y:x);
+add('One large sale.',`Selling ${top.a.sale_pct}% of a ${nf.format(top.a.book_orders)}-bid book takes ${secs(top.a.sell_seconds_median)} in version A and ${secs(top.b.sell_seconds_median)} in version B, because A rescans the remaining bids for every fill.`)}
+const mem=done.filter(p=>p.a.memory&&p.b.memory&&p.b.scenario==='buildup');if(mem.length){const m=mem[mem.length-1];add('Memory.',`The speed is paid for in space: at ${nf.format(m.b.events)} resting orders version B's traced peak is ${bytes(m.b.memory.peak_bytes)} against ${bytes(m.a.memory.peak_bytes)} for version A (${num(m.b.memory.peak_bytes/m.a.memory.peak_bytes,3)}×).`)}
+const pairs=pairList(),cmp=pairs.filter(p=>p.equal!=null);add('Same answers.',`In all ${cmp.filter(p=>p.equal).length} of ${cmp.length} comparisons where both versions finished, every event result and the final book are identical.`)}
+
+function takeaways(){const sc=$('f-scenario').value,seed=+$('f-seed').value,ev=+$('f-events').value,pct=+$('f-pct').value;
+const say=(id,parts)=>{$(id).textContent=parts.filter(Boolean).join(' ')};
+const sizes=uniq(D.replay.filter(r=>r.scenario===sc&&r.seed===seed).map(r=>r.events)).sort((a,b)=>a-b);
+let both=null,stop=null;for(const n of sizes){const a=rep(sc,seed,n,'A'),b=rep(sc,seed,n,'B');if(a&&b&&a.status==='ok'&&b.status==='ok')both={n,a,b};if(a&&a.status==='stopped'&&stop==null)stop=n}
+say('tk-replay',[both&&`At ${nf.format(both.n)} events, the largest ${sc} stream both versions finished, version A needed ${secs(both.a.replay_seconds_median)} and version B ${secs(both.b.replay_seconds_median)}: ${faster(both.a.replay_seconds_median,both.b.replay_seconds_median)}.`,stop&&`Version A was stopped at the ${S.replay_limit_seconds} s limit from ${nf.format(stop)} events on.`]);
+const a=rep(sc,seed,ev,'A'),b=rep(sc,seed,ev,'B'),la=a&&a.latency,lb=b&&b.latency;
+const firstLast=(l,v)=>l?`Version ${v}'s median goes from ${nano(l.first_10pct.p50_ns)} in the first tenth of the stream to ${nano(l.last_10pct.p50_ns)} in the last.`:'';
+say('tk-build',[firstLast(la,'A'),firstLast(lb,'B'),!la&&a&&a.status==='stopped'?'Version A has no completed run at this size.':'']);
+say('tk-latency',[la&&lb?`Median per event: ${nano(la.overall.p50_ns)} (A) against ${nano(lb.overall.p50_ns)} (B). 99th percentile: ${nano(la.overall.p99_ns)} against ${nano(lb.overall.p99_ns)}.`:lb?`Version B: median ${nano(lb.overall.p50_ns)}, 99th percentile ${nano(lb.overall.p99_ns)} per event; version A has no completed run at this size.`:'']);
+const ma=a&&a.memory,mb=b&&b.memory;
+say('tk-memory',[ma&&mb?`At ${nf.format(ev)} events the traced peak is ${bytes(ma.peak_bytes)} for version A and ${bytes(mb.peak_bytes)} for version B; at the end of the stream ${bytes(ma.final_current_bytes)} and ${bytes(mb.final_current_bytes)} remain, with ${int(b.outcome.final_active_orders)} orders still active.`:mb?`Version B: traced peak ${bytes(mb.peak_bytes)}, ${bytes(mb.final_current_bytes)} at the end with ${int(b.outcome.final_active_orders)} orders still active.`:'']);
+const fseed=D.fixed_book.some(r=>r.seed===seed&&r.levels===LEVELS)?seed:S.seeds[0];let sboth=null,sstop=null;
+for(const n of uniq(D.fixed_book.filter(r=>r.levels===LEVELS&&r.seed===fseed).map(r=>r.book_orders)).sort((x,y)=>x-y)){const fa=fix(n,LEVELS,fseed,pct,'A'),fb=fix(n,LEVELS,fseed,pct,'B');if(fa&&fb&&fa.status==='ok'&&fb.status==='ok')sboth={n,fa,fb};if(fa&&fa.status==='stopped'&&sstop==null)sstop=n}
+say('tk-sale',[sboth&&`Selling ${pct}% of a ${nf.format(sboth.n)}-bid book: ${secs(sboth.fa.sell_seconds_median)} in version A, ${secs(sboth.fb.sell_seconds_median)} in version B, with identical fills.`,sstop&&`From ${nf.format(sstop)} bids on, version A did not finish the sale within ${S.sale_limit_seconds} s.`]);
+if(D.tuning&&$('tk-tuning')){const r=D.tuning.rows.map(x=>x.b_time_as_share_of_original);$('tk-tuning').textContent=`Against the first revision as originally written, the submitted version B needs ${num(Math.min(...r)*100,3)}% to ${num(Math.max(...r)*100,3)}% of the time in this run, depending on the workload. Repeated runs differ by up to 0.2 in these ratios (REPORT.md, section 7), so read them as direction and rough size.`}}
+
+$('theme').addEventListener('click',()=>{const root=document.documentElement,dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;root.dataset.theme=dark?'light':'dark';try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}});
+try{const saved=localStorage.getItem('theme');if(saved==='light'||saved==='dark')document.documentElement.dataset.theme=saved}catch(e){}
+const refresh=()=>{update();takeaways()};
+refill();tiles();findings();correctness();tuning();refresh();
+$('f-scenario').addEventListener('change',()=>{refill();refresh()});$('f-seed').addEventListener('change',()=>{refill();refresh()});$('f-events').addEventListener('change',refresh);$('f-pct').addEventListener('change',refresh);
+</script>
+</main></body></html>

@@ -1,0 +1,54 @@
+{
+  "run_id": "20261120T145013469725Z",
+  "started_utc": "2026-11-20T14:50:13.469725+00:00",
+  "finished_utc": "2026-11-20T14:50:43.815509+00:00",
+  "code_version": "c2b486377bb6f569785d1167e9a3bb05f80b5920706ac19837d7c0e71d00ef01",
+  "source_sha256": {
+    "search.py": "5fbdcca0428abfb77ff5df85dfb6a40e280db47ffdb5f5145eaab53ca8a56310",
+    "search_original.py": "47afdaedd64600e0fd87c4bbd525cd0a134cc4b9385e34b08020a4b49c9d8334",
+    "data_generator.py": "7bc52593875830bedead5ff5d05dab6b2e225bbea8ab3338a9a085e873974d6c",
+    "benchmark.py": "c8b7bc5361104c6641560501825dc91d2fe999e8364c5f4fdb0be28015f7f258"
+  },
+  "git_head": "d96deb063c771daef4ae99f3222004e13e693efc",
+  "submission_has_uncommitted_changes": true,
+  "python": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "processor": "arm",
+  "workload_count": 36,
+  "configuration_count": 216,
+  "settings": {
+    "sizes": [
+      1000,
+      10000,
+      100000
+    ],
+    "query_counts": [
+      1,
+      100
+    ],
+    "scenarios": [
+      "all-present",
+      "all-absent",
+      "mixed"
+    ],
+    "duplicate_policies": [
+      "unique",
+      "repeated"
+    ],
+    "repeats": 5,
+    "seed": 42,
+    "target_batch_ms": 5.0
+  },
+  "protocol": {
+    "time_unit": "milliseconds per complete preparation/query-batch/total execution",
+    "timing": "perf_counter_ns; preflight warm-up plus per-phase calibration; five repeats by default; adaptive batching capped at 65536 executions; raw elapsed batches and divisors saved",
+    "prepare": "fresh state each execution; includes constructor and prior-state release within a timed batch",
+    "query": "fresh prepared state outside each repeat; same prepared state reused within that repeat's timed query batch",
+    "total": "fresh preparation plus all queries each execution; measured independently, not a sum of phase medians",
+    "excluded": "input generation, correctness checks, printing, memory tracing, profiling, dashboard rendering",
+    "memory": "separate fresh tracemalloc runs; current and peak bytes with prepared state and output alive; existing inputs excluded; not RSS or every native allocation",
+    "scope": "single machine and seed; original/revised measured sequentially; scheduling, warm caches and allocator state can affect results; no confidence intervals"
+  },
+  "archived_previous_results": "results/history/legacy"
+}

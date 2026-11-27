@@ -1,0 +1,6 @@
+Command (run from Submissions/SinghJoga using the existing .venv):
+python -m pytest -q
+
+Actual output:
+.......................................                                  [100%]
+39 passed in 0.07s

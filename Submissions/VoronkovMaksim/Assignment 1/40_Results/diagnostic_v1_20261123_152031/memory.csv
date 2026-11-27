@@ -1,0 +1,11 @@
+version,scenario,events,seed,peak_traced_bytes,end_traced_bytes,end_active_orders,peak_active_orders,peak_price_levels
+Version A,buildup,1000,42,264312,223200,1000,1000,805
+Version A,buildup,10000,42,2149840,1985784,10000,10000,1977
+Version A,crowded,1000,42,179112,178384,1000,1000,8
+Version A,crowded,10000,42,1911848,1911120,10000,10000,8
+Version A,mixed,1000,42,30912,20456,138,140,126
+Version A,mixed,10000,42,372320,331080,1587,1588,752
+Version A,sweep,1000,42,181304,85320,411,800,661
+Version A,sweep,10000,42,1766584,848064,3938,8000,1959
+Version A,cancel_churn,1000,42,544,88,0,1,1
+Version A,cancel_churn,10000,42,544,88,0,1,1

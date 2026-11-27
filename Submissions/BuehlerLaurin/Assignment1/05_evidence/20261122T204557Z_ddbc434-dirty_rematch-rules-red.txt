@@ -1,0 +1,16 @@
+label: rematch-rules-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe scratch/check_rematch_rules.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: ddbc4341da6cd2152897dcbca654c690b880480b
+dirty: True
+python: 3.13.15
+utc: 20261122T204557Z
+exit_code: 1
+duration_s: 0.54
+------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\scratch\check_rematch_rules.py", line 9, in <module>
+    jobs = ordered_requests(cases,['B3r','B3r_fast'],['timing'],interleave=True)
+  File "C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\01_code\bench\run_all.py", line 94, in ordered_requests
+    raise NotImplementedError
+NotImplementedError

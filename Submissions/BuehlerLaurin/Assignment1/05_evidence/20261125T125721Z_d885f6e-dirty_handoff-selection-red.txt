@@ -1,0 +1,27 @@
+label: handoff-selection-red
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_dashboard.py::test_selection_candidates_include_fast_from_both_recorded_sessions -q --tb=short --basetemp=scratch/pytest-handoff-selection-red
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: d885f6e96da935ea4f73f24ed6da9aea012f8bbf
+dirty: True
+python: 3.13.15
+utc: 20261125T125721Z
+exit_code: 1
+duration_s: 13.69
+------------------------------------------------------------
+F                                                                        [100%]
+================================== FAILURES ===================================
+_____ test_selection_candidates_include_fast_from_both_recorded_sessions ______
+02_tests\test_dashboard.py:139: in test_selection_candidates_include_fast_from_both_recorded_sessions
+    assert set(fast.comparison) == {'same-session (binding)','cross-session (older)'}
+               ^^^^^^^^^^^^^^^
+C:\Users\laubu\.venvs\aif-a1\Lib\site-packages\pandas\core\generic.py:6434: in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'DataFrame' object has no attribute 'comparison'
+---------------------------- Captured stderr call -----------------------------
+2026-11-25 13:57:32.049 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+------------------------------ Captured log call ------------------------------
+WARNING  streamlit.runtime.scriptrunner_utils.script_run_context:script_run_context.py:522 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+=========================== short test summary info ===========================
+FAILED 02_tests/test_dashboard.py::test_selection_candidates_include_fast_from_both_recorded_sessions
+1 failed in 12.28s

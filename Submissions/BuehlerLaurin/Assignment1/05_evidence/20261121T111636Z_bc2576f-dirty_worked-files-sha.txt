@@ -1,0 +1,12 @@
+label: worked-files-sha
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -I -c import hashlib,json,sys;m=json.load(open(sys.argv[1]))['files'];[print(('OK      ' if hashlib.sha256(open('06_data/supplied/'+f,'rb').read()).hexdigest()==m['data/'+f]['sha256'] else 'MISMATCH'),f) for f in ('worked_example.jsonl','worked_expected.json')] C:/Users/laubu/OneDrive/Dokumente/1_Frankfurt School/Master in Financial Technology/Semester 1/1.4_Algorithms_in_Finance/Assignment1/Assignment1/MANIFEST.json
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: bc2576f8ef15b1adc707509cc35dbfd75f65c7b7
+dirty: True
+python: 3.13.15
+utc: 20261121T111636Z
+exit_code: 0
+duration_s: 0.10
+------------------------------------------------------------
+OK       worked_example.jsonl
+OK       worked_expected.json

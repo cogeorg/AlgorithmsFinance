@@ -1,0 +1,13 @@
+experiment,scenario,seed,events,levels,bid_orders,bid_price_levels,full_sale_follows_price_time,versions_agree_on_book
+concentration,buildup,42,10000,4,4956,4,1,1
+concentration,buildup,42,10000,1000,5025,988,1,1
+concentration,buildup,43,10000,4,4971,4,1,1
+concentration,buildup,43,10000,1000,4997,995,1,1
+concentration,buildup,44,10000,4,4982,4,1,1
+concentration,buildup,44,10000,1000,5053,994,1,1
+concentration,buildup,42,100000,4,49863,4,1,
+concentration,buildup,42,100000,1000,49988,1000,1,
+concentration,buildup,43,100000,4,49709,4,1,
+concentration,buildup,43,100000,1000,49978,1000,1,
+concentration,buildup,44,100000,4,50088,4,1,
+concentration,buildup,44,100000,1000,50010,1000,1,

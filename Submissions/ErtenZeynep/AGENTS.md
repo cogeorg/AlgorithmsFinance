@@ -33,9 +33,10 @@ Work must proceed in this exact order:
 2. Synthetic Data Setup
 3. Test Development
 4. Algorithm Implementation
-5. Performance and Memory Measurement
-6. Dashboard Development
-7. Documentation and Reproducibility
+5. Performance Benchmarking
+6. Memory Measurement
+7. Dashboard Development
+8. Documentation and Reproducibility
 
 Do not begin a new phase without the user's explicit approval. Keep changes limited to the currently approved phase.
 

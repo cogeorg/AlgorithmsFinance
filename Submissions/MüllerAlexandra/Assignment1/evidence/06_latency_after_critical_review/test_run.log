@@ -1,0 +1,26 @@
+stage: 06_latency_after_critical_review
+started_utc: 2026-11-23T15:35:22.000441+00:00
+finished_utc: 2026-11-23T15:35:25.155867+00:00
+elapsed_seconds: 3.155823
+exit_code: 0
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: 7cfef398ed786225d4f18e9519ea1ca139e612ba
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider tests/test_13_latency_measurement.py tests/test_12_benchmark_harness.py tests/test_11_measurement_helpers.py
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 39 items
+
+tests\test_13_latency_measurement.py ................                    [ 41%]
+tests\test_12_benchmark_harness.py .........                             [ 64%]
+tests\test_11_measurement_helpers.py ..............                      [100%]
+
+============================= 39 passed in 2.44s ==============================
+
+=== stderr ===

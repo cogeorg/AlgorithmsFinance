@@ -1,0 +1,92 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________ test_dashboard_reports_missing_file ______________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-4/test_dashboard_reports_missing0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f8ca2053360>
+
+    def test_dashboard_reports_missing_file(tmp_path, monkeypatch):
+        copy = tmp_path / "HuangJiaxin"
+        shutil.copytree(TARGET, copy)
+        (copy / "results" / "breakeven_curve.csv").unlink()
+        monkeypatch.chdir(copy)
+        at = AppTest.from_file(str(copy / "dashboard.py"), default_timeout=60).run()
+        errors = [e.message for e in at.exception]
+>       assert not errors, f"dashboard crashed instead of showing a message: {errors[0][:120]}"
+E       AssertionError: dashboard crashed instead of showing a message: [Errno 2] No such file or directory: '/tmp/pytest-of-root/pytest-4/test_dashboard_reports_missing0/HuangJiaxin/results/b
+E       assert not ["[Errno 2] No such file or directory: '/tmp/pytest-of-root/pytest-4/test_dashboard_reports_missing0/HuangJiaxin/results/breakeven_curve.csv'"]
+
+/home/claude/algorithmsfinance/Submissions/BundschuhBastian/audit_HuangJiaxin/reproducers/repro_5_dashboard_missing_file.py:28: AssertionError
+----------------------------- Captured stderr call -----------------------------
+2026-11-20 16:44:47.709 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-20 16:44:48.106 Uncaught app execution
+Traceback (most recent call last):
+  File "/tmp/hjv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+  File "/tmp/hjv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 936, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/pytest-of-root/pytest-4/test_dashboard_reports_missing0/HuangJiaxin/dashboard.py", line 24, in <module>
+    be_curve = pd.read_csv(RES / "breakeven_curve.csv")
+  File "/tmp/hjv/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/tmp/hjv/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/tmp/hjv/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/tmp/hjv/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1904, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/tmp/hjv/lib/python3.13/site-packages/pandas/io/common.py", line 930, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pytest-of-root/pytest-4/test_dashboard_reports_missing0/HuangJiaxin/results/breakeven_curve.csv'
+------------------------------ Captured log call -------------------------------
+WARNING  streamlit.runtime.scriptrunner_utils.script_run_context:script_run_context.py:522 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ERROR    streamlit.error_util:error_util.py:117 Uncaught app execution
+Traceback (most recent call last):
+  File "/tmp/hjv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+  File "/tmp/hjv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 936, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/pytest-of-root/pytest-4/test_dashboard_reports_missing0/HuangJiaxin/dashboard.py", line 24, in <module>
+    be_curve = pd.read_csv(RES / "breakeven_curve.csv")
+  File "/tmp/hjv/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/tmp/hjv/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/tmp/hjv/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/tmp/hjv/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1904, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/tmp/hjv/lib/python3.13/site-packages/pandas/io/common.py", line 930, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pytest-of-root/pytest-4/test_dashboard_reports_missing0/HuangJiaxin/results/breakeven_curve.csv'
+=========================== short test summary info ============================
+FAILED audit_HuangJiaxin/reproducers/repro_5_dashboard_missing_file.py::test_dashboard_reports_missing_file
+1 failed in 0.72s

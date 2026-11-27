@@ -1,0 +1,54 @@
+label: phase3-final-review
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -c from pathlib import Path
+import hashlib
+import json
+import subprocess
+import sys
+import pytest
+import hypothesis
+root=Path.cwd().parents[2]
+scope='Submissions/BuehlerLaurin/Assignment1/'
+def git(*args):
+    return subprocess.run(['git',*args],cwd=root,capture_output=True,text=True,encoding='utf-8',check=True).stdout
+tracked=git('diff','--name-only','HEAD').splitlines()
+status=git('status','--porcelain=v1','--untracked-files=all').splitlines()
+assert all(p.startswith(scope) for p in tracked), tracked
+assert all(line[3:].startswith(scope) for line in status), status
+protected=['02_tests','06_data','01_code/datagen','01_code/lob/book_a.py','01_code/lob/validation.py','01_code/lob/replay.py','01_code/bench/harness.py','requirements.txt','00_docs/TRACE.md']
+assert git('diff','HEAD','--',*(scope+p for p in protected)) == ''
+assert all((root/p).exists() for p in tracked), 'No file deletions authorized or performed in Phase 3'
+check=subprocess.run(['git','diff','--check'],cwd=root,capture_output=True,text=True,encoding='utf-8')
+assert check.returncode == 0, check.stdout
+assert hypothesis.__version__ == '6.155.7'
+run=Path('03_results/runs/20261121T224807Z_efee8d4-dirty_phase3_sanity_not_benchmark')
+report=json.loads((run/'sanity.json').read_text(encoding='utf-8'))
+assert report['label'] == 'sanity, not a benchmark' and report['repeats'] == 1 and report['warmups'] == 0 and report['counters'] is False
+assert len(report['rows']) == 5 and sum(r['events'] for r in report['rows']) == 50000
+assert all(r['result_differences'] == 0 and r['final_book_equal'] for r in report['rows'])
+full=Path('05_evidence/20261121T224926Z_efee8d4-dirty_phase3-all-tests-green.txt').read_text(encoding='utf-8')
+assert (run/'tests.txt').read_text(encoding='utf-8') == full
+print('Python:',sys.version.split()[0],'; pytest:',pytest.__version__,'; hypothesis:',hypothesis.__version__)
+print('All changes confined to Assignment1; no deletions. All existing tests/expected data, A, shared validation, replay and harness unchanged.')
+print('git diff --check: clean (Git LF/CRLF notices are separate from pytest warnings).')
+print('All new/changed source and documentation reviewed for unrelated behavior/names/comments/content; no traces of the logged injection found; no new embedded instructions encountered.')
+print('Sanity protocol and all 50000 result comparisons verified; tests.txt matches the green evidence.')
+for name in ('01_code/lob/book_b.py','01_code/lob/check_b.py','01_code/bench/sanity.py'):
+    print('sha256',name,hashlib.sha256(Path(name).read_bytes()).hexdigest())
+print('RESULT: PASS (Phase 3 scope, unchanged tests/oracle/data, pins, saved sanity and reviewed changes)')
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: efee8d4ba8d3425e51a31c5a8e361cd8986fe168
+dirty: True
+python: 3.13.15
+utc: 20261121T225839Z
+exit_code: 0
+duration_s: 1.15
+------------------------------------------------------------
+Python: 3.13.15 ; pytest: 9.2.0 ; hypothesis: 6.155.7
+All changes confined to Assignment1; no deletions. All existing tests/expected data, A, shared validation, replay and harness unchanged.
+git diff --check: clean (Git LF/CRLF notices are separate from pytest warnings).
+All new/changed source and documentation reviewed for unrelated behavior/names/comments/content; no traces of the logged injection found; no new embedded instructions encountered.
+Sanity protocol and all 50000 result comparisons verified; tests.txt matches the green evidence.
+sha256 01_code/lob/book_b.py f34adfb366a8a28a8479d71bc23fe1d3933fe6eafacd00724c9e259e6b26d7da
+sha256 01_code/lob/check_b.py 0764199a0724ae52afa63bc84528de91d7730c22b3a331ebf3fe7fecedf91237
+sha256 01_code/bench/sanity.py 26a7fc4f7b45096f51443c70186e823c3ab76e5138b2b48bff7546c7d89b9b2a
+RESULT: PASS (Phase 3 scope, unchanged tests/oracle/data, pins, saved sanity and reviewed changes)

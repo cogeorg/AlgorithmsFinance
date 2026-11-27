@@ -1,0 +1,412 @@
+Pre-implementation test baseline
+Command: python3 -B -m unittest -v test_search
+Exit code: 1
+
+test_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) ... 
+  test_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) (method='linear_search') ... FAIL
+  test_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) (method='binary_search') ... FAIL
+  test_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) (method='hash_set_search') ... FAIL
+test_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) ... 
+  test_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) (method='linear_search') ... FAIL
+  test_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) (method='binary_search') ... FAIL
+  test_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) (method='hash_set_search') ... FAIL
+test_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) ... 
+  test_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) (method='linear_search') ... FAIL
+  test_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) (method='binary_search') ... FAIL
+  test_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) (method='hash_set_search') ... FAIL
+test_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) ... 
+  test_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) (method='linear_search') ... FAIL
+  test_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) (method='binary_search') ... FAIL
+  test_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) (method='hash_set_search') ... FAIL
+test_empty_array (test_search.MembershipContractTests.test_empty_array) ... 
+  test_empty_array (test_search.MembershipContractTests.test_empty_array) (method='linear_search') ... FAIL
+  test_empty_array (test_search.MembershipContractTests.test_empty_array) (method='binary_search') ... FAIL
+  test_empty_array (test_search.MembershipContractTests.test_empty_array) (method='hash_set_search') ... FAIL
+test_empty_queries (test_search.MembershipContractTests.test_empty_queries) ... 
+  test_empty_queries (test_search.MembershipContractTests.test_empty_queries) (method='linear_search') ... FAIL
+  test_empty_queries (test_search.MembershipContractTests.test_empty_queries) (method='binary_search') ... FAIL
+  test_empty_queries (test_search.MembershipContractTests.test_empty_queries) (method='hash_set_search') ... FAIL
+test_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) ... 
+  test_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) (method='linear_search') ... FAIL
+  test_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) (method='binary_search') ... FAIL
+  test_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) (method='hash_set_search') ... FAIL
+test_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) ... 
+  test_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) (method='linear_search') ... FAIL
+  test_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) (method='binary_search') ... FAIL
+  test_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) (method='hash_set_search') ... FAIL
+test_single_entry (test_search.MembershipContractTests.test_single_entry) ... 
+  test_single_entry (test_search.MembershipContractTests.test_single_entry) (method='linear_search') ... FAIL
+  test_single_entry (test_search.MembershipContractTests.test_single_entry) (method='binary_search') ... FAIL
+  test_single_entry (test_search.MembershipContractTests.test_single_entry) (method='hash_set_search') ... FAIL
+test_slide_example (test_search.MembershipContractTests.test_slide_example) ... 
+  test_slide_example (test_search.MembershipContractTests.test_slide_example) (method='linear_search') ... FAIL
+  test_slide_example (test_search.MembershipContractTests.test_slide_example) (method='binary_search') ... FAIL
+  test_slide_example (test_search.MembershipContractTests.test_slide_example) (method='hash_set_search') ... FAIL
+test_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) ... 
+  test_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) (method='linear_search') ... FAIL
+  test_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) (method='binary_search') ... FAIL
+  test_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) (method='hash_set_search') ... FAIL
+test_two_entries (test_search.MembershipContractTests.test_two_entries) ... 
+  test_two_entries (test_search.MembershipContractTests.test_two_entries) (method='linear_search') ... FAIL
+  test_two_entries (test_search.MembershipContractTests.test_two_entries) (method='binary_search') ... FAIL
+  test_two_entries (test_search.MembershipContractTests.test_two_entries) (method='hash_set_search') ... FAIL
+test_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) ... 
+  test_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) (method='linear_search') ... FAIL
+  test_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) (method='binary_search') ... FAIL
+  test_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) (method='hash_set_search') ... FAIL
+
+======================================================================
+FAIL: test_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+======================================================================
+FAIL: test_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+======================================================================
+FAIL: test_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+======================================================================
+FAIL: test_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+======================================================================
+FAIL: test_empty_array (test_search.MembershipContractTests.test_empty_array) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_empty_array (test_search.MembershipContractTests.test_empty_array) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_empty_array (test_search.MembershipContractTests.test_empty_array) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+======================================================================
+FAIL: test_empty_queries (test_search.MembershipContractTests.test_empty_queries) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_empty_queries (test_search.MembershipContractTests.test_empty_queries) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_empty_queries (test_search.MembershipContractTests.test_empty_queries) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+======================================================================
+FAIL: test_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+======================================================================
+FAIL: test_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 78, in test_repeated_calls_do_not_reuse_stale_state
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 78, in test_repeated_calls_do_not_reuse_stale_state
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 78, in test_repeated_calls_do_not_reuse_stale_state
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+======================================================================
+FAIL: test_single_entry (test_search.MembershipContractTests.test_single_entry) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_single_entry (test_search.MembershipContractTests.test_single_entry) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_single_entry (test_search.MembershipContractTests.test_single_entry) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+======================================================================
+FAIL: test_slide_example (test_search.MembershipContractTests.test_slide_example) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_slide_example (test_search.MembershipContractTests.test_slide_example) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_slide_example (test_search.MembershipContractTests.test_slide_example) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+======================================================================
+FAIL: test_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+======================================================================
+FAIL: test_two_entries (test_search.MembershipContractTests.test_two_entries) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_two_entries (test_search.MembershipContractTests.test_two_entries) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_two_entries (test_search.MembershipContractTests.test_two_entries) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+======================================================================
+FAIL: test_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) (method='linear_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.linear_search is not implemented
+
+======================================================================
+FAIL: test_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) (method='binary_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.binary_search is not implemented
+
+======================================================================
+FAIL: test_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) (method='hash_set_search')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/fanqiechao/AlgorithmsFinance/Submissions/LiuHaina/test_search.py", line 16, in check_case
+    self.assertTrue(callable(method), f"search.{name} is not implemented")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : search.hash_set_search is not implemented
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.004s
+
+FAILED (failures=39)

@@ -1,0 +1,9 @@
+{
+  "count": 1000,
+  "seed": 44,
+  "exit_code": 0,
+  "actual_errors": [],
+  "diagnostic_mismatches": [],
+  "stopped_repetitions": [],
+  "continuation_allowed": true
+}

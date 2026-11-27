@@ -1,0 +1,21 @@
+Target commit: 5e81bdc2321208ea66a0267c5014f9e3c86d288f
+Working directory: Submissions/LiuHaina
+Command: python -B validate_data.py
+Environment: Windows 11, Python 3.12.10
+Exit code: 1
+
+Traceback (most recent call last):
+  File "Submissions/LiuHaina/validate_data.py", line 68, in <module>
+    main()
+  File "Submissions/LiuHaina/validate_data.py", line 21, in main
+    assert data == build_dataset(config["base_seed"], config["include_empty_queries"]), "Regeneration differs"
+AssertionError: Regeneration differs
+
+Isolation output:
+saved_python_version=3.13.0
+current_python_version=3.12.10
+whole_equal=False
+equal_without_python_version=True
+
+The arrays, queries, expected answers, seeds, and settings match after removing
+only generator.python_version from each payload.

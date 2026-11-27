@@ -1,0 +1,46 @@
+stage: 23_dashboard_layout_final
+started_utc: 2026-11-25T14:25:44.833293+00:00
+finished_utc: 2026-11-25T14:25:51.301879+00:00
+elapsed_seconds: 6.468648
+exit_code: 0
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: cef599abbfc212f1e9d832bebb2adc78d657a130
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0
+collected 226 items
+
+tests\test_01_interface.py ..........                                    [  4%]
+tests\test_02_validation.py ............................................ [ 23%]
+..............................                                           [ 37%]
+tests\test_03_limit_matching.py ................                         [ 44%]
+tests\test_04_market_sells.py ............                               [ 49%]
+tests\test_05_cancellations.py ..............                            [ 55%]
+tests\test_06_invariants.py ..........                                   [ 60%]
+tests\test_07_worked_example.py ..                                       [ 61%]
+tests\test_08_differential.py .                                          [ 61%]
+tests\test_09_stream_io.py ....                                          [ 63%]
+tests\test_10_generated_streams.py ........                              [ 66%]
+tests\test_11_measurement_helpers.py ..............                      [ 73%]
+tests\test_12_benchmark_harness.py ..........                            [ 77%]
+tests\test_13_latency_measurement.py ................                    [ 84%]
+tests\test_14_memory_measurement.py ........                             [ 88%]
+tests\test_15_experiment_matrix.py .....                                 [ 90%]
+tests\test_16_experiment_runner.py .....                                 [ 92%]
+tests\test_17_stress_experiments.py .....                                [ 94%]
+tests\test_18_million_extension.py ...                                   [ 96%]
+tests\test_19_reporting.py ..                                            [ 96%]
+tests\test_20_dashboard.py ..                                            [ 97%]
+tests\test_21_replay_cli.py .....                                        [100%]
+
+============================= 226 passed in 5.73s =============================
+
+=== stderr ===

@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "browser": "local Chrome headless via DevTools pipe",
+  "dashboard_sha256": "8e8bd8af89c0efed0b45919644588bde7402c9f15ef3b613c2c4230b1bd33451",
+  "unit_labels_preserve_case": true,
+  "filter_combinations": 180,
+  "sale_filter_combinations": 18,
+  "memory_metric_switch": true,
+  "pagination": true,
+  "stopped_and_all_scope_filters": true,
+  "initial_state": {
+    "charts": 8,
+    "state": {
+      "scenario": "mixed",
+      "seed": 42,
+      "event_count": 10000,
+      "levels": 1000
+    },
+    "raw": 40,
+    "overflow": false,
+    "bad": false
+  },
+  "mobile": {
+    "overflow": false,
+    "width": 390,
+    "charts": 8
+  },
+  "raw_filter_count": 40,
+  "csv_download_records": 40,
+  "details_dialog": true,
+  "javascript_exceptions": [],
+  "screenshots": [
+    "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/work/dashboard-qa/desktop-overview.png",
+    "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/work/dashboard-qa/desktop-memory.png",
+    "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/work/dashboard-qa/desktop-liquidation.png",
+    "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/work/dashboard-qa/desktop-latency.png",
+    "/Users/fanqiechao/AlgorithmsFinance-1/Submissions/LiuHaina/Assignment1/work/dashboard-qa/mobile-overview.png"
+  ]
+}

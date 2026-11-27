@@ -6,3 +6,5 @@ __pycache__/
 venv/
 .env
 .env.*
+# Local Codex guidance; never publish from this shared repository.
+AGENTS.md

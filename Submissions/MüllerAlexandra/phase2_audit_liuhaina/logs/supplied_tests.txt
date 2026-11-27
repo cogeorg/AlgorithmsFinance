@@ -1,0 +1,16 @@
+Target commit: 5e81bdc2321208ea66a0267c5014f9e3c86d288f
+Working directory: Submissions/LiuHaina
+Command: python -B run_tests.py
+Environment: Windows 11, Python 3.12.10
+Exit code: 0
+
+=== original: search_original.py ===
+Ran 13 tests in 0.001s
+OK
+
+=== revised: search.py ===
+Ran 13 tests in 0.001s
+OK
+
+All named tests passed for both versions, including empty input, duplicates,
+boundaries, absent queries, repeated calls, Boolean output, and mutation checks.

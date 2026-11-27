@@ -1,0 +1,55 @@
+{
+  "version": "B",
+  "events": 6,
+  "rejected_events": 0,
+  "last_result": {
+    "event_id": "event6",
+    "order_id": "s1",
+    "status": "filled",
+    "unfilled_qty_units": 0,
+    "fills": [
+      {
+        "maker_id": "b1",
+        "taker_id": "s1",
+        "price_ticks": 6000000,
+        "qty_units": 100000000
+      },
+      {
+        "maker_id": "b2",
+        "taker_id": "s1",
+        "price_ticks": 6000000,
+        "qty_units": 100000000
+      },
+      {
+        "maker_id": "b3",
+        "taker_id": "s1",
+        "price_ticks": 5990000,
+        "qty_units": 300000000
+      },
+      {
+        "maker_id": "b4",
+        "taker_id": "s1",
+        "price_ticks": 5970000,
+        "qty_units": 100000000
+      }
+    ]
+  },
+  "remaining_orders": [
+    {
+      "order_id": "b4",
+      "side": "BUY",
+      "price_ticks": 5970000,
+      "qty_units": 400000000,
+      "arrival_seq": 4
+    },
+    {
+      "order_id": "a1",
+      "side": "SELL",
+      "price_ticks": 6010000,
+      "qty_units": 200000000,
+      "arrival_seq": 5
+    }
+  ],
+  "total_gross_proceeds_tick_units": 3594000000000000,
+  "total_gross_proceeds_usd_exact": "359400.0000000000"
+}

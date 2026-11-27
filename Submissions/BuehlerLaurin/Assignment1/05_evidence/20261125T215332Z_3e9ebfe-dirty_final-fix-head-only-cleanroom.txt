@@ -1,0 +1,37 @@
+label: final-fix-head-only-cleanroom
+command: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1\.venv\Scripts\python.exe C:\Users\laubu\AppData\Local\Temp\aif-fix-3e9ebfe-20261125\run_head_only.py
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 3e9ebfe152605d80f48c2e9d703b965eda246c78
+dirty: True
+python: 3.13.15
+utc: 20261125T215332Z
+exit_code: 1
+duration_s: 0.18
+------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\laubu\AppData\Local\Temp\aif-fix-3e9ebfe-20261125\run_head_only.py", line 8, in <module>
+    p=subprocess.run(['powershell.exe','-NoProfile','-ExecutionPolicy','Bypass','-File',str(copy/'run_all.ps1'),'-NoDashboard'],cwd=copy,env=env,capture_output=True,text=True,encoding='utf-8',errors='replace')
+  File "C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\laubu\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1554, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+NotADirectoryError: [WinError 267] Der Verzeichnisname ist ung�ltig

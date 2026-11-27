@@ -1,0 +1,42 @@
+Target commit: 5e81bdc2321208ea66a0267c5014f9e3c86d288f
+Environment: Windows 11, Python 3.12.10
+
+Independent algorithm probes
+----------------------------
+Checked both search_original and search, each with linear_search,
+binary_search, and hash_set_search.
+
+- empty array: [] with [1] -> [False]
+- duplicates: [4, 4, 4] with [4, 5] -> [True, False]
+- first/last: [2, 4, 6, 8] with [2, 8] -> [True, True]
+- absent: [2, 4, 6] with [1, 3, 7] -> [False, False, False]
+- repeated calls returned independent correct outputs
+- arrays and queries remained unchanged
+- earlier returned lists remained unchanged after later calls
+
+All probes passed for all six version/method combinations.
+
+Saved data and measurement checks
+---------------------------------
+- 108 independent saved-case calls passed after excluding the validator's
+  environment-metadata equality defect.
+- timing_raw.csv: 1,620 rows
+- timing_summary.csv: 324 rows
+- memory.csv: 108 rows
+- every timing group has repeats 1..5 exactly once
+- independently recomputed medians match every summary row
+- raw, summary, memory, and metadata run IDs agree
+- timing unit is seconds per complete batch, not per query
+- benchmark total calls the public function and therefore includes fresh
+  sorting or set construction on every invocation
+- input generation/loading/copying is outside timed regions
+- memory labels consistently exclude input and include prepared state/output
+- current traced bytes do not exceed peak traced bytes
+
+Independent report-claim calculation
+------------------------------------
+- revised hash-set total winner for q=100: 9 of 9 cases
+- revised linear total winner for q=1: 5 of 6 cases
+- remaining q=1 winner: n=1,000 all-absent hash-set case
+
+These counts agree with REPORT.md.

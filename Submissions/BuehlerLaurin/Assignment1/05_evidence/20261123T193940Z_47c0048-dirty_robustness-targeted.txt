@@ -1,0 +1,13 @@
+label: robustness-targeted
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest 02_tests/test_submission_robustness.py 02_tests/test_replay.py 02_tests/test_replay_regressions.py 02_tests/test_dashboard.py -q --tb=short --basetemp=scratch/pytest-robustness-targeted
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 47c00484ae46eeb8077150fbb84d5ab650822c99
+dirty: True
+python: 3.13.15
+utc: 20261123T193940Z
+exit_code: 0
+duration_s: 49.27
+------------------------------------------------------------
+........................................................................ [ 77%]
+.....................                                                    [100%]
+93 passed in 47.80s

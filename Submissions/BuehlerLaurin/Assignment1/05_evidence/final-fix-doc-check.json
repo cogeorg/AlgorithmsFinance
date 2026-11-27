@@ -1,0 +1,38 @@
+{
+  "counts_file": "03_results/runs/20261122T130145Z_00bb1ad_phase4_b3r_20261122/counts.csv",
+  "counts_sha256": "81fc5718833249d02293b97ab25206172de8af14145826a8241d8c206ce1f3c7",
+  "aggregation": "maximum per-run peak across seeds 42/43/44, B3r official 100k replay",
+  "peaks": {
+    "buildup": {
+      "active_order_peak": 100000,
+      "price_level_peak": 2000
+    },
+    "cancel_churn": {
+      "active_order_peak": 1,
+      "price_level_peak": 1
+    },
+    "crowded": {
+      "active_order_peak": 100000,
+      "price_level_peak": 8
+    },
+    "mixed": {
+      "active_order_peak": 15358,
+      "price_level_peak": 908
+    },
+    "sweep": {
+      "active_order_peak": 80000,
+      "price_level_peak": 2000
+    }
+  },
+  "reference_evidence": "05_evidence/chat_reference/README.md",
+  "validation_share_percent": [
+    27,
+    41
+  ],
+  "rebuild_observation": {
+    "keys_scanned": 199937,
+    "cancel_events": 99999,
+    "ratio": 1.999389993899939,
+    "display_3_decimals": "1.999"
+  }
+}

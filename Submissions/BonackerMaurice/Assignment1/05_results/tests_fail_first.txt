@@ -1,0 +1,60 @@
+FFFFF.F                                                                  [100%]
+================================== FAILURES ===================================
+___________________ test_limits_rest_without_trading[lob_a] ___________________
+02_tests\test_worked_example.py:114: in test_limits_rest_without_trading
+    assert results[:5] == EXPECTED_LIMIT_RESULTS
+E   AssertionError: assert [{}, {}, {}, {}, {}] == [{'event_id':...0000000, ...}]
+E     
+E     At index 0 diff: {} != {'event_id': 'event1', 'order_id': 'b1', 'status': 'resting', 'unfilled_qty_units': 100000000, 'fills': []}
+E     Use -v to get more diff
+_______________________ test_market_sell_result[lob_a] ________________________
+02_tests\test_worked_example.py:119: in test_market_sell_result
+    assert results[5] == EXPECTED_SELL_RESULT
+E   AssertionError: assert {} == {'event_id': ...nits': 0, ...}
+E     
+E     Right contains 5 more items:
+E     {'event_id': 'event6',
+E      'fills': [{'maker_id': 'b1',
+E                 'price_ticks': 6000000,
+E                 'qty_units': 100000000,
+E                 'taker_id': 's1'},...
+E     
+E     ...Full output truncated (16 lines hidden), use '-vv' to show
+_________________________ test_remaining_book[lob_a] __________________________
+02_tests\test_worked_example.py:124: in test_remaining_book
+    assert book.inspect_book() == EXPECTED_BOOK
+E   AssertionError: assert [] == [{'order_id':...0000000, ...}]
+E     
+E     Right contains 2 more items, first extra item: {'order_id': 'b4', 'side': 'BUY', 'price_ticks': 5970000, 'qty_units': 400000000, ...}
+E     Use -v to get more diff
+___________________ test_proceeds_and_average_price[lob_a] ____________________
+02_tests\test_worked_example.py:129: in test_proceeds_and_average_price
+    fills = results[5]["fills"]
+            ^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'fills'
+_____________________ test_book_level_conservation[lob_a] _____________________
+02_tests\test_worked_example.py:143: in test_book_level_conservation
+    fills = sell["fills"]
+            ^^^^^^^^^^^^^
+E   KeyError: 'fills'
+______________________ test_matches_supplied_json[lob_a] ______________________
+02_tests\test_worked_example.py:185: in test_matches_supplied_json
+    assert results[5] == supplied["market_sell_result"]
+E   AssertionError: assert {} == {'event_id': ...nits': 0, ...}
+E     
+E     Right contains 5 more items:
+E     {'event_id': 'event6',
+E      'fills': [{'maker_id': 'b1',
+E                 'price_ticks': 6000000,
+E                 'qty_units': 100000000,
+E                 'taker_id': 's1'},...
+E     
+E     ...Full output truncated (16 lines hidden), use '-vv' to show
+=========================== short test summary info ===========================
+FAILED 02_tests/test_worked_example.py::test_limits_rest_without_trading[lob_a]
+FAILED 02_tests/test_worked_example.py::test_market_sell_result[lob_a] - Asse...
+FAILED 02_tests/test_worked_example.py::test_remaining_book[lob_a] - Assertio...
+FAILED 02_tests/test_worked_example.py::test_proceeds_and_average_price[lob_a]
+FAILED 02_tests/test_worked_example.py::test_book_level_conservation[lob_a]
+FAILED 02_tests/test_worked_example.py::test_matches_supplied_json[lob_a] - A...
+6 failed, 1 passed in 0.18s

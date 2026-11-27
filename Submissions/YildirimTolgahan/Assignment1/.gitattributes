@@ -1,0 +1,3 @@
+# Keep exact bytes: source and data files are identified by recorded SHA-256 hashes,
+# so Git must not convert line endings in this folder.
+* -text

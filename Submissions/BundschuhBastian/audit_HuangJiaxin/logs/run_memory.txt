@@ -1,0 +1,41 @@
+n=  1000 q=  1 linear_v1 peak        0.1 KiB
+n=  1000 q=  1 linear_v2 peak        0.1 KiB
+n=  1000 q=  1 binary_v1 peak       15.6 KiB
+n=  1000 q=  1 binary_v2 peak       11.8 KiB
+n=  1000 q=  1 hash      peak       40.3 KiB
+n=  1000 q=  1 bisect_ref peak       11.8 KiB
+n=  1000 q=100 linear_v1 peak        1.0 KiB
+n=  1000 q=100 linear_v2 peak        0.9 KiB
+n=  1000 q=100 binary_v1 peak       16.5 KiB
+n=  1000 q=100 binary_v2 peak       11.8 KiB
+n=  1000 q=100 hash      peak       40.3 KiB
+n=  1000 q=100 bisect_ref peak       11.8 KiB
+n= 10000 q=  1 linear_v1 peak        0.1 KiB
+n= 10000 q=  1 linear_v2 peak        0.1 KiB
+n= 10000 q=  1 binary_v1 peak      156.3 KiB
+n= 10000 q=  1 binary_v2 peak      117.2 KiB
+n= 10000 q=  1 hash      peak      640.3 KiB
+n= 10000 q=  1 bisect_ref peak      117.2 KiB
+n= 10000 q=100 linear_v1 peak        1.0 KiB
+n= 10000 q=100 linear_v2 peak        0.9 KiB
+n= 10000 q=100 binary_v1 peak      157.2 KiB
+n= 10000 q=100 binary_v2 peak      117.2 KiB
+n= 10000 q=100 hash      peak      640.3 KiB
+n= 10000 q=100 bisect_ref peak      117.2 KiB
+n=100000 q=  1 linear_v1 peak        0.1 KiB
+n=100000 q=  1 linear_v2 peak        0.1 KiB
+n=100000 q=  1 binary_v1 peak     1562.6 KiB
+n=100000 q=  1 binary_v2 peak     1171.8 KiB
+n=100000 q=  1 hash      peak     6144.3 KiB
+n=100000 q=  1 bisect_ref peak     1171.8 KiB
+n=100000 q=100 linear_v1 peak        1.0 KiB
+n=100000 q=100 linear_v2 peak        0.9 KiB
+n=100000 q=100 binary_v1 peak     1563.5 KiB
+n=100000 q=100 binary_v2 peak     1171.8 KiB
+n=100000 q=100 hash      peak     6144.3 KiB
+n=100000 q=100 bisect_ref peak     1171.8 KiB
+saved /tmp/hj/Submissions/HuangJiaxin/results/memory.csv
+
+real	0m4.895s
+user	0m4.846s
+sys	0m0.020s

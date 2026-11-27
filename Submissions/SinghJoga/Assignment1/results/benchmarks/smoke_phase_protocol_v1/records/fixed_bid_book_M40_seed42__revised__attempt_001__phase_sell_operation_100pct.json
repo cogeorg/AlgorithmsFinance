@@ -1,0 +1,645 @@
+{
+  "artifact_directory": "results\\benchmarks\\smoke_phase_protocol_v1\\artifacts\\fixed_bid_book_M40_seed42__revised__attempt_001\\sell_operation_100pct",
+  "attempt": 1,
+  "case": {
+    "available_bid_qty_units": 152000000,
+    "case_id": "fixed_bid_book_M40_seed42",
+    "event_count": 41,
+    "experiment": "fixed_liquidation",
+    "generator_settings": {
+      "generator": "fixed bid-book builder",
+      "orders": 40,
+      "price_levels": 40,
+      "quantity_rule": "seeded integer multiples of 1,000,000 units",
+      "seed": 42
+    },
+    "initial_book_event_count": 40,
+    "input_checksums": {
+      "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+    },
+    "input_paths": [
+      "results\\benchmarks\\smoke_phase_protocol_v1\\inputs\\fixed_bid_book_M40_seed42.jsonl"
+    ],
+    "scenario": "fixed_bid_book",
+    "seed": 42,
+    "sell_quantities": [
+      {
+        "percent": 10,
+        "qty_units": 15200000
+      },
+      {
+        "percent": 100,
+        "qty_units": 152000000
+      },
+      {
+        "percent": 200,
+        "qty_units": 304000000
+      }
+    ]
+  },
+  "config_id": "fixed_bid_book_M40_seed42__revised",
+  "duration_until_stop_seconds": 0.3429176998324692,
+  "failure": null,
+  "measurement_definition_hash": "c55e4b568d4a7b50052e1d5029a6639b9c8a25fd32375f5f31f1ae16f30f88a6",
+  "measurement_definition_id": "primary-sell_operation_100pct-v1",
+  "memory_limit_mib": 2048,
+  "peak_working_set_bytes_observed": 25677824,
+  "phase_budget_seconds": 57.682408900232986,
+  "phase_job": "sell_operation_100pct",
+  "phase_settings": {
+    "event_count": 41,
+    "generator_settings": {
+      "generator": "fixed bid-book builder",
+      "orders": 40,
+      "price_levels": 40,
+      "quantity_rule": "seeded integer multiples of 1,000,000 units",
+      "seed": 42
+    },
+    "input_checksums": {
+      "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+    },
+    "sell_quantities": [
+      {
+        "percent": 10,
+        "qty_units": 15200000
+      },
+      {
+        "percent": 100,
+        "qty_units": 152000000
+      },
+      {
+        "percent": 200,
+        "qty_units": 304000000
+      }
+    ],
+    "timing_repeats": 5
+  },
+  "progress_file": "results\\benchmarks\\smoke_phase_protocol_v1\\records\\fixed_bid_book_M40_seed42__revised__attempt_001__phase_sell_operation_100pct.progress.jsonl",
+  "record_file": "results\\benchmarks\\smoke_phase_protocol_v1\\records\\fixed_bid_book_M40_seed42__revised__attempt_001__phase_sell_operation_100pct.json",
+  "record_type": "phase_attempt",
+  "rows": [
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 9.909993968904018e-05,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "c55e4b568d4a7b50052e1d5029a6639b9c8a25fd32375f5f31f1ae16f30f88a6",
+      "measurement_definition_id": "primary-sell_operation_100pct-v1",
+      "measurement_phase": "sell_operation_100pct",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "phase": "sell_operation_100pct",
+      "phase_budget_seconds": 57.682408900232986,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "sell_quantities": [
+          {
+            "percent": 10,
+            "qty_units": 15200000
+          },
+          {
+            "percent": 100,
+            "qty_units": 152000000
+          },
+          {
+            "percent": 200,
+            "qty_units": 304000000
+          }
+        ],
+        "timing_repeats": 5
+      },
+      "repeat": 1,
+      "requested_sell_qty_units": null,
+      "returned_fill_count": 40,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "status": "completed",
+      "time_limit_seconds": 57.682408900232986,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 9.8800053820014e-05,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "c55e4b568d4a7b50052e1d5029a6639b9c8a25fd32375f5f31f1ae16f30f88a6",
+      "measurement_definition_id": "primary-sell_operation_100pct-v1",
+      "measurement_phase": "sell_operation_100pct",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "phase": "sell_operation_100pct",
+      "phase_budget_seconds": 57.682408900232986,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "sell_quantities": [
+          {
+            "percent": 10,
+            "qty_units": 15200000
+          },
+          {
+            "percent": 100,
+            "qty_units": 152000000
+          },
+          {
+            "percent": 200,
+            "qty_units": 304000000
+          }
+        ],
+        "timing_repeats": 5
+      },
+      "repeat": 2,
+      "requested_sell_qty_units": null,
+      "returned_fill_count": 40,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "status": "completed",
+      "time_limit_seconds": 57.682408900232986,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 9.470013901591301e-05,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "c55e4b568d4a7b50052e1d5029a6639b9c8a25fd32375f5f31f1ae16f30f88a6",
+      "measurement_definition_id": "primary-sell_operation_100pct-v1",
+      "measurement_phase": "sell_operation_100pct",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "phase": "sell_operation_100pct",
+      "phase_budget_seconds": 57.682408900232986,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "sell_quantities": [
+          {
+            "percent": 10,
+            "qty_units": 15200000
+          },
+          {
+            "percent": 100,
+            "qty_units": 152000000
+          },
+          {
+            "percent": 200,
+            "qty_units": 304000000
+          }
+        ],
+        "timing_repeats": 5
+      },
+      "repeat": 3,
+      "requested_sell_qty_units": null,
+      "returned_fill_count": 40,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "status": "completed",
+      "time_limit_seconds": 57.682408900232986,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 9.42000187933445e-05,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "c55e4b568d4a7b50052e1d5029a6639b9c8a25fd32375f5f31f1ae16f30f88a6",
+      "measurement_definition_id": "primary-sell_operation_100pct-v1",
+      "measurement_phase": "sell_operation_100pct",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "phase": "sell_operation_100pct",
+      "phase_budget_seconds": 57.682408900232986,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "sell_quantities": [
+          {
+            "percent": 10,
+            "qty_units": 15200000
+          },
+          {
+            "percent": 100,
+            "qty_units": 152000000
+          },
+          {
+            "percent": 200,
+            "qty_units": 304000000
+          }
+        ],
+        "timing_repeats": 5
+      },
+      "repeat": 4,
+      "requested_sell_qty_units": null,
+      "returned_fill_count": 40,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "status": "completed",
+      "time_limit_seconds": 57.682408900232986,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 9.320001117885113e-05,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "c55e4b568d4a7b50052e1d5029a6639b9c8a25fd32375f5f31f1ae16f30f88a6",
+      "measurement_definition_id": "primary-sell_operation_100pct-v1",
+      "measurement_phase": "sell_operation_100pct",
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "phase": "sell_operation_100pct",
+      "phase_budget_seconds": 57.682408900232986,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "sell_quantities": [
+          {
+            "percent": 10,
+            "qty_units": 15200000
+          },
+          {
+            "percent": 100,
+            "qty_units": 152000000
+          },
+          {
+            "percent": 200,
+            "qty_units": 304000000
+          }
+        ],
+        "timing_repeats": 5
+      },
+      "repeat": 5,
+      "requested_sell_qty_units": null,
+      "returned_fill_count": 40,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "status": "completed",
+      "time_limit_seconds": 57.682408900232986,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    },
+    {
+      "active_order_peak": null,
+      "code_hashes": {
+        "baseline.py": "b112ccd01760072ecfb1dc4307f7476cfee9df71dc071936facb044de2658b52",
+        "generate_orders.py": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+        "metrics.py": "ef889bd81f2b4aa0e7973beeeb8ba4ba1f2b90239d073093c329e9a7b4a0a235",
+        "revised.py": "b225a3184dbd033461c8d0c6d4ddb333a65785f847ead6cdf71de12a874f9157",
+        "run_benchmarks.py": "3d7e864e25414f095d40f287d95a58bdae8601392f22e5264600b8587974de52",
+        "test_benchmark_tools.py": "98b8b9c739809c965aed045eca4064f9767ddc004dd07c62063759c91270ee3c",
+        "test_generated_streams.py": "4961a0887f1c2d6dddb0c03eb53ff49a8e3078c2d816411a266065db529d912b",
+        "test_specification.py": "3172bc78f7b82a2f300f046a0406100586b0df50d04de3934494920af985acda"
+      },
+      "elapsed_seconds": 9.470013901591301e-05,
+      "environment": {
+        "dependencies": [
+          "colorama==0.4.6",
+          "iniconfig==2.3.1",
+          "packaging==26.4",
+          "pluggy==1.7.0",
+          "Pygments==2.21.0",
+          "pytest==9.2.0"
+        ],
+        "git_branch": "assignment1",
+        "git_dirty": true,
+        "git_error": null,
+        "git_head": "a00a75fd50d97e1ad5400e24c4311bb2a65c0778",
+        "machine": "AMD64",
+        "os": "nt",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+        "python_executable": "C:\\Users\\Joga Singh\\Desktop\\4. Alogrithms for finance\\Homework\\AlgorithmsFinance-Assignments1\\AlgorithmsFinance\\Submissions\\SinghJoga\\Assignment1\\.venv\\Scripts\\python.exe",
+        "python_version": "3.14.7"
+      },
+      "event_count": 41,
+      "experiment": "fixed_liquidation",
+      "fill_count": null,
+      "generator_settings": {
+        "generator": "fixed bid-book builder",
+        "orders": 40,
+        "price_levels": 40,
+        "quantity_rule": "seeded integer multiples of 1,000,000 units",
+        "seed": 42
+      },
+      "input_checksums": {
+        "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+      },
+      "measurement_definition_hash": "c55e4b568d4a7b50052e1d5029a6639b9c8a25fd32375f5f31f1ae16f30f88a6",
+      "measurement_definition_id": "primary-sell_operation_100pct-v1",
+      "measurement_phase": "sell_operation_100pct",
+      "median_seconds": 9.470013901591301e-05,
+      "memory_limit_mib": 2048,
+      "occupied_price_level_peak": null,
+      "phase": "sell_operation_100pct_summary",
+      "phase_budget_seconds": 57.682408900232986,
+      "phase_settings": {
+        "event_count": 41,
+        "generator_settings": {
+          "generator": "fixed bid-book builder",
+          "orders": 40,
+          "price_levels": 40,
+          "quantity_rule": "seeded integer multiples of 1,000,000 units",
+          "seed": 42
+        },
+        "input_checksums": {
+          "fixed_bid_book_M40_seed42.jsonl": "c7e42222946f184ed3d118e7047a614ba84b231d4034d1efbef2d8827423554c"
+        },
+        "sell_quantities": [
+          {
+            "percent": 10,
+            "qty_units": 15200000
+          },
+          {
+            "percent": 100,
+            "qty_units": 152000000
+          },
+          {
+            "percent": 200,
+            "qty_units": 304000000
+          }
+        ],
+        "timing_repeats": 5
+      },
+      "raw_repeats_seconds": [
+        9.909993968904018e-05,
+        9.8800053820014e-05,
+        9.470013901591301e-05,
+        9.42000187933445e-05,
+        9.320001117885113e-05
+      ],
+      "repeat": null,
+      "requested_sell_qty_units": null,
+      "scenario": "fixed_bid_book",
+      "seed": 42,
+      "status": "completed",
+      "throughput_events_per_second": 10559.646589663023,
+      "time_limit_seconds": 57.682408900232986,
+      "traced_current_bytes": null,
+      "traced_peak_bytes": null,
+      "version": "revised"
+    }
+  ],
+  "status": "completed",
+  "time_limit_seconds": 57.682408900232986,
+  "version": "revised"
+}

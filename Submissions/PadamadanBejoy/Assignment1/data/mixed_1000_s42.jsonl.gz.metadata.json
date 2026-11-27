@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "calibrated_to_exchange_data": false,
+  "scenario": "mixed",
+  "events": 1000,
+  "seed": 42,
+  "levels": 1000,
+  "python": "3.14.7",
+  "generator": "random.Random",
+  "price_tick_usd": "0.01",
+  "quantity_unit_btc": "0.00000001",
+  "compressed_bytes": 12595,
+  "sha256": "8c3455dc8370f2e006eda834f5bfeb47abdb7dc3766775cf12cdc8444f974d9d"
+}

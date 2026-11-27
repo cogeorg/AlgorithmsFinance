@@ -1,0 +1,147 @@
+{
+  "observed_date": "2026-11-22",
+  "operating_system": "Windows 11",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python_implementation": "CPython",
+  "python_version": "3.13.17",
+  "python_architecture": "64-bit",
+  "generator_reference_python": "3.11.9",
+  "dependencies_installed_by_assistant": [],
+  "standard_library_checks": {
+    "unittest": "available",
+    "json": "available",
+    "gzip": "available",
+    "csv": "available",
+    "statistics": "available",
+    "tracemalloc": "available"
+  },
+  "final_primary_benchmark": {
+    "execution_date": "2026-11-23",
+    "execution_origin": "user-operated local foreground PowerShell session",
+    "independently_observed_machine": {
+      "cpu_description": "AMD64 Family 26 Model 104 Stepping 0, AuthenticAMD",
+      "logical_cpu_count": 12,
+      "machine": "AMD64",
+      "total_ram_bytes": 16268513280,
+      "operating_system_platform": "Windows-11-10.0.26200-SP0",
+      "python_implementation": "CPython",
+      "python_version": "3.13.17",
+      "active_power_scheme": "Balanced",
+      "battery_or_ac_query": "unavailable: Windows access denied"
+    },
+    "user_confirmed_conditions": {
+      "laptop_connected_to_power": true,
+      "automatic_sleep_prevented": true,
+      "other_heavy_applications_closed": true,
+      "onedrive_synchronization_enabled": true
+    },
+    "environmental_limitations": [
+      "OneDrive remained enabled and may have introduced background CPU, storage, or scheduling noise.",
+      "Connection to power was user-confirmed but could not be independently verified.",
+      "The observed Balanced power scheme permits dynamic frequency and power-management behavior."
+    ],
+    "protocol": "final-primary-v2",
+    "measurement_mode": "primary_timing",
+    "limits_seconds": {
+      "cumulative_controller_wall": 5400,
+      "processing_1000_and_10000_events": 30,
+      "processing_100000_events": 120
+    },
+    "source_fingerprints": {
+      "baseline_implementation_sha256": "afa06981e3b1d79b8c10903bd6f8d0cc9d648373b7fc9b20e8e14f431a5770fc",
+      "optimized_implementation_sha256": "06e5ebb794e11852f4b6b6c49df54134a2dd3d3e2e489a4ef269afc35aef9490",
+      "benchmark_harness_sha256": "484913af7e980803308968794bc9c7b4f1d722974fff12c98b818754b5448925",
+      "environment_sha256": "aab6f20672ff1af72c4f79ed2c2f31827f8d522aedae4e7b6239937659236853"
+    },
+    "result": {
+      "path": "07_results/raw/timing.jsonl",
+      "bytes": 1155659,
+      "sha256": "fa6366bae35d7876cccd7abba2357d2d0d10c045d966c72f0cd2a21c2db7fa7f",
+      "records": 450,
+      "completed": 390,
+      "timed_out": 12,
+      "skipped_after_timeout": 48,
+      "charged_controller_wall_seconds": 1765.189204200171
+    }
+  },
+  "stage4e_experiments": {
+    "execution_date": "2026-11-24",
+    "execution_origin": "assistant-managed foreground session",
+    "protocol": "stage4e-v1",
+    "measurement_modes": [
+      "latency",
+      "memory",
+      "liquidation",
+      "concentration",
+      "diagnostics"
+    ],
+    "environment_fingerprint": "dec8eb13ed809973943a03f07a7fc5158e155c3d8aa22b035eda345aeaf0d2f7",
+    "harness_fingerprint": "99e2bdd9f1096a84c79c2572cbd51a49d144035a70d42df4554d506b410eedf3",
+    "limits_seconds": {
+      "shared_cumulative": 4500,
+      "latency": 900,
+      "memory": 600,
+      "liquidation": 600,
+      "concentration": 1800,
+      "diagnostics": 300,
+      "verification_reserve": 300
+    },
+    "result": {
+      "records": 212,
+      "completed": 182,
+      "timed_out": 6,
+      "skipped_after_timeout": 24,
+      "failed": 0,
+      "charged_controller_wall_seconds": 1304.143308589235
+    },
+    "measurement_limitations": [
+      "Per-event clocks perturb latency measurements.",
+      "tracemalloc reports traced Python allocations rather than total process resident memory.",
+      "Version A diagnostic inner-loop counts are analytical estimates rather than direct instrumentation.",
+      "OneDrive and operating-system scheduling remained uncontrolled environmental factors."
+    ]
+  },
+  "warmed_primary_benchmark": {
+    "execution_date": "2026-11-24",
+    "execution_origin": "assistant-managed foreground session",
+    "evidence_role": "main instructor-compliant primary timing evidence",
+    "protocol": "warmed-primary-v1",
+    "measurement_mode": "warmed_primary_timing",
+    "limits_seconds": {
+      "cumulative_controller_wall": 5400,
+      "processing_1000_and_10000_events": 30,
+      "processing_100000_events": 120
+    },
+    "warmup": {
+      "workload_path": "02_data/generated/mixed_1000_seed42.jsonl.gz",
+      "event_count": 1000,
+      "sha256": "8c3455dc8370f2e006eda834f5bfeb47abdb7dc3766775cf12cdc8444f974d9d",
+      "policy": "same-process disposable same-class engine; process all warm-up events; release; gc.collect; construct fresh empty measured engine"
+    },
+    "source_fingerprints": {
+      "baseline_implementation_sha256": "afa06981e3b1d79b8c10903bd6f8d0cc9d648373b7fc9b20e8e14f431a5770fc",
+      "optimized_implementation_sha256": "06e5ebb794e11852f4b6b6c49df54134a2dd3d3e2e489a4ef269afc35aef9490",
+      "benchmark_harness_sha256": "ce1fd6b5ccf517e35e783e176dc7c2cfce333f41423d85c73d1cd0d66a6fe493",
+      "environment_sha256": "aab6f20672ff1af72c4f79ed2c2f31827f8d522aedae4e7b6239937659236853"
+    },
+    "result": {
+      "path": "07_results/stage4e/warmed_primary.jsonl",
+      "bytes": 1367400,
+      "sha256": "7777cdea1b4c9cb9d798fd5e8fc1e7da97b8c31fdd7ac7776463c74c4bf27660",
+      "records": 450,
+      "configurations": 90,
+      "workloads": 45,
+      "completed": 392,
+      "timed_out": 12,
+      "skipped_after_timeout": 46,
+      "failed": 0,
+      "charged_controller_wall_seconds": 1997.3183167995885
+    },
+    "measurement_limitations": [
+      "The generic warm-up only partially addresses interpreter specialization and does not guarantee every scenario-specific branch is warm.",
+      "Thermal state, OneDrive activity, and operating-system scheduling were not controlled.",
+      "Process startup, parsing, warm-up, and preparation are excluded from engine_seconds.",
+      "Timeout-censored configurations do not support ordinary five-repeat medians or speedups."
+    ]
+  }
+}

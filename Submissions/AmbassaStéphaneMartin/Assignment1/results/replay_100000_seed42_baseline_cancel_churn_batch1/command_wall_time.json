@@ -1,0 +1,92 @@
+{
+  "command": [
+    "C:\\Users\\clair\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "-B",
+    "benchmark.py",
+    "run",
+    "--counts",
+    "100000",
+    "--seeds",
+    "42",
+    "--scenarios",
+    "cancel_churn",
+    "--experiments",
+    "replay",
+    "--versions",
+    "baseline",
+    "--levels",
+    "1000",
+    "--out",
+    "C:\\Users\\clair\\AlgorithmsFinance\\Submissions\\AmbassaSt\u00e9phaneMartin\\Assignment1\\results\\replay_100000_seed42_baseline_cancel_churn_batch1",
+    "--worker-seconds",
+    "60",
+    "--campaign-seconds",
+    "900",
+    "--label",
+    "missing-baseline-100000"
+  ],
+  "started_utc": "2026-11-25T23:20:12.398979+00:00",
+  "finished_utc": "2026-11-25T23:20:23.739132+00:00",
+  "exit_code": 0,
+  "total_command_wall_seconds": 11.340126399998553,
+  "progress": [
+    {
+      "job_index": 1,
+      "total_jobs": 5,
+      "case_id": "replay_cancel_churn_n100000_s42_l1000",
+      "version": null,
+      "phase": "io",
+      "status": "complete",
+      "elapsed_command_seconds": 2.8576480000047013,
+      "interval_since_previous_progress_seconds": 2.8576480000047013
+    },
+    {
+      "job_index": 2,
+      "total_jobs": 5,
+      "case_id": "replay_cancel_churn_n100000_s42_l1000",
+      "version": "baseline",
+      "phase": "timing",
+      "status": "complete",
+      "elapsed_command_seconds": 4.658214800001588,
+      "interval_since_previous_progress_seconds": 1.8005667999968864
+    },
+    {
+      "job_index": 3,
+      "total_jobs": 5,
+      "case_id": "replay_cancel_churn_n100000_s42_l1000",
+      "version": "baseline",
+      "phase": "latency",
+      "status": "complete",
+      "elapsed_command_seconds": 5.751855699985754,
+      "interval_since_previous_progress_seconds": 1.093640899984166
+    },
+    {
+      "job_index": 4,
+      "total_jobs": 5,
+      "case_id": "replay_cancel_churn_n100000_s42_l1000",
+      "version": "baseline",
+      "phase": "memory",
+      "status": "complete",
+      "elapsed_command_seconds": 9.923162400024012,
+      "interval_since_previous_progress_seconds": 4.171306700038258
+    },
+    {
+      "job_index": 5,
+      "total_jobs": 5,
+      "case_id": "replay_cancel_churn_n100000_s42_l1000",
+      "version": "baseline",
+      "phase": "diagnostics",
+      "status": "complete",
+      "elapsed_command_seconds": 11.315458600001875,
+      "interval_since_previous_progress_seconds": 1.3922961999778636
+    }
+  ],
+  "boundary": "External perf_counter: process creation through exit; includes preparation, loading, warm-up, repetitions and all phases; excludes tests/audit/report.",
+  "interval_boundary": "Observed intervals between stdout job completions include parent/checkpoint overhead; first also includes preparation. These are not single-replay times.",
+  "limits": {
+    "worker_seconds": 60,
+    "campaign_seconds": 900,
+    "payload_mib": 128,
+    "traced_mib": 512
+  }
+}

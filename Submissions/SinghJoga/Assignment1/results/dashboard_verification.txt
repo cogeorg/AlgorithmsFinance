@@ -1,0 +1,15 @@
+Coverage command: .\.venv\Scripts\python.exe -m dashboard.data
+C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\results\coverage.csv
+
+Dashboard-focused command: .\.venv\Scripts\python.exe -m pytest -q tests\test_dashboard.py
+Result: 5 passed in 56.88s (AppTest render/filter, medians vs raw records, missing timing, compatible pairing, 4-vs-1000 price concentration).
+
+Complete test command: .\.venv\Scripts\python.exe -m pytest -q
+........................................................................ [ 46%]
+........................................................................ [ 92%]
+...........                                                              [100%]
+155 passed in 57.64s
+
+Dashboard reconciliation: AppTest render + compatible-pair count
+Output: 0 AppTest errors; 146 compatible pairs (56 aggregate-300s; 90 phase-primary-60s); 732 full_20261125 coverage rows; 98 configurations; 13 never_attempted.
+The 13 IDs are listed in docs/report.md and results/coverage.csv.

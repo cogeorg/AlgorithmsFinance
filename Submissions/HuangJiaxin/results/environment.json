@@ -1,0 +1,36 @@
+{
+  "script": "benchmark.py",
+  "timestamp_utc": "2026-11-20T16:06:53+00:00",
+  "python": "3.12.16 (main, Nov  5 2026, 08:06:14) [GCC 14.2.0]",
+  "implementation": "CPython",
+  "platform": "Linux-7.0.12-linuxkit-aarch64-with-glibc2.41",
+  "machine": "aarch64",
+  "processor": "",
+  "code_commit": "4cb994b9d1b5e4dd9e0cd759b87e787877bfff2b",
+  "seed": 20261120,
+  "duplicates_policy": "none",
+  "id_generator": "distinct even integers from range(0, 20n+20), random order",
+  "present_queries": "floor(q * hit_rate + 0.5) copies of IDs (round half up)",
+  "absent_queries": "random integers checked to be missing from the IDs",
+  "answers_checked": "after every repeat, outside the clock",
+  "garbage_collection": "collected before and disabled during each timed block",
+  "sizes": [
+    1000,
+    10000,
+    100000
+  ],
+  "query_counts": [
+    1,
+    100
+  ],
+  "hit_rates": [
+    1.0,
+    0.0,
+    0.5
+  ],
+  "repeats": 5,
+  "warm_up": "one untimed run per setting",
+  "min_block_seconds": 0.002,
+  "units": "seconds per complete batch (prepare, query batch, total)",
+  "clock": "time.perf_counter"
+}

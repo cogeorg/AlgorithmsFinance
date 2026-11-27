@@ -1,0 +1,4 @@
+# Preserve the supplied generator byte-for-byte against the course manifest.
+06_data/supplied/generate_orders.py -text
+# Keep the portable entry script usable in ZIPs made from Windows checkouts.
+run_all.sh text eol=lf

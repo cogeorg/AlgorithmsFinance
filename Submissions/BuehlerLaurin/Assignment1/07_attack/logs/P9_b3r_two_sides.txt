@@ -1,0 +1,27 @@
+growth: two_side_thrash B3
+  n=      2000  0.013235 s  (ok, repeats=3)
+  n=      4000  0.028617 s  (ok, repeats=3)
+  n=      8000  0.051409 s  (ok, repeats=3)
+  n=     16000  0.110268 s  (ok, repeats=3)
+  measured exponent: 1.00
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"2000": [0.019748, 0.013235, 0.012146], "4000": [0.028184, 0.028617, 0.032579], "8000": [0.049277, 0.051409, 0.057027], "16000": [0.109703, 0.121563, 0.110268]}
+  last cell: {"events": 32000, "live": 16001, "rebuilds": null, "heap": 16002}
+growth: two_side_thrash B3rF
+  n=      2000  0.013979 s  (ok, repeats=3)
+  n=      4000  0.029230 s  (ok, repeats=3)
+  n=      8000  0.056777 s  (ok, repeats=3)
+  n=     16000  0.118338 s  (ok, repeats=3)
+  measured exponent: 1.02
+  predicted: 1.00 -> consistent (tol 0.3)
+  raw: {"2000": [0.01609, 0.013979, 0.013914], "4000": [0.02923, 0.032779, 0.028749], "8000": [0.056777, 0.053878, 0.059178], "16000": [0.118338, 0.116401, 0.12301]}
+  last cell: {"events": 32000, "live": 16001, "rebuilds": 8000, "heap": 2}
+growth: two_side_thrash B3rT
+  n=      2000  0.512081 s  (ok, repeats=3)
+  n=      4000  1.921149 s  (ok, repeats=3)
+  n=      8000  8.276016 s  (ok, repeats=3)
+  n=     16000  32.924360 s  (ok, repeats=3)
+  measured exponent: 2.01
+  predicted: 2.00 -> consistent (tol 0.3)
+  raw: {"2000": [0.504431, 0.573223, 0.512081], "4000": [1.651296, 1.921149, 1.924678], "8000": [8.276016, 8.126017, 9.234615], "16000": [32.191167, 34.629957, 32.92436]}
+  last cell: {"events": 32000, "live": 16001, "rebuilds": 16000, "heap": 16002}

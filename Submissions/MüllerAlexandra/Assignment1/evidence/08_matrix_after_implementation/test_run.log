@@ -1,0 +1,28 @@
+stage: 08_matrix_after_implementation
+started_utc: 2026-11-23T18:19:40.601547+00:00
+finished_utc: 2026-11-23T18:19:45.219828+00:00
+elapsed_seconds: 4.618019
+exit_code: 0
+python_version: 3.12.10
+pytest_version: 9.2.0
+git_branch: assignment1-mueller-alexandra
+git_head: ffbbaa05287c3d0e249a91237dd54ca7863fe36a
+command: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\.venv\Scripts\python.exe -m pytest -p no:cacheprovider tests/test_15_experiment_matrix.py tests/test_14_memory_measurement.py tests/test_13_latency_measurement.py tests/test_12_benchmark_harness.py tests/test_11_measurement_helpers.py
+
+=== stdout ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Acer\Documents\Algorithms\AlgorithmsFinance\Submissions\MüllerAlexandra\Assignment1
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 52 items
+
+tests\test_15_experiment_matrix.py .....                                 [  9%]
+tests\test_14_memory_measurement.py ........                             [ 25%]
+tests\test_13_latency_measurement.py ................                    [ 55%]
+tests\test_12_benchmark_harness.py .........                             [ 73%]
+tests\test_11_measurement_helpers.py ..............                      [100%]
+
+============================= 52 passed in 3.88s ==============================
+
+=== stderr ===

@@ -1,0 +1,16 @@
+{
+  "synthetic": true,
+  "calibrated_to_exchange_data": false,
+  "scenario": "sweep",
+  "events": 10000,
+  "seed": 43,
+  "levels": 1000,
+  "generator": "generate_orders.events / random.Random",
+  "python": "3.14.5",
+  "price_tick_usd": "0.01",
+  "quantity_unit_btc": "0.00000001",
+  "compressed_bytes": 123844,
+  "sha256": "0767712e7673efa193a18ac9c6e16e884802418cb63ac18ae6709bdff44be487",
+  "generator_source_sha256": "ef7f31545addf576e6071cc20a5930f3e2ed93bfef96d4968150fad763d7fe7d",
+  "benchmark_source_sha256": "8e845c0ccc3cf2a8a81f8573cc36ef1c10f065d601428b44ac994ee5c8ea6cf4"
+}

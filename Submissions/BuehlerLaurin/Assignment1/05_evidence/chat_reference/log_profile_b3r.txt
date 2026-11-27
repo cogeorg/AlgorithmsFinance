@@ -1,0 +1,28 @@
+scenario       B3r µs/ev  validate   floor
+buildup             3.21      0.88    0.06
+cancel_churn        1.91      0.79    0.07
+crowded             2.51      0.86    0.06
+mixed               2.42      0.77    0.06
+sweep               2.98      0.86    0.06
+         1148594 function calls in 0.610 seconds
+
+   Ordered by: internal time
+   List reduced from 29 to 12 due to restriction <12>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    50000    0.143    0.000    0.280    0.000 /home/claude/fork/Submissions/BuehlerLaurin/Assignment1/01_code/lob/validation.py:44(validate)
+    38325    0.073    0.000    0.115    0.000 /home/claude/fork/Submissions/BuehlerLaurin/Assignment1/01_code/lob/book_b3.py:104(_rest)
+   131637    0.067    0.000    0.103    0.000 /home/claude/fork/Submissions/BuehlerLaurin/Assignment1/01_code/lob/validation.py:92(_positive_int)
+   413274    0.057    0.000    0.057    0.000 {built-in method builtins.isinstance}
+    50000    0.049    0.000    0.590    0.000 /home/claude/fork/Submissions/BuehlerLaurin/Assignment1/01_code/lob/book_b.py:88(_process)
+    42562    0.048    0.000    0.078    0.000 /home/claude/fork/Submissions/BuehlerLaurin/Assignment1/01_code/lob/book_b3.py:64(_match)
+    42562    0.044    0.000    0.237    0.000 /home/claude/fork/Submissions/BuehlerLaurin/Assignment1/01_code/lob/book_b.py:151(_submit)
+    50000    0.020    0.000    0.609    0.000 /home/claude/fork/Submissions/BuehlerLaurin/Assignment1/01_code/lob/book_b.py:76(process)
+    46573    0.016    0.000    0.018    0.000 /home/claude/fork/Submissions/BuehlerLaurin/Assignment1/01_code/lob/book_b3.py:44(_best_price)
+     9316    0.013    0.000    0.019    0.000 /home/claude/fork/Submissions/BuehlerLaurin/Assignment1/01_code/lob/book_b3r.py:26(_remove_level)
+    42562    0.012    0.000    0.012    0.000 {method '__contains__' of 'dict' objects}
+    38325    0.010    0.000    0.010    0.000 /home/claude/fork/Submissions/BuehlerLaurin/Assignment1/01_code/lob/book_b.py:17(__init__)
+
+
+
+exit=0

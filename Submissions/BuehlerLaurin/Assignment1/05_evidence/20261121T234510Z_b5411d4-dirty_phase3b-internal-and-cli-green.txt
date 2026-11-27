@@ -1,0 +1,12 @@
+label: phase3b-internal-and-cli-green
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe -m pytest 02_tests/test_b_internal.py 02_tests/test_replay.py -q --tb=short --basetemp=scratch/pytest-phase3b-cli
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: b5411d4ab22a662820bea6f55510b23381d017f8
+dirty: True
+python: 3.13.15
+utc: 20261121T234510Z
+exit_code: 0
+duration_s: 3.92
+------------------------------------------------------------
+................................                                         [100%]
+32 passed in 3.18s

@@ -1,0 +1,61 @@
+A buildup        10000 s42: replay peak 807365 B, book after 805476 B
+B buildup        10000 s42: replay peak 2286393 B, book after 2275096 B
+A buildup        10000 s43: replay peak 807365 B, book after 805476 B
+B buildup        10000 s43: replay peak 2289425 B, book after 2278128 B
+A buildup        10000 s44: replay peak 807365 B, book after 805476 B
+B buildup        10000 s44: replay peak 2286761 B, book after 2275464 B
+A crowded        10000 s42: replay peak 807365 B, book after 805476 B
+B crowded        10000 s42: replay peak 1752486 B, book after 1749952 B
+A crowded        10000 s43: replay peak 807365 B, book after 805476 B
+B crowded        10000 s43: replay peak 1752486 B, book after 1749952 B
+A crowded        10000 s44: replay peak 807365 B, book after 805476 B
+B crowded        10000 s44: replay peak 1752486 B, book after 1749952 B
+A mixed          10000 s42: replay peak 135444 B, book after 130684 B
+B mixed          10000 s42: replay peak 622120 B, book after 600072 B
+A mixed          10000 s43: replay peak 137692 B, book after 133108 B
+B mixed          10000 s43: replay peak 557784 B, book after 550672 B
+A mixed          10000 s44: replay peak 127700 B, book after 122204 B
+B mixed          10000 s44: replay peak 608008 B, book after 570736 B
+A sweep          10000 s42: replay peak 646220 B, book after 351348 B
+B sweep          10000 s42: replay peak 1981967 B, book after 1132104 B
+A sweep          10000 s43: replay peak 646924 B, book after 355668 B
+B sweep          10000 s43: replay peak 1986807 B, book after 1144136 B
+A sweep          10000 s44: replay peak 646264 B, book after 353436 B
+B sweep          10000 s44: replay peak 1984487 B, book after 1140088 B
+A cancel_churn   10000 s42: replay peak 3710 B, book after 1828 B
+B cancel_churn   10000 s42: replay peak 4190 B, book after 2268 B
+A cancel_churn   10000 s43: replay peak 3710 B, book after 1828 B
+B cancel_churn   10000 s43: replay peak 4190 B, book after 2268 B
+A cancel_churn   10000 s44: replay peak 3710 B, book after 1828 B
+B cancel_churn   10000 s44: replay peak 4190 B, book after 2268 B
+A buildup 100000 42 not attempted
+B buildup       100000 s42: replay peak 20969141 B, book after 20957840 B
+A buildup 100000 43 not attempted
+B buildup       100000 s43: replay peak 20953973 B, book after 20942672 B
+A buildup 100000 44 not attempted
+B buildup       100000 s44: replay peak 20941333 B, book after 20930032 B
+A crowded 100000 42 not attempted
+B crowded       100000 s42: replay peak 21268778 B, book after 21266240 B
+A crowded 100000 43 not attempted
+B crowded       100000 s43: replay peak 21268778 B, book after 21266240 B
+A crowded 100000 44 not attempted
+B crowded       100000 s44: replay peak 21268778 B, book after 21266240 B
+A mixed         100000 s42: replay peak 1216760 B, book after 1211628 B
+B mixed         100000 s42: replay peak 3972856 B, book after 3819456 B
+A mixed         100000 s43: replay peak 1250328 B, book after 1244428 B
+B mixed         100000 s43: replay peak 3878352 B, book after 3867656 B
+A mixed         100000 s44: replay peak 1220192 B, book after 1214876 B
+B mixed         100000 s44: replay peak 3982016 B, book after 3824048 B
+A sweep 100000 42 not attempted
+B sweep         100000 s42: replay peak 15340419 B, book after 8660976 B
+A sweep 100000 43 not attempted
+B sweep         100000 s43: replay peak 15348003 B, book after 8705584 B
+A sweep 100000 44 not attempted
+B sweep         100000 s44: replay peak 15321459 B, book after 8671304 B
+A cancel_churn  100000 s42: replay peak 3711 B, book after 1828 B
+B cancel_churn  100000 s42: replay peak 4191 B, book after 2268 B
+A cancel_churn  100000 s43: replay peak 3711 B, book after 1828 B
+B cancel_churn  100000 s43: replay peak 4191 B, book after 2268 B
+A cancel_churn  100000 s44: replay peak 3711 B, book after 1828 B
+B cancel_churn  100000 s44: replay peak 4191 B, book after 2268 B
+memory exit 0

@@ -1,0 +1,87 @@
+{
+ "own": true,
+ "synthetic": true,
+ "case": "partial_then_another_sale",
+ "description": "b1 is partly filled and keeps its place before b2 and the later b3 at the same price.",
+ "covers": [
+  "partial fill followed by another sale",
+  "partially filled maker keeps priority"
+ ],
+ "generator": "01_code/datagen/own_cases.py",
+ "seed": 42,
+ "results": [
+  {
+   "event_id": "e1",
+   "order_id": "b1",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e2",
+   "order_id": "b2",
+   "status": "resting",
+   "unfilled_qty_units": 5,
+   "fills": []
+  },
+  {
+   "event_id": "e3",
+   "order_id": "s1",
+   "status": "filled",
+   "unfilled_qty_units": 0,
+   "fills": [
+    {
+     "maker_id": "b1",
+     "taker_id": "s1",
+     "price_ticks": 100,
+     "qty_units": 3
+    }
+   ]
+  },
+  {
+   "event_id": "e4",
+   "order_id": "b3",
+   "status": "resting",
+   "unfilled_qty_units": 1,
+   "fills": []
+  },
+  {
+   "event_id": "e5",
+   "order_id": "s2",
+   "status": "filled",
+   "unfilled_qty_units": 0,
+   "fills": [
+    {
+     "maker_id": "b1",
+     "taker_id": "s2",
+     "price_ticks": 100,
+     "qty_units": 2
+    },
+    {
+     "maker_id": "b2",
+     "taker_id": "s2",
+     "price_ticks": 100,
+     "qty_units": 2
+    }
+   ]
+  }
+ ],
+ "final_book": [
+  {
+   "order_id": "b2",
+   "side": "BUY",
+   "price_ticks": 100,
+   "qty_units": 3,
+   "arrival_seq": 2
+  },
+  {
+   "order_id": "b3",
+   "side": "BUY",
+   "price_ticks": 100,
+   "qty_units": 1,
+   "arrival_seq": 4
+  }
+ ],
+ "best_bid": 100,
+ "best_ask": null
+}

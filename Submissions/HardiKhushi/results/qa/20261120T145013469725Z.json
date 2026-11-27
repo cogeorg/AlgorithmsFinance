@@ -1,0 +1,33 @@
+{
+  "run_id": "20261120T145013469725Z",
+  "code_version": "c2b486377bb6f569785d1167e9a3bb05f80b5920706ac19837d7c0e71d00ef01",
+  "browser": "Google Chrome headless",
+  "layouts": [
+    {
+      "layout": "desktop",
+      "status": "pass",
+      "filterCombinations": 72,
+      "viewport": 1440,
+      "bodyWidth": 1440,
+      "tableRows": 18
+    },
+    {
+      "layout": "mobile",
+      "status": "pass",
+      "filterCombinations": 72,
+      "viewport": 500,
+      "bodyWidth": 500,
+      "tableRows": 18
+    }
+  ],
+  "checks": [
+    "all filter combinations",
+    "table values against saved data",
+    "two charts and six series per chart",
+    "finite chart coordinates",
+    "fresh filter state",
+    "no page overflow"
+  ],
+  "screenshots_visually_inspected": true,
+  "limitation": "Narrow layout verified at 500px, not below; not every browser was tested."
+}

@@ -1,0 +1,38 @@
+         680 function calls in 0.001 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\benchmarks\metrics.py:83(replay_without_history)
+       25    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:49(process_event)
+       19    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:63(AddLimitOrder)
+       25    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:162(_validate_event)
+       22    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:290(_match)
+        3    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:117(FillMarketSell)
+       50    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+       17    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:227(_add_order)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+       26    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:258(_best_price)
+       50    0.000    0.000    0.000    0.000 <frozen abc>:117(__instancecheck__)
+        3    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:94(CancelOrder)
+       79    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\AppData\Local\Python\pythoncore-3.14-64\Lib\copy.py:110(deepcopy)
+       66    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:215(_is_positive_integer)
+       64    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+       50    0.000    0.000    0.000    0.000 {built-in method _abc._abc_instancecheck}
+        6    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:271(_after_level_removed)
+       73    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:222(_storage_for_side)
+        2    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:245(_remove_order)
+       22    0.000    0.000    0.000    0.000 C:\Users\Joga Singh\Desktop\4. Alogrithms for finance\Homework\AlgorithmsFinance-Assignments1\AlgorithmsFinance\Submissions\SinghJoga\Assignment1\orderbook\revised.py:219(_has_live_id)
+       17    0.000    0.000    0.000    0.000 {built-in method _heapq.heappush}
+       17    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
+        6    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        8    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        3    0.000    0.000    0.000    0.000 {built-in method _heapq.heappop}
+        6    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+        6    0.000    0.000    0.000    0.000 {built-in method builtins.iter}
+        6    0.000    0.000    0.000    0.000 {built-in method builtins.next}
+        3    0.000    0.000    0.000    0.000 {method 'discard' of 'set' objects}
+        2    0.000    0.000    0.000    0.000 {method 'clear' of 'list' objects}
+        2    0.000    0.000    0.000    0.000 {method 'clear' of 'set' objects}
+
+

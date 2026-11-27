@@ -1,0 +1,15 @@
+label: phase3-internals-green
+command: C:\Users\laubu\.venvs\aif-a1\Scripts\python.exe run.py lob.check_b
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: efee8d4ba8d3425e51a31c5a8e361cd8986fe168
+dirty: True
+python: 3.13.15
+utc: 20261121T224429Z
+exit_code: 0
+duration_s: 0.40
+------------------------------------------------------------
+18 own cases: A == B plain == B counted after every event; original expectations match
+Cancel compaction: both sides, strict >32 and >live thresholds, complete deletion and recreation
+Matching compaction: fills can trigger the same stale/live threshold
+Hand-counted counters and cancelled-id reuse: exact; counters default off
+RESULT: PASS (B internals, compaction, counters and event-by-event oracle parity)

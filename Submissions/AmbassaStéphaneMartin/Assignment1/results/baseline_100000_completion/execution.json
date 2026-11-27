@@ -1,0 +1,158 @@
+{
+  "status": "finished",
+  "started_utc": "2026-11-25T23:04:00.140581+00:00",
+  "outcomes": [
+    {
+      "seed": 42,
+      "scenario": "buildup",
+      "name": "replay_100000_seed42_baseline_buildup_batch1",
+      "exit_code": 2,
+      "total_command_wall_seconds": 243.08415270003024,
+      "status": "stopped",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 42,
+      "scenario": "crowded",
+      "name": "replay_100000_seed42_baseline_crowded_batch1",
+      "exit_code": 2,
+      "total_command_wall_seconds": 242.99621810001554,
+      "status": "stopped",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 42,
+      "scenario": "mixed",
+      "name": "replay_100000_seed42_baseline_mixed_batch1",
+      "exit_code": 2,
+      "total_command_wall_seconds": 243.18581410002662,
+      "status": "stopped",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 42,
+      "scenario": "sweep",
+      "name": "replay_100000_seed42_baseline_sweep_batch1",
+      "exit_code": 2,
+      "total_command_wall_seconds": 242.81509489996824,
+      "status": "stopped",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 42,
+      "scenario": "cancel_churn",
+      "name": "replay_100000_seed42_baseline_cancel_churn_batch1",
+      "exit_code": 0,
+      "total_command_wall_seconds": 11.340126399998553,
+      "status": "completed",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 43,
+      "scenario": "buildup",
+      "name": "replay_100000_seed43_baseline_buildup_batch1",
+      "exit_code": 2,
+      "total_command_wall_seconds": 244.04478209995432,
+      "status": "stopped",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 43,
+      "scenario": "crowded",
+      "name": "replay_100000_seed43_baseline_crowded_batch1",
+      "exit_code": 2,
+      "total_command_wall_seconds": 243.66279050003504,
+      "status": "stopped",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 43,
+      "scenario": "mixed",
+      "name": "replay_100000_seed43_baseline_mixed_batch1",
+      "exit_code": 2,
+      "total_command_wall_seconds": 243.41948529996444,
+      "status": "stopped",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 43,
+      "scenario": "sweep",
+      "name": "replay_100000_seed43_baseline_sweep_batch1",
+      "exit_code": 2,
+      "total_command_wall_seconds": 243.45090529997833,
+      "status": "stopped",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 43,
+      "scenario": "cancel_churn",
+      "name": "replay_100000_seed43_baseline_cancel_churn_batch1",
+      "exit_code": 0,
+      "total_command_wall_seconds": 12.49550319998525,
+      "status": "completed",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 44,
+      "scenario": "buildup",
+      "name": "replay_100000_seed44_baseline_buildup_batch1",
+      "exit_code": 2,
+      "total_command_wall_seconds": 243.7033986999886,
+      "status": "stopped",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 44,
+      "scenario": "crowded",
+      "name": "replay_100000_seed44_baseline_crowded_batch1",
+      "exit_code": 2,
+      "total_command_wall_seconds": 243.41344899998512,
+      "status": "stopped",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 44,
+      "scenario": "mixed",
+      "name": "replay_100000_seed44_baseline_mixed_batch1",
+      "exit_code": 2,
+      "total_command_wall_seconds": 243.36312299995916,
+      "status": "stopped",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 44,
+      "scenario": "sweep",
+      "name": "replay_100000_seed44_baseline_sweep_batch1",
+      "exit_code": 2,
+      "total_command_wall_seconds": 243.35659700003453,
+      "status": "stopped",
+      "errors": [],
+      "diagnostic_mismatches": []
+    },
+    {
+      "seed": 44,
+      "scenario": "cancel_churn",
+      "name": "replay_100000_seed44_baseline_cancel_churn_batch1",
+      "exit_code": 0,
+      "total_command_wall_seconds": 11.528130499995314,
+      "status": "completed",
+      "errors": [],
+      "diagnostic_mismatches": []
+    }
+  ],
+  "finished_utc": "2026-11-25T23:53:16.428167+00:00",
+  "total_command_wall_seconds": 2955.8595707999193
+}

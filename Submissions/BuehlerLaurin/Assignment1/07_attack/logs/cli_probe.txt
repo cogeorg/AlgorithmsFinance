@@ -1,0 +1,48 @@
+A | control | exit 0 | results ['resting', 'resting'] | 
+A | qty with 4300 digits | exit 0 | results ['resting', 'resting', 'resting'] | 
+A | qty with 4301 digits | exit 1 | results 1 | ValueError: Exceeds the limit (4300 digits) for integer string conversion: value has 4301 digits; use sys.set_int_max_str_digits() to increa
+A | UTF-8 BOM (Windows PowerShell Out-File) | exit 1 | results [] | json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+A | UTF-16 file | exit 1 | results [] | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+A | malformed JSON line in the middle | exit 1 | results ['resting'] | json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+A | truncated last line | exit 1 | results ['resting'] | json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 98 (char 97)
+A | deeply nested unused field | exit 1 | results ['resting'] | RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string
+A | invalid UTF-8 byte | exit 1 | results [] | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 137: invalid start byte
+A | NaN quantity | exit 0 | results ['resting', 'rejected', 'resting'] | 
+A | 1e0 quantity | exit 0 | results ['resting', 'rejected', 'resting'] | 
+A | duplicate key qty | exit 0 | results ['resting', 'resting', 'resting'] | 
+B1 | control | exit 0 | results ['resting', 'resting'] | 
+B1 | qty with 4300 digits | exit 0 | results ['resting', 'resting', 'resting'] | 
+B1 | qty with 4301 digits | exit 1 | results 1 | ValueError: Exceeds the limit (4300 digits) for integer string conversion: value has 4301 digits; use sys.set_int_max_str_digits() to increa
+B1 | UTF-8 BOM (Windows PowerShell Out-File) | exit 1 | results [] | json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+B1 | UTF-16 file | exit 1 | results [] | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+B1 | malformed JSON line in the middle | exit 1 | results ['resting'] | json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+B1 | truncated last line | exit 1 | results ['resting'] | json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 98 (char 97)
+B1 | deeply nested unused field | exit 1 | results ['resting'] | RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string
+B1 | invalid UTF-8 byte | exit 1 | results [] | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 137: invalid start byte
+B1 | NaN quantity | exit 0 | results ['resting', 'rejected', 'resting'] | 
+B1 | 1e0 quantity | exit 0 | results ['resting', 'rejected', 'resting'] | 
+B1 | duplicate key qty | exit 0 | results ['resting', 'resting', 'resting'] | 
+B2 | control | exit 0 | results ['resting', 'resting'] | 
+B2 | qty with 4300 digits | exit 0 | results ['resting', 'resting', 'resting'] | 
+B2 | qty with 4301 digits | exit 1 | results 1 | ValueError: Exceeds the limit (4300 digits) for integer string conversion: value has 4301 digits; use sys.set_int_max_str_digits() to increa
+B2 | UTF-8 BOM (Windows PowerShell Out-File) | exit 1 | results [] | json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+B2 | UTF-16 file | exit 1 | results [] | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+B2 | malformed JSON line in the middle | exit 1 | results ['resting'] | json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+B2 | truncated last line | exit 1 | results ['resting'] | json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 98 (char 97)
+B2 | deeply nested unused field | exit 1 | results ['resting'] | RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string
+B2 | invalid UTF-8 byte | exit 1 | results [] | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 137: invalid start byte
+B2 | NaN quantity | exit 0 | results ['resting', 'rejected', 'resting'] | 
+B2 | 1e0 quantity | exit 0 | results ['resting', 'rejected', 'resting'] | 
+B2 | duplicate key qty | exit 0 | results ['resting', 'resting', 'resting'] | 
+B3 | control | exit 0 | results ['resting', 'resting'] | 
+B3 | qty with 4300 digits | exit 0 | results ['resting', 'resting', 'resting'] | 
+B3 | qty with 4301 digits | exit 1 | results 1 | ValueError: Exceeds the limit (4300 digits) for integer string conversion: value has 4301 digits; use sys.set_int_max_str_digits() to increa
+B3 | UTF-8 BOM (Windows PowerShell Out-File) | exit 1 | results [] | json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+B3 | UTF-16 file | exit 1 | results [] | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+B3 | malformed JSON line in the middle | exit 1 | results ['resting'] | json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+B3 | truncated last line | exit 1 | results ['resting'] | json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 98 (char 97)
+B3 | deeply nested unused field | exit 1 | results ['resting'] | RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string
+B3 | invalid UTF-8 byte | exit 1 | results [] | UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 137: invalid start byte
+B3 | NaN quantity | exit 0 | results ['resting', 'rejected', 'resting'] | 
+B3 | 1e0 quantity | exit 0 | results ['resting', 'rejected', 'resting'] | 
+B3 | duplicate key qty | exit 0 | results ['resting', 'resting', 'resting'] | 

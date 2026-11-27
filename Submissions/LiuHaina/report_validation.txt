@@ -1,0 +1,6 @@
+PASS: report rebuild is deterministic and report text is English.
+PASS: all eight report tables match generated extracts from saved measurements.
+PASS: headline single-query winner counts independently checked against saved medians.
+PASS: report result-source hashes and referenced commands/evidence files verified.
+PASS: measured source and input hashes checked by build_report.py.
+No benchmarks were rerun for report writing.

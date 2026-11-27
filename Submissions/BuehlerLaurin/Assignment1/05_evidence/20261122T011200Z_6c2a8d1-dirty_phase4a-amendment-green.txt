@@ -1,0 +1,12 @@
+label: phase4a-amendment-green
+command: C:/Users/laubu/.venvs/aif-a1/Scripts/python.exe -m pytest -q 02_tests/test_bench_pipeline.py --tb=short
+cwd: C:\Users\laubu\dev\AIF-Lab\AlgorithmsFinance\Submissions\BuehlerLaurin\Assignment1
+commit: 6c2a8d19a914e61ba1ff1d9b5904a18fdf6f19ca
+dirty: True
+python: 3.13.15
+utc: 20261122T011200Z
+exit_code: 0
+duration_s: 1.85
+------------------------------------------------------------
+..............................                                           [100%]
+30 passed in 1.10s

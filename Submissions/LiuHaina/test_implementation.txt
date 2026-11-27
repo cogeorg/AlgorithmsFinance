@@ -1,0 +1,24 @@
+Initial implementation test run
+Command: python3 -B -m unittest -v test_search
+Python: 3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]
+Exit code: 0
+Test file SHA-256: b68a3fae0fa39d9ec730ccfc918a98b96c49e4c6ed69158260e406892fcdb2d0
+
+test_all_entries_equal (test_search.MembershipContractTests.test_all_entries_equal) ... ok
+test_all_queries_absent (test_search.MembershipContractTests.test_all_queries_absent) ... ok
+test_all_queries_present (test_search.MembershipContractTests.test_all_queries_present) ... ok
+test_both_inputs_empty (test_search.MembershipContractTests.test_both_inputs_empty) ... ok
+test_empty_array (test_search.MembershipContractTests.test_empty_array) ... ok
+test_empty_queries (test_search.MembershipContractTests.test_empty_queries) ... ok
+test_negative_zero_and_large_integers (test_search.MembershipContractTests.test_negative_zero_and_large_integers) ... ok
+test_repeated_calls_do_not_reuse_stale_state (test_search.MembershipContractTests.test_repeated_calls_do_not_reuse_stale_state) ... ok
+test_single_entry (test_search.MembershipContractTests.test_single_entry) ... ok
+test_slide_example (test_search.MembershipContractTests.test_slide_example) ... ok
+test_sorted_boundaries_and_gaps (test_search.MembershipContractTests.test_sorted_boundaries_and_gaps) ... ok
+test_two_entries (test_search.MembershipContractTests.test_two_entries) ... ok
+test_unsorted_array_and_query_order (test_search.MembershipContractTests.test_unsorted_array_and_query_order) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.000s
+
+OK
