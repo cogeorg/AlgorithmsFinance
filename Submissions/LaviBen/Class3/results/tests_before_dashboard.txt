@@ -1,0 +1,6 @@
+Command: PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests.test_dashboard -v
+Exit status: 1
+Result: expected failure before dashboard implementation
+Reason: ModuleNotFoundError: No module named 'dashboard'
+
+The dashboard contract and independent tests were written before dashboard.py.

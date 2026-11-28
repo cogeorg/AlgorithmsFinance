@@ -1,0 +1,34 @@
+Tests-before-implementation baseline
+====================================
+
+Command: python3 -m unittest discover -s tests -v
+Exit status: 1
+Expected failure reason: production modules american_put.py and market_data.py
+do not exist yet. The public contract and independent expectations were written
+first.
+
+Observed output:
+
+test_bitcoin_acceptance (unittest.loader._FailedTest.test_bitcoin_acceptance) ... ERROR
+test_market_data_contract (unittest.loader._FailedTest.test_market_data_contract) ... ERROR
+test_pricer_contract (unittest.loader._FailedTest.test_pricer_contract) ... ERROR
+
+======================================================================
+ERROR: test_bitcoin_acceptance (unittest.loader._FailedTest.test_bitcoin_acceptance)
+----------------------------------------------------------------------
+ModuleNotFoundError: No module named 'american_put'
+
+======================================================================
+ERROR: test_market_data_contract (unittest.loader._FailedTest.test_market_data_contract)
+----------------------------------------------------------------------
+ModuleNotFoundError: No module named 'market_data'
+
+======================================================================
+ERROR: test_pricer_contract (unittest.loader._FailedTest.test_pricer_contract)
+----------------------------------------------------------------------
+ModuleNotFoundError: No module named 'american_put'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (errors=3)

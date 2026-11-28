@@ -1,0 +1,2718 @@
+{
+  "asset_count": 40,
+  "created_utc": "2026-11-28T09:00:37.476776+00:00",
+  "environment": {
+    "compiled_backend": {
+      "compiler": "cc",
+      "compiler_version": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+      "flags": "-O3 -std=c11 -fPIC -shared -lm",
+      "library": "/var/folders/dk/xrlp92rn65z53bf5d8slxs0c0000gn/T/class3_american_put_8c28b785bdb75df3.dylib",
+      "library_sha256": "79df0c3f2c98503916a4a41d68bff2ecdc5b06894300682eb9e72cbc0d00be1f",
+      "source": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Submissions/LaviBen/Class3/american_put_kernel.c",
+      "source_sha256": "8c28b785bdb75df3d27c440f46753a0a416cde8a46b29bc414a3dc70395e740a"
+    },
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+    "process_start_method": "spawn",
+    "psutil_version": "7.2.2",
+    "python": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "thread_limits": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    }
+  },
+  "inputs": [
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/AAVEUSDT.csv",
+      "q": 0.49803131692292646,
+      "selected_observations": 8761,
+      "sha256": "ba0d75786442cacfe7cc6a20e1b8ec574ca5db4db99f02e84f4670c42ef249c9",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "AAVEUSDT",
+      "total_observations": 43823,
+      "volatility": 0.008900802023155803
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/ADAUSDT.csv",
+      "q": 0.49824878688604024,
+      "selected_observations": 8761,
+      "sha256": "e7def1a543814775760df23d00be773ccff912c56d2dfcba751f4b31224478e3",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "ADAUSDT",
+      "total_observations": 43823,
+      "volatility": 0.008128406517384348
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/ALGOUSDT.csv",
+      "q": 0.4981050128293997,
+      "selected_observations": 8761,
+      "sha256": "9b1572c0f74069aa43a7a5b8d28659d2766e426edba07f6da41f3b1f36902d76",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "ALGOUSDT",
+      "total_observations": 43823,
+      "volatility": 0.008637313477009252
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/ATOMUSDT.csv",
+      "q": 0.49836464880213716,
+      "selected_observations": 8761,
+      "sha256": "d91a11568e1aa21c80b3b529eda1b46b50cbf7ff26bd2c72b530f0ed0345771f",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "ATOMUSDT",
+      "total_observations": 43823,
+      "volatility": 0.007723807029695589
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/AVAXUSDT.csv",
+      "q": 0.4983767093199496,
+      "selected_observations": 8761,
+      "sha256": "17a2c056046641148325e47afabe5fc4895df29ea152aca1ac6625f9f5b94135",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "AVAXUSDT",
+      "total_observations": 43823,
+      "volatility": 0.00768199925004084
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/AXSUSDT.csv",
+      "q": 0.4972701672159596,
+      "selected_observations": 8761,
+      "sha256": "6905084552221986b65cc515f4b58b8dcfa9ca1d6166f88598444954f9e46724",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "AXSUSDT",
+      "total_observations": 43823,
+      "volatility": 0.011699997470609938
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/BCHUSDT.csv",
+      "q": 0.49838540506858475,
+      "selected_observations": 8761,
+      "sha256": "df16c1860150ee8741fd0a939b079cb4e2ff84c40d792983e6a3ee1cb4cc572c",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "BCHUSDT",
+      "total_observations": 43823,
+      "volatility": 0.0076518931855504985
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/BNBUSDT.csv",
+      "q": 0.49928301327904406,
+      "selected_observations": 8761,
+      "sha256": "b7e2abd563157f246aeff732574833a9614a8db6d984a01ace8d58c0ca0b3db3",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "BNBUSDT",
+      "total_observations": 43823,
+      "volatility": 0.004778929267859292
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/BTCUSDT.csv",
+      "q": 0.49934368317518857,
+      "selected_observations": 8761,
+      "sha256": "2262b9e97986e964107c9d59085d4403ef90ea63ffa58ba73df3740587b59df6",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "BTCUSDT",
+      "total_observations": 43823,
+      "volatility": 0.004607395140495903
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/CHZUSDT.csv",
+      "q": 0.4979297612540681,
+      "selected_observations": 8761,
+      "sha256": "654f48c615140ebf2df81fe7af3364410f3f4dedbba1c99783b8df3256b7ce3d",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "CHZUSDT",
+      "total_observations": 43823,
+      "volatility": 0.009266536265674644
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/COMPUSDT.csv",
+      "q": 0.49803831734619436,
+      "selected_observations": 8761,
+      "sha256": "bd04053860776baabc9062fb4872ce22bbbcad7c03ebd86ef290d44321922185",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "COMPUSDT",
+      "total_observations": 43823,
+      "volatility": 0.008875701477050916
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/CRVUSDT.csv",
+      "q": 0.49786017691729806,
+      "selected_observations": 8761,
+      "sha256": "01d9ca078e1205b5a13e4441cd2f1fd082b19b30ee15ece66f3feec039ac3d48",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "CRVUSDT",
+      "total_observations": 43823,
+      "volatility": 0.009518764264995195
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/DASHUSDT.csv",
+      "q": 0.4965895192072543,
+      "selected_observations": 8761,
+      "sha256": "3da623dd7b1e6ea2ebf8fba7fa5b33d334bd3fc98db8191552a57823c75e8a0d",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "DASHUSDT",
+      "total_observations": 43823,
+      "volatility": 0.01428159923648854
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/DOGEUSDT.csv",
+      "q": 0.4985145128127767,
+      "selected_observations": 8761,
+      "sha256": "bcbdf3d9995ba0d93fbb2797a6e01e154c573307e1a2c594d4b5428770428145",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "DOGEUSDT",
+      "total_observations": 43823,
+      "volatility": 0.007208812930159957
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/DOTUSDT.csv",
+      "q": 0.4981001388696882,
+      "selected_observations": 8761,
+      "sha256": "d3974fb4b60414138b533f0bf510eb2ad7352f989c2244cb4fa218c6481cd8fd",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "DOTUSDT",
+      "total_observations": 43823,
+      "volatility": 0.008654687114687616
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/EGLDUSDT.csv",
+      "q": 0.4979704620657688,
+      "selected_observations": 8761,
+      "sha256": "c0e11c6d2642b277fe5995db6732e4b881608477cfcc1c3e9118f0bc091a3fea",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "EGLDUSDT",
+      "total_observations": 43823,
+      "volatility": 0.009119608217608497
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/ENJUSDT.csv",
+      "q": 0.49642875176536183,
+      "selected_observations": 8761,
+      "sha256": "ef2f12e5a1646c20696441d942b53255c3c180f63c2351358599c7005f6922e3",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "ENJUSDT",
+      "total_observations": 43823,
+      "volatility": 0.014898233975187773
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/ETCUSDT.csv",
+      "q": 0.4985277283156572,
+      "selected_observations": 8761,
+      "sha256": "d687f118f474e6666efd123e607952dbd3bf7e059b837bb31bde102d267fa171",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "ETCUSDT",
+      "total_observations": 43823,
+      "volatility": 0.007163893788657046
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/ETHUSDT.csv",
+      "q": 0.4988009389234164,
+      "selected_observations": 8761,
+      "sha256": "2c0c9a9611cfc8ec088d42e460045d4ed7542c08b272a292ec98e012536f613b",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "ETHUSDT",
+      "total_observations": 43823,
+      "volatility": 0.006256035952170137
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/FILUSDT.csv",
+      "q": 0.497426010850071,
+      "selected_observations": 8761,
+      "sha256": "cba80eb4476e6a5ffb5640f711e8bb846c6a7708a2a4e2508c6e5ee557729ac3",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "FILUSDT",
+      "total_observations": 43823,
+      "volatility": 0.011117501432739454
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/GRTUSDT.csv",
+      "q": 0.4980803388565272,
+      "selected_observations": 8761,
+      "sha256": "56089b591d198595c58952dcd59e19c011c2d94d84d8afca217568ab1ecbb324",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "GRTUSDT",
+      "total_observations": 43823,
+      "volatility": 0.008725343540086609
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/HBARUSDT.csv",
+      "q": 0.49840361351721046,
+      "selected_observations": 8761,
+      "sha256": "65330732b02e88b53f4e7ef9b3e2f4b4b955d013bd3b973b38f6a915dbbae5c7",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "HBARUSDT",
+      "total_observations": 43823,
+      "volatility": 0.007588956412213252
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/ICPUSDT.csv",
+      "q": 0.4973132849158122,
+      "selected_observations": 8761,
+      "sha256": "6a8023a61b08b7612d24613cca6d35db422541dd51827733b6b1dbcdea1301ad",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "ICPUSDT",
+      "total_observations": 43823,
+      "volatility": 0.011538449807658302
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/LINKUSDT.csv",
+      "q": 0.4984733430074886,
+      "selected_observations": 8761,
+      "sha256": "815caadaea8b25b29c7d8319049e7326316b200e6cacc39e45ff91e085f378df",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "LINKUSDT",
+      "total_observations": 43823,
+      "volatility": 0.007349280480385395
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/LTCUSDT.csv",
+      "q": 0.4987037264269878,
+      "selected_observations": 8761,
+      "sha256": "cf24460e8f54788ac4f39fda06ca7076d2b2d32b55b11b31adfe7777521ffa26",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "LTCUSDT",
+      "total_observations": 43823,
+      "volatility": 0.0065742341664765044
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/MANAUSDT.csv",
+      "q": 0.4980885464216927,
+      "selected_observations": 8761,
+      "sha256": "e6b96e9d07000c1cbef0639f79c0dd7a93f17effaf8b57b3246dba49813b3ed1",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "MANAUSDT",
+      "total_observations": 43823,
+      "volatility": 0.008696039774578241
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/NEARUSDT.csv",
+      "q": 0.4974192729989304,
+      "selected_observations": 8761,
+      "sha256": "179fe1d18f6f9c118b405a15a06bc8a02072bc1af52229ad62220e020f67b63d",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "NEARUSDT",
+      "total_observations": 43823,
+      "volatility": 0.011142603052298966
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/NEOUSDT.csv",
+      "q": 0.49842594273317514,
+      "selected_observations": 8761,
+      "sha256": "f1bda3ff2cd09a01a069a428156854af3ab58c35ce42623164ee3b8f2e23c849",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "NEOUSDT",
+      "total_observations": 43823,
+      "volatility": 0.00751197125986985
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/PAXGUSDT.csv",
+      "q": 0.5000720660609502,
+      "selected_observations": 8761,
+      "sha256": "31633c6aca500c63a066422394e6d577752510c2500d7311f1cfc14461c2ea50",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "PAXGUSDT",
+      "total_observations": 43823,
+      "volatility": 0.0028812948095605197
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/SANDUSDT.csv",
+      "q": 0.49775036826094315,
+      "selected_observations": 8761,
+      "sha256": "f5f047d5a9cfcf37be5683270c7f9317fdacb9f79924ddb425145b3a4302e94e",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "SANDUSDT",
+      "total_observations": 43823,
+      "volatility": 0.009919269914330123
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/SNXUSDT.csv",
+      "q": 0.49779123188838736,
+      "selected_observations": 8761,
+      "sha256": "996c49632ffe4dd5259d6cb10ab686ee996454bfba68477b6c637f833b47d38f",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "SNXUSDT",
+      "total_observations": 43823,
+      "volatility": 0.009769889086536487
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/SOLUSDT.csv",
+      "q": 0.4986049027048489,
+      "selected_observations": 8761,
+      "sha256": "e7d6ee51d07b313568eb9ca00aaa002170dd44cc995c6638d486c6f35b6f4c05",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "SOLUSDT",
+      "total_observations": 43823,
+      "volatility": 0.006903313056040383
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/THETAUSDT.csv",
+      "q": 0.4978066583960486,
+      "selected_observations": 8761,
+      "sha256": "60bd4acce40e768f18a472325b52886f3715e839a6a4d46de7306e5db40c05b1",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "THETAUSDT",
+      "total_observations": 43823,
+      "volatility": 0.009713598711157435
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/TRXUSDT.csv",
+      "q": 0.5002563506209726,
+      "selected_observations": 8761,
+      "sha256": "9bef6a8a5baec8bbcde7d5eed19882b933d8939f88bd789d98880c9d6340d10f",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "TRXUSDT",
+      "total_observations": 43823,
+      "volatility": 0.0025524736512619575
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/UNIUSDT.csv",
+      "q": 0.4976356703290133,
+      "selected_observations": 8761,
+      "sha256": "d1445cb2af7ed07af54ad815ed1530173c7997d7a21fa94b17202452ab75c961",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "UNIUSDT",
+      "total_observations": 43823,
+      "volatility": 0.010340561883962159
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/VETUSDT.csv",
+      "q": 0.49824605384646453,
+      "selected_observations": 8761,
+      "sha256": "efcbc3281de6ee0cd39b70404c6e045eb8c09773c0518c6ab8f04e2540498483",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "VETUSDT",
+      "total_observations": 43823,
+      "volatility": 0.008138012616453983
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/XLMUSDT.csv",
+      "q": 0.4981415104110577,
+      "selected_observations": 8761,
+      "sha256": "5552bebc74e6ceb38fa0faef4a1418ae3b9286758b6df1594f2abaf1e735ecd0",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "XLMUSDT",
+      "total_observations": 43823,
+      "volatility": 0.008507459479442378
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/XRPUSDT.csv",
+      "q": 0.49864050358611367,
+      "selected_observations": 8761,
+      "sha256": "c6fcf72e643797f22838f6698f8c3ad5533b99259395df1dc7605b33eb60662b",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "XRPUSDT",
+      "total_observations": 43823,
+      "volatility": 0.006784145888616696
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/XTZUSDT.csv",
+      "q": 0.4982240427805698,
+      "selected_observations": 8761,
+      "sha256": "7021003280650bda7152620973c0a539bbb58caf2c42329d8bc390b959b7dfd4",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "XTZUSDT",
+      "total_observations": 43823,
+      "volatility": 0.008215476812266231
+    },
+    {
+      "end_utc": "2026-10-31T23:00:00+00:00",
+      "gap_count": 0,
+      "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/ZECUSDT.csv",
+      "q": 0.4966492388471564,
+      "selected_observations": 8761,
+      "sha256": "05b8a3f9529781285bf15bb400ff17f009df4ed17f1fee855b231b46957b66e5",
+      "start_utc": "2025-10-31T23:00:00+00:00",
+      "steps": 8760,
+      "symbol": "ZECUSDT",
+      "total_observations": 43823,
+      "volatility": 0.014053106603601423
+    }
+  ],
+  "memory": {
+    "coordinator_pid": 21708,
+    "execution": {
+      "result_worker_pids": [
+        21709,
+        21710,
+        21711,
+        21712,
+        21713,
+        21714,
+        21715,
+        21716
+      ],
+      "results": [
+        {
+          "kernel_seconds": 0.1141016669862438,
+          "node_updates": 38373180,
+          "pid": 21710,
+          "symbol": "AAVEUSDT",
+          "value": 68.983985160662
+        },
+        {
+          "kernel_seconds": 0.10383220802759752,
+          "node_updates": 38373180,
+          "pid": 21716,
+          "symbol": "ADAUSDT",
+          "value": 0.16796475147095272
+        },
+        {
+          "kernel_seconds": 0.10313499998301268,
+          "node_updates": 38373180,
+          "pid": 21715,
+          "symbol": "ALGOUSDT",
+          "value": 0.051989932547278475
+        },
+        {
+          "kernel_seconds": 0.11727520800195634,
+          "node_updates": 38373180,
+          "pid": 21712,
+          "symbol": "ATOMUSDT",
+          "value": 0.7757243174304536
+        },
+        {
+          "kernel_seconds": 0.10327387499273755,
+          "node_updates": 38373180,
+          "pid": 21711,
+          "symbol": "AVAXUSDT",
+          "value": 4.737658358479308
+        },
+        {
+          "kernel_seconds": 0.12169779199757613,
+          "node_updates": 38373180,
+          "pid": 21709,
+          "symbol": "AXSUSDT",
+          "value": 0.5573189717394152
+        },
+        {
+          "kernel_seconds": 0.1058241669961717,
+          "node_updates": 38373180,
+          "pid": 21713,
+          "symbol": "BCHUSDT",
+          "value": 138.8144941889301
+        },
+        {
+          "kernel_seconds": 0.11880333299632184,
+          "node_updates": 38373180,
+          "pid": 21714,
+          "symbol": "BNBUSDT",
+          "value": 172.70206715020993
+        },
+        {
+          "kernel_seconds": 0.11363133299164474,
+          "node_updates": 38373180,
+          "pid": 21715,
+          "symbol": "BTCUSDT",
+          "value": 16713.714208766745
+        },
+        {
+          "kernel_seconds": 0.11707804200705141,
+          "node_updates": 38373180,
+          "pid": 21711,
+          "symbol": "CHZUSDT",
+          "value": 0.00970075036499817
+        },
+        {
+          "kernel_seconds": 0.10239295801147819,
+          "node_updates": 38373180,
+          "pid": 21716,
+          "symbol": "COMPUSDT",
+          "value": 10.54520337867692
+        },
+        {
+          "kernel_seconds": 0.1168982090021018,
+          "node_updates": 38373180,
+          "pid": 21713,
+          "symbol": "CRVUSDT",
+          "value": 0.15484614044744707
+        },
+        {
+          "kernel_seconds": 0.10906116699334234,
+          "node_updates": 38373180,
+          "pid": 21710,
+          "symbol": "DASHUSDT",
+          "value": 25.00271287181452
+        },
+        {
+          "kernel_seconds": 0.11496716699912213,
+          "node_updates": 38373180,
+          "pid": 21712,
+          "symbol": "DOGEUSDT",
+          "value": 0.04551238728600578
+        },
+        {
+          "kernel_seconds": 0.1164410829951521,
+          "node_updates": 38373180,
+          "pid": 21714,
+          "symbol": "DOTUSDT",
+          "value": 0.8463115331714556
+        },
+        {
+          "kernel_seconds": 0.10881841598893516,
+          "node_updates": 38373180,
+          "pid": 21709,
+          "symbol": "EGLDUSDT",
+          "value": 2.821019377990765
+        },
+        {
+          "kernel_seconds": 0.12069945898838341,
+          "node_updates": 38373180,
+          "pid": 21716,
+          "symbol": "ENJUSDT",
+          "value": 0.020519388859106213
+        },
+        {
+          "kernel_seconds": 0.11039158399216831,
+          "node_updates": 38373180,
+          "pid": 21715,
+          "symbol": "ETCUSDT",
+          "value": 3.846929987320657
+        },
+        {
+          "kernel_seconds": 0.11991995800053701,
+          "node_updates": 38373180,
+          "pid": 21711,
+          "symbol": "ETHUSDT",
+          "value": 811.436540660004
+        },
+        {
+          "kernel_seconds": 0.11244087500381283,
+          "node_updates": 38373180,
+          "pid": 21713,
+          "symbol": "FILUSDT",
+          "value": 0.568113209636133
+        },
+        {
+          "kernel_seconds": 0.09295133399427868,
+          "node_updates": 38373180,
+          "pid": 21710,
+          "symbol": "GRTUSDT",
+          "value": 0.01816822641778863
+        },
+        {
+          "kernel_seconds": 0.12007970799459144,
+          "node_updates": 38373180,
+          "pid": 21709,
+          "symbol": "HBARUSDT",
+          "value": 0.051707289510296885
+        },
+        {
+          "kernel_seconds": 0.09319129100185819,
+          "node_updates": 38373180,
+          "pid": 21712,
+          "symbol": "ICPUSDT",
+          "value": 1.1428385201292834
+        },
+        {
+          "kernel_seconds": 0.111219832993811,
+          "node_updates": 38373180,
+          "pid": 21714,
+          "symbol": "LINKUSDT",
+          "value": 4.292346122657909
+        },
+        {
+          "kernel_seconds": 0.08685983400209807,
+          "node_updates": 38373180,
+          "pid": 21710,
+          "symbol": "LTCUSDT",
+          "value": 21.176355626677008
+        },
+        {
+          "kernel_seconds": 0.11719399999128655,
+          "node_updates": 38373180,
+          "pid": 21712,
+          "symbol": "MANAUSDT",
+          "value": 0.06694759689206026
+        },
+        {
+          "kernel_seconds": 0.1031989170005545,
+          "node_updates": 38373180,
+          "pid": 21716,
+          "symbol": "NEARUSDT",
+          "value": 0.7888019250186614
+        },
+        {
+          "kernel_seconds": 0.10505912502412684,
+          "node_updates": 38373180,
+          "pid": 21715,
+          "symbol": "NEOUSDT",
+          "value": 1.2633043290204353
+        },
+        {
+          "kernel_seconds": 0.12299766700016335,
+          "node_updates": 38373180,
+          "pid": 21713,
+          "symbol": "PAXGUSDT",
+          "value": 362.6669936539557
+        },
+        {
+          "kernel_seconds": 0.11445054100477137,
+          "node_updates": 38373180,
+          "pid": 21711,
+          "symbol": "SANDUSDT",
+          "value": 0.06789396685214669
+        },
+        {
+          "kernel_seconds": 0.10575583300669678,
+          "node_updates": 38373180,
+          "pid": 21714,
+          "symbol": "SNXUSDT",
+          "value": 0.33100238656848147
+        },
+        {
+          "kernel_seconds": 0.12070958298863843,
+          "node_updates": 38373180,
+          "pid": 21709,
+          "symbol": "SOLUSDT",
+          "value": 43.71382899951468
+        },
+        {
+          "kernel_seconds": 0.08568408401333727,
+          "node_updates": 38373180,
+          "pid": 21710,
+          "symbol": "THETAUSDT",
+          "value": 0.16028966198186623
+        },
+        {
+          "kernel_seconds": 0.12857704202178866,
+          "node_updates": 38373180,
+          "pid": 21716,
+          "symbol": "TRXUSDT",
+          "value": 0.023365200151618595
+        },
+        {
+          "kernel_seconds": 0.08562008399167098,
+          "node_updates": 38373180,
+          "pid": 21715,
+          "symbol": "UNIUSDT",
+          "value": 2.0091977036326107
+        },
+        {
+          "kernel_seconds": 0.09879641598672606,
+          "node_updates": 38373180,
+          "pid": 21712,
+          "symbol": "VETUSDT",
+          "value": 0.004304196496130477
+        },
+        {
+          "kernel_seconds": 0.09655766701325774,
+          "node_updates": 38373180,
+          "pid": 21714,
+          "symbol": "XLMUSDT",
+          "value": 0.08804272564174644
+        },
+        {
+          "kernel_seconds": 0.09844883298501372,
+          "node_updates": 38373180,
+          "pid": 21711,
+          "symbol": "XRPUSDT",
+          "value": 0.5755998396616431
+        },
+        {
+          "kernel_seconds": 0.09950329200364649,
+          "node_updates": 38373180,
+          "pid": 21713,
+          "symbol": "XTZUSDT",
+          "value": 0.16180328283498027
+        },
+        {
+          "kernel_seconds": 0.09574008398340084,
+          "node_updates": 38373180,
+          "pid": 21709,
+          "symbol": "ZECUSDT",
+          "value": 188.46577236312194
+        }
+      ],
+      "wall_seconds": 0.5690039999899454,
+      "warm_worker_pids": [
+        21709,
+        21710,
+        21711,
+        21712,
+        21713,
+        21714,
+        21715,
+        21716
+      ]
+    },
+    "max_live_processes": 9,
+    "method": "psutil RSS sampling of coordinator process tree",
+    "observed_pids": [
+      21708,
+      21709,
+      21710,
+      21711,
+      21712,
+      21713,
+      21714,
+      21715,
+      21716
+    ],
+    "parent_plus_tree_peak_rss_bytes": 301072384,
+    "process_tree_peak_rss_bytes": 271400960,
+    "sample_count": 33,
+    "sampling_interval_seconds": 0.02,
+    "worker_output_alive_before_release": true
+  },
+  "outputs": [
+    {
+      "kernel_seconds": 0.11304504200234078,
+      "node_updates": 38373180,
+      "pid": 21668,
+      "symbol": "AAVEUSDT",
+      "value": 68.983985160662
+    },
+    {
+      "kernel_seconds": 0.09775854100007564,
+      "node_updates": 38373180,
+      "pid": 21671,
+      "symbol": "ADAUSDT",
+      "value": 0.16796475147095272
+    },
+    {
+      "kernel_seconds": 0.10412500001257285,
+      "node_updates": 38373180,
+      "pid": 21672,
+      "symbol": "ALGOUSDT",
+      "value": 0.051989932547278475
+    },
+    {
+      "kernel_seconds": 0.11200795799959451,
+      "node_updates": 38373180,
+      "pid": 21673,
+      "symbol": "ATOMUSDT",
+      "value": 0.7757243174304536
+    },
+    {
+      "kernel_seconds": 0.11083187500480562,
+      "node_updates": 38373180,
+      "pid": 21669,
+      "symbol": "AVAXUSDT",
+      "value": 4.737658358479308
+    },
+    {
+      "kernel_seconds": 0.12020420900080353,
+      "node_updates": 38373180,
+      "pid": 21674,
+      "symbol": "AXSUSDT",
+      "value": 0.5573189717394152
+    },
+    {
+      "kernel_seconds": 0.113659041991923,
+      "node_updates": 38373180,
+      "pid": 21670,
+      "symbol": "BCHUSDT",
+      "value": 138.8144941889301
+    },
+    {
+      "kernel_seconds": 0.10533999998006038,
+      "node_updates": 38373180,
+      "pid": 21675,
+      "symbol": "BNBUSDT",
+      "value": 172.70206715020993
+    },
+    {
+      "kernel_seconds": 0.1015461659990251,
+      "node_updates": 38373180,
+      "pid": 21671,
+      "symbol": "BTCUSDT",
+      "value": 16713.714208766745
+    },
+    {
+      "kernel_seconds": 0.11048458301229402,
+      "node_updates": 38373180,
+      "pid": 21672,
+      "symbol": "CHZUSDT",
+      "value": 0.00970075036499817
+    },
+    {
+      "kernel_seconds": 0.09927070900448598,
+      "node_updates": 38373180,
+      "pid": 21675,
+      "symbol": "COMPUSDT",
+      "value": 10.54520337867692
+    },
+    {
+      "kernel_seconds": 0.1097140829951968,
+      "node_updates": 38373180,
+      "pid": 21669,
+      "symbol": "CRVUSDT",
+      "value": 0.15484614044744707
+    },
+    {
+      "kernel_seconds": 0.10097004199633375,
+      "node_updates": 38373180,
+      "pid": 21673,
+      "symbol": "DASHUSDT",
+      "value": 25.00271287181452
+    },
+    {
+      "kernel_seconds": 0.09948866697959602,
+      "node_updates": 38373180,
+      "pid": 21668,
+      "symbol": "DOGEUSDT",
+      "value": 0.04551238728600578
+    },
+    {
+      "kernel_seconds": 0.10769504099152982,
+      "node_updates": 38373180,
+      "pid": 21670,
+      "symbol": "DOTUSDT",
+      "value": 0.8463115331714556
+    },
+    {
+      "kernel_seconds": 0.11155791598139331,
+      "node_updates": 38373180,
+      "pid": 21674,
+      "symbol": "EGLDUSDT",
+      "value": 2.821019377990765
+    },
+    {
+      "kernel_seconds": 0.1271393749921117,
+      "node_updates": 38373180,
+      "pid": 21671,
+      "symbol": "ENJUSDT",
+      "value": 0.020519388859106213
+    },
+    {
+      "kernel_seconds": 0.12303462499403395,
+      "node_updates": 38373180,
+      "pid": 21675,
+      "symbol": "ETCUSDT",
+      "value": 3.846929987320657
+    },
+    {
+      "kernel_seconds": 0.12434066602145322,
+      "node_updates": 38373180,
+      "pid": 21668,
+      "symbol": "ETHUSDT",
+      "value": 811.436540660004
+    },
+    {
+      "kernel_seconds": 0.10787058400455862,
+      "node_updates": 38373180,
+      "pid": 21673,
+      "symbol": "FILUSDT",
+      "value": 0.568113209636133
+    },
+    {
+      "kernel_seconds": 0.11234633400454186,
+      "node_updates": 38373180,
+      "pid": 21672,
+      "symbol": "GRTUSDT",
+      "value": 0.01816822641778863
+    },
+    {
+      "kernel_seconds": 0.09386054199421778,
+      "node_updates": 38373180,
+      "pid": 21669,
+      "symbol": "HBARUSDT",
+      "value": 0.051707289510296885
+    },
+    {
+      "kernel_seconds": 0.11425554199377075,
+      "node_updates": 38373180,
+      "pid": 21670,
+      "symbol": "ICPUSDT",
+      "value": 1.1428385201292834
+    },
+    {
+      "kernel_seconds": 0.1138765420182608,
+      "node_updates": 38373180,
+      "pid": 21674,
+      "symbol": "LINKUSDT",
+      "value": 4.292346122657909
+    },
+    {
+      "kernel_seconds": 0.10024316699127667,
+      "node_updates": 38373180,
+      "pid": 21669,
+      "symbol": "LTCUSDT",
+      "value": 21.176355626677008
+    },
+    {
+      "kernel_seconds": 0.11022829101420939,
+      "node_updates": 38373180,
+      "pid": 21673,
+      "symbol": "MANAUSDT",
+      "value": 0.06694759689206026
+    },
+    {
+      "kernel_seconds": 0.11749262499506585,
+      "node_updates": 38373180,
+      "pid": 21671,
+      "symbol": "NEARUSDT",
+      "value": 0.7888019250186614
+    },
+    {
+      "kernel_seconds": 0.105360457993811,
+      "node_updates": 38373180,
+      "pid": 21672,
+      "symbol": "NEOUSDT",
+      "value": 1.2633043290204353
+    },
+    {
+      "kernel_seconds": 0.11688341698027216,
+      "node_updates": 38373180,
+      "pid": 21675,
+      "symbol": "PAXGUSDT",
+      "value": 362.6669936539557
+    },
+    {
+      "kernel_seconds": 0.1207552500127349,
+      "node_updates": 38373180,
+      "pid": 21670,
+      "symbol": "SANDUSDT",
+      "value": 0.06789396685214669
+    },
+    {
+      "kernel_seconds": 0.10928562501794659,
+      "node_updates": 38373180,
+      "pid": 21668,
+      "symbol": "SNXUSDT",
+      "value": 0.33100238656848147
+    },
+    {
+      "kernel_seconds": 0.11659225000767037,
+      "node_updates": 38373180,
+      "pid": 21674,
+      "symbol": "SOLUSDT",
+      "value": 43.71382899951468
+    },
+    {
+      "kernel_seconds": 0.11404712501098402,
+      "node_updates": 38373180,
+      "pid": 21669,
+      "symbol": "THETAUSDT",
+      "value": 0.16028966198186623
+    },
+    {
+      "kernel_seconds": 0.10151566698914394,
+      "node_updates": 38373180,
+      "pid": 21673,
+      "symbol": "TRXUSDT",
+      "value": 0.023365200151618595
+    },
+    {
+      "kernel_seconds": 0.11347649997333065,
+      "node_updates": 38373180,
+      "pid": 21672,
+      "symbol": "UNIUSDT",
+      "value": 2.0091977036326107
+    },
+    {
+      "kernel_seconds": 0.10878537499229424,
+      "node_updates": 38373180,
+      "pid": 21671,
+      "symbol": "VETUSDT",
+      "value": 0.004304196496130477
+    },
+    {
+      "kernel_seconds": 0.11229579200153239,
+      "node_updates": 38373180,
+      "pid": 21675,
+      "symbol": "XLMUSDT",
+      "value": 0.08804272564174644
+    },
+    {
+      "kernel_seconds": 0.10790687502594665,
+      "node_updates": 38373180,
+      "pid": 21668,
+      "symbol": "XRPUSDT",
+      "value": 0.5755998396616431
+    },
+    {
+      "kernel_seconds": 0.09400924999499694,
+      "node_updates": 38373180,
+      "pid": 21670,
+      "symbol": "XTZUSDT",
+      "value": 0.16180328283498027
+    },
+    {
+      "kernel_seconds": 0.09662916700472124,
+      "node_updates": 38373180,
+      "pid": 21674,
+      "symbol": "ZECUSDT",
+      "value": 188.46577236312194
+    }
+  ],
+  "provenance": {
+    "american_put_sha256": "ae302f0d17fb4d92b2ee3df0c5e4781cc873763245d895ca421f13d48c2687ca",
+    "batch_sha256": "b3ca4ba10a9ca6f639f5ac76a85832d388d2afcfb60c1a11ce38b9d7dff065d6",
+    "compiled_backend_sha256": "1233a067dcf6adb257b2936cab88f5cac4e1fb6f156fb27270bb1dcbde079cf6",
+    "git_branch": "lavi/class3-american-put",
+    "git_commit": "9273b000003ecaa5b38475bd9afb9e8e7e623199",
+    "git_status_porcelain": "",
+    "kernel_source_sha256": "8c28b785bdb75df3d27c440f46753a0a416cde8a46b29bc414a3dc70395e740a",
+    "market_data_sha256": "6b65f802aab249867b45086a43818d41fa540c8e42ebb63db922554f67e0aec4",
+    "runner_sha256": "944b4a1fe48fc0f3b184283f9b05166bdb33ef8fc799b194e8b3ea0fee1344ab"
+  },
+  "scenario": "all_assets_one_year",
+  "schema_version": 1,
+  "status": "completed",
+  "timing": {
+    "clock": "time.perf_counter",
+    "executions": [
+      {
+        "per_asset": [
+          {
+            "kernel_seconds": 0.11304504200234078,
+            "node_updates": 38373180,
+            "pid": 21668,
+            "symbol": "AAVEUSDT",
+            "value": 68.983985160662
+          },
+          {
+            "kernel_seconds": 0.09775854100007564,
+            "node_updates": 38373180,
+            "pid": 21671,
+            "symbol": "ADAUSDT",
+            "value": 0.16796475147095272
+          },
+          {
+            "kernel_seconds": 0.10412500001257285,
+            "node_updates": 38373180,
+            "pid": 21672,
+            "symbol": "ALGOUSDT",
+            "value": 0.051989932547278475
+          },
+          {
+            "kernel_seconds": 0.11200795799959451,
+            "node_updates": 38373180,
+            "pid": 21673,
+            "symbol": "ATOMUSDT",
+            "value": 0.7757243174304536
+          },
+          {
+            "kernel_seconds": 0.11083187500480562,
+            "node_updates": 38373180,
+            "pid": 21669,
+            "symbol": "AVAXUSDT",
+            "value": 4.737658358479308
+          },
+          {
+            "kernel_seconds": 0.12020420900080353,
+            "node_updates": 38373180,
+            "pid": 21674,
+            "symbol": "AXSUSDT",
+            "value": 0.5573189717394152
+          },
+          {
+            "kernel_seconds": 0.113659041991923,
+            "node_updates": 38373180,
+            "pid": 21670,
+            "symbol": "BCHUSDT",
+            "value": 138.8144941889301
+          },
+          {
+            "kernel_seconds": 0.10533999998006038,
+            "node_updates": 38373180,
+            "pid": 21675,
+            "symbol": "BNBUSDT",
+            "value": 172.70206715020993
+          },
+          {
+            "kernel_seconds": 0.1015461659990251,
+            "node_updates": 38373180,
+            "pid": 21671,
+            "symbol": "BTCUSDT",
+            "value": 16713.714208766745
+          },
+          {
+            "kernel_seconds": 0.11048458301229402,
+            "node_updates": 38373180,
+            "pid": 21672,
+            "symbol": "CHZUSDT",
+            "value": 0.00970075036499817
+          },
+          {
+            "kernel_seconds": 0.09927070900448598,
+            "node_updates": 38373180,
+            "pid": 21675,
+            "symbol": "COMPUSDT",
+            "value": 10.54520337867692
+          },
+          {
+            "kernel_seconds": 0.1097140829951968,
+            "node_updates": 38373180,
+            "pid": 21669,
+            "symbol": "CRVUSDT",
+            "value": 0.15484614044744707
+          },
+          {
+            "kernel_seconds": 0.10097004199633375,
+            "node_updates": 38373180,
+            "pid": 21673,
+            "symbol": "DASHUSDT",
+            "value": 25.00271287181452
+          },
+          {
+            "kernel_seconds": 0.09948866697959602,
+            "node_updates": 38373180,
+            "pid": 21668,
+            "symbol": "DOGEUSDT",
+            "value": 0.04551238728600578
+          },
+          {
+            "kernel_seconds": 0.10769504099152982,
+            "node_updates": 38373180,
+            "pid": 21670,
+            "symbol": "DOTUSDT",
+            "value": 0.8463115331714556
+          },
+          {
+            "kernel_seconds": 0.11155791598139331,
+            "node_updates": 38373180,
+            "pid": 21674,
+            "symbol": "EGLDUSDT",
+            "value": 2.821019377990765
+          },
+          {
+            "kernel_seconds": 0.1271393749921117,
+            "node_updates": 38373180,
+            "pid": 21671,
+            "symbol": "ENJUSDT",
+            "value": 0.020519388859106213
+          },
+          {
+            "kernel_seconds": 0.12303462499403395,
+            "node_updates": 38373180,
+            "pid": 21675,
+            "symbol": "ETCUSDT",
+            "value": 3.846929987320657
+          },
+          {
+            "kernel_seconds": 0.12434066602145322,
+            "node_updates": 38373180,
+            "pid": 21668,
+            "symbol": "ETHUSDT",
+            "value": 811.436540660004
+          },
+          {
+            "kernel_seconds": 0.10787058400455862,
+            "node_updates": 38373180,
+            "pid": 21673,
+            "symbol": "FILUSDT",
+            "value": 0.568113209636133
+          },
+          {
+            "kernel_seconds": 0.11234633400454186,
+            "node_updates": 38373180,
+            "pid": 21672,
+            "symbol": "GRTUSDT",
+            "value": 0.01816822641778863
+          },
+          {
+            "kernel_seconds": 0.09386054199421778,
+            "node_updates": 38373180,
+            "pid": 21669,
+            "symbol": "HBARUSDT",
+            "value": 0.051707289510296885
+          },
+          {
+            "kernel_seconds": 0.11425554199377075,
+            "node_updates": 38373180,
+            "pid": 21670,
+            "symbol": "ICPUSDT",
+            "value": 1.1428385201292834
+          },
+          {
+            "kernel_seconds": 0.1138765420182608,
+            "node_updates": 38373180,
+            "pid": 21674,
+            "symbol": "LINKUSDT",
+            "value": 4.292346122657909
+          },
+          {
+            "kernel_seconds": 0.10024316699127667,
+            "node_updates": 38373180,
+            "pid": 21669,
+            "symbol": "LTCUSDT",
+            "value": 21.176355626677008
+          },
+          {
+            "kernel_seconds": 0.11022829101420939,
+            "node_updates": 38373180,
+            "pid": 21673,
+            "symbol": "MANAUSDT",
+            "value": 0.06694759689206026
+          },
+          {
+            "kernel_seconds": 0.11749262499506585,
+            "node_updates": 38373180,
+            "pid": 21671,
+            "symbol": "NEARUSDT",
+            "value": 0.7888019250186614
+          },
+          {
+            "kernel_seconds": 0.105360457993811,
+            "node_updates": 38373180,
+            "pid": 21672,
+            "symbol": "NEOUSDT",
+            "value": 1.2633043290204353
+          },
+          {
+            "kernel_seconds": 0.11688341698027216,
+            "node_updates": 38373180,
+            "pid": 21675,
+            "symbol": "PAXGUSDT",
+            "value": 362.6669936539557
+          },
+          {
+            "kernel_seconds": 0.1207552500127349,
+            "node_updates": 38373180,
+            "pid": 21670,
+            "symbol": "SANDUSDT",
+            "value": 0.06789396685214669
+          },
+          {
+            "kernel_seconds": 0.10928562501794659,
+            "node_updates": 38373180,
+            "pid": 21668,
+            "symbol": "SNXUSDT",
+            "value": 0.33100238656848147
+          },
+          {
+            "kernel_seconds": 0.11659225000767037,
+            "node_updates": 38373180,
+            "pid": 21674,
+            "symbol": "SOLUSDT",
+            "value": 43.71382899951468
+          },
+          {
+            "kernel_seconds": 0.11404712501098402,
+            "node_updates": 38373180,
+            "pid": 21669,
+            "symbol": "THETAUSDT",
+            "value": 0.16028966198186623
+          },
+          {
+            "kernel_seconds": 0.10151566698914394,
+            "node_updates": 38373180,
+            "pid": 21673,
+            "symbol": "TRXUSDT",
+            "value": 0.023365200151618595
+          },
+          {
+            "kernel_seconds": 0.11347649997333065,
+            "node_updates": 38373180,
+            "pid": 21672,
+            "symbol": "UNIUSDT",
+            "value": 2.0091977036326107
+          },
+          {
+            "kernel_seconds": 0.10878537499229424,
+            "node_updates": 38373180,
+            "pid": 21671,
+            "symbol": "VETUSDT",
+            "value": 0.004304196496130477
+          },
+          {
+            "kernel_seconds": 0.11229579200153239,
+            "node_updates": 38373180,
+            "pid": 21675,
+            "symbol": "XLMUSDT",
+            "value": 0.08804272564174644
+          },
+          {
+            "kernel_seconds": 0.10790687502594665,
+            "node_updates": 38373180,
+            "pid": 21668,
+            "symbol": "XRPUSDT",
+            "value": 0.5755998396616431
+          },
+          {
+            "kernel_seconds": 0.09400924999499694,
+            "node_updates": 38373180,
+            "pid": 21670,
+            "symbol": "XTZUSDT",
+            "value": 0.16180328283498027
+          },
+          {
+            "kernel_seconds": 0.09662916700472124,
+            "node_updates": 38373180,
+            "pid": 21674,
+            "symbol": "ZECUSDT",
+            "value": 188.46577236312194
+          }
+        ],
+        "result_worker_pids": [
+          21668,
+          21669,
+          21670,
+          21671,
+          21672,
+          21673,
+          21674,
+          21675
+        ],
+        "wall_seconds": 0.5607025420176797,
+        "warm_worker_pids": [
+          21668,
+          21669,
+          21670,
+          21671,
+          21672,
+          21673,
+          21674,
+          21675
+        ]
+      },
+      {
+        "per_asset": [
+          {
+            "kernel_seconds": 0.10954441700596362,
+            "node_updates": 38373180,
+            "pid": 21679,
+            "symbol": "AAVEUSDT",
+            "value": 68.983985160662
+          },
+          {
+            "kernel_seconds": 0.11067629099125043,
+            "node_updates": 38373180,
+            "pid": 21677,
+            "symbol": "ADAUSDT",
+            "value": 0.16796475147095272
+          },
+          {
+            "kernel_seconds": 0.12150683399522677,
+            "node_updates": 38373180,
+            "pid": 21678,
+            "symbol": "ALGOUSDT",
+            "value": 0.051989932547278475
+          },
+          {
+            "kernel_seconds": 0.11110037501202896,
+            "node_updates": 38373180,
+            "pid": 21676,
+            "symbol": "ATOMUSDT",
+            "value": 0.7757243174304536
+          },
+          {
+            "kernel_seconds": 0.11447145900456235,
+            "node_updates": 38373180,
+            "pid": 21680,
+            "symbol": "AVAXUSDT",
+            "value": 4.737658358479308
+          },
+          {
+            "kernel_seconds": 0.11317475000396371,
+            "node_updates": 38373180,
+            "pid": 21682,
+            "symbol": "AXSUSDT",
+            "value": 0.5573189717394152
+          },
+          {
+            "kernel_seconds": 0.11702420900110155,
+            "node_updates": 38373180,
+            "pid": 21683,
+            "symbol": "BCHUSDT",
+            "value": 138.8144941889301
+          },
+          {
+            "kernel_seconds": 0.1095263330207672,
+            "node_updates": 38373180,
+            "pid": 21681,
+            "symbol": "BNBUSDT",
+            "value": 172.70206715020993
+          },
+          {
+            "kernel_seconds": 0.1221054999914486,
+            "node_updates": 38373180,
+            "pid": 21679,
+            "symbol": "BTCUSDT",
+            "value": 16713.714208766745
+          },
+          {
+            "kernel_seconds": 0.1077301670156885,
+            "node_updates": 38373180,
+            "pid": 21677,
+            "symbol": "CHZUSDT",
+            "value": 0.00970075036499817
+          },
+          {
+            "kernel_seconds": 0.10862437501782551,
+            "node_updates": 38373180,
+            "pid": 21676,
+            "symbol": "COMPUSDT",
+            "value": 10.54520337867692
+          },
+          {
+            "kernel_seconds": 0.10810254199896008,
+            "node_updates": 38373180,
+            "pid": 21682,
+            "symbol": "CRVUSDT",
+            "value": 0.15484614044744707
+          },
+          {
+            "kernel_seconds": 0.11290949999238364,
+            "node_updates": 38373180,
+            "pid": 21680,
+            "symbol": "DASHUSDT",
+            "value": 25.00271287181452
+          },
+          {
+            "kernel_seconds": 0.12329383299220353,
+            "node_updates": 38373180,
+            "pid": 21683,
+            "symbol": "DOGEUSDT",
+            "value": 0.04551238728600578
+          },
+          {
+            "kernel_seconds": 0.10985758301103488,
+            "node_updates": 38373180,
+            "pid": 21681,
+            "symbol": "DOTUSDT",
+            "value": 0.8463115331714556
+          },
+          {
+            "kernel_seconds": 0.10337112497654743,
+            "node_updates": 38373180,
+            "pid": 21678,
+            "symbol": "EGLDUSDT",
+            "value": 2.821019377990765
+          },
+          {
+            "kernel_seconds": 0.09730054199462757,
+            "node_updates": 38373180,
+            "pid": 21677,
+            "symbol": "ENJUSDT",
+            "value": 0.020519388859106213
+          },
+          {
+            "kernel_seconds": 0.10600016699754633,
+            "node_updates": 38373180,
+            "pid": 21676,
+            "symbol": "ETCUSDT",
+            "value": 3.846929987320657
+          },
+          {
+            "kernel_seconds": 0.09224037500098348,
+            "node_updates": 38373180,
+            "pid": 21682,
+            "symbol": "ETHUSDT",
+            "value": 811.436540660004
+          },
+          {
+            "kernel_seconds": 0.10620983300032094,
+            "node_updates": 38373180,
+            "pid": 21678,
+            "symbol": "FILUSDT",
+            "value": 0.568113209636133
+          },
+          {
+            "kernel_seconds": 0.10697745898505673,
+            "node_updates": 38373180,
+            "pid": 21680,
+            "symbol": "GRTUSDT",
+            "value": 0.01816822641778863
+          },
+          {
+            "kernel_seconds": 0.09421783400466666,
+            "node_updates": 38373180,
+            "pid": 21681,
+            "symbol": "HBARUSDT",
+            "value": 0.051707289510296885
+          },
+          {
+            "kernel_seconds": 0.10809312501805834,
+            "node_updates": 38373180,
+            "pid": 21679,
+            "symbol": "ICPUSDT",
+            "value": 1.1428385201292834
+          },
+          {
+            "kernel_seconds": 0.12337950000073761,
+            "node_updates": 38373180,
+            "pid": 21683,
+            "symbol": "LINKUSDT",
+            "value": 4.292346122657909
+          },
+          {
+            "kernel_seconds": 0.10931312499451451,
+            "node_updates": 38373180,
+            "pid": 21682,
+            "symbol": "LTCUSDT",
+            "value": 21.176355626677008
+          },
+          {
+            "kernel_seconds": 0.12682104101986624,
+            "node_updates": 38373180,
+            "pid": 21677,
+            "symbol": "MANAUSDT",
+            "value": 0.06694759689206026
+          },
+          {
+            "kernel_seconds": 0.11568091699155048,
+            "node_updates": 38373180,
+            "pid": 21681,
+            "symbol": "NEARUSDT",
+            "value": 0.7888019250186614
+          },
+          {
+            "kernel_seconds": 0.11634991699247621,
+            "node_updates": 38373180,
+            "pid": 21676,
+            "symbol": "NEOUSDT",
+            "value": 1.2633043290204353
+          },
+          {
+            "kernel_seconds": 0.12772512499941513,
+            "node_updates": 38373180,
+            "pid": 21678,
+            "symbol": "PAXGUSDT",
+            "value": 362.6669936539557
+          },
+          {
+            "kernel_seconds": 0.1331940410018433,
+            "node_updates": 38373180,
+            "pid": 21680,
+            "symbol": "SANDUSDT",
+            "value": 0.06789396685214669
+          },
+          {
+            "kernel_seconds": 0.11031912500038743,
+            "node_updates": 38373180,
+            "pid": 21679,
+            "symbol": "SNXUSDT",
+            "value": 0.33100238656848147
+          },
+          {
+            "kernel_seconds": 0.13418020799872465,
+            "node_updates": 38373180,
+            "pid": 21683,
+            "symbol": "SOLUSDT",
+            "value": 43.71382899951468
+          },
+          {
+            "kernel_seconds": 0.13107212499016896,
+            "node_updates": 38373180,
+            "pid": 21682,
+            "symbol": "THETAUSDT",
+            "value": 0.16028966198186623
+          },
+          {
+            "kernel_seconds": 0.1026584159990307,
+            "node_updates": 38373180,
+            "pid": 21681,
+            "symbol": "TRXUSDT",
+            "value": 0.023365200151618595
+          },
+          {
+            "kernel_seconds": 0.1208582500112243,
+            "node_updates": 38373180,
+            "pid": 21676,
+            "symbol": "UNIUSDT",
+            "value": 2.0091977036326107
+          },
+          {
+            "kernel_seconds": 0.1112237090128474,
+            "node_updates": 38373180,
+            "pid": 21677,
+            "symbol": "VETUSDT",
+            "value": 0.004304196496130477
+          },
+          {
+            "kernel_seconds": 0.11415325000416487,
+            "node_updates": 38373180,
+            "pid": 21679,
+            "symbol": "XLMUSDT",
+            "value": 0.08804272564174644
+          },
+          {
+            "kernel_seconds": 0.12357262501609512,
+            "node_updates": 38373180,
+            "pid": 21678,
+            "symbol": "XRPUSDT",
+            "value": 0.5755998396616431
+          },
+          {
+            "kernel_seconds": 0.1167366250010673,
+            "node_updates": 38373180,
+            "pid": 21680,
+            "symbol": "XTZUSDT",
+            "value": 0.16180328283498027
+          },
+          {
+            "kernel_seconds": 0.10329708401695825,
+            "node_updates": 38373180,
+            "pid": 21683,
+            "symbol": "ZECUSDT",
+            "value": 188.46577236312194
+          }
+        ],
+        "result_worker_pids": [
+          21676,
+          21677,
+          21678,
+          21679,
+          21680,
+          21681,
+          21682,
+          21683
+        ],
+        "wall_seconds": 0.6029791250184644,
+        "warm_worker_pids": [
+          21676,
+          21677,
+          21678,
+          21679,
+          21680,
+          21681,
+          21682,
+          21683
+        ]
+      },
+      {
+        "per_asset": [
+          {
+            "kernel_seconds": 0.12237841699970886,
+            "node_updates": 38373180,
+            "pid": 21686,
+            "symbol": "AAVEUSDT",
+            "value": 68.983985160662
+          },
+          {
+            "kernel_seconds": 0.14044412501971237,
+            "node_updates": 38373180,
+            "pid": 21684,
+            "symbol": "ADAUSDT",
+            "value": 0.16796475147095272
+          },
+          {
+            "kernel_seconds": 0.1240214170247782,
+            "node_updates": 38373180,
+            "pid": 21688,
+            "symbol": "ALGOUSDT",
+            "value": 0.051989932547278475
+          },
+          {
+            "kernel_seconds": 0.13679674998275004,
+            "node_updates": 38373180,
+            "pid": 21690,
+            "symbol": "ATOMUSDT",
+            "value": 0.7757243174304536
+          },
+          {
+            "kernel_seconds": 0.12599850000697188,
+            "node_updates": 38373180,
+            "pid": 21685,
+            "symbol": "AVAXUSDT",
+            "value": 4.737658358479308
+          },
+          {
+            "kernel_seconds": 0.13158645801013336,
+            "node_updates": 38373180,
+            "pid": 21687,
+            "symbol": "AXSUSDT",
+            "value": 0.5573189717394152
+          },
+          {
+            "kernel_seconds": 0.13356841701897793,
+            "node_updates": 38373180,
+            "pid": 21689,
+            "symbol": "BCHUSDT",
+            "value": 138.8144941889301
+          },
+          {
+            "kernel_seconds": 0.1236031659936998,
+            "node_updates": 38373180,
+            "pid": 21691,
+            "symbol": "BNBUSDT",
+            "value": 172.70206715020993
+          },
+          {
+            "kernel_seconds": 0.12405804201262072,
+            "node_updates": 38373180,
+            "pid": 21686,
+            "symbol": "BTCUSDT",
+            "value": 16713.714208766745
+          },
+          {
+            "kernel_seconds": 0.12134487502044067,
+            "node_updates": 38373180,
+            "pid": 21691,
+            "symbol": "CHZUSDT",
+            "value": 0.00970075036499817
+          },
+          {
+            "kernel_seconds": 0.1143481659819372,
+            "node_updates": 38373180,
+            "pid": 21688,
+            "symbol": "COMPUSDT",
+            "value": 10.54520337867692
+          },
+          {
+            "kernel_seconds": 0.1101717920100782,
+            "node_updates": 38373180,
+            "pid": 21685,
+            "symbol": "CRVUSDT",
+            "value": 0.15484614044744707
+          },
+          {
+            "kernel_seconds": 0.09711545801837929,
+            "node_updates": 38373180,
+            "pid": 21687,
+            "symbol": "DASHUSDT",
+            "value": 25.00271287181452
+          },
+          {
+            "kernel_seconds": 0.11690054199425504,
+            "node_updates": 38373180,
+            "pid": 21689,
+            "symbol": "DOGEUSDT",
+            "value": 0.04551238728600578
+          },
+          {
+            "kernel_seconds": 0.12376395799219608,
+            "node_updates": 38373180,
+            "pid": 21690,
+            "symbol": "DOTUSDT",
+            "value": 0.8463115331714556
+          },
+          {
+            "kernel_seconds": 0.12084124999819323,
+            "node_updates": 38373180,
+            "pid": 21684,
+            "symbol": "EGLDUSDT",
+            "value": 2.821019377990765
+          },
+          {
+            "kernel_seconds": 0.10751637499197386,
+            "node_updates": 38373180,
+            "pid": 21687,
+            "symbol": "ENJUSDT",
+            "value": 0.020519388859106213
+          },
+          {
+            "kernel_seconds": 0.08082616701722145,
+            "node_updates": 38373180,
+            "pid": 21685,
+            "symbol": "ETCUSDT",
+            "value": 3.846929987320657
+          },
+          {
+            "kernel_seconds": 0.12679962499532849,
+            "node_updates": 38373180,
+            "pid": 21688,
+            "symbol": "ETHUSDT",
+            "value": 811.436540660004
+          },
+          {
+            "kernel_seconds": 0.11195520800538361,
+            "node_updates": 38373180,
+            "pid": 21691,
+            "symbol": "FILUSDT",
+            "value": 0.568113209636133
+          },
+          {
+            "kernel_seconds": 0.13430570799391717,
+            "node_updates": 38373180,
+            "pid": 21686,
+            "symbol": "GRTUSDT",
+            "value": 0.01816822641778863
+          },
+          {
+            "kernel_seconds": 0.12611566699342802,
+            "node_updates": 38373180,
+            "pid": 21689,
+            "symbol": "HBARUSDT",
+            "value": 0.051707289510296885
+          },
+          {
+            "kernel_seconds": 0.11857495800359175,
+            "node_updates": 38373180,
+            "pid": 21690,
+            "symbol": "ICPUSDT",
+            "value": 1.1428385201292834
+          },
+          {
+            "kernel_seconds": 0.12054449997958727,
+            "node_updates": 38373180,
+            "pid": 21684,
+            "symbol": "LINKUSDT",
+            "value": 4.292346122657909
+          },
+          {
+            "kernel_seconds": 0.11232566699618474,
+            "node_updates": 38373180,
+            "pid": 21685,
+            "symbol": "LTCUSDT",
+            "value": 21.176355626677008
+          },
+          {
+            "kernel_seconds": 0.12077512498944998,
+            "node_updates": 38373180,
+            "pid": 21687,
+            "symbol": "MANAUSDT",
+            "value": 0.06694759689206026
+          },
+          {
+            "kernel_seconds": 0.10845241599599831,
+            "node_updates": 38373180,
+            "pid": 21691,
+            "symbol": "NEARUSDT",
+            "value": 0.7888019250186614
+          },
+          {
+            "kernel_seconds": 0.11701979200006463,
+            "node_updates": 38373180,
+            "pid": 21688,
+            "symbol": "NEOUSDT",
+            "value": 1.2633043290204353
+          },
+          {
+            "kernel_seconds": 0.11005225000553764,
+            "node_updates": 38373180,
+            "pid": 21689,
+            "symbol": "PAXGUSDT",
+            "value": 362.6669936539557
+          },
+          {
+            "kernel_seconds": 0.09822108401567675,
+            "node_updates": 38373180,
+            "pid": 21690,
+            "symbol": "SANDUSDT",
+            "value": 0.06789396685214669
+          },
+          {
+            "kernel_seconds": 0.11201420798897743,
+            "node_updates": 38373180,
+            "pid": 21686,
+            "symbol": "SNXUSDT",
+            "value": 0.33100238656848147
+          },
+          {
+            "kernel_seconds": 0.10163416599971242,
+            "node_updates": 38373180,
+            "pid": 21684,
+            "symbol": "SOLUSDT",
+            "value": 43.71382899951468
+          },
+          {
+            "kernel_seconds": 0.11634949999279343,
+            "node_updates": 38373180,
+            "pid": 21685,
+            "symbol": "THETAUSDT",
+            "value": 0.16028966198186623
+          },
+          {
+            "kernel_seconds": 0.09668729198165238,
+            "node_updates": 38373180,
+            "pid": 21687,
+            "symbol": "TRXUSDT",
+            "value": 0.023365200151618595
+          },
+          {
+            "kernel_seconds": 0.1005622079828754,
+            "node_updates": 38373180,
+            "pid": 21691,
+            "symbol": "UNIUSDT",
+            "value": 2.0091977036326107
+          },
+          {
+            "kernel_seconds": 0.10510341697954573,
+            "node_updates": 38373180,
+            "pid": 21690,
+            "symbol": "VETUSDT",
+            "value": 0.004304196496130477
+          },
+          {
+            "kernel_seconds": 0.10397024999838322,
+            "node_updates": 38373180,
+            "pid": 21688,
+            "symbol": "XLMUSDT",
+            "value": 0.08804272564174644
+          },
+          {
+            "kernel_seconds": 0.10947008299990557,
+            "node_updates": 38373180,
+            "pid": 21684,
+            "symbol": "XRPUSDT",
+            "value": 0.5755998396616431
+          },
+          {
+            "kernel_seconds": 0.11676504099159501,
+            "node_updates": 38373180,
+            "pid": 21689,
+            "symbol": "XTZUSDT",
+            "value": 0.16180328283498027
+          },
+          {
+            "kernel_seconds": 0.09896720800315961,
+            "node_updates": 38373180,
+            "pid": 21686,
+            "symbol": "ZECUSDT",
+            "value": 188.46577236312194
+          }
+        ],
+        "result_worker_pids": [
+          21684,
+          21685,
+          21686,
+          21687,
+          21688,
+          21689,
+          21690,
+          21691
+        ],
+        "wall_seconds": 0.6051643330138177,
+        "warm_worker_pids": [
+          21684,
+          21685,
+          21686,
+          21687,
+          21688,
+          21689,
+          21690,
+          21691
+        ]
+      },
+      {
+        "per_asset": [
+          {
+            "kernel_seconds": 0.1122648750024382,
+            "node_updates": 38373180,
+            "pid": 21696,
+            "symbol": "AAVEUSDT",
+            "value": 68.983985160662
+          },
+          {
+            "kernel_seconds": 0.11233062500832602,
+            "node_updates": 38373180,
+            "pid": 21692,
+            "symbol": "ADAUSDT",
+            "value": 0.16796475147095272
+          },
+          {
+            "kernel_seconds": 0.1181303330231458,
+            "node_updates": 38373180,
+            "pid": 21695,
+            "symbol": "ALGOUSDT",
+            "value": 0.051989932547278475
+          },
+          {
+            "kernel_seconds": 0.11281137500191107,
+            "node_updates": 38373180,
+            "pid": 21694,
+            "symbol": "ATOMUSDT",
+            "value": 0.7757243174304536
+          },
+          {
+            "kernel_seconds": 0.10636854098993354,
+            "node_updates": 38373180,
+            "pid": 21693,
+            "symbol": "AVAXUSDT",
+            "value": 4.737658358479308
+          },
+          {
+            "kernel_seconds": 0.106578625011025,
+            "node_updates": 38373180,
+            "pid": 21698,
+            "symbol": "AXSUSDT",
+            "value": 0.5573189717394152
+          },
+          {
+            "kernel_seconds": 0.1049322500184644,
+            "node_updates": 38373180,
+            "pid": 21699,
+            "symbol": "BCHUSDT",
+            "value": 138.8144941889301
+          },
+          {
+            "kernel_seconds": 0.10980483397725038,
+            "node_updates": 38373180,
+            "pid": 21697,
+            "symbol": "BNBUSDT",
+            "value": 172.70206715020993
+          },
+          {
+            "kernel_seconds": 0.11949554199236445,
+            "node_updates": 38373180,
+            "pid": 21699,
+            "symbol": "BTCUSDT",
+            "value": 16713.714208766745
+          },
+          {
+            "kernel_seconds": 0.10286812501726672,
+            "node_updates": 38373180,
+            "pid": 21693,
+            "symbol": "CHZUSDT",
+            "value": 0.00970075036499817
+          },
+          {
+            "kernel_seconds": 0.10055604198714718,
+            "node_updates": 38373180,
+            "pid": 21698,
+            "symbol": "COMPUSDT",
+            "value": 10.54520337867692
+          },
+          {
+            "kernel_seconds": 0.10158341599162668,
+            "node_updates": 38373180,
+            "pid": 21697,
+            "symbol": "CRVUSDT",
+            "value": 0.15484614044744707
+          },
+          {
+            "kernel_seconds": 0.09779166601947509,
+            "node_updates": 38373180,
+            "pid": 21696,
+            "symbol": "DASHUSDT",
+            "value": 25.00271287181452
+          },
+          {
+            "kernel_seconds": 0.1252703750215005,
+            "node_updates": 38373180,
+            "pid": 21692,
+            "symbol": "DOGEUSDT",
+            "value": 0.04551238728600578
+          },
+          {
+            "kernel_seconds": 0.12110695798764937,
+            "node_updates": 38373180,
+            "pid": 21694,
+            "symbol": "DOTUSDT",
+            "value": 0.8463115331714556
+          },
+          {
+            "kernel_seconds": 0.10805458299000748,
+            "node_updates": 38373180,
+            "pid": 21695,
+            "symbol": "EGLDUSDT",
+            "value": 2.821019377990765
+          },
+          {
+            "kernel_seconds": 0.10700687498319894,
+            "node_updates": 38373180,
+            "pid": 21698,
+            "symbol": "ENJUSDT",
+            "value": 0.020519388859106213
+          },
+          {
+            "kernel_seconds": 0.10778316701180302,
+            "node_updates": 38373180,
+            "pid": 21693,
+            "symbol": "ETCUSDT",
+            "value": 3.846929987320657
+          },
+          {
+            "kernel_seconds": 0.10923858298338018,
+            "node_updates": 38373180,
+            "pid": 21696,
+            "symbol": "ETHUSDT",
+            "value": 811.436540660004
+          },
+          {
+            "kernel_seconds": 0.10566879200632684,
+            "node_updates": 38373180,
+            "pid": 21697,
+            "symbol": "FILUSDT",
+            "value": 0.568113209636133
+          },
+          {
+            "kernel_seconds": 0.10382733400911093,
+            "node_updates": 38373180,
+            "pid": 21699,
+            "symbol": "GRTUSDT",
+            "value": 0.01816822641778863
+          },
+          {
+            "kernel_seconds": 0.11661358299897984,
+            "node_updates": 38373180,
+            "pid": 21695,
+            "symbol": "HBARUSDT",
+            "value": 0.051707289510296885
+          },
+          {
+            "kernel_seconds": 0.10037458399892785,
+            "node_updates": 38373180,
+            "pid": 21694,
+            "symbol": "ICPUSDT",
+            "value": 1.1428385201292834
+          },
+          {
+            "kernel_seconds": 0.1031177089898847,
+            "node_updates": 38373180,
+            "pid": 21692,
+            "symbol": "LINKUSDT",
+            "value": 4.292346122657909
+          },
+          {
+            "kernel_seconds": 0.10305824998067692,
+            "node_updates": 38373180,
+            "pid": 21698,
+            "symbol": "LTCUSDT",
+            "value": 21.176355626677008
+          },
+          {
+            "kernel_seconds": 0.09551604199805297,
+            "node_updates": 38373180,
+            "pid": 21693,
+            "symbol": "MANAUSDT",
+            "value": 0.06694759689206026
+          },
+          {
+            "kernel_seconds": 0.11038983298931271,
+            "node_updates": 38373180,
+            "pid": 21697,
+            "symbol": "NEARUSDT",
+            "value": 0.7888019250186614
+          },
+          {
+            "kernel_seconds": 0.11031533402274363,
+            "node_updates": 38373180,
+            "pid": 21696,
+            "symbol": "NEOUSDT",
+            "value": 1.2633043290204353
+          },
+          {
+            "kernel_seconds": 0.09936470902175643,
+            "node_updates": 38373180,
+            "pid": 21699,
+            "symbol": "PAXGUSDT",
+            "value": 362.6669936539557
+          },
+          {
+            "kernel_seconds": 0.11460216701379977,
+            "node_updates": 38373180,
+            "pid": 21694,
+            "symbol": "SANDUSDT",
+            "value": 0.06789396685214669
+          },
+          {
+            "kernel_seconds": 0.11448645798373036,
+            "node_updates": 38373180,
+            "pid": 21692,
+            "symbol": "SNXUSDT",
+            "value": 0.33100238656848147
+          },
+          {
+            "kernel_seconds": 0.10765666700899601,
+            "node_updates": 38373180,
+            "pid": 21695,
+            "symbol": "SOLUSDT",
+            "value": 43.71382899951468
+          },
+          {
+            "kernel_seconds": 0.1051367920008488,
+            "node_updates": 38373180,
+            "pid": 21693,
+            "symbol": "THETAUSDT",
+            "value": 0.16028966198186623
+          },
+          {
+            "kernel_seconds": 0.11510049999924377,
+            "node_updates": 38373180,
+            "pid": 21698,
+            "symbol": "TRXUSDT",
+            "value": 0.023365200151618595
+          },
+          {
+            "kernel_seconds": 0.10010533302556723,
+            "node_updates": 38373180,
+            "pid": 21697,
+            "symbol": "UNIUSDT",
+            "value": 2.0091977036326107
+          },
+          {
+            "kernel_seconds": 0.10795316600706428,
+            "node_updates": 38373180,
+            "pid": 21699,
+            "symbol": "VETUSDT",
+            "value": 0.004304196496130477
+          },
+          {
+            "kernel_seconds": 0.11359258298762143,
+            "node_updates": 38373180,
+            "pid": 21696,
+            "symbol": "XLMUSDT",
+            "value": 0.08804272564174644
+          },
+          {
+            "kernel_seconds": 0.11131095798918977,
+            "node_updates": 38373180,
+            "pid": 21694,
+            "symbol": "XRPUSDT",
+            "value": 0.5755998396616431
+          },
+          {
+            "kernel_seconds": 0.10364995800773613,
+            "node_updates": 38373180,
+            "pid": 21695,
+            "symbol": "XTZUSDT",
+            "value": 0.16180328283498027
+          },
+          {
+            "kernel_seconds": 0.0990342500153929,
+            "node_updates": 38373180,
+            "pid": 21692,
+            "symbol": "ZECUSDT",
+            "value": 188.46577236312194
+          }
+        ],
+        "result_worker_pids": [
+          21692,
+          21693,
+          21694,
+          21695,
+          21696,
+          21697,
+          21698,
+          21699
+        ],
+        "wall_seconds": 0.5618793339817785,
+        "warm_worker_pids": [
+          21692,
+          21693,
+          21694,
+          21695,
+          21696,
+          21697,
+          21698,
+          21699
+        ]
+      },
+      {
+        "per_asset": [
+          {
+            "kernel_seconds": 0.10749433399178088,
+            "node_updates": 38373180,
+            "pid": 21700,
+            "symbol": "AAVEUSDT",
+            "value": 68.983985160662
+          },
+          {
+            "kernel_seconds": 0.1298784999817144,
+            "node_updates": 38373180,
+            "pid": 21702,
+            "symbol": "ADAUSDT",
+            "value": 0.16796475147095272
+          },
+          {
+            "kernel_seconds": 0.12775854099891149,
+            "node_updates": 38373180,
+            "pid": 21701,
+            "symbol": "ALGOUSDT",
+            "value": 0.051989932547278475
+          },
+          {
+            "kernel_seconds": 0.11991300000227056,
+            "node_updates": 38373180,
+            "pid": 21704,
+            "symbol": "ATOMUSDT",
+            "value": 0.7757243174304536
+          },
+          {
+            "kernel_seconds": 0.12397504199179821,
+            "node_updates": 38373180,
+            "pid": 21705,
+            "symbol": "AVAXUSDT",
+            "value": 4.737658358479308
+          },
+          {
+            "kernel_seconds": 0.11637416700250469,
+            "node_updates": 38373180,
+            "pid": 21703,
+            "symbol": "AXSUSDT",
+            "value": 0.5573189717394152
+          },
+          {
+            "kernel_seconds": 0.11875837499974295,
+            "node_updates": 38373180,
+            "pid": 21706,
+            "symbol": "BCHUSDT",
+            "value": 138.8144941889301
+          },
+          {
+            "kernel_seconds": 0.12593270797515288,
+            "node_updates": 38373180,
+            "pid": 21707,
+            "symbol": "BNBUSDT",
+            "value": 172.70206715020993
+          },
+          {
+            "kernel_seconds": 0.11000566600705497,
+            "node_updates": 38373180,
+            "pid": 21700,
+            "symbol": "BTCUSDT",
+            "value": 16713.714208766745
+          },
+          {
+            "kernel_seconds": 0.1020040409930516,
+            "node_updates": 38373180,
+            "pid": 21703,
+            "symbol": "CHZUSDT",
+            "value": 0.00970075036499817
+          },
+          {
+            "kernel_seconds": 0.11403237498598173,
+            "node_updates": 38373180,
+            "pid": 21706,
+            "symbol": "COMPUSDT",
+            "value": 10.54520337867692
+          },
+          {
+            "kernel_seconds": 0.10128212498966604,
+            "node_updates": 38373180,
+            "pid": 21704,
+            "symbol": "CRVUSDT",
+            "value": 0.15484614044744707
+          },
+          {
+            "kernel_seconds": 0.11338545801118016,
+            "node_updates": 38373180,
+            "pid": 21705,
+            "symbol": "DASHUSDT",
+            "value": 25.00271287181452
+          },
+          {
+            "kernel_seconds": 0.10934324999107048,
+            "node_updates": 38373180,
+            "pid": 21701,
+            "symbol": "DOGEUSDT",
+            "value": 0.04551238728600578
+          },
+          {
+            "kernel_seconds": 0.112071042007301,
+            "node_updates": 38373180,
+            "pid": 21702,
+            "symbol": "DOTUSDT",
+            "value": 0.8463115331714556
+          },
+          {
+            "kernel_seconds": 0.1008207080012653,
+            "node_updates": 38373180,
+            "pid": 21707,
+            "symbol": "EGLDUSDT",
+            "value": 2.821019377990765
+          },
+          {
+            "kernel_seconds": 0.12117687499267049,
+            "node_updates": 38373180,
+            "pid": 21700,
+            "symbol": "ENJUSDT",
+            "value": 0.020519388859106213
+          },
+          {
+            "kernel_seconds": 0.12273200001800433,
+            "node_updates": 38373180,
+            "pid": 21703,
+            "symbol": "ETCUSDT",
+            "value": 3.846929987320657
+          },
+          {
+            "kernel_seconds": 0.08436429101857357,
+            "node_updates": 38373180,
+            "pid": 21704,
+            "symbol": "ETHUSDT",
+            "value": 811.436540660004
+          },
+          {
+            "kernel_seconds": 0.14763687501545064,
+            "node_updates": 38373180,
+            "pid": 21707,
+            "symbol": "FILUSDT",
+            "value": 0.568113209636133
+          },
+          {
+            "kernel_seconds": 0.09843804201227613,
+            "node_updates": 38373180,
+            "pid": 21706,
+            "symbol": "GRTUSDT",
+            "value": 0.01816822641778863
+          },
+          {
+            "kernel_seconds": 0.10236849999637343,
+            "node_updates": 38373180,
+            "pid": 21701,
+            "symbol": "HBARUSDT",
+            "value": 0.051707289510296885
+          },
+          {
+            "kernel_seconds": 0.12142208399018273,
+            "node_updates": 38373180,
+            "pid": 21705,
+            "symbol": "ICPUSDT",
+            "value": 1.1428385201292834
+          },
+          {
+            "kernel_seconds": 0.11615654200431891,
+            "node_updates": 38373180,
+            "pid": 21702,
+            "symbol": "LINKUSDT",
+            "value": 4.292346122657909
+          },
+          {
+            "kernel_seconds": 0.10519250002107583,
+            "node_updates": 38373180,
+            "pid": 21704,
+            "symbol": "LTCUSDT",
+            "value": 21.176355626677008
+          },
+          {
+            "kernel_seconds": 0.0900006250012666,
+            "node_updates": 38373180,
+            "pid": 21706,
+            "symbol": "MANAUSDT",
+            "value": 0.06694759689206026
+          },
+          {
+            "kernel_seconds": 0.08944408301613294,
+            "node_updates": 38373180,
+            "pid": 21700,
+            "symbol": "NEARUSDT",
+            "value": 0.7888019250186614
+          },
+          {
+            "kernel_seconds": 0.10079316698829643,
+            "node_updates": 38373180,
+            "pid": 21701,
+            "symbol": "NEOUSDT",
+            "value": 1.2633043290204353
+          },
+          {
+            "kernel_seconds": 0.11362816698965617,
+            "node_updates": 38373180,
+            "pid": 21703,
+            "symbol": "PAXGUSDT",
+            "value": 362.6669936539557
+          },
+          {
+            "kernel_seconds": 0.09516870800871402,
+            "node_updates": 38373180,
+            "pid": 21702,
+            "symbol": "SANDUSDT",
+            "value": 0.06789396685214669
+          },
+          {
+            "kernel_seconds": 0.1025513329950627,
+            "node_updates": 38373180,
+            "pid": 21705,
+            "symbol": "SNXUSDT",
+            "value": 0.33100238656848147
+          },
+          {
+            "kernel_seconds": 0.1258799170027487,
+            "node_updates": 38373180,
+            "pid": 21707,
+            "symbol": "SOLUSDT",
+            "value": 43.71382899951468
+          },
+          {
+            "kernel_seconds": 0.12147508299676701,
+            "node_updates": 38373180,
+            "pid": 21704,
+            "symbol": "THETAUSDT",
+            "value": 0.16028966198186623
+          },
+          {
+            "kernel_seconds": 0.1049451660073828,
+            "node_updates": 38373180,
+            "pid": 21706,
+            "symbol": "TRXUSDT",
+            "value": 0.023365200151618595
+          },
+          {
+            "kernel_seconds": 0.10486979101551697,
+            "node_updates": 38373180,
+            "pid": 21700,
+            "symbol": "UNIUSDT",
+            "value": 2.0091977036326107
+          },
+          {
+            "kernel_seconds": 0.09986566699808463,
+            "node_updates": 38373180,
+            "pid": 21701,
+            "symbol": "VETUSDT",
+            "value": 0.004304196496130477
+          },
+          {
+            "kernel_seconds": 0.10379774999455549,
+            "node_updates": 38373180,
+            "pid": 21702,
+            "symbol": "XLMUSDT",
+            "value": 0.08804272564174644
+          },
+          {
+            "kernel_seconds": 0.10791325001628138,
+            "node_updates": 38373180,
+            "pid": 21703,
+            "symbol": "XRPUSDT",
+            "value": 0.5755998396616431
+          },
+          {
+            "kernel_seconds": 0.09757629199884832,
+            "node_updates": 38373180,
+            "pid": 21705,
+            "symbol": "XTZUSDT",
+            "value": 0.16180328283498027
+          },
+          {
+            "kernel_seconds": 0.08535141701577231,
+            "node_updates": 38373180,
+            "pid": 21707,
+            "symbol": "ZECUSDT",
+            "value": 188.46577236312194
+          }
+        ],
+        "result_worker_pids": [
+          21700,
+          21701,
+          21702,
+          21703,
+          21704,
+          21705,
+          21706,
+          21707
+        ],
+        "wall_seconds": 0.5928424590092618,
+        "warm_worker_pids": [
+          21700,
+          21701,
+          21702,
+          21703,
+          21704,
+          21705,
+          21706,
+          21707
+        ]
+      }
+    ],
+    "input_preparation_included": false,
+    "median_seconds": 0.5928424590092618,
+    "raw_seconds": [
+      0.5607025420176797,
+      0.6029791250184644,
+      0.6051643330138177,
+      0.5618793339817785,
+      0.5928424590092618
+    ],
+    "repeats": 5,
+    "required_output_construction_included": true,
+    "units": "seconds",
+    "worker_warmup_included": false
+  },
+  "values_csv": "all_assets_one_year_values.csv",
+  "window_name": "one_year",
+  "workers": 8
+}

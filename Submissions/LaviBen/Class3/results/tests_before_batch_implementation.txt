@@ -1,0 +1,15 @@
+Tests-before-batch-implementation baseline
+==========================================
+
+Command: PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
+Exit status: 1
+Existing tests passing before failure: 15
+Expected failure reason: batch.py does not exist yet.
+
+Observed discovery error:
+
+ModuleNotFoundError: No module named 'batch'
+
+The batch contract, full-history expectations, deterministic ordering,
+sequential equivalence, worker validation, and 40-asset preparation tests were
+written before the batch implementation.

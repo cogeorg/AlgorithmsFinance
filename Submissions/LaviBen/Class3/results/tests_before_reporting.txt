@@ -1,0 +1,14 @@
+Tests-before-reporting baseline
+===============================
+
+Command: PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
+Exit status: 1
+Existing tests passing before failure: 23
+Expected failure reason: build_report.py does not exist yet.
+
+Observed discovery error:
+
+ModuleNotFoundError: No module named 'build_report'
+
+The four-scenario completeness, joined 40-asset values, required raw evidence,
+and byte-stable rendering tests were written before the report builder.

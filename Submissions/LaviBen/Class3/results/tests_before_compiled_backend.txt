@@ -1,0 +1,15 @@
+Tests-before-compiled-backend baseline
+======================================
+
+Command: PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
+Exit status: 1
+Existing tests passing before failure: 20
+Expected failure reason: compiled_backend.py does not exist yet.
+
+Observed discovery error:
+
+ModuleNotFoundError: No module named 'compiled_backend'
+
+The compiled two-period boundary, exhaustive small-tree oracle comparison, and
+Bitcoin one-year Python-reference equivalence tests were written before the C
+kernel and Python wrapper.

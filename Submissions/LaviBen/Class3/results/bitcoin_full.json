@@ -1,0 +1,108 @@
+{
+  "asset": "BTCUSDT",
+  "calibration": {
+    "annual_rate": 0.04,
+    "down": 0.9946184736157904,
+    "elapsed_years": 5.002625570776256,
+    "gross_rate": 1.0000045663246704,
+    "hours_per_year": 8760.0,
+    "q": 0.49907410312005984,
+    "spot": 61560.49,
+    "steps": 43822,
+    "strike": 61560.49,
+    "symbol": "BTCUSDT",
+    "up": 1.0054106439071515,
+    "volatility": 0.005396058959060915
+  },
+  "created_utc": "2026-11-28T09:00:08.632716+00:00",
+  "environment": {
+    "compiled_backend": {
+      "compiler": "cc",
+      "compiler_version": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+      "flags": "-O3 -std=c11 -fPIC -shared -lm",
+      "library": "/var/folders/dk/xrlp92rn65z53bf5d8slxs0c0000gn/T/class3_american_put_8c28b785bdb75df3.dylib",
+      "library_sha256": "79df0c3f2c98503916a4a41d68bff2ecdc5b06894300682eb9e72cbc0d00be1f",
+      "source": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Submissions/LaviBen/Class3/american_put_kernel.c",
+      "source_sha256": "8c28b785bdb75df3d27c440f46753a0a416cde8a46b29bc414a3dc70395e740a"
+    },
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+    "process_start_method": "spawn",
+    "psutil_version": "7.2.2",
+    "python": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "input": {
+    "end_utc": "2026-10-31T23:00:00+00:00",
+    "path": "/Users/benlavi/AlgorithmsFinance-Exercise1-Workspace/Class3/data/hourly/BTCUSDT.csv",
+    "selected_gap_count": 1,
+    "selected_observations": 43823,
+    "sha256": "2262b9e97986e964107c9d59085d4403ef90ea63ffa58ba73df3740587b59df6",
+    "start_utc": "2021-11-01T00:00:00+00:00",
+    "steps": 43822,
+    "total_observations": 43823
+  },
+  "memory": {
+    "aggregate_peak_rss_bytes": 58671104,
+    "child_baseline_rss_bytes": 327680,
+    "child_peak_delta_bytes": 27164672,
+    "child_peak_rss_bytes": 27492352,
+    "child_pid": 21636,
+    "method": "psutil RSS sampling of parent plus fresh child process",
+    "required_output_alive_at_final_sample": true,
+    "sample_count": 176,
+    "sampling_interval_seconds": 0.01,
+    "worker_result": {
+      "boundary_count": 43608,
+      "boundary_length": 43823,
+      "node_updates": 960205753,
+      "pid": 21636,
+      "status": "ready",
+      "value": 20716.754071288182
+    }
+  },
+  "output": {
+    "boundary_count": 43608,
+    "boundary_csv": "bitcoin_full_boundary.csv",
+    "boundary_length": 43823,
+    "exercise": {
+      "boundary_price": 19823.099264757235,
+      "exercised": true,
+      "index": 5502,
+      "observed_price": 19439.26,
+      "payoff": 42121.229999999996,
+      "timestamp_utc": "2022-06-18T06:00:00+00:00"
+    },
+    "node_updates": 960205753,
+    "put_value": 20716.754071288182
+  },
+  "provenance": {
+    "american_put_sha256": "ae302f0d17fb4d92b2ee3df0c5e4781cc873763245d895ca421f13d48c2687ca",
+    "compiled_backend_sha256": "1233a067dcf6adb257b2936cab88f5cac4e1fb6f156fb27270bb1dcbde079cf6",
+    "git_branch": "lavi/class3-american-put",
+    "git_commit": "9273b000003ecaa5b38475bd9afb9e8e7e623199",
+    "git_status_porcelain": "",
+    "kernel_source_sha256": "8c28b785bdb75df3d27c440f46753a0a416cde8a46b29bc414a3dc70395e740a",
+    "market_data_sha256": "6b65f802aab249867b45086a43818d41fa540c8e42ebb63db922554f67e0aec4",
+    "runner_sha256": "a5620187f3d69fc25ea8cd0fcb879042540e4c950c7ed3d29297fe1e36131f10"
+  },
+  "scenario": "bitcoin_full",
+  "schema_version": 1,
+  "status": "completed",
+  "timing": {
+    "clock": "time.perf_counter",
+    "input_preparation_included": false,
+    "median_seconds": 1.8510399999795482,
+    "raw_seconds": [
+      1.8510399999795482,
+      1.9323119169857819,
+      1.9271714169881307,
+      1.8304614999797195,
+      1.8367214579775464
+    ],
+    "repeats": 5,
+    "required_output_construction_included": true,
+    "units": "seconds",
+    "warmup_calls": 1
+  }
+}

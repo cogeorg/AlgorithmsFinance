@@ -1,0 +1,5 @@
+scenario,steps,assets,workers,median_seconds,peak_rss_bytes,peak_rss_mib,status
+bitcoin_one_year,8760,1,1,0.07718079199548811,59539456,56.78125,completed
+bitcoin_full,43822,1,1,1.8510399999795482,58671104,55.953125,completed
+all_assets_one_year,8760,40,8,0.5928424590092618,301072384,287.125,completed
+all_assets_full,43822,40,8,14.370036290987628,295960576,282.25,completed

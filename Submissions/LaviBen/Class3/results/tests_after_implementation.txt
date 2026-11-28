@@ -1,0 +1,24 @@
+Final tests after complete implementation
+=========================================
+
+Command: PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
+Exit status: 0
+Tests run: 32
+Result: OK
+
+Coverage includes:
+
+- exact two-period value and boundary;
+- exhaustive small-tree comparison against an independent recursive oracle;
+- Python/compiled equivalence, including the complete Bitcoin one-year boundary;
+- rejection of negative, zero, nonfinite, malformed, duplicate, and invalid
+  no-arbitrage inputs;
+- 40-file one-year and full-history preparation and gap reporting;
+- deterministic sequential/process results and worker validation;
+- Bitcoin one-year acceptance and observed exercise decision;
+- four completed canonical scenarios with five raw repeats each;
+- nonnegative joined values for all 40 assets;
+- deterministic, saved-results-only report rendering.
+- deterministic, standalone dashboard rendering from saved evidence;
+- dashboard coverage of all runs, raw repeats, 40 assets, exercise boundaries,
+  optimization evidence, environment metadata, and visible missing-run states.
